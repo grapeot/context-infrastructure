@@ -25,14 +25,19 @@ class MarkdownChunker:
         """按标题分块并保留元数据。"""
         metadata, body = self.parse_yaml_frontmatter(content)
         chunks = []
-        
-        lines = body.split('\n')
+
+        # Calculate line offset: frontmatter lines + separator lines are skipped
+        all_lines = content.split('\n')
+        body_lines = body.split('\n')
+        frontmatter_offset = len(all_lines) - len(body_lines)
+
+        lines = body_lines
         current_header = ""
         current_chunk_lines = []
         chunk_idx = 0
-        start_line = 1 # TODO: accurately track line numbers if needed
+        start_line = frontmatter_offset + 1
 
-        for i, line in enumerate(lines, 1):
+        for i, line in enumerate(lines, frontmatter_offset + 1):
             if line.startswith('#'):
                 # Save previous chunk if it exists
                 if current_chunk_lines:

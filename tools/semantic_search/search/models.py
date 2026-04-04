@@ -10,7 +10,7 @@ class Chunk:
     source_file: str = ""       # 源文件相对路径
     header: str = ""           # 所属标题
     position: Tuple[int, int] = (0, 0)  # (start_line, end_line)
-    metadata: Dict[str, Any] = None
+    metadata: Optional[Dict[str, Any]] = None
 
     def to_dict(self, include_embedding: bool = False) -> Dict[str, Any]:
         d = asdict(self)
