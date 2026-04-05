@@ -6,6 +6,10 @@
 
 **核心定位**：这不是开箱即用的工具，而是一个可以参考的蓝图。Clone 下来后，你可以立刻体验「有 context vs 没有 context」的差异。但要让 AI 真正变成你自己的，需要从头采集你的行为数据——没有捷径。
 
+### 课代表立正的认知公理
+
+[`axioms/`](axioms/) 目录包含了**课代表立正（孙煜征）**的 20 条认知与表达公理——从 498 期 YouTube 视频、123 篇 Circle 帖子、18 个微信对话（总计 6.9M 字）中，经过 20 轮迭代提炼而成。这是 context infrastructure 最核心的产出之一：让 AI 能按照真实的思维方式工作，而不是输出"正确的废话"。详见 [`axioms/README.md`](axioms/README.md)。
+
 ---
 
 ## Quick Start（5 分钟）
@@ -29,6 +33,12 @@ context-infrastructure/
 ├── AGENTS.md                    # 根路由表（AI 每次 session 的起点）
 ├── setup_guide.md               # 配置指引
 ├── .env.example                 # 环境变量模板
+│
+├── axioms/                      # 课代表立正的 20 条认知公理（数据驱动提炼）
+│   ├── README.md                # 公理系统说明、速查表、关系图
+│   ├── INDEX.md                 # 完整索引 + 预测场景速查
+│   ├── k01–k14                  # 14 条观点类公理（Content）
+│   └── ks01–ks06                # 6 条风格类公理（Form）
 │
 ├── docs/
 │   └── CRONTAB.md               # 定时任务配置指南（时间线 + 示例 crontab）
