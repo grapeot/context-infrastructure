@@ -1,0 +1,1782 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panova Report</title>
+<style>* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --black: #37352f;
+  --gray-900: #1a1a1a;
+  --gray-800: #37352f;
+  --gray-700: #555;
+  --gray-600: #6b6b6b;
+  --gray-500: #9b9a97;
+  --gray-400: #b4b4b0;
+  --gray-300: #d4d4d0;
+  --gray-200: #e8e8e4;
+  --gray-150: #f0f0ec;
+  --gray-100: #f7f6f3;
+  --gray-50: #fbfbfa;
+  --white: #fff;
+  --orange: #f97316;
+  --orange-light: #fff7ed;
+  --blue: #3b82f6;
+  --blue-light: #eff6ff;
+  --teal: #14b8a6;
+  --teal-light: #f0fdfa;
+  --coral: #f87171;
+  --coral-light: #fef2f2;
+  --amber: #f59e0b;
+  --purple: #a855f7;
+  --purple-light: #faf5ff;
+  --accent: #111;
+  --font-sans: -apple-system, "Helvetica Neue", "PingFang SC", "Noto Sans SC", sans-serif;
+  --font-mono: "SF Mono", "Fira Code", "Noto Sans Mono CJK SC", monospace;
+  --radius: 8px;
+  --radius-lg: 14px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.03);
+  --shadow-md: 0 4px 14px rgba(0,0,0,0.07), 0 2px 6px rgba(0,0,0,0.04);
+  --shadow-lg: 0 8px 28px rgba(0,0,0,0.09), 0 4px 10px rgba(0,0,0,0.05);
+}
+
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans);
+  color: var(--black);
+  background: var(--white);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Layout --- */
+.page { display: flex; min-height: 100vh; }
+
+nav {
+  position: fixed;
+  top: 0; left: 0;
+  width: 260px; height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid var(--gray-200);
+  padding: 32px 16px 64px;
+  font-size: 14px;
+  background: var(--white);
+  z-index: 10;
+}
+nav::-webkit-scrollbar { width: 3px; }
+nav::-webkit-scrollbar-thumb { background: var(--gray-300); border-radius: 2px; }
+nav .nav-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: 24px;
+  padding-left: 12px;
+}
+nav a {
+  display: block;
+  color: var(--gray-500);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.15s;
+  font-size: 13px;
+  line-height: 1.5;
+}
+nav a:hover { color: var(--black); background: var(--gray-50); }
+nav a.active {
+  color: var(--black);
+  font-weight: 600;
+  background: var(--orange-light);
+}
+nav a.sub { padding-left: 24px; font-size: 12px; }
+.nav-footer {
+  position: fixed;
+  bottom: 24px; left: 20px;
+  font-size: 11px;
+  color: var(--gray-400);
+}
+.nav-footer span { color: var(--orange); font-weight: 600; }
+
+main {
+  flex: none;
+  max-width: 960px;
+  padding: 56px 64px 120px;
+  margin-left: max(260px, calc((100vw - 960px) / 2));
+  margin-right: auto;
+}
+
+/* --- Scroll offset --- */
+h2[id], h3[id], h4[id] { scroll-margin-top: 24px; }
+
+/* --- Typography --- */
+h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+p.subtitle {
+  font-size: 16px;
+  color: var(--gray-500);
+  margin-bottom: 48px;
+  line-height: 1.6;
+}
+h2 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-top: 72px;
+  margin-bottom: 24px;
+  padding-bottom: 0;
+  letter-spacing: -0.01em;
+}
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 12px;
+}
+h4 {
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 28px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gray-500);
+}
+p { margin-bottom: 16px; color: var(--gray-800); }
+strong { font-weight: 700; color: var(--black); }
+code {
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  background: var(--gray-100);
+  padding: 2px 5px;
+  border-radius: 3px;
+  color: #eb5757;
+}
+pre {
+  background: var(--gray-100);
+  color: var(--gray-800);
+  padding: 16px 20px;
+  overflow-x: auto;
+  margin-bottom: 16px;
+  border-radius: var(--radius);
+  font-size: 13px;
+  line-height: 1.6;
+  border: 1px solid var(--gray-200);
+}
+pre code { background: none; padding: 0; color: inherit; }
+ul, ol { padding-left: 20px; margin-bottom: 16px; }
+li { margin-bottom: 6px; color: var(--gray-800); }
+li::marker { color: var(--gray-400); }
+
+/* --- Tables --- */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 24px;
+  font-size: 14px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+th {
+  text-align: left;
+  padding: 12px 16px;
+  font-weight: 700;
+  font-size: 11px;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: var(--gray-50);
+  border-bottom: 1px solid var(--gray-200);
+}
+td {
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--gray-150);
+}
+tr:nth-child(even) td { background: var(--gray-50); }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: var(--orange-light); }
+
+/* --- Concept Grid Overview --- */
+.concept-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0;
+  margin: 24px 0 40px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.concept-grid-item {
+  display: block;
+  text-decoration: none;
+  padding: 16px;
+  border-bottom: 1px solid var(--gray-200);
+  border-right: 1px solid var(--gray-200);
+  transition: background 0.15s;
+  cursor: pointer;
+}
+.concept-grid-item:hover {
+  background: var(--gray-50);
+}
+.concept-grid-name {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--black);
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+.concept-grid-en {
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--gray-400);
+  margin-left: 6px;
+}
+.concept-grid-desc {
+  font-size: 12px;
+  color: var(--gray-600);
+  line-height: 1.5;
+}
+
+/* --- Concept Card --- */
+.concept-card {
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  margin: 28px 0;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+.concept-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+.concept-card h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  font-size: 19px;
+}
+.concept-card > p:first-of-type {
+  color: var(--gray-600);
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+.concept-attr {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  align-items: flex-start;
+}
+.concept-attr-icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+.concept-attr-icon svg { width: 16px; height: 16px; }
+.attr-create .concept-attr-icon { background: var(--teal-light); }
+.attr-create .concept-attr-icon svg { color: var(--teal); }
+.attr-impact .concept-attr-icon { background: var(--coral-light); }
+.attr-impact .concept-attr-icon svg { color: var(--coral); }
+.concept-attr-body strong {
+  display: inline-block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 2px 10px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+.attr-create .concept-attr-body strong { background: var(--teal-light); color: #115e59; }
+.attr-impact .concept-attr-body strong { background: var(--coral-light); color: #991b1b; }
+.concept-attr-body p { margin: 0; font-size: 14px; color: var(--gray-700); }
+
+/* --- Mindmap Tree --- */
+.block-mindmap-tree { padding: 4px 0 8px; font-size: 13px; }
+.mm-node { margin: 3px 0; }
+.mm-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  line-height: 1.4;
+  user-select: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.mm-expandable { cursor: pointer; }
+.mm-expandable:hover { transform: scale(1.02); box-shadow: var(--shadow-sm); }
+.mm-l0 > .mm-label {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 10px;
+  padding: 8px 20px;
+  box-shadow: var(--shadow-sm);
+}
+.mm-l1 > .mm-label { font-weight: 600; }
+.mm-l2 > .mm-label { background: var(--white); border: 1px solid var(--gray-200); }
+.mm-l3 > .mm-label { background: transparent; color: var(--gray-500); font-size: 12px; padding-left: 8px; }
+.mm-toggle { font-size: 10px; transition: transform 0.2s; display: inline-block; }
+.mm-children { margin-left: 26px; padding-left: 12px; border-left: 2px dashed var(--gray-200); padding-top: 4px; margin-top: 2px; }
+.mm-node.mm-collapsed > .mm-children { display: none; }
+.mm-node.mm-collapsed > .mm-label .mm-toggle { transform: rotate(-90deg); }
+
+/* --- Flow Chain (horizontal) --- */
+.flow-chain {
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: 6px; padding: 4px 0 8px;
+}
+.flow-chip {
+  background: var(--gray-100); border: 1px solid var(--gray-200);
+  border-radius: 20px; padding: 5px 14px; font-size: 13px; white-space: nowrap;
+}
+.flow-chip-back { background: #fff0f0; border-color: #f5c6c6; color: #b03030; }
+.flow-sep { color: var(--gray-300); font-size: 15px; }
+
+/* --- Flow Steps (vertical branching) --- */
+.flow-steps { padding: 4px 0 8px; font-size: 13px; }
+.flow-step {
+  display: inline-flex; align-items: center;
+  background: var(--gray-100); border: 1px solid var(--gray-200);
+  border-radius: 8px; padding: 7px 16px; margin: 3px 0; max-width: 520px;
+}
+.flow-decision {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #fffaec; border: 1.5px solid #f0d050;
+  border-radius: 8px; padding: 6px 16px; margin: 3px 0;
+  font-weight: 500; max-width: 520px;
+}
+.flow-dec-icon { color: #c49a00; font-size: 12px; }
+.flow-branches { display: flex; flex-wrap: wrap; gap: 8px; margin: 5px 0 3px 20px; }
+.flow-branch {
+  background: var(--white); border: 1px solid var(--gray-200);
+  border-radius: 6px; padding: 4px 12px; font-size: 12px;
+}
+.flow-branch b { color: var(--gray-600); margin-right: 4px; }
+.flow-vconn { padding: 1px 0 1px 16px; color: var(--gray-300); font-size: 16px; line-height: 1; }
+
+/* --- Sequence Diagram --- */
+.seq-wrap { padding: 4px 0 8px; font-size: 13px; }
+.seq-actors { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+.seq-actor { background: var(--black); color: var(--white); border-radius: 6px; padding: 4px 12px; font-size: 12px; font-weight: 600; }
+.seq-timeline { border-left: 2px solid var(--gray-150); padding-left: 14px; }
+.seq-row {
+  display: flex; align-items: baseline; gap: 10px;
+  padding: 7px 0; border-bottom: 1px solid var(--gray-100);
+}
+.seq-row:last-child { border-bottom: none; }
+.seq-dir { display: flex; align-items: center; gap: 4px; white-space: nowrap; flex-shrink: 0; min-width: 140px; }
+.seq-from, .seq-to { font-weight: 600; color: var(--gray-700); font-size: 12px; }
+.seq-arrow { color: var(--gray-300); font-size: 13px; margin: 0 1px; }
+.seq-text {
+  background: var(--gray-50); border: 1px solid var(--gray-150);
+  border-radius: 6px; padding: 3px 10px; font-size: 12px; color: var(--gray-700); flex: 1;
+}
+.seq-row-dashed .seq-text { background: transparent; border-style: dashed; color: var(--gray-500); }
+
+/* --- Diagram outer wrapper --- */
+.diagram-outer {
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  margin: 28px 0;
+  padding: 24px 28px 16px;
+  box-shadow: var(--shadow-sm);
+  overflow-x: auto;
+}
+.diagram-outer-label {
+  font-size: 10px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--gray-300); margin-top: 12px;
+}
+.diagram-outer .mermaid { margin: 0; background: transparent; color: inherit; padding: 0; font-size: inherit; border: none; }
+.diagram-outer .mermaid svg { max-width: 100%; }
+.diagram-outer .nodeLabel {
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  line-height: 1.4 !important;
+}
+
+/* --- Custom blocks --- */
+.block-tooltip {
+  font-size: 13px;
+  color: var(--gray-600);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 16px 0 20px;
+  cursor: pointer;
+  background: var(--gray-50);
+  transition: border-color 0.2s;
+}
+.block-tooltip:hover { border-color: var(--gray-300); }
+.block-tooltip-header {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.05em; color: var(--gray-400); user-select: none;
+}
+.block-tooltip-header svg { width: 14px; height: 14px; transition: transform 0.2s; }
+.block-tooltip.open .block-tooltip-header svg { transform: rotate(90deg); }
+.block-tooltip .tooltip-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+.block-tooltip.open .tooltip-body { max-height: 600px; margin-top: 12px; }
+.block-tooltip .tooltip-body p { font-size: 13px; color: var(--gray-600); margin-bottom: 8px; }
+
+.block-callout {
+  background: var(--gray-100);
+  border: 1px solid var(--gray-200);
+  color: var(--gray-800);
+  padding: 22px 26px;
+  margin: 24px 0;
+  border-radius: var(--radius-lg);
+  font-size: 14px;
+  line-height: 1.7;
+  box-shadow: var(--shadow-sm);
+}
+.block-callout p { color: var(--gray-800); margin-bottom: 8px; }
+.block-callout p:last-child { margin-bottom: 0; }
+.block-callout strong { color: var(--black); }
+
+.block-impact {
+  background: linear-gradient(135deg, #fef2f2 0%, #fff5f5 100%);
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-lg);
+  padding: 18px 24px;
+  margin: 16px 0;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+.block-impact:hover { box-shadow: var(--shadow-sm); }
+.block-impact .impact-trigger {
+  font-weight: 700; font-size: 14px;
+  display: flex; align-items: center; gap: 8px;
+  color: #991b1b;
+  user-select: none;
+}
+.block-impact .impact-trigger::before {
+  content: ""; display: inline-block; width: 8px; height: 8px;
+  border-radius: 50%; background: var(--coral); flex-shrink: 0;
+}
+.block-impact .impact-toggle {
+  margin-left: auto; font-size: 12px; color: #f87171;
+  transition: transform 0.2s;
+}
+.block-impact.open .impact-toggle { transform: rotate(90deg); }
+.block-impact .impact-items {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+.block-impact.open .impact-items { max-height: 500px; margin-top: 14px; }
+.block-impact ul { list-style: none; padding: 0; margin: 0; }
+.block-impact li {
+  padding: 8px 0 8px 28px; position: relative;
+  font-size: 13px; color: #7f1d1d;
+}
+.block-impact li::before {
+  content: ""; position: absolute; left: 0; top: 16px;
+  width: 16px; height: 1px;
+  background: #fca5a5;
+}
+.block-impact li::after {
+  content: ""; position: absolute; left: 0; top: 12px;
+  width: 6px; height: 6px; border-radius: 50%;
+  border: 2px solid #f87171; background: var(--white);
+}
+.block-impact li:last-child::before { display: none; }
+
+.block-tabs { margin: 24px 0; }
+.tab-bar {
+  display: flex; gap: 0; margin-bottom: 0;
+  background: var(--gray-100);
+  border-radius: var(--radius) var(--radius) 0 0;
+  padding: 4px 4px 0;
+}
+.tab-bar button {
+  background: none; border: none; padding: 10px 20px;
+  font-size: 13px; font-weight: 600; color: var(--gray-500);
+  cursor: pointer; border-radius: var(--radius) var(--radius) 0 0;
+  font-family: var(--font-sans); transition: all 0.2s;
+}
+.tab-bar button.active { color: var(--black); background: var(--white); }
+.tab-bar button:hover:not(.active) { color: var(--gray-700); background: var(--gray-50); }
+.tab-panel {
+  display: none; padding: 22px 26px; background: var(--white);
+  border: 1px solid var(--gray-200); border-top: none;
+  border-radius: 0 0 var(--radius) var(--radius); font-size: 14px;
+}
+.tab-panel.active { display: block; }
+.tab-panel p:last-child { margin-bottom: 0; }
+
+/* --- Metric Cards --- */
+.metric-row { display: flex; gap: 12px; margin: 24px 0; }
+.metric-card {
+  flex: 1; border: 1px solid var(--gray-200); border-radius: var(--radius);
+  padding: 20px 18px; background: var(--white); text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.metric-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.metric-value { font-size: 32px; font-weight: 800; letter-spacing: -0.02em; line-height: 1; margin-bottom: 6px; color: var(--orange); }
+.metric-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray-400); }
+
+/* --- Inline tooltip --- */
+.tip-word {
+  border-bottom: 1px dashed var(--blue);
+  color: var(--blue);
+  cursor: help;
+  position: relative;
+}
+.tip-word::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gray-900);
+  color: var(--gray-100);
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  font-size: 12px;
+  font-weight: 400;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
+  width: 260px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s;
+  z-index: 200;
+  line-height: 1.6;
+  text-align: left;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+.tip-word:hover::after { opacity: 1; }
+
+/* --- Concept cross-link --- */
+.concept-link {
+  color: var(--black);
+  font-weight: 600;
+  border-bottom: 1px solid var(--gray-400);
+  text-decoration: none;
+  transition: border-color 0.15s;
+}
+.concept-link:hover { border-bottom-color: var(--orange); color: var(--orange); }
+
+/* --- Concept Popover --- */
+#concept-popover {
+  position: fixed;
+  transform: translateX(-50%) translateY(-100%);
+  background: var(--gray-900);
+  color: var(--gray-100);
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  max-width: 320px;
+  min-width: 200px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s;
+  z-index: 300;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  line-height: 1.5;
+}
+#concept-popover.visible { opacity: 1; }
+.cpop-name { font-weight: 600; font-size: 13px; margin-bottom: 4px; color: var(--white); }
+.cpop-desc { font-size: 12px; color: var(--gray-300); line-height: 1.5; }
+
+/* --- Demo Block --- */
+.block-demo {
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin: 24px 0;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+.demo-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gray-300);
+  padding: 8px 16px 0;
+}
+.demo-frame {
+  width: 100%;
+  min-height: 60px;
+  border: none;
+  display: block;
+  background: transparent;
+}
+
+/* --- Animations --- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.concept-card { animation: fadeInUp 0.35s ease-out both; }
+.diagram-outer { animation: fadeInUp 0.4s ease-out both; }
+.block-callout { animation: fadeInUp 0.4s ease-out 0.05s both; }
+.block-impact { animation: fadeInUp 0.4s ease-out 0.05s both; }
+
+/* Mobile nav toggle */
+.mobile-nav-toggle {
+  display: none;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--gray-900);
+  color: var(--white);
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: var(--shadow-lg);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Nav search */
+.nav-search {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--gray-200);
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: var(--font-sans);
+  background: var(--gray-50);
+  color: var(--black);
+  margin-bottom: 16px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.nav-search:focus { border-color: var(--gray-400); }
+.nav-search::placeholder { color: var(--gray-400); }
+nav a.search-dimmed { opacity: 0.25; }
+
+/* Concept back link */
+.concept-back-link {
+  display: block;
+  text-align: right;
+  font-size: 12px;
+  color: var(--gray-400);
+  text-decoration: none;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--gray-150);
+}
+.concept-back-link:hover { color: var(--orange); }
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .mobile-nav-toggle { display: flex; }
+  nav { display: none; }
+  nav.nav-open {
+    display: block;
+    position: fixed;
+    top: 0; left: 0;
+    width: 280px; height: 100vh;
+    z-index: 200;
+    box-shadow: var(--shadow-lg);
+  }
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 150;
+  }
+  .nav-overlay.visible { display: block; }
+  main { margin-left: 0; max-width: 100%; padding: 24px 20px 80px; }
+  .metric-row { flex-wrap: wrap; }
+  .metric-card { min-width: calc(50% - 8px); }
+}
+
+@media print {
+  nav { display: none; }
+  main { margin-left: 0; max-width: 100%; }
+  .block-tooltip .tooltip-body { max-height: none; }
+  .diagram-outer-label { display: none; }
+  .concept-card { box-shadow: none; break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <nav id="nav">
+    <div class="nav-title">Panova</div>
+    <div id="nav-links"></div>
+    <div class="nav-footer">made by <span>oil-oil</span></div>
+  </nav>
+  <main id="content"></main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/markdown-it@14.1.0/dist/markdown-it.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>const RAW = `# Temu 跟价&限流 — 让每件商品的售价都不比竞品贵
+
+:::metric
+3|核心定价公式
+6+|对接竞品平台
+3|数据看板体系
+5|可执行调价动作
+:::
+
+## 谁在用这套系统
+
+这套跟价&限流体系服务于 Temu 的**国家线运营团队**和**中台定调价产品团队**。
+
+- **国家线国长/调价业务产品**：负责本国定价策略，决定折扣系数、跟价上下限实验、非跟价品调价方案
+- **中台产品**：维护跟价算法和限流规则，监控各站点的价格竞争力和高价率
+- **招商/品类运营**：通过比价看板和限流看板，定位具体商品的价格问题，操作同款黑白名单
+
+核心目标只有一个：**确保 Temu 上每件有竞品同款的商品，售价都不比竞品贵**——如果做不到，就限制这件商品的流量，避免用户看到"贵"的商品。
+
+## 跟着一件商品走一遍定价流程
+
+### 第一步：找到竞品同款——谁是"左i"和"右i"
+
+你是一个国家线运营，打开[售价比价看板](tip:全托/半托和本本模式分别有不同的看板入口，均在 OMS 系统中)，看到一件 Temu 上在售的商品——这就是**左i**。
+
+系统会去 Amazon、Shein 等竞品平台抓取商品信息，通过算法匹配找到**同款商品**。这些站外同款就是**右i**。
+
+:::demo
+<div class="max-w-md mx-auto">
+  <div class="card mb-md">
+    <div class="text-xs text-gray mb-sm">左i · Temu 在售商品</div>
+    <div class="row" style="align-items:center;gap:12px">
+      <div style="width:48px;height:48px;background:#eee;border-radius:6px;display:flex;align-items:center;justify-content:center">
+        <span class="text-xs text-gray">图</span>
+      </div>
+      <div class="col" style="flex:1">
+        <div class="text-md text-bold">运动蓝牙耳机</div>
+        <div class="text-sm text-gray">当前供价 $10 · 建议价 $12.6</div>
+      </div>
+      <div class="pill pill-filled">跟价品</div>
+    </div>
+  </div>
+  <div style="text-center;margin:8px 0">
+    <div class="text-xs text-gray" style="text-align:center">↕ 算法匹配同款</div>
+  </div>
+  <div class="card">
+    <div class="text-xs text-gray mb-sm">右i · 竞品平台同款</div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div class="row" style="align-items:center;gap:12px">
+        <div class="pill pill-outline" style="min-width:64px;text-align:center">Amazon</div>
+        <div class="text-sm" style="flex:1">同款耳机</div>
+        <div class="text-bold">$11.5</div>
+      </div>
+      <div class="divider"></div>
+      <div class="row" style="align-items:center;gap:12px">
+        <div class="pill pill-outline" style="min-width:64px;text-align:center">Shein</div>
+        <div class="text-sm" style="flex:1">同款耳机</div>
+        <div class="text-bold">$13.0</div>
+      </div>
+    </div>
+    <div class="text-xs text-gray" style="margin-top:8px">→ 取最低价右i：Amazon $11.5</div>
+  </div>
+</div>
+:::
+
+:::callout
+**跟价 vs 限流的同款标准不同：** 跟价范围更广（"相似度较高的同款"即可），限流要求更严格（"严格同款"）。也就是说，一件商品可能有跟价对象但没有限流对象。
+:::
+
+> **如果没找到同款：** 这件商品归类为"非跟价品"，不参与自动跟价。但这不代表它真的没有竞品——很多时候是算法漏召。非跟价品的高价风险反而更大。
+
+### 第二步：计算跟价目标价格——打几折跟
+
+找到最低价右i后，系统用一个折扣系数来计算**跟价目标价格**：
+
+> 跟价目标价格 = 最低价右i售价 × 跟价折扣系数
+
+[跟价折扣系数](tip:可在 oms-marketing 折扣配置页面查看，按站点和竞品平台分别配置。折扣来源是按照站点下竞品平台的抽佣率确定的)不是一个固定值——它按**站点×竞品平台**配置，分为 EU、GLO 等区域。比如对 Amazon US 的折扣可能是 0.9，意思是 Temu 的目标售价 = 竞品价格的 90%。
+
+:::callout
+**折扣系数的商业含义：** 折扣系数 0.9 意味着"我们要比竞品便宜 10%"。这个 10% 覆盖了竞品平台的抽佣成本差异——竞品平台抽佣高，所以同样售价下，Temu 的实际利润空间更大。
+:::
+
+但你不能无限制地跟低价，也不能让定价高于市场认知。所以系统给跟价结果设了上下限：
+
+:::mermaid
+graph LR
+  A["跟价目标价格<br/>右i × 折扣系数"] --> B{"取 min"}
+  C["跟价上限<br/>（通常=市场建议价）"] --> B
+  B --> D{"取 max"}
+  E["跟价下限<br/>（通常=不亏损成本）"] --> D
+  D --> F["最终跟价结果"]
+  style F fill:#37352f,color:#fff
+:::
+
+核心公式一句话：
+
+> **跟价结果 = max( min( 跟价目标价格, 跟价上限 ), 跟价下限 )**
+
+翻译成人话：先别超过建议价天花板，再保证不低于成本底线。
+
+:::tooltip
+**跟价上限**通常等于市场建议价（MSP），由定调价产品团队维护。**跟价下限**通常等于不亏损成本，即供价 ×（1 + 固定成本率）。当有补贴实验时，下限可以下调至不亏损成本的 0.6 倍，即允许亏损换增量。
+:::
+
+### 第三步：三种经典跟价场景——看结果怎么算
+
+用一个真实例子走一遍。假设你管理的一件商品：
+- 当前供价 = $10，固定成本 5%
+- 市场建议价 = $12.6，不亏损成本 = $10.5
+- 跟价折扣系数 = 0.9
+
+:::tabs
+::tab[场景A：竞品价低，跟到底线]
+右i 最低价 = $11.5
+
+跟价目标 = 11.5 × 0.9 = **$10.35**
+
+跟价结果 = max( min(10.35, 12.6), 10.5 ) = **$10.5**
+
+目标价 $10.35 低于不亏损成本 $10.5，所以被兜底到 $10.5。**跟不动了——价格到底了。**
+
+::tab[场景B：竞品价适中，完美跟到]
+右i 最低价 = $12
+
+跟价目标 = 12 × 0.9 = **$10.8**
+
+跟价结果 = max( min(10.8, 12.6), 10.5 ) = **$10.8**
+
+目标价在上下限之间，完美跟到。**这是最理想的状态。**
+
+::tab[场景C：竞品价高，顶到天花板]
+右i 最低价 = $15
+
+跟价目标 = 15 × 0.9 = **$13.5**
+
+跟价结果 = max( min(13.5, 12.6), 10.5 ) = **$12.6**
+
+目标价 $13.5 超过建议价 $12.6，被压到建议价。**不会继续涨价——有天花板。**
+:::
+
+:::demo
+<div class="max-w-md mx-auto">
+  <div class="text-sm text-bold mb-sm">跟价结果落区示意</div>
+  <div style="position:relative;height:60px;margin:16px 0">
+    <div style="position:absolute;left:0;right:0;top:28px;height:4px;background:#eee;border-radius:2px"></div>
+    <div style="position:absolute;left:15%;top:28px;height:4px;width:55%;background:#37352f;border-radius:2px"></div>
+    <div style="position:absolute;left:15%;top:8px;text-align:center">
+      <div class="text-xs text-bold">$10.5</div>
+      <div style="width:2px;height:12px;background:#37352f;margin:0 auto"></div>
+    </div>
+    <div style="position:absolute;left:70%;top:8px;text-align:center;transform:translateX(-50%)">
+      <div class="text-xs text-bold">$12.6</div>
+      <div style="width:2px;height:12px;background:#37352f;margin:0 auto"></div>
+    </div>
+    <div style="position:absolute;left:5%;top:42px;text-align:center">
+      <div style="width:2px;height:8px;background:#aaa;margin:0 auto"></div>
+      <div class="text-xs text-gray">下限<br/>不亏损成本</div>
+    </div>
+    <div style="position:absolute;left:67%;top:42px;text-align:center;transform:translateX(-50%)">
+      <div style="width:2px;height:8px;background:#aaa;margin:0 auto"></div>
+      <div class="text-xs text-gray">上限<br/>建议价</div>
+    </div>
+  </div>
+  <div class="row" style="justify-content:space-between;margin-top:32px">
+    <div class="text-xs text-gray">← 竞品更便宜（被兜底）</div>
+    <div class="text-xs text-gray">竞品更贵（被压顶）→</div>
+  </div>
+</div>
+:::
+
+:::impact
+触发点: 调整跟价折扣系数（如从 0.9 上调到 0.95）
+- 跟价目标价格上升 → 更多商品定价上涨
+- 限流折扣同步上浮 → 更多商品脱离限流状态
+- 如果竞品有漏召的更低价同款，涨价后测评高价率上升
+- 折扣上浮带来的利润空间 = 跟价折扣与核价折扣之间的价差
+:::
+
+### 第四步：判断是否限流——贵了就降曝光
+
+跟价完成后，系统还要做一件事：检查你的最终售价是否仍然"太贵"。这就是**限流**。
+
+限流有自己的折扣系数，计算方式类似：
+
+> 限流目标价 = 最低价右i售价 × 限流折扣系数
+
+**判断规则很简单：** 如果跟价后的售价 > 限流目标价 → 高价，需要限流。
+
+:::callout
+**限流折扣 ≥ 跟价折扣。** 这意味着限流的标准比跟价更"宽松"——只要你跟价跟到了，通常不会被限流。限流主要抓的是"跟不到价"的商品（比如场景A中被兜底到不亏损成本的品）。
+:::
+
+:::callout
+**当站点×平台配置了核价折扣时：** 限流折扣 = max(核价折扣 ×(1+支付手续费), 原限流折扣)。核价折扣会拉高限流门槛，让更多品被限流。
+:::
+
+限流的惩罚是**重度流量打压**——90% 以上的曝光被砍：
+
+:::demo
+<div class="max-w-md mx-auto">
+  <div class="text-sm text-bold mb-md">限流对商品曝光的影响</div>
+  <div class="card mb-sm" style="border-left:3px solid #37352f">
+    <div class="row" style="justify-content:space-between;align-items:center">
+      <div>
+        <div class="text-sm text-bold">搜索场景</div>
+        <div class="text-xs text-gray">同相关性下排到最后</div>
+      </div>
+      <div class="badge badge-dark">极低曝光</div>
+    </div>
+  </div>
+  <div class="card mb-sm" style="border-left:3px solid #37352f">
+    <div class="row" style="justify-content:space-between;align-items:center">
+      <div>
+        <div class="text-sm text-bold">推荐场景</div>
+        <div class="text-xs text-gray">非店铺推荐基本无曝光</div>
+      </div>
+      <div class="badge badge-dark">几乎不可见</div>
+    </div>
+  </div>
+  <div class="card" style="border-left:3px solid #aaa">
+    <div class="row" style="justify-content:space-between;align-items:center">
+      <div>
+        <div class="text-sm text-bold">店铺内</div>
+        <div class="text-xs text-gray">沉到店铺底部，最后展示</div>
+      </div>
+      <div class="badge badge-gray">低优先级</div>
+    </div>
+  </div>
+</div>
+:::
+
+接着前面的例子，场景A中跟价结果 = $10.5，限流目标 = 0.9 × $11.5 = $10.35。**$10.5 > $10.35，高价，限流！** 这件商品虽然已经跟到底线了，但依然比竞品贵——曝光被砍。
+
+> **如果限流折扣调高了（比如 0.99）：** 限流目标变成 0.99 × $11.5 = $11.39，此时 $10.5 < $11.39，不高价，不限流。所以调高限流折扣可以解救一批品。
+
+:::impact
+触发点: 上调限流折扣系数
+- 限流标准变宽松 → 一批原本被限流的商品恢复曝光
+- 如果这些商品实际比竞品贵（算法漏召了更低价同款），解限后用户会看到贵的品
+- 测评高价率可能上升——被解限的品如果真的贵，就会被人工测评发现
+:::
+
+### 第五步：站内高供品的特殊逻辑——先提 ROI 再跟价
+
+有一类特殊商品叫**站内高供品**：Temu 上同款的多个供应商中，它的供价明显偏高。
+
+:::callout
+**判断标准：** 左i 的日常供价 > 站内最低日常供价 × 1.03。也就是说，给了 3% 的缓冲空间，超过这个才算"高供"。
+:::
+
+举个例子：你管理的商品A日供 $10——
+- 站内同款B日供 $9.7 → A的供价 $10 > 9.7 × 1.03 = $9.99 → **A是站内高供品**
+- 站内同款C日供 $9.9 → A的供价 $10 < 9.9 × 1.03 = $10.19 → **A不是高供品**
+
+站内高供品的处理逻辑不同：
+
+:::mermaid
+graph TD
+  A["判断：左i是站内高供品？"] -->|是| B["跟价：直接定到市场建议价<br/>（不走常规跟价公式）"]
+  A -->|否| C["走常规跟价流程"]
+  B --> D{"建议价 vs 限流目标价"}
+  D -->|"建议价 > 限流目标"| E["高价 → 限流"]
+  D -->|"建议价 ≤ 限流目标"| F["不限流"]
+  E --> G["降供目标 = min(站内最低日供×1.03, 限流目标倒推供价)"]
+  style E fill:#37352f,color:#fff
+:::
+
+**为什么这么设计？** 站内高供品的核心问题是供价高，不是售价策略问题。让它先定到建议价（相对高的售价），然后通过限流给供应商降供压力。供应商降供到达标线后，解除高供标签，重新进入常规跟价——这时候才真正跟竞品比价格。
+
+:::tooltip
+**降供目标的计算：** min(站内最低日供 × 1.03, 限流目标售价倒推供价)。两个值取更小的——既要求不比站内同款贵太多，也要求售价达到竞品水平。供应商降到这个值后，高供标签解除，商品进入正常跟价&限流流程。
+:::
+
+:::impact
+触发点: 站内高供品逻辑上线
+- 高供品不再跟价降价 → 这些品定在建议价，售价相对更高
+- 更多高供品被限流 → 但限流后不计入高价率分子（因为算法找到了真实同款）
+- 供应商收到降供信号 → 降供后解除标签，进入正常跟价，最终实现供价和售价双降
+:::
+
+### 第六步：国家线的五大调价动作
+
+作为国家线运营，你有以下五个"操纵杆"可以拉：
+
+:::tabs
+::tab[1. 下调跟价下限]
+**目的：** 让更多品跟到目标价，解限流（代价是亏损）
+
+典型场景：BSR（Best Seller Ranking）跟价品补贴实验，下限从 1 倍不亏损降到 0.6 倍。
+
+例：右i = $10，跟价目标 = $9，正常下限 $10.5 跟不到 → 下调到 $6.3 后跟到 $9，解除限流。
+
+**高价率影响：** 双刃剑。降价可能降低高价率，但解限流后如果有漏召的更低价同款，高价率反而上升。
+
+::tab[2. 上调跟价上限]
+**目的：** 提升建议价附近商品的 ROI
+
+例：原上限=建议价 $12，上调到 1.1 倍后=$13.2。竞品价 $20 时，定价从 $12 涨到 $13.2。
+
+**高价率影响：** 风险较大。由于同款漏召问题，涨价后测评找到更低价同款的概率增加。
+
+::tab[3. 调整跟价折扣]
+**目的：** 提利润
+
+跟价折扣上浮（如 0.9→0.93），跟价目标价和限流目标价同步上升，实现涨价且不限流。
+
+**高价率影响：** 有天花板兜底（建议价和线上同款价），风险相对可控。
+
+::tab[4. 调整限流折扣]
+**目的：** 减少限流（非必要不建议做）
+
+只上浮限流折扣，不动跟价折扣。一般用于站点经营成本比竞品差距过大、降供难度大的场景。
+
+**高价率影响：** 被增量解限流的品如果实际比竞品贵，测评高价率直接上升。
+
+::tab[5. 非跟价品调价]
+**目的：** 降高价率 / 提利润
+
+非跟价品没有线上同款做价格天花板，涨价对高价率影响最大。降价则对高价率最友好。
+
+**操作建议：** 对限流率高且测评高价率高的类目，优先测降价；ROI 目标先跟类目平均拉齐。
+:::
+
+## 降高价率的完整操作手册
+
+当你的国家测评高价率偏高时，按以下流程操作：
+
+:::sequence
+sequenceDiagram
+  participant 你 as 国家线运营
+  participant 测评 as 测评系统
+  participant 看板 as 数据看板
+  participant 调价 as 调价系统
+
+  你->>测评: 1. 提测评需求/自测，确定真实高价率
+  测评-->>你: 返回高价率水平
+  你->>看板: 2. 查 Top GMV 类目的三级类目高价率
+  看板-->>你: 定位高价率高的类目
+  你->>看板: 3. 查这些类目的限流率
+  看板-->>你: 限流率 = 高价限流SKU数/有同款SKU数
+  你->>调价: 4. 对高危类目的非跟价品降ROI实验
+  调价-->>你: 执行降价
+  你->>测评: 5. 对实验类目自测高价率变化
+  测评-->>你: 验证效果
+:::
+
+:::callout
+**限流率高的类目 = 真实高价概率更高的类目。** 逻辑是：如果在算法已找到同款的品里，高价限流比例就很高，那在算法没找到同款的品里（非跟价品），高价的概率只会更大。
+:::
+
+> **如果降价效果不明显：** 检查比价规则过滤量级——可能大量同款在 merge 层到 hive1 层之间被过滤掉了，导致本该是跟价品的变成了非跟价品。
+
+## 关键决策点
+
+### 跟价折扣系数
+
+一句话：决定了 Temu 要比竞品便宜多少。
+
+**怎么产生：** 按站点×竞品平台配置，基于竞品平台的抽佣率确定。在 oms-marketing 折扣配置页面维护。
+
+**影响范围：** 折扣上浮 → 所有跟价品目标价上升 → 涨价品增多 + 限流品减少 → 利润提升但高价风险增加。折扣下调 → 反向效果。
+
+### 限流折扣系数
+
+一句话：决定了"贵到什么程度"才会被限流。
+
+**怎么产生：** 默认等于跟价折扣。站点有特殊需求时可独立配置，但必须 ≥ 跟价折扣。有核价折扣时，取 max(核价折扣×(1+支付手续费), 原限流折扣)。
+
+**影响范围：** 限流折扣是跟价和限流之间的"缓冲区"。上调 → 缓冲区变大 → 更多品免于限流但可能实际高价。
+
+### 测评高价率
+
+一句话：人工抽检发现的真实高价比例，是衡量价格竞争力的最终标准。
+
+**怎么产生：** 线下人工测评，或国家线自测。覆盖线上跟价可能漏召的同款。
+
+**影响范围：** 高价率是所有调价动作的"审判官"——线上限流率再低，如果测评高价率高，说明有大量漏召的高价品。所有涨价操作都需要评估对测评高价率的影响。
+
+## 数据看板与排查工具
+
+### 日常监控看板
+
+| 看板 | 用途 | 入口 |
+|------|------|------|
+| 售价比价看板 | 查看单品的同款匹配和比价结果 | OMS 系统（全托/半托/本本分别有入口） |
+| 限流看板 | 查看限流商品列表和限流原因 | OMS 系统（glo/eu/udp 三区独立） |
+| 同款黑白名单 | 手动干预同款匹配关系 | OMS 系统（仅 global） |
+| 跟价占比大盘 | 跟价品占大盘的比例趋势 | Matrix 报表 |
+| 跟价价格变化趋势 | 今日跟价 vs 昨日定价的涨降分布 | Matrix 报表 |
+
+### ROI 下降排查流程
+
+当你发现跟价品 ROI 在下降，按这个思路排查：
+
+:::mermaid
+graph TD
+  A["ROI 下降"] --> B{"跟价品和非跟价品<br/>都在降？"}
+  B -->|"都降"| C["站点大盘在整体降价<br/>检查售价策略是否屏蔽了跟价品"]
+  B -->|"只有跟价品降"| D{"有新的补贴实验<br/>上线吗？"}
+  D -->|有| E["确认实验影响范围"]
+  D -->|没有| F["拆分跟价价格变化<br/>看哪个平台降价品变多"]
+  F --> G{"同款覆盖率<br/>有变化？"}
+  G -->|"提升了"| H["新增了更多低价同款<br/>（该平台爬到更多品）"]
+  G -->|"没变"| I["该平台的右i价格在降<br/>（竞品在降价促销）"]
+:::
+
+### 限流目标供价的倒推
+
+当商品被限流时，系统会倒推一个**目标供价**，告诉供应商"降到多少就能解限流"：
+
+:::tabs
+::tab[有核价折扣]
+目标日常供价 = 核价目标供价
+
+例：竞品 $11，核价折扣 0.9 → 目标供价 = (11 × 0.9 - 运费) / (1 + 增值税) = $9.9
+
+::tab[无核价折扣]
+目标日常供价 = 按定价公式倒推
+
+例：竞品 $11，跟价折扣 0.9 → 跟价目标售价 = $9.9
+
+设目标供价 = x → 9.9 = x × (1 + 固定成本 5%) × (1 + 增值税) → 解出 x
+:::
+
+## 附录：术语对照表
+
+| 术语 | 含义 |
+|------|------|
+| 左i | Temu 平台上在售的商品（我方商品） |
+| 右i | 竞品平台上的同款商品（竞对商品） |
+| 跟价品 | 系统找到了竞品同款、可以自动定价的商品 |
+| 非跟价品 | 未找到竞品同款的商品（可能是算法漏召） |
+| 跟价折扣系数 | 跟价时乘以右i价格的系数，决定比竞品便宜多少 |
+| 限流折扣系数 | 判断是否高价限流的折扣系数，≥ 跟价折扣 |
+| 核价折扣 | 平台对供应商的核价标准折扣 |
+| 不亏损成本 | 供价 × (1 + 固定成本率)，即不亏损的最低售价 |
+| 市场建议价 / MSP | 市场认知的合理售价上限 |
+| 站内高供品 | 供价 > 站内最低同款供价 × 1.03 的商品 |
+| BSR | Best Seller Ranking，平台畅销品 |
+| ROI | 投入产出比，衡量利润水平 |
+| 测评高价率 | 人工测评中发现的真实高价商品比例 |
+| merge 层 | 算法匹配同款的原始结果层 |
+| hive1 / 比价层 | 经过比价规则过滤后的同款结果层 |
+| 全托/半托/本本 | 不同的供应商合作模式 |
+
+`;
+
+// --- Icons ---
+const ICONS = {
+  create: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><path d="M8 5v6M5 8h6"/></svg>',
+  impact: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M10 5l3 3-3 3"/></svg>',
+  chevron: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4l4 4-4 4"/></svg>',
+};
+
+// --- Mindmap branch colors ---
+const BRANCH_COLORS = [
+  { bg: '#fff7ed', text: '#9a3412', border: '#fed7aa' },
+  { bg: '#eff6ff', text: '#1e40af', border: '#bfdbfe' },
+  { bg: '#f0fdfa', text: '#115e59', border: '#99f6e4' },
+  { bg: '#faf5ff', text: '#6b21a8', border: '#d8b4fe' },
+  { bg: '#fffbeb', text: '#92400e', border: '#fde68a' },
+  { bg: '#fef2f2', text: '#991b1b', border: '#fecaca' },
+];
+
+// --- Escape helpers ---
+function escHtml(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function escAttr(s) { return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+// --- Block parser ---
+function parseBlocks(src) {
+  const lines = src.split('\n');
+  const segments = [];
+  let current = { type: 'md', lines: [] };
+  for (const line of lines) {
+    const openMatch = line.match(/^:::(\w+)\s*$/);
+    const closeMatch = line.match(/^:::\s*$/);
+    if (openMatch && current.type === 'md') {
+      if (current.lines.length) segments.push({ ...current, text: current.lines.join('\n') });
+      current = { type: openMatch[1], lines: [] };
+    } else if (closeMatch && current.type !== 'md') {
+      segments.push({ ...current, text: current.lines.join('\n') });
+      current = { type: 'md', lines: [] };
+    } else {
+      current.lines.push(line);
+    }
+  }
+  if (current.lines.length) segments.push({ ...current, text: current.lines.join('\n') });
+  return segments;
+}
+
+// --- markdown-it setup ---
+const md = markdownit({ html: true, linkify: true, typographer: true });
+
+// Inline tooltip: [term](tip:explanation)
+let _inTipLink = false;
+const _origLinkOpen = md.renderer.rules.link_open || null;
+md.renderer.rules.link_open = function(tokens, idx, options, env, self) {
+  const hrefIdx = tokens[idx].attrIndex('href');
+  if (hrefIdx >= 0) {
+    const href = tokens[idx].attrs[hrefIdx][1];
+    if (href.startsWith('tip:')) {
+      _inTipLink = true;
+      return '<span class="tip-word" data-tip="' + escAttr(decodeURIComponent(href.slice(4))) + '">';
+    }
+    if (href.startsWith('#')) {
+      if (!tokens[idx].attrGet('class')) tokens[idx].attrSet('class', 'concept-link');
+    }
+  }
+  _inTipLink = false;
+  return _origLinkOpen ? _origLinkOpen(tokens, idx, options, env, self) : self.renderToken(tokens, idx, options);
+};
+md.renderer.rules.link_close = function(tokens, idx, options, env, self) {
+  if (_inTipLink) { _inTipLink = false; return '</span>'; }
+  return self.renderToken(tokens, idx, options);
+};
+
+// --- Concept card post-processing ---
+function postProcessConceptCards(html) {
+  html = html.replace(
+    /<p><strong>怎么产生[：:]\s*<\/strong>\s*([\s\S]*?)<\/p>/g,
+    '<div class="concept-attr attr-create"><div class="concept-attr-icon">' + ICONS.create + '</div><div class="concept-attr-body"><strong>怎么产生</strong><p>$1</p></div></div>'
+  );
+  html = html.replace(
+    /<p><strong>影响范围[：:]\s*<\/strong>\s*([\s\S]*?)<\/p>/g,
+    '<div class="concept-attr attr-impact"><div class="concept-attr-icon">' + ICONS.impact + '</div><div class="concept-attr-body"><strong>影响范围</strong><p>$1</p></div></div>'
+  );
+  return html;
+}
+
+// --- Wrap concept sections into cards (DOM-based) ---
+function generateConceptGrid() {
+  const cards = document.querySelectorAll('.concept-card');
+  if (!cards.length) return;
+
+  // Find the first concept card's parent
+  const firstCard = cards[0];
+  const parent = firstCard.parentNode;
+
+  // Build grid data
+  const gridItems = [];
+  cards.forEach((card, i) => {
+    const h3 = card.querySelector('h3');
+    if (!h3) return;
+    const id = h3.id;
+    const text = h3.textContent || '';
+    // Parse "中文名 (EnglishName)"
+    const m = text.match(/^(.+?)\s*[（(](.+?)[)）]\s*$/);
+    const cn = m ? m[1].trim() : text.trim();
+    const en = m ? m[2].trim() : '';
+
+    // Get first paragraph as description
+    const firstP = card.querySelector('p');
+    const desc = firstP ? firstP.textContent.trim() : '';
+
+    gridItems.push({ id, cn, en, desc });
+  });
+
+  if (!gridItems.length) return;
+
+  // Build grid HTML — clean list with dividers
+  let html = '<div class="concept-grid" id="concept-grid-overview">';
+  gridItems.forEach(item => {
+    html += '<a class="concept-grid-item" href="#' + item.id + '">';
+    html += '<div class="concept-grid-name">' + escHtml(item.cn);
+    if (item.en) html += ' <span class="concept-grid-en">' + escHtml(item.en) + '</span>';
+    html += '</div>';
+    if (item.desc) html += '<div class="concept-grid-desc">' + escHtml(item.desc) + '</div>';
+    html += '</a>';
+  });
+  html += '</div>';
+
+  // Insert before first concept card
+  const wrapper = document.createElement('div');
+  wrapper.innerHTML = html;
+  parent.insertBefore(wrapper.firstElementChild, firstCard);
+}
+
+function wrapConceptCards() {
+  const attrs = document.querySelectorAll('.concept-attr');
+  attrs.forEach(attr => {
+    if (attr.closest('.concept-card')) return;
+    // Find preceding h3
+    let h3 = attr.previousElementSibling;
+    while (h3 && h3.tagName !== 'H3') h3 = h3.previousElementSibling;
+    if (!h3) return;
+    if (h3.closest('.concept-card')) return;
+
+    // Collect elements from h3 to next h2/h3
+    const wrapper = document.createElement('div');
+    wrapper.className = 'concept-card';
+    h3.parentNode.insertBefore(wrapper, h3);
+
+    const toMove = [];
+    let el = h3;
+    while (el) {
+      if (el !== h3 && el.nodeType === 1 && (el.tagName === 'H2' || el.tagName === 'H3')) break;
+      toMove.push(el);
+      el = el.nextSibling;
+    }
+    toMove.forEach(e => wrapper.appendChild(e));
+
+    // Append back-to-overview link
+    const backLink = document.createElement('a');
+    backLink.className = 'concept-back-link';
+    backLink.href = '#concept-grid-overview';
+    backLink.textContent = '\u2191 \u8FD4\u56DE\u6982\u5FF5\u603B\u89C8';
+    wrapper.appendChild(backLink);
+  });
+}
+
+// --- Mindmap ---
+function parseMindmapTree(text) {
+  const lines = text.split('\n').filter(l => /^\s*-/.test(l));
+  const root = [];
+  const stack = [{ level: -1, node: { children: root } }];
+  for (const line of lines) {
+    const indent = line.search(/\S/);
+    const level = Math.floor(indent / 2);
+    const nodeText = line.trim().replace(/^-\s*/, '');
+    const node = { text: nodeText, children: [] };
+    while (stack.length > 1 && stack[stack.length - 1].level >= level) stack.pop();
+    stack[stack.length - 1].node.children.push(node);
+    stack.push({ level, node });
+  }
+  return root;
+}
+
+function renderMindmapNode(node, depth, branchIndex) {
+  const hasChildren = node.children.length > 0;
+  const toggle = hasChildren ? '<span class="mm-toggle">\u25BE</span>' : '';
+  const clickAttr = hasChildren ? ' onclick="toggleMM(this)"' : '';
+
+  let styleAttr = '';
+  if (depth === 1 && branchIndex >= 0) {
+    const c = BRANCH_COLORS[branchIndex % BRANCH_COLORS.length];
+    styleAttr = ' style="background:' + c.bg + ';color:' + c.text + ';border:1px solid ' + c.border + '"';
+  }
+
+  let html = '<div class="mm-node mm-l' + depth + '">';
+  html += '<div class="mm-label' + (hasChildren ? ' mm-expandable' : '') + '"' + clickAttr + styleAttr + '>' + toggle + escHtml(node.text) + '</div>';
+  if (hasChildren) {
+    html += '<div class="mm-children">';
+    node.children.forEach((c, i) => {
+      html += renderMindmapNode(c, depth + 1, depth === 0 ? i : branchIndex);
+    });
+    html += '</div>';
+  }
+  html += '</div>';
+  return html;
+}
+
+function renderMindmap(text) {
+  const nodes = parseMindmapTree(text);
+  let html = '<div class="block-mindmap-tree">';
+  nodes.forEach((n, i) => { html += renderMindmapNode(n, 0, i); });
+  html += '</div>';
+  return html;
+}
+
+function toggleMM(label) {
+  label.closest('.mm-node').classList.toggle('mm-collapsed');
+}
+
+// --- Sequence diagram ---
+function renderSequence(text) {
+  const lines = text.split('\n');
+  const participants = [];
+  const messages = [];
+  for (const line of lines) {
+    const t = line.trim();
+    if (!t || t === 'sequenceDiagram') continue;
+    if (t.startsWith('participant ')) {
+      participants.push(t.slice('participant '.length).trim());
+    } else {
+      const m = t.match(/^(.+?)\s*(->>|-->>)\s*(.+?):\s*(.+)/);
+      if (m) messages.push({ from: m[1].trim(), dashed: m[2] === '-->>', to: m[3].trim(), msg: m[4].trim() });
+    }
+  }
+  let html = '<div class="seq-wrap">';
+  if (participants.length) {
+    html += '<div class="seq-actors">';
+    participants.forEach(p => { html += '<span class="seq-actor">' + escHtml(p) + '</span>'; });
+    html += '</div>';
+  }
+  html += '<div class="seq-timeline">';
+  messages.forEach(msg => {
+    const self = msg.from === msg.to;
+    const arrow = self ? '\u21BB' : (msg.dashed ? '\u21E2' : '\u2192');
+    html += '<div class="seq-row' + (msg.dashed ? ' seq-row-dashed' : '') + '">';
+    html += '<div class="seq-dir"><span class="seq-from">' + escHtml(msg.from) + '</span>';
+    html += '<span class="seq-arrow">' + arrow + '</span>';
+    if (!self) html += '<span class="seq-to">' + escHtml(msg.to) + '</span>';
+    html += '</div><div class="seq-text">' + escHtml(msg.msg) + '</div></div>';
+  });
+  html += '</div></div>';
+  return html;
+}
+
+// --- Block renderers ---
+function wrapDiagram(inner, label) {
+  return '<div class="diagram-outer">' + inner + '<div class="diagram-outer-label">' + label + '</div></div>';
+}
+
+function renderMetric(text) {
+  const items = text.trim().split('\n').map(line => {
+    const parts = line.split('|');
+    return parts.length >= 2 ? { value: parts[0].trim(), label: parts[1].trim() } : null;
+  }).filter(Boolean);
+  if (!items.length) return '';
+  return '<div class="metric-row">' + items.map(it =>
+    '<div class="metric-card"><div class="metric-value">' + escHtml(it.value) + '</div><div class="metric-label">' + escHtml(it.label) + '</div></div>'
+  ).join('') + '</div>';
+}
+
+function renderImpact(text) {
+  const lines = text.trim().split('\n');
+  let trigger = '';
+  const items = [];
+  for (const line of lines) {
+    if (/^\u89E6\u53D1\u70B9[:：]/.test(line)) {
+      trigger = line.replace(/^\u89E6\u53D1\u70B9[:：]\s*/, '');
+    } else if (line.startsWith('- ')) {
+      items.push(line.slice(2));
+    }
+  }
+  return '<div class="block-impact" onclick="this.classList.toggle(\'open\')">' +
+    '<div class="impact-trigger">' + escHtml(trigger) + '<span class="impact-toggle">\u25B8</span></div>' +
+    '<div class="impact-items"><ul>' + items.map(it => '<li>' + escHtml(it) + '</li>').join('') + '</ul></div></div>';
+}
+
+function renderTabs(text) {
+  const tabs = [];
+  let current = null;
+  for (const line of text.split('\n')) {
+    const m = line.match(/^::tab\[(.+)\]\s*$/);
+    if (m) { if (current) tabs.push(current); current = { label: m[1], lines: [] }; }
+    else if (current) current.lines.push(line);
+  }
+  if (current) tabs.push(current);
+  if (!tabs.length) return '';
+  const id = 'tabs-' + Math.random().toString(36).slice(2, 8);
+  const bar = tabs.map((t, i) =>
+    '<button class="' + (i === 0 ? 'active' : '') + '" onclick="switchTab(\'' + id + '\',' + i + ')">' + escHtml(t.label) + '</button>'
+  ).join('');
+  const panels = tabs.map((t, i) =>
+    '<div class="tab-panel ' + (i === 0 ? 'active' : '') + '" data-tab-group="' + id + '" data-tab-index="' + i + '">' + md.render(t.lines.join('\n')) + '</div>'
+  ).join('');
+  return '<div class="block-tabs"><div class="tab-bar">' + bar + '</div>' + panels + '</div>';
+}
+
+function switchTab(group, index) {
+  document.querySelectorAll('[data-tab-group="' + group + '"]').forEach(el => el.classList.remove('active'));
+  document.querySelector('[data-tab-group="' + group + '"][data-tab-index="' + index + '"]').classList.add('active');
+  const bar = document.querySelector('[data-tab-group="' + group + '"]').closest('.block-tabs').querySelector('.tab-bar');
+  bar.querySelectorAll('button').forEach((b, i) => b.classList.toggle('active', i === index));
+}
+
+// --- Block renderers ---
+function renderSegments(segments) {
+  return segments.map(seg => {
+    switch (seg.type) {
+      case 'md': return postProcessConceptCards(md.render(seg.text));
+      case 'mermaid':
+        return '<div class="diagram-outer"><pre class="mermaid">' + escHtml(seg.text.trim()) + '</pre><div class="diagram-outer-label">FLOW</div></div>';
+      case 'sequence': return wrapDiagram(renderSequence(seg.text.trim()), 'SEQUENCE');
+      case 'mindmap': return renderMindmap(seg.text.trim());
+      case 'tooltip':
+        return '<div class="block-tooltip" onclick="this.classList.toggle(\'open\')">' +
+          '<div class="block-tooltip-header">' + ICONS.chevron + ' 技术细节</div>' +
+          '<div class="tooltip-body">' + md.render(seg.text) + '</div></div>';
+      case 'callout': return '<div class="block-callout">' + md.render(seg.text) + '</div>';
+      case 'impact': return renderImpact(seg.text);
+      case 'tabs': return renderTabs(seg.text);
+      case 'metric': return renderMetric(seg.text);
+      case 'demo':
+        var demoId = 'demo-' + Math.random().toString(36).slice(2, 8);
+        var demoBody = seg.text.trim().replace(/"/g, '&quot;').replace(/<\//g, '&lt;/');
+        var demoCSS = [
+          '*{margin:0;padding:0;box-sizing:border-box}',
+          'body{font-family:-apple-system,&quot;Helvetica Neue&quot;,&quot;PingFang SC&quot;,&quot;Noto Sans SC&quot;,sans-serif;padding:20px;background:transparent;color:#1a1a1a;line-height:1.6;overflow:hidden;font-size:14px}',
+          ':root{--black:#37352f;--gray-900:#1a1a1a;--gray-700:#555;--gray-500:#888;--gray-400:#aaa;--gray-300:#ccc;--gray-200:#e5e5e5;--gray-100:#f5f5f5;--gray-50:#fafafa;--white:#fff;--radius:8px;--radius-sm:6px;--radius-full:9999px}',
+          '.card{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius);padding:16px}',
+          '.card-sm{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-sm);padding:10px 14px}',
+          '.row{display:flex;gap:12px;align-items:center}',
+          '.col{display:flex;flex-direction:column;gap:8px}',
+          '.wrap{display:flex;flex-wrap:wrap;gap:8px}',
+          '.center{display:flex;align-items:center;justify-content:center}',
+          '.gap-sm{gap:6px}.gap-lg{gap:16px}',
+          '.text-xs{font-size:11px}.text-sm{font-size:12px}.text-md{font-size:14px}.text-lg{font-size:16px}.text-xl{font-size:20px}',
+          '.text-bold{font-weight:700}.text-medium{font-weight:500}',
+          '.text-black{color:var(--black)}.text-gray{color:var(--gray-500)}.text-light{color:var(--gray-400)}.text-white{color:var(--white)}',
+          '.bg-black{background:var(--black)}.bg-dark{background:var(--gray-900)}.bg-gray{background:var(--gray-100)}.bg-white{background:var(--white)}',
+          '.pill{display:inline-flex;align-items:center;padding:6px 14px;border-radius:var(--radius-full);font-size:13px;white-space:nowrap}',
+          '.pill-outline{border:1px solid var(--gray-200);background:var(--white)}',
+          '.pill-filled{background:var(--black);color:var(--white)}',
+          '.pill-active{background:var(--black);color:var(--white)}',
+          '.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 20px;border-radius:var(--radius);border:none;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit}',
+          '.btn-primary{background:var(--black);color:var(--white)}.btn-secondary{background:var(--gray-100);color:var(--black);border:1px solid var(--gray-200)}',
+          '.btn-block{width:100%}',
+          '.avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0}',
+          '.avatar-sm{width:32px;height:32px;font-size:11px}.avatar-lg{width:48px;height:48px;font-size:14px}',
+          '.avatar-dark{background:var(--black);color:var(--white)}.avatar-gray{background:var(--gray-100);color:var(--gray-700)}.avatar-outline{background:var(--white);border:2px solid var(--gray-200);color:var(--gray-700)}',
+          '.bubble{padding:10px 14px;border-radius:2px 12px 12px 12px;line-height:1.6}.bubble-gray{background:var(--gray-100)}.bubble-light{background:var(--gray-50);border:1px solid var(--gray-200)}',
+          '.divider{height:1px;background:var(--gray-200);margin:12px 0}',
+          '.label{font-size:12px;color:var(--gray-500);margin-bottom:6px}',
+          '.badge{display:inline-flex;align-items:center;padding:2px 8px;border-radius:var(--radius-full);font-size:11px;font-weight:600}',
+          '.badge-dark{background:var(--black);color:var(--white)}.badge-gray{background:var(--gray-100);color:var(--gray-700)}.badge-outline{border:1px solid var(--gray-300);color:var(--gray-700)}',
+          '.status-dot{width:8px;height:8px;border-radius:50%;display:inline-block}.status-active{background:var(--black)}.status-inactive{background:var(--gray-300)}.status-glow{box-shadow:0 0 8px rgba(0,0,0,0.3)}',
+          '.mt-sm{margin-top:8px}.mt-md{margin-top:12px}.mt-lg{margin-top:16px}.mb-sm{margin-bottom:8px}.mb-md{margin-bottom:12px}.mb-lg{margin-bottom:16px}',
+          '.text-center{text-align:center}.text-right{text-align:right}',
+          '.w-full{width:100%}.max-w-sm{max-width:360px}.max-w-md{max-width:440px}.mx-auto{margin-left:auto;margin-right:auto}',
+          '.opacity-30{opacity:0.3}.opacity-50{opacity:0.5}.opacity-70{opacity:0.7}',
+          '.shadow-sm{box-shadow:0 1px 3px rgba(0,0,0,0.06)}'
+        ].join('');
+        var demoHead = '<!DOCTYPE html><html><head><meta charset=&quot;UTF-8&quot;><meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;><style>' + demoCSS + '</style></head><body>';
+        var demoTail = '&lt;script>new ResizeObserver(function(){parent.postMessage({type:&quot;demo-resize&quot;,id:&quot;' + demoId + '&quot;,h:document.body.scrollHeight},&quot;*&quot;)}).observe(document.body)&lt;/script></body></html>';
+        return '<div class="block-demo">' +
+          '<div class="demo-label">DEMO</div>' +
+          '<iframe id="' + demoId + '" class="demo-frame" sandbox="allow-scripts" srcdoc="' + demoHead + demoBody + demoTail + '"></iframe></div>';
+      default: return md.render(seg.text);
+    }
+  }).join('');
+}
+
+// --- Nav & scroll spy ---
+function slugify(text) {
+  return text.trim().toLowerCase()
+    .replace(/[\s\u3000（）()【】\[\]「」《》、，。！？:：]/g, '-')
+    .replace(/[^\w\u4e00-\u9fff-]/g, '')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '') || 'sec';
+}
+const slugCounts = {};
+function uniqueSlug(base) {
+  const count = (slugCounts[base] || 0) + 1;
+  slugCounts[base] = count;
+  return count === 1 ? base : base + '-' + count;
+}
+
+function buildNav(html) {
+  const tmp = document.createElement('div');
+  tmp.innerHTML = html;
+  const links = [];
+  tmp.querySelectorAll('h2, h3').forEach(el => {
+    const id = uniqueSlug(slugify(el.textContent));
+    el.id = id;
+    links.push({ id, text: el.textContent, level: el.tagName });
+  });
+  document.getElementById('content').innerHTML = tmp.innerHTML;
+  document.getElementById('nav-links').innerHTML = links.map(l =>
+    '<a href="#' + l.id + '" class="' + (l.level === 'H3' ? 'sub' : '') + '">' + l.text + '</a>'
+  ).join('');
+}
+
+function setupScrollSpy() {
+  const headings = document.querySelectorAll('h2[id], h3[id]');
+  const navLinks = document.querySelectorAll('#nav-links a');
+  if (!headings.length) return;
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(a => a.classList.remove('active'));
+        const link = document.querySelector('#nav-links a[href="#' + entry.target.id + '"]');
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  headings.forEach(h => observer.observe(h));
+}
+
+// --- Link validation ---
+function validateLinks() {
+  const links = document.querySelectorAll('#content a[href^="#"]');
+  const ids = new Set();
+  document.querySelectorAll('[id]').forEach(el => ids.add(el.id));
+  let broken = 0;
+  links.forEach(link => {
+    const target = link.getAttribute('href').slice(1);
+    if (target && !ids.has(target)) {
+      console.warn('Broken link:', link.textContent, '\u2192 #' + target);
+      broken++;
+    }
+  });
+  if (broken) console.warn('\u26A0 Found ' + broken + ' broken anchor link(s). Check console for details.');
+  return broken;
+}
+
+// --- Concept Link Popover ---
+function setupConceptPopovers() {
+  var popover = document.createElement('div');
+  popover.id = 'concept-popover';
+  document.body.appendChild(popover);
+
+  var conceptMap = new Map();
+  document.querySelectorAll('.concept-card').forEach(function(card) {
+    var h3 = card.querySelector('h3');
+    if (!h3 || !h3.id) return;
+    var firstP = card.querySelector('p');
+    var desc = firstP ? firstP.textContent.trim() : '';
+    conceptMap.set(h3.id, {
+      name: h3.textContent,
+      desc: desc.length > 150 ? desc.substring(0, 150) + '...' : desc
+    });
+  });
+
+  document.querySelectorAll('#content a[href^="#"]').forEach(function(link) {
+    var targetId = link.getAttribute('href').slice(1);
+    var data = conceptMap.get(targetId);
+    if (!data) return;
+
+    link.addEventListener('mouseenter', function() {
+      popover.innerHTML = '<div class="cpop-name">' + escHtml(data.name) + '</div>' +
+                          '<div class="cpop-desc">' + escHtml(data.desc) + '</div>';
+      var rect = link.getBoundingClientRect();
+      popover.style.left = rect.left + rect.width / 2 + 'px';
+      popover.style.top = (rect.top - 8) + 'px';
+      popover.classList.add('visible');
+    });
+
+    link.addEventListener('mouseleave', function() {
+      popover.classList.remove('visible');
+    });
+  });
+}
+
+// --- Mobile Nav ---
+function setupMobileNav() {
+  var nav = document.getElementById('nav');
+  if (!nav) return;
+
+  // Create hamburger button
+  var btn = document.createElement('button');
+  btn.className = 'mobile-nav-toggle';
+  btn.textContent = '\u2630';
+  btn.setAttribute('aria-label', 'Toggle navigation');
+  document.body.appendChild(btn);
+
+  // Create overlay
+  var overlay = document.createElement('div');
+  overlay.className = 'nav-overlay';
+  document.body.appendChild(overlay);
+
+  btn.addEventListener('click', function() {
+    nav.classList.toggle('nav-open');
+    overlay.classList.toggle('visible');
+  });
+
+  overlay.addEventListener('click', function() {
+    nav.classList.remove('nav-open');
+    overlay.classList.remove('visible');
+  });
+
+  // Close nav when a link is clicked (mobile)
+  nav.addEventListener('click', function(e) {
+    if (e.target.tagName === 'A') {
+      nav.classList.remove('nav-open');
+      overlay.classList.remove('visible');
+    }
+  });
+}
+
+// --- Nav Search ---
+function setupSearch() {
+  var navTitle = document.querySelector('.nav-title');
+  if (!navTitle) return;
+
+  var input = document.createElement('input');
+  input.type = 'text';
+  input.className = 'nav-search';
+  input.placeholder = '\u641C\u7D22\u7AE0\u8282...';
+  navTitle.parentNode.insertBefore(input, navTitle.nextSibling);
+
+  input.addEventListener('input', function() {
+    var query = input.value.trim().toLowerCase();
+    var links = document.querySelectorAll('#nav-links a');
+    links.forEach(function(link) {
+      if (!query) {
+        link.classList.remove('search-dimmed');
+      } else {
+        var text = link.textContent.toLowerCase();
+        link.classList.toggle('search-dimmed', text.indexOf(query) === -1);
+      }
+    });
+  });
+}
+
+// --- Init ---
+function init() {
+  const segments = parseBlocks(RAW);
+  const html = renderSegments(segments);
+  buildNav(html);
+  wrapConceptCards();
+  generateConceptGrid();
+  setupScrollSpy();
+  setupConceptPopovers();
+
+  // Initialize mermaid
+  if (typeof mermaid !== 'undefined') {
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: 'base',
+      themeVariables: {
+        primaryColor: '#e3e2de',
+        primaryTextColor: '#37352f',
+        primaryBorderColor: '#d4d4d0',
+        lineColor: '#b4b4b0',
+        secondaryColor: '#f7f6f3',
+        tertiaryColor: '#f7f6f3',
+        noteBkgColor: '#fffbeb',
+        noteTextColor: '#92400e',
+        fontSize: '14px',
+        fontFamily: 'inherit'
+      },
+      flowchart: {
+        htmlLabels: true,
+        curve: 'basis',
+        padding: 16,
+        nodeSpacing: 40,
+        rankSpacing: 60,
+        useMaxWidth: true,
+        wrappingWidth: 180
+      }
+    });
+    mermaid.run({ querySelector: 'pre.mermaid' });
+  }
+
+  // Demo iframe auto-resize
+  window.addEventListener('message', function(e) {
+    if (e.data && e.data.type === 'demo-resize') {
+      var frame = document.getElementById(e.data.id);
+      if (frame) frame.style.height = e.data.h + 'px';
+    }
+  });
+
+  validateLinks();
+  setupMobileNav();
+  setupSearch();
+
+  // Expand first impact chain by default
+  const firstImpact = document.querySelector('.block-impact');
+  if (firstImpact) firstImpact.classList.add('open');
+
+  const h1 = document.querySelector('h1');
+  if (h1) document.title = h1.textContent + ' \u2014 Panova';
+}
+
+init();
+</script>
+</body>
+</html>
