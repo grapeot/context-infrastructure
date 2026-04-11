@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.zhouxuanting.opencode.health-receiver</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/zhouxuanting/opencode-context-infrastructure/.venv/bin/python3</string>
+    <string>/Users/zhouxuanting/opencode-context-infrastructure/tools/health_data_receiver.py</string>
+    <string>--port</string>
+    <string>9876</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/zhouxuanting/opencode-context-infrastructure</string>
+
+  <key>KeepAlive</key>
+  <true/>
+
+  <key>StandardOutPath</key>
+  <string>/Users/zhouxuanting/opencode-context-infrastructure/.local_runtime/logs/services/health_receiver.log</string>
+
+  <key>StandardErrorPath</key>
+  <string>/Users/zhouxuanting/opencode-context-infrastructure/.local_runtime/logs/services/health_receiver.err.log</string>
+</dict>
+</plist>

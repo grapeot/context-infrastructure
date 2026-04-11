@@ -1,0 +1,88 @@
+#!/bin/bash
+set -euo pipefail
+export PATH="$HOME/.opencode/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${PATH:-}"
+
+ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/../.." && pwd -P)"
+RUNTIME_ROOT="$ROOT/.local_runtime"
+ENV_FILE="$ROOT/.env"
+PYTHON_BIN="$ROOT/.venv/bin/python3"
+JOB="${1:-}"
+shift || true
+
+load_env() {
+  if [[ -f "$ENV_FILE" ]]; then
+    set -a
+    source "$ENV_FILE"
+    set +a
+  fi
+}
+
+require_env() {
+  local missing=()
+  for name in "$@"; do
+    if [[ -z "${!name:-}" ]]; then
+      missing+=("$name")
+    fi
+  done
+  if [[ ${#missing[@]} -gt 0 ]]; then
+    echo "SKIP: missing env vars: ${missing[*]}"
+    exit 0
+  fi
+}
+
+[[ -n "$JOB" ]] || { echo "Usage: $(basename "$0") <job_name>" >&2; exit 1; }
+cd "$ROOT"
+mkdir -p "$RUNTIME_ROOT/logs/jobs"
+load_env
+
+[[ -x "$PYTHON_BIN" ]] || { echo "Missing virtualenv python: $PYTHON_BIN" >&2; exit 1; }
+
+case "$JOB" in
+  observer)
+    require_env OPENCODE_BASE_URL OPENCODE_USERNAME OPENCODE_PASSWORD
+    exec "$PYTHON_BIN" "$ROOT/periodic_jobs/ai_heartbeat/src/v0/observer.py" "$@"
+    ;;
+  reflector)
+    require_env OPENCODE_BASE_URL OPENCODE_USERNAME OPENCODE_PASSWORD
+    exec "$PYTHON_BIN" "$ROOT/periodic_jobs/ai_heartbeat/src/v0/reflector.py" "$@"
+    ;;
+  crontab_monitor)
+    require_env OPENCODE_BASE_URL OPENCODE_USERNAME OPENCODE_PASSWORD GMAIL_USERNAME GMAIL_APP_PASSWORD
+    exec "$PYTHON_BIN" "$ROOT/periodic_jobs/ai_heartbeat/src/v0/jobs/crontab_monitor.py" "$@"
+    ;;
+  ai_news_daily)
+    require_env OPENCODE_BASE_URL OPENCODE_USERNAME OPENCODE_PASSWORD GMAIL_USERNAME GMAIL_APP_PASSWORD TAVILY_API_KEY
+    exec "$PYTHON_BIN" "$ROOT/periodic_jobs/ai_heartbeat/src/v0/jobs/ai_news_survey.py" --mode daily "$@"
+    ;;
+  ai_news_weekly)
+    require_env OPENCODE_BASE_URL OPENCODE_USERNAME OPENCODE_PASSWORD GMAIL_USERNAME GMAIL_APP_PASSWORD TAVILY_API_KEY
+    exec "$PYTHON_BIN" "$ROOT/periodic_jobs/ai_heartbeat/src/v0/jobs/ai_news_survey.py" --mode weekly "$@"
+    ;;
+  builders_digest)
+    # follow-builders skill: prepare feed JSON → OpenCode remix → deliver
+    NODE_BIN="/usr/local/bin/node"
+    SKILL_DIR="$HOME/.claude/skills/follow-builders/scripts"
+    [[ -x "$NODE_BIN" ]] || { echo "Missing node: $NODE_BIN" >&2; exit 1; }
+    [[ -d "$SKILL_DIR" ]] || { echo "Missing skill dir: $SKILL_DIR" >&2; exit 1; }
+    require_env OPENCODE_BASE_URL OPENCODE_USERNAME OPENCODE_PASSWORD
+    exec "$PYTHON_BIN" "$ROOT/periodic_jobs/ai_heartbeat/src/v0/jobs/builders_digest.py" --node-bin "$NODE_BIN" --skill-dir "${SKILL_DIR%/scripts}" "$@"
+    ;;
+  action_advisor)
+    require_env OPENCODE_BASE_URL OPENCODE_USERNAME OPENCODE_PASSWORD GMAIL_USERNAME GMAIL_APP_PASSWORD
+    exec "$PYTHON_BIN" "$ROOT/periodic_jobs/ai_heartbeat/src/v0/jobs/action_advisor.py" "$@"
+    ;;
+  life_record_digest)
+    exec "$PYTHON_BIN" "$ROOT/periodic_jobs/ai_heartbeat/src/v0/jobs/life_record_digest.py" "$@"
+    ;;
+  github_trending)
+    require_env OPENCODE_BASE_URL OPENCODE_USERNAME OPENCODE_PASSWORD
+    exec "$PYTHON_BIN" "$ROOT/periodic_jobs/ai_heartbeat/src/v0/jobs/github_trending.py" "$@"
+    ;;
+  health_monitor)
+    exec "$PYTHON_BIN" "$ROOT/periodic_jobs/ai_heartbeat/src/v0/jobs/health_monitor.py" "$@"
+    ;;
+  *)
+    echo "Unknown job: $JOB" >&2
+    exit 1
+    ;;
+esac
