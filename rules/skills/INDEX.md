@@ -40,6 +40,7 @@
 - [Gemini 图片生成与放大](./gemini_image_generation.md) — CLI 工具：文生图、图片编辑、分辨率放大
 - [增长数据分析](./growth_analytics.md) ⚙️ — 三个 CLI 查询网站流量（GA4）、邮件订阅（Kit）、Twitter 互动（Typefully）
 - [Typefully Metrics CLI](./typefully_metrics.md) ⚙️ — 通过浏览器 session 凭据查询 Twitter impression、engagement、followers 数据
+- [Typefully 发帖 CLI](./typefully_post.md) ⚙️ — 通过 Typefully v2 API 创建草稿、排期发布和直接发布 tweet / thread
 
 ### Workflow（工作流）
 
