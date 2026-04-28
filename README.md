@@ -36,6 +36,7 @@ context-infrastructure/
 ├── rules/
 │   ├── SOUL.md                  # AI 的身份和行为基调（模板）
 │   ├── USER.md                  # 你的偏好和背景（模板）
+│   ├── USER_yage.md             # 原作者画像（示例备份）
 │   ├── COMMUNICATION.md         # 沟通风格指南（可直接用）
 │   ├── WORKSPACE.md             # 目录路由索引
 │   ├── axioms/                  # 43 条决策公理（展示层）
