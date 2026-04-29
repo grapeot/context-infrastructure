@@ -48,48 +48,65 @@ def load_dotenv():
             break
 
 def md_to_html(md_content, title=None, css=None):
-    html = md_content
-    
+    # Protect fenced code blocks from markdown transformation
+    code_blocks = []
+    def stash_code_block(match):
+        lang = match.group(1) or ""
+        code = match.group(2)
+        code = code.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+        placeholder = f"\x00CODEBLOCK{len(code_blocks)}\x00"
+        code_blocks.append(f'<pre><code class="language-{lang}">{code}</code></pre>' if lang else f'<pre><code>{code}</code></pre>')
+        return placeholder
+
+    html = re.sub(r'```(\w*)\n(.*?)```', stash_code_block, md_content, flags=re.DOTALL)
+
     html = re.sub(r'^# (.+)$', r'<h1>\1</h1>', html, flags=re.MULTILINE)
     html = re.sub(r'^## (.+)$', r'<h2>\1</h2>', html, flags=re.MULTILINE)
     html = re.sub(r'^### (.+)$', r'<h3>\1</h3>', html, flags=re.MULTILINE)
-    
+
     html = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', html)
-    html = re.sub(r'\*(.+?)\*', r'<em>\1</em>', html)
-    
+    html = re.sub(r'(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)', r'<em>\1</em>', html)
+
     html = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2">\1</a>', html)
-    
+
     html = re.sub(r'^- (.+)$', r'<li>\1</li>', html, flags=re.MULTILINE)
     html = re.sub(r'(<li>.*</li>\n?)+', r'<ul>\g<0></ul>\n', html)
-    
+
     html = re.sub(r'^\d+\. (.+)$', r'<li>\1</li>', html, flags=re.MULTILINE)
-    
+
     html = re.sub(r'^---$', r'<hr>', html, flags=re.MULTILINE)
-    
+
     html = re.sub(r'`([^`]+)`', r'<code>\1</code>', html)
-    
+
     def convert_table(match):
         table_content = match.group(0)
         lines = table_content.strip().split('\n')
         html_table = '<table>\n'
         for i, line in enumerate(lines):
-            if re.match(r'^[\|\-\s]+$', line):
+            if re.match(r'^[\|\-\:\s]+$', line):
                 continue
-            cells = [c.strip() for c in line.split('|') if c.strip()]
+            cells = [c.strip() for c in line.split('|')]
+            cells = [c for c in cells if c]  # drop empty from leading/trailing |
+            if not cells:
+                continue
             tag = 'th' if i == 0 else 'td'
             row = ''.join(f'<{tag}>{c}</{tag}>' for c in cells)
             html_table += f'<tr>{row}</tr>\n'
         html_table += '</table>'
         return html_table
-    
+
     html = re.sub(r'(\|.+\|\n)+', convert_table, html)
-    
+
     html = re.sub(r'\n\n', '</p><p>', html)
     html = '<p>' + html + '</p>'
     html = re.sub(r'<p>(<h[123]>.*?</h[123]>)</p>', r'\1', html, flags=re.DOTALL)
     html = re.sub(r'<p>(<ul>.*?</ul>)</p>', r'\1', html, flags=re.DOTALL)
     html = re.sub(r'<p>(<table>.*?</table>)</p>', r'\1', html, flags=re.DOTALL)
     html = re.sub(r'<p>(<hr>)</p>', r'\1', html)
+
+    # Restore code blocks
+    for i, block in enumerate(code_blocks):
+        html = html.replace(f"\x00CODEBLOCK{i}\x00", block)
     
     title_html = f'<title>{title}</title>' if title else ''
     css_html = css if css else CSS_STYLES
