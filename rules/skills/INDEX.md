@@ -67,6 +67,7 @@
 通用的最佳实践和经验教训。
 
 - [AI 编程核心方法论](./bestpractice_ai_programming_mindset.md) ✅ — 70%问题、成功标准、可验证性
+- [Skill 写作指南（Meta-Skill）](./bestpractice_skill_writing.md) ✅ — 创建或重写 skill 时使用，强调结果确定性、验收标准和边界条件
 - [API Key 管理与调用](./bestpractice_api_key_management_1password_cli.md) ✅ — 使用 1Password CLI 安全管理密钥
 - [面试评估框架](./bestpractice_interview_evaluation.md) ✅ — Trait > Skill、AI 作弊识别、技术深度探测
 - [Markdown 转 HTML 最佳实践](./bestpractice_markdown_html_conversion.md) ✅
@@ -80,24 +81,9 @@
 
 ## 如何添加你自己的 Skill
 
-1. 参考现有 skill 文件的格式（元数据、核心说明、使用步骤、示例）
-2. 以 `<category>_<name>.md` 命名（例如 `workflow_my_process.md`、`bestpractice_my_insight.md`）
-3. 在 INDEX.md 对应分类下添加一行
+创建或重写 skill 前，先读 [`bestpractice_skill_writing.md`](./bestpractice_skill_writing.md)。它说明如何用目标、验收标准、可用资源和输出规格定义一个 skill，而不是把 skill 写成机械步骤清单。
 
-Skill 格式参考（最简版）：
-```markdown
-# Skill: 名称
-
-## When to Use
-什么情况下触发这个 skill
-
-## Prerequisites
-需要什么工具/配置
-
-## 步骤
-1. 步骤一
-2. 步骤二
-```
+文件命名建议采用 `<category>_<name>.md`，例如 `workflow_my_process.md`、`bestpractice_my_insight.md`。写完后在本 INDEX 的对应分类下添加入口，确保后续 agent 能找到。
 
 ## Progressive Disclosure
 
