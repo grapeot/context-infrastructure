@@ -1,0 +1,29 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "cursor",
+  "elements": [
+    {"type":"text","id":"title","x":340,"y":-5,"text":"Google TPU Software Stack","fontSize":26,"strokeColor":"#1e1e1e"},
+    {"type":"text","id":"sub","x":380,"y":35,"text":"JAX primary, XLA compiler, PJRT/libtpu, Pathways at scale","fontSize":15,"strokeColor":"#757575"},
+    {"type":"rectangle","id":"l1","x":180,"y":70,"width":640,"height":55,"backgroundColor":"#dbe4ff","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#4a9eed"},
+    {"type":"text","id":"l1t","x":200,"y":85,"text":"Frameworks: JAX/Flax/MaxText | PyTorch/XLA + TorchTPU (v8) | TF legacy","fontSize":14,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l2","x":180,"y":145,"width":640,"height":55,"backgroundColor":"#e5dbff","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#8b5cf6"},
+    {"type":"text","id":"l2t","x":280,"y":160,"text":"Pallas / Mosaic custom kernels (MLIR tpu dialect)","fontSize":14,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l3","x":180,"y":220,"width":640,"height":55,"backgroundColor":"#fff3bf","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b"},
+    {"type":"text","id":"l3t","x":300,"y":235,"text":"StableHLO / HLO + GSPMD sharding passes","fontSize":14,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l4","x":180,"y":295,"width":640,"height":55,"backgroundColor":"#ffd8a8","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b"},
+    {"type":"text","id":"l4t","x":320,"y":310,"text":"LLO VLIW IR -> VLIW bundle executable (not LLVM backend)","fontSize":14,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l5","x":180,"y":370,"width":640,"height":55,"backgroundColor":"#c3fae8","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#06b6d4"},
+    {"type":"text","id":"l5t","x":320,"y":385,"text":"PJRT C API (OpenXLA) -> libtpu.so closed source TFRT runtime","fontSize":14,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l6","x":180,"y":445,"width":300,"height":55,"backgroundColor":"#b2f2bb","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e"},
+    {"type":"text","id":"l6t","x":200,"y":460,"text":"ICI collectives (in-slice)","fontSize":14,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l7","x":520,"y":445,"width":300,"height":55,"backgroundColor":"#ffc9c9","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#ef4444"},
+    {"type":"text","id":"l7t","x":540,"y":460,"text":"Pathways IFRT (multi-slice scale)","fontSize":14,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l8","x":180,"y":520,"width":640,"height":55,"backgroundColor":"#a5d8ff","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#4a9eed"},
+    {"type":"text","id":"l8t","x":280,"y":535,"text":"TPU v1-v8: MXU, TC, SparseCore (8t) / CAE (8i), HBM, Boardfly","fontSize":14,"strokeColor":"#1e1e1e"},
+    {"type":"text","id":"note","x":180,"y":600,"text":"Cloud-only: libtpu on TPU VM | Compiler compatible, not binary compatible | Axion host (v8)","fontSize":13,"strokeColor":"#757575"},
+    {"type":"text","id":"note2","x":180,"y":625,"text":"vLLM-TPU + Neptune + Virgo DCN (8t) + TPUDirect Storage for training feed","fontSize":12,"strokeColor":"#757575"}
+  ],
+  "appState": {"viewBackgroundColor": "#ffffff"},
+  "files": {}
+}

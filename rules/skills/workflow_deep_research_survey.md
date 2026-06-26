@@ -6,7 +6,7 @@
 - **适用场景**: 需要对某个主题进行深度、全面、可验证的第三方调研
 - **输出位置**: `contexts/survey_sessions/`
 - **创建日期**: 2026-02-19
-- **最后更新**: 2026-06-07
+- **最后更新**: 2026-06-26
 
 ## 核心原则
 
@@ -41,6 +41,22 @@
 External mode 选定后，还需要回答一个更根本的问题：**这件事对目标读者的 relevance 是现在的、将来的、还是现在大概率不相关？** 很多调研对象的真实答案是第三种——短期和大多数读者没有直接关系，但长期可能重要。如果是这种情况，文章的 thesis 必须正面承认这一点，而不是通过堆叠炫目案例来暗示短期价值比实际更大。承认"现在不相关"不等于"不值得写"；值得写的原因可能恰恰是帮读者区分短期噪音和长期信号。
 
 先问三个问题再选 mode：(1) 这个读者是否已知且共享厚重上下文？(2) 主要价值是帮对方更快判断还是让对方理解并相信？(3) 拿掉私有背景后报告能否独立成立？偏共享上下文和快速判断用 internal；偏自足、传播和说服用 external。
+
+## 芯片 / 加速器调研路由
+
+**触发条件**：调研对象涉及 AI 芯片、ML 加速器、或 NVIDIA CUDA / AWS Neuron / Google TPU 编译器与运行时。
+
+**硬规则：Phase 1 之前必须先读** [`reference_crucible_notes.md`](./reference_crucible_notes.md)，判断问题落在哪一层：
+
+| 层级 | 典型问题 | 主要来源 |
+|------|----------|----------|
+| **Internals** | NEFF 结构、IR/pass 名、runtime load、GPSIMD microcode、PTX 编译阶段 | crucible-notes wiki（Tier 2–3）+ 官方 doc 对照（Tier 1） |
+| **产品** | 代际规格、EC2 实例、软件栈迁移、框架集成 | 官方 doc + Tier 3–4 行为证据 |
+| **混合** | 「Trainium 编译 pipeline 怎么到 NEFF」 | 先 crucible 定 compile→runtime 数据流，再官方 doc 验证用户可见 API |
+
+**与已有 survey 的分工**：`contexts/survey_sessions/*_survey_*.md` 覆盖**产品级**硬件/软件；crucible-notes 覆盖**下层 internals**。写新报告时两层分节，不混为同等可信度。
+
+**无 crucible 覆盖的芯片**（如 Meta MTIA、AMD MI）→ 跳过 crucible，从 Phase 1 正常开始。
 
 ## 工作流程
 
@@ -245,6 +261,7 @@ External mode 选定后，还需要回答一个更根本的问题：**这件事�
 | 课程/培训 | 课程内容、讲师背景、学员评价、价格价值、替代方案 |
 | 公司/组织 | 业务模式、市场地位、口碑评价、争议事件、财务状况 |
 | 技术/工具 | 技术原理、使用体验、适用场景、局限性、替代方案 |
+| **AI 芯片 / 加速器** | **先** `reference_crucible_notes.md`（internals）；产品层见已有 survey 或常规维度 |
 | 观点/框架 | 共识程度、权威背书、反对声音、实际落地、时间线准确性 |
 
 ## 常见陷阱
@@ -259,5 +276,6 @@ External mode 选定后，还需要回答一个更根本的问题：**这件事�
 | 中间文件堆积 | 集中到 `tmp/<session_slug>/`，只保留关键索引和判断 |
 | 用错 subagent 类型 | `subagent_type` 必须是当前已注册 agent 名；外部调研默认 `general`，代码库探索用 `explore`，隐私敏感用 `private_ds4` 或 Ollama Cloud 路线 |
 | 调研结果变成 vendor marketing 汇总 | Phase 1 提取 claim，Phase 2 按证据功能分配维度，Phase 3 核查验证状态 |
+| 芯片 internals 只用官方 doc 或 web 搜索 | Phase 1 前读 `reference_crucible_notes.md`，internals claim 单独标注 crucible 来源与验证状态 |
 
 写作阶段的常见失败模式（Relevance 不着地、Demo 当证据、时间维度模糊、调研汇总而非作者写作等）见 `workflow_external_writing.md` 的失败模式表。

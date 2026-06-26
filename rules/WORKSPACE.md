@@ -11,6 +11,8 @@
 
 ### 知识与记录
 - 通用调研报告：`contexts/survey_sessions/`
+- **芯片 / 加速器 internals**（编译器 IR、NEFF、runtime、PTX/SASS 等）：先读 `rules/skills/reference_crucible_notes.md`，再查 survey 报告或启动调研
+- 已有芯片产品层调研：`contexts/survey_sessions/aws_neuron_survey_*.md`、`meta_mtia_survey_*.md` 等
 - 思考 / 复盘 / 方法论：`contexts/thought_review/`
 - 每日日志：`contexts/daily_records/`
 

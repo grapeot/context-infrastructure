@@ -1,0 +1,32 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "cursor",
+  "elements": [
+    {"type":"text","id":"title","x":240,"y":-5,"text":"NVIDIA CUDA Software Stack","fontSize":24,"strokeColor":"#1e1e1e"},
+    {"type":"text","id":"sub","x":220,"y":35,"text":"CUDA Platform | Libraries | Frameworks | AI Enterprise / NIM","fontSize":14,"strokeColor":"#757575"},
+    {"type":"rectangle","id":"l1","x":100,"y":70,"width":760,"height":50,"backgroundColor":"#dbe4ff","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#4a9eed"},
+    {"type":"text","id":"l1t","x":130,"y":85,"text":"Apps: ChatGPT-scale LLM | HPC sim | Omniverse | Self-driving | Bio/Finance","fontSize":13,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l2","x":100,"y":135,"width":760,"height":50,"backgroundColor":"#e5dbff","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#8b5cf6"},
+    {"type":"text","id":"l2t","x":150,"y":150,"text":"Frameworks: PyTorch / TensorFlow / JAX / ONNX | NeMo / TensorRT-LLM / vLLM","fontSize":13,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l3","x":100,"y":200,"width":760,"height":50,"backgroundColor":"#fff3bf","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b"},
+    {"type":"text","id":"l3t","x":180,"y":215,"text":"AI Middleware: Triton Inference Server | NIM microservices | RAPIDS / cuDF","fontSize":13,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l4a","x":100,"y":265,"width":370,"height":50,"backgroundColor":"#c3fae8","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#06b6d4"},
+    {"type":"text","id":"l4at","x":140,"y":280,"text":"cuDNN / cuBLAS / cuBLASLt / cuFFT","fontSize":13,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l4b","x":490,"y":265,"width":370,"height":50,"backgroundColor":"#ffd8a8","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b"},
+    {"type":"text","id":"l4bt","x":530,"y":280,"text":"TensorRT / CUTLASS / cuSPARSE / Thrust","fontSize":13,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l5a","x":100,"y":330,"width":370,"height":50,"backgroundColor":"#b2f2bb","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e"},
+    {"type":"text","id":"l5at","x":130,"y":345,"text":"NCCL / NVSHMEM multi-GPU collectives","fontSize":13,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l5b","x":490,"y":330,"width":370,"height":50,"backgroundColor":"#ffc9c9","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#ef4444"},
+    {"type":"text","id":"l5bt","x":520,"y":345,"text":"CUDA Runtime / Driver API / Graphs / MPS/MIG","fontSize":13,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l6","x":100,"y":395,"width":760,"height":50,"backgroundColor":"#a5d8ff","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#4a9eed"},
+    {"type":"text","id":"l6t","x":160,"y":410,"text":"Compiler: nvcc | cicc/cudafe++ | PTX | ptxas -> SASS | nvlink (device link)","fontSize":13,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l7","x":100,"y":460,"width":760,"height":50,"backgroundColor":"#ffd8a8","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b"},
+    {"type":"text","id":"l7t","x":120,"y":475,"text":"Hardware: sm_60 P100 -> sm_70 V100 -> sm_80 A100 -> sm_90 H100 -> sm_100 Blackwell","fontSize":13,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"ops","x":100,"y":525,"width":760,"height":45,"backgroundColor":"#f8f9fa","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#868e96"},
+    {"type":"text","id":"opst","x":120,"y":538,"text":"CUDA 8->12 | Nsight Compute/Systems | Container Toolkit | K8s GPU Operator","fontSize":12,"strokeColor":"#495057"},
+    {"type":"text","id":"note","x":100,"y":585,"text":"Ecosystem moat: CUDA API + library coverage + framework first-party integration","fontSize":12,"strokeColor":"#757575"}
+  ],
+  "appState": {"viewBackgroundColor": "#ffffff"},
+  "files": {}
+}

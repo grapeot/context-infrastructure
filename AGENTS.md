@@ -37,6 +37,11 @@ Don't ask permission. Just do it.
 
 ### 常用 Skill 速查（以 INDEX.md 为准）
 
+**芯片 / 加速器问题** → 先读 `rules/skills/reference_crucible_notes.md`，再选下游 workflow  
+- **internals 层**（编译器 IR、NEFF、runtime、PTX/SASS、GPSIMD、PJRT 等）→ 以 crucible-notes 为主参考，官方 doc 对照验证  
+- **产品 / 代际 / 软件栈层**（规格、实例、框架集成）→ 再读 `workflow_deep_research_survey.md`；已有报告见 `contexts/survey_sessions/*_survey_*.md`  
+- crucible-notes **不是**官方文档；Meta MTIA 等无 crucible 覆盖的芯片，走常规调研 workflow
+
 **深度调研任务** → `rules/skills/workflow_deep_research_survey.md`  
 - 初步扫描 → 分割维度 → 多 Agent 并行 → 交叉验证 → 写报告  
 - 输出：`contexts/survey_sessions/`

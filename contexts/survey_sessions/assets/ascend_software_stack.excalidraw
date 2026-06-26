@@ -1,0 +1,32 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "cursor",
+  "elements": [
+    {"type":"text","id":"title","x":280,"y":-5,"text":"Huawei Ascend Software Stack","fontSize":24,"strokeColor":"#1e1e1e"},
+    {"type":"text","id":"sub","x":260,"y":35,"text":"Full-stack: MindSpore + CANN + Atlas | device-edge-cloud unified","fontSize":14,"strokeColor":"#757575"},
+    {"type":"rectangle","id":"l1","x":120,"y":70,"width":720,"height":50,"backgroundColor":"#dbe4ff","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#4a9eed"},
+    {"type":"text","id":"l1t","x":160,"y":85,"text":"Apps: MindSpore / PyTorch(torch_npu) / TF / ONNX / vLLM-Ascend","fontSize":13,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l2","x":120,"y":135,"width":720,"height":50,"backgroundColor":"#e5dbff","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#8b5cf6"},
+    {"type":"text","id":"l2t","x":200,"y":150,"text":"MindX / ModelArts / ModelZoo | MindStudio IDE toolchain","fontSize":13,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l3","x":120,"y":200,"width":720,"height":50,"backgroundColor":"#fff3bf","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b"},
+    {"type":"text","id":"l3t","x":220,"y":215,"text":"Graph Engine (GE) — graph opt/partition/compile/execute","fontSize":13,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l4a","x":120,"y":265,"width":350,"height":50,"backgroundColor":"#c3fae8","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#06b6d4"},
+    {"type":"text","id":"l4at","x":150,"y":280,"text":"CANN: AscendCL unified C/C++ API","fontSize":13,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l4b","x":490,"y":265,"width":350,"height":50,"backgroundColor":"#ffd8a8","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b"},
+    {"type":"text","id":"l4bt","x":530,"y":280,"text":"ATC model converter | TBE/TIK custom ops","fontSize":13,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l5a","x":120,"y":330,"width":350,"height":50,"backgroundColor":"#b2f2bb","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e"},
+    {"type":"text","id":"l5at","x":160,"y":345,"text":"MIOpen-like: AICore/AICPU op libs","fontSize":13,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l5b","x":490,"y":330,"width":350,"height":50,"backgroundColor":"#ffc9c9","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#ef4444"},
+    {"type":"text","id":"l5bt","x":540,"y":345,"text":"HCCL multi-NPU collectives | DVPP media","fontSize":13,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l6","x":120,"y":395,"width":720,"height":50,"backgroundColor":"#a5d8ff","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#4a9eed"},
+    {"type":"text","id":"l6t","x":200,"y":410,"text":"Runtime: driver + firmware + OM offline model | Ascend C kernels","fontSize":13,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l7","x":120,"y":460,"width":720,"height":50,"backgroundColor":"#ffd8a8","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b"},
+    {"type":"text","id":"l7t","x":120,"y":475,"text":"HW: 310 -> 910A/B -> 910C -> 950PR(HiBL) / 950DT(HiZQ) on Atlas","fontSize":13,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"ops","x":120,"y":525,"width":720,"height":45,"backgroundColor":"#f8f9fa","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#868e96"},
+    {"type":"text","id":"opst","x":140,"y":538,"text":"CANN 8.x open source | MC2 merge comm+compute | FP8/FP4 on 950","fontSize":12,"strokeColor":"#495057"},
+    {"type":"text","id":"note","x":120,"y":585,"text":"GE splits graph: AICore vs AICPU engines | OM model for inference deploy","fontSize":12,"strokeColor":"#757575"}
+  ],
+  "appState": {"viewBackgroundColor": "#ffffff"},
+  "files": {}
+}

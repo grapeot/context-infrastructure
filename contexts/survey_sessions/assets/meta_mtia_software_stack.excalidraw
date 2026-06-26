@@ -1,0 +1,213 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "cursor",
+  "elements": [
+    {
+      "type": "text",
+      "id": "title",
+      "x": 350,
+      "y": -5,
+      "text": "MTIA Software Stack \u2014 PyTorch Native",
+      "fontSize": 28,
+      "strokeColor": "#1e1e1e"
+    },
+    {
+      "type": "text",
+      "id": "sub",
+      "x": 360,
+      "y": 35,
+      "text": "v1 KNYFE -> v2 Triton-MTIA -> 300-500 agentic kernel gen",
+      "fontSize": 16,
+      "strokeColor": "#757575"
+    },
+    {
+      "type": "rectangle",
+      "id": "lyApp",
+      "x": 80,
+      "y": 80,
+      "width": 1040,
+      "height": 70,
+      "backgroundColor": "#a5d8ff",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#4a9eed"
+    },
+    {
+      "type": "text",
+      "id": "lyAppt",
+      "x": 100,
+      "y": 100,
+      "text": "Application Layer: ML Serving Platform (R&R models, Llama, GenAI)",
+      "fontSize": 18,
+      "strokeColor": "#1e1e1e"
+    },
+    {
+      "type": "rectangle",
+      "id": "lyPt",
+      "x": 80,
+      "y": 180,
+      "width": 1040,
+      "height": 70,
+      "backgroundColor": "#d0bfff",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#8b5cf6"
+    },
+    {
+      "type": "text",
+      "id": "lyPtt",
+      "x": 100,
+      "y": 200,
+      "text": "PyTorch 2.0 + torch.compile + torch.export (eager + graph mode)",
+      "fontSize": 18,
+      "strokeColor": "#1e1e1e"
+    },
+    {
+      "type": "rectangle",
+      "id": "lyVllm",
+      "x": 80,
+      "y": 280,
+      "width": 1040,
+      "height": 60,
+      "backgroundColor": "#b2f2bb",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#22c55e"
+    },
+    {
+      "type": "text",
+      "id": "lyVllmt",
+      "x": 100,
+      "y": 295,
+      "text": "vLLM plugin: FlashAttention + fused LayerNorm + continuous batching",
+      "fontSize": 16,
+      "strokeColor": "#1e1e1e"
+    },
+    {
+      "type": "rectangle",
+      "id": "lyGc",
+      "x": 80,
+      "y": 370,
+      "width": 1040,
+      "height": 70,
+      "backgroundColor": "#ffd8a8",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#f59e0b"
+    },
+    {
+      "type": "text",
+      "id": "lyGct",
+      "x": 100,
+      "y": 390,
+      "text": "Graph Compiler: Torch FX IR + TorchInductor (MTIA-aware fusion)",
+      "fontSize": 18,
+      "strokeColor": "#1e1e1e"
+    },
+    {
+      "type": "rectangle",
+      "id": "lyKc",
+      "x": 80,
+      "y": 470,
+      "width": 1040,
+      "height": 80,
+      "backgroundColor": "#ffd8a8",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#f59e0b"
+    },
+    {
+      "type": "text",
+      "id": "lyKct",
+      "x": 100,
+      "y": 495,
+      "text": "Kernel Compiler: Triton + MLIR + LLVM (autotuning, agentic gen via TritorX / KernelEvolve)",
+      "fontSize": 16,
+      "strokeColor": "#1e1e1e"
+    },
+    {
+      "type": "rectangle",
+      "id": "lyHccl",
+      "x": 80,
+      "y": 580,
+      "width": 1040,
+      "height": 70,
+      "backgroundColor": "#c3fae8",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#06b6d4"
+    },
+    {
+      "type": "text",
+      "id": "lyHcclt",
+      "x": 100,
+      "y": 600,
+      "text": "HCCL: collective comms on NIC chiplets, msg engine, near-mem compute",
+      "fontSize": 16,
+      "strokeColor": "#1e1e1e"
+    },
+    {
+      "type": "rectangle",
+      "id": "lyRt",
+      "x": 80,
+      "y": 680,
+      "width": 1040,
+      "height": 60,
+      "backgroundColor": "#e5dbff",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#8b5cf6"
+    },
+    {
+      "type": "text",
+      "id": "lyRtt",
+      "x": 100,
+      "y": 695,
+      "text": "Runtime: memory, kernel scheduling, eager+graph, inductor-native",
+      "fontSize": 16,
+      "strokeColor": "#1e1e1e"
+    },
+    {
+      "type": "rectangle",
+      "id": "lyDrv",
+      "x": 80,
+      "y": 770,
+      "width": 1040,
+      "height": 60,
+      "backgroundColor": "#ffc9c9",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#ef4444"
+    },
+    {
+      "type": "text",
+      "id": "lyDrvt",
+      "x": 100,
+      "y": 785,
+      "text": "Rust user-space driver + bare-metal Rust firmware",
+      "fontSize": 18,
+      "strokeColor": "#1e1e1e"
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}

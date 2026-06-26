@@ -1,0 +1,33 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "cursor",
+  "elements": [
+    {"type":"text","id":"title","x":340,"y":-5,"text":"AWS Neuron Software Stack","fontSize":26,"strokeColor":"#1e1e1e"},
+    {"type":"text","id":"sub","x":380,"y":35,"text":"XLA legacy to native PyTorch (TorchNeuron)","fontSize":15,"strokeColor":"#757575"},
+    {"type":"rectangle","id":"l1","x":200,"y":70,"width":600,"height":55,"backgroundColor":"#dbe4ff","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#4a9eed"},
+    {"type":"text","id":"l1t","x":280,"y":85,"text":"Applications: PyTorch / JAX / vLLM / HuggingFace / TorchTitan","fontSize":15,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l2a","x":80,"y":150,"width":340,"height":70,"backgroundColor":"#e5dbff","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#8b5cf6"},
+    {"type":"text","id":"l2at","x":120,"y":165,"text":"Legacy: torch-neuron (Inf1)","fontSize":16,"strokeColor":"#7c3aed"},
+    {"type":"text","id":"l2ad","x":100,"y":190,"text":"torch_neuron.trace -> neuron-cc (TVM)","fontSize":13,"strokeColor":"#757575"},
+    {"type":"rectangle","id":"l2b","x":460,"y":150,"width":340,"height":70,"backgroundColor":"#fff3bf","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b"},
+    {"type":"text","id":"l2bt","x":500,"y":165,"text":"Current: torch-neuronx (XLA)","fontSize":16,"strokeColor":"#d97706"},
+    {"type":"text","id":"l2bd","x":480,"y":190,"text":"Inf2/Trn1/Trn2 PyTorch 2.5-2.9, xla device","fontSize":13,"strokeColor":"#757575"},
+    {"type":"rectangle","id":"l2c","x":840,"y":150,"width":340,"height":70,"backgroundColor":"#ffe3e3","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#ef4444"},
+    {"type":"text","id":"l2ct","x":880,"y":165,"text":"Next: TorchNeuron (native)","fontSize":16,"strokeColor":"#dc2626"},
+    {"type":"text","id":"l2cd","x":860,"y":190,"text":"Trn2/Trn3 eager + torch.compile, neuron device","fontSize":13,"strokeColor":"#757575"},
+    {"type":"rectangle","id":"l3","x":200,"y":250,"width":600,"height":55,"backgroundColor":"#d0bfff","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#8b5cf6"},
+    {"type":"text","id":"l3t","x":260,"y":265,"text":"NxD Core / NxD Training / NxD Inference + vllm-neuron plugin","fontSize":14,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l4","x":200,"y":330,"width":600,"height":55,"backgroundColor":"#ffd8a8","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b"},
+    {"type":"text","id":"l4t","x":320,"y":345,"text":"NKI + NKI Library (custom kernels, attention/MLP/MoE)","fontSize":14,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l5","x":200,"y":410,"width":600,"height":55,"backgroundColor":"#c3fae8","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#06b6d4"},
+    {"type":"text","id":"l5t","x":340,"y":425,"text":"neuronx-cc (XLA) / NKI Compiler (MLIR) -> NEFF","fontSize":14,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l6","x":200,"y":490,"width":600,"height":55,"backgroundColor":"#b2f2bb","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e"},
+    {"type":"text","id":"l6t","x":300,"y":505,"text":"Neuron Runtime + Collectives + NeuronLink drivers","fontSize":14,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l7","x":200,"y":570,"width":600,"height":55,"backgroundColor":"#a5d8ff","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#4a9eed"},
+    {"type":"text","id":"l7t","x":280,"y":585,"text":"NeuronCore v1-v4 on Inferentia / Trainium chips","fontSize":14,"strokeColor":"#1e1e1e"},
+    {"type":"text","id":"note","x":200,"y":650,"text":"Neuron 2.30: NxDT maintenance mode; PyTorch 2.10 -> TorchNeuron; NxDI v2.29+ Trn2/Trn3 only","fontSize":13,"strokeColor":"#757575"}
+  ],
+  "appState": {"viewBackgroundColor": "#ffffff"},
+  "files": {}
+}

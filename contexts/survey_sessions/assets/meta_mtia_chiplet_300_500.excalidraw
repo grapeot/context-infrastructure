@@ -1,0 +1,684 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "cursor",
+  "elements": [
+    {
+      "type": "text",
+      "id": "title",
+      "x": 480,
+      "y": -5,
+      "text": "MTIA 300/400/450/500 Chiplet Evolution",
+      "fontSize": 28,
+      "strokeColor": "#1e1e1e"
+    },
+    {
+      "type": "text",
+      "id": "sub",
+      "x": 530,
+      "y": 35,
+      "text": "Monolithic ASIC -> modular chiplet, HBM replaces LPDDR",
+      "fontSize": 16,
+      "strokeColor": "#757575"
+    },
+    {
+      "type": "rectangle",
+      "id": "c300bg",
+      "x": 0,
+      "y": 70,
+      "width": 380,
+      "height": 560,
+      "backgroundColor": "#dbe4ff",
+      "fillStyle": "solid",
+      "strokeColor": "#4a9eed",
+      "strokeWidth": 1,
+      "opacity": 35
+    },
+    {
+      "type": "text",
+      "id": "c300t",
+      "x": 20,
+      "y": 80,
+      "text": "MTIA 300 (2026 prod)",
+      "fontSize": 20,
+      "strokeColor": "#2563eb"
+    },
+    {
+      "type": "text",
+      "id": "c300u",
+      "x": 20,
+      "y": 110,
+      "text": "R&R Training",
+      "fontSize": 14,
+      "strokeColor": "#757575"
+    },
+    {
+      "type": "rectangle",
+      "id": "c300c",
+      "x": 40,
+      "y": 140,
+      "width": 300,
+      "height": 180,
+      "backgroundColor": "#d0bfff",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#8b5cf6",
+      "label": {
+        "text": "1x Compute Chiplet",
+        "fontSize": 16
+      }
+    },
+    {
+      "type": "text",
+      "id": "c300pe",
+      "x": 60,
+      "y": 250,
+      "text": "PE: 2x RISC-V + DotProd + SFU + Reduce + DMA",
+      "fontSize": 12,
+      "strokeColor": "#1e1e1e"
+    },
+    {
+      "type": "rectangle",
+      "id": "c300n1",
+      "x": 40,
+      "y": 340,
+      "width": 140,
+      "height": 50,
+      "backgroundColor": "#ffd8a8",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#f59e0b",
+      "label": {
+        "text": "NIC chiplet 1",
+        "fontSize": 13
+      }
+    },
+    {
+      "type": "rectangle",
+      "id": "c300n2",
+      "x": 200,
+      "y": 340,
+      "width": 140,
+      "height": 50,
+      "backgroundColor": "#ffd8a8",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#f59e0b",
+      "label": {
+        "text": "NIC chiplet 2",
+        "fontSize": 13
+      }
+    },
+    {
+      "type": "rectangle",
+      "id": "c300m",
+      "x": 40,
+      "y": 410,
+      "width": 300,
+      "height": 50,
+      "backgroundColor": "#c3fae8",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#06b6d4",
+      "label": {
+        "text": "HBM stacks",
+        "fontSize": 16
+      }
+    },
+    {
+      "type": "text",
+      "id": "c300k",
+      "x": 20,
+      "y": 480,
+      "text": "Built-in NIC + msg engine",
+      "fontSize": 14,
+      "strokeColor": "#1e1e1e"
+    },
+    {
+      "type": "text",
+      "id": "c300k2",
+      "x": 20,
+      "y": 505,
+      "text": "near-memory compute reductions",
+      "fontSize": 14,
+      "strokeColor": "#1e1e1e"
+    },
+    {
+      "type": "text",
+      "id": "c300k3",
+      "x": 20,
+      "y": 530,
+      "text": "200 GB/s scale-out",
+      "fontSize": 14,
+      "strokeColor": "#757575"
+    },
+    {
+      "type": "rectangle",
+      "id": "c400bg",
+      "x": 410,
+      "y": 70,
+      "width": 380,
+      "height": 560,
+      "backgroundColor": "#e5dbff",
+      "fillStyle": "solid",
+      "strokeColor": "#8b5cf6",
+      "strokeWidth": 1,
+      "opacity": 35
+    },
+    {
+      "type": "text",
+      "id": "c400t",
+      "x": 430,
+      "y": 80,
+      "text": "MTIA 400 (2026 deploy)",
+      "fontSize": 20,
+      "strokeColor": "#7c3aed"
+    },
+    {
+      "type": "text",
+      "id": "c400u",
+      "x": 430,
+      "y": 110,
+      "text": "General GenAI + R&R",
+      "fontSize": 14,
+      "strokeColor": "#757575"
+    },
+    {
+      "type": "rectangle",
+      "id": "c400c1",
+      "x": 430,
+      "y": 140,
+      "width": 140,
+      "height": 180,
+      "backgroundColor": "#d0bfff",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#8b5cf6",
+      "label": {
+        "text": "Compute chiplet 1",
+        "fontSize": 13
+      }
+    },
+    {
+      "type": "rectangle",
+      "id": "c400c2",
+      "x": 600,
+      "y": 140,
+      "width": 140,
+      "height": 180,
+      "backgroundColor": "#d0bfff",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#8b5cf6",
+      "label": {
+        "text": "Compute chiplet 2",
+        "fontSize": 13
+      }
+    },
+    {
+      "type": "text",
+      "id": "c400pe",
+      "x": 430,
+      "y": 260,
+      "text": "2x compute density vs 300",
+      "fontSize": 12,
+      "strokeColor": "#1e1e1e"
+    },
+    {
+      "type": "rectangle",
+      "id": "c400m",
+      "x": 430,
+      "y": 340,
+      "width": 300,
+      "height": 50,
+      "backgroundColor": "#c3fae8",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#06b6d4",
+      "label": {
+        "text": "HBM stacks",
+        "fontSize": 16
+      }
+    },
+    {
+      "type": "text",
+      "id": "c400k",
+      "x": 430,
+      "y": 410,
+      "text": "FP8 FLOPS +400% vs 300",
+      "fontSize": 14,
+      "strokeColor": "#1e1e1e"
+    },
+    {
+      "type": "text",
+      "id": "c400k2",
+      "x": 430,
+      "y": 435,
+      "text": "HBM b/w +51% MX8/MX4 enhanced",
+      "fontSize": 14,
+      "strokeColor": "#1e1e1e"
+    },
+    {
+      "type": "rectangle",
+      "id": "c400rack",
+      "x": 430,
+      "y": 470,
+      "width": 300,
+      "height": 60,
+      "backgroundColor": "#fff3bf",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#f59e0b",
+      "label": {
+        "text": "72-chip rack scale-up",
+        "fontSize": 14
+      }
+    },
+    {
+      "type": "text",
+      "id": "c400k3",
+      "x": 430,
+      "y": 545,
+      "text": "1200W system, AALC cooling",
+      "fontSize": 13,
+      "strokeColor": "#757575"
+    },
+    {
+      "type": "rectangle",
+      "id": "c450bg",
+      "x": 820,
+      "y": 70,
+      "width": 380,
+      "height": 560,
+      "backgroundColor": "#d3f9d8",
+      "fillStyle": "solid",
+      "strokeColor": "#22c55e",
+      "strokeWidth": 1,
+      "opacity": 35
+    },
+    {
+      "type": "text",
+      "id": "c450t",
+      "x": 840,
+      "y": 80,
+      "text": "MTIA 450 (early 2027)",
+      "fontSize": 20,
+      "strokeColor": "#15803d"
+    },
+    {
+      "type": "text",
+      "id": "c450u",
+      "x": 840,
+      "y": 110,
+      "text": "GenAI Inference first",
+      "fontSize": 14,
+      "strokeColor": "#757575"
+    },
+    {
+      "type": "rectangle",
+      "id": "c450c",
+      "x": 840,
+      "y": 140,
+      "width": 300,
+      "height": 150,
+      "backgroundColor": "#d0bfff",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#8b5cf6",
+      "label": {
+        "text": "2x Compute Chiplets",
+        "fontSize": 14
+      }
+    },
+    {
+      "type": "rectangle",
+      "id": "c450m",
+      "x": 840,
+      "y": 310,
+      "width": 300,
+      "height": 50,
+      "backgroundColor": "#c3fae8",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#06b6d4",
+      "label": {
+        "text": "HBM 2x bandwidth vs 400",
+        "fontSize": 14
+      }
+    },
+    {
+      "type": "rectangle",
+      "id": "c450acc",
+      "x": 840,
+      "y": 380,
+      "width": 300,
+      "height": 50,
+      "backgroundColor": "#ffc9c9",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#ef4444",
+      "label": {
+        "text": "HW accel attention/FFN",
+        "fontSize": 13
+      }
+    },
+    {
+      "type": "text",
+      "id": "c450k",
+      "x": 840,
+      "y": 450,
+      "text": "MX4 FLOPS +75% vs 400",
+      "fontSize": 14,
+      "strokeColor": "#1e1e1e"
+    },
+    {
+      "type": "text",
+      "id": "c450k2",
+      "x": 840,
+      "y": 475,
+      "text": "6x MX4 vs FP16 mixed low-prec",
+      "fontSize": 14,
+      "strokeColor": "#1e1e1e"
+    },
+    {
+      "type": "text",
+      "id": "c450k3",
+      "x": 840,
+      "y": 500,
+      "text": "Decode bottleneck = HBM b/w",
+      "fontSize": 13,
+      "strokeColor": "#757575"
+    },
+    {
+      "type": "text",
+      "id": "c450k4",
+      "x": 840,
+      "y": 525,
+      "text": "Same chassis as 400",
+      "fontSize": 13,
+      "strokeColor": "#757575"
+    },
+    {
+      "type": "rectangle",
+      "id": "c500bg",
+      "x": 1230,
+      "y": 70,
+      "width": 370,
+      "height": 560,
+      "backgroundColor": "#eebefa",
+      "fillStyle": "solid",
+      "strokeColor": "#ec4899",
+      "strokeWidth": 1,
+      "opacity": 35
+    },
+    {
+      "type": "text",
+      "id": "c500t",
+      "x": 1250,
+      "y": 80,
+      "text": "MTIA 500 (late 2027)",
+      "fontSize": 20,
+      "strokeColor": "#be185d"
+    },
+    {
+      "type": "text",
+      "id": "c500u",
+      "x": 1250,
+      "y": 110,
+      "text": "GenAI Inference",
+      "fontSize": 14,
+      "strokeColor": "#757575"
+    },
+    {
+      "type": "rectangle",
+      "id": "c500c1",
+      "x": 1250,
+      "y": 140,
+      "width": 140,
+      "height": 90,
+      "backgroundColor": "#d0bfff",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#8b5cf6",
+      "label": {
+        "text": "Compute chiplet",
+        "fontSize": 12
+      }
+    },
+    {
+      "type": "rectangle",
+      "id": "c500c2",
+      "x": 1410,
+      "y": 140,
+      "width": 140,
+      "height": 90,
+      "backgroundColor": "#d0bfff",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#8b5cf6",
+      "label": {
+        "text": "Compute chiplet",
+        "fontSize": 12
+      }
+    },
+    {
+      "type": "rectangle",
+      "id": "c500c3",
+      "x": 1250,
+      "y": 240,
+      "width": 140,
+      "height": 90,
+      "backgroundColor": "#d0bfff",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#8b5cf6",
+      "label": {
+        "text": "Compute chiplet",
+        "fontSize": 12
+      }
+    },
+    {
+      "type": "rectangle",
+      "id": "c500c4",
+      "x": 1410,
+      "y": 240,
+      "width": 140,
+      "height": 90,
+      "backgroundColor": "#d0bfff",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#8b5cf6",
+      "label": {
+        "text": "Compute chiplet",
+        "fontSize": 12
+      }
+    },
+    {
+      "type": "rectangle",
+      "id": "c500soc",
+      "x": 1250,
+      "y": 350,
+      "width": 140,
+      "height": 50,
+      "backgroundColor": "#a5d8ff",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#4a9eed",
+      "label": {
+        "text": "SoC chiplet PCIe",
+        "fontSize": 12
+      }
+    },
+    {
+      "type": "rectangle",
+      "id": "c500n",
+      "x": 1410,
+      "y": 350,
+      "width": 140,
+      "height": 50,
+      "backgroundColor": "#ffd8a8",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#f59e0b",
+      "label": {
+        "text": "2x NIC chiplets",
+        "fontSize": 12
+      }
+    },
+    {
+      "type": "rectangle",
+      "id": "c500m",
+      "x": 1250,
+      "y": 420,
+      "width": 300,
+      "height": 50,
+      "backgroundColor": "#c3fae8",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#06b6d4",
+      "label": {
+        "text": "HBM +50% b/w +80% cap",
+        "fontSize": 14
+      }
+    },
+    {
+      "type": "text",
+      "id": "c500k",
+      "x": 1250,
+      "y": 490,
+      "text": "2x2 compute chiplets",
+      "fontSize": 14,
+      "strokeColor": "#1e1e1e"
+    },
+    {
+      "type": "text",
+      "id": "c500k2",
+      "x": 1250,
+      "y": 515,
+      "text": "MX4 FLOPS +43% vs 450",
+      "fontSize": 14,
+      "strokeColor": "#1e1e1e"
+    },
+    {
+      "type": "text",
+      "id": "c500k3",
+      "x": 1250,
+      "y": 540,
+      "text": "Further data-type innovation",
+      "fontSize": 13,
+      "strokeColor": "#757575"
+    },
+    {
+      "type": "text",
+      "id": "cmpT",
+      "x": 450,
+      "y": 660,
+      "text": "Cumulative jump 300 to 500",
+      "fontSize": 20,
+      "strokeColor": "#1e1e1e"
+    },
+    {
+      "type": "rectangle",
+      "id": "cmp1",
+      "x": 50,
+      "y": 700,
+      "width": 340,
+      "height": 70,
+      "backgroundColor": "#fff3bf",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#f59e0b",
+      "label": {
+        "text": "HBM bandwidth x4.5",
+        "fontSize": 18
+      }
+    },
+    {
+      "type": "rectangle",
+      "id": "cmp2",
+      "x": 450,
+      "y": 700,
+      "width": 340,
+      "height": 70,
+      "backgroundColor": "#fff3bf",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#f59e0b",
+      "label": {
+        "text": "Compute FLOPS x25",
+        "fontSize": 18
+      }
+    },
+    {
+      "type": "rectangle",
+      "id": "cmp3",
+      "x": 850,
+      "y": 700,
+      "width": 340,
+      "height": 70,
+      "backgroundColor": "#fff3bf",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#f59e0b",
+      "label": {
+        "text": "Six-month chip cadence",
+        "fontSize": 18
+      }
+    },
+    {
+      "type": "text",
+      "id": "cmpNote",
+      "x": 50,
+      "y": 790,
+      "text": "400/450/500 share chassis rack network drop-in deployment",
+      "fontSize": 16,
+      "strokeColor": "#757575"
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}

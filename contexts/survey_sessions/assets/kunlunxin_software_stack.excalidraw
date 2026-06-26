@@ -1,0 +1,32 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "cursor",
+  "elements": [
+    {"type":"text","id":"title","x":300,"y":-5,"text":"Kunlunxin XPU Software Stack","fontSize":24,"strokeColor":"#1e1e1e"},
+    {"type":"text","id":"sub","x":320,"y":35,"text":"Paddle-first graph compiler stack; NOT CUDA binary compatible","fontSize":14,"strokeColor":"#757575"},
+    {"type":"rectangle","id":"l1","x":160,"y":70,"width":680,"height":50,"backgroundColor":"#dbe4ff","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#4a9eed"},
+    {"type":"text","id":"l1t","x":200,"y":85,"text":"Apps: paddlepaddle-xpu / FastDeploy / vLLM-Kunlun / TensorFlow","fontSize":13,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l2","x":160,"y":135,"width":680,"height":50,"backgroundColor":"#e5dbff","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#8b5cf6"},
+    {"type":"text","id":"l2t","x":220,"y":150,"text":"LLM: FastDeploy 2.0 OpenAI API | xvLLM | FlagTree Triton xpu3","fontSize":13,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l3a","x":160,"y":200,"width":330,"height":50,"backgroundColor":"#fff3bf","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b"},
+    {"type":"text","id":"l3at","x":200,"y":215,"text":"XTCL graph compiler (NNAdapter)","fontSize":13,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l3b","x":510,"y":200,"width":330,"height":50,"backgroundColor":"#ffd8a8","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b"},
+    {"type":"text","id":"l3bt","x":560,"y":215,"text":"XTDK / LLVM (custom kernel compile)","fontSize":13,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l4","x":160,"y":265,"width":680,"height":50,"backgroundColor":"#c3fae8","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#06b6d4"},
+    {"type":"text","id":"l4t","x":300,"y":280,"text":"XDNN operator library | XPU C/C++ user kernels","fontSize":14,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l5","x":160,"y":330,"width":680,"height":50,"backgroundColor":"#ffd8a8","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b"},
+    {"type":"text","id":"l5t","x":240,"y":345,"text":"Device targets: xpu1 (K) | xpu2 (R) | xpu3 (P800)","fontSize":13,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l6","x":160,"y":395,"width":680,"height":50,"backgroundColor":"#b2f2bb","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e"},
+    {"type":"text","id":"l6t","x":280,"y":410,"text":"XRE runtime + driver + firmware (BKCL/XCCL collectives P800)","fontSize":13,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"l7","x":160,"y":460,"width":680,"height":50,"backgroundColor":"#a5d8ff","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#4a9eed"},
+    {"type":"text","id":"l7t","x":240,"y":475,"text":"K100/K200 | R100/R200/RG800/R300/R480 | P800 OAM","fontSize":13,"strokeColor":"#1e1e1e"},
+    {"type":"rectangle","id":"ops","x":160,"y":530,"width":330,"height":45,"backgroundColor":"#f8f9fa","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#868e96"},
+    {"type":"text","id":"opst","x":200,"y":543,"text":"Docker: paddle-xpu images","fontSize":12,"strokeColor":"#495057"},
+    {"type":"rectangle","id":"ops2","x":510,"y":530,"width":330,"height":45,"backgroundColor":"#f8f9fa","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#868e96"},
+    {"type":"text","id":"ops2t","x":540,"y":543,"text":"Paddle Lite + FastDeploy edge","fontSize":12,"strokeColor":"#495057"},
+    {"type":"text","id":"note","x":160,"y":590,"text":"Primary path: PaddlePaddle since 2018 | PyTorch via paddle-xpu / vLLM plugin | No NVIDIA cubin","fontSize":12,"strokeColor":"#757575"}
+  ],
+  "appState": {"viewBackgroundColor": "#ffffff"},
+  "files": {}
+}
