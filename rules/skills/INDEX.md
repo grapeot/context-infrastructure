@@ -35,7 +35,7 @@
 ### Tier 1: 核心（clone 后即可开始）
 - ✅ Rules 框架（SOUL/USER/COMMUNICATION/WORKSPACE）— 填写即用
 - ✅ Skills 框架（本目录）— 填写即用
-- ✅ 三层记忆系统 — 需配置 OpenCode + cron
+- ✅ 三层记忆系统 — 需配置 Heartbeat 引擎（cursor 或 opencode，默认 cursor）+ cron
 
 ### Tier 2: 扩展（需要额外配置）
 - ⚙️ Semantic Search — 需要 LLM Studio 或 OpenAI API

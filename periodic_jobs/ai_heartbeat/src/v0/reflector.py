@@ -1,22 +1,24 @@
 #!/usr/bin/env python3
 """
 L2 Reflector Agent (Trigger Script)
-Instructs OpenCode-Builder to perform memory garbage collection directly on the file.
+Instructs an agentic engine (Cursor or OpenCode) to perform memory garbage collection.
 """
-import os
-import sys
-from opencode_client import OpenCodeClient
 from datetime import datetime
 
-KNOWLEDGE_BASE = "/path/to/your/workspace/periodic_jobs/ai_heartbeat/docs/KNOWLEDGE_BASE.md"
+from agent_client import WORKSPACE_ROOT, add_engine_args, default_model, get_client
+
+KNOWLEDGE_BASE = WORKSPACE_ROOT / "periodic_jobs/ai_heartbeat/docs/KNOWLEDGE_BASE.md"
+OBSERVATIONS_PATH = WORKSPACE_ROOT / "contexts/memory/OBSERVATIONS.md"
 
 PROMPT_TEMPLATE = """
 执行记忆系统的"反思与晋升"任务。
 
 SOP: {kb_path}
 
+Workspace 根目录: {workspace_root}
+
 步骤：
-1. 读取 /contexts/memory/OBSERVATIONS.md，分析 🔴 和高优 🟡 条目
+1. 读取 `{observations_path}`，分析 🔴 和高优 🟡 条目
 2. 将具有普适性的内容晋升到 rules/，按职责边界分类：
    - SOUL.md: Agent 身份与核心价值观
    - USER.md: 用户画像与人生哲学
@@ -29,30 +31,49 @@ SOP: {kb_path}
 完成后回复简短晋升汇报。
 """
 
+
 def main():
     import argparse
-    parser = argparse.ArgumentParser(description='L2 Reflector Agent')
-    parser.add_argument('--model', default='<your-model-id>',
-                        choices=['<your-model-id>'],
-                        help='Model ID to use')
-    args = parser.parse_args()
-    
-    model_id = args.model
-    target_date = datetime.now().strftime("%Y-%m-%d")
 
-    print(f"Triggering Fully Agentic Reflector using model: {model_id}...")
-    client = OpenCodeClient()
-    
+    parser = argparse.ArgumentParser(description="L2 Reflector Agent")
+    add_engine_args(parser)
+    parser.add_argument(
+        "--no-delete",
+        action="store_true",
+        help="Keep session after completion (OpenCode only; Cursor chats are always kept)",
+    )
+    args = parser.parse_args()
+
+    model_id = args.model or default_model(args.engine)
+    target_date = datetime.now().strftime("%Y-%m-%d")
+    delete_after = not args.no_delete
+
+    print(
+        f"Triggering L2 Reflector (engine={args.engine}, model={model_id})..."
+    )
+    client = get_client(args.engine)
+
     session_id = client.create_session(f"Heartbeat L2 Reflector - {target_date}")
     if not session_id:
         return
-        
-    prompt = PROMPT_TEMPLATE.format(kb_path=KNOWLEDGE_BASE)
+
+    prompt = PROMPT_TEMPLATE.format(
+        kb_path=KNOWLEDGE_BASE,
+        workspace_root=WORKSPACE_ROOT,
+        observations_path=OBSERVATIONS_PATH,
+    )
     client.send_message(session_id, prompt, model_id=model_id)
-    # If send_message timed out, agent may still be running; poll until done
     print("Waiting for session to complete (sync mode)...")
     client.wait_for_session_complete(session_id)
-    print(f"Task complete (Session: {session_id}).")
+
+    if delete_after:
+        if client.delete_session(session_id):
+            print(f"Task complete (session {session_id} deleted).")
+        else:
+            print(f"Task complete (Session: {session_id}).")
+    else:
+        print(f"Task complete (Session: {session_id}).")
+
 
 if __name__ == "__main__":
     main()

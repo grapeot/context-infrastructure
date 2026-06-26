@@ -3,7 +3,7 @@
 ## 元数据
 - 类型: API Guide
 - 适用场景: 用 CLI Agent 构建自动化流水线、AI 调用 AI
-- 最后更新: 2026-03-10
+- 最后更新: 2026-06-27
 
 ---
 
@@ -20,13 +20,13 @@
 
 ## 工具速查
 
-| 维度 | Claude Code | Codex CLI | OpenCode |
-|------|-------------|-----------|----------|
-| **开源** | ❌ | ❌ | ✅ 100% |
-| **模型绑定** | 仅 Claude | 仅 OpenAI | Provider-agnostic（xAI, Anthropic, OpenAI, Google 等） |
-| **CLI 非交互** | `claude --print` | `codex exec` | `opencode serve` + `opencode run --attach`（两步） |
-| **Web API** | ❌ | ❌ | ✅ 完整 |
-| **推荐场景** | 深度推理 | 自动化 | 多模型对比、自动化 + 可视化 |
+| 维度 | Claude Code | Codex CLI | Cursor Agent | OpenCode |
+|------|-------------|-----------|--------------|----------|
+| **开源** | ❌ | ❌ | ❌ | ✅ 100% |
+| **模型绑定** | 仅 Claude | 仅 OpenAI | Cursor 模型族 | Provider-agnostic（xAI, Anthropic, OpenAI, Google 等） |
+| **CLI 非交互** | `claude --print` | `codex exec` | `agent -p`（prompt 落盘文件） | `opencode serve` + `opencode run --attach`（两步） |
+| **Web API** | ❌ | ❌ | ❌ | ✅ 完整 |
+| **推荐场景** | 深度推理 | 自动化 | Cursor IDE 工作区自动化、Heartbeat | 多模型对比、自动化 + 可视化 |
 
 ---
 
@@ -97,6 +97,32 @@ subprocess.run([
 
 ---
 
+## Cursor Agent CLI 快速参考
+
+本 workspace 的 AI Heartbeat（observer/reflector）默认经 Cursor Agent CLI 驱动；与 OpenCode 共用 `agent_client.py` 抽象。
+
+**基本模式**: prompt 落盘 → `agent -p --workspace <dir> [--resume <chat_id>] "<read prompt file>"`
+
+**关键环境变量**（见根目录 `.env.example`）:
+- `HEARTBEAT_ENGINE=cursor`（默认）或 `opencode`
+- `CURSOR_AGENT_MODEL`：如 `composer-2.5`
+- `CURSOR_AGENT_TIMEOUT`：单次任务超时（秒）
+- `CURSOR_USE_RESUME_CHAT`：设为 `true` 时用 `agent create-chat` 复用会话
+
+**Python 客户端**: `periodic_jobs/ai_heartbeat/src/v0/cursor_client.py`（`OpenCodeClient` 兼容接口）
+- prompt 目录：`<workspace>/.cursor_tmp/heartbeat/`
+- 统一入口：`agent_client.get_client(engine)`，`add_engine_args()` 供 CLI 脚本复用
+
+**与 OpenCode 选型**:
+
+| 场景 | 推荐引擎 |
+|------|----------|
+| 已在 Cursor IDE 工作、需 MCP/内置工具 | `cursor` |
+| 需切换多 provider 模型、Web API 编排 | `opencode` |
+| AI 调用 AI（文件响应模式） | 两者均适用；Cursor 默认零配置 |
+
+---
+
 ## OpenCode 快速参考
 
 OpenCode 有两种非交互调用方式：CLI（`opencode run`）和 Web Server API。
@@ -138,7 +164,7 @@ opencode run \
 
 **启动 Server**: `opencode web --port 4096`（或 `opencode serve --port 4096`）
 
-**Python 客户端**: `periodic_jobs/ai_heartbeat/src/v0/opencode_client.py` 已实现常用 API 封装
+**Python 客户端**: `periodic_jobs/ai_heartbeat/src/v0/opencode_client.py` 已实现常用 API 封装；双引擎入口见同目录 `agent_client.py`
 - `create_session()` / `send_message()` / `get_session_messages()` / `wait_for_session_complete()`
 
 **模型格式**: `provider/model` (如 `xai/grok-4.20-experimental-beta-0304-non-reasoning`, `anthropic/claude-sonnet-4-20250514`)

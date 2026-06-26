@@ -82,7 +82,7 @@ Don't ask permission. Just do it.
 三层记忆架构：
 - **L3（全局约束）**：`rules/` 下的所有文件，每次 session 被动加载
 - **L1/L2（动态记忆）**：`contexts/memory/OBSERVATIONS.md`，agent 主动检索
-- **自动积累**：`periodic_jobs/ai_heartbeat/` 每日 observer + 每周 reflector
+- **自动积累**：`periodic_jobs/ai_heartbeat/` 每日 observer + 每周 reflector（`HEARTBEAT_ENGINE` 切换 cursor/opencode，默认 cursor）
 
 ## Safety
 
