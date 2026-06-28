@@ -29,12 +29,14 @@ Start from my workspace AGENTS.md or CLAUDE.md. Follow any WORKSPACE.md or skill
 | Email / newsletter | [kit-skill](https://github.com/grapeot/kit-skill) | Kit Broadcast Markdown 发信 CLI，支持 dry-run、draft-only、web-only 和 tag/segment 定向；账号默认值放本地 overlay |
 | Messaging | [imessage_skill](https://github.com/grapeot/imessage_skill) | macOS iMessage send-only CLI；联系人 alias 放本地 overlay |
 | Agent operations | [opencode_skill](https://github.com/grapeot/opencode_skill) | OpenCode `submit` / `submit --dry-run` / batch submission、recurring cron workflow、SQLite 数据维护和 archive |
-| Agent operations | [process-launcher](https://github.com/grapeot/process-launcher) | 本地 HTTP process launcher，适合 TCC / GUI 权限桥接、durable one-shot delayed jobs、进程日志和取消 |
+| Agent operations | [process-launcher](https://github.com/grapeot/process-launcher) | 本地 HTTP process launcher，适合 TCC / GUI 权限桥接、durable one-shot delayed jobs、进程日志 and 取消 |
+| Agent operations | [opencode-docker](https://github.com/grapeot/opencode-docker) | Docker 部署模版，用于快速配置 OpenCode Server 容器化运行环境 |
 | Usage analytics | [ai_usage_dashboard](https://github.com/grapeot/ai_usage_dashboard) | 多平台 AI token usage、成本估算、本地 dashboard 和 E1002 JSON |
 | Social / growth | [typefully-twitter-skill](https://github.com/grapeot/typefully-twitter-skill) | Typefully 发帖、账号指标和 X/Twitter 单帖 analytics |
 | Community publishing | [circle-post-skill](https://github.com/grapeot/circle-post-skill) | Circle community Markdown conversion, dry-run preflight, publish/update/delete CLI；社区默认值放本地 overlay |
 | Payments / growth | [stripe-skill](https://github.com/grapeot/stripe-skill) | Stripe 只读 finance / sales analytics，live tests 默认 opt-in |
 | Media | [online-media-skill](https://github.com/grapeot/online-media-skill) | 在线媒体下载、ASR artifact、query pack 和 source identification 工作流 |
+| Slides | [presentation_skill](https://github.com/grapeot/presentation_skill) | 默认 image-generated full-slide deck；明确不用图像生成时 fallback 到 HTML module deck |
 | Slides | [pptx.skill](https://github.com/grapeot/pptx.skill) | AI-first PPTX 读取、编辑和渲染 |
 | Images | [image-generation-skill](https://github.com/grapeot/image-generation-skill) | Gemini Flash / Gemini Pro / GPT-Image-2 文生图、图片编辑、分辨率放大 |
 | Images | [tiff-icc-profile](https://github.com/grapeot/tiff-icc-profile) | 给未标记 TIFF 嵌入 ICC profile，常用于 DaVinci still workflow |
