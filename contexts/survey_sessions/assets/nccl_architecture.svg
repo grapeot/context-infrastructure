@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-green" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#76b900"/>
+  </marker>
+  <marker id="arrow-cyan" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#22d3ee"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">NCCL Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">NVIDIA Collective Communications Library - github.com/NVIDIA/nccl - topology-aware GPU collectives</text>
+
+ <!-- L1 Workloads -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#76b900" stroke-width="2"/>
+ <text x="88" y="124" fill="#76b900" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Framework Integration + Workloads (standard CCL backend for NVIDIA multi-GPU / multi-node)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="60" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="118" y="162" text-anchor="middle">AllReduce</text>
+  <rect x="160" y="136" width="60" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="190" y="162" text-anchor="middle">AllGather</text>
+  <rect x="232" y="136" width="70" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="267" y="162" text-anchor="middle">ReduceScat</text>
+  <rect x="314" y="136" width="60" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="344" y="162" text-anchor="middle">Broadcast</text>
+  <rect x="386" y="136" width="50" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="411" y="162" text-anchor="middle">AllToAll</text>
+  <rect x="448" y="136" width="50" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="473" y="162" text-anchor="middle">SendRecv</text>
+  <rect x="510" y="136" width="40" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="530" y="162" text-anchor="middle">TP</text>
+  <rect x="562" y="136" width="30" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="577" y="162" text-anchor="middle">PP</text>
+  <rect x="604" y="136" width="30" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="619" y="162" text-anchor="middle">EP</text>
+  <rect x="646" y="136" width="50" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="671" y="162" text-anchor="middle">MoE</text>
+  <rect x="708" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="733" y="162" text-anchor="middle">PyTorch</text>
+  <rect x="770" y="136" width="40" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="790" y="162" text-anchor="middle">JAX</text>
+  <rect x="822" y="136" width="40" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="842" y="162" text-anchor="middle">TF</text>
+  <rect x="874" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="899" y="162" text-anchor="middle">vLLM</text>
+  <rect x="936" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="966" y="162" text-anchor="middle">Megatron</text>
+  <rect x="1008" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1038" y="162" text-anchor="middle">DeepSpeed</text>
+  <rect x="1080" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1105" y="162" text-anchor="middle">H100</text>
+  <rect x="1142" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1167" y="162" text-anchor="middle">H800</text>
+  <rect x="1204" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1229" y="162" text-anchor="middle">B200</text>
+  <rect x="1266" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1291" y="162" text-anchor="middle">NVLink</text>
+  <rect x="1328" y="136" width="30" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1343" y="162" text-anchor="middle">IB</text>
+  <rect x="1370" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1395" y="162" text-anchor="middle">RoCE</text>
+  <rect x="1432" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1457" y="162" text-anchor="middle">multi-DC</text>
+  <rect x="1494" y="136" width="50" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1519" y="162" text-anchor="middle">RCCL</text>
+  <rect x="1556" y="136" width="50" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1581" y="162" text-anchor="middle">NIXL</text>
+  <rect x="1618" y="136" width="50" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1643" y="162" text-anchor="middle">DeepEP</text>
+  <rect x="1680" y="136" width="60" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1710" y="162" text-anchor="middle">NVIDIA</text>
+  <rect x="1752" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1777" y="162" text-anchor="middle">CUDA</text>
+  <rect x="1814" y="136" width="36" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="1832" y="162" text-anchor="middle">C API</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 API Model -->
+ <rect x="60" y="216" width="1800" height="120" rx="12" fill="#0f2744" stroke="#76b900" stroke-width="2"/>
+ <text x="88" y="244" fill="#76b900" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Programming Model (ncclComm_t - host-launched bulk-synchronous collectives - channel parallelism)</text>
+ <rect x="88" y="258" width="340" height="64" rx="10" fill="#1a2e05" stroke="#76b900" stroke-width="2"/>
+ <text x="258" y="282" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Public C API</text>
+ <text x="258" y="300" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">ncclAllReduce/Gather/ReduceScatter/Broadcast</text>
+ <text x="258" y="314" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">ncclSend/Recv - ncclGroupStart/End batching</text>
+ <rect x="448" y="258" width="340" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="618" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">CPU Control Path</text>
+ <text x="618" y="300" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Host enqueues collectives on CUDA streams</text>
+ <text x="618" y="314" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Bulk sync before/after comm phases - stop-and-go</text>
+ <rect x="808" y="258" width="340" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="978" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Channel Abstraction</text>
+ <text x="978" y="300" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Per-GPU parallel pathways bound to SMs</text>
+ <text x="978" y="314" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Ring or double-tree topology per channel</text>
+ <rect x="1168" y="258" width="340" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="1338" y="282" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Persistent Kernels</text>
+ <text x="1338" y="300" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Launch once - reuse across many collectives</text>
+ <text x="1338" y="314" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Amortize kernel launch overhead</text>
+ <rect x="1528" y="258" width="300" height="64" rx="10" fill="#134e4a" stroke="#5eead4" stroke-width="2"/>
+ <text x="1678" y="282" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Communicator Ops</text>
+ <text x="1678" y="300" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Init - Split - Shrink - Grow - Destroy</text>
+ <text x="1678" y="314" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Bootstrap + uniqueId exchange</text>
+ <line x1="960" y1="336" x2="960" y2="354" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Topology -->
+ <rect x="60" y="356" width="1800" height="200" rx="12" fill="#0f2744" stroke="#22d3ee" stroke-width="2.5"/>
+ <text x="88" y="384" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - Topology Discovery + Graph Search (auto-detect hardware - compute optimal comm graphs)</text>
+
+ <rect x="88" y="400" width="420" height="136" rx="12" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="298" y="428" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Hardware Discovery</text>
+ <text x="298" y="450" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">ncclTopoGetSystem() at comm init</text>
+ <text x="298" y="468" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">sysfs + NVML auto-detect or NCCL_TOPO_FILE</text>
+ <text x="298" y="486" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Graph: GPU CPU NIC switch PCIe NVSwitch</text>
+ <text x="298" y="504" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">fabricId for cross-DC topology awareness</text>
+ <text x="298" y="522" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">PATH_LOC to PATH_DIS quality hierarchy</text>
+
+ <rect x="528" y="400" width="420" height="136" rx="12" fill="#1a2e05" stroke="#76b900" stroke-width="2"/>
+ <text x="738" y="428" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Path Computation (BFS)</text>
+ <text x="738" y="450" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">ncclTopoComputePaths - BFS from each node</text>
+ <text x="738" y="468" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">Bandwidth = min link bw - path type = worst hop</text>
+ <text x="738" y="486" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">P2P reroute - GDR - PXN proxy GPU paths</text>
+ <text x="738" y="504" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">Pre-computed paths in ncclTopoNode arrays</text>
+ <text x="738" y="522" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">src/graph/paths.cc + search.cc</text>
+
+ <rect x="968" y="400" width="420" height="136" rx="12" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="1178" y="428" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Algorithm Families</text>
+ <text x="1178" y="450" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Ring - high bw large messages - O(n) steps</text>
+ <text x="1178" y="468" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Tree/NVLSTree - low latency small messages O(log n)</text>
+ <text x="1178" y="486" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">CollNet - in-network SHARP switch offload</text>
+ <text x="1178" y="504" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">NVLS - NVLink SHARP multicast + reduction</text>
+ <text x="1178" y="522" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">PAT - Parallel Aggregated Trees (v2.23+)</text>
+
+ <rect x="1408" y="400" width="420" height="136" rx="12" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="1618" y="428" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Tuning + Protocols</text>
+ <text x="1618" y="450" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">ncclTopoTuneModel cost model selects algo</text>
+ <text x="1618" y="468" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Simple - LL - LL128 protocols by msg size</text>
+ <text x="1618" y="486" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">NCCL_ALGO NCCL_PROTO NCCL_NCHANNELS env</text>
+ <text x="1618" y="504" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Tuner plugin API overrides cost model hints</text>
+ <text x="1618" y="522" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Dynamic CTA count + chunk size scheduling</text>
+
+ <line x1="960" y1="556" x2="960" y2="574" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Pipeline -->
+ <rect x="60" y="576" width="1800" height="120" rx="12" fill="#0f2744" stroke="#76b900" stroke-width="2"/>
+ <text x="88" y="604" fill="#76b900" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Communication Pipeline (group batching - task schedule - kernel plan - device execution)</text>
+ <rect x="88" y="618" width="340" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="258" y="642" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Group Operations</text>
+ <text x="258" y="660" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">ncclGroupStart/End fuse multiple collectives</text>
+ <text x="258" y="674" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Parallel progress - shared CTA budget</text>
+ <rect x="448" y="618" width="340" height="64" rx="10" fill="#1a2e05" stroke="#76b900" stroke-width="2"/>
+ <text x="618" y="642" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Task Prep + Schedule</text>
+ <text x="618" y="660" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">Enqueue work items per channel per rank</text>
+ <text x="618" y="674" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">Chunk data slices across channels</text>
+ <rect x="808" y="618" width="340" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="978" y="642" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Kernel Planning</text>
+ <text x="978" y="660" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Plan persistent collective CUDA kernels</text>
+ <text x="978" y="674" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">src/device/ ring/tree/collnet/nvls kernels</text>
+ <rect x="1168" y="618" width="340" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="1338" y="642" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Proxy Service</text>
+ <text x="1338" y="660" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">CPU proxy thread for NET/CollNet async I/O</text>
+ <text x="1338" y="674" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Progress isend/irecv while GPU kernels run</text>
+ <rect x="1528" y="618" width="300" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1678" y="642" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Extensions</text>
+ <text x="1678" y="660" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">NCCL EP expert parallelism extension</text>
+ <text x="1678" y="674" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Symmetric memory + device API (GIN/RMA)</text>
+ <line x1="960" y1="696" x2="960" y2="714" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L5 Transport -->
+ <rect x="60" y="716" width="1800" height="120" rx="12" fill="#0f2744" stroke="#22d3ee" stroke-width="2"/>
+ <text x="88" y="744" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Transport Layer (intra-node P2P/SHM - inter-node NET/CollNet - NVLS multicast)</text>
+ <rect x="88" y="758" width="280" height="64" rx="10" fill="#134e4a" stroke="#5eead4" stroke-width="2"/>
+ <text x="228" y="782" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">TRANSPORT_P2P</text>
+ <text x="228" y="800" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">NVLink PCIe CUDA IPC cuMem</text>
+ <text x="228" y="814" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">src/transport/p2p.cc</text>
+ <rect x="388" y="758" width="280" height="64" rx="10" fill="#134e4a" stroke="#5eead4" stroke-width="2"/>
+ <text x="528" y="782" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">TRANSPORT_SHM</text>
+ <text x="528" y="800" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Host shared memory staging intra-node</text>
+ <text x="528" y="814" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">src/transport/shm.cc</text>
+ <rect x="688" y="758" width="280" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="828" y="782" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">TRANSPORT_NET</text>
+ <text x="828" y="800" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">IB RoCE TCP via ncclNet_t plugin</text>
+ <text x="828" y="814" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">libnccl-net.so dynamic load</text>
+ <rect x="988" y="758" width="280" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="1128" y="782" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">TRANSPORT_COLLNET</text>
+ <text x="1128" y="800" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">ncclCollNet_t in-network collectives</text>
+ <text x="1128" y="814" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">SHARP switch offload AllReduce</text>
+ <rect x="1288" y="758" width="280" height="64" rx="10" fill="#1a2e05" stroke="#76b900" stroke-width="2"/>
+ <text x="1428" y="782" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">NVLS Multicast</text>
+ <text x="1428" y="800" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">NVLink SHARP mcBuff/ucBuff handles</text>
+ <text x="1428" y="814" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">ncclNvlsInit/Setup buffer registration</text>
+ <rect x="1588" y="758" width="240" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1708" y="782" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Plugin Ecosystem</text>
+ <text x="1708" y="800" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">ext-net ext-tuner ext-profiler ext-env</text>
+ <text x="1708" y="814" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">NCCL_NET_PLUGIN NCCL_TUNER_PLUGIN</text>
+ <line x1="960" y1="836" x2="960" y2="854" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L6 Package -->
+ <rect x="60" y="856" width="1800" height="56" rx="12" fill="#0f2744" stroke="#76b900" stroke-width="2"/>
+ <text x="88" y="884" fill="#76b900" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Source Layout + Infra (src/graph/ - transport/ - device/ - plugin/ - bootstrap/ - RAS)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0f2fe">
+  <rect x="88" y="892" width="50" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="113" y="909" text-anchor="middle">graph/</text>
+  <rect x="148" y="892" width="60" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="178" y="909" text-anchor="middle">topo.cc</text>
+  <rect x="218" y="892" width="60" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="248" y="909" text-anchor="middle">paths.cc</text>
+  <rect x="288" y="892" width="60" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="318" y="909" text-anchor="middle">search.cc</text>
+  <rect x="358" y="892" width="50" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="383" y="909" text-anchor="middle">tuning</text>
+  <rect x="418" y="892" width="60" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="448" y="909" text-anchor="middle">transport</text>
+  <rect x="488" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="513" y="909" text-anchor="middle">p2p.cc</text>
+  <rect x="548" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="573" y="909" text-anchor="middle">net.cc</text>
+  <rect x="608" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="633" y="909" text-anchor="middle">nvls</text>
+  <rect x="668" y="892" width="50" height="24" rx="5" fill="#1a2e05" stroke="#76b900"/><text x="693" y="909" text-anchor="middle">device</text>
+  <rect x="728" y="892" width="50" height="24" rx="5" fill="#1a2e05" stroke="#76b900"/><text x="753" y="909" text-anchor="middle">ring</text>
+  <rect x="788" y="892" width="40" height="24" rx="5" fill="#1a2e05" stroke="#76b900"/><text x="808" y="909" text-anchor="middle">tree</text>
+  <rect x="838" y="892" width="50" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="863" y="909" text-anchor="middle">collnet</text>
+  <rect x="898" y="892" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="923" y="909" text-anchor="middle">plugin</text>
+  <rect x="958" y="892" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="983" y="909" text-anchor="middle">ext-net</text>
+  <rect x="1018" y="892" width="60" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1048" y="909" text-anchor="middle">ext-tuner</text>
+  <rect x="1088" y="892" width="60" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="1118" y="909" text-anchor="middle">bootstrap</text>
+  <rect x="1158" y="892" width="40" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="1178" y="909" text-anchor="middle">RAS</text>
+  <rect x="1208" y="892" width="50" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="1233" y="909" text-anchor="middle">GIN</text>
+  <rect x="1268" y="892" width="50" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="1293" y="909" text-anchor="middle">NCCL EP</text>
+  <rect x="1328" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1353" y="909" text-anchor="middle">ibverbs</text>
+  <rect x="1388" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1413" y="909" text-anchor="middle">GDR</text>
+  <rect x="1448" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1473" y="909" text-anchor="middle">PXN</text>
+  <rect x="1508" y="892" width="60" height="24" rx="5" fill="#312e81" stroke="#818cf8"/><text x="1538" y="909" text-anchor="middle">triton-dist</text>
+  <rect x="1578" y="892" width="50" height="24" rx="5" fill="#450a0a" stroke="#ef4444"/><text x="1603" y="909" text-anchor="middle">ROCm Iris</text>
+  <rect x="1638" y="892" width="50" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="1663" y="909" text-anchor="middle">FLUX</text>
+  <rect x="1698" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1723" y="909" text-anchor="middle">tests</text>
+  <rect x="1758" y="892" width="90" height="24" rx="5" fill="#1a2e05" stroke="#76b900"/><text x="1803" y="909" text-anchor="middle">make pkg.txz</text>
+ </g>
+
+ <!-- DETAIL AllReduce Ring -->
+ <rect x="60" y="928" width="880" height="340" rx="14" fill="#0c1524" stroke="#76b900" stroke-width="2.5"/>
+ <text x="88" y="960" fill="#76b900" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">AllReduce Ring Execution Path (large message bandwidth mode)</text>
+ <text x="88" y="982" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="11">Init topology - build ring per channel - chunk data - persistent kernel - n-1 reduce-scatter + n-1 allgather steps</text>
+
+ <rect x="88" y="998" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="1022" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1: ncclCommInitRank - bootstrap - ncclTopoGetSystem - BFS paths - graph search</text>
+ <line x1="498" y1="1034" x2="498" y2="1046" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+ <rect x="88" y="1048" width="820" height="36" rx="6" fill="#422006" stroke="#fbbf24"/>
+ <text x="498" y="1072" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2: ncclTopoTuneModel picks Ring + Simple protocol + N channels for message size</text>
+ <line x1="498" y1="1084" x2="498" y2="1096" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+ <rect x="88" y="1098" width="820" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="498" y="1122" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3: Setup P2P/NVLink intra-node + NET IB inter-node connections per channel</text>
+ <line x1="498" y1="1134" x2="498" y2="1146" stroke="#5eead4" stroke-width="1.5"/>
+ <rect x="88" y="1148" width="820" height="36" rx="6" fill="#1a2e05" stroke="#76b900"/>
+ <text x="498" y="1172" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4: ncclAllReduce enqueues - chunk slices to channels - launch persistent ring kernel</text>
+ <line x1="498" y1="1184" x2="498" y2="1196" stroke="#76b900" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+ <rect x="88" y="1198" width="820" height="36" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="498" y="1222" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 5: GPU sends recv chunks ring-wise - proxy progresses NET async - stream sync at end</text>
+ <line x1="498" y1="1234" x2="498" y2="1246" stroke="#fb923c" stroke-width="1.5"/>
+ <rect x="88" y="1248" width="820" height="28" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="498" y="1268" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Small msgs: auto-switch to Tree + LL/LL128 for lower latency - operator-level overlap only</text>
+
+ <text x="88" y="1294" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Cross-DC: fabricId minimizes inter-DC hops - multi-NIC scatter for heterogeneous networks</text>
+ <text x="88" y="1310" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">NVLS/CollNet: hardware offload path bypasses ring for AllReduce on NVSwitch/SHARP systems</text>
+
+ <!-- DETAIL Position -->
+ <rect x="960" y="928" width="900" height="340" rx="14" fill="#0c1224" stroke="#76b900" stroke-width="2.5"/>
+ <text x="988" y="960" fill="#76b900" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Five Design Pillars + Ecosystem Position</text>
+ <text x="988" y="982" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="11">De-facto NVIDIA multi-GPU CCL - auto topology tuning - plugin-extensible network stack</text>
+
+ <text x="988" y="1006" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Five Pillars</text>
+ <rect x="988" y="1016" width="130" height="48" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1053" y="1038" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Topo-aware</text>
+ <text x="1053" y="1054" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">Auto graph search</text>
+ <rect x="1130" y="1016" width="130" height="48" rx="6" fill="#1a2e05" stroke="#76b900"/>
+ <text x="1195" y="1038" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Channels</text>
+ <text x="1195" y="1054" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">SM-parallel paths</text>
+ <rect x="1272" y="1016" width="130" height="48" rx="6" fill="#422006" stroke="#fbbf24"/>
+ <text x="1337" y="1038" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Algo+Proto</text>
+ <text x="1337" y="1054" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">Ring/Tree/NVLS/PAT</text>
+ <rect x="1414" y="1016" width="130" height="48" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="1479" y="1038" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Plugins</text>
+ <text x="1479" y="1054" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">net/tuner/profiler</text>
+ <rect x="1556" y="1016" width="130" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1621" y="1038" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">HW offload</text>
+ <text x="1621" y="1054" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">CollNet NVLS SHARP</text>
+ <rect x="1698" y="1016" width="150" height="48" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1773" y="1038" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Persistent</text>
+ <text x="1773" y="1054" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">Reuse GPU kernels</text>
+
+ <text x="988" y="1082" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">vs Related Stacks</text>
+ <rect x="988" y="1092" width="200" height="68" rx="6" fill="#1a2e05" stroke="#76b900"/>
+ <text x="1088" y="1116" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">NCCL</text>
+ <text x="1088" y="1134" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">NVIDIA reference CCL stack</text>
+ <text x="1088" y="1150" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">Bulk sync operator-level overlap</text>
+ <rect x="1200" y="1092" width="200" height="68" rx="6" fill="#450a0a" stroke="#ef4444"/>
+ <text x="1300" y="1116" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">ROCm Iris</text>
+ <text x="1300" y="1134" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="9">AMD Triton RMA overlap</text>
+ <text x="1300" y="1150" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="9">Tile-level GPU-initiated comm</text>
+ <rect x="1412" y="1092" width="200" height="68" rx="6" fill="#312e81" stroke="#818cf8"/>
+ <text x="1512" y="1116" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Triton-distributed</text>
+ <text x="1512" y="1134" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">Fine-grained fused kernels</text>
+ <text x="1512" y="1150" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">1.09x-44.97x vs NCCL overlap</text>
+ <rect x="1624" y="1092" width="224" height="68" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1736" y="1116" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">RCCL</text>
+ <text x="1736" y="1134" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">AMD port of NCCL API</text>
+ <text x="1736" y="1150" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">Same programming model</text>
+
+ <text x="988" y="1178" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Quick Start</text>
+ <rect x="988" y="1188" width="860" height="48" rx="6" fill="#1a1208" stroke="#76b900"/>
+ <text x="1418" y="1212" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="12">ncclCommInitRank + ncclAllReduce(buf, count, dtype, op, comm, stream)</text>
+ <text x="1418" y="1228" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">PyTorch: dist.init_process_group(backend=nccl) - docs.nvidia.com/deeplearning/nccl</text>
+
+ <!-- footer bar -->
+ <rect x="60" y="1288" width="1800" height="72" rx="12" fill="#1a1208" stroke="#76b900" stroke-width="2"/>
+ <text x="88" y="1316" fill="#76b900" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">Design Position (topology-aware auto-tuned collectives - industry default for NVIDIA distributed training)</text>
+ <text x="960" y="1342" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="13">Graph search + channel parallelism + plugin transports + HW offload = out-of-box peak GPU-GPU bandwidth</text>
+
+ <!-- footers -->
+ <rect x="60" y="1376" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1396" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Init: uniqueId bootstrap - topo discovery - path BFS - graph search - connection setup - channel config</text>
+ <text x="960" y="1414" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Loop: enqueue collective - tune algo/proto - plan kernel - transport xfer - proxy NET - stream sync</text>
+
+ <text x="60" y="1460" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: github.com/NVIDIA/nccl - docs.nvidia.com/deeplearning/nccl - NVIDIA NCCL tuning blog - arXiv 2507.04786</text>
+</svg>

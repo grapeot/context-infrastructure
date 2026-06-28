@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-red" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#ef4444"/>
+  </marker>
+  <marker id="arrow-cyan" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#22d3ee"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">MIOpen Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">AMD Deep Learning Primitives Library - github.com/ROCm/rocm-libraries - ROCm GPU DNN + fusion + auto-tuning</text>
+
+ <!-- L1 Workloads -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#ef4444" stroke-width="2"/>
+ <text x="88" y="124" fill="#ef4444" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Framework Integration + Workloads (AMD ROCm DNN primitives - sibling to rocBLAS at application layer)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="113" y="162" text-anchor="middle">PyTorch</text>
+  <rect x="150" y="136" width="40" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="170" y="162" text-anchor="middle">TF</text>
+  <rect x="202" y="136" width="40" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="222" y="162" text-anchor="middle">JAX</text>
+  <rect x="254" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="279" y="162" text-anchor="middle">ONNX</text>
+  <rect x="316" y="136" width="50" height="40" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="341" y="162" text-anchor="middle">Conv</text>
+  <rect x="378" y="136" width="50" height="40" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="403" y="162" text-anchor="middle">Pool</text>
+  <rect x="424" y="136" width="40" height="40" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="444" y="162" text-anchor="middle">BN</text>
+  <rect x="476" y="136" width="50" height="40" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="501" y="162" text-anchor="middle">MatMul</text>
+  <rect x="538" y="136" width="40" height="40" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="558" y="162" text-anchor="middle">RNN</text>
+  <rect x="590" y="136" width="50" height="40" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="615" y="162" text-anchor="middle">Fusion</text>
+  <rect x="652" y="136" width="50" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="677" y="162" text-anchor="middle">Vision</text>
+  <rect x="714" y="136" width="40" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="734" y="162" text-anchor="middle">LLM</text>
+  <rect x="766" y="136" width="50" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="791" y="162" text-anchor="middle">Train</text>
+  <rect x="828" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="853" y="162" text-anchor="middle">BF16</text>
+  <rect x="890" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="915" y="162" text-anchor="middle">FP16</text>
+  <rect x="952" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="977" y="162" text-anchor="middle">FP32</text>
+  <rect x="1014" y="136" width="40" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1034" y="162" text-anchor="middle">INT8</text>
+  <rect x="1066" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1091" y="162" text-anchor="middle">MI300</text>
+  <rect x="1128" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1153" y="162" text-anchor="middle">MI250</text>
+  <rect x="1190" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1215" y="162" text-anchor="middle">MI200</text>
+  <rect x="1252" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1277" y="162" text-anchor="middle">RDNA</text>
+  <rect x="1314" y="136" width="50" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1339" y="162" text-anchor="middle">rocBLAS</text>
+  <rect x="1376" y="136" width="50" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1401" y="162" text-anchor="middle">RCCL</text>
+  <rect x="1438" y="136" width="50" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="1463" y="162" text-anchor="middle">cuDNN</text>
+  <rect x="1500" y="136" width="50" height="40" rx="6" fill="#0c2340" stroke="#38bdf8"/><text x="1525" y="162" text-anchor="middle">oneDNN</text>
+  <rect x="1562" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1587" y="162" text-anchor="middle">ROCm</text>
+  <rect x="1624" y="136" width="40" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1644" y="162" text-anchor="middle">HIP</text>
+  <rect x="1676" y="136" width="50" height="40" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="1701" y="162" text-anchor="middle">AMD</text>
+  <rect x="1738" y="136" width="40" height="40" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="1758" y="162" text-anchor="middle">v3</text>
+  <rect x="1790" y="136" width="24" height="40" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="1802" y="162" text-anchor="middle">.5</text>
+  <rect x="1826" y="136" width="24" height="40" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="1838" y="162" text-anchor="middle">.1</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Programming Model -->
+ <rect x="60" y="216" width="1800" height="120" rx="12" fill="#0f2744" stroke="#ef4444" stroke-width="2"/>
+ <text x="88" y="244" fill="#ef4444" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Triple API Model (legacy imperative - Fusion API vertical fusions - Graph/Backend API cuDNN-aligned)</text>
+ <rect x="88" y="258" width="340" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="258" y="282" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Legacy Imperative API</text>
+ <text x="258" y="300" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">miopenConvolutionForward etc per-op</text>
+ <text x="258" y="314" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Find API or Immediate mode launch</text>
+ <rect x="448" y="258" width="340" height="64" rx="10" fill="#450a0a" stroke="#ef4444" stroke-width="2"/>
+ <text x="618" y="282" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Fusion API</text>
+ <text x="618" y="300" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">Fusion plan + vertical sequential operators</text>
+ <text x="618" y="314" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">Conv+Bias+Activation+BN compile and run</text>
+ <rect x="808" y="258" width="340" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="978" y="282" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Graph / Backend API</text>
+ <text x="978" y="300" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">miopenBackend* descriptors - OperationGraph</text>
+ <text x="978" y="314" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">EngineHeur ExecutionPlan - cuDNN-like model</text>
+ <rect x="1168" y="258" width="340" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1338" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Handle + HIP Stream</text>
+ <text x="1338" y="300" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">miopenHandle_t per context on HIP backend</text>
+ <text x="1338" y="314" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Tensor/conv/pool descriptors for geometry</text>
+ <rect x="1528" y="258" width="300" height="64" rx="10" fill="#134e4a" stroke="#5eead4" stroke-width="2"/>
+ <text x="1678" y="282" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Auto-Tuning</text>
+ <text x="1678" y="300" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Solver search over large config space</text>
+ <text x="1678" y="314" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">FindDb caches benchmark results per user</text>
+ <line x1="960" y1="336" x2="960" y2="354" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 API Surface -->
+ <rect x="60" y="356" width="1800" height="200" rx="12" fill="#0f2744" stroke="#22d3ee" stroke-width="2.5"/>
+ <text x="88" y="384" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - API Surface (primitives - fusion operators - backend graph descriptors)</text>
+
+ <rect x="88" y="400" width="420" height="136" rx="12" fill="#450a0a" stroke="#ef4444" stroke-width="2"/>
+ <text x="298" y="428" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Core Primitives</text>
+ <text x="298" y="450" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">Convolution Fwd/BwdData/BwdWeights</text>
+ <text x="298" y="468" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">Pooling Softmax Activation Reduction</text>
+ <text x="298" y="486" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">BatchNorm LayerNorm LRN RNN LSTM</text>
+ <text x="298" y="504" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">MatMul Concat Resample Dropout</text>
+ <text x="298" y="522" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">Tensor transform reorder NHWC support</text>
+
+ <rect x="528" y="400" width="420" height="136" rx="12" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="738" y="428" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Fusion API Objects</text>
+ <text x="738" y="450" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">miopenCreateFusionPlan - add operators</text>
+ <text x="738" y="468" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Conv Fwd Bias Activation BN inference</text>
+ <text x="738" y="486" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">miopenCompileFusionPlan - kernel cache</text>
+ <text x="738" y="504" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">SetFusionArgs - ExecuteFusionPlan on stream</text>
+ <text x="738" y="522" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Vertical fusion only - reports unsupported combos</text>
+
+ <rect x="968" y="400" width="420" height="136" rx="12" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1178" y="428" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Graph Backend Descriptors</text>
+ <text x="1178" y="450" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">OperationGraph Engine EngineConfig</text>
+ <text x="1178" y="468" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">EngineHeur ExecutionPlan VariantPack</text>
+ <text x="1178" y="486" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">miopenBackendSetAttribute Finalize Execute</text>
+ <text x="1178" y="504" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Conv MatMul Pointwise Norm Reduction ops</text>
+ <text x="1178" y="522" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">KnobChoice numerical/behavior notes</text>
+
+ <rect x="1408" y="400" width="420" height="136" rx="12" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1618" y="428" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Find + Immediate Mode</text>
+ <text x="1618" y="450" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">miopenFindConvolution*Algorithm benchmark</text>
+ <text x="1618" y="468" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">miopenConvolution*Immediate low-latency path</text>
+ <text x="1618" y="486" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">miopenFindSolutions ranked by time/workspace</text>
+ <text x="1618" y="504" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">MIOPEN_FIND_MODE: NORMAL FAST HYBRID</text>
+ <text x="1618" y="522" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">DYNAMIC_HYBRID default - AI heuristic fallback</text>
+
+ <line x1="960" y1="556" x2="960" y2="574" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Solver Framework -->
+ <rect x="60" y="576" width="1800" height="120" rx="12" fill="#0f2744" stroke="#ef4444" stroke-width="2"/>
+ <text x="88" y="604" fill="#ef4444" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Solver / Solution Framework (ProblemConfig - applicable solvers - compile - benchmark - invoker)</text>
+ <rect x="88" y="618" width="340" height="64" rx="10" fill="#450a0a" stroke="#ef4444" stroke-width="2"/>
+ <text x="258" y="642" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Problem + Solver</text>
+ <text x="258" y="660" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">ConvolutionContext from tensor+conv desc</text>
+ <text x="258" y="674" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">Solver::IsApplicable - GetSolution</text>
+ <rect x="448" y="618" width="340" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="618" y="642" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">ConvSolution</text>
+ <text x="618" y="660" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">KernelInfo: source file name comp_options</text>
+ <text x="618" y="674" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">l_wk g_wk grid - solver_id metadata</text>
+ <rect x="808" y="618" width="340" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="978" y="642" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Compile + Cache</text>
+ <text x="978" y="660" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">JIT compile HIP/OpenCL kernel if miss</text>
+ <text x="978" y="674" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Populate kernel cache + invoker factory</text>
+ <rect x="1168" y="618" width="340" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="1338" y="642" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Benchmark + Select</text>
+ <text x="1338" y="660" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Run applicable solvers on target GPU</text>
+ <text x="1338" y="674" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Pick fastest - write User FindDb entry</text>
+ <rect x="1528" y="618" width="300" height="64" rx="10" fill="#134e4a" stroke="#5eead4" stroke-width="2"/>
+ <text x="1678" y="642" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Invoker Execute</text>
+ <text x="1678" y="660" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">InvokerFactory launches selected kernel</text>
+ <text x="1678" y="674" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">InvokeParams pass strides at runtime</text>
+ <line x1="960" y1="696" x2="960" y2="714" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L5 Kernel Backends -->
+ <rect x="60" y="716" width="1800" height="120" rx="12" fill="#0f2744" stroke="#22d3ee" stroke-width="2"/>
+ <text x="88" y="744" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Kernel Backends + Databases (Composable Kernel - rocMLIR - FindDb - PerfDb - precompiled)</text>
+ <rect x="88" y="758" width="280" height="64" rx="10" fill="#450a0a" stroke="#ef4444" stroke-width="2"/>
+ <text x="228" y="782" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Composable Kernel</text>
+ <text x="228" y="800" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">CK templated GEMM conv reduction tiles</text>
+ <text x="228" y="814" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">Primary perf-critical kernel generator</text>
+ <rect x="388" y="758" width="280" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="528" y="782" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">rocMLIR / ASM</text>
+ <text x="528" y="800" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">MIOpen dialect MLIR kernel development</text>
+ <text x="528" y="814" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Hand-written HIP/ASM in src/kernels/</text>
+ <rect x="688" y="758" width="280" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="828" y="782" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">FindDb (System+User)</text>
+ <text x="828" y="800" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">System: popular configs at install path</text>
+ <text x="828" y="814" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">User: ~/.config/miopen/ overrides system</text>
+ <rect x="988" y="758" width="280" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="1128" y="782" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">PerformanceDb</text>
+ <text x="1128" y="800" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Tunable solver PerformanceConfig params</text>
+ <text x="1128" y="814" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Manual tuning + searchable solvers</text>
+ <rect x="1288" y="758" width="280" height="64" rx="10" fill="#134e4a" stroke="#5eead4" stroke-width="2"/>
+ <text x="1428" y="782" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Precompiled Kernels</text>
+ <text x="1428" y="800" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Optional package reduces cold-start JIT</text>
+ <text x="1428" y="814" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Popular shapes shipped as binary blobs</text>
+ <rect x="1588" y="758" width="240" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1708" y="782" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Conv Algorithms</text>
+ <text x="1708" y="800" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Direct Winograd FFT GEMM implicit</text>
+ <text x="1708" y="814" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Solver per algorithm + filter size</text>
+ <line x1="960" y1="836" x2="960" y2="854" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L6 Package -->
+ <rect x="60" y="856" width="1800" height="56" rx="12" fill="#0f2744" stroke="#ef4444" stroke-width="2"/>
+ <text x="88" y="884" fill="#ef4444" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Source Layout (ROCm/rocm-libraries - src/solver/ - src/kernels/ - HIP backend - driver tool)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0f2fe">
+  <rect x="88" y="892" width="50" height="24" rx="5" fill="#450a0a" stroke="#ef4444"/><text x="113" y="909" text-anchor="middle">solver/</text>
+  <rect x="148" y="892" width="50" height="24" rx="5" fill="#450a0a" stroke="#ef4444"/><text x="173" y="909" text-anchor="middle">kernels/</text>
+  <rect x="208" y="892" width="50" height="24" rx="5" fill="#450a0a" stroke="#ef4444"/><text x="233" y="909" text-anchor="middle">fusion/</text>
+  <rect x="268" y="892" width="50" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="293" y="909" text-anchor="middle">graph/</text>
+  <rect x="328" y="892" width="50" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="353" y="909" text-anchor="middle">CK</text>
+  <rect x="388" y="892" width="50" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="413" y="909" text-anchor="middle">rocMLIR</text>
+  <rect x="448" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="473" y="909" text-anchor="middle">HIP</text>
+  <rect x="508" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="533" y="909" text-anchor="middle">OpenCL</text>
+  <rect x="568" y="892" width="50" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="593" y="909" text-anchor="middle">FindDb</text>
+  <rect x="628" y="892" width="40" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="648" y="909" text-anchor="middle">*.kdb</text>
+  <rect x="678" y="892" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="703" y="909" text-anchor="middle">driver</text>
+  <rect x="738" y="892" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="763" y="909" text-anchor="middle">samples</text>
+  <rect x="798" y="892" width="50" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="823" y="909" text-anchor="middle">rocBLAS</text>
+  <rect x="858" y="892" width="50" height="24" rx="5" fill="#1a2e05" stroke="#76b900"/><text x="883" y="909" text-anchor="middle">cuDNN</text>
+  <rect x="918" y="892" width="50" height="24" rx="5" fill="#0c2340" stroke="#38bdf8"/><text x="943" y="909" text-anchor="middle">oneDNN</text>
+  <rect x="978" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1003" y="909" text-anchor="middle">ROCm</text>
+  <rect x="1038" y="892" width="60" height="24" rx="5" fill="#450a0a" stroke="#ef4444"/><text x="1068" y="909" text-anchor="middle">rocm-libs</text>
+  <rect x="1108" y="892" width="50" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="1133" y="909" text-anchor="middle">tests</text>
+  <rect x="1168" y="892" width="50" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="1193" y="909" text-anchor="middle">Winograd</text>
+  <rect x="1228" y="892" width="40" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="1248" y="909" text-anchor="middle">FFT</text>
+  <rect x="1278" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1303" y="909" text-anchor="middle">NHWC</text>
+  <rect x="1338" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1363" y="909" text-anchor="middle">MI300</text>
+  <rect x="1398" y="892" width="50" height="24" rx="5" fill="#450a0a" stroke="#ef4444"/><text x="1423" y="909" text-anchor="middle">MIT</text>
+  <rect x="1458" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1483" y="909" text-anchor="middle">CMake</text>
+  <rect x="1518" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1543" y="909" text-anchor="middle">Git LFS</text>
+  <rect x="1578" y="892" width="50" height="24" rx="5" fill="#450a0a" stroke="#ef4444"/><text x="1603" y="909" text-anchor="middle">v3.5.1</text>
+  <rect x="1638" y="892" width="60" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1668" y="909" text-anchor="middle">PyTorch</text>
+  <rect x="1708" y="892" width="50" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="1733" y="909" text-anchor="middle">RCCL</text>
+  <rect x="1768" y="892" width="80" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1808" y="909" text-anchor="middle">Apache-2.0</text>
+ </g>
+
+ <!-- DETAIL Fusion path -->
+ <rect x="60" y="928" width="880" height="340" rx="14" fill="#0c1524" stroke="#ef4444" stroke-width="2.5"/>
+ <text x="88" y="960" fill="#ef4444" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Fusion API Execution Path (Conv + Bias + ReLU vertical fusion)</text>
+ <text x="88" y="982" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="11">Single fused kernel - reduce HBM round-trips and kernel launch overhead</text>
+
+ <rect x="88" y="998" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="1022" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1: miopenCreateFusionPlan - set vertical fusion axis - miopenCreateOpConv/etc</text>
+ <line x1="498" y1="1034" x2="498" y2="1046" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+ <rect x="88" y="1048" width="820" height="36" rx="6" fill="#422006" stroke="#fbbf24"/>
+ <text x="498" y="1072" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2: Add operators in order: ConvFwd - Bias - Activation - optional BN inference</text>
+ <line x1="498" y1="1084" x2="498" y2="1096" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrow-red)"/>
+ <rect x="88" y="1098" width="820" height="36" rx="6" fill="#450a0a" stroke="#ef4444"/>
+ <text x="498" y="1122" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3: miopenCompileFusionPlan - JIT fused kernel into MIOpen kernel cache</text>
+ <line x1="498" y1="1134" x2="498" y2="1146" stroke="#ef4444" stroke-width="1.5"/>
+ <rect x="88" y="1148" width="820" height="36" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="498" y="1172" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4: miopenSetFusionArgs - bind weights bias activ params per operator</text>
+ <line x1="498" y1="1184" x2="498" y2="1196" stroke="#fb923c" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+ <rect x="88" y="1198" width="820" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="498" y="1222" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 5: miopenExecuteFusionPlan on HIP stream - one kernel for full subgraph</text>
+ <line x1="498" y1="1234" x2="498" y2="1246" stroke="#5eead4" stroke-width="1.5"/>
+ <rect x="88" y="1248" width="820" height="28" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="498" y="1268" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Unsupported combos reported at compile time - FP32 FP16 BFP16 fusion tables per GPU arch</text>
+
+ <text x="88" y="1294" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Find path: miopenFindConvolutionForwardAlgorithm - benchmark solvers - cache to User FindDb</text>
+ <text x="88" y="1310" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Immediate: miopenConvolutionForwardImmediate - FindDb hit or AI heuristic - skip full find</text>
+
+ <!-- DETAIL Position -->
+ <rect x="960" y="928" width="900" height="340" rx="14" fill="#0c1224" stroke="#ef4444" stroke-width="2.5"/>
+ <text x="988" y="960" fill="#ef4444" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Five Design Pillars + Ecosystem Position</text>
+ <text x="988" y="982" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="11">AMD ROCm reference DNN library - auto-tuning + fusion + multi-algorithm conv solvers</text>
+
+ <text x="988" y="1006" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Five Pillars</text>
+ <rect x="988" y="1016" width="130" height="48" rx="6" fill="#450a0a" stroke="#ef4444"/>
+ <text x="1053" y="1038" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Auto-tune</text>
+ <text x="1053" y="1054" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="9">Solver benchmark</text>
+ <rect x="1130" y="1016" width="130" height="48" rx="6" fill="#422006" stroke="#fbbf24"/>
+ <text x="1195" y="1038" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Fusion API</text>
+ <text x="1195" y="1054" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">Vertical op chains</text>
+ <rect x="1272" y="1016" width="130" height="48" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1337" y="1038" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">FindDb</text>
+ <text x="1337" y="1054" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">System + user cache</text>
+ <rect x="1414" y="1016" width="130" height="48" rx="6" fill="#450a0a" stroke="#ef4444"/>
+ <text x="1479" y="1038" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Multi-algo</text>
+ <text x="1479" y="1054" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="9">Direct Winograd FFT</text>
+ <rect x="1556" y="1016" width="130" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1621" y="1038" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Composable K</text>
+ <text x="1621" y="1054" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Templated HIP tiles</text>
+ <rect x="1698" y="1016" width="150" height="48" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1773" y="1038" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Graph API</text>
+ <text x="1773" y="1054" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">Backend cuDNN-like</text>
+
+ <text x="988" y="1082" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">vs Related Stacks</text>
+ <rect x="988" y="1092" width="200" height="68" rx="6" fill="#450a0a" stroke="#ef4444"/>
+ <text x="1088" y="1116" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">MIOpen</text>
+ <text x="1088" y="1134" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="9">AMD ROCm DNN primitives</text>
+ <text x="1088" y="1150" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="9">Solver auto-tune + Fusion API</text>
+ <rect x="1200" y="1092" width="200" height="68" rx="6" fill="#1a2e05" stroke="#76b900"/>
+ <text x="1300" y="1116" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">cuDNN</text>
+ <text x="1300" y="1134" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">NVIDIA GPU DNN library</text>
+ <text x="1300" y="1150" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">Graph API + engine heuristics</text>
+ <rect x="1412" y="1092" width="200" height="68" rx="6" fill="#0c2340" stroke="#38bdf8"/>
+ <text x="1512" y="1116" text-anchor="middle" fill="#dbeafe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">oneDNN</text>
+ <text x="1512" y="1134" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="9">CPU-first cross-platform</text>
+ <text x="1512" y="1150" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="9">Graph partition fusion</text>
+ <rect x="1624" y="1092" width="224" height="68" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1736" y="1116" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Composable Kernel</text>
+ <text x="1736" y="1134" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">Shared kernel generator</text>
+ <text x="1736" y="1150" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">MIOpen primary backend</text>
+
+ <text x="988" y="1178" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Quick Start</text>
+ <rect x="988" y="1188" width="860" height="48" rx="6" fill="#1a1208" stroke="#ef4444"/>
+ <text x="1418" y="1212" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="12">CreateFusionPlan - add ops - CompileFusionPlan - SetFusionArgs - ExecuteFusionPlan</text>
+ <text x="1418" y="1228" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">Docs: rocm.docs.amd.com/projects/MIOpen - github.com/ROCm/rocm-libraries</text>
+
+ <!-- footer bar -->
+ <rect x="60" y="1288" width="1800" height="72" rx="12" fill="#1a1208" stroke="#ef4444" stroke-width="2"/>
+ <text x="88" y="1316" fill="#ef4444" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">Design Position (AMD ROCm DNN layer - solver auto-tuning + FindDb + fusion for peak conv perf on MI GPUs)</text>
+ <text x="960" y="1342" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="13">Multi-algorithm solvers + Composable Kernel + FindDb immediate mode = default DNN backend for PyTorch on ROCm</text>
+
+ <!-- footers -->
+ <rect x="60" y="1376" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1396" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Init: miopenCreate - load System FindDb - HIP device context - optional precompiled kernel package</text>
+ <text x="960" y="1414" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Loop: find or immediate - solver compile - invoker execute - fusion compile - graph backend execute</text>
+
+ <text x="60" y="1460" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: rocm.docs.amd.com/projects/MIOpen - github.com/ROCm/rocm-libraries - github.com/ROCm/composable_kernel</text>
+</svg>

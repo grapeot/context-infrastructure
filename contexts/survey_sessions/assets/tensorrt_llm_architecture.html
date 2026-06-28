@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TensorRT-LLM Architecture</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #020617; color: #e2e8f0; font-family: "JetBrains Mono", ui-monospace, monospace; min-height: 100vh; }
+    .toolbar { position: sticky; top: 0; z-index: 10; display: flex; gap: 12px; align-items: center; padding: 12px 20px; background: rgba(2,6,23,.92); border-bottom: 1px solid #334155; backdrop-filter: blur(8px); }
+    .toolbar button { background: #0f2744; color: #7dd3fc; border: 1px solid #38bdf8; border-radius: 8px; padding: 8px 14px; cursor: pointer; font: inherit; font-size: 13px; }
+    .toolbar button:hover { background: #132f4c; }
+    .wrap { padding: 24px; display: flex; justify-content: center; }
+    svg { max-width: 100%; height: auto; border: 1px solid #1e293b; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,.45); }
+    .hint { color: #64748b; font-size: 12px; margin-left: auto; }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <strong>TensorRT-LLM Architecture</strong>
+    <button onclick="copySvg()">Copy SVG</button>
+    <button onclick="window.print()">Print / PDF</button>
+    <span class="hint">Right-click diagram → Save image, or use Print → Save as PDF</span>
+  </div>
+  <div class="wrap" id="diagram"></div>
+  <script>
+    fetch('tensorrt_llm_architecture.svg').then(r => r.text()).then(svg => {
+      document.getElementById('diagram').innerHTML = svg;
+    });
+    function copySvg() {
+      fetch('tensorrt_llm_architecture.svg').then(r => r.text()).then(t => navigator.clipboard.writeText(t));
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-pink" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#ec4899"/>
+  </marker>
+  <marker id="arrow-fuchsia" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#d946ef"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">veRL-Omni Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">Multimodal Generative RL Post-Training - built on veRL HybridFlow + vLLM-Omni rollout</text>
+
+ <!-- L1 Entry -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#ec4899" stroke-width="2"/>
+ <text x="88" y="124" fill="#ec4899" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Entry Points &amp; Configuration</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="160" height="40" rx="6" fill="#500724" stroke="#ec4899"/><text x="168" y="162" text-anchor="middle">ppo_diffusion_trainer</text>
+  <rect x="260" y="136" width="130" height="40" rx="6" fill="#500724" stroke="#ec4899"/><text x="325" y="162" text-anchor="middle">diffusion_rollout</text>
+  <rect x="402" y="136" width="120" height="40" rx="6" fill="#500724" stroke="#ec4899"/><text x="462" y="162" text-anchor="middle">diffusion_model</text>
+  <rect x="534" y="136" width="120" height="40" rx="6" fill="#500724" stroke="#ec4899"/><text x="594" y="162" text-anchor="middle">examples/</text>
+  <rect x="666" y="136" width="100" height="40" rx="6" fill="#500724" stroke="#ec4899"/><text x="716" y="162" text-anchor="middle">Qwen-Image</text>
+  <rect x="778" y="136" width="70" height="40" rx="6" fill="#500724" stroke="#ec4899"/><text x="813" y="162" text-anchor="middle">Wan2.2</text>
+  <rect x="860" y="136" width="60" height="40" rx="6" fill="#500724" stroke="#ec4899"/><text x="890" y="162" text-anchor="middle">BAGEL</text>
+  <rect x="932" y="136" width="50" height="40" rx="6" fill="#500724" stroke="#ec4899"/><text x="957" y="162" text-anchor="middle">SD3.5</text>
+  <rect x="994" y="136" width="120" height="40" rx="6" fill="#500724" stroke="#ec4899"/><text x="1054" y="162" text-anchor="middle">Qwen3-Omni</text>
+  <rect x="1126" y="136" width="100" height="40" rx="6" fill="#500724" stroke="#ec4899"/><text x="1176" y="162" text-anchor="middle">OCR dataset</text>
+  <rect x="1238" y="136" width="90" height="40" rx="6" fill="#500724" stroke="#ec4899"/><text x="1283" y="162" text-anchor="middle">LoRA RL</text>
+  <rect x="1340" y="136" width="110" height="40" rx="6" fill="#500724" stroke="#ec4899"/><text x="1395" y="162" text-anchor="middle">HTTP scorer</text>
+  <rect x="1462" y="136" width="100" height="40" rx="6" fill="#500724" stroke="#ec4899"/><text x="1512" y="162" text-anchor="middle">multi-node</text>
+  <rect x="1574" y="136" width="80" height="40" rx="6" fill="#500724" stroke="#ec4899"/><text x="1614" y="162" text-anchor="middle">Ascend</text>
+  <rect x="1666" y="136" width="80" height="40" rx="6" fill="#500724" stroke="#ec4899"/><text x="1706" y="162" text-anchor="middle">wandb</text>
+  <rect x="1758" y="136" width="78" height="40" rx="6" fill="#431407" stroke="#f97316"/><text x="1797" y="162" text-anchor="middle">verl base</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Hybrid Controller -->
+ <rect x="60" y="216" width="1800" height="120" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2"/>
+ <text x="88" y="244" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Ray Diffusion Trainers (HybridFlow Control Flow)</text>
+ <rect x="88" y="258" width="260" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="218" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">BaseRayDiffusionTrainer</text>
+ <text x="218" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Extends veRL Ray trainer for diffusion RL</text>
+ <rect x="364" y="258" width="260" height="60" rx="8" fill="#500724" stroke="#ec4899"/>
+ <text x="494" y="282" text-anchor="middle" fill="#fce7f3" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">PolicyGradientRayTrainer</text>
+ <text x="494" y="302" text-anchor="middle" fill="#fbcfe8" font-family="JetBrains Mono, monospace" font-size="10">FlowGRPO / MixGRPO / GRPO-Guard loop</text>
+ <rect x="640" y="258" width="260" height="60" rx="8" fill="#500724" stroke="#ec4899"/>
+ <text x="770" y="282" text-anchor="middle" fill="#fce7f3" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">DirectPreferenceRayTrainer</text>
+ <text x="770" y="302" text-anchor="middle" fill="#fbcfe8" font-family="JetBrains Mono, monospace" font-size="10">Diffusion-DPO / DiffusionNFT / SRPO</text>
+ <rect x="916" y="258" width="240" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1036" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">DiffusionOutput / DataProto</text>
+ <text x="1036" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Latents + log_probs + images across workers</text>
+ <rect x="1172" y="258" width="240" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1292" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">DiffusionAlgorithmsTrainer</text>
+ <text x="1292" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Algorithm entry + config + metrics</text>
+ <rect x="1428" y="258" width="410" height="60" rx="8" fill="#431407" stroke="#f97316"/>
+ <text x="1633" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Inherits veRL HybridFlow: single controller + swappable backends</text>
+ <text x="1633" y="302" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Co-located sync + fully-async RL modes supported</text>
+ <line x1="960" y1="336" x2="960" y2="354" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Worker Groups -->
+ <rect x="60" y="356" width="1800" height="200" rx="12" fill="#0f2744" stroke="#ec4899" stroke-width="2.5"/>
+ <text x="88" y="384" fill="#ec4899" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - Ray WorkerGroups (Diffusion + Omni Rollout + Reward)</text>
+
+ <!-- Training Worker -->
+ <rect x="88" y="400" width="420" height="136" rx="12" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="298" y="428" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Diffusion Training Workers</text>
+ <text x="298" y="450" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">DiffusersFSDPEngine / DiffusersPPOFSDPEngine</text>
+ <text x="298" y="468" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">update_actor - compute_log_prob on denoising steps</text>
+ <text x="298" y="486" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">LoRA Adapter Mixin - QwenImagePipelineWithLogProb</text>
+ <text x="298" y="504" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Diffusion padding + loss functions + schedulers</text>
+ <text x="298" y="522" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">FSDP2 / USP / TP parallelism for DiT backbones</text>
+
+ <!-- Rollout Agent Loop -->
+ <rect x="524" y="400" width="420" height="136" rx="12" fill="#4a044e" stroke="#d946ef" stroke-width="2"/>
+ <text x="734" y="428" text-anchor="middle" fill="#fae8ff" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Diffusion Agent Loop + vLLM-Omni Rollout</text>
+ <text x="734" y="450" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="10">DiffusionAgentLoopWorker + DiffusionSingleTurnAgentLoop</text>
+ <text x="734" y="468" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="10">vLLMOmniHttpServer / vLLMOmniReplica (async server)</text>
+ <text x="734" y="486" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="10">vLLMOmniColocateWorkerExtension - LoRA weight sync</text>
+ <text x="734" y="504" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="10">Step-wise continuous batching + embedding cache</text>
+ <text x="734" y="522" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="10">DiffusionOutput: latents, images, per-step log_probs</text>
+
+ <!-- Reward -->
+ <rect x="960" y="400" width="340" height="136" rx="12" fill="#422006" stroke="#fcd34d" stroke-width="2"/>
+ <text x="1130" y="428" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Async Reward WorkerGroup</text>
+ <text x="1130" y="450" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">RewardManager + DefaultScoreDispatcher</text>
+ <text x="1130" y="468" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Rule-based (OCR match) + model-based (VLM judge)</text>
+ <text x="1130" y="486" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">HPSv3 / GenRM-OCR / UnifiedReward scorers</text>
+ <text x="1130" y="504" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Dedicated GPU pool - overlap with rollout/train</text>
+ <text x="1130" y="522" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">External HTTP scorer service supported</text>
+
+ <!-- Resource Pool + Pipelines -->
+ <rect x="1316" y="400" width="516" height="136" rx="12" fill="#500724" stroke="#ec4899" stroke-width="2"/>
+ <text x="1574" y="428" text-anchor="middle" fill="#fce7f3" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Pipelines + Resource Placement</text>
+ <text x="1574" y="450" text-anchor="middle" fill="#fbcfe8" font-family="JetBrains Mono, monospace" font-size="10">Model pipelines: Qwen-Image / Wan / BAGEL / Qwen3-Omni</text>
+ <text x="1574" y="468" text-anchor="middle" fill="#fbcfe8" font-family="JetBrains Mono, monospace" font-size="10">Built-in schedulers + diffusion padding utilities</text>
+ <text x="1574" y="486" text-anchor="middle" fill="#fbcfe8" font-family="JetBrains Mono, monospace" font-size="10">Ray ResourcePool: train / rollout / reward GPU mapping</text>
+ <text x="1574" y="504" text-anchor="middle" fill="#fbcfe8" font-family="JetBrains Mono, monospace" font-size="10">Co-located vs disaggregated rollout server modes</text>
+ <text x="1574" y="522" text-anchor="middle" fill="#fbcfe8" font-family="JetBrains Mono, monospace" font-size="10">Rollout correction + deterministic rollout (stability)</text>
+
+ <line x1="960" y1="354" x2="298" y2="398" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="5,3"/>
+ <line x1="960" y1="354" x2="734" y2="398" stroke="#d946ef" stroke-width="1.5" stroke-dasharray="5,3"/>
+ <line x1="960" y1="354" x2="1130" y2="398" stroke="#fcd34d" stroke-width="1.5" stroke-dasharray="5,3"/>
+ <text x="960" y="548" text-anchor="middle" fill="#ec4899" font-family="JetBrains Mono, monospace" font-size="10">Controller RPC: split DataProto - dispatch diffusion workers - collect latents/images/rewards</text>
+
+ <line x1="960" y1="556" x2="960" y2="574" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Engines -->
+ <rect x="60" y="576" width="1800" height="88" rx="12" fill="#0f2744" stroke="#a78bfa" stroke-width="2"/>
+ <text x="88" y="604" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Pluggable Training &amp; Rollout Engines</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ede9fe">
+  <text x="88" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Training:</text>
+  <rect x="160" y="612" width="90" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="205" y="636" text-anchor="middle">FSDP2</text>
+  <rect x="262" y="612" width="50" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="287" y="636" text-anchor="middle">USP</text>
+  <rect x="324" y="612" width="40" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="344" y="636" text-anchor="middle">TP</text>
+  <rect x="376" y="612" width="80" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="416" y="636" text-anchor="middle">Diffusers</text>
+  <rect x="468" y="612" width="60" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="498" y="636" text-anchor="middle">LoRA</text>
+  <rect x="540" y="612" width="70" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="575" y="636" text-anchor="middle">VeOmni</text>
+  <text x="630" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Rollout:</text>
+  <rect x="700" y="612" width="100" height="36" rx="6" fill="#4a044e" stroke="#d946ef"/><text x="750" y="636" text-anchor="middle">vLLM-Omni</text>
+  <rect x="812" y="612" width="110" height="36" rx="6" fill="#4a044e" stroke="#d946ef"/><text x="867" y="636" text-anchor="middle">AsyncOmni</text>
+  <rect x="934" y="612" width="90" height="36" rx="6" fill="#4a044e" stroke="#d946ef"/><text x="979" y="636" text-anchor="middle">Stage graph</text>
+  <rect x="1036" y="612" width="80" height="36" rx="6" fill="#0c2d2d" stroke="#5eead4"/><text x="1076" y="636" text-anchor="middle">Diffusers</text>
+  <rect x="1128" y="612" width="100" height="36" rx="6" fill="#4a044e" stroke="#d946ef"/><text x="1178" y="636" text-anchor="middle">stepwise CB</text>
+  <rect x="1240" y="612" width="90" height="36" rx="6" fill="#4a044e" stroke="#d946ef"/><text x="1285" y="636" text-anchor="middle">embed cache</text>
+  <rect x="1342" y="612" width="60" height="36" rx="6" fill="#500724" stroke="#ec4899"/><text x="1372" y="636" text-anchor="middle">DiT</text>
+  <rect x="1414" y="612" width="40" height="36" rx="6" fill="#500724" stroke="#ec4899"/><text x="1434" y="636" text-anchor="middle">AR</text>
+  <rect x="1466" y="612" width="50" height="36" rx="6" fill="#500724" stroke="#ec4899"/><text x="1491" y="636" text-anchor="middle">VAE</text>
+  <rect x="1528" y="612" width="50" height="36" rx="6" fill="#500724" stroke="#ec4899"/><text x="1553" y="636" text-anchor="middle">CFG</text>
+  <rect x="1590" y="612" width="80" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1630" y="636" text-anchor="middle">HTTP API</text>
+  <rect x="1682" y="612" width="80" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1722" y="636" text-anchor="middle">LoRA sync</text>
+  <rect x="1774" y="612" width="74" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1811" y="636" text-anchor="middle">NCCL</text>
+ </g>
+
+ <!-- L5 Algorithms -->
+ <rect x="60" y="676" width="1800" height="72" rx="12" fill="#0f2744" stroke="#fbbf24" stroke-width="2"/>
+ <text x="88" y="704" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Diffusion RL Algorithms &amp; Model Families</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#fef3c7">
+  <rect x="88" y="716" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="133" y="733" text-anchor="middle">FlowGRPO</text>
+  <rect x="188" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="228" y="733" text-anchor="middle">MixGRPO</text>
+  <rect x="278" y="716" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="323" y="733" text-anchor="middle">GRPO-Guard</text>
+  <rect x="378" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="418" y="733" text-anchor="middle">Flow-DPPO</text>
+  <rect x="468" y="716" width="100" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="518" y="733" text-anchor="middle">Diffusion-DPO</text>
+  <rect x="578" y="716" width="100" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="628" y="733" text-anchor="middle">DiffusionNFT</text>
+  <rect x="688" y="716" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="733" y="733" text-anchor="middle">DanceGRPO</text>
+  <rect x="788" y="716" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="813" y="733" text-anchor="middle">GSPO</text>
+  <rect x="848" y="716" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="873" y="733" text-anchor="middle">SRPO</text>
+  <rect x="908" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="938" y="733" text-anchor="middle">T2I</text>
+  <rect x="978" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1008" y="733" text-anchor="middle">T2V</text>
+  <rect x="1048" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1078" y="733" text-anchor="middle">T2A</text>
+  <rect x="1118" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1158" y="733" text-anchor="middle">unified gen</text>
+  <rect x="1208" y="716" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1253" y="733" text-anchor="middle">async reward</text>
+  <rect x="1308" y="716" width="110" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1363" y="733" text-anchor="middle">rollout correct</text>
+  <rect x="1428" y="716" width="100" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1478" y="733" text-anchor="middle">fully-async</text>
+  <rect x="1538" y="716" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1583" y="733" text-anchor="middle">co-located</text>
+  <rect x="1638" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1678" y="733" text-anchor="middle">MFU prof</text>
+  <rect x="1728" y="716" width="120" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1788" y="733" text-anchor="middle">multi-reward</text>
+ </g>
+
+ <!-- DETAIL FlowGRPO Loop -->
+ <rect x="60" y="764" width="880" height="340" rx="14" fill="#0c1524" stroke="#ec4899" stroke-width="2.5"/>
+ <text x="88" y="796" fill="#ec4899" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">FlowGRPO Main Loop (Diffusion RL Control Flow)</text>
+ <text x="88" y="818" fill="#fbcfe8" font-family="JetBrains Mono, monospace" font-size="11">Reference: Qwen-Image OCR - ~25% higher throughput vs diffusers flow_grpo baseline</text>
+
+ <rect x="88" y="834" width="820" height="36" rx="6" fill="#4a044e" stroke="#d946ef"/>
+ <text x="498" y="858" text-anchor="middle" fill="#fae8ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1: DiffusionAgentLoop.generate - vLLM-Omni async denoising rollout (step-wise batching)</text>
+ <line x1="498" y1="870" x2="498" y2="882" stroke="#d946ef" stroke-width="1.5" marker-end="url(#arrow-fuchsia)"/>
+ <rect x="88" y="884" width="820" height="36" rx="6" fill="#422006" stroke="#fcd34d"/>
+ <text x="498" y="908" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2: Async reward pool scores images (OCR/VLM) - overlaps with next rollout batch</text>
+ <line x1="498" y1="920" x2="498" y2="932" stroke="#fcd34d" stroke-width="1.5" marker-end="url(#arrow-pink)"/>
+ <rect x="88" y="934" width="820" height="36" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="498" y="958" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3: compute_log_prob on denoising trajectory - per-step latent log_probs collected</text>
+ <line x1="498" y1="970" x2="498" y2="982" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow-pink)"/>
+ <rect x="88" y="984" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="1008" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4: compute_advantages on controller - merge DiffusionOutput into DataProto</text>
+ <line x1="498" y1="1020" x2="498" y2="1032" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow)"/>
+ <rect x="88" y="1034" width="820" height="36" rx="6" fill="#500724" stroke="#ec4899"/>
+ <text x="498" y="1058" text-anchor="middle" fill="#fce7f3" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 5: update_actor via DiffusersFSDPEngine - sync LoRA weights back to vLLM-Omni server</text>
+
+ <text x="88" y="1092" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Non-AR RL: rewards on generated images/video - not token-level text rewards</text>
+ <text x="88" y="1108" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Rollout correction (experimental) improves diffusion RL stability under off-policy drift</text>
+
+ <!-- DETAIL vLLM-Omni Integration -->
+ <rect x="960" y="764" width="900" height="340" rx="14" fill="#0c1a24" stroke="#d946ef" stroke-width="2.5"/>
+ <text x="988" y="796" fill="#d946ef" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">vLLM-Omni Rollout Integration + Three Model Families</text>
+ <text x="988" y="818" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="11">High-throughput async serving decoupled from FSDP training workers</text>
+
+ <text x="988" y="842" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Rollout Server Stack</text>
+ <rect x="988" y="852" width="200" height="68" rx="6" fill="#4a044e" stroke="#d946ef"/>
+ <text x="1088" y="876" text-anchor="middle" fill="#fae8ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">vLLMOmniReplica</text>
+ <text x="1088" y="894" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="9">Ray remote server per node</text>
+ <text x="1088" y="910" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="9">OpenAI-compatible HTTP API</text>
+ <line x1="1188" y1="886" x2="1218" y2="886" stroke="#ec4899" stroke-width="2" marker-end="url(#arrow-pink)"/>
+ <rect x="1222" y="852" width="200" height="68" rx="6" fill="#4a044e" stroke="#d946ef"/>
+ <text x="1322" y="876" text-anchor="middle" fill="#fae8ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">AsyncOmni Engine</text>
+ <text x="1322" y="894" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="9">DiT stage graph + continuous batch</text>
+ <text x="1322" y="910" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="9">LoRA hot-update via colocate ext</text>
+ <rect x="1432" y="852" width="416" height="68" rx="6" fill="#500724" stroke="#ec4899"/>
+ <text x="1640" y="876" text-anchor="middle" fill="#fce7f3" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">DiffusionSingleTurnAgentLoop</text>
+ <text x="1640" y="894" text-anchor="middle" fill="#fbcfe8" font-family="JetBrains Mono, monospace" font-size="9">Tokenize prompt + optional CFG negative prompt</text>
+ <text x="1640" y="910" text-anchor="middle" fill="#fbcfe8" font-family="JetBrains Mono, monospace" font-size="9">Returns DiffusionAgentLoopOutput with images + log_probs</text>
+
+ <text x="988" y="942" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Three Generative Model Families</text>
+ <rect x="988" y="952" width="270" height="68" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="1123" y="976" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Diffusion (DiT-main)</text>
+ <text x="1123" y="994" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Qwen-Image / Wan2.2 / SD3.5</text>
+ <text x="1123" y="1010" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Text - Image / Video / Audio</text>
+ <rect x="1270" y="952" width="270" height="68" rx="6" fill="#2e1065" stroke="#8b5cf6"/>
+ <text x="1405" y="976" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Unified Understand + Gen</text>
+ <text x="1405" y="994" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">BAGEL / HunyuanImage-3.0</text>
+ <text x="1405" y="1010" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">Text + Image in/out</text>
+ <rect x="1552" y="952" width="296" height="68" rx="6" fill="#431407" stroke="#f97316"/>
+ <text x="1700" y="976" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Omni-Modality (AR-main)</text>
+ <text x="1700" y="994" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Qwen3-Omni-Thinker</text>
+ <text x="1700" y="1010" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Text / Image / Video / Audio</text>
+
+ <text x="988" y="1040" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Built on veRL + vLLM-Omni</text>
+ <rect x="988" y="1050" width="100" height="36" rx="6" fill="#431407" stroke="#f97316"/><text x="1038" y="1074" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10">HybridFlow</text>
+ <rect x="1100" y="1050" width="90" height="36" rx="6" fill="#431407" stroke="#f97316"/><text x="1145" y="1074" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10">DataProto</text>
+ <rect x="1202" y="1050" width="80" height="36" rx="6" fill="#4a044e" stroke="#d946ef"/><text x="1242" y="1074" text-anchor="middle" fill="#fae8ff" font-family="JetBrains Mono, monospace" font-size="10">Stage graph</text>
+ <rect x="1294" y="1050" width="90" height="36" rx="6" fill="#4a044e" stroke="#d946ef"/><text x="1339" y="1074" text-anchor="middle" fill="#fae8ff" font-family="JetBrains Mono, monospace" font-size="10">OmniConnector</text>
+ <rect x="1396" y="1050" width="100" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1446" y="1074" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">HTTP scorer</text>
+ <rect x="1508" y="1050" width="80" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1548" y="1074" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">Ascend</text>
+ <rect x="1600" y="1050" width="70" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1635" y="1074" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">CUDA</text>
+ <rect x="1682" y="1050" width="70" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1717" y="1074" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">ROCm</text>
+ <rect x="1764" y="1050" width="84" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1806" y="1074" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">NPU</text>
+
+ <text x="988" y="1108" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Pre-release: stable core diffusion RL stack - expanding omni + unified model support</text>
+
+ <!-- L6 Production -->
+ <rect x="60" y="1124" width="1800" height="72" rx="12" fill="#1a1208" stroke="#ec4899" stroke-width="2"/>
+ <text x="88" y="1152" fill="#ec4899" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Production &amp; Hardware Support</text>
+ <text x="960" y="1178" text-anchor="middle" fill="#fbcfe8" font-family="JetBrains Mono, monospace" font-size="13">verl-project/verl-omni - NVIDIA CUDA + Ascend NPU - wandb/mlflow - multi-node Ray - Apache 2.0</text>
+
+ <!-- footers -->
+ <rect x="60" y="1216" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1236" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Init path: Ray cluster - spawn train/rollout/reward pools - init vLLM-Omni async servers - load diffusion ckpt + LoRA</text>
+ <text x="960" y="1254" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Step path: omni rollout - async reward - log_prob - advantages - FSDP update - LoRA sync to rollout server - repeat</text>
+
+ <text x="60" y="1300" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: verl-project/verl-omni - verl-omni.readthedocs.io - vllm-project blog 2026-05-14 - verl PR #5716 / Issue #4639</text>
+</svg>

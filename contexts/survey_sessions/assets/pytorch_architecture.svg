@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-red" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#ee4c2c"/>
+  </marker>
+  <marker id="arrow-purple" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#a78bfa"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">PyTorch Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">Imperative Deep Learning Framework - ATen + Dispatcher + Autograd - PyTorch 2.x Compiler Stack</text>
+
+ <!-- L1 Entry -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#ee4c2c" stroke-width="2"/>
+ <text x="88" y="124" fill="#ee4c2c" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Entry Points &amp; User APIs</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="70" height="40" rx="6" fill="#450a0a" stroke="#ee4c2c"/><text x="123" y="162" text-anchor="middle">torch</text>
+  <rect x="170" y="136" width="80" height="40" rx="6" fill="#450a0a" stroke="#ee4c2c"/><text x="210" y="162" text-anchor="middle">torch.nn</text>
+  <rect x="262" y="136" width="90" height="40" rx="6" fill="#450a0a" stroke="#ee4c2c"/><text x="307" y="162" text-anchor="middle">torch.optim</text>
+  <rect x="364" y="136" width="100" height="40" rx="6" fill="#450a0a" stroke="#ee4c2c"/><text x="414" y="162" text-anchor="middle">torch.compile</text>
+  <rect x="476" y="136" width="80" height="40" rx="6" fill="#450a0a" stroke="#ee4c2c"/><text x="516" y="162" text-anchor="middle">torch.jit</text>
+  <rect x="568" y="136" width="90" height="40" rx="6" fill="#450a0a" stroke="#ee4c2c"/><text x="613" y="162" text-anchor="middle">torch.export</text>
+  <rect x="670" y="136" width="100" height="40" rx="6" fill="#450a0a" stroke="#ee4c2c"/><text x="720" y="162" text-anchor="middle">torch.fx</text>
+  <rect x="782" y="136" width="110" height="40" rx="6" fill="#450a0a" stroke="#ee4c2c"/><text x="837" y="162" text-anchor="middle">torch.distributed</text>
+  <rect x="904" y="136" width="80" height="40" rx="6" fill="#450a0a" stroke="#ee4c2c"/><text x="944" y="162" text-anchor="middle">libtorch</text>
+  <rect x="996" y="136" width="60" height="40" rx="6" fill="#450a0a" stroke="#ee4c2c"/><text x="1026" y="162" text-anchor="middle">C++</text>
+  <rect x="1068" y="136" width="70" height="40" rx="6" fill="#450a0a" stroke="#ee4c2c"/><text x="1103" y="162" text-anchor="middle">Python</text>
+  <rect x="1150" y="136" width="60" height="40" rx="6" fill="#450a0a" stroke="#ee4c2c"/><text x="1180" y="162" text-anchor="middle">ONNX</text>
+  <rect x="1222" y="136" width="80" height="40" rx="6" fill="#450a0a" stroke="#ee4c2c"/><text x="1262" y="162" text-anchor="middle">torchao</text>
+  <rect x="1314" y="136" width="90" height="40" rx="6" fill="#450a0a" stroke="#ee4c2c"/><text x="1359" y="162" text-anchor="middle">torchvision</text>
+  <rect x="1416" y="136" width="80" height="40" rx="6" fill="#450a0a" stroke="#ee4c2c"/><text x="1456" y="162" text-anchor="middle">torchaudio</text>
+  <rect x="1508" y="136" width="80" height="40" rx="6" fill="#450a0a" stroke="#ee4c2c"/><text x="1548" y="162" text-anchor="middle">torchtext</text>
+  <rect x="1600" y="136" width="80" height="40" rx="6" fill="#450a0a" stroke="#ee4c2c"/><text x="1640" y="162" text-anchor="middle">torchrec</text>
+  <rect x="1692" y="136" width="80" height="40" rx="6" fill="#450a0a" stroke="#ee4c2c"/><text x="1732" y="162" text-anchor="middle">torchtune</text>
+  <rect x="1784" y="136" width="64" height="40" rx="6" fill="#450a0a" stroke="#ee4c2c"/><text x="1816" y="162" text-anchor="middle">ExecuTorch</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Compiler Stack -->
+ <rect x="60" y="216" width="1800" height="120" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2"/>
+ <text x="88" y="244" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - PyTorch 2.x Compiler Stack (torch.compile / PT2)</text>
+ <rect x="88" y="258" width="220" height="60" rx="8" fill="#450a0a" stroke="#ee4c2c"/>
+ <text x="198" y="282" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">TorchDynamo</text>
+ <text x="198" y="302" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">Bytecode capture - frame eval hooks - guards</text>
+ <rect x="324" y="258" width="180" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="414" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">FX Graph</text>
+ <text x="414" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Symbolic trace - torch.fx / ProxyTensor</text>
+ <rect x="520" y="258" width="220" height="60" rx="8" fill="#450a0a" stroke="#ee4c2c"/>
+ <text x="630" y="282" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">AOTAutograd</text>
+ <text x="630" y="302" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">Functionalize - split fwd/bwd graphs</text>
+ <rect x="756" y="258" width="220" height="60" rx="8" fill="#450a0a" stroke="#ee4c2c"/>
+ <text x="866" y="282" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">TorchInductor</text>
+ <text x="866" y="302" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">Loop IR - fusion scheduler - codegen</text>
+ <rect x="992" y="258" width="200" height="60" rx="8" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1092" y="282" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Triton / C++ Kernels</text>
+ <text x="1092" y="302" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">GPU Triton kernels - CPU OpenMP/C++</text>
+ <rect x="1208" y="258" width="200" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1308" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Graph + Autotune Cache</text>
+ <text x="1308" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">fx_graph_cache - guard cache - autotune</text>
+ <rect x="1424" y="258" width="200" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1524" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">PrimTorch (~250 ops)</text>
+ <text x="1524" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Standardized primitives for backends</text>
+ <rect x="1640" y="258" width="198" height="60" rx="8" fill="#422006" stroke="#fcd34d"/>
+ <text x="1739" y="282" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Eager Fallback on Guard Fail</text>
+ <text x="1739" y="302" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Dynamic shapes - recompile or deopt</text>
+ <line x1="960" y1="336" x2="960" y2="354" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Core -->
+ <rect x="60" y="356" width="1800" height="200" rx="12" fill="#0f2744" stroke="#ee4c2c" stroke-width="2.5"/>
+ <text x="88" y="384" fill="#ee4c2c" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - Core Runtime (ATen + Dispatcher + Autograd)</text>
+
+ <!-- Dispatcher -->
+ <rect x="88" y="400" width="420" height="136" rx="12" fill="#450a0a" stroke="#ee4c2c" stroke-width="2"/>
+ <text x="298" y="428" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Dispatcher (Multi-Dispatch Router)</text>
+ <text x="298" y="450" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">aten/src/ATen/core/dispatch/ - singleton registry</text>
+ <text x="298" y="468" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">DispatchKeySet per tensor - priority-ordered lookup</text>
+ <text x="298" y="486" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">Keys: CPU/CUDA/MPS/XLA + Autograd + FuncTorch</text>
+ <text x="298" y="504" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">native_functions.yaml - codegen bindings + kernels</text>
+ <text x="298" y="522" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">Boxed/unboxed kernel registration + fallthrough</text>
+
+ <!-- Autograd -->
+ <rect x="524" y="400" width="420" height="136" rx="12" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="734" y="428" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Autograd Engine</text>
+ <text x="734" y="450" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Reverse-mode AD - dynamic computational graph</text>
+ <text x="734" y="468" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Variable / Node - records ops when requires_grad</text>
+ <text x="734" y="486" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">AutogradCUDA/CPU dispatch keys wrap kernels</text>
+ <text x="734" y="504" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">AutoNonVariableTypeMode redispatch to backend</text>
+ <text x="734" y="522" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">torch.autograd.backward - grad accumulation</text>
+
+ <!-- ATen -->
+ <rect x="960" y="400" width="340" height="136" rx="12" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1130" y="428" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">ATen (Abstract Tensor Library)</text>
+ <text x="1130" y="450" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">800+ ops - device-agnostic tensor math</text>
+ <text x="1130" y="468" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">TensorImpl + Storage + TensorIterator</text>
+ <text x="1130" y="486" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">CompositeImplicitAutograd decompositions</text>
+ <text x="1130" y="504" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Sparse / Nested / Quantized tensor types</text>
+ <text x="1130" y="522" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">at::native::* backend-specific kernels</text>
+
+ <!-- C10 -->
+ <rect x="1316" y="400" width="516" height="136" rx="12" fill="#422006" stroke="#fcd34d" stroke-width="2"/>
+ <text x="1574" y="428" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">C10 Core + Memory + Device</text>
+ <text x="1574" y="450" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">c10/core - ScalarType, Device, DispatchKey defs</text>
+ <text x="1574" y="468" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">CPUAllocator / CUDACachingAllocator / pinned mem</text>
+ <text x="1574" y="486" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Thread-local dispatch key sets (TLS exclude/include)</text>
+ <text x="1574" y="504" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Stream / Event abstractions per device type</text>
+ <text x="1574" y="522" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">StorageImpl owns raw memory buffer + refcount</text>
+
+ <text x="960" y="548" text-anchor="middle" fill="#ee4c2c" font-family="JetBrains Mono, monospace" font-size="10">Define-by-run: graph built dynamically at forward time - no static graph required for eager mode</text>
+ <line x1="960" y1="556" x2="960" y2="574" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Backends -->
+ <rect x="60" y="576" width="1800" height="88" rx="12" fill="#0f2744" stroke="#a78bfa" stroke-width="2"/>
+ <text x="88" y="604" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Device Backends &amp; Kernel Libraries</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ede9fe">
+  <text x="88" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">GPU:</text>
+  <rect x="130" y="612" width="60" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="160" y="636" text-anchor="middle">CUDA</text>
+  <rect x="202" y="612" width="60" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="232" y="636" text-anchor="middle">cuDNN</text>
+  <rect x="274" y="612" width="60" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="304" y="636" text-anchor="middle">cuBLAS</text>
+  <rect x="346" y="612" width="60" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="376" y="636" text-anchor="middle">Triton</text>
+  <rect x="418" y="612" width="60" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="448" y="636" text-anchor="middle">ROCm</text>
+  <text x="490" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">CPU:</text>
+  <rect x="535" y="612" width="50" height="36" rx="6" fill="#450a0a" stroke="#ee4c2c"/><text x="560" y="636" text-anchor="middle">MKL</text>
+  <rect x="597" y="612" width="60" height="36" rx="6" fill="#450a0a" stroke="#ee4c2c"/><text x="627" y="636" text-anchor="middle">OpenMP</text>
+  <rect x="669" y="612" width="50" height="36" rx="6" fill="#450a0a" stroke="#ee4c2c"/><text x="694" y="636" text-anchor="middle">AVX</text>
+  <text x="732" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Accel:</text>
+  <rect x="785" y="612" width="50" height="36" rx="6" fill="#052e16" stroke="#34a853"/><text x="810" y="636" text-anchor="middle">XLA</text>
+  <rect x="847" y="612" width="50" height="36" rx="6" fill="#052e16" stroke="#34a853"/><text x="872" y="636" text-anchor="middle">TPU</text>
+  <rect x="909" y="612" width="50" height="36" rx="6" fill="#172554" stroke="#4285f4"/><text x="934" y="636" text-anchor="middle">MPS</text>
+  <rect x="971" y="612" width="50" height="36" rx="6" fill="#172554" stroke="#4285f4"/><text x="996" y="636" text-anchor="middle">XPU</text>
+  <rect x="1033" y="612" width="50" height="36" rx="6" fill="#172554" stroke="#4285f4"/><text x="1058" y="636" text-anchor="middle">HPU</text>
+  <text x="1095" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Lib:</text>
+  <rect x="1130" y="612" width="80" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1170" y="636" text-anchor="middle">FlashAttn</text>
+  <rect x="1222" y="612" width="70" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1257" y="636" text-anchor="middle">CUTLASS</text>
+  <rect x="1304" y="612" width="60" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1334" y="636" text-anchor="middle">AOTI</text>
+  <rect x="1376" y="612" width="70" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1411" y="636" text-anchor="middle">CUDA Graph</text>
+  <text x="1460" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Quant:</text>
+  <rect x="1520" y="612" width="50" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1545" y="636" text-anchor="middle">FP8</text>
+  <rect x="1582" y="612" width="50" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1607" y="636" text-anchor="middle">INT8</text>
+  <rect x="1644" y="612" width="50" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1669" y="636" text-anchor="middle">INT4</text>
+  <rect x="1706" y="612" width="70" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1741" y="636" text-anchor="middle">torchao</text>
+  <rect x="1788" y="612" width="60" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1818" y="636" text-anchor="middle">PTQ/QAT</text>
+ </g>
+
+ <!-- L5 Features -->
+ <rect x="60" y="676" width="1800" height="72" rx="12" fill="#0f2744" stroke="#fbbf24" stroke-width="2"/>
+ <text x="88" y="704" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Distributed Training &amp; Advanced Features</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#fef3c7">
+  <rect x="88" y="716" width="40" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="108" y="733" text-anchor="middle">DDP</text>
+  <rect x="138" y="716" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="163" y="733" text-anchor="middle">FSDP2</text>
+  <rect x="198" y="716" width="40" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="218" y="733" text-anchor="middle">TP</text>
+  <rect x="248" y="716" width="40" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="268" y="733" text-anchor="middle">PP</text>
+  <rect x="298" y="716" width="40" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="318" y="733" text-anchor="middle">EP</text>
+  <rect x="348" y="716" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="373" y="733" text-anchor="middle">CP/SP</text>
+  <rect x="408" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="438" y="733" text-anchor="middle">NCCL</text>
+  <rect x="478" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="508" y="733" text-anchor="middle">Gloo</text>
+  <rect x="548" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="578" y="733" text-anchor="middle">ProcessGroup</text>
+  <rect x="618" y="716" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="643" y="733" text-anchor="middle">vmap</text>
+  <rect x="678" y="716" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="713" y="733" text-anchor="middle">FuncTorch</text>
+  <rect x="758" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="788" y="733" text-anchor="middle">AMP</text>
+  <rect x="828" y="716" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="863" y="733" text-anchor="middle">channels_last</text>
+  <rect x="908" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="948" y="733" text-anchor="middle">torch.export</text>
+  <rect x="998" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1028" y="733" text-anchor="middle">AOTInductor</text>
+  <rect x="1068" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1098" y="733" text-anchor="middle">ExecuTorch</text>
+  <rect x="1138" y="716" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1163" y="733" text-anchor="middle">Mobile</text>
+  <rect x="1198" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1228" y="733" text-anchor="middle">Profiler</text>
+  <rect x="1268" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1298" y="733" text-anchor="middle">Kineto</text>
+  <rect x="1338" y="716" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1363" y="733" text-anchor="middle">LoRA</text>
+  <rect x="1398" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1428" y="733" text-anchor="middle">PEFT</text>
+  <rect x="1468" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1498" y="733" text-anchor="middle">DTensor</text>
+  <rect x="1538" y="716" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1573" y="733" text-anchor="middle">DeviceMesh</text>
+  <rect x="1618" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1648" y="733" text-anchor="middle">SymInt</text>
+  <rect x="1688" y="716" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1723" y="733" text-anchor="middle">CustomOp</text>
+  <rect x="1768" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1808" y="733" text-anchor="middle">Composable</text>
+ </g>
+
+ <!-- DETAIL Dispatch Flow -->
+ <rect x="60" y="764" width="880" height="340" rx="14" fill="#0c1524" stroke="#ee4c2c" stroke-width="2.5"/>
+ <text x="88" y="796" fill="#ee4c2c" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Eager Mode: Operator Dispatch Flow</text>
+ <text x="88" y="818" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="11">Example: tensor.add(other) with requires_grad=True on CUDA</text>
+
+ <rect x="88" y="834" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="858" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1: Python a.add(b) - auto-generated C++ binding from native_functions.yaml</text>
+ <line x1="498" y1="870" x2="498" y2="882" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow)"/>
+ <rect x="88" y="884" width="820" height="36" rx="6" fill="#450a0a" stroke="#ee4c2c"/>
+ <text x="498" y="908" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2: at::add(x,y) - Dispatcher reads DispatchKeySet from input tensors</text>
+ <line x1="498" y1="920" x2="498" y2="932" stroke="#ee4c2c" stroke-width="1.5" marker-end="url(#arrow-red)"/>
+ <rect x="88" y="934" width="820" height="36" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="498" y="958" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3: AutogradCUDA key - record Node - AutoNonVariableTypeMode redispatch</text>
+ <line x1="498" y1="970" x2="498" y2="982" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
+ <rect x="88" y="984" width="820" height="36" rx="6" fill="#450a0a" stroke="#ee4c2c"/>
+ <text x="498" y="1008" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4: CUDA key - at::native::add_cuda kernel executes on GPU</text>
+ <line x1="498" y1="1020" x2="498" y2="1032" stroke="#ee4c2c" stroke-width="1.5" marker-end="url(#arrow-red)"/>
+ <rect x="88" y="1034" width="820" height="36" rx="6" fill="#422006" stroke="#fcd34d"/>
+ <text x="498" y="1058" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 5: Return TensorImpl - backward() traverses graph to compute gradients</text>
+
+ <text x="88" y="1092" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Fallthrough keys skipped at static init - BackendSelect routes cross-device ops</text>
+ <text x="88" y="1108" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">CompositeImplicitAutograd ops decompose into simpler ATen primitives automatically</text>
+
+ <!-- DETAIL torch.compile -->
+ <rect x="960" y="764" width="900" height="340" rx="14" fill="#0c1218" stroke="#ee4c2c" stroke-width="2.5"/>
+ <text x="988" y="796" fill="#ee4c2c" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">torch.compile Pipeline (PT2 Compiler Stack)</text>
+ <text x="988" y="818" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="11">Dynamic Python to fused kernels while preserving PyTorch semantics via guards</text>
+
+ <text x="988" y="842" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Compilation Stages</text>
+ <rect x="988" y="852" width="160" height="68" rx="6" fill="#450a0a" stroke="#ee4c2c"/>
+ <text x="1068" y="876" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">TorchDynamo</text>
+ <text x="1068" y="894" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="9">CPython frame hooks</text>
+ <text x="1068" y="910" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="9">Guard on shapes/values</text>
+ <line x1="1148" y1="886" x2="1178" y2="886" stroke="#ee4c2c" stroke-width="2" marker-end="url(#arrow-red)"/>
+ <rect x="1182" y="852" width="160" height="68" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1262" y="876" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">FX Graph</text>
+ <text x="1262" y="894" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">ATen ops as graph nodes</text>
+ <text x="1262" y="910" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">SymInt symbolic shapes</text>
+ <line x1="1342" y1="886" x2="1372" y2="886" stroke="#ee4c2c" stroke-width="2" marker-end="url(#arrow-red)"/>
+ <rect x="1376" y="852" width="160" height="68" rx="6" fill="#450a0a" stroke="#ee4c2c"/>
+ <text x="1456" y="876" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">AOTAutograd</text>
+ <text x="1456" y="894" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="9">Functionalize in-place</text>
+ <text x="1456" y="910" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="9">Split fwd + bwd graphs</text>
+ <line x1="1536" y1="886" x2="1566" y2="886" stroke="#ee4c2c" stroke-width="2" marker-end="url(#arrow-red)"/>
+ <rect x="1570" y="852" width="160" height="68" rx="6" fill="#450a0a" stroke="#ee4c2c"/>
+ <text x="1650" y="876" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">TorchInductor</text>
+ <text x="1650" y="894" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="9">Scheduler fusion</text>
+ <text x="1650" y="910" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="9">Triton/C++ codegen</text>
+ <rect x="1740" y="852" width="108" height="68" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1794" y="876" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Execute</text>
+ <text x="1794" y="894" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">Compiled kernel</text>
+ <text x="1794" y="910" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">Autotuned config</text>
+
+ <text x="988" y="942" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Ecosystem Integration (PyTorch powers)</text>
+ <rect x="988" y="952" width="60" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1018" y="972" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">vLLM</text>
+ <text x="1018" y="988" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">LLM serving</text>
+ <rect x="1060" y="952" width="60" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1090" y="972" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">HF</text>
+ <text x="1090" y="988" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Transformers</text>
+ <rect x="1132" y="952" width="60" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1162" y="972" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">veRL</text>
+ <text x="1162" y="988" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">RL training</text>
+ <rect x="1204" y="952" width="70" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1239" y="972" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Megatron</text>
+ <text x="1239" y="988" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Large-scale</text>
+ <rect x="1286" y="952" width="70" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1321" y="972" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">DeepSpeed</text>
+ <text x="1321" y="988" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">ZeRO/FSDP</text>
+ <rect x="1368" y="952" width="70" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1403" y="972" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Lightning</text>
+ <text x="1403" y="988" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Training loop</text>
+ <rect x="1450" y="952" width="60" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1480" y="972" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">SGLang</text>
+ <text x="1480" y="988" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Inference</text>
+ <rect x="1522" y="952" width="70" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1557" y="972" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">TorchTitan</text>
+ <text x="1557" y="988" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Pretrain</text>
+ <rect x="1604" y="952" width="60" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1634" y="972" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Meta</text>
+ <text x="1634" y="988" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">FAIR/LFA</text>
+ <rect x="1676" y="952" width="80" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1716" y="972" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">PyTorch Fdn</text>
+ <text x="1716" y="988" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Linux Foundation</text>
+ <rect x="1768" y="952" width="80" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1808" y="972" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">2.7+ PT2</text>
+ <text x="1808" y="988" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Default compile</text>
+
+ <text x="988" y="1024" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Deployment Paths</text>
+ <rect x="988" y="1034" width="100" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1038" y="1058" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">Eager mode</text>
+ <rect x="1100" y="1034" width="100" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1150" y="1058" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">torch.compile</text>
+ <rect x="1212" y="1034" width="80" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1252" y="1058" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">TorchScript</text>
+ <rect x="1304" y="1034" width="80" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1344" y="1058" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">torch.export</text>
+ <rect x="1396" y="1034" width="80" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1436" y="1058" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">AOTInductor</text>
+ <rect x="1488" y="1034" width="80" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1528" y="1058" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">ExecuTorch</text>
+ <rect x="1580" y="1034" width="50" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1605" y="1058" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">ONNX</text>
+ <rect x="1642" y="1034" width="50" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1667" y="1058" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">IPEX</text>
+ <rect x="1704" y="1034" width="60" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1734" y="1058" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">libtorch</text>
+ <rect x="1776" y="1034" width="72" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1812" y="1058" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">C++ deploy</text>
+
+ <text x="988" y="1108" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Guard fail - recompile or eager fallback - fx_graph_cache avoids repeat compilation</text>
+
+ <!-- L6 Production -->
+ <rect x="60" y="1124" width="1800" height="72" rx="12" fill="#1a1208" stroke="#ee4c2c" stroke-width="2"/>
+ <text x="88" y="1152" fill="#ee4c2c" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Production &amp; Hardware Ecosystem</text>
+ <text x="960" y="1178" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="13">pytorch/pytorch - CUDA/ROCm/MPS/XPU/TPU - Linux Foundation - Meta + community - research to production</text>
+
+ <!-- footers -->
+ <rect x="60" y="1216" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1236" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Eager path: Python API - Dispatcher - Autograd wrap - backend kernel - dynamic graph on forward</text>
+ <text x="960" y="1254" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Compile path: Dynamo capture - AOTAutograd - Inductor fuse - Triton/C++ kernel - guard cache - execute</text>
+
+ <text x="60" y="1300" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: pytorch/pytorch - ezyang dispatcher blog - native_functions.yaml - PT2 torch.compile docs - PyTorch Foundation</text>
+</svg>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-violet" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#a855f7"/>
+  </marker>
+  <marker id="arrow-purple" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#a78bfa"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">vime Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">LLM RL Post-Training - Megatron train + vLLM rollout + Data Buffer - vllm-project/vime (built on slime)</text>
+
+ <!-- L1 Entry -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#a855f7" stroke-width="2"/>
+ <text x="88" y="124" fill="#a855f7" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Entry Points &amp; Model Support</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="90" height="40" rx="6" fill="#3b0764" stroke="#a855f7"/><text x="133" y="162" text-anchor="middle">train.py</text>
+  <rect x="190" y="136" width="130" height="40" rx="6" fill="#3b0764" stroke="#a855f7"/><text x="255" y="162" text-anchor="middle">arguments.py</text>
+  <rect x="332" y="136" width="150" height="40" rx="6" fill="#3b0764" stroke="#a855f7"/><text x="407" y="162" text-anchor="middle">Megatron args</text>
+  <rect x="494" y="136" width="120" height="40" rx="6" fill="#3b0764" stroke="#a855f7"/><text x="554" y="162" text-anchor="middle">--vllm-*</text>
+  <rect x="626" y="136" width="100" height="40" rx="6" fill="#3b0764" stroke="#a855f7"/><text x="676" y="162" text-anchor="middle">--router-*</text>
+  <rect x="738" y="136" width="110" height="40" rx="6" fill="#3b0764" stroke="#a855f7"/><text x="793" y="162" text-anchor="middle">--vllm-config</text>
+  <rect x="860" y="136" width="80" height="40" rx="6" fill="#3b0764" stroke="#a855f7"/><text x="900" y="162" text-anchor="middle">Qwen3</text>
+  <rect x="952" y="136" width="120" height="40" rx="6" fill="#3b0764" stroke="#a855f7"/><text x="1012" y="162" text-anchor="middle">DeepSeek MoE</text>
+  <rect x="1084" y="136" width="80" height="40" rx="6" fill="#3b0764" stroke="#a855f7"/><text x="1124" y="162" text-anchor="middle">Llama3</text>
+  <rect x="1176" y="136" width="100" height="40" rx="6" fill="#3b0764" stroke="#a855f7"/><text x="1226" y="162" text-anchor="middle">examples/</text>
+  <rect x="1288" y="136" width="120" height="40" rx="6" fill="#3b0764" stroke="#a855f7"/><text x="1348" y="162" text-anchor="middle">vime_plugins</text>
+  <rect x="1420" y="136" width="120" height="40" rx="6" fill="#1a2e05" stroke="#84cc16"/><text x="1480" y="162" text-anchor="middle">slime lineage</text>
+  <rect x="1552" y="136" width="100" height="40" rx="6" fill="#2e1065" stroke="#8b5cf6"/><text x="1602" y="162" text-anchor="middle">vLLM stack</text>
+  <rect x="1664" y="136" width="90" height="40" rx="6" fill="#3b0764" stroke="#a855f7"/><text x="1709" y="162" text-anchor="middle">docs.vllm</text>
+  <rect x="1766" y="136" width="82" height="40" rx="6" fill="#3b0764" stroke="#a855f7"/><text x="1807" y="162" text-anchor="middle">--colocate</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Ray -->
+ <rect x="60" y="216" width="1800" height="96" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2"/>
+ <text x="88" y="244" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Ray Orchestrator (Resource &amp; Execution Model)</text>
+ <rect x="88" y="256" width="200" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="188" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">Ray cluster / .remote()</text>
+ <rect x="300" y="256" width="180" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="390" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">--colocate flag</text>
+ <rect x="492" y="256" width="220" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="602" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">sync vs async (ray.get)</text>
+ <rect x="724" y="256" width="200" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="824" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">exposed train loop</text>
+ <rect x="936" y="256" width="200" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1036" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">--debug-train-only</text>
+ <rect x="1148" y="256" width="210" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1253" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">--debug-rollout-only</text>
+ <rect x="1370" y="256" width="220" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1480" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">actor/rollout GPU pools</text>
+ <rect x="1602" y="256" width="234" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1719" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">multi-hardware via vLLM plugins</text>
+ <line x1="960" y1="312" x2="960" y2="330" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Core Three Modules -->
+ <rect x="60" y="332" width="1800" height="200" rx="12" fill="#0f2744" stroke="#a855f7" stroke-width="2.5"/>
+ <text x="88" y="360" fill="#a855f7" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - Core Three-Module Architecture (slime design + vLLM backend)</text>
+
+ <!-- Data Buffer center -->
+ <rect x="700" y="378" width="520" height="136" rx="12" fill="#3b0764" stroke="#a855f7" stroke-width="2"/>
+ <text x="960" y="408" text-anchor="middle" fill="#f3e8ff" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Data Buffer (Bridge Module)</text>
+ <text x="960" y="432" text-anchor="middle" fill="#d8b4fe" font-family="JetBrains Mono, monospace" font-size="11">Prompt init + custom dataset + rollout_buffer plugins</text>
+ <text x="960" y="452" text-anchor="middle" fill="#d8b4fe" font-family="JetBrains Mono, monospace" font-size="11">Sample storage, filtering, group validation, replay</text>
+ <text x="960" y="472" text-anchor="middle" fill="#d8b4fe" font-family="JetBrains Mono, monospace" font-size="11">Custom generate / reward / rollout-function hooks</text>
+ <text x="960" y="492" text-anchor="middle" fill="#d8b4fe" font-family="JetBrains Mono, monospace" font-size="11">Connects Megatron train reads and vLLM rollout writes</text>
+
+ <!-- Training left -->
+ <rect x="88" y="378" width="580" height="136" rx="12" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="378" y="408" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Training (Megatron-LM)</text>
+ <text x="378" y="432" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">Actor / Critic updates (PPO, GRPO, DAPO, etc.)</text>
+ <text x="378" y="452" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">TP / PP / EP / CP full Megatron parallelism</text>
+ <text x="378" y="472" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">Reads trajectories from Data Buffer</text>
+ <text x="378" y="492" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">Megatron-HF convert + sync weights to vLLM after step</text>
+
+ <!-- Rollout right -->
+ <rect x="1252" y="378" width="580" height="136" rx="12" fill="#2e1065" stroke="#8b5cf6" stroke-width="2"/>
+ <text x="1542" y="408" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Rollout (vLLM + vllm-router)</text>
+ <text x="1542" y="432" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">Server-based vLLM inference (PagedAttention, continuous batch)</text>
+ <text x="1542" y="452" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">vllm-router: consistent_hash LB, multi-engine routing</text>
+ <text x="1542" y="472" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">Generates completions + reward / verifier signals</text>
+ <text x="1542" y="492" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">vime.rollout.vllm_rollout.generate_rollout default entry</text>
+
+ <line x1="668" y1="446" x2="696" y2="446" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrow-purple)"/>
+ <text x="682" y="438" text-anchor="middle" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="9">read</text>
+ <line x1="1220" y1="446" x2="1248" y2="446" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrow-violet)"/>
+ <text x="1234" y="438" text-anchor="middle" fill="#8b5cf6" font-family="JetBrains Mono, monospace" font-size="9">write</text>
+ <line x1="668" y1="470" x2="1248" y2="470" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrow-violet)"/>
+ <text x="960" y="528" text-anchor="middle" fill="#a855f7" font-family="JetBrains Mono, monospace" font-size="10">weight sync: POST /update_weights - IPCWeightTransferEngine (native vLLM, per-model via --vllm-config)</text>
+
+ <line x1="960" y1="532" x2="960" y2="550" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Native Engine -->
+ <rect x="60" y="552" width="1800" height="88" rx="12" fill="#0f2744" stroke="#a78bfa" stroke-width="2"/>
+ <text x="88" y="580" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Native Engine Pass-Through &amp; vLLM Config</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ede9fe">
+  <rect x="88" y="592" width="150" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="163" y="616" text-anchor="middle">Megatron all args</text>
+  <rect x="250" y="592" width="150" height="36" rx="6" fill="#2e1065" stroke="#8b5cf6"/><text x="325" y="616" text-anchor="middle">vLLM EngineArgs</text>
+  <rect x="412" y="592" width="130" height="36" rx="6" fill="#2e1065" stroke="#8b5cf6"/><text x="477" y="616" text-anchor="middle">--vllm-config</text>
+  <rect x="554" y="592" width="120" height="36" rx="6" fill="#2e1065" stroke="#8b5cf6"/><text x="614" y="616" text-anchor="middle">PD disagg</text>
+  <rect x="686" y="592" width="120" height="36" rx="6" fill="#2e1065" stroke="#8b5cf6"/><text x="746" y="616" text-anchor="middle">multi-model</text>
+  <rect x="818" y="592" width="130" height="36" rx="6" fill="#2e1065" stroke="#8b5cf6"/><text x="883" y="616" text-anchor="middle">update_weights</text>
+  <rect x="960" y="592" width="120" height="36" rx="6" fill="#2e1065" stroke="#8b5cf6"/><text x="1020" y="616" text-anchor="middle">FP8 rollout</text>
+  <rect x="1092" y="592" width="110" height="36" rx="6" fill="#2e1065" stroke="#8b5cf6"/><text x="1147" y="616" text-anchor="middle">MoE EP/DP</text>
+  <rect x="1214" y="592" width="130" height="36" rx="6" fill="#2e1065" stroke="#8b5cf6"/><text x="1279" y="616" text-anchor="middle">server_groups</text>
+  <rect x="1356" y="592" width="120" height="36" rx="6" fill="#3b0764" stroke="#a855f7"/><text x="1416" y="616" text-anchor="middle">--router-*</text>
+  <rect x="1488" y="592" width="130" height="36" rx="6" fill="#3b0764" stroke="#a855f7"/><text x="1553" y="616" text-anchor="middle">--vllm-router-*</text>
+  <rect x="1630" y="592" width="110" height="36" rx="6" fill="#3b0764" stroke="#a855f7"/><text x="1685" y="616" text-anchor="middle">IPC handles</text>
+  <rect x="1752" y="592" width="96" height="36" rx="6" fill="#3b0764" stroke="#a855f7"/><text x="1800" y="616" text-anchor="middle">HF ckpt</text>
+ </g>
+
+ <!-- L5 RL Workflows -->
+ <rect x="60" y="652" width="1800" height="72" rx="12" fill="#0f2744" stroke="#fbbf24" stroke-width="2"/>
+ <text x="88" y="680" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - RL &amp; Post-Training Workflows</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#fef3c7">
+  <rect x="88" y="692" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="123" y="709" text-anchor="middle">PPO</text>
+  <rect x="168" y="692" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="203" y="709" text-anchor="middle">GRPO</text>
+  <rect x="248" y="692" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="283" y="709" text-anchor="middle">DAPO</text>
+  <rect x="328" y="692" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="363" y="709" text-anchor="middle">OPD</text>
+  <rect x="408" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="433" y="709" text-anchor="middle">SFT</text>
+  <rect x="468" y="692" width="110" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="523" y="709" text-anchor="middle">Agentic RL</text>
+  <rect x="588" y="692" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="633" y="709" text-anchor="middle">multi-turn</text>
+  <rect x="688" y="692" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="728" y="709" text-anchor="middle">tool call</text>
+  <rect x="778" y="692" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="823" y="709" text-anchor="middle">verifier RM</text>
+  <rect x="878" y="692" width="100" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="928" y="709" text-anchor="middle">fully-async</text>
+  <rect x="988" y="692" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1028" y="709" text-anchor="middle">MoE RL</text>
+  <rect x="1078" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1103" y="709" text-anchor="middle">VLM</text>
+  <rect x="1138" y="692" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1183" y="709" text-anchor="middle">math tasks</text>
+  <rect x="1238" y="692" width="100" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1288" y="709" text-anchor="middle">multi-agent</text>
+  <rect x="1348" y="692" width="110" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1403" y="709" text-anchor="middle">train-infer align</text>
+  <rect x="1468" y="692" width="100" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1518" y="709" text-anchor="middle">mismatch fix</text>
+  <rect x="1578" y="692" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1618" y="709" text-anchor="middle">ref model</text>
+  <rect x="1668" y="692" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1708" y="709" text-anchor="middle">reward m</text>
+  <rect x="1758" y="692" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1803" y="709" text-anchor="middle">frozen sv</text>
+ </g>
+
+ <!-- DETAIL RL Loop -->
+ <rect x="60" y="740" width="880" height="340" rx="14" fill="#0c1524" stroke="#a855f7" stroke-width="2.5"/>
+ <text x="88" y="772" fill="#a855f7" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">RL Training Loop (train.py)</text>
+ <text x="88" y="794" fill="#d8b4fe" font-family="JetBrains Mono, monospace" font-size="11">slime-style explicit dataflow - vLLM-native rollout and weight sync</text>
+
+ <rect x="88" y="810" width="820" height="36" rx="6" fill="#3b0764" stroke="#a855f7"/>
+ <text x="498" y="834" text-anchor="middle" fill="#f3e8ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 0: Load prompts / dataset - init Data Buffer + optional rollout_buffer plugin</text>
+ <line x1="498" y1="846" x2="498" y2="858" stroke="#a855f7" stroke-width="1.5" marker-end="url(#arrow-violet)"/>
+ <rect x="88" y="860" width="820" height="36" rx="6" fill="#2e1065" stroke="#8b5cf6"/>
+ <text x="498" y="884" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1: Rollout - vLLM generate via vllm-router (custom-generate-function optional)</text>
+ <line x1="498" y1="896" x2="498" y2="908" stroke="#8b5cf6" stroke-width="1.5" marker-end="url(#arrow-violet)"/>
+ <rect x="88" y="910" width="820" height="36" rx="6" fill="#422006" stroke="#fcd34d"/>
+ <text x="498" y="934" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2: Score - custom RM / verifier / rule-based reward / tool feedback</text>
+ <line x1="498" y1="946" x2="498" y2="958" stroke="#fcd34d" stroke-width="1.5" marker-end="url(#arrow-violet)"/>
+ <rect x="88" y="960" width="820" height="36" rx="6" fill="#3b0764" stroke="#a855f7"/>
+ <text x="498" y="984" text-anchor="middle" fill="#f3e8ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3: Store - write (prompt, response, logprobs, reward) samples to Data Buffer</text>
+ <line x1="498" y1="996" x2="498" y2="1008" stroke="#a855f7" stroke-width="1.5" marker-end="url(#arrow-violet)"/>
+ <rect x="88" y="1010" width="820" height="36" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="498" y="1034" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4: Train - Megatron actor update from buffer batch (MFU monitored)</text>
+ <line x1="498" y1="1046" x2="498" y2="1058" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
+ <rect x="88" y="1060" width="820" height="36" rx="6" fill="#2e1065" stroke="#8b5cf6"/>
+ <text x="498" y="1084" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 5: Weight sync - POST /update_weights to vLLM (IPC / per-model config) - loop</text>
+
+ <text x="88" y="1108" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">First step: Megatron params synced to vLLM before training - resume without HF ckpt update</text>
+ <text x="88" y="1124" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Colocate: tune --vllm-gpu-memory-utilization (~0.8) - Megatron and vLLM share VRAM</text>
+
+ <!-- DETAIL vLLM Config + Deployment -->
+ <rect x="960" y="740" width="900" height="340" rx="14" fill="#0c1224" stroke="#8b5cf6" stroke-width="2.5"/>
+ <text x="988" y="772" fill="#8b5cf6" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">vLLM Config YAML + Deployment Modes</text>
+ <text x="988" y="794" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">Multi-model serving with per-model routers and selective weight updates</text>
+
+ <text x="988" y="818" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">--vllm-config Server Topology</text>
+ <rect x="988" y="828" width="200" height="68" rx="6" fill="#2e1065" stroke="#8b5cf6"/>
+ <text x="1088" y="852" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">actor model</text>
+ <text x="1088" y="870" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">update_weights: true</text>
+ <text x="1088" y="886" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">own vllm-router</text>
+ <rect x="1200" y="828" width="200" height="68" rx="6" fill="#2e1065" stroke="#8b5cf6"/>
+ <text x="1300" y="852" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">ref / reward model</text>
+ <text x="1300" y="870" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">update_weights: false</text>
+ <text x="1300" y="886" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">served frozen as-is</text>
+ <rect x="1412" y="828" width="200" height="68" rx="6" fill="#2e1065" stroke="#8b5cf6"/>
+ <text x="1512" y="852" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">PD server_groups</text>
+ <text x="1512" y="870" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">prefill / decode / regular</text>
+ <text x="1512" y="886" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">heterogeneous TP per group</text>
+ <rect x="1624" y="828" width="224" height="68" rx="6" fill="#3b0764" stroke="#a855f7"/>
+ <text x="1736" y="852" text-anchor="middle" fill="#f3e8ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">placeholder workers</text>
+ <text x="1736" y="870" text-anchor="middle" fill="#d8b4fe" font-family="JetBrains Mono, monospace" font-size="9">reserve GPU slots for topology</text>
+ <text x="1736" y="886" text-anchor="middle" fill="#d8b4fe" font-family="JetBrains Mono, monospace" font-size="9">EngineArgs overrides per group</text>
+
+ <text x="988" y="916" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">GPU Placement + Customization</text>
+ <rect x="988" y="926" width="180" height="48" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1078" y="946" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Decoupled pools</text>
+ <text x="1078" y="962" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">actor GPUs + rollout GPUs</text>
+ <rect x="1180" y="926" width="180" height="48" rx="6" fill="#3b0764" stroke="#a855f7"/>
+ <text x="1270" y="946" text-anchor="middle" fill="#f3e8ff" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">--colocate</text>
+ <text x="1270" y="962" text-anchor="middle" fill="#d8b4fe" font-family="JetBrains Mono, monospace" font-size="9">shared GPU time-slice</text>
+ <rect x="1372" y="926" width="220" height="48" rx="6" fill="#422006" stroke="#fcd34d"/>
+ <text x="1482" y="946" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">--custom-generate-function-path</text>
+ <text x="1482" y="962" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">agent loops via vLLM HTTP API</text>
+ <rect x="1604" y="926" width="244" height="48" rx="6" fill="#422006" stroke="#fcd34d"/>
+ <text x="1726" y="946" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">--custom-rm-path / rollout-function-path</text>
+ <text x="1726" y="962" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">reward + multi-agent orchestration</text>
+
+ <text x="988" y="996" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Ecosystem Position</text>
+ <rect x="988" y="1006" width="70" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1023" y="1030" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">slime</text>
+ <rect x="1070" y="1006" width="70" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1105" y="1030" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">vLLM</text>
+ <rect x="1152" y="1006" width="80" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1192" y="1030" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">Megatron</text>
+ <rect x="1244" y="1006" width="80" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1284" y="1030" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">vllm-router</text>
+ <rect x="1336" y="1006" width="60" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1366" y="1030" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">Ray</text>
+ <rect x="1408" y="1006" width="60" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1438" y="1030" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">TPU</text>
+ <rect x="1480" y="1006" width="60" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1510" y="1030" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">CUDA</text>
+ <rect x="1552" y="1006" width="60" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1582" y="1030" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">ROCm</text>
+ <rect x="1624" y="1006" width="70" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1659" y="1030" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">AReaL</text>
+ <rect x="1706" y="1006" width="60" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1736" y="1030" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">veRL</text>
+ <rect x="1778" y="1006" width="70" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1813" y="1030" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">OpenXLA</text>
+
+ <text x="988" y="1068" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">vime = slime train/data design + vLLM inference stack - stable train-infer alignment in vLLM ecosystem</text>
+ <text x="988" y="1084" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">dp_size = rollout-num-gpus / rollout-num-gpus-per-engine (router manages engines)</text>
+
+ <!-- L6 Production -->
+ <rect x="60" y="1100" width="1800" height="72" rx="12" fill="#1a1208" stroke="#a855f7" stroke-width="2"/>
+ <text x="88" y="1128" fill="#a855f7" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Production &amp; Roadmap</text>
+ <text x="960" y="1154" text-anchor="middle" fill="#d8b4fe" font-family="JetBrains Mono, monospace" font-size="13">vllm-project/vime - multi-node MoE RL - fully-async - Agentic RL - multi-hardware via vLLM plugins</text>
+
+ <!-- footers -->
+ <rect x="60" y="1192" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1212" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Init path: Ray cluster - Megatron train workers + vLLM engines + vllm-router - init Data Buffer - load ckpt</text>
+ <text x="960" y="1230" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Step path: vLLM rollout - reward - buffer store - Megatron train - /update_weights sync - metrics - repeat</text>
+
+ <text x="60" y="1276" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: vllm-project/vime - vllm.ai blog 2026-06-09 - docs.vllm.ai/projects/vime - slime/THUDM design lineage</text>
+</svg>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-green" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#76b900"/>
+  </marker>
+  <marker id="arrow-teal" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#14b8a6"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">cuTile Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">NVIDIA CUDA Tile - cuTile Python + CUDA Tile C++ - Tile IR Virtual ISA - CUDA 13.1+</text>
+
+ <!-- L1 Applications -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#76b900" stroke-width="2"/>
+ <text x="88" y="124" fill="#76b900" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Applications + Integration (tile-based AI/ML kernels - TileGym examples)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="60" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="118" y="162" text-anchor="middle">GEMM</text>
+  <rect x="160" y="136" width="80" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="200" y="162" text-anchor="middle">vec_add</text>
+  <rect x="252" y="136" width="80" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="292" y="162" text-anchor="middle">softmax</text>
+  <rect x="344" y="136" width="80" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="384" y="162" text-anchor="middle">layer_norm</text>
+  <rect x="436" y="136" width="80" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="476" y="162" text-anchor="middle">attention</text>
+  <rect x="528" y="136" width="70" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="563" y="162" text-anchor="middle">TileGym</text>
+  <rect x="610" y="136" width="70" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="645" y="162" text-anchor="middle">Llama 3</text>
+  <rect x="692" y="136" width="80" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="732" y="162" text-anchor="middle">DeepSeek V2</text>
+  <rect x="784" y="136" width="60" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="814" y="162" text-anchor="middle">PyTorch</text>
+  <rect x="856" y="136" width="50" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="881" y="162" text-anchor="middle">CuPy</text>
+  <rect x="918" y="136" width="60" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="948" y="162" text-anchor="middle">DLPack</text>
+  <rect x="990" y="136" width="80" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1030" y="162" text-anchor="middle">pip cuda-tile</text>
+  <rect x="1082" y="136" width="60" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1112" y="162" text-anchor="middle">CTK 13.1</text>
+  <rect x="1154" y="136" width="60" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1184" y="162" text-anchor="middle">CTK 13.3</text>
+  <rect x="1226" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1261" y="162" text-anchor="middle">fused attn</text>
+  <rect x="1308" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1343" y="162" text-anchor="middle">data-par</text>
+  <rect x="1390" y="136" width="60" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="1420" y="162" text-anchor="middle">NVIDIA</text>
+  <rect x="1462" y="136" width="80" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="1502" y="162" text-anchor="middle">TensorCore</text>
+  <rect x="1554" y="136" width="70" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1589" y="162" text-anchor="middle">Nsight</text>
+  <rect x="1636" y="136" width="80" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1676" y="162" text-anchor="middle">Driver R580</text>
+  <rect x="1728" y="136" width="120" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1788" y="162" text-anchor="middle">CUDA Array IF</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Dual Frontends -->
+ <rect x="60" y="216" width="1800" height="120" rx="12" fill="#0f2744" stroke="#76b900" stroke-width="2"/>
+ <text x="88" y="244" fill="#76b900" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Dual Language Frontends (shared Tile IR backend - complementary to SIMT CUDA path)</text>
+ <rect x="88" y="258" width="420" height="64" rx="10" fill="#1a2e05" stroke="#76b900" stroke-width="2"/>
+ <text x="298" y="282" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">cuTile Python (cuda.tile)</text>
+ <text x="298" y="300" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">import cuda.tile as ct - Python 3.10+</text>
+ <text x="298" y="314" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">First language - CUDA 13.1 - github NVIDIA/cutile-python</text>
+ <rect x="528" y="258" width="420" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="738" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">CUDA Tile C++ (cuda::tiles)</text>
+ <text x="738" y="300" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">__tile_global__ / __tile__ - ct::tile - CUDA 13.3+</text>
+ <text x="738" y="314" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Triple-chevron launch grid, 1 - integrate C++ codebases</text>
+ <rect x="968" y="258" width="420" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1178" y="282" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Tile Programming Model</text>
+ <text x="1178" y="300" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Grid of tile blocks - 1 logical thread per block</text>
+ <text x="1178" y="314" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Compiler maps intra-block parallelism to HW threads</text>
+ <rect x="1408" y="258" width="420" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="1618" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">vs SIMT CUDA</text>
+ <text x="1618" y="300" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Not either/or - tile path coexists with SIMT/PTX</text>
+ <text x="1618" y="314" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Tile IR is to tiles what PTX is to SIMT threads</text>
+ <line x1="960" y1="336" x2="960" y2="354" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 DSL API -->
+ <rect x="60" y="356" width="1800" height="88" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2"/>
+ <text x="88" y="384" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - Kernel API + Tile Primitives (compile-time tile shapes - value-semantics tiles)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0f2fe">
+  <rect x="88" y="396" width="70" height="32" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="123" y="418" text-anchor="middle">@ct.kernel</text>
+  <rect x="170" y="396" width="70" height="32" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="205" y="418" text-anchor="middle">ct.launch</text>
+  <rect x="252" y="396" width="50" height="32" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="277" y="418" text-anchor="middle">ct.bid</text>
+  <rect x="314" y="396" width="60" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="344" y="418" text-anchor="middle">ct.load</text>
+  <rect x="386" y="396" width="60" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="416" y="418" text-anchor="middle">ct.store</text>
+  <rect x="458" y="396" width="70" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="493" y="418" text-anchor="middle">tiled_view</text>
+  <rect x="540" y="396" width="50" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="565" y="418" text-anchor="middle">ct.mma</text>
+  <rect x="602" y="396" width="60" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="632" y="418" text-anchor="middle">matmul</text>
+  <rect x="674" y="396" width="60" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="704" y="418" text-anchor="middle">reduce</text>
+  <rect x="746" y="396" width="60" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="776" y="418" text-anchor="middle">gather</text>
+  <rect x="818" y="396" width="60" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="848" y="418" text-anchor="middle">scatter</text>
+  <rect x="890" y="396" width="60" height="32" rx="6" fill="#431407" stroke="#fb923c"/><text x="920" y="418" text-anchor="middle">ct.zeros</text>
+  <rect x="962" y="396" width="60" height="32" rx="6" fill="#431407" stroke="#fb923c"/><text x="992" y="418" text-anchor="middle">transpose</text>
+  <rect x="1034" y="396" width="50" height="32" rx="6" fill="#431407" stroke="#fb923c"/><text x="1059" y="418" text-anchor="middle">atomic</text>
+  <rect x="1096" y="396" width="70" height="32" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1131" y="418" text-anchor="middle">Constant</text>
+  <rect x="1178" y="396" width="60" height="32" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1208" y="418" text-anchor="middle">ct.cdiv</text>
+  <rect x="1250" y="396" width="80" height="32" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1290" y="418" text-anchor="middle">partition_view</text>
+  <rect x="1342" y="396" width="70" height="32" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1377" y="418" text-anchor="middle">tensor_span</text>
+  <rect x="1424" y="396" width="80" height="32" rx="6" fill="#431407" stroke="#fb923c"/><text x="1464" y="418" text-anchor="middle">pow2 shape</text>
+  <rect x="1516" y="396" width="80" height="32" rx="6" fill="#431407" stroke="#fb923c"/><text x="1556" y="418" text-anchor="middle">value tile</text>
+  <rect x="1608" y="396" width="80" height="32" rx="6" fill="#431407" stroke="#fb923c"/><text x="1648" y="418" text-anchor="middle">PaddingMode</text>
+  <rect x="1700" y="396" width="148" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1774" y="418" text-anchor="middle">no tile alloc/free</text>
+ </g>
+ <line x1="960" y1="444" x2="960" y2="462" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Tile IR -->
+ <rect x="60" y="464" width="1800" height="200" rx="12" fill="#0f2744" stroke="#22d3ee" stroke-width="2.5"/>
+ <text x="88" y="492" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - CUDA Tile IR (portable tile virtual ISA - foundation of CUDA Tile programming model)</text>
+
+ <rect x="88" y="508" width="420" height="136" rx="12" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="298" y="536" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Tile IR Abstract Machine</text>
+ <text x="298" y="560" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Models GPU as tile processor not SIMT threads</text>
+ <text x="298" y="578" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Each logical thread = one tile block</text>
+ <text x="298" y="596" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Operates on tile fragments of tensors</text>
+ <text x="298" y="614" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Versioned spec + portable bytecode</text>
+ <text x="298" y="632" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Interops with CUDA C++ and PTX</text>
+
+ <rect x="528" y="508" width="420" height="136" rx="12" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="738" y="536" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Compiler Mapping Responsibilities</text>
+ <text x="738" y="560" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Map tiles to threads within each block</text>
+ <text x="738" y="578" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Schedule memory hierarchy usage</text>
+ <text x="738" y="596" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Select Tensor Core instructions (mma)</text>
+ <text x="738" y="614" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Lower tile-space loads to TMA when supported</text>
+ <text x="738" y="632" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Cross-generation GPU portability</text>
+
+ <rect x="968" y="508" width="420" height="136" rx="12" fill="#1a2e05" stroke="#76b900" stroke-width="2"/>
+ <text x="1178" y="536" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">MLIR Dialect + Ecosystem</text>
+ <text x="1178" y="560" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">MLIR dialect for compilers targeting Tile IR</text>
+ <text x="1178" y="578" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">Enable third-party DSLs and frameworks</text>
+ <text x="1178" y="596" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">Helion TileIR backend can bridge here</text>
+ <text x="1178" y="614" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">Tile IR GitHub spec + documentation</text>
+ <text x="1178" y="632" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">Target for hardware-specific compilers</text>
+
+ <rect x="1408" y="508" width="420" height="136" rx="12" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="1618" y="536" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Memory Model: Arrays vs Tiles</text>
+ <text x="1618" y="560" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Array: global memory - strided - all blocks</text>
+ <text x="1618" y="578" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Tile: block-local - compile-time shape/dtype</text>
+ <text x="1618" y="596" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Tile-space index via partition_view</text>
+ <text x="1618" y="614" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Gather/scatter for irregular access</text>
+ <text x="1618" y="632" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">OOB: padding on load - discard on store</text>
+
+ <line x1="960" y1="644" x2="960" y2="662" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L5 tileiras -->
+ <rect x="60" y="664" width="1800" height="120" rx="12" fill="#0f2744" stroke="#76b900" stroke-width="2"/>
+ <text x="88" y="692" fill="#76b900" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - tileiras Compiler + JIT Specialization (per shape/dtype config - optimization hints)</text>
+ <rect x="88" y="706" width="340" height="64" rx="10" fill="#1a2e05" stroke="#76b900" stroke-width="2"/>
+ <text x="258" y="730" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">tileiras (Tile IR Compiler)</text>
+ <text x="258" y="748" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">CUDA driver + standalone CTK tool</text>
+ <text x="258" y="762" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">pip cuda-tile[tileiras] or system CTK 13.1+</text>
+ <rect x="448" y="706" width="340" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="618" y="730" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">JIT Cache + Specialization</text>
+ <text x="618" y="748" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Specialize per tile shape + dtype + constants</text>
+ <text x="618" y="762" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">ct.Constant[T] embeds literals at compile time</text>
+ <rect x="808" y="706" width="340" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="978" y="730" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Optimization Hints (@ct.kernel)</text>
+ <text x="978" y="748" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">ctas_per_cga - target_ctas_per_sm</text>
+ <text x="978" y="762" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">dram_traffic - allow_tma - replace_hints autotune</text>
+ <rect x="1168" y="706" width="340" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1338" y="730" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Performance Annotations</text>
+ <text x="1338" y="748" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">__restrict__ - assume_aligned(ptr, 16)</text>
+ <text x="1338" y="762" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Non-overlapping arrays enable better codegen</text>
+ <rect x="1528" y="706" width="300" height="64" rx="10" fill="#0c2d2d" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="1678" y="730" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Tile IR Optimizer</text>
+ <text x="1678" y="748" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Structured ct.irange loop bounds</text>
+ <text x="1678" y="762" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Hints guide TMA + occupancy + prefetch</text>
+ <line x1="960" y1="784" x2="960" y2="802" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L6 Lowering Runtime -->
+ <rect x="60" y="804" width="1800" height="120" rx="12" fill="#0f2744" stroke="#14b8a6" stroke-width="2"/>
+ <text x="88" y="832" fill="#14b8a6" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Lowering + CUDA Runtime (Tile IR to PTX to SASS - launch on CUDA stream)</text>
+ <rect x="88" y="846" width="340" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="258" y="870" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Tile IR to PTX</text>
+ <text x="258" y="888" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">tileiras emits PTX tile instructions</text>
+ <text x="258" y="902" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Parallel path alongside SIMT PTX in CTK</text>
+ <rect x="448" y="846" width="340" height="64" rx="10" fill="#1a2e05" stroke="#76b900" stroke-width="2"/>
+ <text x="618" y="870" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">ptxas + libnvvm (nvcc toolchain)</text>
+ <text x="618" y="888" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">PTX to SASS machine code for target SM</text>
+ <text x="618" y="902" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">nvidia-cuda-nvcc / nvidia-nvvm pip packages</text>
+ <rect x="808" y="846" width="340" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="978" y="870" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Kernel Launch</text>
+ <text x="978" y="888" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Python: ct.launch(stream, grid, kernel, args)</text>
+ <text x="978" y="902" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">C++: kernel grid, 1 or cudaLaunchKernelEx</text>
+ <rect x="1168" y="846" width="340" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="1338" y="870" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">CUDA Driver + Runtime</text>
+ <text x="1338" y="888" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Driver R580+ (R590 for tile devtools)</text>
+ <text x="1338" y="902" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Nsight Compute profiles cuTile like SIMT</text>
+ <rect x="1528" y="846" width="300" height="64" rx="10" fill="#0c2d2d" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="1678" y="870" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Host Array Interop</text>
+ <text x="1678" y="888" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">PyTorch tensor / CuPy via DLPack</text>
+ <text x="1678" y="902" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">CUDA Array Interface for device arrays</text>
+ <line x1="960" y1="924" x2="960" y2="942" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L7 Hardware -->
+ <rect x="60" y="944" width="1800" height="56" rx="12" fill="#0f2744" stroke="#22d3ee" stroke-width="2"/>
+ <text x="88" y="972" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L7 - Target Hardware (sm80+ Ampere and newer - Tensor Cores + TMA auto-selected)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0f2fe">
+  <rect x="88" y="980" width="50" height="24" rx="5" fill="#1a2e05" stroke="#76b900"/><text x="113" y="997" text-anchor="middle">A100</text>
+  <rect x="148" y="980" width="50" height="24" rx="5" fill="#1a2e05" stroke="#76b900"/><text x="173" y="997" text-anchor="middle">L40S</text>
+  <rect x="208" y="980" width="50" height="24" rx="5" fill="#1a2e05" stroke="#76b900"/><text x="233" y="997" text-anchor="middle">H100</text>
+  <rect x="268" y="980" width="50" height="24" rx="5" fill="#1a2e05" stroke="#76b900"/><text x="293" y="997" text-anchor="middle">B200</text>
+  <rect x="328" y="980" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="353" y="997" text-anchor="middle">sm80</text>
+  <rect x="388" y="980" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="413" y="997" text-anchor="middle">sm89</text>
+  <rect x="448" y="980" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="473" y="997" text-anchor="middle">sm90</text>
+  <rect x="508" y="980" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="533" y="997" text-anchor="middle">sm100</text>
+  <rect x="568" y="980" width="60" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="598" y="997" text-anchor="middle">TensorCore</text>
+  <rect x="638" y="980" width="40" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="658" y="997" text-anchor="middle">TMA</text>
+  <rect x="688" y="980" width="40" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="708" y="997" text-anchor="middle">mma</text>
+  <rect x="738" y="980" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="763" y="997" text-anchor="middle">WGMMA</text>
+  <rect x="798" y="980" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="823" y="997" text-anchor="middle">FP16</text>
+  <rect x="858" y="980" width="40" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="878" y="997" text-anchor="middle">BF16</text>
+  <rect x="908" y="980" width="40" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="928" y="997" text-anchor="middle">FP32</text>
+  <rect x="958" y="980" width="40" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="978" y="997" text-anchor="middle">FP8</text>
+  <rect x="1008" y="980" width="60" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1038" y="997" text-anchor="middle">cc 8.x+</text>
+  <rect x="1078" y="980" width="60" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1108" y="997" text-anchor="middle">cc 10.x</text>
+  <rect x="1148" y="980" width="60" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1178" y="997" text-anchor="middle">cc 11.x</text>
+  <rect x="1218" y="980" width="60" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="1248" y="997" text-anchor="middle">portable</text>
+  <rect x="1288" y="980" width="70" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="1323" y="997" text-anchor="middle">future HW</text>
+  <rect x="1368" y="980" width="50" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="1393" y="997" text-anchor="middle">PTX</text>
+  <rect x="1428" y="980" width="50" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="1453" y="997" text-anchor="middle">SASS</text>
+  <rect x="1488" y="980" width="60" height="24" rx="5" fill="#1a2e05" stroke="#76b900"/><text x="1518" y="997" text-anchor="middle">SIMT co</text>
+  <rect x="1558" y="980" width="70" height="24" rx="5" fill="#1a2e05" stroke="#76b900"/><text x="1593" y="997" text-anchor="middle">tile path</text>
+  <rect x="1638" y="980" width="80" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1678" y="997" text-anchor="middle">auto TMA</text>
+  <rect x="1728" y="980" width="120" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1788" y="997" text-anchor="middle">auto TensorCore</text>
+ </g>
+
+ <!-- DETAIL Pipeline -->
+ <rect x="60" y="1016" width="880" height="340" rx="14" fill="#0c1524" stroke="#76b900" stroke-width="2.5"/>
+ <text x="88" y="1048" fill="#76b900" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Five-Stage Compile + Launch Pipeline</text>
+ <text x="88" y="1070" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="11">@ct.kernel Python/C++ - Tile IR - tileiras optimize - PTX - SASS - ct.launch on stream</text>
+
+ <rect x="88" y="1086" width="820" height="36" rx="6" fill="#1a2e05" stroke="#76b900"/>
+ <text x="498" y="1110" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stage 1 Author: @ct.kernel body - ct.load/store/mma - ct.bid tile-space indexing</text>
+ <line x1="498" y1="1122" x2="498" y2="1134" stroke="#76b900" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+ <rect x="88" y="1136" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="1160" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stage 2 Lower: Python/C++ frontend emits Tile IR bytecode (JIT per shape/dtype/constants)</text>
+ <line x1="498" y1="1172" x2="498" y2="1184" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow)"/>
+ <rect x="88" y="1186" width="820" height="36" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="498" y="1210" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stage 3 Optimize: tileiras applies hints - TMA lowering - occupancy - thread mapping</text>
+ <line x1="498" y1="1222" x2="498" y2="1234" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow)"/>
+ <rect x="88" y="1236" width="820" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="498" y="1260" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stage 4 Codegen: Tile IR to PTX via tileiras - ptxas/libnvvm to target SASS</text>
+ <line x1="498" y1="1272" x2="498" y2="1284" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+ <rect x="88" y="1286" width="820" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="498" y="1310" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stage 5 Launch: ct.launch(stream, grid, kernel, args) - Tensor Core/TMA on sm80+ GPU</text>
+
+ <text x="88" y="1344" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Example GEMM: partition_view - K-loop ct.mma(a,b,acc) FP32 acc - store_masked edge tiles</text>
+
+ <!-- DETAIL Position -->
+ <rect x="960" y="1016" width="900" height="340" rx="14" fill="#0c1224" stroke="#76b900" stroke-width="2.5"/>
+ <text x="988" y="1048" fill="#76b900" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Design Position: Official NVIDIA Tile Path in CUDA Stack</text>
+ <text x="988" y="1070" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="11">Tile IR virtual ISA parallel to PTX - compiler owns thread/mem/TensorCore mapping</text>
+
+ <text x="988" y="1094" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Spectrum Comparison</text>
+ <rect x="988" y="1104" width="200" height="68" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="1088" y="1128" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">CUDA SIMT</text>
+ <text x="1088" y="1146" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">threadIdx/blockIdx - manual mem</text>
+ <text x="1088" y="1162" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">PTX portability - full control</text>
+ <rect x="1200" y="1104" width="200" height="68" rx="6" fill="#0c2d2d" stroke="#14b8a6"/>
+ <text x="1300" y="1128" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Triton</text>
+ <text x="1300" y="1146" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Block-level tl.load/store/dot</text>
+ <text x="1300" y="1162" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Open-source - TTIR backend</text>
+ <rect x="1412" y="1104" width="200" height="68" rx="6" fill="#241a3d" stroke="#6366f1"/>
+ <text x="1512" y="1128" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">TileLang / Tilus</text>
+ <text x="1512" y="1146" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">Research DSLs - explicit layout</text>
+ <text x="1512" y="1162" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">TVM/Hidet backends - autotune</text>
+ <rect x="1624" y="1104" width="224" height="68" rx="6" fill="#1a2e05" stroke="#76b900"/>
+ <text x="1736" y="1128" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">cuTile (NVIDIA)</text>
+ <text x="1736" y="1146" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">Official Tile IR + tileiras in CTK</text>
+ <text x="1736" y="1162" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">Auto TMA/TensorCore - sm80+ native</text>
+
+ <text x="988" y="1190" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Key Architectural Decisions</text>
+ <rect x="988" y="1200" width="130" height="48" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1053" y="1222" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Tile IR ISA</text>
+ <text x="1053" y="1238" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">Virtual ISA like PTX for tiles</text>
+ <rect x="1130" y="1200" width="130" height="48" rx="6" fill="#1a2e05" stroke="#76b900"/>
+ <text x="1195" y="1222" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">1 logical thread</text>
+ <text x="1195" y="1238" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">Per tile block - compiler parallelizes</text>
+ <rect x="1272" y="1200" width="130" height="48" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1337" y="1222" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Compile-time tiles</text>
+ <text x="1337" y="1238" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">Pow2 dims - JIT specialize</text>
+ <rect x="1414" y="1200" width="130" height="48" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="1479" y="1222" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Dual frontend</text>
+ <text x="1479" y="1238" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Python + C++ same backend</text>
+ <rect x="1556" y="1200" width="130" height="48" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="1621" y="1222" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Hidden HW detail</text>
+ <text x="1621" y="1238" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">No manual warp/shared mgmt</text>
+ <rect x="1698" y="1200" width="150" height="48" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1773" y="1222" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">SIMT coexistence</text>
+ <text x="1773" y="1238" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">Parallel path in CUDA stack</text>
+
+ <text x="988" y="1268" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">CUDA Software Stack (Figure 2 from NVIDIA blog)</text>
+ <rect x="988" y="1278" width="860" height="48" rx="6" fill="#1a1208" stroke="#76b900"/>
+ <text x="1418" y="1302" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="12">App - cuTile Python/C++ - Tile IR - tileiras - PTX - Driver (parallel to CUDA C++ SIMT path)</text>
+ <text x="1418" y="1318" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">MLIR dialect enables future DSLs - Helion TileIR - custom frameworks targeting Tile IR</text>
+
+ <!-- footer bar -->
+ <rect x="60" y="1370" width="1800" height="72" rx="12" fill="#1a1208" stroke="#76b900" stroke-width="2"/>
+ <text x="88" y="1398" fill="#76b900" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">Design Position (NVIDIA official tile programming model - raise abstraction above SIMT for Tensor Core workloads)</text>
+ <text x="960" y="1424" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="13">Write tile ops not threads - Tile IR portability - tileiras maps to TMA/TensorCore - coexists with PTX SIMT</text>
+
+ <!-- footers -->
+ <rect x="60" y="1458" width="1800" height="36" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1480" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10">Init: pip install cuda-tile[tileiras] - @ct.kernel - ct.launch - replace_hints for autotune - profile with Nsight Compute</text>
+
+ <text x="60" y="1510" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: developer.nvidia.com/cuda/tile - docs.nvidia.com/cuda/cutile-python - docs.nvidia.com/cuda/tile-ir - CUDA 13.1/13.3</text>
+</svg>

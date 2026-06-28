@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-yellow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#facc15"/>
+  </marker>
+  <marker id="arrow-cyan" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#22d3ee"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">Flash-RL Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">Fast RL with Quantized Rollouts - Plug-in Patcher for vLLM + VeRL Training Loop</text>
+
+ <!-- L1 Entry -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#facc15" stroke-width="2"/>
+ <text x="88" y="124" fill="#facc15" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Entry Points &amp; Configuration</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="130" height="40" rx="6" fill="#422006" stroke="#facc15"/><text x="153" y="162" text-anchor="middle">flash-llm-rl</text>
+  <rect x="230" y="136" width="150" height="40" rx="6" fill="#422006" stroke="#facc15"/><text x="305" y="162" text-anchor="middle">FLASHRL_CONFIG</text>
+  <rect x="392" y="136" width="120" height="40" rx="6" fill="#422006" stroke="#facc15"/><text x="452" y="162" text-anchor="middle">flashrl profile</text>
+  <rect x="524" y="136" width="120" height="40" rx="6" fill="#422006" stroke="#facc15"/><text x="584" y="162" text-anchor="middle">flashrl setup</text>
+  <rect x="656" y="136" width="110" height="40" rx="6" fill="#422006" stroke="#facc15"/><text x="711" y="162" text-anchor="middle">flashrl cleanup</text>
+  <rect x="778" y="136" width="90" height="40" rx="6" fill="#422006" stroke="#facc15"/><text x="823" y="162" text-anchor="middle">import flash_rl</text>
+  <rect x="880" y="136" width="130" height="40" rx="6" fill="#422006" stroke="#facc15"/><text x="945" y="162" text-anchor="middle">recipe/flash_rl</text>
+  <rect x="1022" y="136" width="120" height="40" rx="6" fill="#422006" stroke="#facc15"/><text x="1082" y="162" text-anchor="middle">Qwen2.5-32B</text>
+  <rect x="1154" y="136" width="130" height="40" rx="6" fill="#422006" stroke="#facc15"/><text x="1219" y="162" text-anchor="middle">Qwen2.5-0.5B</text>
+  <rect x="1296" y="136" width="70" height="40" rx="6" fill="#422006" stroke="#facc15"/><text x="1331" y="162" text-anchor="middle">bf16</text>
+  <rect x="1378" y="136" width="60" height="40" rx="6" fill="#422006" stroke="#facc15"/><text x="1408" y="162" text-anchor="middle">fp8</text>
+  <rect x="1450" y="136" width="60" height="40" rx="6" fill="#422006" stroke="#facc15"/><text x="1480" y="162" text-anchor="middle">int8</text>
+  <rect x="1522" y="136" width="170" height="40" rx="6" fill="#422006" stroke="#facc15"/><text x="1607" y="162" text-anchor="middle">.flashrl_config.yaml</text>
+  <rect x="1704" y="136" width="132" height="40" rx="6" fill="#422006" stroke="#facc15"/><text x="1770" y="162" text-anchor="middle">runtime_env.yaml</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 RL Framework Integration -->
+ <rect x="60" y="216" width="1800" height="120" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2"/>
+ <text x="88" y="244" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - RL Training Framework Integration</text>
+ <rect x="88" y="258" width="300" height="60" rx="8" fill="#431407" stroke="#facc15"/>
+ <text x="238" y="282" text-anchor="middle" fill="#fef9c3" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">VeRL (primary)</text>
+ <text x="238" y="302" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">RayPPOTrainer - flash-rl branch recipe</text>
+ <rect x="404" y="258" width="260" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="534" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">SkyRL integration</text>
+ <text x="534" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Custom vLLM wheel via --flashrl extra</text>
+ <rect x="680" y="258" width="260" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="810" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">ActorRolloutRefWorker</text>
+ <text x="810" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">generate_sequences + compute_log_prob</text>
+ <rect x="956" y="258" width="280" height="60" rx="8" fill="#422006" stroke="#fcd34d"/>
+ <text x="1096" y="282" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Truncated Importance Sampling</text>
+ <text x="1096" y="302" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Token-level IS ratio corrects rollout/train mismatch</text>
+ <rect x="1252" y="258" width="280" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1392" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Reward + Advantage</text>
+ <text x="1392" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">PPO / GRPO / DAPO control loop unchanged</text>
+ <rect x="1548" y="258" width="290" height="60" rx="8" fill="#1a1208" stroke="#64748b"/>
+ <text x="1693" y="282" text-anchor="middle" fill="#cbd5e1" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">OpenRLHF (roadmap)</text>
+ <text x="1693" y="302" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10">Other RL toolkits planned</text>
+ <line x1="960" y1="336" x2="960" y2="354" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 FlashRL Core -->
+ <rect x="60" y="356" width="1800" height="200" rx="12" fill="#0f2744" stroke="#facc15" stroke-width="2.5"/>
+ <text x="88" y="384" fill="#facc15" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - FlashRL Core (Three Major Functionalities)</text>
+
+ <!-- Profiling -->
+ <rect x="88" y="400" width="560" height="136" rx="12" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="368" y="428" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">1. Profiling (optional for int8)</text>
+ <text x="368" y="450" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">flashrl profile -m bf16_model -qm quantized_model</text>
+ <text x="368" y="468" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Compare bf16 vs w8a8/fp8 to derive online quant params</text>
+ <text x="368" y="486" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Output: profile.pt per model (e.g. profile.32b.pt)</text>
+ <text x="368" y="504" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Not needed for native fp8 or bf16 logprob-only path</text>
+ <text x="368" y="522" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">llm-compressor w8a8 + RedHatAI HF quantized models</text>
+
+ <!-- Configure Helper -->
+ <rect x="670" y="400" width="560" height="136" rx="12" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="950" y="428" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">2. Configure Helper (optional for int8)</text>
+ <text x="950" y="450" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">flashrl setup -m quant_model -p profile.pt --fn int8</text>
+ <text x="950" y="468" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Generates .flashrl_config.yaml for patcher runtime</text>
+ <text x="950" y="486" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">flashrl setup -a --fn bf16: append hybrid DP config</text>
+ <text x="950" y="504" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Mixed bf16/int8 rollout across DP worker ratio</text>
+ <text x="950" y="522" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">HF uploaded profiles: model/flashrl_config.yaml</text>
+
+ <!-- Patcher -->
+ <rect x="1252" y="400" width="580" height="136" rx="12" fill="#422006" stroke="#facc15" stroke-width="2"/>
+ <text x="1542" y="428" text-anchor="middle" fill="#fef9c3" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">3. Patcher (runtime plug-in)</text>
+ <text x="1542" y="450" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Auto-inject on pip install - or manual import flash_rl</text>
+ <text x="1542" y="468" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Reads FLASHRL_CONFIG: bf16 | fp8 | yaml path | HF profile</text>
+ <text x="1542" y="486" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Patches vLLM: online quant weight load + accurate logprob</text>
+ <text x="1542" y="504" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">FLASHRL_LMHEAD_FP32 - FLASHRL_LOGGING_LEVEL - TEST_RELOAD</text>
+ <text x="1542" y="522" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Layer-by-layer weight sync from FSDP policy to vLLM</text>
+
+ <text x="960" y="548" text-anchor="middle" fill="#facc15" font-family="JetBrains Mono, monospace" font-size="10">Setup flow: profile (int8) - setup yaml - export FLASHRL_CONFIG - pip install patches vLLM at import</text>
+ <line x1="960" y1="556" x2="960" y2="574" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Engines -->
+ <rect x="60" y="576" width="1800" height="88" rx="12" fill="#0f2744" stroke="#a78bfa" stroke-width="2"/>
+ <text x="88" y="604" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Training &amp; Inference Engine Backends</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ede9fe">
+  <text x="88" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Training (BF16):</text>
+  <rect x="200" y="612" width="90" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="245" y="636" text-anchor="middle">FSDP</text>
+  <rect x="302" y="612" width="110" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="357" y="636" text-anchor="middle">VeRL actor</text>
+  <rect x="424" y="612" width="120" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="484" y="636" text-anchor="middle">Policy model</text>
+  <rect x="556" y="612" width="130" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="621" y="636" text-anchor="middle">Gradient compute</text>
+  <text x="710" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Rollout (patched vLLM):</text>
+  <rect x="840" y="612" width="80" height="36" rx="6" fill="#0c2d2d" stroke="#5eead4"/><text x="880" y="636" text-anchor="middle">vLLM</text>
+  <rect x="932" y="612" width="70" height="36" rx="6" fill="#422006" stroke="#facc15"/><text x="967" y="636" text-anchor="middle">INT8</text>
+  <rect x="1014" y="612" width="70" height="36" rx="6" fill="#422006" stroke="#facc15"/><text x="1049" y="636" text-anchor="middle">FP8</text>
+  <rect x="1096" y="612" width="70" height="36" rx="6" fill="#422006" stroke="#facc15"/><text x="1131" y="636" text-anchor="middle">BF16</text>
+  <rect x="1178" y="612" width="130" height="36" rx="6" fill="#0c2d2d" stroke="#5eead4"/><text x="1243" y="636" text-anchor="middle">Online quant</text>
+  <rect x="1320" y="612" width="120" height="36" rx="6" fill="#0c2d2d" stroke="#5eead4"/><text x="1380" y="636" text-anchor="middle">Rollout logprob</text>
+  <rect x="1452" y="612" width="130" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1517" y="636" text-anchor="middle">llm-compressor</text>
+  <rect x="1594" y="612" width="100" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1644" y="636" text-anchor="middle">RedHatAI</text>
+  <rect x="1706" y="612" width="90" height="36" rx="6" fill="#1a1208" stroke="#64748b"/><text x="1751" y="636" text-anchor="middle">SGLang</text>
+  <rect x="1808" y="612" width="40" height="36" rx="6" fill="#1a1208" stroke="#64748b"/><text x="1828" y="636" text-anchor="middle">TBD</text>
+ </g>
+
+ <!-- L5 Algorithms -->
+ <rect x="60" y="676" width="1800" height="72" rx="12" fill="#0f2744" stroke="#fbbf24" stroke-width="2"/>
+ <text x="88" y="704" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Algorithms &amp; Key Features</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#fef3c7">
+  <rect x="88" y="716" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="123" y="733" text-anchor="middle">PPO</text>
+  <rect x="168" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="208" y="733" text-anchor="middle">DAPO</text>
+  <rect x="258" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="298" y="733" text-anchor="middle">GSM8K</text>
+  <rect x="348" y="716" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="373" y="733" text-anchor="middle">TIS</text>
+  <rect x="408" y="716" width="130" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="473" y="733" text-anchor="middle">Quantized rollout</text>
+  <rect x="548" y="716" width="120" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="608" y="733" text-anchor="middle">Online quant</text>
+  <rect x="678" y="716" width="130" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="743" y="733" text-anchor="middle">Accurate logprob</text>
+  <rect x="818" y="716" width="120" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="878" y="733" text-anchor="middle">Hybrid DP mix</text>
+  <rect x="948" y="716" width="110" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1003" y="733" text-anchor="middle">Off-policy fix</text>
+  <rect x="1068" y="716" width="130" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1133" y="733" text-anchor="middle">Layer weight sync</text>
+  <rect x="1208" y="716" width="110" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1263" y="733" text-anchor="middle">fp8_channel</text>
+  <rect x="1328" y="716" width="100" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1378" y="733" text-anchor="middle">w8a8 int8</text>
+  <rect x="1438" y="716" width="120" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1498" y="733" text-anchor="middle">Long CoT gen</text>
+  <rect x="1568" y="716" width="130" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1633" y="733" text-anchor="middle">~100% perf keep</text>
+  <rect x="1708" y="716" width="140" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1778" y="733" text-anchor="middle">Throughput boost</text>
+ </g>
+
+ <!-- DETAIL Quantized Rollout Loop -->
+ <rect x="60" y="764" width="880" height="340" rx="14" fill="#0c1524" stroke="#facc15" stroke-width="2.5"/>
+ <text x="88" y="796" fill="#facc15" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Quantized Rollout RL Loop (per training step)</text>
+ <text x="88" y="818" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="11">Policy trains in BF16 FSDP - rollout runs in INT8/FP8 patched vLLM</text>
+
+ <rect x="88" y="834" width="820" height="36" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="498" y="858" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1: Actor (FSDP BF16) holds policy weights - ready for grad update</text>
+ <line x1="498" y1="870" x2="498" y2="882" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow)"/>
+ <rect x="88" y="884" width="820" height="36" rx="6" fill="#422006" stroke="#facc15"/>
+ <text x="498" y="908" text-anchor="middle" fill="#fef9c3" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2: Layer-by-layer weight sync - bf16 weights sent to vLLM inference engine</text>
+ <line x1="498" y1="920" x2="498" y2="932" stroke="#facc15" stroke-width="1.5" marker-end="url(#arrow-yellow)"/>
+ <rect x="88" y="934" width="820" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="498" y="958" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3: Patcher online-quantizes weights (INT8/FP8) using profile/config yaml</text>
+ <line x1="498" y1="970" x2="498" y2="982" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+ <rect x="88" y="984" width="820" height="36" rx="6" fill="#0c2d2d" stroke="#5eead4"/>
+ <text x="498" y="1008" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4: Quantized rollout generation - accurate rollout logprob returned</text>
+ <line x1="498" y1="1020" x2="498" y2="1032" stroke="#5eead4" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+ <rect x="88" y="1034" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="1058" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 5: Reward + advantage - TIS token correction on policy loss - update actor</text>
+
+ <text x="88" y="1092" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">bf16 mode: logprob-only patch (no quant rollout) - for TIS without throughput gain</text>
+ <text x="88" y="1108" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Best for 14B+ models with long CoT (DAPO) - quant overhead not worth it on small GSM8K runs</text>
+
+ <!-- DETAIL Patcher Pipeline -->
+ <rect x="960" y="764" width="900" height="340" rx="14" fill="#0c1a24" stroke="#22d3ee" stroke-width="2.5"/>
+ <text x="988" y="796" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Patcher Pipeline &amp; Off-Policy Correction</text>
+ <text x="988" y="818" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="11">Train (FSDP) and rollout (vLLM) use different libs - distribution mismatch is inherent</text>
+
+ <text x="988" y="842" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Setup Pipeline (INT8 path)</text>
+ <rect x="988" y="852" width="200" height="68" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1088" y="876" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">flashrl profile</text>
+ <text x="1088" y="894" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">bf16 vs quant compare</text>
+ <text x="1088" y="910" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">Output profile.pt</text>
+ <line x1="1188" y1="886" x2="1218" y2="886" stroke="#facc15" stroke-width="2" marker-end="url(#arrow-yellow)"/>
+ <rect x="1222" y="852" width="200" height="68" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1322" y="876" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">flashrl setup</text>
+ <text x="1322" y="894" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">Build config yaml</text>
+ <text x="1322" y="910" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">.flashrl_config.yaml</text>
+ <line x1="1422" y1="886" x2="1452" y2="886" stroke="#facc15" stroke-width="2" marker-end="url(#arrow-yellow)"/>
+ <rect x="1456" y="852" width="200" height="68" rx="6" fill="#422006" stroke="#facc15"/>
+ <text x="1556" y="876" text-anchor="middle" fill="#fef9c3" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">FLASHRL_CONFIG</text>
+ <text x="1556" y="894" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">Env at job launch</text>
+ <text x="1556" y="910" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">Activates patcher</text>
+ <line x1="1656" y1="886" x2="1686" y2="886" stroke="#facc15" stroke-width="2" marker-end="url(#arrow-yellow)"/>
+ <rect x="1690" y="852" width="158" height="68" rx="6" fill="#0c2d2d" stroke="#5eead4"/>
+ <text x="1769" y="876" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">vLLM patched</text>
+ <text x="1769" y="894" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Quant rollout +</text>
+ <text x="1769" y="910" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">weight hot-reload</text>
+
+ <text x="988" y="942" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Truncated Importance Sampling (TIS)</text>
+ <rect x="988" y="952" width="420" height="48" rx="6" fill="#422006" stroke="#fcd34d"/>
+ <text x="1198" y="972" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">pi_rollout(a|s) != pi_train(a|s) due to engine/precision mismatch</text>
+ <text x="1198" y="988" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">Apply token-level IS ratio clip to policy gradient loss</text>
+ <rect x="1420" y="952" width="428" height="48" rx="6" fill="#422006" stroke="#fcd34d"/>
+ <text x="1634" y="972" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Hybrid DP: N/M workers bf16 rollout, rest int8</text>
+ <text x="1634" y="988" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">flashrl setup -a --fn bf16 reduces rollout-grad gap</text>
+
+ <text x="988" y="1024" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Validated Examples (yaof20/verl flash-rl recipe)</text>
+ <rect x="988" y="1034" width="200" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1088" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">GSM8K 0.5B INT8</text>
+ <rect x="1200" y="1034" width="200" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1300" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">DAPO 32B INT8</text>
+ <rect x="1412" y="1034" width="200" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1512" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">GSM8K 0.5B FP8</text>
+ <rect x="1624" y="1034" width="200" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1724" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">DAPO 32B FP8</text>
+
+ <text x="988" y="1092" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">DAPO 32B: INT8 rollout matches BF16 AIME accuracy with higher updates/hour throughput</text>
+ <text x="988" y="1108" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Multi-node: set FLASHRL_CONFIG in verl/trainer/runtime_env.yaml for Ray submit jobs</text>
+
+ <!-- L6 Production -->
+ <rect x="60" y="1124" width="1800" height="72" rx="12" fill="#1a1208" stroke="#facc15" stroke-width="2"/>
+ <text x="88" y="1152" fill="#facc15" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Tested Environments &amp; Hardware</text>
+ <text x="960" y="1178" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="13">NVIDIA CUDA 12.6 - hiyouga/verl NGC images - vLLM 0.8.3-0.10.0 - Ray 2.43-2.48 - flash-llm-rl 1.0.1+</text>
+
+ <!-- footers -->
+ <rect x="60" y="1216" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1236" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Init path: pip install flash-llm-rl - optional profile/setup - export FLASHRL_CONFIG - launch VeRL recipe script</text>
+ <text x="960" y="1254" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Step path: sync bf16 weights - online quant - quantized rollout - TIS-corrected loss - actor update - repeat</text>
+
+ <text x="60" y="1300" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: yaof20/Flash-RL README - yaof20/verl recipe/flash_rl - SkyRL docs flash_rl - fengyao.notion.site/flash-rl</text>
+</svg>

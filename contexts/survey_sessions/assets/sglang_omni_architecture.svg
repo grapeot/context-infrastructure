@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-amber" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#f59e0b"/>
+  </marker>
+  <marker id="arrow-teal" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#2dd4bf"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">SGLang-Omni Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">Computation-Centric Multi-Stage Omni Runtime - Built on SGLang - sgl-project/sglang-omni</text>
+
+ <!-- L1 Entry -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#f59e0b" stroke-width="2"/>
+ <text x="88" y="124" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Entry Points &amp; API</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="110" height="40" rx="6" fill="#451a03" stroke="#f59e0b"/><text x="143" y="162" text-anchor="middle">HTTP API</text>
+  <rect x="210" y="136" width="130" height="40" rx="6" fill="#451a03" stroke="#f59e0b"/><text x="275" y="162" text-anchor="middle">chat/completions</text>
+  <rect x="352" y="136" width="110" height="40" rx="6" fill="#451a03" stroke="#f59e0b"/><text x="407" y="162" text-anchor="middle">audio/speech</text>
+  <rect x="474" y="136" width="120" height="40" rx="6" fill="#451a03" stroke="#f59e0b"/><text x="534" y="162" text-anchor="middle">GenerateRequest</text>
+  <rect x="606" y="136" width="90" height="40" rx="6" fill="#451a03" stroke="#f59e0b"/><text x="651" y="162" text-anchor="middle">OmniRequest</text>
+  <rect x="708" y="136" width="80" height="40" rx="6" fill="#451a03" stroke="#f59e0b"/><text x="748" y="162" text-anchor="middle">Client</text>
+  <rect x="800" y="136" width="80" height="40" rx="6" fill="#451a03" stroke="#f59e0b"/><text x="840" y="162" text-anchor="middle">SSE</text>
+  <rect x="892" y="136" width="100" height="40" rx="6" fill="#451a03" stroke="#f59e0b"/><text x="942" y="162" text-anchor="middle">sglang serve</text>
+  <rect x="1004" y="136" width="110" height="40" rx="6" fill="#451a03" stroke="#f59e0b"/><text x="1059" y="162" text-anchor="middle">PipelineConfig</text>
+  <rect x="1126" y="136" width="90" height="40" rx="6" fill="#451a03" stroke="#f59e0b"/><text x="1171" y="162" text-anchor="middle">StageConfig</text>
+  <rect x="1228" y="136" width="100" height="40" rx="6" fill="#451a03" stroke="#f59e0b"/><text x="1278" y="162" text-anchor="middle">Qwen3-Omni</text>
+  <rect x="1340" y="136" width="90" height="40" rx="6" fill="#451a03" stroke="#f59e0b"/><text x="1385" y="162" text-anchor="middle">Fish S2-Pro</text>
+  <rect x="1442" y="136" width="80" height="40" rx="6" fill="#451a03" stroke="#f59e0b"/><text x="1482" y="162" text-anchor="middle">Higgs</text>
+  <rect x="1534" y="136" width="80" height="40" rx="6" fill="#451a03" stroke="#f59e0b"/><text x="1574" y="162" text-anchor="middle">Voxtral</text>
+  <rect x="1626" y="136" width="80" height="40" rx="6" fill="#451a03" stroke="#f59e0b"/><text x="1666" y="162" text-anchor="middle">Ming-Omni</text>
+  <rect x="1718" y="136" width="80" height="40" rx="6" fill="#451a03" stroke="#f59e0b"/><text x="1758" y="162" text-anchor="middle">LLaDA2.0</text>
+  <rect x="1810" y="136" width="38" height="40" rx="6" fill="#451a03" stroke="#f59e0b"/><text x="1829" y="162" text-anchor="middle">RL</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Pipeline Control -->
+ <rect x="60" y="216" width="1800" height="120" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2"/>
+ <text x="88" y="244" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Pipeline Control Plane</text>
+ <rect x="88" y="258" width="260" height="60" rx="8" fill="#451a03" stroke="#f59e0b"/>
+ <text x="218" y="282" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Coordinator</text>
+ <text x="218" y="302" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Request lifecycle - entry routing - abort broadcast</text>
+ <rect x="364" y="258" width="280" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="504" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">MultiProcessPipelineRunner</text>
+ <text x="504" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Cross-stage orchestration - coordinator ownership</text>
+ <rect x="660" y="258" width="240" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="780" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Declarative Topology</text>
+ <text x="780" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">next / wait_for / stream_to / terminal stages</text>
+ <rect x="916" y="258" width="240" height="60" rx="8" fill="#042f2e" stroke="#2dd4bf"/>
+ <text x="1036" y="282" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Computation-Centric</text>
+ <text x="1036" y="302" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Each stage scheduler tuned to its bottleneck</text>
+ <rect x="1172" y="258" width="220" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1282" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">fused_stages</text>
+ <text x="1282" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Colocate adjacent stages - LOCAL_OBJECT fast path</text>
+ <rect x="1408" y="258" width="210" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1513" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Fan-in / Fan-out</text>
+ <text x="1513" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">merge_fn - project_payload - route_fn</text>
+ <rect x="1634" y="258" width="204" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1736" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Runtime Prep</text>
+ <text x="1736" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">ZMQ endpoints - GPU placement - relay wiring</text>
+ <line x1="960" y1="336" x2="960" y2="354" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Stage + Schedulers -->
+ <rect x="60" y="356" width="1800" height="200" rx="12" fill="#0f2744" stroke="#f59e0b" stroke-width="2.5"/>
+ <text x="88" y="384" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - Stage Shell &amp; Per-Stage Schedulers</text>
+
+ <!-- Stage -->
+ <rect x="88" y="400" width="340" height="136" rx="12" fill="#451a03" stroke="#f59e0b" stroke-width="2"/>
+ <text x="258" y="428" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Stage (IO Shell)</text>
+ <text x="258" y="450" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">ZMQ control-plane IO + relay data-plane IO</text>
+ <text x="258" y="468" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">scheduler.inbox / outbox bridging</text>
+ <text x="258" y="486" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">fan-in AggregatedInput - stream routing</text>
+ <text x="258" y="504" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">SubmitMessage / DataReadyMessage / CompleteMessage</text>
+ <text x="258" y="522" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Scheduler-agnostic surface (same for all types)</text>
+
+ <!-- OmniScheduler -->
+ <rect x="444" y="400" width="300" height="136" rx="12" fill="#042f2e" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="594" y="428" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">OmniScheduler (AR)</text>
+ <text x="594" y="450" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Composes with upstream SGLang scheduler</text>
+ <text x="594" y="468" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">RadixAttention + continuous batching + overlap</text>
+ <text x="594" y="486" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">KV cache - prefill/decode - tree cache</text>
+ <text x="594" y="504" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Thinker / Talker AR stages</text>
+ <text x="594" y="522" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Compute-bound or memory-bound AR loops</text>
+
+ <!-- SimpleScheduler -->
+ <rect x="760" y="400" width="280" height="136" rx="12" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="900" y="428" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">SimpleScheduler</text>
+ <text x="900" y="450" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Non-AR: preprocess / encoders / aggregate</text>
+ <text x="900" y="468" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">inbox.get() - compute_fn - outbox.put()</text>
+ <text x="900" y="486" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">No KV cache - optional local batching</text>
+ <text x="900" y="504" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">image_encoder / audio_encoder / decode</text>
+ <text x="900" y="522" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Latency-sensitive lightweight stages</text>
+
+ <!-- Code2Wav + ModelRunners -->
+ <rect x="1056" y="400" width="280" height="136" rx="12" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1196" y="428" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Code2WavScheduler</text>
+ <text x="1196" y="450" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Streaming vocoder - codec chunk decode</text>
+ <text x="1196" y="468" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">new_request / stream_chunk / stream_done</text>
+ <text x="1196" y="486" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Accumulate codes - flush audio waveform</text>
+ <text x="1196" y="504" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Latency-sensitive codec stage</text>
+ <text x="1196" y="522" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Terminal stage - audio output</text>
+
+ <rect x="1352" y="400" width="480" height="136" rx="12" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1592" y="428" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">ModelRunner Layer (AR Forward Path)</text>
+ <text x="1592" y="450" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">ForwardBatch - hooks - model forward - output processing</text>
+ <text x="1592" y="468" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">ThinkerModelRunner: inject MM embeddings (image/video/audio)</text>
+ <text x="1592" y="486" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">FeedbackARModelRunner: Talker self-contained feedback loop</text>
+ <text x="1592" y="504" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">FeedbackStrategy: write_buffers / extract_output / prefill_forward</text>
+ <text x="1592" y="522" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">CUDA Graph optimizations from SGLang backbone</text>
+
+ <text x="960" y="548" text-anchor="middle" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="10">Inbox/outbox abstraction - each stage isolated so one bottleneck cannot degrade others</text>
+ <line x1="960" y1="556" x2="960" y2="574" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Communication -->
+ <rect x="60" y="576" width="1800" height="88" rx="12" fill="#0f2744" stroke="#a78bfa" stroke-width="2"/>
+ <text x="88" y="604" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Two-Plane Communication &amp; Relay Backends</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ede9fe">
+  <text x="88" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Control:</text>
+  <rect x="150" y="612" width="60" height="36" rx="6" fill="#451a03" stroke="#f59e0b"/><text x="180" y="636" text-anchor="middle">ZMQ</text>
+  <rect x="222" y="612" width="80" height="36" rx="6" fill="#451a03" stroke="#f59e0b"/><text x="262" y="636" text-anchor="middle">PUSH/PULL</text>
+  <rect x="314" y="612" width="70" height="36" rx="6" fill="#451a03" stroke="#f59e0b"/><text x="349" y="636" text-anchor="middle">PUB/SUB</text>
+  <rect x="396" y="612" width="90" height="36" rx="6" fill="#451a03" stroke="#f59e0b"/><text x="441" y="636" text-anchor="middle">msgpack</text>
+  <text x="500" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Relay:</text>
+  <rect x="550" y="612" width="50" height="36" rx="6" fill="#042f2e" stroke="#2dd4bf"/><text x="575" y="636" text-anchor="middle">shm</text>
+  <rect x="612" y="612" width="50" height="36" rx="6" fill="#042f2e" stroke="#2dd4bf"/><text x="637" y="636" text-anchor="middle">nccl</text>
+  <rect x="674" y="612" width="50" height="36" rx="6" fill="#042f2e" stroke="#2dd4bf"/><text x="699" y="636" text-anchor="middle">nixl</text>
+  <rect x="736" y="612" width="80" height="36" rx="6" fill="#042f2e" stroke="#2dd4bf"/><text x="776" y="636" text-anchor="middle">mooncake</text>
+  <text x="830" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Fast path:</text>
+  <rect x="900" y="612" width="100" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="950" y="636" text-anchor="middle">LOCAL_OBJECT</text>
+  <rect x="1012" y="612" width="80" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1052" y="636" text-anchor="middle">CUDA IPC</text>
+  <rect x="1104" y="612" width="90" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1149" y="636" text-anchor="middle">StagePayload</text>
+  <text x="1210" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Dist:</text>
+  <rect x="1260" y="612" width="40" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="1280" y="636" text-anchor="middle">TP</text>
+  <rect x="1312" y="612" width="40" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="1332" y="636" text-anchor="middle">PP</text>
+  <rect x="1364" y="612" width="80" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="1404" y="636" text-anchor="middle">multi-proc</text>
+  <rect x="1456" y="612" width="80" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1496" y="636" text-anchor="middle">FP8/AWQ</text>
+  <rect x="1548" y="612" width="90" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1593" y="636" text-anchor="middle">profiler</text>
+  <rect x="1650" y="612" width="90" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1695" y="636" text-anchor="middle">RL Admin</text>
+  <rect x="1752" y="612" width="96" height="36" rx="6" fill="#042f2e" stroke="#2dd4bf"/><text x="1800" y="636" text-anchor="middle">RadixAttn</text>
+ </g>
+
+ <!-- L5 Features -->
+ <rect x="60" y="676" width="1800" height="72" rx="12" fill="#0f2744" stroke="#fbbf24" stroke-width="2"/>
+ <text x="88" y="704" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Key Design Principles &amp; Features</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#fef3c7">
+  <rect x="88" y="716" width="110" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="143" y="733" text-anchor="middle">Multi-stage</text>
+  <rect x="208" y="716" width="100" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="258" y="733" text-anchor="middle">Async pipeline</text>
+  <rect x="318" y="716" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="363" y="733" text-anchor="middle">Zero-copy</text>
+  <rect x="418" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="458" y="733" text-anchor="middle">Streaming</text>
+  <rect x="508" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="548" y="733" text-anchor="middle">S2S TTS</text>
+  <rect x="598" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="638" y="733" text-anchor="middle">Any-to-any</text>
+  <rect x="688" y="716" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="723" y="733" text-anchor="middle">T2I</text>
+  <rect x="768" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="808" y="733" text-anchor="middle">Disagg</text>
+  <rect x="858" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="898" y="733" text-anchor="middle">Colocated</text>
+  <rect x="948" y="716" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="993" y="733" text-anchor="middle">Fan-in merge</text>
+  <rect x="1048" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1088" y="733" text-anchor="middle">stream_to</text>
+  <rect x="1138" y="716" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1183" y="733" text-anchor="middle">project_payload</text>
+  <rect x="1238" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1278" y="733" text-anchor="middle">OpenAI API</text>
+  <rect x="1328" y="716" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1373" y="733" text-anchor="middle">Native SGLang</text>
+  <rect x="1428" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1468" y="733" text-anchor="middle">VLM in</text>
+  <rect x="1518" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1558" y="733" text-anchor="middle">Audio out</text>
+  <rect x="1608" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1648" y="733" text-anchor="middle">MTP codec</text>
+  <rect x="1698" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1738" y="733" text-anchor="middle">Dual-AR</text>
+  <rect x="1788" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1818" y="733" text-anchor="middle">MoE</text>
+ </g>
+
+ <!-- DETAIL Request Flow -->
+ <rect x="60" y="764" width="880" height="340" rx="14" fill="#0c1524" stroke="#f59e0b" stroke-width="2.5"/>
+ <text x="88" y="796" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">End-to-End Request Flow</text>
+ <text x="88" y="818" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="11">HTTP API - Client - Coordinator - Stage - Scheduler - ModelRunner - model forward</text>
+
+ <rect x="88" y="834" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="858" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1: HTTP API receives request - Client builds OmniRequest - SSE streaming setup</text>
+ <line x1="498" y1="870" x2="498" y2="882" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow)"/>
+ <rect x="88" y="884" width="820" height="36" rx="6" fill="#451a03" stroke="#f59e0b"/>
+ <text x="498" y="908" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2: Coordinator routes to entry_stage via SubmitMessage (ZMQ control plane)</text>
+ <line x1="498" y1="920" x2="498" y2="932" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrow-amber)"/>
+ <rect x="88" y="934" width="820" height="36" rx="6" fill="#451a03" stroke="#f59e0b"/>
+ <text x="498" y="958" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3: Stage reads relay payload - enqueues IncomingMessage to scheduler.inbox</text>
+ <line x1="498" y1="970" x2="498" y2="982" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrow-amber)"/>
+ <rect x="88" y="984" width="820" height="36" rx="6" fill="#042f2e" stroke="#2dd4bf"/>
+ <text x="498" y="1008" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4: Scheduler runs stage loop - ModelRunner forward - OutgoingMessage to outbox</text>
+ <line x1="498" y1="1020" x2="498" y2="1032" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+ <rect x="88" y="1034" width="820" height="36" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="498" y="1058" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 5: Stage relay.put + DataReadyMessage - next stage or Coordinator CompleteMessage</text>
+
+ <text x="88" y="1092" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Streaming: thinker hidden states stream_to talker via CUDA IPC (same GPU) or relay blob</text>
+ <text x="88" y="1108" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Abort: Coordinator PUB/SUB AbortMessage - relay.cleanup(request_id) on all stages</text>
+
+ <!-- DETAIL Qwen3-Omni Pipeline -->
+ <rect x="960" y="764" width="900" height="340" rx="14" fill="#0c1a10" stroke="#2dd4bf" stroke-width="2.5"/>
+ <text x="988" y="796" fill="#2dd4bf" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Qwen3-Omni Pipeline &amp; Two-Plane Design</text>
+ <text x="988" y="818" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="11">Multi-stage decoding split by computational character - not just modality</text>
+
+ <text x="988" y="842" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Qwen3-Omni Stage Graph (declarative StageConfig)</text>
+ <rect x="988" y="852" width="130" height="68" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1053" y="876" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">preprocessing</text>
+ <text x="1053" y="894" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">SimpleScheduler</text>
+ <text x="1053" y="910" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">MM input split</text>
+ <line x1="1118" y1="886" x2="1148" y2="886" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrow-amber)"/>
+ <rect x="1152" y="852" width="130" height="68" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1217" y="876" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">mm_aggregate</text>
+ <text x="1217" y="894" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">fan-in merge_fn</text>
+ <text x="1217" y="910" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">wait_for encoders</text>
+ <line x1="1282" y1="886" x2="1312" y2="886" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrow-amber)"/>
+ <rect x="1316" y="852" width="120" height="68" rx="6" fill="#042f2e" stroke="#2dd4bf"/>
+ <text x="1376" y="876" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">thinker (AR)</text>
+ <text x="1376" y="894" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">OmniScheduler</text>
+ <text x="1376" y="910" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">compute-bound</text>
+ <line x1="1436" y1="886" x2="1466" y2="886" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrow-amber)"/>
+ <rect x="1470" y="852" width="120" height="68" rx="6" fill="#042f2e" stroke="#2dd4bf"/>
+ <text x="1530" y="876" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">talker (AR)</text>
+ <text x="1530" y="894" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">FeedbackAR</text>
+ <text x="1530" y="910" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">memory-bound</text>
+ <line x1="1590" y1="886" x2="1620" y2="886" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrow-amber)"/>
+ <rect x="1624" y="852" width="120" height="68" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1684" y="876" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">code2wav</text>
+ <text x="1684" y="894" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">Code2WavSched</text>
+ <text x="1684" y="910" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">latency-sensitive</text>
+ <rect x="1756" y="852" width="92" height="68" rx="6" fill="#451a03" stroke="#f59e0b"/>
+ <text x="1802" y="876" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">decode</text>
+ <text x="1802" y="894" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">text terminal</text>
+ <text x="1802" y="910" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">parallel path</text>
+
+ <text x="988" y="942" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Two-Plane Communication</text>
+ <rect x="988" y="952" width="420" height="48" rx="6" fill="#451a03" stroke="#f59e0b"/>
+ <text x="1198" y="972" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Control plane (ZMQ): Submit / DataReady / Complete / Stream / Abort</text>
+ <text x="1198" y="988" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">Small coordination messages - control-before-wait for credit backends</text>
+ <rect x="1420" y="952" width="428" height="48" rx="6" fill="#042f2e" stroke="#2dd4bf"/>
+ <text x="1634" y="972" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Data plane (Relay): StagePayload tensors via shm/nccl/nixl/mooncake</text>
+ <text x="1634" y="988" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Zero-copy shared memory - pickle metadata + flat uint8 tensor buffer</text>
+
+ <text x="988" y="1024" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">vs vLLM-Omni / SGLang</text>
+ <rect x="988" y="1034" width="130" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1053" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">SGLang AR core</text>
+ <rect x="1130" y="1034" width="110" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1185" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">RadixAttention</text>
+ <rect x="1252" y="1034" width="100" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1302" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">inbox/outbox</text>
+ <rect x="1364" y="1034" width="120" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1424" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">Per-stage sched</text>
+ <rect x="1496" y="1034" width="100" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1546" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">ZMQ + Relay</text>
+ <rect x="1608" y="1034" width="110" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1663" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">models/&lt;name&gt;/</text>
+ <rect x="1730" y="1034" width="118" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1789" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">TTS focus</text>
+
+ <text x="988" y="1092" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Design axis: multi-stage decoding (heterogeneous compute profiles) not just multi-modality</text>
+ <text x="988" y="1108" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Add new model: declare PipelineConfig topology - no inference system from scratch</text>
+
+ <!-- L6 Production -->
+ <rect x="60" y="1124" width="1800" height="72" rx="12" fill="#1a1208" stroke="#f59e0b" stroke-width="2"/>
+ <text x="88" y="1152" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Production &amp; Scale</text>
+ <text x="960" y="1178" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="13">sgl-project/sglang-omni - CUDA/ROCm/XPU/NPU - TP per stage - disaggregated or colocated deployment</text>
+
+ <!-- footers -->
+ <rect x="60" y="1216" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1236" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Init path: load PipelineConfig - runtime prep - spawn stage processes - wire ZMQ + relay - Coordinator ready</text>
+ <text x="960" y="1254" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Step path: route through stage graph - per-stage scheduler - relay xfer - stream/terminal collect - respond</text>
+
+ <text x="60" y="1300" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: sgl-project/sglang-omni - docs.sgl-project.github.io/sglang-omni - developer_reference pipeline + communication</text>
+</svg>

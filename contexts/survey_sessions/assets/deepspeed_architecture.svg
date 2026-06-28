@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-green" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#34d399"/>
+  </marker>
+  <marker id="arrow-purple" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#c4b5fd"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">DeepSpeed Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">Microsoft AI at Scale - ZeRO memory optimizer - 3D parallelism - InferenceEngine</text>
+
+ <!-- L1 Integration -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2"/>
+ <text x="88" y="124" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Framework &amp; Application Integration</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="170" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="173" y="162" text-anchor="middle">PyTorch model</text>
+  <rect x="272" y="136" width="180" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="362" y="162" text-anchor="middle">HuggingFace Trainer</text>
+  <rect x="468" y="136" width="160" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="548" y="162" text-anchor="middle">Megatron-LM</text>
+  <rect x="644" y="136" width="150" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="719" y="162" text-anchor="middle">Lightning</text>
+  <rect x="810" y="136" width="150" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="885" y="162" text-anchor="middle">Accelerate</text>
+  <rect x="976" y="136" width="180" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1066" y="162" text-anchor="middle">LLaMA-Factory</text>
+  <rect x="1172" y="136" width="200" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1272" y="162" text-anchor="middle">Custom training loop</text>
+  <rect x="1388" y="136" width="220" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1498" y="162" text-anchor="middle">HF generate / inference</text>
+  <rect x="1624" y="136" width="212" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1730" y="162" text-anchor="middle">ds_config.json</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Entry API -->
+ <rect x="60" y="216" width="1800" height="84" rx="12" fill="#0f2744" stroke="#34d399" stroke-width="2"/>
+ <text x="88" y="244" fill="#34d399" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Public Entry APIs</text>
+ <rect x="88" y="256" width="420" height="32" rx="6" fill="#14352a" stroke="#34d399"/>
+ <text x="298" y="278" text-anchor="middle" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="12">deepspeed.initialize(model, optimizer, config) - training</text>
+ <rect x="524" y="256" width="380" height="32" rx="6" fill="#14352a" stroke="#34d399"/>
+ <text x="714" y="278" text-anchor="middle" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="12">deepspeed.init_inference(model, config) - inference</text>
+ <rect x="920" y="256" width="320" height="32" rx="6" fill="#14352a" stroke="#34d399"/>
+ <text x="1080" y="278" text-anchor="middle" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="12">PipelineModule(layers, num_stages)</text>
+ <rect x="1256" y="256" width="580" height="32" rx="6" fill="#14352a" stroke="#34d399"/>
+ <text x="1546" y="278" text-anchor="middle" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="12">DeepSpeedInferenceConfig / DeepSpeedConfig JSON - auto mixed precision, offload knobs</text>
+ <line x1="960" y1="300" x2="960" y2="318" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Engines -->
+ <rect x="60" y="320" width="1800" height="168" rx="12" fill="#0f2744" stroke="#a78bfa" stroke-width="2"/>
+ <text x="88" y="348" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - Runtime Engines</text>
+
+ <rect x="88" y="362" width="520" height="108" rx="10" fill="#241a3d" stroke="#c4b5fd"/>
+ <text x="348" y="388" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">DeepSpeedEngine (Training)</text>
+ <text x="348" y="410" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">Wraps nn.Module - forward() / backward() / step()</text>
+ <text x="348" y="428" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">ZeRO optimizer hook - grad reduce - checkpointing</text>
+ <text x="348" y="446" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">Optional DDP wrapper - activation checkpoint</text>
+ <text x="348" y="464" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">DeepSpeedZeRoOffload for ZeRO-3 param lifecycle</text>
+
+ <rect x="624" y="362" width="520" height="108" rx="10" fill="#241a3d" stroke="#c4b5fd"/>
+ <text x="884" y="388" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">PipelineEngine (Pipeline Parallel)</text>
+ <text x="884" y="410" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">train_batch() interleaves fwd/bwd micro-batches</text>
+ <text x="884" y="428" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">InferenceSchedule / TrainSchedule (1F1B etc.)</text>
+ <text x="884" y="446" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">LayerSpec delayed init - partition_method</text>
+ <text x="884" y="464" text-anchor="middle" fill="#fcd34d" font-family="JetBrains Mono, monospace" font-size="10">NOT compatible with ZeRO-2 / ZeRO-3</text>
+
+ <rect x="1160" y="362" width="676" height="108" rx="10" fill="#241a3d" stroke="#c4b5fd"/>
+ <text x="1498" y="388" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">InferenceEngine</text>
+ <text x="1498" y="410" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">Module replace: injection policy / kernel inject / AutoTP</text>
+ <text x="1498" y="428" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">Fused transformer kernels - CUDA Graph - dist groups</text>
+ <text x="1498" y="446" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">Dense TP+PP path - MoE sparse layer path</text>
+ <text x="1498" y="464" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">ZeRO-Inference: weights on CPU/NVMe, zero on GPU</text>
+
+ <line x1="960" y1="488" x2="960" y2="506" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 ZeRO -->
+ <rect x="60" y="508" width="1800" height="120" rx="12" fill="#0f2744" stroke="#fbbf24" stroke-width="2"/>
+ <text x="88" y="536" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - ZeRO Memory Optimizer Stack</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11">
+  <rect x="88" y="548" width="200" height="64" rx="8" fill="#3b2f0a" stroke="#fcd34d"/>
+  <text x="188" y="572" text-anchor="middle" fill="#fef3c7" font-weight="700">ZeRO-1</text>
+  <text x="188" y="590" text-anchor="middle" fill="#fde68a">Shard optimizer states</text>
+  <text x="188" y="604" text-anchor="middle" fill="#fde68a">Adam moments partitioned</text>
+  <rect x="304" y="548" width="200" height="64" rx="8" fill="#3b2f0a" stroke="#fcd34d"/>
+  <text x="404" y="572" text-anchor="middle" fill="#fef3c7" font-weight="700">ZeRO-2</text>
+  <text x="404" y="590" text-anchor="middle" fill="#fde68a">+ gradient partitioning</text>
+  <text x="404" y="604" text-anchor="middle" fill="#fde68a">Reduce-scatter grad shards</text>
+  <rect x="520" y="548" width="200" height="64" rx="8" fill="#422006" stroke="#f59e0b"/>
+  <text x="620" y="572" text-anchor="middle" fill="#fef3c7" font-weight="700">ZeRO-3</text>
+  <text x="620" y="590" text-anchor="middle" fill="#fde68a">+ parameter partitioning</text>
+  <text x="620" y="604" text-anchor="middle" fill="#fde68a">All-gather / release hooks</text>
+  <rect x="736" y="548" width="220" height="64" rx="8" fill="#422006" stroke="#f59e0b"/>
+  <text x="846" y="572" text-anchor="middle" fill="#fef3c7" font-weight="700">ZeRO-Offload</text>
+  <text x="846" y="590" text-anchor="middle" fill="#fde68a">CPU offload opt+grad</text>
+  <text x="846" y="604" text-anchor="middle" fill="#fde68a">Built on ZeRO-2</text>
+  <rect x="972" y="548" width="240" height="64" rx="8" fill="#422006" stroke="#f59e0b"/>
+  <text x="1092" y="572" text-anchor="middle" fill="#fef3c7" font-weight="700">ZeRO-Infinity</text>
+  <text x="1092" y="590" text-anchor="middle" fill="#fde68a">ZeRO-3 + Infinity engine</text>
+  <text x="1092" y="604" text-anchor="middle" fill="#fde68a">CPU/NVMe offload all states</text>
+  <rect x="1228" y="548" width="240" height="64" rx="8" fill="#422006" stroke="#f59e0b"/>
+  <text x="1348" y="572" text-anchor="middle" fill="#fef3c7" font-weight="700">ZeRO-Inference</text>
+  <text x="1348" y="590" text-anchor="middle" fill="#fde68a">Inference variant</text>
+  <text x="1348" y="604" text-anchor="middle" fill="#fde68a">100B+ on few GPUs</text>
+  <rect x="1484" y="548" width="352" height="64" rx="8" fill="#3b2f0a" stroke="#fcd34d"/>
+  <text x="1660" y="572" text-anchor="middle" fill="#fef3c7" font-weight="700">Memory-centric tiling</text>
+  <text x="1660" y="590" text-anchor="middle" fill="#fde68a">Large ops tiled under ZeRO-3 fetch/release</text>
+  <text x="1660" y="604" text-anchor="middle" fill="#fde68a">Arbitrary op size without manual MP refactor</text>
+ </g>
+ <line x1="960" y1="628" x2="960" y2="646" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L5 Parallelism -->
+ <rect x="60" y="648" width="1800" height="88" rx="12" fill="#0f2744" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="88" y="676" fill="#2dd4bf" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Parallelism &amp; Communication</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ccfbf1">
+  <rect x="88" y="688" width="130" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="153" y="712" text-anchor="middle">Data Parallel</text>
+  <rect x="230" y="688" width="130" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="295" y="712" text-anchor="middle">Tensor Parallel</text>
+  <rect x="372" y="688" width="150" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="447" y="712" text-anchor="middle">Pipeline Parallel</text>
+  <rect x="534" y="688" width="130" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="599" y="712" text-anchor="middle">Expert Parallel</text>
+  <rect x="676" y="688" width="160" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="756" y="712" text-anchor="middle">3D Parallel (DP+TP+PP)</text>
+  <rect x="848" y="688" width="120" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="908" y="712" text-anchor="middle">AutoTP</text>
+  <rect x="980" y="688" width="140" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1050" y="712" text-anchor="middle">DeepSpeed-MoE</text>
+  <rect x="1132" y="688" width="130" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1197" y="712" text-anchor="middle">Ulysses SP</text>
+  <rect x="1274" y="688" width="120" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1334" y="712" text-anchor="middle">NCCL</text>
+  <rect x="1406" y="688" width="120" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1466" y="712" text-anchor="middle">MPI</text>
+  <rect x="1538" y="688" width="300" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1688" y="712" text-anchor="middle">Hybrid: PP + DP (ZeRO-1) or Megatron 3D</text>
+ </g>
+
+ <!-- L5b Acceleration libs -->
+ <rect x="60" y="748" width="1800" height="72" rx="12" fill="#0f2744" stroke="#fb7185" stroke-width="2"/>
+ <text x="88" y="776" fill="#fb7185" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5b - Acceleration &amp; Ops Library</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ffe4e6">
+  <rect x="88" y="788" width="150" height="24" rx="5" fill="#4c0519" stroke="#fda4af"/><text x="163" y="805" text-anchor="middle">FusedAdam/Lamb</text>
+  <rect x="250" y="788" width="170" height="24" rx="5" fill="#4c0519" stroke="#fda4af"/><text x="335" y="805" text-anchor="middle">Transformer kernels</text>
+  <rect x="432" y="788" width="140" height="24" rx="5" fill="#4c0519" stroke="#fda4af"/><text x="502" y="805" text-anchor="middle">Kernel inject</text>
+  <rect x="584" y="788" width="130" height="24" rx="5" fill="#4c0519" stroke="#fda4af"/><text x="649" y="805" text-anchor="middle">DeepNVMe</text>
+  <rect x="726" y="788" width="150" height="24" rx="5" fill="#4c0519" stroke="#fda4af"/><text x="801" y="805" text-anchor="middle">Async CPU swapper</text>
+  <rect x="888" y="788" width="160" height="24" rx="5" fill="#4c0519" stroke="#fda4af"/><text x="968" y="805" text-anchor="middle">Activation ckpt</text>
+  <rect x="1060" y="788" width="130" height="24" rx="5" fill="#4c0519" stroke="#fda4af"/><text x="1125" y="805" text-anchor="middle">1-bit Adam</text>
+  <rect x="1202" y="788" width="140" height="24" rx="5" fill="#4c0519" stroke="#fda4af"/><text x="1272" y="805" text-anchor="middle">Compression</text>
+  <rect x="1354" y="788" width="130" height="24" rx="5" fill="#4c0519" stroke="#fda4af"/><text x="1419" y="805" text-anchor="middle">CUDA Graph</text>
+  <rect x="1496" y="788" width="160" height="24" rx="5" fill="#4c0519" stroke="#fda4af"/><text x="1576" y="805" text-anchor="middle">Sparse MoE ops</text>
+  <rect x="1668" y="788" width="180" height="24" rx="5" fill="#4c0519" stroke="#fda4af"/><text x="1758" y="805" text-anchor="middle">Mixed precision (fp16/bf16)</text>
+ </g>
+
+ <!-- DETAIL ZeRO-3 lifecycle -->
+ <rect x="60" y="836" width="880" height="340" rx="14" fill="#0c1f1a" stroke="#f97316" stroke-width="2.5"/>
+ <text x="88" y="868" fill="#fb923c" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">ZeRO-3 / Infinity Parameter Lifecycle</text>
+ <text x="88" y="890" fill="#fdba74" font-family="JetBrains Mono, monospace" font-size="11">Materialize - compute - release per layer (training + ZeRO-Inference fetch)</text>
+
+ <!-- lifecycle flow -->
+ <rect x="88" y="906" width="130" height="48" rx="8" fill="#1c1917" stroke="#fcd34d"/>
+ <text x="153" y="928" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Param shards</text>
+ <text x="153" y="944" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">1/N per GPU</text>
+ <line x1="218" y1="930" x2="242" y2="930" stroke="#fcd34d" stroke-width="1.5" marker-end="url(#arrow)"/>
+ <rect x="246" y="906" width="150" height="48" rx="8" fill="#422006" stroke="#f59e0b"/>
+ <text x="321" y="928" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Pre-forward hook</text>
+ <text x="321" y="944" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">All-Gather shards</text>
+ <line x1="396" y1="930" x2="420" y2="930" stroke="#fcd34d" stroke-width="1.5" marker-end="url(#arrow)"/>
+ <rect x="424" y="906" width="150" height="48" rx="8" fill="#1c1917" stroke="#fcd34d"/>
+ <text x="499" y="928" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Forward / Backward</text>
+ <text x="499" y="944" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">full params local</text>
+ <line x1="574" y1="930" x2="598" y2="930" stroke="#fcd34d" stroke-width="1.5" marker-end="url(#arrow)"/>
+ <rect x="602" y="906" width="150" height="48" rx="8" fill="#422006" stroke="#f59e0b"/>
+ <text x="677" y="928" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Post hook</text>
+ <text x="677" y="944" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">Release / repartition</text>
+ <line x1="752" y1="930" x2="776" y2="930" stroke="#fcd34d" stroke-width="1.5" marker-end="url(#arrow)"/>
+ <rect x="780" y="906" width="140" height="48" rx="8" fill="#1c1917" stroke="#fcd34d"/>
+ <text x="850" y="928" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Grad Reduce</text>
+ <text x="850" y="944" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">Reduce-Scatter</text>
+
+ <!-- Infinity offload -->
+ <text x="88" y="982" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Infinity Offload Engine (ZeRO-Infinity / ZeRO-Inference)</text>
+ <rect x="88" y="992" width="250" height="68" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="213" y="1014" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">GPU HBM</text>
+ <text x="213" y="1032" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Hot shard / compute tile</text>
+ <text x="213" y="1048" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">minimal resident weights</text>
+ <rect x="354" y="992" width="250" height="68" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="479" y="1014" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">CPU DRAM</text>
+ <text x="479" y="1032" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Pinned host buffers</text>
+ <text x="479" y="1048" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Async swapper overlap</text>
+ <rect x="620" y="992" width="300" height="68" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="770" y="1014" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">NVMe (DeepNVMe)</text>
+ <text x="770" y="1032" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Bulk async read/write</text>
+ <text x="770" y="1048" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">TB-scale parameter pool</text>
+
+ <!-- ZeRO stages table -->
+ <text x="88" y="1088" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">What gets partitioned (per data-parallel rank)</text>
+ <rect x="88" y="1098" width="820" height="28" rx="4" fill="#1e293b" stroke="#475569"/>
+ <text x="110" y="1118" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10">Stage 1: optimizer states only</text>
+ <text x="380" y="1118" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10">Stage 2: + gradients</text>
+ <text x="620" y="1118" fill="#fcd34d" font-family="JetBrains Mono, monospace" font-size="10">Stage 3: + model parameters</text>
+ <rect x="88" y="1132" width="820" height="28" rx="4" fill="#1e293b" stroke="#475569"/>
+ <text x="498" y="1152" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Memory savings scale linearly with DP degree - enables trillion-param training with 3D parallelism</text>
+
+ <!-- DETAIL Inference + 3D -->
+ <rect x="960" y="836" width="900" height="340" rx="14" fill="#0c1524" stroke="#38bdf8" stroke-width="2.5"/>
+ <text x="988" y="868" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Inference &amp; 3D Parallelism Detail</text>
+ <text x="988" y="890" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="11">Three-layer DeepSpeed Transformer inference + training 3D mesh</text>
+
+ <!-- inference tiers -->
+ <rect x="988" y="906" width="260" height="110" rx="10" fill="#0f2744" stroke="#22d3ee"/>
+ <text x="1118" y="932" text-anchor="middle" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Tier 1: Single GPU</text>
+ <text x="1118" y="952" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="10">Fused transformer kernels</text>
+ <text x="1118" y="968" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="10">Low batch = mem BW opt</text>
+ <text x="1118" y="984" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="10">Large batch = throughput</text>
+ <text x="1118" y="1000" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="10">Kernel injection path</text>
+
+ <rect x="1264" y="906" width="280" height="110" rx="10" fill="#0f2744" stroke="#34d399"/>
+ <text x="1404" y="932" text-anchor="middle" fill="#34d399" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Tier 2: Many-GPU Dense</text>
+ <text x="1404" y="952" text-anchor="middle" fill="#a7f3d0" font-family="JetBrains Mono, monospace" font-size="10">Tensor Parallel (latency)</text>
+ <text x="1404" y="968" text-anchor="middle" fill="#a7f3d0" font-family="JetBrains Mono, monospace" font-size="10">+ Inference Pipeline Parallel</text>
+ <text x="1404" y="984" text-anchor="middle" fill="#a7f3d0" font-family="JetBrains Mono, monospace" font-size="10">Cross-node PP &gt; TP comm cost</text>
+ <text x="1404" y="1000" text-anchor="middle" fill="#a7f3d0" font-family="JetBrains Mono, monospace" font-size="10">AutoTP module replacement</text>
+
+ <rect x="1560" y="906" width="280" height="110" rx="10" fill="#0f2744" stroke="#a78bfa"/>
+ <text x="1700" y="932" text-anchor="middle" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Tier 3: Massive MoE</text>
+ <text x="1700" y="952" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Expert + TP + PP combo</text>
+ <text x="1700" y="968" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Optimized sparse kernels</text>
+ <text x="1700" y="984" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">100s of GPUs scale-out</text>
+ <text x="1700" y="1000" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">DeepSpeed-MoE training</text>
+
+ <!-- ZeRO-Inference alt path -->
+ <rect x="988" y="1030" width="852" height="56" rx="8" fill="#422006" stroke="#f59e0b"/>
+ <text x="1414" y="1054" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">ZeRO-Inference alternate path (resource-constrained)</text>
+ <text x="1414" y="1074" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Stage-3 + param offload CPU/NVMe - zero weights resident on GPU - larger effective batch - HF generate integration</text>
+
+ <!-- 3D parallel cube -->
+ <text x="988" y="1110" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Training 3D Parallelism (with Megatron-LM)</text>
+ <rect x="988" y="1120" width="200" height="44" rx="6" fill="#1e1b4b" stroke="#818cf8"/>
+ <text x="1088" y="1142" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Data Parallel</text>
+ <text x="1088" y="1156" text-anchor="middle" fill="#a5b4fc" font-family="JetBrains Mono, monospace" font-size="9">ZeRO shards states</text>
+ <rect x="1204" y="1120" width="200" height="44" rx="6" fill="#1e1b4b" stroke="#818cf8"/>
+ <text x="1304" y="1142" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Tensor Parallel</text>
+ <text x="1304" y="1156" text-anchor="middle" fill="#a5b4fc" font-family="JetBrains Mono, monospace" font-size="9">Split layers horizontally</text>
+ <rect x="1420" y="1120" width="200" height="44" rx="6" fill="#1e1b4b" stroke="#818cf8"/>
+ <text x="1520" y="1142" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Pipeline Parallel</text>
+ <text x="1520" y="1156" text-anchor="middle" fill="#a5b4fc" font-family="JetBrains Mono, monospace" font-size="9">Split layers vertically</text>
+ <rect x="1636" y="1120" width="204" height="44" rx="6" fill="#1e1b4b" stroke="#818cf8"/>
+ <text x="1738" y="1142" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Expert Parallel</text>
+ <text x="1738" y="1156" text-anchor="middle" fill="#a5b4fc" font-family="JetBrains Mono, monospace" font-size="9">MoE experts sharded</text>
+
+ <text x="988" y="1192" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Constraint: PipelineModule uses ZeRO-1 at most - ZeRO-2/3 incompatible with PP schedule</text>
+ <text x="988" y="1208" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Pipeline: train_batch() atomic steps - Load balance via uniform/type:transformer/parameter partition methods</text>
+
+ <!-- L7 Hardware -->
+ <rect x="60" y="1196" width="1800" height="72" rx="12" fill="#1a1208" stroke="#f97316" stroke-width="2"/>
+ <text x="88" y="1224" fill="#fb923c" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Hardware &amp; Heterogeneous Memory</text>
+ <text x="960" y="1250" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="13">Multi-GPU nodes (NVLink/PCIe) - CPU DRAM - NVMe SSD - Cloud/K8s clusters - single-GPU laptop via ZeRO-Inference</text>
+
+ <!-- footers -->
+ <rect x="60" y="1288" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1308" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Training path: App - initialize() - DeepSpeedEngine - ZeRO optimizer - forward/backward/step - checkpoint</text>
+ <text x="960" y="1326" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Inference path: init_inference() - InferenceEngine - inject/AutoTP OR ZeRO-Inference fetch - generate | PP path: PipelineModule - InferenceSchedule</text>
+
+ <text x="60" y="1372" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: deepspeed.ai ZeRO tutorials - ZeRO-Infinity paper - DeepSpeed Inference arXiv:2207.00032 - DeepSpeedEngine / InferenceEngine docs</text>
+</svg>

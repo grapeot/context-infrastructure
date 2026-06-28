@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-indigo" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#6366f1"/>
+  </marker>
+  <marker id="arrow-purple" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#a78bfa"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">JAX Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">Composable Function Transformations + XLA - google/jax - Foundation of JAX AI Stack</text>
+
+ <!-- L1 User API -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#6366f1" stroke-width="2"/>
+ <text x="88" y="124" fill="#6366f1" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - User-Facing API (NumPy-like + Functional)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="80" height="40" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="128" y="162" text-anchor="middle">jax.numpy</text>
+  <rect x="180" y="136" width="60" height="40" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="210" y="162" text-anchor="middle">jax.nn</text>
+  <rect x="252" y="136" width="80" height="40" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="292" y="162" text-anchor="middle">jax.random</text>
+  <rect x="344" y="136" width="80" height="40" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="384" y="162" text-anchor="middle">jax.scipy</text>
+  <rect x="436" y="136" width="70" height="40" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="471" y="162" text-anchor="middle">pytrees</text>
+  <rect x="518" y="136" width="80" height="40" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="558" y="162" text-anchor="middle">pure func</text>
+  <rect x="610" y="136" width="70" height="40" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="645" y="162" text-anchor="middle">DeviceArray</text>
+  <rect x="692" y="136" width="80" height="40" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="732" y="162" text-anchor="middle">make_jaxpr</text>
+  <rect x="784" y="136" width="70" height="40" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="819" y="162" text-anchor="middle">lax.cond</text>
+  <rect x="866" y="136" width="80" height="40" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="906" y="162" text-anchor="middle">lax.scan</text>
+  <rect x="958" y="136" width="80" height="40" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="998" y="162" text-anchor="middle">lax.switch</text>
+  <rect x="1050" y="136" width="90" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1095" y="162" text-anchor="middle">Flax/NNX</text>
+  <rect x="1152" y="136" width="70" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="1187" y="162" text-anchor="middle">MaxText</text>
+  <rect x="1234" y="136" width="60" height="40" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="1264" y="162" text-anchor="middle">Tunix</text>
+  <rect x="1306" y="136" width="60" height="40" rx="6" fill="#172554" stroke="#4285f4"/><text x="1336" y="162" text-anchor="middle">SGL-JAX</text>
+  <rect x="1378" y="136" width="60" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1408" y="162" text-anchor="middle">Optax</text>
+  <rect x="1450" y="136" width="60" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1480" y="162" text-anchor="middle">Orbax</text>
+  <rect x="1522" y="136" width="60" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="1552" y="162" text-anchor="middle">Grain</text>
+  <rect x="1594" y="136" width="60" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1624" y="162" text-anchor="middle">Pallas</text>
+  <rect x="1666" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1691" y="162" text-anchor="middle">JAX AI</text>
+  <rect x="1728" y="136" width="60" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1758" y="162" text-anchor="middle">Pathways</text>
+  <rect x="1800" y="136" width="50" height="40" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="1825" y="162" text-anchor="middle">PyPI</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Transformations -->
+ <rect x="60" y="216" width="1800" height="96" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2"/>
+ <text x="88" y="244" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Composable Transformations (Higher-Order Functions)</text>
+ <rect x="88" y="256" width="60" height="32" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="118" y="278" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="12">jit</text>
+ <rect x="160" y="256" width="50" height="32" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="185" y="278" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="12">grad</text>
+ <rect x="222" y="256" width="60" height="32" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="252" y="278" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="12">vmap</text>
+ <rect x="294" y="256" width="60" height="32" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="324" y="278" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="12">pmap</text>
+ <rect x="366" y="256" width="90" height="32" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="411" y="278" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="12">shard_map</text>
+ <rect x="468" y="256" width="50" height="32" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="493" y="278" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="12">scan</text>
+ <rect x="530" y="256" width="50" height="32" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="555" y="278" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="12">pjit</text>
+ <rect x="592" y="256" width="80" height="32" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="632" y="278" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="12">custom_jvp</text>
+ <rect x="684" y="256" width="80" height="32" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="724" y="278" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="12">custom_vjp</text>
+ <rect x="776" y="256" width="70" height="32" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="811" y="278" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="12">jacfwd</text>
+ <rect x="858" y="256" width="80" height="32" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="898" y="278" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="12">checkpoint</text>
+ <rect x="950" y="256" width="90" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="995" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">composable</text>
+ <rect x="1052" y="256" width="80" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1092" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">static_arg</text>
+ <rect x="1144" y="256" width="80" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1184" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">donate_arg</text>
+ <rect x="1236" y="256" width="90" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1281" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">in_shardings</text>
+ <rect x="1338" y="256" width="100" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1388" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">out_shardings</text>
+ <rect x="1450" y="256" width="80" height="32" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1490" y="278" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="12">pallas_call</text>
+ <rect x="1542" y="256" width="90" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1587" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">jit cache</text>
+ <rect x="1644" y="256" width="100" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1694" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">block_until_ready</text>
+ <rect x="1756" y="256" width="92" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1802" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">async dispatch</text>
+ <line x1="960" y1="312" x2="960" y2="330" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Tracing & IR -->
+ <rect x="60" y="332" width="1800" height="200" rx="12" fill="#0f2744" stroke="#6366f1" stroke-width="2.5"/>
+ <text x="88" y="360" fill="#6366f1" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - Tracing, jaxpr IR &amp; jax.lax Primitives</text>
+
+ <!-- Tracing left -->
+ <rect x="88" y="378" width="560" height="136" rx="12" fill="#1e1b4b" stroke="#6366f1" stroke-width="2"/>
+ <text x="368" y="408" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Python Tracing</text>
+ <text x="368" y="432" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="11">Tracer objects wrap args - record shape/dtype ops</text>
+ <text x="368" y="452" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="11">Static ops: Python compile-time - Dynamic: XLA runtime</text>
+ <text x="368" y="472" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="11">Python side-effects invisible to jaxpr (still run at trace)</text>
+ <text x="368" y="492" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="11">ClosedJaxpr from make_jaxpr - inspectable IR</text>
+
+ <!-- jaxpr center -->
+ <rect x="680" y="378" width="560" height="136" rx="12" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="960" y="408" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">jaxpr (JAX Expression IR)</text>
+ <text x="960" y="432" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">Typed functional ANF - vars, constvars, eqns, sub-jaxprs</text>
+ <text x="960" y="452" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">Higher-order: pjit, cond, while_loop, scan, pallas_call</text>
+ <text x="960" y="472" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">Transformations trace-specialize then interpret with rules</text>
+ <text x="960" y="492" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">grad/vmap may apply incrementally during tracing</text>
+
+ <!-- lax right -->
+ <rect x="1272" y="378" width="560" height="136" rx="12" fill="#0c2d2d" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="1552" y="408" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">jax.lax Primitives</text>
+ <text x="1552" y="432" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="11">Strict lower-level API - all ops map to XLA primitives</text>
+ <text x="1552" y="452" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="11">conv_general_dilated - dot_general - reduce - gather</text>
+ <text x="1552" y="472" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="11">jax.numpy is high-level wrapper over lax + XLA</text>
+ <text x="1552" y="492" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="11">Collectives: psum, ppermute, all_gather, reduce_scatter</text>
+
+ <line x1="648" y1="446" x2="676" y2="446" stroke="#6366f1" stroke-width="2" marker-end="url(#arrow-indigo)"/>
+ <line x1="1240" y1="446" x2="1268" y2="446" stroke="#2dd4bf" stroke-width="2" marker-end="url(#arrow-indigo)"/>
+ <text x="960" y="528" text-anchor="middle" fill="#6366f1" font-family="JetBrains Mono, monospace" font-size="10">Functional purity enables jit + AD + vmap composition on arbitrary pytree structures</text>
+
+ <line x1="960" y1="532" x2="960" y2="550" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 XLA Stack -->
+ <rect x="60" y="552" width="1800" height="88" rx="12" fill="#0f2744" stroke="#a78bfa" stroke-width="2"/>
+ <text x="88" y="580" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - XLA / OpenXLA Compilation Pipeline</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ede9fe">
+  <rect x="88" y="592" width="70" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="123" y="616" text-anchor="middle">StableHLO</text>
+  <rect x="170" y="592" width="40" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="190" y="616" text-anchor="middle">HLO</text>
+  <rect x="222" y="592" width="50" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="247" y="616" text-anchor="middle">XLA</text>
+  <rect x="284" y="592" width="70" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="319" y="616" text-anchor="middle">OpenXLA</text>
+  <rect x="366" y="592" width="60" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="396" y="616" text-anchor="middle">GSPMD</text>
+  <rect x="438" y="592" width="60" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="468" y="616" text-anchor="middle">Shardy</text>
+  <rect x="510" y="592" width="50" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="535" y="616" text-anchor="middle">PjRT</text>
+  <rect x="572" y="592" width="50" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="597" y="616" text-anchor="middle">TPU</text>
+  <rect x="634" y="592" width="50" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="659" y="616" text-anchor="middle">GPU</text>
+  <rect x="696" y="592" width="50" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="721" y="616" text-anchor="middle">CPU</text>
+  <rect x="758" y="592" width="60" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="788" y="616" text-anchor="middle">Mosaic</text>
+  <rect x="830" y="592" width="60" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="860" y="616" text-anchor="middle">Triton</text>
+  <rect x="902" y="592" width="60" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="932" y="616" text-anchor="middle">Pallas</text>
+  <rect x="974" y="592" width="70" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="1009" y="616" text-anchor="middle">op fusion</text>
+  <rect x="1056" y="592" width="80" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="1096" y="616" text-anchor="middle">layout opt</text>
+  <rect x="1148" y="592" width="80" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="1188" y="616" text-anchor="middle">collectives</text>
+  <rect x="1240" y="592" width="60" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="1270" y="616" text-anchor="middle">AOT</text>
+  <rect x="1312" y="592" width="80" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1352" y="616" text-anchor="middle">xla_bridge</text>
+  <rect x="1404" y="592" width="80" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1444" y="616" text-anchor="middle">PjRT plugin</text>
+  <rect x="1496" y="592" width="70" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="1531" y="616" text-anchor="middle">dump_hlo</text>
+  <rect x="1578" y="592" width="50" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1603" y="616" text-anchor="middle">fp8</text>
+  <rect x="1640" y="592" width="50" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1665" y="616" text-anchor="middle">bf16</text>
+  <rect x="1702" y="592" width="70" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1737" y="616" text-anchor="middle">ROCm</text>
+  <rect x="1784" y="592" width="64" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1816" y="616" text-anchor="middle">CUDA</text>
+ </g>
+
+ <!-- L5 Distributed -->
+ <rect x="60" y="652" width="1800" height="72" rx="12" fill="#0f2744" stroke="#fbbf24" stroke-width="2"/>
+ <text x="88" y="680" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Distributed Arrays &amp; SPMD Parallelism</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#fef3c7">
+  <rect x="88" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="113" y="709" text-anchor="middle">Mesh</text>
+  <rect x="148" y="692" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="193" y="709" text-anchor="middle">PartitionSpec</text>
+  <rect x="248" y="692" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="293" y="709" text-anchor="middle">NamedSharding</text>
+  <rect x="348" y="692" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="388" y="709" text-anchor="middle">shard_map</text>
+  <rect x="438" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="463" y="709" text-anchor="middle">GSPMD</text>
+  <rect x="498" y="692" width="40" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="518" y="709" text-anchor="middle">DP</text>
+  <rect x="548" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="573" y="709" text-anchor="middle">FSDP</text>
+  <rect x="608" y="692" width="40" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="628" y="709" text-anchor="middle">TP</text>
+  <rect x="658" y="692" width="40" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="678" y="709" text-anchor="middle">PP</text>
+  <rect x="708" y="692" width="40" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="728" y="709" text-anchor="middle">EP</text>
+  <rect x="758" y="692" width="40" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="778" y="709" text-anchor="middle">CP</text>
+  <rect x="808" y="692" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="838" y="709" text-anchor="middle">all_gather</text>
+  <rect x="878" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="903" y="709" text-anchor="middle">psum</text>
+  <rect x="938" y="692" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="973" y="709" text-anchor="middle">ppermute</text>
+  <rect x="1018" y="692" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1058" y="709" text-anchor="middle">device_put</text>
+  <rect x="1108" y="692" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1153" y="709" text-anchor="middle">multi-host</text>
+  <rect x="1208" y="692" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1248" y="709" text-anchor="middle">Pathways</text>
+  <rect x="1298" y="692" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1338" y="709" text-anchor="middle">distributed</text>
+  <rect x="1388" y="692" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1433" y="709" text-anchor="middle">explicit SPMD</text>
+  <rect x="1488" y="692" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1528" y="709" text-anchor="middle">auto par</text>
+  <rect x="1578" y="692" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1623" y="709" text-anchor="middle">sharding_const</text>
+  <rect x="1678" y="692" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1718" y="709" text-anchor="middle">reshard</text>
+  <rect x="1768" y="692" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1808" y="709" text-anchor="middle">with_sharding</text>
+ </g>
+
+ <!-- DETAIL jit flow -->
+ <rect x="60" y="740" width="880" height="340" rx="14" fill="#0c1524" stroke="#6366f1" stroke-width="2.5"/>
+ <text x="88" y="772" fill="#6366f1" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">jax.jit Trace-Compile-Execute Flow</text>
+ <text x="88" y="794" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="11">First call traces - subsequent calls reuse compiled XLA executable</text>
+
+ <rect x="88" y="810" width="820" height="36" rx="6" fill="#1e1b4b" stroke="#6366f1"/>
+ <text x="498" y="834" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1: Python fn called - Tracers wrap concrete args (shape/dtype/sharding)</text>
+ <line x1="498" y1="846" x2="498" y2="858" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arrow-indigo)"/>
+ <rect x="88" y="860" width="820" height="36" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="498" y="884" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2: Build ClosedJaxpr - record jax.lax primitive eqns in ANF</text>
+ <line x1="498" y1="896" x2="498" y2="908" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
+ <rect x="88" y="910" width="820" height="36" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="498" y="934" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3: Lower to StableHLO/HLO - GSPMD/Shardy auto-partition if sharded</text>
+ <line x1="498" y1="946" x2="498" y2="958" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
+ <rect x="88" y="960" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="984" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4: XLA compile - fusion + layout + collectives - PjRT executable</text>
+ <line x1="498" y1="996" x2="498" y2="1008" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-indigo)"/>
+ <rect x="88" y="1010" width="820" height="36" rx="6" fill="#1e1b4b" stroke="#6366f1"/>
+ <text x="498" y="1034" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 5: Async dispatch to devices - block_until_ready() for sync - cache reuse</text>
+
+ <text x="88" y="1068" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">grad(jit(f)) and vmap(jit(f)) compose - transformations nest via trace rules</text>
+ <text x="88" y="1084" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">in_shardings/out_shardings/donate_argnums control memory and SPMD layout</text>
+
+ <!-- DETAIL Pallas + Ecosystem -->
+ <rect x="960" y="740" width="900" height="340" rx="14" fill="#0c1224" stroke="#6366f1" stroke-width="2.5"/>
+ <text x="988" y="772" fill="#6366f1" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Pallas Kernels + JAX AI Stack Ecosystem</text>
+ <text x="988" y="794" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="11">Custom kernels when XLA is insufficient - same JAX transforms apply</text>
+
+ <text x="988" y="818" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Pallas (JAX-native kernel language)</text>
+ <rect x="988" y="828" width="200" height="68" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="1088" y="852" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">pallas_call HOF</text>
+ <text x="1088" y="870" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">grid + Ref semantics</text>
+ <text x="1088" y="886" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">grad(jvp/transpose) rules</text>
+ <rect x="1200" y="828" width="200" height="68" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="1300" y="852" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Mosaic (TPU)</text>
+ <text x="1300" y="870" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">FlashAttention Splash</text>
+ <text x="1300" y="886" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Megablox MoE kernels</text>
+ <rect x="1412" y="828" width="200" height="68" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="1512" y="852" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Triton (GPU)</text>
+ <text x="1512" y="870" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">GPU custom kernels</text>
+ <text x="1512" y="886" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">or lower to XLA scan</text>
+ <rect x="1624" y="828" width="224" height="68" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1736" y="852" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Debug on CPU via XLA</text>
+ <text x="1736" y="870" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">jax.debug.print - verify numerics</text>
+ <text x="1736" y="886" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">before Triton/Mosaic deploy</text>
+
+ <text x="988" y="916" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Transformation Composition Example</text>
+ <rect x="988" y="926" width="820" height="36" rx="6" fill="#1e1b4b" stroke="#6366f1"/>
+ <text x="1398" y="950" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">train_step = jit(shard_map(grad(loss_fn), mesh, in_specs, out_specs))</text>
+
+ <text x="988" y="984" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">JAX AI Stack (built on JAX)</text>
+ <rect x="988" y="994" width="70" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1023" y="1014" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Flax</text>
+ <text x="1023" y="1030" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">NNX models</text>
+ <rect x="1070" y="994" width="80" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1110" y="1014" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">MaxText</text>
+ <text x="1110" y="1030" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">LLM pretrain</text>
+ <rect x="1162" y="994" width="70" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1197" y="1014" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Tunix</text>
+ <text x="1197" y="1030" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">post-train RL</text>
+ <rect x="1244" y="994" width="60" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1274" y="1014" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Optax</text>
+ <text x="1274" y="1030" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">optimizers</text>
+ <rect x="1316" y="994" width="60" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1346" y="1014" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Orbax</text>
+ <text x="1346" y="1030" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">checkpoints</text>
+ <rect x="1388" y="994" width="60" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1418" y="1014" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Grain</text>
+ <text x="1418" y="1030" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">dataload</text>
+ <rect x="1460" y="994" width="80" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1500" y="1014" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">JetStream</text>
+ <text x="1500" y="1030" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">XLA infer</text>
+ <rect x="1552" y="994" width="60" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1582" y="1014" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">vLLM</text>
+ <text x="1582" y="1030" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">TPU infer</text>
+ <rect x="1624" y="994" width="80" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1664" y="1014" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">SGLang-JAX</text>
+ <text x="1664" y="1030" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">TPU serve</text>
+ <rect x="1716" y="994" width="132" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1782" y="1014" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">MaxDiffusion</text>
+ <text x="1782" y="1030" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">diffusion models</text>
+
+ <text x="988" y="1068" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">shard_map = manual SPMD escape hatch - jit = automatic GSPMD partition</text>
+
+ <!-- L6 Hardware -->
+ <rect x="60" y="1100" width="1800" height="72" rx="12" fill="#1a1208" stroke="#6366f1" stroke-width="2"/>
+ <text x="88" y="1128" fill="#6366f1" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Hardware Abstraction via PjRT + OpenXLA</text>
+ <text x="960" y="1154" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="13">Same Python code - TPU / GPU(CUDA/ROCm) / CPU - Pathways multi-slice - foundation of modern ML infra</text>
+
+ <!-- footers -->
+ <rect x="60" y="1192" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1212" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Init path: import jax - discover devices via PjRT - create Mesh - define sharded pytrees</text>
+ <text x="960" y="1230" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Step path: transform(fn) - trace to jaxpr - XLA compile - async execute - compose grad/vmap/jit</text>
+
+ <text x="60" y="1276" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: docs.jax.dev - jaxpr/key-concepts/jit/shard_map/pallas - OpenXLA/GSPMD - Cloud TPU JAX AI stack</text>
+</svg>

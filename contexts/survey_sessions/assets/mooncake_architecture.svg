@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-amber" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#f59e0b"/>
+  </marker>
+  <marker id="arrow-teal" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#14b8a6"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">Mooncake Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">KVCache-centric Disaggregated LLM Serving - Kimi/Moonshot AI - FAST 2025 / ToS 2025 - github.com/kvcache-ai/Mooncake</text>
+
+ <!-- L1 Applications -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#f59e0b" stroke-width="2"/>
+ <text x="88" y="124" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Production Serving + Ecosystem (Kimi chatbot platform - open-source KV infra)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="50" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="113" y="162" text-anchor="middle">Kimi</text>
+  <rect x="150" y="136" width="80" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="190" y="162" text-anchor="middle">Moonshot</text>
+  <rect x="242" y="136" width="70" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="277" y="162" text-anchor="middle">Kimi K2</text>
+  <rect x="324" y="136" width="50" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="349" y="162" text-anchor="middle">vLLM</text>
+  <rect x="386" y="136" width="60" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="416" y="162" text-anchor="middle">SGLang</text>
+  <rect x="458" y="136" width="80" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="498" y="162" text-anchor="middle">TensorRT-LLM</text>
+  <rect x="550" y="136" width="60" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="580" y="162" text-anchor="middle">LMCache</text>
+  <rect x="622" y="136" width="60" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="652" y="162" text-anchor="middle">FlexKV</text>
+  <rect x="694" y="136" width="70" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="729" y="162" text-anchor="middle">vLLM-Omni</text>
+  <rect x="776" y="136" width="60" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="806" y="162" text-anchor="middle">HiCache</text>
+  <rect x="848" y="136" width="50" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="873" y="162" text-anchor="middle">NIXL</text>
+  <rect x="910" y="136" width="80" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="950" y="162" text-anchor="middle">100B tok/d</text>
+  <rect x="1002" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1037" y="162" text-anchor="middle">1000+ nodes</text>
+  <rect x="1084" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1114" y="162" text-anchor="middle">+75% req</text>
+  <rect x="1156" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1186" y="162" text-anchor="middle">525% tp</text>
+  <rect x="1228" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1253" y="162" text-anchor="middle">FAST</text>
+  <rect x="1290" y="136" width="40" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1310" y="162" text-anchor="middle">ToS</text>
+  <rect x="1342" y="136" width="60" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1372" y="162" text-anchor="middle">2025</text>
+  <rect x="1414" y="136" width="70" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="1449" y="162" text-anchor="middle">long-ctx</text>
+  <rect x="1496" y="136" width="70" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="1531" y="162" text-anchor="middle">agentic</text>
+  <rect x="1578" y="136" width="80" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="1618" y="162" text-anchor="middle">multi-turn</text>
+  <rect x="1670" y="136" width="60" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1700" y="162" text-anchor="middle">EPD</text>
+  <rect x="1742" y="136" width="106" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1795" y="162" text-anchor="middle">checkpoint-engine</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Conductor -->
+ <rect x="60" y="216" width="1800" height="120" rx="12" fill="#0f2744" stroke="#f59e0b" stroke-width="2"/>
+ <text x="88" y="244" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Conductor Global Scheduler (KVCache-centric dispatch - SLO-aware overload management)</text>
+ <rect x="88" y="258" width="340" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="258" y="282" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">KVCache-Centric Scheduling</text>
+ <text x="258" y="300" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Select prefill + decode pair per request</text>
+ <text x="258" y="314" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Maximize prefix reuse + balance load + TTFT SLO</text>
+ <rect x="448" y="258" width="340" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="618" y="282" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Cache Block Management</text>
+ <text x="618" y="300" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Replicate hot blocks - swap cold to SSD tier</text>
+ <text x="618" y="314" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Heuristic hot-spot migration without exact prediction</text>
+ <rect x="808" y="258" width="340" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="978" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Early Rejection Policy</text>
+ <text x="978" y="300" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Predict decode slot availability after prefill</text>
+ <text x="978" y="314" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Reject early in overload - predict gen length + load</text>
+ <rect x="1168" y="258" width="340" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1338" y="282" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">SLO Metrics</text>
+ <text x="1338" y="300" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">TTFT for prefill - TBT for decode stage</text>
+ <text x="1338" y="314" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Goodput: only fully completed requests count</text>
+ <rect x="1528" y="258" width="300" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1678" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Priority + Overload</text>
+ <text x="1678" y="300" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Priority-based scheduling under peak demand</text>
+ <text x="1678" y="314" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Mitigate load fluctuation from naive reject</text>
+ <line x1="960" y1="336" x2="960" y2="354" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Inference Clusters -->
+ <rect x="60" y="356" width="1800" height="88" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2"/>
+ <text x="88" y="384" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - Disaggregated Inference Clusters (separate prefill pool + decode pool + optional EPD)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0f2fe">
+  <rect x="88" y="396" width="90" height="32" rx="6" fill="#422006" stroke="#fbbf24"/><text x="133" y="418" text-anchor="middle">Prefill Pool</text>
+  <rect x="190" y="396" width="60" height="32" rx="6" fill="#422006" stroke="#fbbf24"/><text x="220" y="418" text-anchor="middle">CPP</text>
+  <rect x="262" y="396" width="80" height="32" rx="6" fill="#422006" stroke="#fbbf24"/><text x="302" y="418" text-anchor="middle">layer-wise</text>
+  <rect x="354" y="396" width="80" height="32" rx="6" fill="#422006" stroke="#fbbf24"/><text x="394" y="418" text-anchor="middle">chunk prefill</text>
+  <rect x="446" y="396" width="90" height="32" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="491" y="418" text-anchor="middle">Decode Pool</text>
+  <rect x="548" y="396" width="90" height="32" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="593" y="418" text-anchor="middle">cont batch</text>
+  <rect x="650" y="396" width="70" height="32" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="685" y="418" text-anchor="middle">async KV</text>
+  <rect x="732" y="396" width="60" height="32" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="762" y="418" text-anchor="middle">local sched</text>
+  <rect x="804" y="396" width="80" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="844" y="418" text-anchor="middle">Messenger</text>
+  <rect x="896" y="396" width="70" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="931" y="418" text-anchor="middle">per-node</text>
+  <rect x="978" y="396" width="80" height="32" rx="6" fill="#431407" stroke="#fb923c"/><text x="1018" y="418" text-anchor="middle">Encode EPD</text>
+  <rect x="1070" y="396" width="60" height="32" rx="6" fill="#431407" stroke="#fb923c"/><text x="1100" y="418" text-anchor="middle">ViT enc</text>
+  <rect x="1142" y="396" width="80" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1182" y="418" text-anchor="middle">VRAM save</text>
+  <rect x="1234" y="396" width="80" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1274" y="418" text-anchor="middle">stream xfer</text>
+  <rect x="1326" y="396" width="70" height="32" rx="6" fill="#422006" stroke="#fbbf24"/><text x="1361" y="418" text-anchor="middle">P/D split</text>
+  <rect x="1408" y="396" width="80" height="32" rx="6" fill="#422006" stroke="#fbbf24"/><text x="1448" y="418" text-anchor="middle">xPyD scale</text>
+  <rect x="1500" y="396" width="80" height="32" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1540" y="418" text-anchor="middle">double-check</text>
+  <rect x="1592" y="396" width="70" height="32" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1627" y="418" text-anchor="middle">TBT SLO</text>
+  <rect x="1674" y="396" width="80" height="32" rx="6" fill="#431407" stroke="#fb923c"/><text x="1714" y="418" text-anchor="middle">RL weights</text>
+  <rect x="1766" y="396" width="82" height="32" rx="6" fill="#431407" stroke="#fb923c"/><text x="1807" y="418" text-anchor="middle">P2P RDMA</text>
+ </g>
+ <line x1="960" y1="444" x2="960" y2="462" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Mooncake Store -->
+ <rect x="60" y="464" width="1800" height="200" rx="12" fill="#0f2744" stroke="#f59e0b" stroke-width="2.5"/>
+ <text x="88" y="492" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Mooncake Store (distributed global KVCache pool - elastic disaggregated storage)</text>
+
+ <rect x="88" y="508" width="420" height="136" rx="12" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="298" y="536" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Paged Block Storage</text>
+ <text x="298" y="560" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">KV blocks: 16-512 tokens per block (model-tuned)</text>
+ <text x="298" y="578" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Prefix hash key: block hash + preceding prefix chain</text>
+ <text x="298" y="596" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Dedup identical prefixes across requests/sessions</text>
+ <text x="298" y="614" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Object APIs + memory transfer APIs</text>
+ <text x="298" y="632" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Context caching API for external reuse</text>
+
+ <rect x="528" y="508" width="420" height="136" rx="12" fill="#0c2d2d" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="738" y="536" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Multi-Tier Cache Hierarchy</text>
+ <text x="738" y="560" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">DRAM tier: near-GPU CPU memory (primary)</text>
+ <text x="738" y="578" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">SSD/NVMe tier: larger capacity cold cache</text>
+ <text x="738" y="596" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Eviction: LRU / LFU / LengthAware policies</text>
+ <text x="738" y="614" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Uses underutilized CPU/DRAM/SSD/NIC of GPU cluster</text>
+ <text x="738" y="632" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Striping + parallel I/O for large objects</text>
+
+ <rect x="968" y="508" width="420" height="136" rx="12" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1178" y="536" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Replication + Placement Policy</text>
+ <text x="1178" y="560" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Replica count per object - soft/hard pin</text>
+ <text x="1178" y="578" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Preferred segments - cache load balancing</text>
+ <text x="1178" y="596" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Hot blocks replicated to avoid fetch congestion</text>
+ <text x="1178" y="614" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Elastic add/remove storage nodes independent of engines</text>
+ <text x="1178" y="632" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Cluster-level shared pool vs per-instance cache</text>
+
+ <rect x="1408" y="508" width="420" height="136" rx="12" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="1618" y="536" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Tensor-Oriented Data Model</text>
+ <text x="1618" y="560" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Tensors as fundamental carrier across stack</text>
+ <text x="1618" y="578" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">KVCache blocks + model weights + hidden states</text>
+ <text x="1618" y="596" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Mooncake Backend: elastic tensor compute layer</text>
+ <text x="1618" y="614" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Hash-based prefix lookup for cross-instance reuse</text>
+ <text x="1618" y="632" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Open trace dataset with remapped block hashes</text>
+
+ <line x1="960" y1="644" x2="960" y2="662" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L5 Transfer Engine -->
+ <rect x="60" y="664" width="1800" height="120" rx="12" fill="#0f2744" stroke="#14b8a6" stroke-width="2"/>
+ <text x="88" y="692" fill="#14b8a6" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Transfer Engine (TE) - high-performance zero-copy data movement backbone</text>
+ <rect x="88" y="706" width="340" height="64" rx="10" fill="#0c2d2d" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="258" y="730" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">RDMA + Multi-NIC</text>
+ <text x="258" y="748" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Aggregate bandwidth across multiple NICs</text>
+ <text x="258" y="762" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">87 GB/s (4x200G) - 190 GB/s (8x400G RoCE)</text>
+ <rect x="448" y="706" width="340" height="64" rx="10" fill="#0c2d2d" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="618" y="730" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Topology-Aware Routing</text>
+ <text x="618" y="748" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">NUMA affinity - optimal device selection</text>
+ <text x="618" y="762" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Auto failover on transient network errors</text>
+ <rect x="808" y="706" width="340" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="978" y="730" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Heterogeneous Transports</text>
+ <text x="978" y="748" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">TCP - RDMA - NVLink - NVMe-oF - AWS EFA</text>
+ <text x="978" y="762" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">CUDA/MUSA/HIP/Ascend/CXL/Barex support</text>
+ <rect x="1168" y="706" width="340" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="1338" y="730" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">GPUDirect + Zero-Copy</text>
+ <text x="1338" y="748" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Batched cross-node KV block transfer</text>
+ <text x="1338" y="762" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Layer-by-layer stream during prefill overlap</text>
+ <rect x="1528" y="706" width="300" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1678" y="730" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Unified Transfer API</text>
+ <text x="1678" y="748" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">DRAM/VRAM/NVMe tensor movement</text>
+ <text x="1678" y="762" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Foundation for Store + P2P weight sync</text>
+ <line x1="960" y1="784" x2="960" y2="802" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L6 Connectors -->
+ <rect x="60" y="804" width="1800" height="120" rx="12" fill="#0f2744" stroke="#a78bfa" stroke-width="2"/>
+ <text x="88" y="832" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Framework Connectors (vLLM / SGLang / TensorRT-LLM integration layer)</text>
+ <rect x="88" y="846" width="340" height="64" rx="10" fill="#2e1065" stroke="#8b5cf6" stroke-width="2"/>
+ <text x="258" y="870" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">MooncakeConnector (PD xfer)</text>
+ <text x="258" y="888" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">vLLM v1 KV Connector for disagg prefill-decode</text>
+ <text x="258" y="902" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Prefill worker to decode worker KV blocks via TE</text>
+ <rect x="448" y="846" width="340" height="64" rx="10" fill="#2e1065" stroke="#8b5cf6" stroke-width="2"/>
+ <text x="618" y="870" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">MooncakeStoreConnector</text>
+ <text x="618" y="888" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Cluster-level KV pool - hash prefix caching</text>
+ <text x="618" y="902" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Cross-instance reuse - agentic multi-turn workloads</text>
+ <rect x="808" y="846" width="340" height="64" rx="10" fill="#0c2d2d" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="978" y="870" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">SGLang Integration</text>
+ <text x="978" y="888" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">PD disagg + HiCache remote tier + EPD multimodal</text>
+ <text x="978" y="902" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">SGLang-Omni relay - RL P2P weight transfer</text>
+ <rect x="1168" y="846" width="340" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="1338" y="870" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Other Integrations</text>
+ <text x="1338" y="888" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">TensorRT-LLM cache_transmission utils</text>
+ <text x="1338" y="902" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">LMCache remote - NIXL plugin - FlexKV - Ascend</text>
+ <rect x="1528" y="846" width="300" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1678" y="870" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">vLLM-Omni Stages</text>
+ <text x="1678" y="888" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">MooncakeTransferEngineConnector</text>
+ <text x="1678" y="902" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Cross-stage tensor/blob relay in omni pipelines</text>
+ <line x1="960" y1="924" x2="960" y2="942" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L7 Hardware -->
+ <rect x="60" y="944" width="1800" height="56" rx="12" fill="#0f2744" stroke="#22d3ee" stroke-width="2"/>
+ <text x="88" y="972" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L7 - Cluster Resources (pooled CPU/DRAM/SSD/NIC/GPU - trading storage for computation)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0f2fe">
+  <rect x="88" y="980" width="50" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="113" y="997" text-anchor="middle">A800</text>
+  <rect x="148" y="980" width="50" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="173" y="997" text-anchor="middle">H800</text>
+  <rect x="208" y="980" width="50" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="233" y="997" text-anchor="middle">H200</text>
+  <rect x="268" y="980" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="293" y="997" text-anchor="middle">RDMA</text>
+  <rect x="328" y="980" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="353" y="997" text-anchor="middle">RoCE</text>
+  <rect x="388" y="980" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="413" y="997" text-anchor="middle">400G</text>
+  <rect x="448" y="980" width="60" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="478" y="997" text-anchor="middle">GPUDirect</text>
+  <rect x="518" y="980" width="40" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="538" y="997" text-anchor="middle">CPU</text>
+  <rect x="568" y="980" width="50" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="593" y="997" text-anchor="middle">DRAM</text>
+  <rect x="628" y="980" width="40" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="648" y="997" text-anchor="middle">SSD</text>
+  <rect x="678" y="980" width="40" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="698" y="997" text-anchor="middle">NIC</text>
+  <rect x="728" y="980" width="40" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="748" y="997" text-anchor="middle">GPU</text>
+  <rect x="778" y="980" width="50" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="803" y="997" text-anchor="middle">NVMe</text>
+  <rect x="838" y="980" width="50" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="863" y="997" text-anchor="middle">NUMA</text>
+  <rect x="898" y="980" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="923" y="997" text-anchor="middle">+115%</text>
+  <rect x="958" y="980" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="983" y="997" text-anchor="middle">+107%</text>
+  <rect x="1018" y="980" width="70" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1053" y="997" text-anchor="middle">224k pre</text>
+  <rect x="1098" y="980" width="70" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1133" y="997" text-anchor="middle">288k dec</text>
+  <rect x="1178" y="980" width="60" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="1208" y="997" text-anchor="middle">Ascend</text>
+  <rect x="1248" y="980" width="50" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="1273" y="997" text-anchor="middle">EFA</text>
+  <rect x="1308" y="980" width="50" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="1333" y="997" text-anchor="middle">NVLink</text>
+  <rect x="1368" y="980" width="60" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="1398" y="997" text-anchor="middle">disagg</text>
+  <rect x="1438" y="980" width="70" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="1473" y="997" text-anchor="middle">near-GPU</text>
+  <rect x="1518" y="980" width="80" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="1558" y="997" text-anchor="middle">zero extra</text>
+  <rect x="1608" y="980" width="60" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1638" y="997" text-anchor="middle">128 GPU</text>
+  <rect x="1678" y="980" width="50" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1703" y="997" text-anchor="middle">1T EP</text>
+  <rect x="1738" y="980" width="110" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1793" y="997" text-anchor="middle">7x RL sync</text>
+ </g>
+
+ <!-- DETAIL Pipeline -->
+ <rect x="60" y="1016" width="880" height="340" rx="14" fill="#0c1524" stroke="#f59e0b" stroke-width="2.5"/>
+ <text x="88" y="1048" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Four-Step Request Workflow (Conductor-orchestrated)</text>
+ <text x="88" y="1070" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="11">Tokenize - schedule - prefix reuse - chunked prefill - stream KV - decode batch</text>
+
+ <rect x="88" y="1086" width="820" height="36" rx="6" fill="#422006" stroke="#fbbf24"/>
+ <text x="498" y="1110" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1 KVCache Reuse: load prefix blocks from Store/remote CPU to prefill GPU (skip if miss)</text>
+ <line x1="498" y1="1122" x2="498" y2="1134" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrow-amber)"/>
+ <rect x="88" y="1136" width="820" height="36" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="498" y="1160" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2 Incremental Prefill: CPP chunks + layer-wise compute/store overlap in prefill pool</text>
+ <line x1="498" y1="1172" x2="498" y2="1184" stroke="#fb923c" stroke-width="1.5"/>
+ <rect x="88" y="1186" width="820" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="498" y="1210" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3 KVCache Transfer: Messenger streams per-layer KV via TE to decode node CPU DRAM async</text>
+ <line x1="498" y1="1222" x2="498" y2="1234" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+ <rect x="88" y="1236" width="820" height="36" rx="6" fill="#2e1065" stroke="#8b5cf6"/>
+ <text x="498" y="1260" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4 Decode: async KV load to GPU + continuous batching - local TBT SLO double-check</text>
+
+ <text x="88" y="1298" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Layer-wise overlap: prefill time approx max(KV load, compute) - VRAM need only 1 request</text>
+ <text x="88" y="1314" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Cache-aware Algorithm 1: prefix_len match + load balance + transfer time prediction</text>
+ <text x="88" y="1344" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Design motto: Trading More Storage for Less Computation (FAST 2025 paper title)</text>
+
+ <!-- DETAIL Position -->
+ <rect x="960" y="1016" width="900" height="340" rx="14" fill="#0c1224" stroke="#f59e0b" stroke-width="2.5"/>
+ <text x="988" y="1048" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Design Position: KVCache-Centric vs Compute-Centric Serving</text>
+ <text x="988" y="1070" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="11">Disaggregate P/D + global KV pool + RDMA transfer - optimize for prefix-heavy long context</text>
+
+ <text x="988" y="1094" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Spectrum Comparison</text>
+ <rect x="988" y="1104" width="200" height="68" rx="6" fill="#2e1065" stroke="#8b5cf6"/>
+ <text x="1088" y="1128" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">vLLM standalone</text>
+ <text x="1088" y="1146" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">Local prefix cache per instance</text>
+ <text x="1088" y="1162" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">Colocated prefill + decode</text>
+ <rect x="1200" y="1104" width="200" height="68" rx="6" fill="#0c2d2d" stroke="#14b8a6"/>
+ <text x="1300" y="1128" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Disagg P/D only</text>
+ <text x="1300" y="1146" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Split clusters - no global KV pool</text>
+ <text x="1300" y="1162" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Transfer KV but limited reuse scope</text>
+ <rect x="1412" y="1104" width="200" height="68" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="1512" y="1128" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">LMCache / FlexKV</text>
+ <text x="1512" y="1146" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">External KV cache layers</text>
+ <text x="1512" y="1162" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Can use Mooncake TE as backend</text>
+ <rect x="1624" y="1104" width="224" height="68" rx="6" fill="#422006" stroke="#fbbf24"/>
+ <text x="1736" y="1128" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Mooncake (this work)</text>
+ <text x="1736" y="1146" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">Global KV pool + Conductor + TE + Store</text>
+ <text x="1736" y="1162" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">Full-stack P/D disagg for Kimi production</text>
+
+ <text x="988" y="1190" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Key Architectural Decisions</text>
+ <rect x="988" y="1200" width="130" height="48" rx="6" fill="#422006" stroke="#fbbf24"/>
+ <text x="1053" y="1222" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">KV-first sched</text>
+ <text x="1053" y="1238" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">Cache drives placement</text>
+ <rect x="1130" y="1200" width="130" height="48" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="1195" y="1222" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">P/D disagg</text>
+ <text x="1195" y="1238" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Independent scale pools</text>
+ <rect x="1272" y="1200" width="130" height="48" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1337" y="1222" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Global Store</text>
+ <text x="1337" y="1238" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">DRAM+SSD pooled cache</text>
+ <rect x="1414" y="1200" width="130" height="48" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1479" y="1222" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">RDMA TE</text>
+ <text x="1479" y="1238" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">Zero-copy KV movement</text>
+ <rect x="1556" y="1200" width="130" height="48" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="1621" y="1222" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Early reject</text>
+ <text x="1621" y="1238" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Overload-aware goodput</text>
+ <rect x="1698" y="1200" width="150" height="48" rx="6" fill="#422006" stroke="#fbbf24"/>
+ <text x="1773" y="1222" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">CPP + stream</text>
+ <text x="1773" y="1238" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">Long-context TTFT control</text>
+
+ <text x="988" y="1268" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Open-Source Components (kvcache-ai/Mooncake)</text>
+ <rect x="988" y="1278" width="860" height="48" rx="6" fill="#1a1208" stroke="#f59e0b"/>
+ <text x="1418" y="1302" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="12">Transfer Engine (TE) + Mooncake Store + Connectors - Apache-2.0</text>
+ <text x="1418" y="1318" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">TE open Nov 2024 - Store open Mar 2025 - production trace with hash_ids published</text>
+
+ <!-- footer bar -->
+ <rect x="60" y="1370" width="1800" height="72" rx="12" fill="#1a1208" stroke="#f59e0b" stroke-width="2"/>
+ <text x="88" y="1398" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">Design Position (Moonshot AI Kimi platform - KVCache as first-class schedulable resource)</text>
+ <text x="960" y="1424" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="13">Disagg P/D clusters + global Mooncake Store + Transfer Engine + Conductor - long-context prefix reuse at scale</text>
+
+ <!-- footers -->
+ <rect x="60" y="1458" width="1800" height="36" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1480" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10">Deploy: vLLM MooncakeConnector/StoreConnector - SGLang HiCache - pip/build from kvcache-ai.github.io/Mooncake</text>
+
+ <text x="60" y="1510" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: arXiv:2407.00079 - FAST 2025 - ToS 2025 - github.com/kvcache-ai/Mooncake - vllm.ai/blog/mooncake-store</text>
+</svg>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-amber" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#fbbf24"/>
+  </marker>
+  <marker id="arrow-purple" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#a78bfa"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">StableHLO Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">Portable ML IR Layer - MLIR Dialects + Versioning + Serialization - openxla.org/stablehlo</text>
+
+ <!-- L1 Producers -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#fbbf24" stroke-width="2"/>
+ <text x="88" y="124" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Framework Producers (emit StableHLO / CHLO programs)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="50" height="40" rx="6" fill="#422006" stroke="#fcd34d"/><text x="113" y="162" text-anchor="middle">JAX</text>
+  <rect x="150" y="136" width="90" height="40" rx="6" fill="#422006" stroke="#fcd34d"/><text x="195" y="162" text-anchor="middle">jax.export</text>
+  <rect x="252" y="136" width="80" height="40" rx="6" fill="#422006" stroke="#ff6f00"/><text x="292" y="162" text-anchor="middle">TensorFlow</text>
+  <rect x="344" y="136" width="90" height="40" rx="6" fill="#422006" stroke="#ee4c2c"/><text x="389" y="162" text-anchor="middle">PyTorch</text>
+  <rect x="446" y="136" width="80" height="40" rx="6" fill="#422006" stroke="#ee4c2c"/><text x="486" y="162" text-anchor="middle">torch.export</text>
+  <rect x="538" y="136" width="80" height="40" rx="6" fill="#422006" stroke="#ee4c2c"/><text x="578" y="162" text-anchor="middle">PyTorch/XLA</text>
+  <rect x="630" y="136" width="80" height="40" rx="6" fill="#422006" stroke="#fcd34d"/><text x="670" y="162" text-anchor="middle">SavedModel</text>
+  <rect x="722" y="136" width="70" height="40" rx="6" fill="#422006" stroke="#fcd34d"/><text x="757" y="162" text-anchor="middle">TF Lite</text>
+  <rect x="804" y="136" width="60" height="40" rx="6" fill="#422006" stroke="#fcd34d"/><text x="834" y="162" text-anchor="middle">IREE</text>
+  <rect x="876" y="136" width="70" height="40" rx="6" fill="#422006" stroke="#fcd34d"/><text x="911" y="162" text-anchor="middle">AI Edge</text>
+  <rect x="958" y="136" width="80" height="40" rx="6" fill="#422006" stroke="#fcd34d"/><text x="998" y="162" text-anchor="middle">import HLO</text>
+  <rect x="1050" y="136" width="80" height="40" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1090" y="162" text-anchor="middle">export HLO</text>
+  <rect x="1142" y="136" width="90" height="40" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1187" y="162" text-anchor="middle">mlir python</text>
+  <rect x="1244" y="136" width="80" height="40" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1284" y="162" text-anchor="middle">C++ builder</text>
+  <rect x="1336" y="136" width="80" height="40" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1376" y="162" text-anchor="middle">text format</text>
+  <rect x="1428" y="136" width="80" height="40" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1468" y="162" text-anchor="middle">bytecode</text>
+  <rect x="1520" y="136" width="90" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1565" y="162" text-anchor="middle">custom_call</text>
+  <rect x="1622" y="136" width="80" height="40" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1662" y="162" text-anchor="middle">func @main</text>
+  <rect x="1714" y="136" width="70" height="40" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1749" y="162" text-anchor="middle">module</text>
+  <rect x="1796" y="136" width="52" height="40" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1822" y="162" text-anchor="middle">.mlir</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Dialect Stack -->
+ <rect x="60" y="216" width="1800" height="120" rx="12" fill="#0f2744" stroke="#a78bfa" stroke-width="2"/>
+ <text x="88" y="244" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - MLIR Dialect Stack (companion + versioned dialects)</text>
+
+ <rect x="88" y="258" width="420" height="64" rx="10" fill="#241a3d" stroke="#c4b5fd" stroke-width="2"/>
+ <text x="298" y="282" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">CHLO - Client HLO</text>
+ <text x="298" y="302" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Higher-level sugar ops - decompose to StableHLO core opset</text>
+ <text x="298" y="316" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Staging area before ops graduate into StableHLO spec</text>
+
+ <rect x="528" y="258" width="420" height="64" rx="10" fill="#422006" stroke="#fcd34d" stroke-width="2.5"/>
+ <text x="738" y="282" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">StableHLO - Core OpSet</text>
+ <text x="738" y="302" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Community-owned portable IR - spec + reference impl</text>
+ <text x="738" y="316" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">~100 HLO ops - closed set - framework/compiler contract</text>
+
+ <rect x="968" y="258" width="420" height="64" rx="10" fill="#431407" stroke="#ea580c" stroke-width="2"/>
+ <text x="1178" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">VHLO - Versioned StableHLO</text>
+ <text x="1178" y="302" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Add-only dialect snapshots at each minor version bump</text>
+ <text x="1178" y="316" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Forward + backward compat during serialize/deserialize</text>
+
+ <rect x="1408" y="258" width="420" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1618" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">MHLO - Legacy XLA Dialect</text>
+ <text x="1618" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Historical HLO in XLA - StableHLO evolved from MHLO</text>
+ <text x="1618" y="316" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Legalize MHLO - StableHLO for neutral portability layer</text>
+
+ <line x1="508" y1="290" x2="524" y2="290" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrow-purple)"/>
+ <line x1="948" y1="290" x2="964" y2="290" stroke="#fbbf24" stroke-width="2" marker-end="url(#arrow-amber)"/>
+ <line x1="1388" y1="290" x2="1404" y2="290" stroke="#ea580c" stroke-width="2" marker-end="url(#arrow-amber)"/>
+ <line x1="960" y1="336" x2="960" y2="354" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Core IR -->
+ <rect x="60" y="356" width="1800" height="200" rx="12" fill="#0f2744" stroke="#fbbf24" stroke-width="2.5"/>
+ <text x="88" y="384" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - StableHLO Core IR (types, ops, attrs, functions)</text>
+
+ <!-- Types left -->
+ <rect x="88" y="398" width="420" height="140" rx="12" fill="#422006" stroke="#fcd34d" stroke-width="2"/>
+ <text x="298" y="428" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Types &amp; Shapes</text>
+ <text x="298" y="452" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Ranked/unranked tensor - tuple (legacy interop)</text>
+ <text x="298" y="470" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Static shapes primary - dynamic shape ops supported</text>
+ <text x="298" y="488" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Quantized types - FP8 - sparsity attrs</text>
+ <text x="298" y="506" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Token type for side-effect ordering (infeed/outfeed)</text>
+ <text x="298" y="524" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Shape inference rules per op in spec</text>
+
+ <!-- Ops center -->
+ <rect x="528" y="398" width="864" height="140" rx="12" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="960" y="428" text-anchor="middle" fill="#fef9c3" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">StableHLO OpSet Categories (~100 ops)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="10" fill="#fef3c7">
+  <rect x="548" y="440" width="90" height="28" rx="5" fill="#431407" stroke="#fcd34d"/><text x="593" y="459" text-anchor="middle">elementwise</text>
+  <rect x="648" y="440" width="70" height="28" rx="5" fill="#431407" stroke="#fcd34d"/><text x="683" y="459" text-anchor="middle">reduce</text>
+  <rect x="728" y="440" width="70" height="28" rx="5" fill="#431407" stroke="#fcd34d"/><text x="763" y="459" text-anchor="middle">dot/conv</text>
+  <rect x="808" y="440" width="80" height="28" rx="5" fill="#431407" stroke="#fcd34d"/><text x="848" y="459" text-anchor="middle">data move</text>
+  <rect x="898" y="440" width="80" height="28" rx="5" fill="#431407" stroke="#fcd34d"/><text x="938" y="459" text-anchor="middle">collectives</text>
+  <rect x="988" y="440" width="70" height="28" rx="5" fill="#431407" stroke="#fcd34d"/><text x="1023" y="459" text-anchor="middle">dynamic</text>
+  <rect x="1068" y="440" width="70" height="28" rx="5" fill="#431407" stroke="#fcd34d"/><text x="1103" y="459" text-anchor="middle">quantize</text>
+  <rect x="1148" y="440" width="60" height="28" rx="5" fill="#431407" stroke="#fcd34d"/><text x="1178" y="459" text-anchor="middle">sparse</text>
+  <rect x="1218" y="440" width="80" height="28" rx="5" fill="#431407" stroke="#fcd34d"/><text x="1258" y="459" text-anchor="middle">custom_call</text>
+  <rect x="1308" y="440" width="70" height="28" rx="5" fill="#431407" stroke="#fcd34d"/><text x="1343" y="459" text-anchor="middle">rng/fft</text>
+  <rect x="548" y="478" width="80" height="28" rx="5" fill="#431407" stroke="#fcd34d"/><text x="588" y="497" text-anchor="middle">all_reduce</text>
+  <rect x="638" y="478" width="80" height="28" rx="5" fill="#431407" stroke="#fcd34d"/><text x="678" y="497" text-anchor="middle">all_gather</text>
+  <rect x="728" y="478" width="90" height="28" rx="5" fill="#431407" stroke="#fcd34d"/><text x="773" y="497" text-anchor="middle">reduce_scatter</text>
+  <rect x="828" y="478" width="80" height="28" rx="5" fill="#431407" stroke="#fcd34d"/><text x="868" y="497" text-anchor="middle">all_to_all</text>
+  <rect x="918" y="478" width="100" height="28" rx="5" fill="#431407" stroke="#fcd34d"/><text x="968" y="497" text-anchor="middle">collective_perm</text>
+  <rect x="1028" y="478" width="60" height="28" rx="5" fill="#431407" stroke="#fcd34d"/><text x="1058" y="497" text-anchor="middle">send/recv</text>
+  <rect x="1098" y="478" width="60" height="28" rx="5" fill="#431407" stroke="#fcd34d"/><text x="1128" y="497" text-anchor="middle">infeed</text>
+  <rect x="1168" y="478" width="60" height="28" rx="5" fill="#431407" stroke="#fcd34d"/><text x="1198" y="497" text-anchor="middle">outfeed</text>
+  <rect x="1238" y="478" width="70" height="28" rx="5" fill="#431407" stroke="#fcd34d"/><text x="1273" y="497" text-anchor="middle">replica_id</text>
+  <rect x="1318" y="478" width="60" height="28" rx="5" fill="#431407" stroke="#fcd34d"/><text x="1348" y="497" text-anchor="middle">after_all</text>
+ </g>
+ <text x="960" y="524" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Closed opset - each op has spec semantics + reference impl + compatibility rules</text>
+
+ <!-- Attrs right -->
+ <rect x="1412" y="398" width="420" height="140" rx="12" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1622" y="428" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Attributes &amp; Sharding</text>
+ <text x="1622" y="452" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">#stablehlo.sharding - mesh axis annotations</text>
+ <text x="1622" y="470" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">ShardingConstraint - ManualComputation</text>
+ <text x="1622" y="488" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Precision config - conv/d dot dims - window attrs</text>
+ <text x="1622" y="506" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">FuncOp @main - single-block regions (no jump ops)</text>
+ <text x="1622" y="524" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">MLIR syntax for max framework/compiler interop</text>
+
+ <line x1="960" y1="556" x2="960" y2="574" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Transform Pipeline -->
+ <rect x="60" y="576" width="1800" height="88" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2"/>
+ <text x="88" y="604" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Compiler Pass Pipeline (MLIR transforms in stablehlo repo)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0f2fe">
+  <rect x="88" y="616" width="80" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="128" y="640" text-anchor="middle">CHLO lower</text>
+  <rect x="180" y="616" width="90" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="225" y="640" text-anchor="middle">decompose ops</text>
+  <rect x="282" y="616" width="80" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="322" y="640" text-anchor="middle">MHLO legalize</text>
+  <rect x="374" y="616" width="80" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="414" y="640" text-anchor="middle">shape refine</text>
+  <rect x="466" y="616" width="80" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="506" y="640" text-anchor="middle">canonicalize</text>
+  <rect x="558" y="616" width="70" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="593" y="640" text-anchor="middle">CSE/DCE</text>
+  <rect x="640" y="616" width="90" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="685" y="640" text-anchor="middle">StableHLO opt</text>
+  <rect x="742" y="616" width="80" height="36" rx="6" fill="#431407" stroke="#ea580c"/><text x="782" y="640" text-anchor="middle">VHLO legalize</text>
+  <rect x="834" y="616" width="80" height="36" rx="6" fill="#431407" stroke="#ea580c"/><text x="874" y="640" text-anchor="middle">VHLO upgrade</text>
+  <rect x="926" y="616" width="80" height="36" rx="6" fill="#431407" stroke="#ea580c"/><text x="966" y="640" text-anchor="middle">VHLO downgrade</text>
+  <rect x="1018" y="616" width="90" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1063" y="640" text-anchor="middle">refine shapes</text>
+  <rect x="1120" y="616" width="80" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1160" y="640" text-anchor="middle">type convert</text>
+  <rect x="1212" y="616" width="80" height="36" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1252" y="640" text-anchor="middle">Shardy hook</text>
+  <rect x="1304" y="616" width="80" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1344" y="640" text-anchor="middle">linalg lower</text>
+  <rect x="1396" y="616" width="50" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1421" y="640" text-anchor="middle">TOSA</text>
+  <rect x="1458" y="616" width="80" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1498" y="640" text-anchor="middle">XLA import</text>
+  <rect x="1550" y="616" width="80" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1590" y="640" text-anchor="middle">XLA export</text>
+  <rect x="1642" y="616" width="90" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1687" y="640" text-anchor="middle">interpreter</text>
+  <rect x="1744" y="616" width="104" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1796" y="640" text-anchor="middle">check-shape-infer</text>
+ </g>
+
+ <!-- L5 Versioning -->
+ <rect x="60" y="676" width="1800" height="72" rx="12" fill="#0f2744" stroke="#ea580c" stroke-width="2"/>
+ <text x="88" y="704" fill="#ea580c" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Versioning, Serialization &amp; Compatibility</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ffedd5">
+  <rect x="88" y="716" width="60" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="118" y="733" text-anchor="middle">VHLO vN</text>
+  <rect x="158" y="716" width="80" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="198" y="733" text-anchor="middle">version log</text>
+  <rect x="248" y="716" width="90" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="293" y="733" text-anchor="middle">MLIR bytecode</text>
+  <rect x="348" y="716" width="80" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="388" y="733" text-anchor="middle">text .mlir</text>
+  <rect x="438" y="716" width="90" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="483" y="733" text-anchor="middle">5yr backward</text>
+  <rect x="538" y="716" width="80" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="578" y="733" text-anchor="middle">forward compat</text>
+  <rect x="628" y="716" width="80" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="668" y="733" text-anchor="middle">add-only VHLO</text>
+  <rect x="718" y="716" width="80" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="758" y="733" text-anchor="middle">upgrade pass</text>
+  <rect x="808" y="716" width="90" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="853" y="733" text-anchor="middle">downgrade pass</text>
+  <rect x="908" y="716" width="80" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="948" y="733" text-anchor="middle">spec v1.0</text>
+  <rect x="998" y="716" width="80" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="1038" y="733" text-anchor="middle">ref impl C++</text>
+  <rect x="1088" y="716" width="80" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="1128" y="733" text-anchor="middle">Python API</text>
+  <rect x="1178" y="716" width="80" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="1218" y="733" text-anchor="middle">interpreter</text>
+  <rect x="1268" y="716" width="90" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="1313" y="733" text-anchor="middle">lit/filecheck</text>
+  <rect x="1368" y="716" width="80" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="1408" y="733" text-anchor="middle">op deprecate</text>
+  <rect x="1458" y="716" width="80" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="1498" y="733" text-anchor="middle">compat tests</text>
+  <rect x="1548" y="716" width="80" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="1588" y="733" text-anchor="middle">artifact hub</text>
+  <rect x="1638" y="716" width="80" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="1678" y="733" text-anchor="middle">saved model</text>
+  <rect x="1728" y="716" width="120" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="1788" y="733" text-anchor="middle">cross-version roundtrip</text>
+ </g>
+
+ <!-- DETAIL Serialization Flow -->
+ <rect x="60" y="764" width="880" height="340" rx="14" fill="#0c1524" stroke="#fbbf24" stroke-width="2.5"/>
+ <text x="88" y="796" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Serialization &amp; Compatibility Flow</text>
+ <text x="88" y="818" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="11">StableHLO program survives version skew between producer and consumer</text>
+
+ <rect x="88" y="834" width="820" height="36" rx="6" fill="#422006" stroke="#fcd34d"/>
+ <text x="498" y="858" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1: Framework builds MLIR module with StableHLO/CHLO ops</text>
+ <line x1="498" y1="870" x2="498" y2="882" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrow-amber)"/>
+ <rect x="88" y="884" width="820" height="36" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="498" y="908" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2: CHLO decompose pass - sugar ops lowered to StableHLO core</text>
+ <line x1="498" y1="920" x2="498" y2="932" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
+ <rect x="88" y="934" width="820" height="36" rx="6" fill="#431407" stroke="#ea580c"/>
+ <text x="498" y="958" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3: Legalize StableHLO - VHLO snapshot at current version (add-only)</text>
+ <line x1="498" y1="970" x2="498" y2="982" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arrow-amber)"/>
+ <rect x="88" y="984" width="820" height="36" rx="6" fill="#431407" stroke="#ea580c"/>
+ <text x="498" y="1008" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4: Serialize to MLIR bytecode (.mlirbc) or text (.mlir) artifact</text>
+ <line x1="498" y1="1020" x2="498" y2="1032" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arrow-amber)"/>
+ <rect x="88" y="1034" width="820" height="36" rx="6" fill="#422006" stroke="#fcd34d"/>
+ <text x="498" y="1058" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 5: Deserialize - VHLO upgrade/downgrade - legalize back to StableHLO</text>
+
+ <text x="88" y="1092" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Guarantee: older consumer reads newer artifact via VHLO downgrade + upgrade chain</text>
+ <text x="88" y="1108" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Reference interpreter executes spec semantics for validation and testing</text>
+
+ <!-- DETAIL Consumers + Lowering -->
+ <rect x="960" y="764" width="900" height="340" rx="14" fill="#0c1224" stroke="#fbbf24" stroke-width="2.5"/>
+ <text x="988" y="796" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Compiler Consumers &amp; Lowering Targets</text>
+ <text x="988" y="818" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="11">StableHLO is the portability contract between producers and compilers</text>
+
+ <text x="988" y="842" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Primary Consumers</text>
+ <rect x="988" y="852" width="120" height="68" rx="6" fill="#431407" stroke="#ea580c"/>
+ <text x="1048" y="876" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">XLA Compiler</text>
+ <text x="1048" y="894" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">StableHLO - HLO - codegen</text>
+ <text x="1048" y="910" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">GPU/TPU/CPU backends</text>
+ <rect x="1120" y="852" width="120" height="68" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1180" y="876" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">IREE</text>
+ <text x="1180" y="894" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">input dialect - flow/hal</text>
+ <text x="1180" y="910" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">multi-backend exec</text>
+ <rect x="1252" y="852" width="120" height="68" rx="6" fill="#422006" stroke="#fcd34d"/>
+ <text x="1312" y="876" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Google AI Edge</text>
+ <text x="1312" y="894" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">on-device inference</text>
+ <text x="1312" y="910" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">mobile/edge deploy</text>
+ <rect x="1384" y="852" width="120" height="68" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1444" y="876" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Shardy/GSPMD</text>
+ <text x="1444" y="894" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">sharding on StableHLO</text>
+ <text x="1444" y="910" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">SPMD partition</text>
+ <rect x="1516" y="852" width="120" height="68" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1576" y="876" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Custom Compiler</text>
+ <text x="1576" y="894" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">linalg/TOSA lower</text>
+ <text x="1576" y="910" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">plugin backends</text>
+ <rect x="1648" y="852" width="200" height="68" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1748" y="876" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Artifact Storage</text>
+ <text x="1748" y="894" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">bytecode on disk / object store</text>
+ <text x="1748" y="910" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">cross-team model exchange</text>
+
+ <text x="988" y="940" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Lowering &amp; Tooling (stablehlo repo)</text>
+ <rect x="988" y="950" width="70" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1023" y="974" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">spec.md</text>
+ <rect x="1068" y="950" width="80" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1108" y="974" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">C++ dialect</text>
+ <rect x="1158" y="950" width="80" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1198" y="974" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">Python bind</text>
+ <rect x="1248" y="950" width="80" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1288" y="974" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">stablehlo-opt</text>
+ <rect x="1338" y="950" width="80" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1378" y="974" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">stablehlo-translate</text>
+ <rect x="1428" y="950" width="70" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1463" y="974" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">lit tests</text>
+ <rect x="1508" y="950" width="80" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1548" y="974" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">interpreter</text>
+ <rect x="1598" y="950" width="80" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1638" y="974" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">compatibility</text>
+ <rect x="1688" y="950" width="80" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1728" y="974" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">bytecode.md</text>
+ <rect x="1778" y="950" width="70" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1813" y="974" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">RFCs</text>
+
+ <text x="988" y="1010" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">OpenXLA Ecosystem Position</text>
+ <rect x="988" y="1020" width="860" height="48" rx="6" fill="#1a1208" stroke="#fbbf24"/>
+ <text x="1418" y="1044" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="12">Frameworks produce StableHLO - Compilers consume StableHLO - VHLO enables evolution without breaking artifacts</text>
+ <text x="1418" y="1062" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Defragments ML toolchain: one neutral IR contract on MLIR between JAX/TF/PyTorch and XLA/IREE/edge</text>
+
+ <text x="988" y="1092" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Community-owned opset - not tied to single compiler - evolves via RFC + spec + compat tests</text>
+
+ <!-- L6 Position -->
+ <rect x="60" y="1124" width="1800" height="72" rx="12" fill="#1a1208" stroke="#fbbf24" stroke-width="2"/>
+ <text x="88" y="1152" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Design Goals (Portability Layer)</text>
+ <text x="960" y="1178" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="13">Interoperability - Versioned evolution - Spec-defined semantics - MLIR-native - Framework/compiler neutrality</text>
+
+ <!-- footers -->
+ <rect x="60" y="1216" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1236" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Init path: framework export - CHLO decompose - StableHLO module - optional VHLO legalize - serialize artifact</text>
+ <text x="960" y="1254" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Step path: deserialize bytecode - VHLO upgrade - StableHLO - compiler passes - XLA/IREE/edge codegen</text>
+
+ <text x="60" y="1300" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: openxla.org/stablehlo/spec - github.com/openxla/stablehlo - compatibility.md - bytecode.md - v1.0 RFC</text>
+</svg>

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-blue" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#0071c5"/>
+  </marker>
+  <marker id="arrow-cyan" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#22d3ee"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">oneDNN Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">oneAPI Deep Neural Network Library - github.com/uxlfoundation/oneDNN - cross-platform CPU/GPU DNN primitives + Graph API</text>
+
+ <!-- L1 Workloads -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#0071c5" stroke-width="2"/>
+ <text x="88" y="124" fill="#0071c5" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Framework Integration + Workloads (UXL Foundation - unified API for CPU and GPU inference/training)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="113" y="162" text-anchor="middle">PyTorch</text>
+  <rect x="150" y="136" width="40" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="170" y="162" text-anchor="middle">TF</text>
+  <rect x="202" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="227" y="162" text-anchor="middle">ONNX</text>
+  <rect x="264" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="294" y="162" text-anchor="middle">OpenVINO</text>
+  <rect x="336" y="136" width="40" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="356" y="162" text-anchor="middle">IPEX</text>
+  <rect x="388" y="136" width="50" height="40" rx="6" fill="#0c2340" stroke="#38bdf8"/><text x="413" y="162" text-anchor="middle">Conv</text>
+  <rect x="450" y="136" width="50" height="40" rx="6" fill="#0c2340" stroke="#38bdf8"/><text x="475" y="162" text-anchor="middle">MatMul</text>
+  <rect x="512" y="136" width="40" height="40" rx="6" fill="#0c2340" stroke="#38bdf8"/><text x="532" y="162" text-anchor="middle">SDPA</text>
+  <rect x="564" y="136" width="40" height="40" rx="6" fill="#0c2340" stroke="#38bdf8"/><text x="584" y="162" text-anchor="middle">RNN</text>
+  <rect x="616" y="136" width="50" height="40" rx="6" fill="#0c2340" stroke="#38bdf8"/><text x="641" y="162" text-anchor="middle">Norm</text>
+  <rect x="678" y="136" width="50" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="703" y="162" text-anchor="middle">Vision</text>
+  <rect x="740" y="136" width="40" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="760" y="162" text-anchor="middle">LLM</text>
+  <rect x="792" y="136" width="50" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="817" y="162" text-anchor="middle">Infer</text>
+  <rect x="854" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="879" y="162" text-anchor="middle">BF16</text>
+  <rect x="916" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="941" y="162" text-anchor="middle">FP16</text>
+  <rect x="978" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1003" y="162" text-anchor="middle">FP32</text>
+  <rect x="1040" y="136" width="40" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1060" y="162" text-anchor="middle">INT8</text>
+  <rect x="1092" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1117" y="162" text-anchor="middle">Xeon</text>
+  <rect x="1154" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1179" y="162" text-anchor="middle">Arc</text>
+  <rect x="1216" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1241" y="162" text-anchor="middle">Max</text>
+  <rect x="1278" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1303" y="162" text-anchor="middle">AArch64</text>
+  <rect x="1340" y="136" width="50" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1365" y="162" text-anchor="middle">oneMKL</text>
+  <rect x="1402" y="136" width="50" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="1427" y="162" text-anchor="middle">cuDNN</text>
+  <rect x="1464" y="136" width="50" height="40" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="1489" y="162" text-anchor="middle">MIOpen</text>
+  <rect x="1526" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1551" y="162" text-anchor="middle">SYCL</text>
+  <rect x="1588" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1613" y="162" text-anchor="middle">oneAPI</text>
+  <rect x="1650" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1675" y="162" text-anchor="middle">UXL</text>
+  <rect x="1712" y="136" width="50" height="40" rx="6" fill="#0c2340" stroke="#38bdf8"/><text x="1737" y="162" text-anchor="middle">Intel</text>
+  <rect x="1774" y="136" width="40" height="40" rx="6" fill="#0c2340" stroke="#38bdf8"/><text x="1794" y="162" text-anchor="middle">v3</text>
+  <rect x="1826" y="136" width="24" height="40" rx="6" fill="#0c2340" stroke="#38bdf8"/><text x="1838" y="162" text-anchor="middle">.14</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Programming Model -->
+ <rect x="60" y="216" width="1800" height="120" rx="12" fill="#0f2744" stroke="#0071c5" stroke-width="2"/>
+ <text x="88" y="244" fill="#0071c5" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Dual Programming Model (Primitive API low-level control - Graph API high-level partition fusion)</text>
+ <rect x="88" y="258" width="340" height="64" rx="10" fill="#0c2340" stroke="#38bdf8" stroke-width="2"/>
+ <text x="258" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Primitive API (classic)</text>
+ <text x="258" y="300" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">dnnl::primitive per op - explicit descriptors</text>
+ <text x="258" y="314" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">primitive_attr for post-op fusion (Conv+ReLU)</text>
+ <rect x="448" y="258" width="340" height="64" rx="10" fill="#0c2340" stroke="#0071c5" stroke-width="2"/>
+ <text x="618" y="282" text-anchor="middle" fill="#dbeafe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Graph API (recommended)</text>
+ <text x="618" y="300" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="10">Pass computation graph - get partitions</text>
+ <text x="618" y="314" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="10">Auto fusion for inference on x86-64 (PT 2.0+)</text>
+ <rect x="808" y="258" width="340" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="978" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Engine + Stream</text>
+ <text x="978" y="300" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">engine = CPU or GPU device abstraction</text>
+ <text x="978" y="314" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">stream = ordered execution queue on engine</text>
+ <rect x="1168" y="258" width="340" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="1338" y="282" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Memory + Layouts</text>
+ <text x="1338" y="300" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">memory_desc: dims dtype format (blocked nChw16c)</text>
+ <text x="1338" y="314" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">reorder primitive for cross-engine layout xfer</text>
+ <rect x="1528" y="258" width="300" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1678" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Cross-Platform</text>
+ <text x="1678" y="300" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Same API: x86 AMD64 AArch64 GPU SYCL</text>
+ <text x="1678" y="314" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Runtime ISA detect + JIT for each target</text>
+ <line x1="960" y1="336" x2="960" y2="354" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 API Surface -->
+ <rect x="60" y="356" width="1800" height="200" rx="12" fill="#0f2744" stroke="#22d3ee" stroke-width="2.5"/>
+ <text x="88" y="384" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - API Surface (Graph concepts - Primitive descriptors - shared engine/stream)</text>
+
+ <rect x="88" y="400" width="420" height="136" rx="12" fill="#0c2340" stroke="#0071c5" stroke-width="2"/>
+ <text x="298" y="428" text-anchor="middle" fill="#dbeafe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Graph API Core Objects</text>
+ <text x="298" y="450" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="10">logical_tensor: id dtype dims layout property</text>
+ <text x="298" y="468" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="10">op: kind attrs in/out logical tensors</text>
+ <text x="298" y="486" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="10">graph: add_op finalize get_partitions</text>
+ <text x="298" y="504" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="10">partition: compile to compiled_partition</text>
+ <text x="298" y="522" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="10">tensor: logical_tensor + engine + data handle</text>
+
+ <rect x="528" y="400" width="420" height="136" rx="12" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="738" y="428" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Primitive API Core Objects</text>
+ <text x="738" y="450" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">primitive_desc: shape-aware impl selection</text>
+ <text x="738" y="468" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">primitive: executable kernel handle</text>
+ <text x="738" y="486" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">primitive_attr: post-ops scales scratchpad</text>
+ <text x="738" y="504" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">memory: buffer bound to memory_desc on engine</text>
+ <text x="738" y="522" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">execute(stream, args) per primitive launch</text>
+
+ <rect x="968" y="400" width="420" height="136" rx="12" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="1178" y="428" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Supported Primitives</text>
+ <text x="1178" y="450" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Convolution Deconv MatMul InnerProduct SDPA</text>
+ <text x="1178" y="468" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">BatchNorm LayerNorm Softmax Pooling RNN</text>
+ <text x="1178" y="486" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Eltwise Binary Reduction Reorder Resampling</text>
+ <text x="1178" y="504" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Concat Sum Shuffle PReLU LRN</text>
+ <text x="1178" y="522" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Per-primitive CPU ISA build-time filter</text>
+
+ <rect x="1408" y="400" width="420" height="136" rx="12" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1618" y="428" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Partition Semantics</text>
+ <text x="1618" y="450" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Connected subgraph - no dependence cycles</text>
+ <text x="1618" y="468" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">input/output ports via logical tensor IDs</text>
+ <text x="1618" y="486" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">output layout=any lets compiler pick optimal</text>
+ <text x="1618" y="504" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">dynamic shapes deduced at compile time</text>
+ <text x="1618" y="522" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">fpmath_mode at graph level (BF16 downcast)</text>
+
+ <line x1="960" y1="556" x2="960" y2="574" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Execution Pipeline -->
+ <rect x="60" y="576" width="1800" height="120" rx="12" fill="#0f2744" stroke="#0071c5" stroke-width="2"/>
+ <text x="88" y="604" fill="#0071c5" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Graph Execution Pipeline (build graph - partition - compile to ISA - bind tensors - execute on stream)</text>
+ <rect x="88" y="618" width="340" height="64" rx="10" fill="#0c2340" stroke="#0071c5" stroke-width="2"/>
+ <text x="258" y="642" text-anchor="middle" fill="#dbeafe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">1. Build Graph</text>
+ <text x="258" y="660" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="10">Create graph(engine_kind) add_op chain</text>
+ <text x="258" y="674" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="10">Connect ops via shared logical tensor IDs</text>
+ <rect x="448" y="618" width="340" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="618" y="642" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">2. Finalize + Partition</text>
+ <text x="618" y="660" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">graph.finalize() - get_partitions()</text>
+ <text x="618" y="674" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Library splits into fusible subgraph units</text>
+ <rect x="808" y="618" width="340" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="978" y="642" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">3. Compile Partition</text>
+ <text x="978" y="660" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">partition.compile(in,out,engine)</text>
+ <text x="978" y="674" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Lower to ISA binary - specialize layouts</text>
+ <rect x="1168" y="618" width="340" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="1338" y="642" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">4. Bind Tensors</text>
+ <text x="1338" y="660" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">tensor(logical_tensor, engine, data_ptr)</text>
+ <text x="1338" y="674" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Query output mem_size if layout was any</text>
+ <rect x="1528" y="618" width="300" height="64" rx="10" fill="#134e4a" stroke="#5eead4" stroke-width="2"/>
+ <text x="1678" y="642" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">5. Execute</text>
+ <text x="1678" y="660" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">compiled_partition.execute(stream, args)</text>
+ <text x="1678" y="674" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Framework maps partition back as custom node</text>
+ <line x1="960" y1="696" x2="960" y2="714" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L5 Backends -->
+ <rect x="60" y="716" width="1800" height="120" rx="12" fill="#0f2744" stroke="#22d3ee" stroke-width="2"/>
+ <text x="88" y="744" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Backend Implementations (CPU JIT dispatcher - Graph Compiler - GPU SYCL - AArch64 ACL)</text>
+ <rect x="88" y="758" width="280" height="64" rx="10" fill="#0c2340" stroke="#0071c5" stroke-width="2"/>
+ <text x="228" y="782" text-anchor="middle" fill="#dbeafe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">CPU JIT Dispatcher</text>
+ <text x="228" y="800" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="10">Runtime ISA: SSE41 AVX2 AVX512 AMX</text>
+ <text x="228" y="814" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="10">ONEDNN_MAX_CPU_ISA env control</text>
+ <rect x="388" y="758" width="280" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="528" y="782" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Graph Compiler (exp)</text>
+ <text x="528" y="800" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">MHA MLP conv-residual fusion patterns</text>
+ <text x="528" y="814" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Codegen: xbyak builtin LLVM C (AVX512+)</text>
+ <rect x="688" y="758" width="280" height="64" rx="10" fill="#134e4a" stroke="#5eead4" stroke-width="2"/>
+ <text x="828" y="782" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">GPU SYCL Engine</text>
+ <text x="828" y="800" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Intel iGPU dGPU Arc Max + exp NVIDIA AMD</text>
+ <text x="828" y="814" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">ONEDNN_GPU_RUNTIME=SYCL build flag</text>
+ <rect x="988" y="758" width="280" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="1128" y="782" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">AArch64 ACL</text>
+ <text x="1128" y="800" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Arm Compute Library integration</text>
+ <text x="1128" y="814" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">NEON-optimized primitive backends</text>
+ <rect x="1288" y="758" width="280" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1428" y="782" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Threading Runtime</text>
+ <text x="1428" y="800" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">OpenMP TBB or SYCL CPU runtime</text>
+ <text x="1428" y="814" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">ONEDNN_CPU_RUNTIME build option</text>
+ <rect x="1588" y="758" width="240" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1708" y="782" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Blocked Layouts</text>
+ <text x="1708" y="800" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">nChw16c nChw8c cache-friendly packing</text>
+ <text x="1708" y="814" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Auto reorder when layout mismatch</text>
+ <line x1="960" y1="836" x2="960" y2="854" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L6 Package -->
+ <rect x="60" y="856" width="1800" height="56" rx="12" fill="#0f2744" stroke="#0071c5" stroke-width="2"/>
+ <text x="88" y="884" fill="#0071c5" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Source Layout + Build (src/cpu/ - src/gpu/ - src/graph/ - CMake ISA/runtime toggles - UXL Foundation)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0f2fe">
+  <rect x="88" y="892" width="40" height="24" rx="5" fill="#0c2340" stroke="#0071c5"/><text x="108" y="909" text-anchor="middle">cpu/</text>
+  <rect x="138" y="892" width="40" height="24" rx="5" fill="#0c2340" stroke="#0071c5"/><text x="158" y="909" text-anchor="middle">gpu/</text>
+  <rect x="188" y="892" width="40" height="24" rx="5" fill="#0c2340" stroke="#0071c5"/><text x="208" y="909" text-anchor="middle">graph/</text>
+  <rect x="238" y="892" width="50" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="263" y="909" text-anchor="middle">graph_compiler</text>
+  <rect x="298" y="892" width="50" height="24" rx="5" fill="#0c2340" stroke="#0071c5"/><text x="323" y="909" text-anchor="middle">x64/gemm</text>
+  <rect x="358" y="892" width="40" height="24" rx="5" fill="#0c2340" stroke="#0071c5"/><text x="378" y="909" text-anchor="middle">amx</text>
+  <rect x="408" y="892" width="50" height="24" rx="5" fill="#0c2340" stroke="#0071c5"/><text x="433" y="909" text-anchor="middle">avx512</text>
+  <rect x="468" y="892" width="40" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="488" y="909" text-anchor="middle">sycl</text>
+  <rect x="518" y="892" width="40" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="538" y="909" text-anchor="middle">acl</text>
+  <rect x="568" y="892" width="50" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="593" y="909" text-anchor="middle">OpenMP</text>
+  <rect x="628" y="892" width="40" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="648" y="909" text-anchor="middle">TBB</text>
+  <rect x="678" y="892" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="703" y="909" text-anchor="middle">PyTorch</text>
+  <rect x="738" y="892" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="763" y="909" text-anchor="middle">OpenVINO</text>
+  <rect x="798" y="892" width="40" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="818" y="909" text-anchor="middle">IPEX</text>
+  <rect x="848" y="892" width="50" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="873" y="909" text-anchor="middle">oneMKL</text>
+  <rect x="908" y="892" width="50" height="24" rx="5" fill="#1a2e05" stroke="#76b900"/><text x="933" y="909" text-anchor="middle">cuDNN</text>
+  <rect x="968" y="892" width="50" height="24" rx="5" fill="#450a0a" stroke="#ef4444"/><text x="993" y="909" text-anchor="middle">MIOpen</text>
+  <rect x="1028" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1053" y="909" text-anchor="middle">oneAPI</text>
+  <rect x="1088" y="892" width="40" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1108" y="909" text-anchor="middle">UXL</text>
+  <rect x="1138" y="892" width="50" height="24" rx="5" fill="#0c2340" stroke="#0071c5"/><text x="1163" y="909" text-anchor="middle">xbyak</text>
+  <rect x="1198" y="892" width="40" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="1218" y="909" text-anchor="middle">LLVM</text>
+  <rect x="1248" y="892" width="50" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="1273" y="909" text-anchor="middle">tests</text>
+  <rect x="1308" y="892" width="50" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="1333" y="909" text-anchor="middle">examples</text>
+  <rect x="1368" y="892" width="50" height="24" rx="5" fill="#0c2340" stroke="#0071c5"/><text x="1393" y="909" text-anchor="middle">PPC64</text>
+  <rect x="1428" y="892" width="40" height="24" rx="5" fill="#0c2340" stroke="#0071c5"/><text x="1448" y="909" text-anchor="middle">s390x</text>
+  <rect x="1478" y="892" width="40" height="24" rx="5" fill="#0c2340" stroke="#0071c5"/><text x="1498" y="909" text-anchor="middle">RISC-V</text>
+  <rect x="1528" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1553" y="909" text-anchor="middle">CMake</text>
+  <rect x="1588" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1613" y="909" text-anchor="middle">Apache2</text>
+  <rect x="1648" y="892" width="50" height="24" rx="5" fill="#0c2340" stroke="#0071c5"/><text x="1673" y="909" text-anchor="middle">v3.14</text>
+  <rect x="1708" y="892" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1733" y="909" text-anchor="middle">SDPA</text>
+  <rect x="1768" y="892" width="80" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1808" y="909" text-anchor="middle">Intel Xeon</text>
+ </g>
+
+ <!-- DETAIL Graph partition path -->
+ <rect x="60" y="928" width="880" height="340" rx="14" fill="#0c1524" stroke="#0071c5" stroke-width="2.5"/>
+ <text x="88" y="960" fill="#0071c5" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Graph Partition Execution Path (PyTorch 2.0+ oneDNN Graph backend on x86-64)</text>
+ <text x="88" y="982" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="11">Framework exports FX/torch.compile graph - oneDNN partitions and fuses for CPU inference</text>
+
+ <rect x="88" y="998" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="1022" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1: Framework builds graph ops - add logical tensors with strided or opaque layout</text>
+ <line x1="498" y1="1034" x2="498" y2="1046" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+ <rect x="88" y="1048" width="820" height="36" rx="6" fill="#422006" stroke="#fbbf24"/>
+ <text x="498" y="1072" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2: graph.finalize() - get_partitions() returns fusible Conv+ReLU+BN subgraphs</text>
+ <line x1="498" y1="1084" x2="498" y2="1096" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+ <rect x="88" y="1098" width="820" height="36" rx="6" fill="#0c2340" stroke="#0071c5"/>
+ <text x="498" y="1122" text-anchor="middle" fill="#dbeafe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3: partition.compile(engine) - JIT to AVX512/AMX - pick blocked output layout</text>
+ <line x1="498" y1="1134" x2="498" y2="1146" stroke="#0071c5" stroke-width="1.5"/>
+ <rect x="88" y="1148" width="820" height="36" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="498" y="1172" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4: Bind tensor data handles - query mem_size for any-layout outputs - alloc buffers</text>
+ <line x1="498" y1="1184" x2="498" y2="1196" stroke="#fb923c" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+ <rect x="88" y="1198" width="820" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="498" y="1222" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 5: compiled_partition.execute(stream) - fused kernel - fewer DRAM round-trips</text>
+ <line x1="498" y1="1234" x2="498" y2="1246" stroke="#5eead4" stroke-width="1.5"/>
+ <rect x="88" y="1248" width="820" height="28" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="498" y="1268" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Graph Compiler: aggressive MHA/MLP fusion via xbyak/LLVM codegen (AVX512_CORE min)</text>
+
+ <text x="88" y="1294" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Primitive path: create primitive_desc - create primitive - execute on stream (manual fusion via post-ops)</text>
+ <text x="88" y="1310" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">CPU dispatcher: runtime detect highest ISA - dnnl::set_max_cpu_isa for debug/tuning</text>
+
+ <!-- DETAIL Position -->
+ <rect x="960" y="928" width="900" height="340" rx="14" fill="#0c1224" stroke="#0071c5" stroke-width="2.5"/>
+ <text x="988" y="960" fill="#0071c5" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Five Design Pillars + Ecosystem Position</text>
+ <text x="988" y="982" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="11">Open-source cross-vendor DNN primitive lib - CPU-first with growing GPU - UXL oneAPI spec</text>
+
+ <text x="988" y="1006" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Five Pillars</text>
+ <rect x="988" y="1016" width="130" height="48" rx="6" fill="#0c2340" stroke="#0071c5"/>
+ <text x="1053" y="1038" text-anchor="middle" fill="#dbeafe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Cross-platform</text>
+ <text x="1053" y="1054" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="9">CPU GPU multi-ISA</text>
+ <rect x="1130" y="1016" width="130" height="48" rx="6" fill="#422006" stroke="#fbbf24"/>
+ <text x="1195" y="1038" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Runtime JIT</text>
+ <text x="1195" y="1054" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">ISA-specialized code</text>
+ <rect x="1272" y="1016" width="130" height="48" rx="6" fill="#0c2340" stroke="#0071c5"/>
+ <text x="1337" y="1038" text-anchor="middle" fill="#dbeafe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Graph fusion</text>
+ <text x="1337" y="1054" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="9">Partition compile</text>
+ <rect x="1414" y="1016" width="130" height="48" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="1479" y="1038" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Blocked layout</text>
+ <text x="1479" y="1054" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Cache-friendly packing</text>
+ <rect x="1556" y="1016" width="130" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1621" y="1038" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">AMX/AVX512</text>
+ <text x="1621" y="1054" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Xeon peak perf</text>
+ <rect x="1698" y="1016" width="150" height="48" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1773" y="1038" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Open source</text>
+ <text x="1773" y="1054" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">UXL Foundation</text>
+
+ <text x="988" y="1082" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">vs Related Stacks</text>
+ <rect x="988" y="1092" width="200" height="68" rx="6" fill="#0c2340" stroke="#0071c5"/>
+ <text x="1088" y="1116" text-anchor="middle" fill="#dbeafe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">oneDNN</text>
+ <text x="1088" y="1134" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="9">Cross-platform DNN primitives</text>
+ <text x="1088" y="1150" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="9">CPU-first Graph partition fusion</text>
+ <rect x="1200" y="1092" width="200" height="68" rx="6" fill="#1a2e05" stroke="#76b900"/>
+ <text x="1300" y="1116" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">cuDNN</text>
+ <text x="1300" y="1134" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">NVIDIA GPU DNN library</text>
+ <text x="1300" y="1150" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">Graph API + engine heuristics</text>
+ <rect x="1412" y="1092" width="200" height="68" rx="6" fill="#450a0a" stroke="#ef4444"/>
+ <text x="1512" y="1116" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">MIOpen</text>
+ <text x="1512" y="1134" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="9">AMD GPU DNN library</text>
+ <text x="1512" y="1150" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="9">Same role on ROCm</text>
+ <rect x="1624" y="1092" width="224" height="68" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1736" y="1116" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">oneMKL</text>
+ <text x="1736" y="1134" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">General BLAS/LAPACK linear algebra</text>
+ <text x="1736" y="1150" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">Complements oneDNN for GEMM</text>
+
+ <text x="988" y="1178" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Quick Start</text>
+ <rect x="988" y="1188" width="860" height="48" rx="6" fill="#1a1208" stroke="#0071c5"/>
+ <text x="1418" y="1212" text-anchor="middle" fill="#dbeafe" font-family="JetBrains Mono, monospace" font-size="12">graph.add_op - finalize - get_partitions - compile - execute(stream, tensors)</text>
+ <text x="1418" y="1228" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="10">Docs: uxlfoundation.github.io/oneDNN - github.com/uxlfoundation/oneDNN</text>
+
+ <!-- footer bar -->
+ <rect x="60" y="1288" width="1800" height="72" rx="12" fill="#1a1208" stroke="#0071c5" stroke-width="2"/>
+ <text x="88" y="1316" fill="#0071c5" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">Design Position (open cross-platform DNN primitive layer - partition fusion + JIT ISA dispatch for CPU inference peak)</text>
+ <text x="960" y="1342" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="13">Graph partition + runtime JIT + blocked layouts + AMX = default CPU backend for PyTorch/OpenVINO on Intel Xeon</text>
+
+ <!-- footers -->
+ <rect x="60" y="1376" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1396" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Init: engine(stream) create - CPU ISA detect - optional set_max_cpu_isa - graph or primitive descriptor build</text>
+ <text x="960" y="1414" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Loop: graph partition compile OR primitive execute - reorder if layout mismatch - stream ordered launch</text>
+
+ <text x="60" y="1460" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: github.com/uxlfoundation/oneDNN - uxlfoundation.github.io/oneDNN - intel.com/oneapi/onednn</text>
+</svg>

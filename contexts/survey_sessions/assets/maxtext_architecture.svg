@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-green" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#34a853"/>
+  </marker>
+  <marker id="arrow-teal" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#2dd4bf"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">MaxText Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">JAX/XLA LLM Training Reference - AI-Hypercomputer/maxtext - Trust the compiler philosophy</text>
+
+ <!-- L1 Entry -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#34a853" stroke-width="2"/>
+ <text x="88" y="124" fill="#34a853" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Control Plane (Config + Orchestration)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="80" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="128" y="162" text-anchor="middle">base.yml</text>
+  <rect x="180" y="136" width="100" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="230" y="162" text-anchor="middle">model yml</text>
+  <rect x="292" y="136" width="90" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="337" y="162" text-anchor="middle">train.py</text>
+  <rect x="394" y="136" width="90" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="439" y="162" text-anchor="middle">decode.py</text>
+  <rect x="496" y="136" width="110" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="551" y="162" text-anchor="middle">CLI overrides</text>
+  <rect x="618" y="136" width="80" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="658" y="162" text-anchor="middle">GKE XPK</text>
+  <rect x="710" y="136" width="80" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="750" y="162" text-anchor="middle">Pathways</text>
+  <rect x="802" y="136" width="90" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="847" y="162" text-anchor="middle">single-host</text>
+  <rect x="904" y="136" width="70" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="939" y="162" text-anchor="middle">Gemma</text>
+  <rect x="986" y="136" width="60" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="1016" y="162" text-anchor="middle">Llama</text>
+  <rect x="1058" y="136" width="80" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="1098" y="162" text-anchor="middle">DeepSeek</text>
+  <rect x="1150" y="136" width="60" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="1180" y="162" text-anchor="middle">Qwen</text>
+  <rect x="1222" y="136" width="70" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="1257" y="162" text-anchor="middle">Mistral</text>
+  <rect x="1304" y="136" width="60" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="1334" y="162" text-anchor="middle">MoE</text>
+  <rect x="1376" y="136" width="50" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="1401" y="162" text-anchor="middle">VLM</text>
+  <rect x="1438" y="136" width="80" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="1478" y="162" text-anchor="middle">train_compile</text>
+  <rect x="1530" y="136" width="70" height="40" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="1565" y="162" text-anchor="middle">Tunix</text>
+  <rect x="1612" y="136" width="80" height="40" rx="6" fill="#2e1065" stroke="#8b5cf6"/><text x="1652" y="162" text-anchor="middle">vLLM TPU</text>
+  <rect x="1704" y="136" width="80" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1744" y="162" text-anchor="middle">JetStream</text>
+  <rect x="1796" y="136" width="64" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="1828" y="162" text-anchor="middle">PyPI</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Parallelism -->
+ <rect x="60" y="216" width="1800" height="96" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2"/>
+ <text x="88" y="244" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Device Mesh &amp; Parallelism (ICI + DCN)</text>
+ <rect x="88" y="256" width="110" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="143" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">ici_parallelism</text>
+ <rect x="210" y="256" width="110" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="265" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">dcn_parallelism</text>
+ <rect x="332" y="256" width="50" height="32" rx="6" fill="#052e16" stroke="#34a853"/><text x="357" y="278" text-anchor="middle" fill="#bbf7d0" font-family="JetBrains Mono, monospace" font-size="12">DP</text>
+ <rect x="394" y="256" width="60" height="32" rx="6" fill="#052e16" stroke="#34a853"/><text x="424" y="278" text-anchor="middle" fill="#bbf7d0" font-family="JetBrains Mono, monospace" font-size="12">FSDP</text>
+ <rect x="466" y="256" width="40" height="32" rx="6" fill="#052e16" stroke="#34a853"/><text x="486" y="278" text-anchor="middle" fill="#bbf7d0" font-family="JetBrains Mono, monospace" font-size="12">TP</text>
+ <rect x="518" y="256" width="40" height="32" rx="6" fill="#052e16" stroke="#34a853"/><text x="538" y="278" text-anchor="middle" fill="#bbf7d0" font-family="JetBrains Mono, monospace" font-size="12">PP</text>
+ <rect x="570" y="256" width="40" height="32" rx="6" fill="#052e16" stroke="#34a853"/><text x="590" y="278" text-anchor="middle" fill="#bbf7d0" font-family="JetBrains Mono, monospace" font-size="12">EP</text>
+ <rect x="622" y="256" width="40" height="32" rx="6" fill="#052e16" stroke="#34a853"/><text x="642" y="278" text-anchor="middle" fill="#bbf7d0" font-family="JetBrains Mono, monospace" font-size="12">CP</text>
+ <rect x="674" y="256" width="100" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="724" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">nn_partitioning</text>
+ <rect x="786" y="256" width="90" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="831" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">GSPMD mesh</text>
+ <rect x="888" y="256" width="80" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="928" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">lax.scan</text>
+ <rect x="980" y="256" width="90" height="32" rx="6" fill="#052e16" stroke="#34a853"/><text x="1025" y="278" text-anchor="middle" fill="#bbf7d0" font-family="JetBrains Mono, monospace" font-size="12">hybrid par</text>
+ <rect x="1082" y="256" width="80" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1122" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">AOT compile</text>
+ <rect x="1174" y="256" width="100" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1224" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">compile_topology</text>
+ <rect x="1286" y="256" width="70" height="32" rx="6" fill="#052e16" stroke="#34a853"/><text x="1321" y="278" text-anchor="middle" fill="#bbf7d0" font-family="JetBrains Mono, monospace" font-size="12">elastic</text>
+ <rect x="1368" y="256" width="80" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1408" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">Pathways</text>
+ <rect x="1460" y="256" width="60" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1490" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">reshard</text>
+ <rect x="1532" y="256" width="50" height="32" rx="6" fill="#052e16" stroke="#34a853"/><text x="1557" y="278" text-anchor="middle" fill="#bbf7d0" font-family="JetBrains Mono, monospace" font-size="12">MFU</text>
+ <rect x="1594" y="256" width="80" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1634" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">goodput</text>
+ <rect x="1686" y="256" width="60" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1716" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">XProf</text>
+ <rect x="1758" y="256" width="90" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1803" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">dump_hlo</text>
+ <line x1="960" y1="312" x2="960" y2="330" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Core Modules -->
+ <rect x="60" y="332" width="1800" height="200" rx="12" fill="#0f2744" stroke="#34a853" stroke-width="2.5"/>
+ <text x="88" y="360" fill="#34a853" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - Core Modules (Modular Python Components)</text>
+
+ <!-- Model left -->
+ <rect x="88" y="378" width="560" height="136" rx="12" fill="#052e16" stroke="#34a853" stroke-width="2"/>
+ <text x="368" y="408" text-anchor="middle" fill="#dcfce7" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Model Definition (layers/)</text>
+ <text x="368" y="432" text-anchor="middle" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="11">models.py + decoders.py + model-specific (deepseek.py...)</text>
+ <text x="368" y="452" text-anchor="middle" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="11">embeddings.py - attentions.py - linears.py - quantizations.py</text>
+ <text x="368" y="472" text-anchor="middle" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="11">MoE dropless Megablox - Splash Attention - GQA/MQA/MLA</text>
+ <text x="368" y="492" text-anchor="middle" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="11">Flax NNX + nn.with_logical_partitioning sharding hints</text>
+
+ <!-- Pipeline center -->
+ <rect x="680" y="378" width="560" height="136" rx="12" fill="#0c2d2d" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="960" y="408" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Data + Train Loop</text>
+ <text x="960" y="432" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="11">input_pipeline.py: Grain (ArrayRecord) / TFDS / HuggingFace</text>
+ <text x="960" y="452" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="11">functional_train - jax.jit with in/out_shardings + donate</text>
+ <text x="960" y="472" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="11">Optax optimizer - remat policy (full/minimal/custom)</text>
+ <text x="960" y="492" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="11">max_utils.py: jax.distributed init - TensorBoard logging</text>
+
+ <!-- Checkpoint right -->
+ <rect x="1272" y="378" width="560" height="136" rx="12" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1552" y="408" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">State Persistence (checkpointing.py)</text>
+ <text x="1552" y="432" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">Orbax CheckpointManager - async_checkpointing (non-blocking)</text>
+ <text x="1552" y="452" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">Stacked (scan) vs unscanned ckpt - training vs inference format</text>
+ <text x="1552" y="472" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">HF/PyTorch ingest - generate_param_only_checkpoint.py</text>
+ <text x="1552" y="492" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">Emergency/replicated ckpt - GCS base_output_directory</text>
+
+ <line x1="648" y1="446" x2="676" y2="446" stroke="#34a853" stroke-width="2" marker-end="url(#arrow-green)"/>
+ <line x1="1240" y1="446" x2="1268" y2="446" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrow-teal)"/>
+ <text x="960" y="528" text-anchor="middle" fill="#34a853" font-family="JetBrains Mono, monospace" font-size="10">Philosophy: pure Python/JAX - XLA handles fusion/parallelism - Pallas only for hot paths (attention, MoE)</text>
+
+ <line x1="960" y1="532" x2="960" y2="550" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 JAX/XLA -->
+ <rect x="60" y="552" width="1800" height="88" rx="12" fill="#0f2744" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="88" y="580" fill="#2dd4bf" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - JAX / XLA / Pallas Stack</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ccfbf1">
+  <rect x="88" y="592" width="50" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="113" y="616" text-anchor="middle">JAX</text>
+  <rect x="150" y="592" width="50" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="175" y="616" text-anchor="middle">jit</text>
+  <rect x="212" y="592" width="50" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="237" y="616" text-anchor="middle">XLA</text>
+  <rect x="274" y="592" width="60" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="304" y="616" text-anchor="middle">Pallas</text>
+  <rect x="346" y="592" width="60" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="376" y="616" text-anchor="middle">Mosaic</text>
+  <rect x="418" y="592" width="50" height="36" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="443" y="616" text-anchor="middle">Flax</text>
+  <rect x="480" y="592" width="50" height="36" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="505" y="616" text-anchor="middle">NNX</text>
+  <rect x="542" y="592" width="60" height="36" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="572" y="616" text-anchor="middle">Optax</text>
+  <rect x="614" y="592" width="60" height="36" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="644" y="616" text-anchor="middle">Orbax</text>
+  <rect x="686" y="592" width="60" height="36" rx="6" fill="#052e16" stroke="#34a853"/><text x="716" y="616" text-anchor="middle">Grain</text>
+  <rect x="758" y="592" width="80" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="798" y="616" text-anchor="middle">SplashAttn</text>
+  <rect x="850" y="592" width="80" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="890" y="616" text-anchor="middle">Megablox</text>
+  <rect x="942" y="592" width="70" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="977" y="616" text-anchor="middle">ragged_dot</text>
+  <rect x="1024" y="592" width="50" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1049" y="616" text-anchor="middle">Qwix</text>
+  <rect x="1086" y="592" width="50" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1111" y="616" text-anchor="middle">int8</text>
+  <rect x="1148" y="592" width="50" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1173" y="616" text-anchor="middle">fp8</text>
+  <rect x="1210" y="592" width="50" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1235" y="616" text-anchor="middle">bf16</text>
+  <rect x="1272" y="592" width="60" height="36" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="1302" y="616" text-anchor="middle">Tunix</text>
+  <rect x="1344" y="592" width="80" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1384" y="616" text-anchor="middle">Pathways</text>
+  <rect x="1436" y="592" width="60" height="36" rx="6" fill="#2e1065" stroke="#8b5cf6"/><text x="1466" y="616" text-anchor="middle">vLLM</text>
+  <rect x="1508" y="592" width="80" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1548" y="616" text-anchor="middle">JetStream</text>
+  <rect x="1600" y="592" width="80" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1640" y="616" text-anchor="middle">maxengine</text>
+  <rect x="1692" y="592" width="80" height="36" rx="6" fill="#052e16" stroke="#34a853"/><text x="1732" y="616" text-anchor="middle">MaxDiffusion</text>
+  <rect x="1784" y="592" width="64" height="36" rx="6" fill="#052e16" stroke="#34a853"/><text x="1816" y="616" text-anchor="middle">OpenXLA</text>
+ </g>
+
+ <!-- L5 Features -->
+ <rect x="60" y="652" width="1800" height="72" rx="12" fill="#0f2744" stroke="#fbbf24" stroke-width="2"/>
+ <text x="88" y="680" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Advanced Features &amp; Training Tasks</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#fef3c7">
+  <rect x="88" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="113" y="709" text-anchor="middle">CPT</text>
+  <rect x="148" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="173" y="709" text-anchor="middle">SFT</text>
+  <rect x="208" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="233" y="709" text-anchor="middle">GRPO</text>
+  <rect x="268" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="293" y="709" text-anchor="middle">GSPO</text>
+  <rect x="328" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="353" y="709" text-anchor="middle">MTP</text>
+  <rect x="388" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="413" y="709" text-anchor="middle">MoE</text>
+  <rect x="448" y="692" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="478" y="709" text-anchor="middle">dropless</text>
+  <rect x="518" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="543" y="709" text-anchor="middle">remat</text>
+  <rect x="578" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="603" y="709" text-anchor="middle">quant</text>
+  <rect x="638" y="692" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="668" y="709" text-anchor="middle">elastic</text>
+  <rect x="708" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="733" y="709" text-anchor="middle">AOT</text>
+  <rect x="768" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="793" y="709" text-anchor="middle">VLM</text>
+  <rect x="828" y="692" width="40" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="848" y="709" text-anchor="middle">MLA</text>
+  <rect x="878" y="692" width="40" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="898" y="709" text-anchor="middle">GQA</text>
+  <rect x="928" y="692" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="968" y="709" text-anchor="middle">HF convert</text>
+  <rect x="1018" y="692" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1053" y="709" text-anchor="middle">50944 TPU</text>
+  <rect x="1098" y="692" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1128" y="709" text-anchor="middle">65% MFU</text>
+  <rect x="1168" y="692" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1208" y="709" text-anchor="middle">multi-modal</text>
+  <rect x="1258" y="692" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1293" y="709" text-anchor="middle">vision enc</text>
+  <rect x="1338" y="692" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1378" y="709" text-anchor="middle">synthetic ds</text>
+  <rect x="1428" y="692" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1463" y="709" text-anchor="middle">Dataflow</text>
+  <rect x="1508" y="692" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1538" y="709" text-anchor="middle">GCS I/O</text>
+  <rect x="1578" y="692" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1618" y="709" text-anchor="middle">disagg RL</text>
+  <rect x="1668" y="692" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1713" y="709" text-anchor="middle">weight xfer</text>
+  <rect x="1768" y="692" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1808" y="709" text-anchor="middle">forkable</text>
+ </g>
+
+ <!-- DETAIL Training Loop -->
+ <rect x="60" y="740" width="880" height="340" rx="14" fill="#0c1524" stroke="#34a853" stroke-width="2.5"/>
+ <text x="88" y="772" fill="#34a853" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Training Loop (jax.jit functional_train)</text>
+ <text x="88" y="794" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="11">Compiler-centric: high-level Python - XLA generates fused SPMD machine code</text>
+
+ <rect x="88" y="810" width="820" height="36" rx="6" fill="#052e16" stroke="#34a853"/>
+ <text x="498" y="834" text-anchor="middle" fill="#dcfce7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1: max_utils init JAX distributed - build device mesh from ici/dcn config</text>
+ <line x1="498" y1="846" x2="498" y2="858" stroke="#34a853" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+ <rect x="88" y="860" width="820" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="498" y="884" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2: create_data_iterator - Grain/TFDS/HF batch - load Orbax ckpt if resuming</text>
+ <line x1="498" y1="896" x2="498" y2="908" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+ <rect x="88" y="910" width="820" height="36" rx="6" fill="#052e16" stroke="#34a853"/>
+ <text x="498" y="934" text-anchor="middle" fill="#dcfce7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3: p_train_step = jax.jit(functional_train, in/out_shardings, donate_argnums)</text>
+ <line x1="498" y1="946" x2="498" y2="958" stroke="#34a853" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+ <rect x="88" y="960" width="820" height="36" rx="6" fill="#052e16" stroke="#34a853"/>
+ <text x="498" y="984" text-anchor="middle" fill="#dcfce7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4: forward + loss (incl MTP aux) + backward + Optax update on sharded pytree</text>
+ <line x1="498" y1="996" x2="498" y2="1008" stroke="#34a853" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+ <rect x="88" y="1010" width="820" height="36" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="498" y="1034" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 5: async Orbax save (stacked ckpt) + metrics/TensorBoard - loop steps</text>
+
+ <text x="88" y="1068" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Pre-train to 50k+ chips - near-linear scaling - remat trades compute for memory</text>
+ <text x="88" y="1084" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Pathways single-controller: batch (xpk) or headless (JAX_PLATFORMS=proxy) modes</text>
+
+ <!-- DETAIL Inference + Ecosystem -->
+ <rect x="960" y="740" width="900" height="340" rx="14" fill="#0c1224" stroke="#34a853" stroke-width="2.5"/>
+ <text x="988" y="772" fill="#34a853" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Inference + JAX AI Stack Position</text>
+ <text x="988" y="794" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="11">Train to serve pipeline - checkpoint format conversion bridges training and deployment</text>
+
+ <text x="988" y="818" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Checkpoint to Inference Path</text>
+ <rect x="988" y="828" width="200" height="68" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1088" y="852" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stacked Training Ckpt</text>
+ <text x="1088" y="870" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">params + optimizer state</text>
+ <text x="1088" y="886" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">jax.lax.scan format</text>
+ <line x1="1188" y1="862" x2="1218" y2="862" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrow-teal)"/>
+ <rect x="1222" y="828" width="240" height="68" rx="6" fill="#052e16" stroke="#34a853"/>
+ <text x="1342" y="852" text-anchor="middle" fill="#dcfce7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">generate_param_only_ckpt</text>
+ <text x="1342" y="870" text-anchor="middle" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="9">unscan layers - strip optimizer</text>
+ <text x="1342" y="886" text-anchor="middle" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="9">Qwix quant optional</text>
+ <line x1="1462" y1="862" x2="1492" y2="862" stroke="#34a853" stroke-width="2" marker-end="url(#arrow-green)"/>
+ <rect x="1496" y="828" width="160" height="68" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="1576" y="852" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">decode.py</text>
+ <text x="1576" y="870" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">autoregressive inference</text>
+ <text x="1576" y="886" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">local batch decode</text>
+ <rect x="1668" y="828" width="140" height="68" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="1738" y="852" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">maxengine_server</text>
+ <text x="1738" y="870" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">JetStream online serve</text>
+ <text x="1738" y="886" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">cont. batch + int8 KV</text>
+
+ <text x="988" y="916" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Post-Training (Tunix integration)</text>
+ <rect x="988" y="926" width="180" height="48" rx="6" fill="#1e1b4b" stroke="#6366f1"/>
+ <text x="1078" y="946" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">SFT via Tunix</text>
+ <text x="1078" y="962" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">MaxText model kernels</text>
+ <rect x="1180" y="926" width="180" height="48" rx="6" fill="#1e1b4b" stroke="#6366f1"/>
+ <text x="1270" y="946" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">GRPO/GSPO RL</text>
+ <text x="1270" y="962" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">vLLM sampling + Pathways</text>
+ <rect x="1372" y="926" width="200" height="48" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1472" y="946" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">HF weight bridge</text>
+ <text x="1472" y="962" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">llama_or_mistral_ckpt.py ingest/egress</text>
+ <rect x="1584" y="926" width="224" height="48" rx="6" fill="#052e16" stroke="#34a853"/>
+ <text x="1696" y="946" text-anchor="middle" fill="#dcfce7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">JAX AI Stack foundation</text>
+ <text x="1696" y="962" text-anchor="middle" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="9">MaxText - Tunix - vLLM/JetStream serve</text>
+
+ <text x="988" y="996" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Ecosystem Position</text>
+ <rect x="988" y="1006" width="70" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1023" y="1030" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">Flax</text>
+ <rect x="1070" y="1006" width="60" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1100" y="1030" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">Optax</text>
+ <rect x="1142" y="1006" width="60" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1172" y="1030" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">Orbax</text>
+ <rect x="1214" y="1006" width="60" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1244" y="1030" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">Grain</text>
+ <rect x="1286" y="1006" width="60" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1316" y="1030" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">Tunix</text>
+ <rect x="1358" y="1006" width="50" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1383" y="1030" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">TPU</text>
+ <rect x="1420" y="1006" width="50" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1445" y="1030" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">GPU</text>
+ <rect x="1482" y="1006" width="60" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1512" y="1030" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">vLLM</text>
+ <rect x="1554" y="1006" width="80" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1594" y="1030" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">JetStream</text>
+ <rect x="1646" y="1006" width="50" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1671" y="1030" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">HF</text>
+ <rect x="1708" y="1006" width="100" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1758" y="1030" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">AI Hypercomputer</text>
+
+ <text x="988" y="1068" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Same codebase targets TPU and GPU via XLA - forkable reference for custom LLM development</text>
+
+ <!-- L6 Production -->
+ <rect x="60" y="1100" width="1800" height="72" rx="12" fill="#1a1208" stroke="#34a853" stroke-width="2"/>
+ <text x="88" y="1128" fill="#34a853" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Hardware &amp; Production Scale</text>
+ <text x="960" y="1154" text-anchor="middle" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="13">Cloud TPU v4/v5/v6 + NVIDIA GPU - GKE XPK - 50944-chip runs - foundation of JAX AI stack pre-training</text>
+
+ <!-- footers -->
+ <rect x="60" y="1192" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1212" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Init path: base.yml + overrides - mesh init - model load/convert - jit compile train_step - data iterator start</text>
+ <text x="960" y="1230" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Step path: batch fetch - jit train_step - metrics log - async ckpt - repeat - export for decode/JetStream/vLLM</text>
+
+ <text x="60" y="1276" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: AI-Hypercomputer/maxtext - maxtext.readthedocs.io/architecture - Cloud TPU JAX AI stack - JetStream docs</text>
+</svg>

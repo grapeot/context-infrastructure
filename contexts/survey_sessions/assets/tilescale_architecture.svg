@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-sky" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#0ea5e9"/>
+  </marker>
+  <marker id="arrow-cyan" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#22d3ee"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">TileScale Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">Distributed Tile DSL + HDA Mega-Device - TileLang Extension - github.com/tile-ai/tilescale</text>
+
+ <!-- L1 Applications -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#0ea5e9" stroke-width="2"/>
+ <text x="88" y="124" fill="#0ea5e9" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Distributed AI Workloads (intra-chip + inter-chip unified programming)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="80" height="40" rx="6" fill="#0c4a6e" stroke="#38bdf8"/><text x="128" y="162" text-anchor="middle">TP GEMM</text>
+  <rect x="180" y="136" width="90" height="40" rx="6" fill="#0c4a6e" stroke="#38bdf8"/><text x="225" y="162" text-anchor="middle">FlashMLA CP</text>
+  <rect x="282" y="136" width="80" height="40" rx="6" fill="#0c4a6e" stroke="#38bdf8"/><text x="322" y="162" text-anchor="middle">AllGather</text>
+  <rect x="374" y="136" width="70" height="40" rx="6" fill="#0c4a6e" stroke="#38bdf8"/><text x="409" y="162" text-anchor="middle">AllReduce</text>
+  <rect x="456" y="136" width="60" height="40" rx="6" fill="#0c4a6e" stroke="#38bdf8"/><text x="486" y="162" text-anchor="middle">MoE EP</text>
+  <rect x="528" y="136" width="70" height="40" rx="6" fill="#0c4a6e" stroke="#38bdf8"/><text x="563" y="162" text-anchor="middle">UTCMMA</text>
+  <rect x="610" y="136" width="80" height="40" rx="6" fill="#0c4a6e" stroke="#38bdf8"/><text x="650" y="162" text-anchor="middle">cluster GEMM</text>
+  <rect x="702" y="136" width="70" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="737" y="162" text-anchor="middle">multi-GPU</text>
+  <rect x="784" y="136" width="70" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="819" y="162" text-anchor="middle">multi-node</text>
+  <rect x="866" y="136" width="70" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="901" y="162" text-anchor="middle">wafer-scale</text>
+  <rect x="948" y="136" width="50" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="973" y="162" text-anchor="middle">3D IC</text>
+  <rect x="1010" y="136" width="80" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1050" y="162" text-anchor="middle">near-memory</text>
+  <rect x="1102" y="136" width="60" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="1132" y="162" text-anchor="middle">TileLang</text>
+  <rect x="1174" y="136" width="70" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1209" y="162" text-anchor="middle">NVSHMEM</text>
+  <rect x="1256" y="136" width="60" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1286" y="162" text-anchor="middle">NVLink</text>
+  <rect x="1328" y="136" width="70" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1363" y="162" text-anchor="middle">InfiniBand</text>
+  <rect x="1410" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1435" y="162" text-anchor="middle">NoC</text>
+  <rect x="1472" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1497" y="162" text-anchor="middle">DSMEM</text>
+  <rect x="1534" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1569" y="162" text-anchor="middle">early exp</text>
+  <rect x="1616" y="136" width="70" height="40" rx="6" fill="#0c4a6e" stroke="#38bdf8"/><text x="1651" y="162" text-anchor="middle">tile-ai</text>
+  <rect x="1698" y="136" width="80" height="40" rx="6" fill="#0c4a6e" stroke="#38bdf8"/><text x="1738" y="162" text-anchor="middle">PKU+MSR</text>
+  <rect x="1790" y="136" width="58" height="40" rx="6" fill="#0c4a6e" stroke="#38bdf8"/><text x="1819" y="162" text-anchor="middle">v0.dev</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 HDA -->
+ <rect x="60" y="216" width="1800" height="120" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2"/>
+ <text x="88" y="244" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Hierarchical Distributed Architecture (HDA) - unified mega-device virtualization</text>
+ <rect x="88" y="258" width="340" height="64" rx="10" fill="#0c4a6e" stroke="#0ea5e9" stroke-width="2"/>
+ <text x="258" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Three Resource Types</text>
+ <text x="258" y="300" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="10">Compute units - Memory layers - Network links</text>
+ <text x="258" y="314" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="10">Hierarchically grouped at each scale level</text>
+ <rect x="448" y="258" width="420" height="64" rx="10" fill="#0c4a6e" stroke="#0ea5e9" stroke-width="2"/>
+ <text x="658" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Scale Hierarchy (example GPU cluster)</text>
+ <text x="658" y="300" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="10">thread - warp - warpgroup - block/SM - cta_cluster - device - node</text>
+ <text x="658" y="314" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="10">Levels HW-defined - names vary per architecture</text>
+ <rect x="888" y="258" width="340" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1058" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Memory Layers</text>
+ <text x="1058" y="300" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">L0 register/fragment - L1 shared - L2 cache</text>
+ <text x="1058" y="314" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Shared or distributed per compute unit at each scale</text>
+ <rect x="1248" y="258" width="340" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="1418" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Network Interconnect</text>
+ <text x="1418" y="300" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Intra-chip NoC (SM cluster) - NVLink (GPU)</text>
+ <text x="1418" y="314" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Inter-node IB - software channels via lower mem</text>
+ <rect x="1608" y="258" width="220" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1718" y="282" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">User-Defined HDA</text>
+ <text x="1718" y="300" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Backend config any arch topology</text>
+ <text x="1718" y="314" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Not locked to specific HW vendors</text>
+ <line x1="960" y1="336" x2="960" y2="354" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Programming Interface -->
+ <rect x="60" y="356" width="1800" height="200" rx="12" fill="#0f2744" stroke="#0ea5e9" stroke-width="2.5"/>
+ <text x="88" y="384" fill="#0ea5e9" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - Hierarchical Tile Programming Interface (consistent primitives at every scale)</text>
+
+ <rect x="88" y="400" width="340" height="136" rx="12" fill="#0c4a6e" stroke="#0ea5e9" stroke-width="2"/>
+ <text x="258" y="428" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">T.Scale (hierarchical SPMD)</text>
+ <text x="258" y="452" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="10">with T.Scale("warp"): T.gemm(A,B,C)</text>
+ <text x="258" y="470" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="10">Returns rank + num_ranks for specialization</text>
+ <text x="258" y="488" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="10">device/block/warpgroup/warp/cta_cluster</text>
+ <text x="258" y="506" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="10">Warp/task specialization via wg_id branch</text>
+ <text x="258" y="524" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="10">MPI-style neighbor copy + barrier patterns</text>
+
+ <rect x="448" y="400" width="340" height="136" rx="12" fill="#0c4a6e" stroke="#38bdf8" stroke-width="2"/>
+ <text x="618" y="428" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Memory Primitives</text>
+ <text x="618" y="452" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="10">T.alloc(shape, dtype, level="l0/l1/l2")</text>
+ <text x="618" y="470" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="10">T.view(tile, layout=T.FullCol/FullRow/Replica)</text>
+ <text x="618" y="488" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="10">Layout inference or user-specified partition</text>
+ <text x="618" y="506" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="10">T.copy between memory layers + global</text>
+ <text x="618" y="524" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="10">Multi-scale tile view: block to thread reg</text>
+
+ <rect x="808" y="400" width="340" height="136" rx="12" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="978" y="428" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Communication Primitives</text>
+ <text x="978" y="452" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">P2P: T.copy(remote, local, dst=rank)</text>
+ <text x="978" y="470" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Collectives: T.allreduce / T.allgather / All2All</text>
+ <text x="978" y="488" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">T.barrier at scale level</text>
+ <text x="978" y="506" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Software channels when no HW link exists</text>
+ <text x="978" y="524" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">NVSHMEM put/get/signal/wait lowering</text>
+
+ <rect x="1168" y="400" width="340" height="136" rx="12" fill="#1e1b4b" stroke="#6366f1" stroke-width="2"/>
+ <text x="1338" y="428" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Compute Primitives (from TileLang)</text>
+ <text x="1338" y="452" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">T.gemm - T.reduce - T.Pipelined - T.Parallel</text>
+ <text x="1338" y="470" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Same op at high scale = lower-scale impl group</text>
+ <text x="1338" y="488" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">TMA/LSU/copy-engine impl variants tunable</text>
+ <text x="1338" y="506" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">T.Kernel(device=N, block=..., cta_cluster=)</text>
+ <text x="1338" y="524" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">GemmWarpPolicy - UTCMMA cluster GEMM</text>
+
+ <rect x="1528" y="400" width="300" height="136" rx="12" fill="#052e16" stroke="#22c55e" stroke-width="2"/>
+ <text x="1678" y="428" text-anchor="middle" fill="#dcfce7" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Launch Config Extensions</text>
+ <text x="1678" y="452" text-anchor="middle" fill="#bbf7d0" font-family="JetBrains Mono, monospace" font-size="10">device=(4) multi-GPU tensor parallel</text>
+ <text x="1678" y="470" text-anchor="middle" fill="#bbf7d0" font-family="JetBrains Mono, monospace" font-size="10">cta_cluster=(2) for Hopper cluster GEMM</text>
+ <text x="1678" y="488" text-anchor="middle" fill="#bbf7d0" font-family="JetBrains Mono, monospace" font-size="10">TILELANG_USE_DISTRIBUTED=1 build flag</text>
+ <text x="1678" y="506" text-anchor="middle" fill="#bbf7d0" font-family="JetBrains Mono, monospace" font-size="10">pynvshmem host-side Python wrapper</text>
+ <text x="1678" y="524" text-anchor="middle" fill="#bbf7d0" font-family="JetBrains Mono, monospace" font-size="10">Fine-grained compute-comm overlap</text>
+
+ <line x1="960" y1="556" x2="960" y2="574" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Frontend -->
+ <rect x="60" y="576" width="1800" height="88" rx="12" fill="#0f2744" stroke="#818cf8" stroke-width="2"/>
+ <text x="88" y="604" fill="#818cf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Frontend (Python DSL + TileLang base + hierarchical syntax extensions)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0e7ff">
+  <rect x="88" y="616" width="90" height="32" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="133" y="638" text-anchor="middle">tilescale.language</text>
+  <rect x="190" y="616" width="80" height="32" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="230" y="638" text-anchor="middle">extends TileLang</text>
+  <rect x="282" y="616" width="70" height="32" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="317" y="638" text-anchor="middle">T.Kernel</text>
+  <rect x="364" y="616" width="60" height="32" rx="6" fill="#0c4a6e" stroke="#0ea5e9"/><text x="394" y="638" text-anchor="middle">T.Scale</text>
+  <rect x="436" y="616" width="50" height="32" rx="6" fill="#0c4a6e" stroke="#0ea5e9"/><text x="461" y="638" text-anchor="middle">T.view</text>
+  <rect x="498" y="616" width="50" height="32" rx="6" fill="#0c4a6e" stroke="#0ea5e9"/><text x="523" y="638" text-anchor="middle">T.alloc</text>
+  <rect x="560" y="616" width="70" height="32" rx="6" fill="#431407" stroke="#fb923c"/><text x="595" y="638" text-anchor="middle">T.allreduce</text>
+  <rect x="642" y="616" width="70" height="32" rx="6" fill="#431407" stroke="#fb923c"/><text x="677" y="638" text-anchor="middle">T.allgather</text>
+  <rect x="724" y="616" width="60" height="32" rx="6" fill="#431407" stroke="#fb923c"/><text x="754" y="638" text-anchor="middle">T.barrier</text>
+  <rect x="796" y="616" width="80" height="32" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="836" y="638" text-anchor="middle">type annot</text>
+  <rect x="888" y="616" width="80" height="32" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="928" y="638" text-anchor="middle">Pythonic DSL</text>
+  <rect x="980" y="616" width="80" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1020" y="638" text-anchor="middle">dataflow centric</text>
+  <rect x="1072" y="616" width="90" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1117" y="638" text-anchor="middle">write at layer</text>
+  <rect x="1174" y="616" width="80" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1214" y="638" text-anchor="middle">of interest</text>
+  <rect x="1266" y="616" width="90" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1311" y="638" text-anchor="middle">NUMA aware</text>
+  <rect x="1368" y="616" width="80" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1408" y="638" text-anchor="middle">dataflow</text>
+  <rect x="1460" y="616" width="80" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1500" y="638" text-anchor="middle">flexible PP</text>
+  <rect x="1552" y="616" width="90" height="32" rx="6" fill="#052e16" stroke="#22c55e"/><text x="1597" y="638" text-anchor="middle">open model</text>
+  <rect x="1654" y="616" width="90" height="32" rx="6" fill="#052e16" stroke="#22c55e"/><text x="1699" y="638" text-anchor="middle">future arch</text>
+  <rect x="1756" y="616" width="92" height="32" rx="6" fill="#0c4a6e" stroke="#0ea5e9"/><text x="1802" y="638" text-anchor="middle">mega-device</text>
+ </g>
+ <line x1="960" y1="664" x2="960" y2="682" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L5 Middle Layer -->
+ <rect x="60" y="684" width="1800" height="200" rx="12" fill="#0f2744" stroke="#0ea5e9" stroke-width="2.5"/>
+ <text x="88" y="712" fill="#0ea5e9" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Middle Layer (Compiler + Tile Kernel Library + Cost Model)</text>
+
+ <rect x="88" y="728" width="520" height="136" rx="12" fill="#0c4a6e" stroke="#0ea5e9" stroke-width="2"/>
+ <text x="348" y="756" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Compiler Module</text>
+ <text x="348" y="780" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="10">Lower frontend program to IR + optimization passes</text>
+ <text x="348" y="798" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="10">Lower high-scale tile primitives to lower-scale ops</text>
+ <text x="348" y="816" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="10">Schedule compute + comm + memory access overlap</text>
+ <text x="348" y="834" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="10">Layout inference for multi-scale T.view partitions</text>
+ <text x="348" y="852" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="10">Select best impl variant via cost model feedback</text>
+
+ <rect x="628" y="728" width="520" height="136" rx="12" fill="#1e1b4b" stroke="#6366f1" stroke-width="2"/>
+ <text x="888" y="756" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Tile Kernel Library</text>
+ <text x="888" y="780" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Pre-implemented tile primitive kernels at each scale</text>
+ <text x="888" y="798" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Block-scale GEMM direct map OR recursive lower</text>
+ <text x="888" y="816" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Default impl per primitive (TMA vs LSU vs CE)</text>
+ <text x="888" y="834" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">User override via primitive arguments</text>
+ <text x="888" y="852" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Inherits TileLang tl_templates + distributed ext</text>
+
+ <rect x="1168" y="728" width="520" height="136" rx="12" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="1428" y="756" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Cost Model</text>
+ <text x="1428" y="780" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Performance database for optimization plans</text>
+ <text x="1428" y="798" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Lightweight feedback for compiler tuning decisions</text>
+ <text x="1428" y="816" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Impl selection: copy engine vs TMA vs remote path</text>
+ <text x="1428" y="834" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Overlap planning for pipelined comm+compute</text>
+ <text x="1428" y="852" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">TVM cost model integration (autotune path)</text>
+
+ <line x1="960" y1="864" x2="960" y2="882" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L6 Backend -->
+ <rect x="60" y="884" width="1800" height="120" rx="12" fill="#0f2744" stroke="#22d3ee" stroke-width="2"/>
+ <text x="88" y="912" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Backend Module (configurable HDA hardware architecture + codegen targets)</text>
+ <rect x="88" y="926" width="340" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="258" y="950" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">HDA Backend Config</text>
+ <text x="258" y="968" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Define scale levels, memory layers, network topo</text>
+ <text x="258" y="982" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Compile to any user-defined distributed arch</text>
+ <rect x="448" y="926" width="340" height="64" rx="10" fill="#431407" stroke="#ea580c" stroke-width="2"/>
+ <text x="618" y="950" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">NVIDIA GPU Cluster</text>
+ <text x="618" y="968" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">CUDA + NVLink + NVSHMEM + DSMEM/UTCMMA</text>
+ <text x="618" y="982" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Hopper CTA cluster NoC peer SM access</text>
+ <rect x="808" y="926" width="340" height="64" rx="10" fill="#431407" stroke="#ea580c" stroke-width="2"/>
+ <text x="978" y="950" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Multi-Node Runtime</text>
+ <text x="978" y="968" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">MPI/NVSHMEM host launch - pynvshmem FFI</text>
+ <text x="978" y="982" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">InfiniBand RDMA collective lowering</text>
+ <rect x="1168" y="926" width="340" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1338" y="950" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Future Accelerators</text>
+ <text x="1338" y="968" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Wafer-scale - 3D IC - near/in-memory compute</text>
+ <text x="1338" y="982" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Intra-chip distributed PE mesh architectures</text>
+ <rect x="1528" y="926" width="300" height="64" rx="10" fill="#1e1b4b" stroke="#6366f1" stroke-width="2"/>
+ <text x="1678" y="950" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">TileLang/TVM Codegen</text>
+ <text x="1678" y="968" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">CUDA/HIP/LLVM IR - inherits TileLang pipeline</text>
+ <text x="1678" y="982" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Distributed device-side + host wrapper codegen</text>
+ <line x1="960" y1="1004" x2="960" y2="1022" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L7 Physical -->
+ <rect x="60" y="1024" width="1800" height="56" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2"/>
+ <text x="88" y="1052" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L7 - Physical Distributed Systems (hybrid multi-level distributed AI compute)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0f2fe">
+  <rect x="88" y="1060" width="50" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="113" y="1077" text-anchor="middle">H100</text>
+  <rect x="148" y="1060" width="50" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="173" y="1077" text-anchor="middle">DGX</text>
+  <rect x="208" y="1060" width="50" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="233" y="1077" text-anchor="middle">NVLink</text>
+  <rect x="268" y="1060" width="60" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="298" y="1077" text-anchor="middle">NVSHMEM</text>
+  <rect x="338" y="1060" width="40" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="358" y="1077" text-anchor="middle">IB</text>
+  <rect x="388" y="1060" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="413" y="1077" text-anchor="middle">NoC</text>
+  <rect x="448" y="1060" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="473" y="1077" text-anchor="middle">DSMEM</text>
+  <rect x="508" y="1060" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="533" y="1077" text-anchor="middle">TMA</text>
+  <rect x="568" y="1060" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="593" y="1077" text-anchor="middle">WGMMA</text>
+  <rect x="628" y="1060" width="60" height="24" rx="5" fill="#0c4a6e" stroke="#0ea5e9"/><text x="658" y="1077" text-anchor="middle">L0-L2</text>
+  <rect x="698" y="1060" width="50" height="24" rx="5" fill="#0c4a6e" stroke="#0ea5e9"/><text x="723" y="1077" text-anchor="middle">HBM</text>
+  <rect x="758" y="1060" width="50" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="783" y="1077" text-anchor="middle">Cerebras</text>
+  <rect x="818" y="1060" width="50" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="843" y="1077" text-anchor="middle">WSE</text>
+  <rect x="878" y="1060" width="40" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="898" y="1077" text-anchor="middle">PE</text>
+  <rect x="928" y="1060" width="40" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="948" y="1077" text-anchor="middle">die</text>
+  <rect x="978" y="1060" width="50" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="1003" y="1077" text-anchor="middle">chip</text>
+  <rect x="1038" y="1060" width="50" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="1063" y="1077" text-anchor="middle">node</text>
+  <rect x="1098" y="1060" width="60" height="24" rx="5" fill="#1e1b4b" stroke="#6366f1"/><text x="1128" y="1077" text-anchor="middle">TVM IR</text>
+  <rect x="1168" y="1060" width="60" height="24" rx="5" fill="#1e1b4b" stroke="#6366f1"/><text x="1198" y="1077" text-anchor="middle">mpich</text>
+  <rect x="1238" y="1060" width="70" height="24" rx="5" fill="#052e16" stroke="#22c55e"/><text x="1273" y="1077" text-anchor="middle">overlap</text>
+  <rect x="1318" y="1060" width="60" height="24" rx="5" fill="#052e16" stroke="#22c55e"/><text x="1348" y="1077" text-anchor="middle">TP/CP</text>
+  <rect x="1388" y="1060" width="60" height="24" rx="5" fill="#052e16" stroke="#22c55e"/><text x="1418" y="1077" text-anchor="middle">EP/PP</text>
+  <rect x="1458" y="1060" width="80" height="24" rx="5" fill="#0c4a6e" stroke="#0ea5e9"/><text x="1498" y="1077" text-anchor="middle">scaling-law</text>
+  <rect x="1548" y="1060" width="90" height="24" rx="5" fill="#0c4a6e" stroke="#0ea5e9"/><text x="1593" y="1077" text-anchor="middle">mega-device</text>
+  <rect x="1648" y="1060" width="80" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1688" y="1077" text-anchor="middle">whitepaper</text>
+  <rect x="1738" y="1060" width="110" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1793" y="1077" text-anchor="middle">coming soon</text>
+ </g>
+
+ <!-- DETAIL Examples -->
+ <rect x="60" y="1096" width="880" height="340" rx="14" fill="#0c1524" stroke="#0ea5e9" stroke-width="2.5"/>
+ <text x="88" y="1128" fill="#0ea5e9" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Example: 4-GPU Tensor Parallel GEMM Flow</text>
+ <text x="88" y="1150" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="11">Multi-scale nested T.Scale - L2 inter-GPU + L1 warpgroup reduce</text>
+
+ <rect x="88" y="1166" width="820" height="36" rx="6" fill="#0c4a6e" stroke="#0ea5e9"/>
+ <text x="498" y="1190" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">T.Kernel(device=4, block=(grid_M,grid_N), threads=256) - 4-way tensor parallel launch</text>
+ <line x1="498" y1="1202" x2="498" y2="1214" stroke="#0ea5e9" stroke-width="1.5" marker-end="url(#arrow-sky)"/>
+ <rect x="88" y="1216" width="820" height="36" rx="6" fill="#0c4a6e" stroke="#38bdf8"/>
+ <text x="498" y="1240" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">T.Scale("device"): T.view global A/B/C with FullCol/FullRow/Replica layouts</text>
+ <line x1="498" y1="1252" x2="498" y2="1264" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+ <rect x="88" y="1266" width="820" height="36" rx="6" fill="#1e1b4b" stroke="#6366f1"/>
+ <text x="498" y="1290" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">T.Scale("block"): pipelined K-loop - T.gemm on l0 tiles - warpgroup T.allreduce on L1</text>
+ <line x1="498" y1="1302" x2="498" y2="1314" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arrow-sky)"/>
+ <rect x="88" y="1316" width="820" height="36" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="498" y="1340" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">T.Scale("device"): T.allreduce(C_global) on L2 across 4 GPUs via NVLink/NVSHMEM</text>
+ <line x1="498" y1="1352" x2="498" y2="1364" stroke="#fb923c" stroke-width="1.5" marker-end="url(#arrow-sky)"/>
+ <rect x="88" y="1366" width="820" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="498" y="1390" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Compiler overlaps comm+compute - cost model picks TMA/CE impl - lower to CUDA+NVSHMEM</text>
+
+ <text x="88" y="1424" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">FlashMLA: 4-GPU context parallel - KV sharded by seqlen - warpgroup allgather on acc_s</text>
+
+ <!-- DETAIL Position -->
+ <rect x="960" y="1096" width="900" height="340" rx="14" fill="#0c1224" stroke="#0ea5e9" stroke-width="2.5"/>
+ <text x="988" y="1128" fill="#0ea5e9" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Design Position + TileScale vs TileLang vs NVIDIA cuTile</text>
+ <text x="988" y="1150" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="11">TileScale extends TileLang from single-device kernels to hierarchical distributed mega-device</text>
+
+ <text x="988" y="1174" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Comparison</text>
+ <rect x="988" y="1184" width="200" height="68" rx="6" fill="#1e1b4b" stroke="#818cf8"/>
+ <text x="1088" y="1208" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">TileLang</text>
+ <text x="1088" y="1226" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">Single device kernel DSL</text>
+ <text x="1088" y="1242" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">Layout infer + tile ops</text>
+ <rect x="1200" y="1184" width="200" height="68" rx="6" fill="#0c4a6e" stroke="#0ea5e9"/>
+ <text x="1300" y="1208" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">TileScale</text>
+ <text x="1300" y="1226" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="9">+ HDA + T.Scale + comm ops</text>
+ <text x="1300" y="1242" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="9">Multi-GPU/node/chip distributed</text>
+ <rect x="1412" y="1184" width="200" height="68" rx="6" fill="#431407" stroke="#ea580c"/>
+ <text x="1512" y="1208" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">NVIDIA cuTile</text>
+ <text x="1512" y="1226" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">CUDA 13.1 single-GPU tile IR</text>
+ <text x="1512" y="1242" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Different project - not TileScale</text>
+ <rect x="1624" y="1184" width="224" height="68" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1736" y="1208" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">vs NCCL/MPI manual</text>
+ <text x="1736" y="1226" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">Tile-level collectives in kernel</text>
+ <text x="1736" y="1242" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">Fine-grained overlap scheduling</text>
+
+ <text x="988" y="1272" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Key Design Goals</text>
+ <rect x="988" y="1282" width="130" height="48" rx="6" fill="#0c4a6e" stroke="#0ea5e9"/>
+ <text x="1053" y="1304" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Mega-device</text>
+ <text x="1053" y="1320" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="9">One virtual machine</text>
+ <rect x="1130" y="1282" width="130" height="48" rx="6" fill="#0c4a6e" stroke="#0ea5e9"/>
+ <text x="1195" y="1304" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Same primitives</text>
+ <text x="1195" y="1320" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="9">All scale levels</text>
+ <rect x="1272" y="1282" width="130" height="48" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="1337" y="1304" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Auto overlap</text>
+ <text x="1337" y="1320" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Comm+compute+mem</text>
+ <rect x="1414" y="1282" width="130" height="48" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1479" y="1304" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Open arch</text>
+ <text x="1479" y="1320" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">User-defined HDA</text>
+ <rect x="1556" y="1282" width="130" height="48" rx="6" fill="#052e16" stroke="#22c55e"/>
+ <text x="1621" y="1304" text-anchor="middle" fill="#dcfce7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Dataflow</text>
+ <text x="1621" y="1320" text-anchor="middle" fill="#bbf7d0" font-family="JetBrains Mono, monospace" font-size="9">Write layer of interest</text>
+ <rect x="1698" y="1282" width="150" height="48" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="1773" y="1304" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Early stage</text>
+ <text x="1773" y="1320" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Whitepaper TBD - v0.dev</text>
+
+ <text x="988" y="1350" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">HDA Scale Stack (bottom to top)</text>
+ <rect x="988" y="1360" width="860" height="48" rx="6" fill="#1a1208" stroke="#0ea5e9"/>
+ <text x="1418" y="1384" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">thread -&gt; warp -&gt; warpgroup -&gt; block/SM -&gt; cta_cluster -&gt; device -&gt; node -&gt; ...</text>
+ <text x="1418" y="1400" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="10">Each level: compute group + memory layer access + peer network - unified by T.Scale</text>
+
+ <!-- L7 Position -->
+ <rect x="60" y="1452" width="1800" height="36" rx="12" fill="#1a1208" stroke="#0ea5e9" stroke-width="2"/>
+ <text x="960" y="1474" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="13">Design: first stack unifying intra-chip + inter-chip distributed resources as one programmable mega-device</text>
+
+ <!-- footers -->
+ <rect x="60" y="1498" width="1800" height="36" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1520" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: github.com/tile-ai/tilescale README - TileLang extension - HDA whitepaper coming soon - NOT NVIDIA cuTile</text>
+</svg>

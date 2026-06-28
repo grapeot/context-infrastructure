@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-fuchsia" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#d946ef"/>
+  </marker>
+  <marker id="arrow-teal" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#14b8a6"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">Triton-TLX Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">Triton Low-level Extensions - MIMW - Meta/UCSD - github.com/facebookexperimental/triton (tlx)</text>
+
+ <!-- L1 Two-layer model -->
+ <rect x="60" y="96" width="1800" height="120" rx="12" fill="#0f2744" stroke="#d946ef" stroke-width="2.5"/>
+ <text x="88" y="124" fill="#d946ef" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Two-Layer Embedded Design (additive extension, not replacement)</text>
+
+ <rect x="88" y="138" width="840" height="64" rx="10" fill="#0c2d2d" stroke="#14b8a6" stroke-width="2"/>
+ <text x="508" y="162" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Triton Layer - SIMB (Single-Instruction Multi-Block)</text>
+ <text x="508" y="180" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">@triton.jit + tl.* tile program - TTIR/TTGIR pipeline - regular blocked compute</text>
+ <text x="508" y="194" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Compiler infers intra-block orchestration - productive for dense ML ops</text>
+
+ <rect x="948" y="138" width="840" height="64" rx="10" fill="#3b0764" stroke="#d946ef" stroke-width="2.5"/>
+ <text x="1368" y="162" text-anchor="middle" fill="#fae8ff" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">TLX Extension Layer - MIMW (Multi-Instruction Multi-Warp)</text>
+ <text x="1368" y="180" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="10">tlx.* intrinsics - warp-group roles - async deps - local-memory orchestration</text>
+ <text x="1368" y="194" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="10">Explicit control where SIMB hides orchestration - Hopper/Blackwell/AMD</text>
+
+ <line x1="928" y1="170" x2="948" y2="170" stroke="#d946ef" stroke-width="2" marker-end="url(#arrow-fuchsia)"/>
+ <line x1="960" y1="216" x2="960" y2="234" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Programming model spectrum -->
+ <rect x="60" y="236" width="1800" height="96" rx="12" fill="#0f2744" stroke="#a78bfa" stroke-width="2"/>
+ <text x="88" y="264" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Programming Model Spectrum (TLX fills the missing middle)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ede9fe">
+  <rect x="88" y="276" width="60" height="40" rx="6" fill="#431407" stroke="#ea580c"/><text x="118" y="302" text-anchor="middle">SIMT</text>
+  <rect x="160" y="276" width="50" height="40" rx="6" fill="#431407" stroke="#ea580c"/><text x="185" y="302" text-anchor="middle">CUDA</text>
+  <rect x="222" y="276" width="80" height="40" rx="6" fill="#431407" stroke="#ea580c"/><text x="262" y="302" text-anchor="middle">thread ctrl</text>
+  <rect x="314" y="276" width="80" height="40" rx="6" fill="#3b0764" stroke="#d946ef"/><text x="354" y="302" text-anchor="middle">MIMW</text>
+  <rect x="406" y="276" width="50" height="40" rx="6" fill="#3b0764" stroke="#d946ef"/><text x="431" y="302" text-anchor="middle">TLX</text>
+  <rect x="468" y="276" width="90" height="40" rx="6" fill="#3b0764" stroke="#d946ef"/><text x="513" y="302" text-anchor="middle">warp-group</text>
+  <rect x="570" y="276" width="60" height="40" rx="6" fill="#0c2d2d" stroke="#14b8a6"/><text x="600" y="302" text-anchor="middle">SIMB</text>
+  <rect x="642" y="276" width="60" height="40" rx="6" fill="#0c2d2d" stroke="#14b8a6"/><text x="672" y="302" text-anchor="middle">Triton</text>
+  <rect x="714" y="276" width="70" height="40" rx="6" fill="#0c2d2d" stroke="#14b8a6"/><text x="749" y="302" text-anchor="middle">tile prog</text>
+  <rect x="796" y="276" width="80" height="40" rx="6" fill="#3b0764" stroke="#d946ef"/><text x="836" y="302" text-anchor="middle">async pipe</text>
+  <rect x="888" y="276" width="80" height="40" rx="6" fill="#3b0764" stroke="#d946ef"/><text x="928" y="302" text-anchor="middle">warp spec</text>
+  <rect x="980" y="276" width="70" height="40" rx="6" fill="#3b0764" stroke="#d946ef"/><text x="1015" y="302" text-anchor="middle">cluster</text>
+  <rect x="1062" y="276" width="50" height="40" rx="6" fill="#3b0764" stroke="#d946ef"/><text x="1087" y="302" text-anchor="middle">TMA</text>
+  <rect x="1124" y="276" width="50" height="40" rx="6" fill="#3b0764" stroke="#d946ef"/><text x="1149" y="302" text-anchor="middle">TMEM</text>
+  <rect x="1186" y="276" width="60" height="40" rx="6" fill="#3b0764" stroke="#d946ef"/><text x="1216" y="302" text-anchor="middle">WGMMA</text>
+  <rect x="1258" y="276" width="70" height="40" rx="6" fill="#3b0764" stroke="#d946ef"/><text x="1293" y="302" text-anchor="middle">tcgen05</text>
+  <rect x="1340" y="276" width="50" height="40" rx="6" fill="#3b0764" stroke="#d946ef"/><text x="1365" y="302" text-anchor="middle">CLC</text>
+  <rect x="1402" y="276" width="50" height="40" rx="6" fill="#3b0764" stroke="#d946ef"/><text x="1427" y="302" text-anchor="middle">DSM</text>
+  <rect x="1464" y="276" width="80" height="40" rx="6" fill="#422006" stroke="#ee4c2c"/><text x="1504" y="302" text-anchor="middle">PyTorch</text>
+  <rect x="1556" y="276" width="60" height="40" rx="6" fill="#422006" stroke="#ee4c2c"/><text x="1586" y="302" text-anchor="middle">FBGEMM</text>
+  <rect x="1628" y="276" width="60" height="40" rx="6" fill="#422006" stroke="#ee4c2c"/><text x="1658" y="302" text-anchor="middle">ATen</text>
+  <rect x="1700" y="276" width="70" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1735" y="302" text-anchor="middle">CuTeDSL</text>
+  <rect x="1782" y="276" width="66" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1815" y="302" text-anchor="middle">Gluon</text>
+ </g>
+ <line x1="960" y1="332" x2="960" y2="350" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 TLX DSL APIs -->
+ <rect x="60" y="352" width="1800" height="200" rx="12" fill="#0f2744" stroke="#d946ef" stroke-width="2.5"/>
+ <text x="88" y="380" fill="#d946ef" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - tlx.* DSL Interface (Python intrinsics alongside tl.*)</text>
+
+ <!-- Warp left -->
+ <rect x="88" y="398" width="420" height="136" rx="12" fill="#3b0764" stroke="#e879f9" stroke-width="2"/>
+ <text x="298" y="428" text-anchor="middle" fill="#fae8ff" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Warp-Level Control</text>
+ <text x="298" y="452" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="10">tlx.async_tasks() - multi-task region in CTA</text>
+ <text x="298" y="470" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="10">tlx.async_task(default) - trunk uses free warps</text>
+ <text x="298" y="488" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="10">tlx.async_task(num_warps=N) - reserve warp group</text>
+ <text x="298" y="506" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="10">tlx.thread_id(axis) - per-role thread indexing</text>
+ <text x="298" y="524" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="10">Producer / MMA / Epilogue warp specialization</text>
+
+ <!-- Memory center -->
+ <rect x="528" y="398" width="864" height="136" rx="12" fill="#3b0764" stroke="#d946ef" stroke-width="2"/>
+ <text x="960" y="428" text-anchor="middle" fill="#fae8ff" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Local Memory + Async Memory/Compute</text>
+ <g font-family="JetBrains Mono, monospace" font-size="10" fill="#f0abfc">
+  <rect x="548" y="440" width="80" height="28" rx="5" fill="#581c87" stroke="#e879f9"/><text x="588" y="459" text-anchor="middle">local_alloc</text>
+  <rect x="638" y="440" width="70" height="28" rx="5" fill="#581c87" stroke="#e879f9"/><text x="673" y="459" text-anchor="middle">local_view</text>
+  <rect x="718" y="440" width="70" height="28" rx="5" fill="#581c87" stroke="#e879f9"/><text x="753" y="459" text-anchor="middle">local_load</text>
+  <rect x="798" y="440" width="70" height="28" rx="5" fill="#581c87" stroke="#e879f9"/><text x="833" y="459" text-anchor="middle">local_store</text>
+  <rect x="878" y="440" width="70" height="28" rx="5" fill="#581c87" stroke="#e879f9"/><text x="913" y="459" text-anchor="middle">local_trans</text>
+  <rect x="958" y="440" width="60" height="28" rx="5" fill="#581c87" stroke="#e879f9"/><text x="988" y="459" text-anchor="middle">subslice</text>
+  <rect x="1028" y="440" width="80" height="28" rx="5" fill="#581c87" stroke="#e879f9"/><text x="1068" y="459" text-anchor="middle">storage_kind</text>
+  <rect x="1118" y="440" width="50" height="28" rx="5" fill="#581c87" stroke="#e879f9"/><text x="1143" y="459" text-anchor="middle">smem</text>
+  <rect x="1178" y="440" width="50" height="28" rx="5" fill="#581c87" stroke="#e879f9"/><text x="1203" y="459" text-anchor="middle">tmem</text>
+  <rect x="1238" y="440" width="80" height="28" rx="5" fill="#581c87" stroke="#e879f9"/><text x="1278" y="459" text-anchor="middle">smemCluster</text>
+  <rect x="548" y="478" width="70" height="28" rx="5" fill="#581c87" stroke="#e879f9"/><text x="583" y="497" text-anchor="middle">async_load</text>
+  <rect x="628" y="478" width="100" height="28" rx="5" fill="#581c87" stroke="#e879f9"/><text x="678" y="497" text-anchor="middle">async_descriptor</text>
+  <rect x="738" y="478" width="80" height="28" rx="5" fill="#581c87" stroke="#e879f9"/><text x="778" y="497" text-anchor="middle">commit_group</text>
+  <rect x="828" y="478" width="70" height="28" rx="5" fill="#581c87" stroke="#e879f9"/><text x="863" y="497" text-anchor="middle">wait_group</text>
+  <rect x="908" y="478" width="70" height="28" rx="5" fill="#581c87" stroke="#e879f9"/><text x="943" y="497" text-anchor="middle">async_dot</text>
+  <rect x="988" y="478" width="80" height="28" rx="5" fill="#581c87" stroke="#e879f9"/><text x="1028" y="497" text-anchor="middle">async_dot_wait</text>
+  <rect x="1078" y="478" width="80" height="28" rx="5" fill="#581c87" stroke="#e879f9"/><text x="1118" y="497" text-anchor="middle">alloc_barrier</text>
+  <rect x="1168" y="478" width="70" height="28" rx="5" fill="#581c87" stroke="#e879f9"/><text x="1203" y="497" text-anchor="middle">mbarrier</text>
+  <rect x="1248" y="478" width="70" height="28" rx="5" fill="#581c87" stroke="#e879f9"/><text x="1283" y="497" text-anchor="middle">bar_wait</text>
+  <rect x="1328" y="478" width="70" height="28" rx="5" fill="#581c87" stroke="#e879f9"/><text x="1363" y="497" text-anchor="middle">bar_arrive</text>
+ </g>
+ <text x="960" y="524" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="10">Explicit buffers + tokens + mbarriers - arrive remote wait local discipline</text>
+
+ <!-- Cluster right -->
+ <rect x="1412" y="398" width="420" height="136" rx="12" fill="#431407" stroke="#ea580c" stroke-width="2"/>
+ <text x="1622" y="428" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Cluster-Level Control</text>
+ <text x="1622" y="452" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">tlx.clc_create_context - persistent tile queue</text>
+ <text x="1622" y="470" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">clc_producer / clc_consumer - dynamic work steal</text>
+ <text x="1622" y="488" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">remote_view - DSM peer CTA shared memory</text>
+ <text x="1622" y="506" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">async_remote_shmem_store - cluster comm</text>
+ <text x="1622" y="524" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">TMA multicast - paired-CTA tcgen05.mma collectives</text>
+
+ <line x1="960" y1="556" x2="960" y2="574" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 MIMW execution -->
+ <rect x="60" y="576" width="1800" height="88" rx="12" fill="#0f2744" stroke="#6366f1" stroke-width="2"/>
+ <text x="88" y="604" fill="#6366f1" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - MIMW Execution Patterns (role-specialized warp groups in one CTA/cluster)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#c7d2fe">
+  <rect x="88" y="616" width="70" height="36" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="123" y="640" text-anchor="middle">producer</text>
+  <rect x="170" y="616" width="60" height="36" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="200" y="640" text-anchor="middle">consumer</text>
+  <rect x="242" y="616" width="50" height="36" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="267" y="640" text-anchor="middle">MMA</text>
+  <rect x="304" y="616" width="60" height="36" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="334" y="640" text-anchor="middle">epilogue</text>
+  <rect x="376" y="616" width="80" height="36" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="416" y="640" text-anchor="middle">pingpong</text>
+  <rect x="468" y="616" width="80" height="36" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="508" y="640" text-anchor="middle">pipelined</text>
+  <rect x="560" y="616" width="80" height="36" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="600" y="640" text-anchor="middle">persistent</text>
+  <rect x="652" y="616" width="70" height="36" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="687" y="640" text-anchor="middle">TMA load</text>
+  <rect x="734" y="616" width="70" height="36" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="769" y="640" text-anchor="middle">WGMMA</text>
+  <rect x="816" y="616" width="70" height="36" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="851" y="640" text-anchor="middle">WMMA</text>
+  <rect x="898" y="616" width="70" height="36" fill="#1e1b4b" stroke="#6366f1" rx="6"/><text x="933" y="640" text-anchor="middle">MFMA</text>
+  <rect x="980" y="616" width="80" height="36" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="1020" y="640" text-anchor="middle">score/softmax</text>
+  <rect x="1072" y="616" width="80" height="36" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="1112" y="640" text-anchor="middle">comm overlap</text>
+  <rect x="1164" y="616" width="80" height="36" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="1204" y="640" text-anchor="middle">multi-GPU</text>
+  <rect x="1256" y="616" width="70" height="36" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="1291" y="640" text-anchor="middle">ring buf</text>
+  <rect x="1338" y="616" width="80" height="36" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="1378" y="640" text-anchor="middle">phase flip</text>
+  <rect x="1430" y="616" width="80" height="36" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="1470" y="640" text-anchor="middle">wait/arrive</text>
+  <rect x="1522" y="616" width="80" height="36" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="1562" y="640" text-anchor="middle">Hopper FA</text>
+  <rect x="1614" y="616" width="90" height="36" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="1659" y="640" text-anchor="middle">Blackwell FA</text>
+  <rect x="1716" y="616" width="70" height="36" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="1751" y="640" text-anchor="middle">HSTU</text>
+  <rect x="1798" y="616" width="50" height="36" rx="6" fill="#1e1b4b" stroke="#6366f1"/><text x="1823" y="640" text-anchor="middle">GEMM</text>
+ </g>
+
+ <!-- L5 Compiler -->
+ <rect x="60" y="676" width="1800" height="88" rx="12" fill="#0f2744" stroke="#14b8a6" stroke-width="2"/>
+ <text x="88" y="704" fill="#14b8a6" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Compiler Integration (additive to Triton TTIR/TTGIR/LLVM stack)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#99f6e4">
+  <rect x="88" y="716" width="80" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="128" y="740" text-anchor="middle">TLX builder</text>
+  <rect x="180" y="716" width="60" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="210" y="740" text-anchor="middle">TLX TTIR</text>
+  <rect x="252" y="716" width="70" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="287" y="740" text-anchor="middle">TLX TTGIR</text>
+  <rect x="334" y="716" width="90" height="36" rx="6" fill="#3b0764" stroke="#e879f9"/><text x="379" y="740" text-anchor="middle">RequireLayout</text>
+  <rect x="436" y="716" width="90" height="36" rx="6" fill="#3b0764" stroke="#e879f9"/><text x="481" y="740" text-anchor="middle">ReleaseLayout</text>
+  <rect x="538" y="716" width="70" height="36" rx="6" fill="#3b0764" stroke="#e879f9"/><text x="573" y="740" text-anchor="middle">LocalAlias</text>
+  <rect x="620" y="716" width="90" height="36" rx="6" fill="#3b0764" stroke="#e879f9"/><text x="665" y="740" text-anchor="middle">layout propagate</text>
+  <rect x="722" y="716" width="80" height="36" rx="6" fill="#3b0764" stroke="#e879f9"/><text x="762" y="740" text-anchor="middle">warp partition</text>
+  <rect x="814" y="716" width="80" height="36" rx="6" fill="#3b0764" stroke="#e879f9"/><text x="854" y="740" text-anchor="middle">task validate</text>
+  <rect x="906" y="716" width="80" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="946" y="740" text-anchor="middle">Triton opt</text>
+  <rect x="998" y="716" width="80" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1038" y="740" text-anchor="middle">TTGIR opt</text>
+  <rect x="1090" y="716" width="70" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1125" y="740" text-anchor="middle">legalize</text>
+  <rect x="1172" y="716" width="80" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1212" y="740" text-anchor="middle">GPUToLLVM</text>
+  <rect x="1264" y="716" width="50" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1289" y="740" text-anchor="middle">PTX</text>
+  <rect x="1326" y="716" width="60" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1356" y="740" text-anchor="middle">AMDGCN</text>
+  <rect x="1398" y="716" width="80" height="36" rx="6" fill="#3b0764" stroke="#e879f9"/><text x="1438" y="740" text-anchor="middle">alias resolve</text>
+  <rect x="1490" y="716" width="80" height="36" rx="6" fill="#3b0764" stroke="#e879f9"/><text x="1530" y="740" text-anchor="middle">cluster sync</text>
+  <rect x="1582" y="716" width="90" height="36" rx="6" fill="#3b0764" stroke="#e879f9"/><text x="1627" y="740" text-anchor="middle">async legalize</text>
+  <rect x="1684" y="716" width="80" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1724" y="740" text-anchor="middle">fallback tl</text>
+  <rect x="1776" y="716" width="72" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1812" y="740" text-anchor="middle">third_party/tlx</text>
+ </g>
+
+ <!-- L6 Hardware -->
+ <rect x="60" y="776" width="1800" height="72" rx="12" fill="#0f2744" stroke="#ea580c" stroke-width="2"/>
+ <text x="88" y="804" fill="#ea580c" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Hardware Targets (production-deployed kernels)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ffedd5">
+  <rect x="88" y="816" width="70" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="123" y="833" text-anchor="middle">Hopper H100</text>
+  <rect x="168" y="816" width="70" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="203" y="833" text-anchor="middle">Blackwell</text>
+  <rect x="248" y="816" width="50" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="273" y="833" text-anchor="middle">B200</text>
+  <rect x="308" y="816" width="50" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="333" y="833" text-anchor="middle">GB200</text>
+  <rect x="368" y="816" width="70" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="403" y="833" text-anchor="middle">AMD MI350</text>
+  <rect x="448" y="816" width="50" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="473" y="833" text-anchor="middle">TMA</text>
+  <rect x="508" y="816" width="50" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="533" y="833" text-anchor="middle">TMEM</text>
+  <rect x="568" y="816" width="60" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="598" y="833" text-anchor="middle">WGMMA</text>
+  <rect x="638" y="816" width="70" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="673" y="833" text-anchor="middle">tcgen05</text>
+  <rect x="718" y="816" width="50" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="743" y="833" text-anchor="middle">CLC</text>
+  <rect x="778" y="816" width="50" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="803" y="833" text-anchor="middle">DSM</text>
+  <rect x="838" y="816" width="60" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="868" y="833" text-anchor="middle">mbarrier</text>
+  <rect x="908" y="816" width="80" height="24" rx="5" fill="#422006" stroke="#ee4c2c"/><text x="948" y="833" text-anchor="middle">FlashAttn3</text>
+  <rect x="998" y="816" width="80" height="24" rx="5" fill="#422006" stroke="#ee4c2c"/><text x="1038" y="833" text-anchor="middle">Block Attn</text>
+  <rect x="1088" y="816" width="80" height="24" rx="5" fill="#422006" stroke="#ee4c2c"/><text x="1128" y="833" text-anchor="middle">Simplicial</text>
+  <rect x="1178" y="816" width="70" height="24" rx="5" fill="#422006" stroke="#ee4c2c"/><text x="1213" y="833" text-anchor="middle">LayerNorm</text>
+  <rect x="1258" y="816" width="80" height="24" rx="5" fill="#422006" stroke="#ee4c2c"/><text x="1298" y="833" text-anchor="middle">multi-GPU</text>
+  <rect x="1348" y="816" width="60" height="24" rx="5" fill="#422006" stroke="#ee4c2c"/><text x="1378" y="833" text-anchor="middle">GEMM WS</text>
+  <rect x="1418" y="816" width="80" height="24" rx="5" fill="#422006" stroke="#ee4c2c"/><text x="1458" y="833" text-anchor="middle">persistent</text>
+  <rect x="1508" y="816" width="80" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1548" y="833" text-anchor="middle">train+infer</text>
+  <rect x="1598" y="816" width="80" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1638" y="833" text-anchor="middle">Meta prod</text>
+  <rect x="1688" y="816" width="80" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1728" y="833" text-anchor="middle">~200 LOC</text>
+  <rect x="1778" y="816" width="70" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1813" y="833" text-anchor="middle">vs CUDA</text>
+ </g>
+
+ <!-- DETAIL Lowering -->
+ <rect x="60" y="864" width="880" height="340" rx="14" fill="#0c1524" stroke="#d946ef" stroke-width="2.5"/>
+ <text x="88" y="896" fill="#d946ef" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Compiler Lowering Pipeline</text>
+ <text x="88" y="918" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="11">Preserve MIMW semantics through Triton stack - no premature flattening</text>
+
+ <rect x="88" y="934" width="820" height="36" rx="6" fill="#0c2d2d" stroke="#14b8a6"/>
+ <text x="498" y="958" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1: @triton.jit kernel with tlx.* alongside tl.* - semantic analysis</text>
+ <line x1="498" y1="970" x2="498" y2="982" stroke="#14b8a6" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+ <rect x="88" y="984" width="820" height="36" rx="6" fill="#3b0764" stroke="#e879f9"/>
+ <text x="498" y="1008" text-anchor="middle" fill="#fae8ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2: TLX builder emits TLX TTIR ops (tasks, buffers, barriers, layouts)</text>
+ <line x1="498" y1="1020" x2="498" y2="1032" stroke="#d946ef" stroke-width="1.5" marker-end="url(#arrow-fuchsia)"/>
+ <rect x="88" y="1034" width="820" height="36" rx="6" fill="#3b0764" stroke="#d946ef"/>
+ <text x="498" y="1058" text-anchor="middle" fill="#fae8ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3: Lower to TLX TTGIR - warp-partition per async_task - layout propagate</text>
+ <line x1="498" y1="1070" x2="498" y2="1082" stroke="#d946ef" stroke-width="1.5" marker-end="url(#arrow-fuchsia)"/>
+ <rect x="88" y="1084" width="820" height="36" rx="6" fill="#1e1b4b" stroke="#6366f1"/>
+ <text x="498" y="1108" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4: TLX passes - alias resolve - cluster legalize - join Triton TTGIR opt</text>
+ <line x1="498" y1="1120" x2="498" y2="1132" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arrow-fuchsia)"/>
+ <rect x="88" y="1134" width="820" height="36" rx="6" fill="#431407" stroke="#ea580c"/>
+ <text x="498" y="1158" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 5: Backend - mbarrier/TMA/WGMMA/tcgen05 - PTX/AMDGCN - launch</text>
+
+ <text x="88" y="1192" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Fallback: omit tlx.* regions and use plain Triton when explicit control not needed</text>
+
+ <!-- DETAIL Kernel patterns -->
+ <rect x="960" y="864" width="900" height="340" rx="14" fill="#0c1224" stroke="#d946ef" stroke-width="2.5"/>
+ <text x="988" y="896" fill="#d946ef" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Production Kernel Patterns (third_party/tlx/tutorials)</text>
+ <text x="988" y="918" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="11">CUDA-competitive perf with Python-level source - deployed at Meta scale</text>
+
+ <text x="988" y="942" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Hopper</text>
+ <rect x="988" y="952" width="130" height="68" rx="6" fill="#1e1b4b" stroke="#6366f1"/>
+ <text x="1053" y="976" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Pipelined GEMM</text>
+ <text x="1053" y="994" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">async_load + async_dot</text>
+ <text x="1053" y="1010" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">NUM_STAGES ring buffer</text>
+ <rect x="1130" y="952" width="130" height="68" rx="6" fill="#1e1b4b" stroke="#6366f1"/>
+ <text x="1195" y="976" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">WS FlashAttn</text>
+ <text x="1195" y="994" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">producer/consumer/MMA</text>
+ <text x="1195" y="1010" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">pingpong + pipeline</text>
+ <rect x="1272" y="952" width="130" height="68" rx="6" fill="#1e1b4b" stroke="#6366f1"/>
+ <text x="1337" y="976" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">WS GEMM</text>
+ <text x="1337" y="994" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">warp-specialized roles</text>
+ <text x="1337" y="1010" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">WGMMA overlap</text>
+
+ <text x="988" y="1040" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Blackwell</text>
+ <rect x="988" y="1050" width="130" height="68" rx="6" fill="#431407" stroke="#ea580c"/>
+ <text x="1053" y="1074" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">TMA WS GEMM</text>
+ <text x="1053" y="1092" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">SMEM+TMEM buffers</text>
+ <text x="1053" y="1108" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">TMA desc load + tcgen05</text>
+ <rect x="1130" y="1050" width="130" height="68" rx="6" fill="#431407" stroke="#ea580c"/>
+ <text x="1195" y="1074" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Persistent FA</text>
+ <text x="1195" y="1092" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">CLC dynamic tiles</text>
+ <text x="1195" y="1108" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">warp-spec score/softmax</text>
+ <rect x="1272" y="1050" width="130" height="68" rx="6" fill="#431407" stroke="#ea580c"/>
+ <text x="1337" y="1074" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Block Sparse Attn</text>
+ <text x="1337" y="1092" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">async_dot + local_trans</text>
+ <text x="1337" y="1108" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">fixed-block sparse</text>
+
+ <text x="988" y="1138" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Cross-cutting</text>
+ <rect x="988" y="1148" width="200" height="48" rx="6" fill="#422006" stroke="#fcd34d"/>
+ <text x="1088" y="1170" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Multi-CTA LayerNorm</text>
+ <text x="1088" y="1186" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">DSM cluster all-reduce + local cache</text>
+ <rect x="1200" y="1148" width="200" height="48" rx="6" fill="#422006" stroke="#fcd34d"/>
+ <text x="1300" y="1170" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Multi-GPU GEMM</text>
+ <text x="1300" y="1186" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">comm CTA vs compute CTA overlap</text>
+ <rect x="1412" y="1148" width="436" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1630" y="1170" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">60% TC util (FA) vs 34% plain Triton - competitive with ATen/CUTLASS</text>
+ <text x="1630" y="1186" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Retargetable: same source to H100 + MI350 via backend plugin layer</text>
+
+ <!-- L7 Position -->
+ <rect x="60" y="1224" width="1800" height="72" rx="12" fill="#1a1208" stroke="#d946ef" stroke-width="2"/>
+ <text x="88" y="1252" fill="#d946ef" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L7 - Design Goals (Hardware-Native + Evolvable MIMW on Triton)</text>
+ <text x="960" y="1278" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="13">Productivity of Triton SIMB + explicit warp/cluster/local-memory control - no CUDA rewrite</text>
+
+ <!-- footers -->
+ <rect x="60" y="1312" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1332" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Init path: @triton.jit + tlx.async_tasks - allocate local buffers/barriers - role-specialized warp groups</text>
+ <text x="960" y="1350" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Step path: async pipeline stages - mbarrier wait/arrive - TMA/MMA/epilogue - cluster DSM/CLC - PTX launch</text>
+
+ <text x="60" y="1396" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: arxiv 2605.10905 - github.com/facebookexperimental/triton (tlx) - PyTorch TLX blogs - third_party/tlx/tutorials</text>
+</svg>

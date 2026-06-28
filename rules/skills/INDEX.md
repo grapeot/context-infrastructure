@@ -28,6 +28,25 @@
 
 **不在 crucible 覆盖范围**（如 Meta MTIA、AMD MI、通用 GPU 微架构）→ 跳过 crucible，直接用 `workflow_deep_research_survey.md`。
 
+## 架构图 / 可视化路由
+
+| 需求 | 第一步 |
+|------|--------|
+| 暗色 HTML + 浏览器 Copy/PNG/PDF | [Cocoon Architecture Diagram](./generating_architecture_html_diagrams.md) |
+| 多风格 SVG+PNG、UML、AI/Agent 语义图 | [Fireworks Tech Graph](./generating_tech_diagrams.md) |
+| 芯片 survey 可编辑架构图 | `contexts/survey_sessions/assets/*.excalidraw` |
+| Markdown 内快速示意 | Mermaid（chat 内嵌） |
+| 代码/终端截图 PNG | [Exporting to PNG](./exporting_to_png.md) |
+
+## 外部 Skill 目录路由
+
+| 来源 | 何时用 | 入口 |
+|------|--------|------|
+| 本仓库 `rules/skills/` | 默认；工作流、芯片、Cursor 原生 | 下方分类索引 |
+| [awesome-copilot](https://github.com/github/awesome-copilot/tree/main/skills) | Azure/AWS、ADR、spec、agent 安全（300+） | [查阅与安装](./reference_awesome_copilot_skills.md) |
+| [awesome-cursor-skills](https://github.com/spencerpauly/awesome-cursor-skills) | 已 bulk import 到 Cursor Skills 节 | `adhoc_jobs/import_awesome_cursor_skills/` |
+| 独立 CLI repo | Tavily、Stripe、OpenCode 等 | [`docs/SKILL_ECOSYSTEM.md`](../../docs/SKILL_ECOSYSTEM.md) |
+
 ---
 
 ## 组件状态
@@ -45,7 +64,8 @@
 - ⚙️ Delayed Execution — starter fallback；durable/AI 延时任务安装 Process Launcher + OpenCode Skill
 
 ### Tier 3: 独立 public skill repos（按需安装）
-- 🔧 图片生成、Tavily、Google Docs、Google Maps、Outlook、Resend、OpenCode、Process Launcher、PPTX、Typefully、Circle Post、Stripe 等能力见 [`docs/SKILL_ECOSYSTEM.md`](../../docs/SKILL_ECOSYSTEM.md)
+- 🔧 图片生成、Tavily、Google Docs、Google Maps、Outlook、Resend、OpenCode、Process Launcher、PPTX、Typefully、Circle Post、Stripe 等见 [`docs/SKILL_ECOSYSTEM.md`](../../docs/SKILL_ECOSYSTEM.md)
+- 🔧 社区 skill 目录：[awesome-copilot](https://github.com/github/awesome-copilot/tree/main/skills)（`gh skills install`）、[fireworks-tech-graph](https://github.com/yizhiyanhua-ai/fireworks-tech-graph)、[architecture-diagram-generator](https://github.com/Cocoon-AI/architecture-diagram-generator) — 路由见上方「外部 Skill 目录」与架构图路由
 
 ### 说明
 ✅ = 最多 15 分钟即可使用
@@ -69,6 +89,7 @@
 - [Typefully 发帖 CLI](./typefully_post.md) ⚙️ — 通过 Typefully v2 API 创建草稿、排期发布和直接发布 tweet / thread
 - [Apple Compressor Skill](./compressor.md) ⚙️ — 本机 Apple Compressor CLI 转码；custom preset 路径、源文件写入完成检测、batch 提交与监控
 - [Crucible Notes 查阅指南](./reference_crucible_notes.md) ✅ — CUDA / AWS Neuron / TPU 编译器与运行时 internals 逆向 wiki；含可信度分层、组件路由与 Neuron 栈阅读顺序
+- [Awesome Copilot Skills 查阅与安装](./reference_awesome_copilot_skills.md) ✅ — 365 个社区 skills 逐条目录 + 安装命令；`gh skills install github/awesome-copilot <name>`
 
 ### Workflow（工作流）
 
@@ -81,6 +102,8 @@
   - 判断标准：任务命中信息面宽、独立读任务、独立判断、高价值不确定性、主线程需保留整合能力中的至少 2 条
   - 核心参数：并行度 ≤5，调研 overlap 30-50%，代码 overlap 0-20%
 - [深度调研工作流](./workflow_deep_research_survey.md) ✅ — 多 Agent 并行 + 交叉验证（Phase 1-3 信息采集）
+- [Fireworks Tech Graph 技术架构图](./generating_tech_diagrams.md) ✅ — 自然语言 → SVG+PNG；8 风格、UML、AI/Agent；上游 [fireworks-tech-graph](https://github.com/yizhiyanhua-ai/fireworks-tech-graph)
+- [Cocoon Architecture Diagram](./generating_architecture_html_diagrams.md) ✅ — 暗色 HTML+SVG 系统/云架构图；浏览器 Copy/PNG/PDF；上游 [architecture-diagram-generator](https://github.com/Cocoon-AI/architecture-diagram-generator)
 - [外部写作工作流](./workflow_external_writing.md) ✅ — 将调研素材转化为有判断力的 external-facing 分析文章。包含 Thesis Catalog（核心分析视角 L1-L6）和判断合成步骤。**做深度调研并写 external 文章时，两个 skill 都要读**
 - [内部写作工作流](./workflow_internal_writing.md) ✅ — 面向用户本人、共享上下文协作者和未来 AI agent 的内部文档写作。核心是低决策摩擦：结论前置、skimmable、inline evidence、方便跳转和验证，必要时用图表降低认知负担。
 - [认知画像提取工作流](./workflow_cognitive_profile_extraction.md) — 从非结构化对话数据提取可预测的认知公理
@@ -197,7 +220,7 @@
 #### Utilities
 
 - [Exporting to PNG](./exporting_to_png.md) — Export code, terminal output, diagrams, or UI components to PNG images using headless browser rendering or CLI tools.
-- [Generating Images (OpenAI gpt-image-2)](./generating_images.md) — >-
+- [Generating Images (OpenAI gpt-image-2)](./generating_images.md) — OpenAI gpt-image-2 文生图/编辑；需 `image-generation-skill` 或本地脚本
 - [Prompt Engineering](./prompt_engineering.md) — Write effective prompts for LLMs — structure, few-shot examples, chain-of-thought, system prompts, and output parsing.
 - [SEO Auditing](./seo_auditing.md) — Audit technical SEO — meta tags, structured data, Open Graph, sitemaps, robots.txt, performance, and accessibility signals.
 - [Writing Copy](./writing_copy.md) — Write marketing copy for landing pages, product descriptions, CTAs, emails, and app UI text.

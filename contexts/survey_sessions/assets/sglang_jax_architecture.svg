@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-blue" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#4285f4"/>
+  </marker>
+  <marker id="arrow-purple" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#a78bfa"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">SGLang-JAX Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">Native TPU Inference - JAX/XLA + Flax NNX - SGLang API Compatible - sgl-project/sglang-jax</text>
+
+ <!-- L1 Entry -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#4285f4" stroke-width="2"/>
+ <text x="88" y="124" fill="#4285f4" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Entry Points &amp; API</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="150" height="40" rx="6" fill="#172554" stroke="#4285f4"/><text x="163" y="162" text-anchor="middle">sgl_jax.launch_server</text>
+  <rect x="250" y="136" width="80" height="40" rx="6" fill="#172554" stroke="#4285f4"/><text x="290" y="162" text-anchor="middle">Engine</text>
+  <rect x="342" y="136" width="110" height="40" rx="6" fill="#172554" stroke="#4285f4"/><text x="397" y="162" text-anchor="middle">OpenAI API</text>
+  <rect x="464" y="136" width="90" height="40" rx="6" fill="#172554" stroke="#4285f4"/><text x="509" y="162" text-anchor="middle">/generate</text>
+  <rect x="566" y="136" width="90" height="40" rx="6" fill="#172554" stroke="#4285f4"/><text x="611" y="162" text-anchor="middle">chat comp</text>
+  <rect x="668" y="136" width="80" height="40" rx="6" fill="#172554" stroke="#4285f4"/><text x="708" y="162" text-anchor="middle">streaming</text>
+  <rect x="760" y="136" width="90" height="40" rx="6" fill="#172554" stroke="#4285f4"/><text x="805" y="162" text-anchor="middle">--device=tpu</text>
+  <rect x="862" y="136" width="70" height="40" rx="6" fill="#172554" stroke="#4285f4"/><text x="897" y="162" text-anchor="middle">--tp-size</text>
+  <rect x="944" y="136" width="90" height="40" rx="6" fill="#172554" stroke="#4285f4"/><text x="989" y="162" text-anchor="middle">bfloat16</text>
+  <rect x="1046" y="136" width="100" height="40" rx="6" fill="#172554" stroke="#4285f4"/><text x="1096" y="162" text-anchor="middle">Qwen3 / Llama</text>
+  <rect x="1158" y="136" width="60" height="40" rx="6" fill="#172554" stroke="#4285f4"/><text x="1188" y="162" text-anchor="middle">MoE</text>
+  <rect x="1230" y="136" width="60" height="40" rx="6" fill="#172554" stroke="#4285f4"/><text x="1260" y="162" text-anchor="middle">VLM</text>
+  <rect x="1302" y="136" width="130" height="40" rx="6" fill="#172554" stroke="#4285f4"/><text x="1367" y="162" text-anchor="middle">JIT cache dir</text>
+  <rect x="1444" y="136" width="100" height="40" rx="6" fill="#172554" stroke="#4285f4"/><text x="1494" y="162" text-anchor="middle">mem-fraction</text>
+  <rect x="1556" y="136" width="90" height="40" rx="6" fill="#172554" stroke="#4285f4"/><text x="1601" y="162" text-anchor="middle">--backend=fa</text>
+  <rect x="1658" y="136" width="80" height="40" rx="6" fill="#042f2e" stroke="#2dd4bf"/><text x="1698" y="162" text-anchor="middle">SGLang API</text>
+  <rect x="1750" y="136" width="98" height="40" rx="6" fill="#042f2e" stroke="#2dd4bf"/><text x="1799" y="162" text-anchor="middle">sglang-jax</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 SRT Layer -->
+ <rect x="60" y="216" width="1800" height="120" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2"/>
+ <text x="88" y="244" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - SRT Multi-Process Engine (JAX/TPU Adaptation)</text>
+ <rect x="88" y="258" width="240" height="60" rx="8" fill="#172554" stroke="#4285f4"/>
+ <text x="208" y="282" text-anchor="middle" fill="#dbeafe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Engine (sgl_jax/srt)</text>
+ <text x="208" y="302" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="10">Full SGLang core interface compatibility</text>
+ <rect x="344" y="258" width="240" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="464" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">TokenizerManager</text>
+ <text x="464" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Main process - tokenize + response coord</text>
+ <rect x="600" y="258" width="240" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="720" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">DetokenizerManager</text>
+ <text x="720" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Subprocess - incremental decode + stream</text>
+ <rect x="856" y="258" width="260" height="60" rx="8" fill="#172554" stroke="#4285f4"/>
+ <text x="986" y="282" text-anchor="middle" fill="#dbeafe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Scheduler per Machine</text>
+ <text x="986" y="302" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="10">JAX SPMD: one scheduler per VM (not per chip)</text>
+ <rect x="1132" y="258" width="240" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1252" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">ZMQ / IPC Processes</text>
+ <text x="1252" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">HTTP - scheduler - TP worker subprocesses</text>
+ <rect x="1388" y="258" width="220" height="60" rx="8" fill="#172554" stroke="#4285f4"/>
+ <text x="1498" y="282" text-anchor="middle" fill="#dbeafe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">JIT Precompilation</text>
+ <text x="1498" y="302" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="10">Warm-up shape buckets at server init</text>
+ <rect x="1624" y="258" width="214" height="60" rx="8" fill="#172554" stroke="#4285f4"/>
+ <text x="1731" y="282" text-anchor="middle" fill="#dbeafe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">event_loop_overlap</text>
+ <text x="1731" y="302" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="10">CPU batch prep while TPU runs current</text>
+ <line x1="960" y1="336" x2="960" y2="354" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Core -->
+ <rect x="60" y="356" width="1800" height="200" rx="12" fill="#0f2744" stroke="#4285f4" stroke-width="2.5"/>
+ <text x="88" y="384" fill="#4285f4" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - Core SRT Components (JAX-Native)</text>
+
+ <!-- Scheduler -->
+ <rect x="88" y="400" width="420" height="136" rx="12" fill="#172554" stroke="#4285f4" stroke-width="2"/>
+ <text x="298" y="428" text-anchor="middle" fill="#dbeafe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Scheduler (Brain)</text>
+ <text x="298" y="450" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="10">scheduler.py - waiting_queue + running_batch</text>
+ <text x="298" y="468" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="10">Continuous batching - FCFS / cache-aware policy</text>
+ <text x="298" y="486" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="10">Shape bucketing: batch [1,2,4,8] seq [64..512]</text>
+ <text x="298" y="504" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="10">Chunked prefill - mixed prefill-decode batches</text>
+ <text x="298" y="522" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="10">ForwardBatch as JAX pytree for JIT</text>
+
+ <!-- RadixCache -->
+ <rect x="524" y="400" width="420" height="136" rx="12" fill="#0c2d2d" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="734" y="428" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">RadixCache + ChunkCache</text>
+ <text x="734" y="450" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">radix_cache.py - prefix tree KV reuse</text>
+ <text x="734" y="468" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">ReqToTokenPool + TokenToKVPool (sharded)</text>
+ <text x="734" y="486" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">MHA + MLA attention cache layouts</text>
+ <text x="734" y="504" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Pallas in-place KV update (immutable bypass)</text>
+ <text x="734" y="522" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Paged attention + prefix sharing combined</text>
+
+ <!-- TP Workers -->
+ <rect x="960" y="400" width="340" height="136" rx="12" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1130" y="428" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">TP Workers + Device Mesh</text>
+ <text x="1130" y="450" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Tensor parallel workers across TPU cores</text>
+ <text x="1130" y="468" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">shard_map + PartitionSpec + NamedSharding</text>
+ <text x="1130" y="486" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">SPMD execution across device mesh</text>
+ <text x="1130" y="504" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">TP / EP / DP-Attn parallelism strategies</text>
+ <text x="1130" y="522" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Collectives via JAX native shard_map</text>
+
+ <!-- ModelRunner -->
+ <rect x="1316" y="400" width="516" height="136" rx="12" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1574" y="428" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">ModelRunner (JAX/Flax NNX)</text>
+ <text x="1574" y="450" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">model_runner.py - JIT forward + sampling</text>
+ <text x="1574" y="468" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">NNX graph-state split (nnx.split) for JIT</text>
+ <text x="1574" y="486" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">FlashAttention / native attention backends</text>
+ <text x="1574" y="504" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">EAGLE / EAGLE3 speculative decoding verify</text>
+ <text x="1574" y="522" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">LogitsProcessor + Sampler - plugin attn backends</text>
+
+ <text x="960" y="548" text-anchor="middle" fill="#4285f4" font-family="JetBrains Mono, monospace" font-size="10">Pure JAX stack: XLA fusion + Pallas TPU kernels + SGLang scheduling semantics on Google Cloud TPU</text>
+ <line x1="960" y1="556" x2="960" y2="574" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Backends -->
+ <rect x="60" y="576" width="1800" height="88" rx="12" fill="#0f2744" stroke="#a78bfa" stroke-width="2"/>
+ <text x="88" y="604" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - JAX/XLA Kernels &amp; Model Backends</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ede9fe">
+  <text x="88" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Kernels:</text>
+  <rect x="150" y="612" width="70" height="36" rx="6" fill="#172554" stroke="#4285f4"/><text x="185" y="636" text-anchor="middle">Pallas</text>
+  <rect x="232" y="612" width="90" height="36" rx="6" fill="#172554" stroke="#4285f4"/><text x="277" y="636" text-anchor="middle">FlashAttn</text>
+  <rect x="334" y="612" width="50" height="36" rx="6" fill="#172554" stroke="#4285f4"/><text x="359" y="636" text-anchor="middle">RPA</text>
+  <rect x="396" y="612" width="80" height="36" rx="6" fill="#172554" stroke="#4285f4"/><text x="436" y="636" text-anchor="middle">Megablox</text>
+  <rect x="488" y="612" width="70" height="36" rx="6" fill="#172554" stroke="#4285f4"/><text x="523" y="636" text-anchor="middle">FusedMoE</text>
+  <text x="575" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Runtime:</text>
+  <rect x="645" y="612" width="50" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="670" y="636" text-anchor="middle">JAX</text>
+  <rect x="707" y="612" width="50" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="732" y="636" text-anchor="middle">XLA</text>
+  <rect x="769" y="612" width="50" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="794" y="636" text-anchor="middle">Flax</text>
+  <rect x="831" y="612" width="50" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="856" y="636" text-anchor="middle">NNX</text>
+  <rect x="893" y="612" width="80" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="933" y="636" text-anchor="middle">shard_map</text>
+  <text x="990" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Models:</text>
+  <rect x="1050" y="612" width="70" height="36" rx="6" fill="#172554" stroke="#4285f4"/><text x="1085" y="636" text-anchor="middle">Qwen3</text>
+  <rect x="1132" y="612" width="60" height="36" rx="6" fill="#172554" stroke="#4285f4"/><text x="1162" y="636" text-anchor="middle">Llama</text>
+  <rect x="1204" y="612" width="60" height="36" rx="6" fill="#172554" stroke="#4285f4"/><text x="1234" y="636" text-anchor="middle">MoE</text>
+  <rect x="1276" y="612" width="50" height="36" rx="6" fill="#172554" stroke="#4285f4"/><text x="1301" y="636" text-anchor="middle">VLM</text>
+  <text x="1345" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Dtype:</text>
+  <rect x="1395" y="612" width="80" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1435" y="636" text-anchor="middle">bfloat16</text>
+  <text x="1490" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Compile:</text>
+  <rect x="1560" y="612" width="50" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1585" y="636" text-anchor="middle">JIT</text>
+  <rect x="1622" y="612" width="80" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1662" y="636" text-anchor="middle">jit cache</text>
+  <rect x="1714" y="612" width="70" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1749" y="636" text-anchor="middle">warm-up</text>
+  <rect x="1796" y="612" width="52" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1822" y="636" text-anchor="middle">bucket</text>
+ </g>
+
+ <!-- L5 Features -->
+ <rect x="60" y="676" width="1800" height="72" rx="12" fill="#0f2744" stroke="#fbbf24" stroke-width="2"/>
+ <text x="88" y="704" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Key Optimizations &amp; TPU Features</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#fef3c7">
+  <rect x="88" y="716" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="133" y="733" text-anchor="middle">RadixCache</text>
+  <rect x="188" y="716" width="110" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="243" y="733" text-anchor="middle">Cont. batching</text>
+  <rect x="308" y="716" width="110" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="363" y="733" text-anchor="middle">Overlap sched</text>
+  <rect x="428" y="716" width="100" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="478" y="733" text-anchor="middle">Chunked prefill</text>
+  <rect x="538" y="716" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="583" y="733" text-anchor="middle">Cache-aware</text>
+  <rect x="638" y="716" width="40" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="658" y="733" text-anchor="middle">TP</text>
+  <rect x="688" y="716" width="40" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="708" y="733" text-anchor="middle">EP</text>
+  <rect x="738" y="716" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="773" y="733" text-anchor="middle">DP-Attn</text>
+  <rect x="818" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="858" y="733" text-anchor="middle">Spec decode</text>
+  <rect x="908" y="716" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="933" y="733" text-anchor="middle">EAGLE</text>
+  <rect x="968" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="998" y="733" text-anchor="middle">EAGLE3</text>
+  <rect x="1038" y="716" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1083" y="733" text-anchor="middle">PagedAttn</text>
+  <rect x="1138" y="716" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1183" y="733" text-anchor="middle">Shape bucket</text>
+  <rect x="1238" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1278" y="733" text-anchor="middle">KV in-place</text>
+  <rect x="1328" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1358" y="733" text-anchor="middle">VLM</text>
+  <rect x="1398" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1428" y="733" text-anchor="middle">MoE</text>
+  <rect x="1468" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1498" y="733" text-anchor="middle">MLA</text>
+  <rect x="1538" y="716" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1573" y="733" text-anchor="middle">Multi-LoRA</text>
+  <rect x="1618" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1658" y="733" text-anchor="middle">Quant WIP</text>
+  <rect x="1708" y="716" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1743" y="733" text-anchor="middle">plugin FA</text>
+  <rect x="1788" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1818" y="733" text-anchor="middle">GCE TPU</text>
+ </g>
+
+ <!-- DETAIL Request Pipeline -->
+ <rect x="60" y="764" width="880" height="340" rx="14" fill="#0c1524" stroke="#4285f4" stroke-width="2.5"/>
+ <text x="88" y="796" fill="#4285f4" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Request Pipeline (Multi-Process Data Flow)</text>
+ <text x="88" y="818" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="11">Same SGLang SRT semantics - adapted for JAX JIT shape bucketing and TPU SPMD</text>
+
+ <rect x="88" y="834" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="858" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1: HTTP/Engine recv - TokenizerManager tokenize - ZMQ to Scheduler</text>
+ <line x1="498" y1="870" x2="498" y2="882" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow)"/>
+ <rect x="88" y="884" width="820" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="498" y="908" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2: RadixCache prefix match - allocate KV slots - exponential seq padding</text>
+ <line x1="498" y1="920" x2="498" y2="932" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+ <rect x="88" y="934" width="820" height="36" rx="6" fill="#172554" stroke="#4285f4"/>
+ <text x="498" y="958" text-anchor="middle" fill="#dbeafe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3: get_next_batch_to_run() - pad to JIT bucket - build ForwardBatch pytree</text>
+ <line x1="498" y1="970" x2="498" y2="982" stroke="#4285f4" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+ <rect x="88" y="984" width="820" height="36" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="498" y="1008" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4: ModelRunner JIT forward on TPU mesh - Pallas KV update - sample token</text>
+ <line x1="498" y1="1020" x2="498" y2="1032" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
+ <rect x="88" y="1034" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="1058" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 5: ZMQ to DetokenizerManager - incremental decode - stream to client</text>
+
+ <text x="88" y="1092" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Multiple concurrent Scheduler processes for horizontal scaling per machine</text>
+ <text x="88" y="1108" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">JAX_COMPILATION_CACHE_DIR persists compiled XLA graphs across restarts</text>
+
+ <!-- DETAIL JAX/XLA + MoE Kernels -->
+ <rect x="960" y="764" width="900" height="340" rx="14" fill="#0c1224" stroke="#4285f4" stroke-width="2.5"/>
+ <text x="988" y="796" fill="#4285f4" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">JAX/XLA Execution + Pallas TPU Kernels</text>
+ <text x="988" y="818" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="11">Functional JAX model with NNX state split - Pallas solves immutable KV cache bottleneck</text>
+
+ <text x="988" y="842" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">JIT Compilation Strategy</text>
+ <rect x="988" y="852" width="200" height="68" rx="6" fill="#172554" stroke="#4285f4"/>
+ <text x="1088" y="876" text-anchor="middle" fill="#dbeafe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Shape Bucketing</text>
+ <text x="1088" y="894" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="9">Batch + seq length buckets</text>
+ <text x="1088" y="910" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="9">Minimize compile variants</text>
+ <line x1="1188" y1="886" x2="1218" y2="886" stroke="#4285f4" stroke-width="2" marker-end="url(#arrow-blue)"/>
+ <rect x="1222" y="852" width="200" height="68" rx="6" fill="#172554" stroke="#4285f4"/>
+ <text x="1322" y="876" text-anchor="middle" fill="#dbeafe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Precompile Warm-up</text>
+ <text x="1322" y="894" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="9">All common buckets at init</text>
+ <text x="1322" y="910" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="9">Zero runtime cache misses</text>
+ <line x1="1422" y1="886" x2="1452" y2="886" stroke="#4285f4" stroke-width="2" marker-end="url(#arrow-blue)"/>
+ <rect x="1456" y="852" width="200" height="68" rx="6" fill="#172554" stroke="#4285f4"/>
+ <text x="1556" y="876" text-anchor="middle" fill="#dbeafe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">XLA Fusion</text>
+ <text x="1556" y="894" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="9">Kernel fusion + layout opt</text>
+ <text x="1556" y="910" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="9">SPMD parallel execution</text>
+ <rect x="1668" y="852" width="180" height="68" rx="6" fill="#172554" stroke="#4285f4"/>
+ <text x="1758" y="876" text-anchor="middle" fill="#dbeafe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">NNX split/join</text>
+ <text x="1758" y="894" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="9">Graph vs mutable state</text>
+ <text x="1758" y="910" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="9">Functional JIT of stateful model</text>
+
+ <text x="988" y="942" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Core Pallas Operators</text>
+ <rect x="988" y="952" width="280" height="48" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="1128" y="972" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">KV Cache In-Place Update</text>
+ <text x="1128" y="988" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">VMEM async copy - RadixCache compatible</text>
+ <rect x="1280" y="952" width="280" height="48" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="1420" y="972" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">FlashAttention (fa backend)</text>
+ <text x="1420" y="988" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">TPU-optimized - EAGLE verify mask (RPA v3)</text>
+ <rect x="1572" y="952" width="276" height="48" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1710" y="972" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Megablox GMM MoE + FusedMoE</text>
+ <text x="1710" y="988" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">EP all_to_all vs dense einsum fallback</text>
+
+ <text x="988" y="1024" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">vs PyTorch SGLang</text>
+ <rect x="988" y="1034" width="120" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1048" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">TPU not CUDA</text>
+ <rect x="1120" y="1034" width="100" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1170" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">JAX not PT</text>
+ <rect x="1232" y="1034" width="110" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1287" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">Pallas not Triton</text>
+ <rect x="1354" y="1034" width="100" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1404" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">shard_map TP</text>
+ <rect x="1466" y="1034" width="110" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1521" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">sched/VM not/chip</text>
+ <rect x="1588" y="1034" width="90" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1633" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">same API</text>
+ <rect x="1690" y="1034" width="80" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1730" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">RadixCache</text>
+ <rect x="1782" y="1034" width="66" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1815" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">GCE</text>
+
+ <text x="988" y="1108" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">EAGLE spec decode: 20-40% throughput gain - Megablox MoE: up to 2x ITL vs ragged_dot</text>
+
+ <!-- L6 Production -->
+ <rect x="60" y="1124" width="1800" height="72" rx="12" fill="#1a1208" stroke="#4285f4" stroke-width="2"/>
+ <text x="88" y="1152" fill="#4285f4" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Production &amp; Hardware</text>
+ <text x="960" y="1178" text-anchor="middle" fill="#93c5fd" font-family="JetBrains Mono, monospace" font-size="13">Google Cloud TPU (v4/v5/v6) - bfloat16 - GCE multi-node - OpenAI-compatible - LMSYS / sgl-project</text>
+
+ <!-- footers -->
+ <rect x="60" y="1216" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1236" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Init path: launch_server - load Flax model on device mesh - JIT warm-up all buckets - init RadixCache + KV pool</text>
+ <text x="960" y="1254" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Step path: tokenize - prefix match - bucket pad - JIT forward - Pallas KV update - detokenize - stream - repeat</text>
+
+ <text x="60" y="1300" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: sgl-project/sglang-jax - docs/architecture/project-core-structure.md - LMSYS blog 2025-10-29 - docs.sglang.io TPU</text>
+</svg>

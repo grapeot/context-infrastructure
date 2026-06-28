@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-lime" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#84cc16"/>
+  </marker>
+  <marker id="arrow-green" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#76b900"/>
+  </marker>
+  <marker id="arrow-cyan" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#22d3ee"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">cuDNN Frontend Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">Open-source C++ header-only + Python wrapper - github.com/NVIDIA/cudnn-frontend - cuDNN Graph API entry point</text>
+
+ <!-- L1 Workloads -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#84cc16" stroke-width="2"/>
+ <text x="88" y="124" fill="#84cc16" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - User-Facing Integrations + OSS Kernels (PyTorch custom ops - torch.compile - Hopper/Blackwell)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="113" y="162" text-anchor="middle">PyTorch</text>
+  <rect x="150" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="180" y="162" text-anchor="middle">torch.compile</text>
+  <rect x="222" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="247" y="162" text-anchor="middle">autograd</text>
+  <rect x="284" y="136" width="50" height="40" rx="6" fill="#365314" stroke="#84cc16"/><text x="309" y="162" text-anchor="middle">SDPA</text>
+  <rect x="346" y="136" width="50" height="40" rx="6" fill="#365314" stroke="#84cc16"/><text x="371" y="162" text-anchor="middle">Flash</text>
+  <rect x="408" y="136" width="40" height="40" rx="6" fill="#365314" stroke="#84cc16"/><text x="428" y="162" text-anchor="middle">MoE</text>
+  <rect x="460" y="136" width="50" height="40" rx="6" fill="#365314" stroke="#84cc16"/><text x="485" y="162" text-anchor="middle">RMSNorm</text>
+  <rect x="522" y="136" width="50" height="40" rx="6" fill="#365314" stroke="#84cc16"/><text x="547" y="162" text-anchor="middle">SwiGLU</text>
+  <rect x="584" y="136" width="40" height="40" rx="6" fill="#365314" stroke="#84cc16"/><text x="604" y="162" text-anchor="middle">NSA</text>
+  <rect x="636" y="136" width="50" height="40" rx="6" fill="#365314" stroke="#84cc16"/><text x="661" y="162" text-anchor="middle">grouped</text>
+  <rect x="698" y="136" width="50" height="40" rx="6" fill="#365314" stroke="#84cc16"/><text x="723" y="162" text-anchor="middle">GEMM</text>
+  <rect x="760" y="136" width="50" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="785" y="162" text-anchor="middle">Conv</text>
+  <rect x="822" y="136" width="50" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="847" y="162" text-anchor="middle">MatMul</text>
+  <rect x="884" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="909" y="162" text-anchor="middle">FP8</text>
+  <rect x="946" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="971" y="162" text-anchor="middle">MXFP8</text>
+  <rect x="1008" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1033" y="162" text-anchor="middle">BF16</text>
+  <rect x="1070" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1095" y="162" text-anchor="middle">FP16</text>
+  <rect x="1132" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1157" y="162" text-anchor="middle">H100</text>
+  <rect x="1194" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1219" y="162" text-anchor="middle">B200</text>
+  <rect x="1256" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1281" y="162" text-anchor="middle">GB200</text>
+  <rect x="1318" y="136" width="50" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="1343" y="162" text-anchor="middle">cuDNN</text>
+  <rect x="1380" y="136" width="50" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1405" y="162" text-anchor="middle">CUTLASS</text>
+  <rect x="1442" y="136" width="50" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1467" y="162" text-anchor="middle">Triton</text>
+  <rect x="1504" y="136" width="50" height="40" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="1529" y="162" text-anchor="middle">oneDNN</text>
+  <rect x="1566" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1591" y="162" text-anchor="middle">NVIDIA</text>
+  <rect x="1628" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1653" y="162" text-anchor="middle">CUDA</text>
+  <rect x="1690" y="136" width="50" height="40" rx="6" fill="#365314" stroke="#84cc16"/><text x="1715" y="162" text-anchor="middle">Apache2</text>
+  <rect x="1752" y="136" width="50" height="40" rx="6" fill="#365314" stroke="#84cc16"/><text x="1777" y="162" text-anchor="middle">open</text>
+  <rect x="1814" y="136" width="50" height="40" rx="6" fill="#365314" stroke="#84cc16"/><text x="1839" y="162" text-anchor="middle">src</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Dual API Tiers -->
+ <rect x="60" y="216" width="1800" height="120" rx="12" fill="#0f2744" stroke="#84cc16" stroke-width="2"/>
+ <text x="88" y="244" fill="#84cc16" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Dual API Tiers (high-level graph::Graph vs low-level Backend descriptor builders - C++ and Python equivalent)</text>
+ <rect x="88" y="258" width="340" height="64" rx="10" fill="#365314" stroke="#84cc16" stroke-width="2"/>
+ <text x="258" y="282" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">High-Level Graph API</text>
+ <text x="258" y="300" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">cudnn_frontend::graph::Graph</text>
+ <text x="258" y="314" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">Functional ops return tensors - auto infer shapes</text>
+ <rect x="448" y="258" width="340" height="64" rx="10" fill="#1a2e05" stroke="#76b900" stroke-width="2"/>
+ <text x="618" y="282" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Low-Level Backend Wrappers</text>
+ <text x="618" y="300" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">OperationGraph_v8 EngineHeuristics_v8</text>
+ <text x="618" y="314" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">Builder pattern over raw cudnnBackend API</text>
+ <rect x="808" y="258" width="340" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="978" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Python: pygraph + wrapper</text>
+ <text x="978" y="300" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">cudnn.pygraph low-level - wrapper.Graph high-level</text>
+ <text x="978" y="314" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">pybind11 bindings - DLPack/torch.Tensor ptrs</text>
+ <rect x="1168" y="258" width="340" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="1338" y="282" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Persistent Graph Object</text>
+ <text x="1338" y="300" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Virtual intermediate tensors auto-managed</text>
+ <text x="1338" y="314" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Global io/intermediate/compute dtype defaults</text>
+ <rect x="1528" y="258" width="300" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1678" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Composition Style</text>
+ <text x="1678" y="300" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Op outputs feed next op inputs directly</text>
+ <text x="1678" y="314" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">No manual intermediate tensor sizing</text>
+ <line x1="960" y1="336" x2="960" y2="354" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 C++ Core -->
+ <rect x="60" y="356" width="1800" height="200" rx="12" fill="#0f2744" stroke="#22d3ee" stroke-width="2.5"/>
+ <text x="88" y="384" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - C++ Header-Only Core (include/ - graph namespace + Backend descriptor wrappers)</text>
+
+ <rect x="88" y="400" width="420" height="136" rx="12" fill="#365314" stroke="#84cc16" stroke-width="2"/>
+ <text x="298" y="428" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">graph::Graph + Operations</text>
+ <text x="298" y="450" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">tensor conv_fprop/dgrad/wgrad matmul</text>
+ <text x="298" y="468" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">sdpa sdpa_fp8 sdpa_backward batchnorm</text>
+ <text x="298" y="486" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">pointwise resample genstats bn_finalize</text>
+ <text x="298" y="504" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">validate build_operation_graph execute</text>
+ <text x="298" y="522" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">serialize/deserialize JSON + binary blob</text>
+
+ <rect x="528" y="400" width="420" height="136" rx="12" fill="#1a2e05" stroke="#76b900" stroke-width="2"/>
+ <text x="738" y="428" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Backend Descriptor Wrappers</text>
+ <text x="738" y="450" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">OperationGraph_v8 Operation Tensor</text>
+ <text x="738" y="468" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">EngineHeuristics_v8 EngineConfig_v8</text>
+ <text x="738" y="486" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">ExecutionPlan_v8 VariantPack_v8 Knob</text>
+ <text x="738" y="504" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">BackendDescriptor + ManagedOpaqueDescriptor</text>
+ <text x="738" y="522" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">DeviceProperties backend/device_properties.h</text>
+
+ <rect x="968" y="400" width="420" height="136" rx="12" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="1178" y="428" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Heuristics + Plan Selection</text>
+ <text x="1178" y="450" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">get_execution_plans Mode A/B/Fallback</text>
+ <text x="1178" y="468" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Plans::select/deselect numeric behavior notes</text>
+ <text x="1178" y="486" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Filters.h filter_fn on engine configs</text>
+ <text x="1178" y="504" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">build_plan HEURISTIC_CHOICE or plan_index</text>
+ <text x="1178" y="522" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">get_heuristics_list multi-mode fallback chain</text>
+
+ <rect x="1408" y="400" width="420" height="136" rx="12" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="1618" y="428" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Utilities + Autotune</text>
+ <text x="1618" y="450" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">autotune: time all plans pick best runtime</text>
+ <text x="1618" y="468" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">build_plan_at_index for parallel plan build</text>
+ <text x="1618" y="486" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">get_workspace_size get_autotune_workspace</text>
+ <text x="1618" y="504" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">graph_cache kernel_cache jit helpers</text>
+ <text x="1618" y="522" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">cudnnException error_t get_last_error_string</text>
+
+ <line x1="960" y1="556" x2="960" y2="574" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Python Layer -->
+ <rect x="60" y="576" width="1800" height="120" rx="12" fill="#0f2744" stroke="#84cc16" stroke-width="2"/>
+ <text x="88" y="604" fill="#84cc16" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Python Layer (python/cudnn/ - pybind11 - experimental PyTorch custom ops)</text>
+ <rect x="88" y="618" width="340" height="64" rx="10" fill="#365314" stroke="#84cc16" stroke-width="2"/>
+ <text x="258" y="642" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">cudnn.pygraph (low-level)</text>
+ <text x="258" y="660" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">tensor matmul conv sdpa pointwise ops</text>
+ <text x="258" y="674" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">build + execute with torch.Tensor ptrs</text>
+ <rect x="448" y="618" width="340" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="618" y="642" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">wrapper.Graph (high-level)</text>
+ <text x="618" y="660" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Pythonic graph builder mirroring C++ API</text>
+ <text x="618" y="674" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">graph.jit graph_cache modules</text>
+ <rect x="808" y="618" width="340" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="978" y="642" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">experimental/ops/</text>
+ <text x="978" y="660" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">sdpa.py rmsnorm.py layernorm.py moe.py</text>
+ <text x="978" y="674" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">torch.compile-compatible custom operators</text>
+ <rect x="1168" y="618" width="340" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1338" y="642" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Runtime Bindings</text>
+ <text x="1338" y="660" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">create_handle set_stream DLPack support</text>
+ <text x="1338" y="674" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">execute_plan_at_index for autotune loop</text>
+ <rect x="1528" y="618" width="300" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1678" y="642" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">OSS Kernel Sources</text>
+ <text x="1678" y="660" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">python/cudnn/ open-sourced SDPA MoE</text>
+ <text x="1678" y="674" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">grouped GEMM + norm + activation fusions</text>
+ <line x1="960" y1="696" x2="960" y2="714" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L5 Workflow -->
+ <rect x="60" y="716" width="1800" height="120" rx="12" fill="#0f2744" stroke="#22d3ee" stroke-width="2"/>
+ <text x="88" y="744" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Graph Workflow Pipeline (11-step path from graph spec to GPU execution)</text>
+ <rect x="88" y="758" width="200" height="64" rx="10" fill="#365314" stroke="#84cc16" stroke-width="2"/>
+ <text x="188" y="782" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">1-3 Build</text>
+ <text x="188" y="800" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">Graph + tensors + ops</text>
+ <text x="188" y="814" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">set global dtypes</text>
+ <rect x="308" y="758" width="200" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="408" y="782" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">4-5 Validate</text>
+ <text x="408" y="800" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">validate() infer shapes</text>
+ <text x="408" y="814" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">build_operation_graph</text>
+ <rect x="528" y="758" width="200" height="64" rx="10" fill="#1a2e05" stroke="#76b900" stroke-width="2"/>
+ <text x="628" y="782" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">6-8 Plans</text>
+ <text x="628" y="800" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">get_execution_plans</text>
+ <text x="628" y="814" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">check_support filter</text>
+ <rect x="748" y="758" width="200" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="848" y="782" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">9 Build Plan</text>
+ <text x="848" y="800" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">build_plan policy</text>
+ <text x="848" y="814" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">or build_plan_at_index</text>
+ <rect x="968" y="758" width="200" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1068" y="782" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">10 Autotune</text>
+ <text x="1068" y="800" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">Optional: time all plans</text>
+ <text x="1068" y="814" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">pick best on device</text>
+ <rect x="1188" y="758" width="200" height="64" rx="10" fill="#134e4a" stroke="#5eead4" stroke-width="2"/>
+ <text x="1288" y="782" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">11 Execute</text>
+ <text x="1288" y="800" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">execute(var_pack, workspace)</text>
+ <text x="1288" y="814" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">on cudnnHandle stream</text>
+ <rect x="1408" y="758" width="420" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1618" y="782" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Maps to cuDNN Backend (closed-source below)</text>
+ <text x="1618" y="800" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">OperationGraph - EngineHeur - ExecutionPlan - Execute</text>
+ <text x="1618" y="814" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">libcudnn_graph.so + engines_precompiled + runtime_compiled</text>
+ <line x1="960" y1="836" x2="960" y2="854" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L6 Repo -->
+ <rect x="60" y="856" width="1800" height="56" rx="12" fill="#0f2744" stroke="#84cc16" stroke-width="2"/>
+ <text x="88" y="884" fill="#84cc16" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Repository Layout (header-only C++ - Python package - samples - sits above closed cuDNN backend)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0f2fe">
+  <rect x="88" y="892" width="50" height="24" rx="5" fill="#365314" stroke="#84cc16"/><text x="113" y="909" text-anchor="middle">include/</text>
+  <rect x="148" y="892" width="50" height="24" rx="5" fill="#365314" stroke="#84cc16"/><text x="173" y="909" text-anchor="middle">graph/</text>
+  <rect x="208" y="892" width="60" height="24" rx="5" fill="#365314" stroke="#84cc16"/><text x="238" y="909" text-anchor="middle">Heuristics.h</text>
+  <rect x="278" y="892" width="60" height="24" rx="5" fill="#365314" stroke="#84cc16"/><text x="308" y="909" text-anchor="middle">OperationGraph</text>
+  <rect x="348" y="892" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="373" y="909" text-anchor="middle">python/</text>
+  <rect x="408" y="892" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="433" y="909" text-anchor="middle">cudnn/</text>
+  <rect x="468" y="892" width="60" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="498" y="909" text-anchor="middle">experimental</text>
+  <rect x="538" y="892" width="50" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="563" y="909" text-anchor="middle">samples</text>
+  <rect x="598" y="892" width="40" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="618" y="909" text-anchor="middle">cpp</text>
+  <rect x="648" y="892" width="50" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="673" y="909" text-anchor="middle">python</text>
+  <rect x="708" y="892" width="50" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="733" y="909" text-anchor="middle">pybind11</text>
+  <rect x="768" y="892" width="50" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="793" y="909" text-anchor="middle">Filters</text>
+  <rect x="828" y="892" width="50" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="853" y="909" text-anchor="middle">autotune</text>
+  <rect x="888" y="892" width="50" height="24" rx="5" fill="#1a2e05" stroke="#76b900"/><text x="913" y="909" text-anchor="middle">cuDNN</text>
+  <rect x="948" y="892" width="50" height="24" rx="5" fill="#1a2e05" stroke="#76b900"/><text x="973" y="909" text-anchor="middle">backend</text>
+  <rect x="1008" y="892" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1033" y="909" text-anchor="middle">sdpa.py</text>
+  <rect x="1068" y="892" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1093" y="909" text-anchor="middle">moe.py</text>
+  <rect x="1128" y="892" width="50" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="1153" y="909" text-anchor="middle">FP8</text>
+  <rect x="1188" y="892" width="50" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="1213" y="909" text-anchor="middle">MXFP8</text>
+  <rect x="1248" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1273" y="909" text-anchor="middle">pip pkg</text>
+  <rect x="1308" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1333" y="909" text-anchor="middle">CMake</text>
+  <rect x="1368" y="892" width="60" height="24" rx="5" fill="#365314" stroke="#84cc16"/><text x="1398" y="909" text-anchor="middle">nvidia.github</text>
+  <rect x="1438" y="892" width="50" height="24" rx="5" fill="#365314" stroke="#84cc16"/><text x="1463" y="909" text-anchor="middle">blog</text>
+  <rect x="1498" y="892" width="50" height="24" rx="5" fill="#450a0a" stroke="#ef4444"/><text x="1523" y="909" text-anchor="middle">oneDNN</text>
+  <rect x="1558" y="892" width="50" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="1583" y="909" text-anchor="middle">CUTLASS</text>
+  <rect x="1618" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1643" y="909" text-anchor="middle">CUDA</text>
+  <rect x="1678" y="892" width="50" height="24" rx="5" fill="#365314" stroke="#84cc16"/><text x="1703" y="909" text-anchor="middle">Apache2</text>
+  <rect x="1738" y="892" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1763" y="909" text-anchor="middle">PyTorch</text>
+  <rect x="1798" y="892" width="50" height="24" rx="5" fill="#365314" stroke="#84cc16"/><text x="1823" y="909" text-anchor="middle">v1.9+</text>
+ </g>
+
+ <!-- DETAIL SDPA PyTorch path -->
+ <rect x="60" y="928" width="880" height="340" rx="14" fill="#0c1524" stroke="#84cc16" stroke-width="2.5"/>
+ <text x="88" y="960" fill="#84cc16" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">PyTorch SDPA Custom Op Path (experimental/ops/sdpa.py - torch.compile - autograd)</text>
+ <text x="88" y="982" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="11">Frontend builds cuDNN graph internally - exposes as drop-in PyTorch operator</text>
+
+ <rect x="88" y="998" width="820" height="36" rx="6" fill="#365314" stroke="#84cc16"/>
+ <text x="498" y="1022" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1: Import cudnn.experimental.ops - register custom SDPA forward/backward</text>
+ <line x1="498" y1="1034" x2="498" y2="1046" stroke="#84cc16" stroke-width="1.5" marker-end="url(#arrow-lime)"/>
+ <rect x="88" y="1048" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="1072" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2: graph::Graph set BF16/FP8 dtypes - sdpa(Q,K,V) with causal/alibi/dropout attrs</text>
+ <line x1="498" y1="1084" x2="498" y2="1096" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+ <rect x="88" y="1098" width="820" height="36" rx="6" fill="#422006" stroke="#fbbf24"/>
+ <text x="498" y="1122" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3: validate - build_operation_graph - get_execution_plans Mode A</text>
+ <line x1="498" y1="1134" x2="498" y2="1146" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+ <rect x="88" y="1148" width="820" height="36" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="498" y="1172" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4: build_plan HEURISTIC_CHOICE - optional autotune across plan indices</text>
+ <line x1="498" y1="1184" x2="498" y2="1196" stroke="#fb923c" stroke-width="1.5" marker-end="url(#arrow-lime)"/>
+ <rect x="88" y="1198" width="820" height="36" rx="6" fill="#1a2e05" stroke="#76b900"/>
+ <text x="498" y="1222" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 5: execute with torch.Tensor data_ptr - cuDNN fused Flash SDPA kernel on stream</text>
+ <line x1="498" y1="1234" x2="498" y2="1246" stroke="#76b900" stroke-width="1.5"/>
+ <rect x="88" y="1248" width="820" height="28" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="498" y="1268" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">torch.compile traces op - graph_cache reuses compiled partition across invocations</text>
+
+ <text x="88" y="1294" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Low-level path: cudnn.pygraph manual tensor UIDs - matmul_cache - jit(heur_modes) for fine control</text>
+ <text x="88" y="1310" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">MoE: grouped GEMM + SwiGLU open-source kernels in python/cudnn/ for expert parallelism training</text>
+
+ <!-- DETAIL Position -->
+ <rect x="960" y="928" width="900" height="340" rx="14" fill="#0c1224" stroke="#84cc16" stroke-width="2.5"/>
+ <text x="988" y="960" fill="#84cc16" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Five Design Pillars + Layer Position vs cuDNN Backend</text>
+ <text x="988" y="982" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="11">Open-source ergonomic wrapper - hides Backend descriptor boilerplate - ships OSS reference kernels</text>
+
+ <text x="988" y="1006" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Five Pillars</text>
+ <rect x="988" y="1016" width="130" height="48" rx="6" fill="#365314" stroke="#84cc16"/>
+ <text x="1053" y="1038" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Open source</text>
+ <text x="1053" y="1054" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">Header-only C++ + Py</text>
+ <rect x="1130" y="1016" width="130" height="48" rx="6" fill="#365314" stroke="#84cc16"/>
+ <text x="1195" y="1038" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Dual tier</text>
+ <text x="1195" y="1054" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">Graph + Backend wrap</text>
+ <rect x="1272" y="1016" width="130" height="48" rx="6" fill="#422006" stroke="#fbbf24"/>
+ <text x="1337" y="1038" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Autotune</text>
+ <text x="1337" y="1054" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">Runtime plan timing</text>
+ <rect x="1414" y="1016" width="130" height="48" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="1479" y="1038" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">PyTorch ops</text>
+ <text x="1479" y="1054" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">compile + autograd</text>
+ <rect x="1556" y="1016" width="130" height="48" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1621" y="1038" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Serialization</text>
+ <text x="1621" y="1054" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">JSON + binary blob</text>
+ <rect x="1698" y="1016" width="150" height="48" rx="6" fill="#1a2e05" stroke="#76b900"/>
+ <text x="1773" y="1038" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">OSS kernels</text>
+ <text x="1773" y="1054" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">SDPA MoE norm refs</text>
+
+ <text x="988" y="1082" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">vs Related Layers</text>
+ <rect x="988" y="1092" width="200" height="68" rx="6" fill="#365314" stroke="#84cc16"/>
+ <text x="1088" y="1116" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">cuDNN Frontend</text>
+ <text x="1088" y="1134" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">Open wrapper + OSS kernels</text>
+ <text x="1088" y="1150" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">Ergonomic graph builders</text>
+ <rect x="1200" y="1092" width="200" height="68" rx="6" fill="#1a2e05" stroke="#76b900"/>
+ <text x="1300" y="1116" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">cuDNN Backend</text>
+ <text x="1300" y="1134" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">Closed-source engines</text>
+ <text x="1300" y="1150" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">Raw descriptor C API</text>
+ <rect x="1412" y="1092" width="200" height="68" rx="6" fill="#312e81" stroke="#818cf8"/>
+ <text x="1512" y="1116" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Triton / CUTLASS</text>
+ <text x="1512" y="1134" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">User-authored kernels</text>
+ <text x="1512" y="1150" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">Alternative to cuDNN path</text>
+ <rect x="1624" y="1092" width="224" height="68" rx="6" fill="#450a0a" stroke="#ef4444"/>
+ <text x="1736" y="1116" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">FlashAttention</text>
+ <text x="1736" y="1134" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="9">Standalone attn kernel</text>
+ <text x="1736" y="1150" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="9">FE wraps cuDNN SDPA engine</text>
+
+ <text x="988" y="1178" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Quick Start</text>
+ <rect x="988" y="1188" width="860" height="48" rx="6" fill="#1a1208" stroke="#84cc16"/>
+ <text x="1418" y="1212" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="12">Graph g; g.set_io_data_type(BF16); auto o = g.sdpa(q,k,v); g.validate(); g.build_plan(); g.execute(...)</text>
+ <text x="1418" y="1228" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">Docs: docs.nvidia.com/deeplearning/cudnn/frontend - github.com/NVIDIA/cudnn-frontend</text>
+
+ <!-- footer bar -->
+ <rect x="60" y="1288" width="1800" height="72" rx="12" fill="#1a1208" stroke="#84cc16" stroke-width="2"/>
+ <text x="88" y="1316" fill="#84cc16" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">Design Position (open-source cuDNN entry point - simplifies Graph API - ships reference OSS kernels for PyTorch)</text>
+ <text x="960" y="1342" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="13">Persistent graph + autotune + PyTorch ops = developer-friendly path to cuDNN fused engines on Hopper/Blackwell</text>
+
+ <!-- footers -->
+ <rect x="60" y="1376" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1396" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Build: create Graph - add ops - validate - build_operation_graph - get plans - build_plan - optional autotune</text>
+ <text x="960" y="1414" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Execute: bind device ptrs via variant_pack - workspace alloc - cudnnHandle stream - cuDNN backend kernel launch</text>
+
+ <text x="60" y="1460" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: github.com/NVIDIA/cudnn-frontend - docs.nvidia.com/deeplearning/cudnn/frontend - nvidia.github.io/cudnn-frontend</text>
+</svg>

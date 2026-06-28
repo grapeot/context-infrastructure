@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-teal" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#2dd4bf"/>
+  </marker>
+  <marker id="arrow-purple" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#a78bfa"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">SGLang Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">Structured Generation Language - SRT Runtime - RadixAttention - LMSYS / UC Berkeley</text>
+
+ <!-- L1 Entry -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="88" y="124" fill="#2dd4bf" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Entry Points &amp; API</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="120" height="40" rx="6" fill="#042f2e" stroke="#2dd4bf"/><text x="148" y="162" text-anchor="middle">launch_server</text>
+  <rect x="220" y="136" width="130" height="40" rx="6" fill="#042f2e" stroke="#2dd4bf"/><text x="285" y="162" text-anchor="middle">sglang_router</text>
+  <rect x="362" y="136" width="80" height="40" rx="6" fill="#042f2e" stroke="#2dd4bf"/><text x="402" y="162" text-anchor="middle">Engine</text>
+  <rect x="454" y="136" width="110" height="40" rx="6" fill="#042f2e" stroke="#2dd4bf"/><text x="509" y="162" text-anchor="middle">OpenAI API</text>
+  <rect x="576" y="136" width="90" height="40" rx="6" fill="#042f2e" stroke="#2dd4bf"/><text x="621" y="162" text-anchor="middle">/generate</text>
+  <rect x="678" y="136" width="120" height="40" rx="6" fill="#042f2e" stroke="#2dd4bf"/><text x="738" y="162" text-anchor="middle">update_weights</text>
+  <rect x="810" y="136" width="100" height="40" rx="6" fill="#042f2e" stroke="#2dd4bf"/><text x="860" y="162" text-anchor="middle">SGL frontend</text>
+  <rect x="922" y="136" width="90" height="40" rx="6" fill="#042f2e" stroke="#2dd4bf"/><text x="967" y="162" text-anchor="middle">@sgl.function</text>
+  <rect x="1024" y="136" width="80" height="40" rx="6" fill="#042f2e" stroke="#2dd4bf"/><text x="1064" y="162" text-anchor="middle">/encode</text>
+  <rect x="1116" y="136" width="80" height="40" rx="6" fill="#042f2e" stroke="#2dd4bf"/><text x="1156" y="162" text-anchor="middle">/score</text>
+  <rect x="1208" y="136" width="80" height="40" rx="6" fill="#042f2e" stroke="#2dd4bf"/><text x="1248" y="162" text-anchor="middle">/classify</text>
+  <rect x="1300" y="136" width="90" height="40" rx="6" fill="#042f2e" stroke="#2dd4bf"/><text x="1345" y="162" text-anchor="middle">gRPC router</text>
+  <rect x="1402" y="136" width="100" height="40" rx="6" fill="#042f2e" stroke="#2dd4bf"/><text x="1452" y="162" text-anchor="middle">sglang[all]</text>
+  <rect x="1514" y="136" width="80" height="40" rx="6" fill="#042f2e" stroke="#2dd4bf"/><text x="1554" y="162" text-anchor="middle">VLM</text>
+  <rect x="1606" y="136" width="80" height="40" rx="6" fill="#042f2e" stroke="#2dd4bf"/><text x="1646" y="162" text-anchor="middle">MoE</text>
+  <rect x="1698" y="136" width="70" height="40" rx="6" fill="#042f2e" stroke="#2dd4bf"/><text x="1733" y="162" text-anchor="middle">LoRA</text>
+  <rect x="1780" y="136" width="68" height="40" rx="6" fill="#042f2e" stroke="#2dd4bf"/><text x="1814" y="162" text-anchor="middle">RL API</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 SRT Layer -->
+ <rect x="60" y="216" width="1800" height="120" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2"/>
+ <text x="88" y="244" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - SGLang Runtime (SRT) - Multi-Process Engine</text>
+ <rect x="88" y="258" width="240" height="60" rx="8" fill="#042f2e" stroke="#2dd4bf"/>
+ <text x="208" y="282" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Engine (SRT)</text>
+ <text x="208" y="302" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Coordinates tokenizer - scheduler - detokenizer</text>
+ <rect x="344" y="258" width="240" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="464" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">TokenizerManager</text>
+ <text x="464" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">HF / fastokens backend - async tokenization</text>
+ <rect x="600" y="258" width="240" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="720" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">DetokenizerManager</text>
+ <text x="720" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Stream decode tokens to text output</text>
+ <rect x="856" y="258" width="260" height="60" rx="8" fill="#042f2e" stroke="#2dd4bf"/>
+ <text x="986" y="282" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">event_loop_overlap</text>
+ <text x="986" y="302" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">CPU prepares next batch while GPU runs current</text>
+ <rect x="1132" y="258" width="240" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1252" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">ZMQ / IPC Processes</text>
+ <text x="1252" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">HTTP server - scheduler - TP worker procs</text>
+ <rect x="1388" y="258" width="220" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1498" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">SGL Frontend IR</text>
+ <text x="1498" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Parallel gen - branching - constrained output</text>
+ <rect x="1624" y="258" width="214" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1731" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Model Gateway (SMG)</text>
+ <text x="1731" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Rust router - DP / PD / RL coordination</text>
+ <line x1="960" y1="336" x2="960" y2="354" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Core -->
+ <rect x="60" y="356" width="1800" height="200" rx="12" fill="#0f2744" stroke="#2dd4bf" stroke-width="2.5"/>
+ <text x="88" y="384" fill="#2dd4bf" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - Core SRT Components</text>
+
+ <!-- Scheduler -->
+ <rect x="88" y="400" width="420" height="136" rx="12" fill="#042f2e" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="298" y="428" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Scheduler (Brain)</text>
+ <text x="298" y="450" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">scheduler.py - waiting_queue + running_batch</text>
+ <text x="298" y="468" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Continuous batching - dynamic add/remove per iter</text>
+ <text x="298" y="486" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Policies: FCFS / LPM / DFS-weight / cache_aware</text>
+ <text x="298" y="504" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Chunked prefill - preemption on memory pressure</text>
+ <text x="298" y="522" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">ScheduleBatch - get_next_batch_to_run()</text>
+
+ <!-- RadixCache -->
+ <rect x="524" y="400" width="420" height="136" rx="12" fill="#0c2d2d" stroke="#14b8a6" stroke-width="2"/>
+ <text x="734" y="428" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">RadixCache + RadixAttention</text>
+ <text x="734" y="450" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">radix_cache.py - prefix tree for KV reuse</text>
+ <text x="734" y="468" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Auto-detect shared prefixes - zero config</text>
+ <text x="734" y="486" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Chained block hash - ref_count per node</text>
+ <text x="734" y="504" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Eviction: LRU / LFU / FIFO / MRU / priority</text>
+ <text x="734" y="522" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">flush_cache on weight update (RL training)</text>
+
+ <!-- Memory Pool -->
+ <rect x="960" y="400" width="340" height="136" rx="12" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1130" y="428" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Memory Pool</text>
+ <text x="1130" y="450" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">TokenToKVPoolAllocator - token-to-KV mapping</text>
+ <text x="1130" y="468" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Pre-allocated GPU KV cache memory pool</text>
+ <text x="1130" y="486" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">mem_fraction_static for model + KV budget</text>
+ <text x="1130" y="504" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Hybrid KV cache manager (multi-group)</text>
+ <text x="1130" y="522" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Encoder cache for VLM vision tokens</text>
+
+ <!-- ModelRunner -->
+ <rect x="1316" y="400" width="516" height="136" rx="12" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1574" y="428" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">ModelRunner + TP Workers</text>
+ <text x="1574" y="450" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Forward pass - attention + RadixAttention kernel</text>
+ <text x="1574" y="468" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Sampling - structured output / JSON schema</text>
+ <text x="1574" y="486" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Speculative decoding - EAGLE / N-gram draft</text>
+ <text x="1574" y="504" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Reasoning parser + tool call parser</text>
+ <text x="1574" y="522" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">CUDA graphs + custom Triton / FlashInfer kernels</text>
+
+ <text x="960" y="548" text-anchor="middle" fill="#2dd4bf" font-family="JetBrains Mono, monospace" font-size="10">Three pillars: RadixAttention (memory) + zero-overhead scheduler (GPU util) + continuous batching (throughput)</text>
+ <line x1="960" y1="556" x2="960" y2="574" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Backends -->
+ <rect x="60" y="576" width="1800" height="88" rx="12" fill="#0f2744" stroke="#a78bfa" stroke-width="2"/>
+ <text x="88" y="604" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Kernel &amp; Model Backends</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ede9fe">
+  <text x="88" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Kernels:</text>
+  <rect x="150" y="612" width="90" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="195" y="636" text-anchor="middle">FlashInfer</text>
+  <rect x="252" y="612" width="70" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="287" y="636" text-anchor="middle">Triton</text>
+  <rect x="334" y="612" width="90" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="379" y="636" text-anchor="middle">FlashAttn</text>
+  <rect x="436" y="612" width="80" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="476" y="636" text-anchor="middle">Cutlass</text>
+  <text x="530" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Models:</text>
+  <rect x="590" y="612" width="110" height="36" rx="6" fill="#042f2e" stroke="#2dd4bf"/><text x="645" y="636" text-anchor="middle">Transformers</text>
+  <rect x="712" y="612" width="80" height="36" rx="6" fill="#042f2e" stroke="#2dd4bf"/><text x="752" y="636" text-anchor="middle">DeepSeek</text>
+  <rect x="804" y="612" width="70" height="36" rx="6" fill="#042f2e" stroke="#2dd4bf"/><text x="839" y="636" text-anchor="middle">Qwen</text>
+  <rect x="886" y="612" width="70" height="36" rx="6" fill="#042f2e" stroke="#2dd4bf"/><text x="921" y="636" text-anchor="middle">Llama</text>
+  <text x="970" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Quant:</text>
+  <rect x="1020" y="612" width="50" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1045" y="636" text-anchor="middle">FP8</text>
+  <rect x="1082" y="612" width="50" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1107" y="636" text-anchor="middle">INT4</text>
+  <rect x="1144" y="612" width="50" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1169" y="636" text-anchor="middle">AWQ</text>
+  <rect x="1206" y="612" width="50" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1231" y="636" text-anchor="middle">GPTQ</text>
+  <rect x="1268" y="612" width="60" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1298" y="636" text-anchor="middle">NVFP4</text>
+  <text x="1345" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Compile:</text>
+  <rect x="1410" y="612" width="100" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1460" y="636" text-anchor="middle">CUDA Graph</text>
+  <rect x="1522" y="612" width="100" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1572" y="636" text-anchor="middle">torch.compile</text>
+  <rect x="1634" y="612" width="80" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1674" y="636" text-anchor="middle">torchao</text>
+  <rect x="1726" y="612" width="60" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1756" y="636" text-anchor="middle">MLA</text>
+  <rect x="1798" y="612" width="50" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1823" y="636" text-anchor="middle">NSA</text>
+ </g>
+
+ <!-- L5 Features -->
+ <rect x="60" y="676" width="1800" height="72" rx="12" fill="#0f2744" stroke="#fbbf24" stroke-width="2"/>
+ <text x="88" y="704" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Key Optimizations &amp; Advanced Features</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#fef3c7">
+  <rect x="88" y="716" width="110" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="143" y="733" text-anchor="middle">RadixAttention</text>
+  <rect x="208" y="716" width="110" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="263" y="733" text-anchor="middle">Cont. batching</text>
+  <rect x="328" y="716" width="110" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="383" y="733" text-anchor="middle">Overlap sched</text>
+  <rect x="448" y="716" width="100" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="498" y="733" text-anchor="middle">Chunked prefill</text>
+  <rect x="558" y="716" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="603" y="733" text-anchor="middle">Cache-aware</text>
+  <rect x="658" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="698" y="733" text-anchor="middle">PD disagg</text>
+  <rect x="748" y="716" width="40" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="768" y="733" text-anchor="middle">TP</text>
+  <rect x="798" y="716" width="40" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="818" y="733" text-anchor="middle">PP</text>
+  <rect x="848" y="716" width="40" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="868" y="733" text-anchor="middle">DP</text>
+  <rect x="898" y="716" width="40" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="918" y="733" text-anchor="middle">EP</text>
+  <rect x="948" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="988" y="733" text-anchor="middle">Spec decode</text>
+  <rect x="1038" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1078" y="733" text-anchor="middle">Structured</text>
+  <rect x="1128" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1158" y="733" text-anchor="middle">VLM</text>
+  <rect x="1198" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1228" y="733" text-anchor="middle">MoE</text>
+  <rect x="1268" y="716" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1303" y="733" text-anchor="middle">Tool call</text>
+  <rect x="1348" y="716" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1383" y="733" text-anchor="middle">Reasoning</text>
+  <rect x="1428" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1458" y="733" text-anchor="middle">LoRA</text>
+  <rect x="1498" y="716" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1533" y="733" text-anchor="middle">Embedding</text>
+  <rect x="1578" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1608" y="733" text-anchor="middle">Rerank</text>
+  <rect x="1648" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1688" y="733" text-anchor="middle">RL rollout</text>
+  <rect x="1738" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1768" y="733" text-anchor="middle">Mooncake</text>
+  <rect x="1808" y="716" width="40" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1828" y="733" text-anchor="middle">NIXL</text>
+ </g>
+
+ <!-- DETAIL Scheduler Loop -->
+ <rect x="60" y="764" width="880" height="340" rx="14" fill="#0c1524" stroke="#2dd4bf" stroke-width="2.5"/>
+ <text x="88" y="796" fill="#2dd4bf" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Scheduler Event Loop (per iteration)</text>
+ <text x="88" y="818" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="11">Zero-overhead: event_loop_overlap overlaps CPU batch prep with GPU execution</text>
+
+ <rect x="88" y="834" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="858" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1: recv_requests() - tokenize - add to waiting_queue</text>
+ <line x1="498" y1="870" x2="498" y2="882" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow)"/>
+ <rect x="88" y="884" width="820" height="36" rx="6" fill="#042f2e" stroke="#2dd4bf"/>
+ <text x="498" y="908" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2: Radix prefix match - get_computed_blocks - skip cached tokens</text>
+ <line x1="498" y1="920" x2="498" y2="932" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+ <rect x="88" y="934" width="820" height="36" rx="6" fill="#042f2e" stroke="#2dd4bf"/>
+ <text x="498" y="958" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3: get_next_batch_to_run() - admit waiting - rebuild running_batch</text>
+ <line x1="498" y1="970" x2="498" y2="982" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+ <rect x="88" y="984" width="820" height="36" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="498" y="1008" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4: run_batch() - ModelRunner forward + sample on GPU workers</text>
+ <line x1="498" y1="1020" x2="498" y2="1032" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
+ <rect x="88" y="1034" width="820" height="36" rx="6" fill="#422006" stroke="#fcd34d"/>
+ <text x="498" y="1058" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 5: process_batch_result() - detokenize - stream - free finished req slots</text>
+
+ <text x="88" y="1092" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Prefill + decode mixed in same batch - finished seq slot immediately filled by waiting req</text>
+ <text x="88" y="1108" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">LPM policy prioritizes requests with longest prefix match for max Radix cache hit</text>
+
+ <!-- DETAIL RadixAttention + SMG -->
+ <rect x="960" y="764" width="900" height="340" rx="14" fill="#0c1a18" stroke="#14b8a6" stroke-width="2.5"/>
+ <text x="988" y="796" fill="#14b8a6" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">RadixAttention &amp; Model Gateway (SMG)</text>
+ <text x="988" y="818" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="11">Radix tree vs vLLM PagedAttention blocks - dynamic prefix discovery without manual config</text>
+
+ <text x="988" y="842" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">RadixAttention Prefix Tree</text>
+ <rect x="988" y="852" width="200" height="68" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="1088" y="876" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">RadixNode tree</text>
+ <text x="1088" y="894" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Token path as tree edges</text>
+ <text x="1088" y="910" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">KV indices per node</text>
+ <line x1="1188" y1="886" x2="1218" y2="886" stroke="#2dd4bf" stroke-width="2" marker-end="url(#arrow-teal)"/>
+ <rect x="1222" y="852" width="200" height="68" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="1322" y="876" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Prefix Match</text>
+ <text x="1322" y="894" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Walk tree on new request</text>
+ <text x="1322" y="910" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Reuse shared KV states</text>
+ <line x1="1422" y1="886" x2="1452" y2="886" stroke="#2dd4bf" stroke-width="2" marker-end="url(#arrow-teal)"/>
+ <rect x="1456" y="852" width="200" height="68" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="1556" y="876" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Cache Insert</text>
+ <text x="1556" y="894" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">New prefix branches added</text>
+ <text x="1556" y="910" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">ref_count tracks sharing</text>
+ <rect x="1668" y="852" width="180" height="68" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="1758" y="876" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">System Prompt Hit</text>
+ <text x="1758" y="894" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Chat / few-shot / multi-turn</text>
+ <text x="1758" y="910" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Skip redundant prefill</text>
+
+ <text x="988" y="942" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Model Gateway - PD Disaggregation + DP Routing</text>
+ <rect x="988" y="952" width="280" height="48" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1128" y="972" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Prefill workers (compute-heavy)</text>
+ <text x="1128" y="988" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">KV xfer via Mooncake / NIXL</text>
+ <rect x="1280" y="952" width="280" height="48" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1420" y="972" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Decode workers (memory-heavy)</text>
+ <text x="1420" y="988" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">SMG merges metadata + streams output</text>
+ <rect x="1572" y="952" width="276" height="48" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1710" y="972" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">cache_aware / power_of_two LB</text>
+ <text x="1710" y="988" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">40+ Prometheus metrics - Rust gRPC router</text>
+
+ <text x="988" y="1024" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Ecosystem Integration</text>
+ <rect x="988" y="1034" width="60" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1018" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">slime</text>
+ <rect x="1060" y="1034" width="60" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1090" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">Miles</text>
+ <rect x="1132" y="1034" width="60" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1162" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">veRL</text>
+ <rect x="1204" y="1034" width="60" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1234" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">AReaL</text>
+ <rect x="1276" y="1034" width="50" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1301" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">xAI</text>
+ <rect x="1338" y="1034" width="70" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1373" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">PyTorch</text>
+ <rect x="1420" y="1034" width="60" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1450" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">NVIDIA</text>
+ <rect x="1492" y="1034" width="50" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1517" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">AMD</text>
+ <rect x="1554" y="1034" width="70" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1589" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">Cursor</text>
+ <rect x="1636" y="1034" width="80" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1676" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">LinkedIn</text>
+ <rect x="1728" y="1034" width="120" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1788" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">400k+ GPUs</text>
+
+ <text x="988" y="1092" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Up to 6x throughput vs alternatives - preferred rollout engine for slime/Miles RL post-training</text>
+ <text x="988" y="1108" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">/update_weights + flush_cache for online RL weight sync - CUDA IPC zero-copy refit</text>
+
+ <!-- L6 Production -->
+ <rect x="60" y="1124" width="1800" height="72" rx="12" fill="#1a1208" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="88" y="1152" fill="#2dd4bf" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Production &amp; Scale</text>
+ <text x="960" y="1178" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="13">CUDA / ROCm - multi-node TP/PP/DP/EP - K8s / Docker - OpenTelemetry + Prometheus - PyTorch ecosystem</text>
+
+ <!-- footers -->
+ <rect x="60" y="1216" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1236" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Init path: launch_server - load model - profile mem - init RadixCache + KV pool - spawn scheduler + TP workers</text>
+ <text x="960" y="1254" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Step path: recv - prefix match - schedule batch - forward - sample - detokenize - cache insert - repeat</text>
+
+ <text x="60" y="1300" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: sgl-project/sglang - docs.sglang.io architecture - RadixAttention paper - LMSYS / UC Berkeley</text>
+</svg>

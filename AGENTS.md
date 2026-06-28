@@ -42,9 +42,12 @@ Don't ask permission. Just do it.
 - **产品 / 代际 / 软件栈层**（规格、实例、框架集成）→ 再读 `workflow_deep_research_survey.md`；已有报告见 `contexts/survey_sessions/*_survey_*.md`  
 - crucible-notes **不是**官方文档；Meta MTIA 等无 crucible 覆盖的芯片，走常规调研 workflow
 
-**深度调研任务** → `rules/skills/workflow_deep_research_survey.md`  
-- 初步扫描 → 分割维度 → 多 Agent 并行 → 交叉验证 → 写报告  
+**深度调研任务** → `rules/skills/workflow_deep_research_survey.md` 
+- 初步扫描 → 分割维度 → 多 Agent 并行 → 交叉验证 → 写报告 
 - 输出：`contexts/survey_sessions/`
+
+**技术架构图 / 流程图 / UML** → `rules/skills/generating_tech_diagrams.md`（上游 [fireworks-tech-graph](https://github.com/yizhiyanhua-ai/fireworks-tech-graph)）
+- 出版级 SVG+PNG、8 风格、AI/Agent 语义形状；survey 可编辑图仍用 Excalidraw
 
 **调用后台 Agent / 并行 Subagent** → `rules/skills/workflow_parallel_subagents.md`  
 - 何时拆分任务、什么时候不要拆、如何并行派出多个 subagent  

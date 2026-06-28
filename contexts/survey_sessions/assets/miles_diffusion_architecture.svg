@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-fuchsia" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#d946ef"/>
+  </marker>
+  <marker id="arrow-teal" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#2dd4bf"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">Miles-Diffusion Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">Diffusion RL Post-Training - Miles/slime two-plane + SGLang-D rollout + FlowGRPO - github.com/radixark/miles_diffusion</text>
+
+ <!-- L1 Entry -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#d946ef" stroke-width="2"/>
+ <text x="88" y="124" fill="#d946ef" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Entry Points + Diffusion Model Families (experimental diffusion post-training fork of Miles)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="130" height="40" rx="6" fill="#4a044e" stroke="#d946ef"/><text x="153" y="162" text-anchor="middle">train_diffusion.py</text>
+  <rect x="230" y="136" width="50" height="40" rx="6" fill="#4a044e" stroke="#d946ef"/><text x="255" y="162" text-anchor="middle">SD3.5</text>
+  <rect x="292" y="136" width="40" height="40" rx="6" fill="#4a044e" stroke="#d946ef"/><text x="312" y="162" text-anchor="middle">FLUX</text>
+  <rect x="344" y="136" width="80" height="40" rx="6" fill="#4a044e" stroke="#d946ef"/><text x="384" y="162" text-anchor="middle">Qwen-Image</text>
+  <rect x="436" y="136" width="50" height="40" rx="6" fill="#4a044e" stroke="#d946ef"/><text x="461" y="162" text-anchor="middle">Wan2.1</text>
+  <rect x="498" y="136" width="50" height="40" rx="6" fill="#4a044e" stroke="#d946ef"/><text x="523" y="162" text-anchor="middle">BAGEL</text>
+  <rect x="560" y="136" width="80" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="600" y="162" text-anchor="middle">FlowGRPO</text>
+  <rect x="652" y="136" width="50" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="677" y="162" text-anchor="middle">GRPO</text>
+  <rect x="714" y="136" width="80" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="754" y="162" text-anchor="middle">GRPO-Guard</text>
+  <rect x="806" y="136" width="40" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="826" y="162" text-anchor="middle">OCR</text>
+  <rect x="858" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="893" y="162" text-anchor="middle">PickScore</text>
+  <rect x="940" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="970" y="162" text-anchor="middle">GenEval</text>
+  <rect x="1012" y="136" width="50" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1037" y="162" text-anchor="middle">LoRA</text>
+  <rect x="1074" y="136" width="80" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1114" y="162" text-anchor="middle">sglang-d</text>
+  <rect x="1166" y="136" width="50" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1191" y="162" text-anchor="middle">FSDP</text>
+  <rect x="1228" y="136" width="60" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1258" y="162" text-anchor="middle">colocate</text>
+  <rect x="1300" y="136" width="70" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1335" y="162" text-anchor="middle">flow_grpo/</text>
+  <rect x="1382" y="136" width="80" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="1422" y="162" text-anchor="middle">radixark</text>
+  <rect x="1474" y="136" width="100" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="1524" y="162" text-anchor="middle">miles_diffusion</text>
+  <rect x="1586" y="136" width="50" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="1611" y="162" text-anchor="middle">Miles</text>
+  <rect x="1648" y="136" width="50" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="1673" y="162" text-anchor="middle">slime</text>
+  <rect x="1710" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1740" y="162" text-anchor="middle">T2I RL</text>
+  <rect x="1782" y="136" width="66" height="40" rx="6" fill="#4a044e" stroke="#d946ef"/><text x="1815" y="162" text-anchor="middle">exp</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Ray -->
+ <rect x="60" y="216" width="1800" height="96" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2"/>
+ <text x="88" y="244" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Ray Orchestrator + GPU Placement (colocated actor + sglang-diffusion engine)</text>
+ <rect x="88" y="256" width="160" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="168" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">create_placement_groups</text>
+ <rect x="260" y="256" width="150" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="335" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">rollout_manager</text>
+ <rect x="422" y="256" width="150" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="497" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">create_training_models</text>
+ <rect x="584" y="256" width="120" height="32" rx="6" fill="#4a044e" stroke="#d946ef"/><text x="644" y="278" text-anchor="middle" fill="#fae8ff" font-family="JetBrains Mono, monospace" font-size="12">--colocate</text>
+ <rect x="716" y="256" width="140" height="32" rx="6" fill="#4a044e" stroke="#d946ef"/><text x="786" y="278" text-anchor="middle" fill="#fae8ff" font-family="JetBrains Mono, monospace" font-size="12">actor-num-gpus</text>
+ <rect x="868" y="256" width="130" height="32" rx="6" fill="#4a044e" stroke="#d946ef"/><text x="933" y="278" text-anchor="middle" fill="#fae8ff" font-family="JetBrains Mono, monospace" font-size="12">rollout-num-gpus</text>
+ <rect x="1010" y="256" width="160" height="32" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1090" y="278" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="12">offload_rollout/train</text>
+ <rect x="1182" y="256" width="130" height="32" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1247" y="278" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="12">Miles Router</text>
+ <rect x="1324" y="256" width="170" height="32" rx="6" fill="#422006" stroke="#fbbf24"/><text x="1409" y="278" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="12">update_weights sync</text>
+ <rect x="1506" y="256" width="160" height="32" rx="6" fill="#431407" stroke="#fb923c"/><text x="1586" y="278" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="12">master_sglang PYTHONPATH</text>
+ <rect x="1678" y="256" width="158" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1757" y="278" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="12">sglang.multimodal_gen</text>
+ <line x1="960" y1="312" x2="960" y2="330" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Two Plane -->
+ <rect x="60" y="332" width="1800" height="200" rx="12" fill="#0f2744" stroke="#d946ef" stroke-width="2.5"/>
+ <text x="88" y="360" fill="#d946ef" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - Two-Plane Core (Miles/slime decoupled train + rollout - diffusion adaptation)</text>
+
+ <rect x="88" y="378" width="520" height="136" rx="12" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="348" y="408" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Training Plane (FSDP Actor)</text>
+ <text x="348" y="432" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">--train-backend fsdp - DiT LoRA on diffusion backbone</text>
+ <text x="348" y="450" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">training_utils: loss / parallel / data / log_utils</text>
+ <text x="348" y="468" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">GRPO advantage + per-timestep clip (diffusion-clip-range)</text>
+ <text x="348" y="486" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">micro-batch-size-sample + micro-batch-size-tstep</text>
+ <text x="348" y="504" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">async_train(rollout_id) - actor_model.update_weights()</text>
+
+ <rect x="630" y="378" width="360" height="136" rx="12" fill="#1e1b4b" stroke="#818cf8" stroke-width="2"/>
+ <text x="810" y="408" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Rollout Buffer</text>
+ <text x="810" y="432" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">diffusion_data.py Dataset - prompt jsonl</text>
+ <text x="810" y="450" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">DiT trajectory + per-step log_probs + images</text>
+ <text x="810" y="468" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">filter_hub + step_strategy_hub hooks</text>
+ <text x="810" y="486" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">n-samples-per-prompt for GRPO group baseline</text>
+ <text x="810" y="504" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Bridge between image rollout and FSDP train</text>
+
+ <rect x="1012" y="378" width="820" height="136" rx="12" fill="#4a044e" stroke="#d946ef" stroke-width="2"/>
+ <text x="1422" y="408" text-anchor="middle" fill="#fae8ff" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Rollout Plane (SGLang-D Diffusion Engine)</text>
+ <text x="1422" y="432" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="10">sglang_diffusion_rollout.generate_rollout</text>
+ <text x="1422" y="450" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="10">POST /rollout/generate - RolloutImageRequest</text>
+ <text x="1422" y="468" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="10">rollout_return_dit_trajectory + denoising log_probs</text>
+ <text x="1422" y="486" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="10">sglang_diffusion_engine + monkey_patches for alignment</text>
+ <text x="1422" y="504" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="10">rm_hub async reward: ocr / pickscore scoring</text>
+
+ <line x1="608" y1="446" x2="626" y2="446" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrow-fuchsia)"/>
+ <text x="617" y="438" text-anchor="middle" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="9">read</text>
+ <line x1="990" y1="446" x2="1008" y2="446" stroke="#d946ef" stroke-width="2" marker-end="url(#arrow-fuchsia)"/>
+ <text x="999" y="438" text-anchor="middle" fill="#d946ef" font-family="JetBrains Mono, monospace" font-size="9">write</text>
+ <line x1="348" y1="514" x2="1422" y2="514" stroke="#d946ef" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrow-fuchsia)"/>
+ <text x="960" y="528" text-anchor="middle" fill="#d946ef" font-family="JetBrains Mono, monospace" font-size="10">LoRA weight sync: actor FSDP to sglang-d DiT after each rollout epoch</text>
+
+ <line x1="960" y1="532" x2="960" y2="550" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Diffusion Stack -->
+ <rect x="60" y="552" width="1800" height="120" rx="12" fill="#0f2744" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="88" y="580" fill="#2dd4bf" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Diffusion Rollout + Training Stack (SGLang-D API + FSDP DiT + log-prob alignment)</text>
+ <rect x="88" y="594" width="340" height="64" rx="10" fill="#0c2d2d" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="258" y="618" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">SGLang-D Server</text>
+ <text x="258" y="636" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">multimodal_gen launch_server - DiT + VAE scheduler</text>
+ <text x="258" y="650" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">sglang-dit-precision fp16 - vae-slicing</text>
+ <rect x="448" y="594" width="340" height="64" rx="10" fill="#4a044e" stroke="#d946ef" stroke-width="2"/>
+ <text x="618" y="618" text-anchor="middle" fill="#fae8ff" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Rollout Sampling Params</text>
+ <text x="618" y="636" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="10">num_steps - guidance_scale - noise_level (CPS)</text>
+ <text x="618" y="650" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="10">rollout_sde_type - ignore_last steps - no CFG train</text>
+ <rect x="808" y="594" width="340" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="978" y="618" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Trajectory + Log Prob Capture</text>
+ <text x="978" y="636" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">rollout_return_denoising_env + dit_trajectory</text>
+ <text x="978" y="650" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">RolloutImageResponseParserActor on node</text>
+ <rect x="1168" y="594" width="340" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="1338" y="618" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">FSDP Training Backend</text>
+ <text x="1338" y="636" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">LoRA rank/alpha on DiT - diffusion-forward-dtype</text>
+ <text x="1338" y="650" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">gradient-checkpointing - diffusion-kl-beta</text>
+ <rect x="1528" y="594" width="300" height="64" rx="10" fill="#134e4a" stroke="#5eead4" stroke-width="2"/>
+ <text x="1678" y="618" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Monkey Patches</text>
+ <text x="1678" y="636" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">apply_sgld_monkey_patches in scheduler child</text>
+ <text x="1678" y="650" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Train/rollout log-prob alignment for GRPO</text>
+ <line x1="960" y1="672" x2="960" y2="690" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L5 Algorithms -->
+ <rect x="60" y="692" width="1800" height="72" rx="12" fill="#0f2744" stroke="#fbbf24" stroke-width="2"/>
+ <text x="88" y="720" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - FlowGRPO Algorithms + Vendored flow_grpo/ (online RL for flow matching models)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#fef3c7">
+  <rect x="88" y="732" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="128" y="749" text-anchor="middle">FlowGRPO</text>
+  <rect x="178" y="732" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="223" y="749" text-anchor="middle">FlowGRPO-Fast</text>
+  <rect x="278" y="732" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="313" y="749" text-anchor="middle">MixGRPO</text>
+  <rect x="358" y="732" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="403" y="749" text-anchor="middle">GRPO-Guard</text>
+  <rect x="458" y="732" width="40" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="478" y="749" text-anchor="middle">CPS</text>
+  <rect x="508" y="732" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="538" y="749" text-anchor="middle">no-CFG</text>
+  <rect x="578" y="732" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="618" y="749" text-anchor="middle">window train</text>
+  <rect x="668" y="732" width="90" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="713" y="749" text-anchor="middle">importance ratio</text>
+  <rect x="768" y="732" width="70" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="803" y="749" text-anchor="middle">over-opt fix</text>
+  <rect x="848" y="732" width="80" height="24" rx="5" fill="#4a044e" stroke="#d946ef"/><text x="888" y="749" text-anchor="middle">arXiv 2505</text>
+  <rect x="938" y="732" width="80" height="24" rx="5" fill="#4a044e" stroke="#d946ef"/><text x="978" y="749" text-anchor="middle">arXiv 2510</text>
+  <rect x="1028" y="732" width="60" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1058" y="749" text-anchor="middle">SD3 OCR</text>
+  <rect x="1098" y="732" width="80" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1138" y="749" text-anchor="middle">PickScore</text>
+  <rect x="1188" y="732" width="60" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1218" y="749" text-anchor="middle">GenEval</text>
+  <rect x="1258" y="732" width="60" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="1288" y="749" text-anchor="middle">T2I edit</text>
+  <rect x="1328" y="732" width="80" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="1368" y="749" text-anchor="middle">flowgrpo_ocr</text>
+  <rect x="1418" y="732" width="90" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="1463" y="749" text-anchor="middle">HF datasets</text>
+  <rect x="1518" y="732" width="80" height="24" rx="5" fill="#1e1b4b" stroke="#818cf8"/><text x="1558" y="749" text-anchor="middle">wandb imgs</text>
+  <rect x="1608" y="732" width="100" height="24" rx="5" fill="#1e1b4b" stroke="#818cf8"/><text x="1658" y="749" text-anchor="middle">2-4 GPU scripts</text>
+  <rect x="1718" y="732" width="130" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1783" y="749" text-anchor="middle">non-AR rewards</text>
+ </g>
+
+ <!-- L6 Rewards -->
+ <rect x="60" y="776" width="1800" height="56" rx="12" fill="#0f2744" stroke="#fb923c" stroke-width="2"/>
+ <text x="88" y="804" fill="#fb923c" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Reward Hub + Data (image-level scoring - not token logprob rewards)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ffedd5">
+  <rect x="88" y="812" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="113" y="829" text-anchor="middle">rm_hub</text>
+  <rect x="148" y="812" width="40" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="168" y="829" text-anchor="middle">ocr</text>
+  <rect x="198" y="812" width="70" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="233" y="829" text-anchor="middle">pickscore</text>
+  <rect x="278" y="812" width="90" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="323" y="829" text-anchor="middle">diffusion-reward</text>
+  <rect x="378" y="812" width="80" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="418" y="829" text-anchor="middle">batched_async</text>
+  <rect x="468" y="812" width="70" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="503" y="829" text-anchor="middle">prompt-data</text>
+  <rect x="548" y="812" width="60" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="578" y="829" text-anchor="middle">jsonl</text>
+  <rect x="618" y="812" width="80" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="658" y="829" text-anchor="middle">filter_hub</text>
+  <rect x="708" y="812" width="100" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="758" y="829" text-anchor="middle">step_strategy</text>
+  <rect x="818" y="812" width="80" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="858" y="829" text-anchor="middle">Diffusers</text>
+  <rect x="908" y="812" width="50" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="933" y="829" text-anchor="middle">DiT</text>
+  <rect x="968" y="812" width="40" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="988" y="829" text-anchor="middle">VAE</text>
+  <rect x="1018" y="812" width="50" height="24" rx="5" fill="#4a044e" stroke="#d946ef"/><text x="1043" y="829" text-anchor="middle">flow match</text>
+  <rect x="1078" y="812" width="60" height="24" rx="5" fill="#1e1b4b" stroke="#818cf8"/><text x="1108" y="829" text-anchor="middle">Miles</text>
+  <rect x="1148" y="812" width="50" height="24" rx="5" fill="#1e1b4b" stroke="#818cf8"/><text x="1173" y="829" text-anchor="middle">slime</text>
+  <rect x="1208" y="812" width="60" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="1238" y="829" text-anchor="middle">RadixArk</text>
+  <rect x="1278" y="812" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1303" y="829" text-anchor="middle">Docker</text>
+  <rect x="1338" y="812" width="60" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1368" y="829" text-anchor="middle">CUDA</text>
+  <rect x="1408" y="812" width="70" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1443" y="829" text-anchor="middle">globalize</text>
+  <rect x="1488" y="812" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1513" y="829" text-anchor="middle">eval</text>
+  <rect x="1548" y="812" width="80" height="24" rx="5" fill="#4a044e" stroke="#d946ef"/><text x="1588" y="829" text-anchor="middle">experimental</text>
+  <rect x="1638" y="812" width="90" height="24" rx="5" fill="#4a044e" stroke="#d946ef"/><text x="1683" y="829" text-anchor="middle">co-evolving</text>
+  <rect x="1738" y="812" width="110" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="1793" y="829" text-anchor="middle">diffusion_protocol</text>
+ </g>
+
+ <!-- DETAIL FlowGRPO Loop -->
+ <rect x="60" y="848" width="880" height="340" rx="14" fill="#0c1524" stroke="#d946ef" stroke-width="2.5"/>
+ <text x="88" y="880" fill="#d946ef" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">FlowGRPO Training Loop (train_diffusion.py main loop)</text>
+ <text x="88" y="902" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="11">Non-autoregressive RL: per-denoising-step log_probs + image-level reward signals</text>
+
+ <rect x="88" y="918" width="820" height="36" rx="6" fill="#4a044e" stroke="#d946ef"/>
+ <text x="498" y="942" text-anchor="middle" fill="#fae8ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1: rollout_manager.generate - SGLang-D POST /rollout/generate with rollout=True</text>
+ <line x1="498" y1="954" x2="498" y2="966" stroke="#d946ef" stroke-width="1.5" marker-end="url(#arrow-fuchsia)"/>
+ <rect x="88" y="968" width="820" height="36" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="498" y="992" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2: rm_hub batched_async_rm - OCR/PickScore reward on generated images</text>
+ <line x1="498" y1="1004" x2="498" y2="1016" stroke="#fb923c" stroke-width="1.5"/>
+ <rect x="88" y="1018" width="820" height="36" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="498" y="1042" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3: Store DiT trajectory + per-timestep log_probs in rollout buffer (GRPO groups)</text>
+ <line x1="498" y1="1054" x2="498" y2="1066" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow-fuchsia)"/>
+ <rect x="88" y="1068" width="820" height="36" rx="6" fill="#422006" stroke="#fbbf24"/>
+ <text x="498" y="1092" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4: actor_model.async_train - FSDP LoRA GRPO update with diffusion-clip-range + kl-beta</text>
+ <line x1="498" y1="1104" x2="498" y2="1116" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+ <rect x="88" y="1118" width="820" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="498" y="1142" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 5: actor_model.update_weights - sync LoRA to sglang-d - eval/save checkpoint - repeat</text>
+
+ <text x="88" y="1174" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Example: SD3.5 OCR GRPO - 2 GPU colocate - 10 train steps / 40 eval steps - LoRA r=32</text>
+ <text x="88" y="1190" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">GRPO-Guard fixes importance-ratio bias at low-noise steps to prevent over-optimization</text>
+
+ <!-- DETAIL Position -->
+ <rect x="960" y="848" width="900" height="340" rx="14" fill="#0c1224" stroke="#d946ef" stroke-width="2.5"/>
+ <text x="988" y="880" fill="#d946ef" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Design Position: Miles Diffusion vs LLM Miles vs Standalone flow_grpo</text>
+ <text x="988" y="902" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="11">Enterprise two-plane RL shell adapted for flow-matching image generation post-training</text>
+
+ <text x="988" y="926" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stack Comparison</text>
+ <rect x="988" y="936" width="200" height="68" rx="6" fill="#4a044e" stroke="#d946ef"/>
+ <text x="1088" y="960" text-anchor="middle" fill="#fae8ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">miles_diffusion</text>
+ <text x="1088" y="978" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="9">Miles Ray + SGLang-D + FSDP</text>
+ <text x="1088" y="994" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="9">Production rollout/train decouple</text>
+ <rect x="1200" y="936" width="200" height="68" rx="6" fill="#1e1b4b" stroke="#818cf8"/>
+ <text x="1300" y="960" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Miles (LLM)</text>
+ <text x="1300" y="978" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">SGLang text + Megatron/FSDP</text>
+ <text x="1300" y="994" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">MoE RL + R3 + FP8 pipeline</text>
+ <rect x="1412" y="936" width="200" height="68" rx="6" fill="#422006" stroke="#fbbf24"/>
+ <text x="1512" y="960" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">flow_grpo (upstream)</text>
+ <text x="1512" y="978" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">Accelerate single-process research</text>
+ <text x="1512" y="994" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">Algorithm reference + configs</text>
+ <rect x="1624" y="936" width="224" height="68" rx="6" fill="#500724" stroke="#ec4899"/>
+ <text x="1736" y="960" text-anchor="middle" fill="#fce7f3" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">verl-omni</text>
+ <text x="1736" y="978" text-anchor="middle" fill="#fbcfe8" font-family="JetBrains Mono, monospace" font-size="9">HybridFlow + vLLM-Omni rollout</text>
+ <text x="1736" y="994" text-anchor="middle" fill="#fbcfe8" font-family="JetBrains Mono, monospace" font-size="9">DiffusersFSDPEngine path</text>
+
+ <text x="988" y="1022" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Key Diffusion Adaptations</text>
+ <rect x="988" y="1032" width="130" height="48" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="1053" y="1054" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">SGLang-D API</text>
+ <text x="1053" y="1070" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">/rollout/generate native</text>
+ <rect x="1130" y="1032" width="130" height="48" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1195" y="1054" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Step log_probs</text>
+ <text x="1195" y="1070" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">Not token-level RL</text>
+ <rect x="1272" y="1032" width="130" height="48" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="1337" y="1054" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Image rewards</text>
+ <text x="1337" y="1070" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">OCR / PickScore / GenEval</text>
+ <rect x="1414" y="1032" width="130" height="48" rx="6" fill="#422006" stroke="#fbbf24"/>
+ <text x="1479" y="1054" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">DiT LoRA RL</text>
+ <text x="1479" y="1070" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">FSDP not Megatron MoE</text>
+ <rect x="1556" y="1032" width="130" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1621" y="1054" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Monkey patch</text>
+ <text x="1621" y="1070" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Rollout/train alignment</text>
+ <rect x="1698" y="1032" width="150" height="48" rx="6" fill="#4a044e" stroke="#d946ef"/>
+ <text x="1773" y="1054" text-anchor="middle" fill="#fae8ff" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Inherited Miles</text>
+ <text x="1773" y="1070" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="9">Ray + buffer + router shell</text>
+
+ <text x="988" y="1100" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Repo Layout</text>
+ <rect x="988" y="1110" width="860" height="48" rx="6" fill="#1a1208" stroke="#d946ef"/>
+ <text x="1418" y="1134" text-anchor="middle" fill="#fae8ff" font-family="JetBrains Mono, monospace" font-size="12">train_diffusion.py - miles/rollout/sglang_diffusion_rollout.py - flow_grpo/ - scripts/run-diffusion-*.sh</text>
+ <text x="1418" y="1150" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="10">Roadmap: Diffusion LLM RL + Omni RL - co-evolving with radixark/miles</text>
+
+ <!-- footer bar -->
+ <rect x="60" y="1208" width="1800" height="72" rx="12" fill="#1a1208" stroke="#d946ef" stroke-width="2"/>
+ <text x="88" y="1236" fill="#d946ef" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">Design Position (Miles enterprise RL shell + FlowGRPO algorithms + SGLang-D native diffusion rollout)</text>
+ <text x="960" y="1262" text-anchor="middle" fill="#f0abfc" font-family="JetBrains Mono, monospace" font-size="13">Decouple image rollout from FSDP train - swap rewards/algorithms via --*-path without touching engine code</text>
+
+ <!-- footers -->
+ <rect x="60" y="1296" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1316" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Init: Ray PG - rollout_manager (sglang-d) - FSDP actor - update_weights - load flowgrpo_ocr prompts</text>
+ <text x="960" y="1334" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Loop: generate images + log_probs - OCR/PickScore reward - GRPO train LoRA - weight sync - wandb log - repeat</text>
+
+ <text x="60" y="1380" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: github.com/radixark/miles_diffusion - train_diffusion.py - sglang_diffusion_rollout.py - flow_grpo README - Miles/slime arch</text>
+</svg>

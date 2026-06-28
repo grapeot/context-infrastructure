@@ -1,0 +1,49 @@
+{
+  "$schema": "../schema.json",
+  "name": "default",
+  "version": 1,
+  "default": false,
+  "source": { "type": "built-in" },
+  "confidence": "high",
+  "palette": {
+    "primary":   { "fillColor": "#dae8fc", "strokeColor": "#6c8ebf" },
+    "success":   { "fillColor": "#d5e8d4", "strokeColor": "#82b366" },
+    "warning":   { "fillColor": "#fff2cc", "strokeColor": "#d6b656" },
+    "accent":    { "fillColor": "#ffe6cc", "strokeColor": "#d79b00" },
+    "danger":    { "fillColor": "#f8cecc", "strokeColor": "#b85450" },
+    "neutral":   { "fillColor": "#f5f5f5", "strokeColor": "#666666" },
+    "secondary": { "fillColor": "#e1d5e7", "strokeColor": "#9673a6" }
+  },
+  "roles": {
+    "service":  "primary",
+    "database": "success",
+    "queue":    "warning",
+    "gateway":  "accent",
+    "error":    "danger",
+    "external": "neutral",
+    "security": "secondary"
+  },
+  "shapes": {
+    "service":   "rounded=1",
+    "database":  "shape=cylinder3",
+    "queue":     "rounded=1",
+    "decision":  "rhombus",
+    "external":  "rounded=1;dashed=1",
+    "container": "swimlane;startSize=30"
+  },
+  "font": {
+    "fontFamily": "Helvetica",
+    "fontSize": 12,
+    "titleFontSize": 14,
+    "titleBold": true
+  },
+  "edges": {
+    "style": "edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1",
+    "arrow": "endArrow=classic;endFill=1",
+    "dashedFor": []
+  },
+  "extras": {
+    "sketch": false,
+    "globalStrokeWidth": 1
+  }
+}

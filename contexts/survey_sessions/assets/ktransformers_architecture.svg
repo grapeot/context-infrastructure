@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-violet" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#818cf8"/>
+  </marker>
+  <marker id="arrow-teal" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#14b8a6"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">KTransformers Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">CPU-GPU Hybrid MoE Inference + SFT - Expert Offloading - SOSP 2025 - github.com/kvcache-ai/ktransformers</text>
+
+ <!-- L1 Applications -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#6366f1" stroke-width="2"/>
+ <text x="88" y="124" fill="#818cf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Applications + Deployment (local MoE inference and fine-tuning on resource-constrained hardware)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="80" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="128" y="162" text-anchor="middle">DeepSeek-V3</text>
+  <rect x="180" y="136" width="70" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="215" y="162" text-anchor="middle">DS-V2/R1</text>
+  <rect x="262" y="136" width="70" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="297" y="162" text-anchor="middle">Qwen MoE</text>
+  <rect x="344" y="136" width="60" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="374" y="162" text-anchor="middle">Mixtral</text>
+  <rect x="416" y="136" width="50" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="441" y="162" text-anchor="middle">Kimi</text>
+  <rect x="478" y="136" width="70" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="513" y="162" text-anchor="middle">MiniMax</text>
+  <rect x="560" y="136" width="60" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="590" y="162" text-anchor="middle">SGLang</text>
+  <rect x="632" y="136" width="70" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="667" y="162" text-anchor="middle">SGLang-KT</text>
+  <rect x="714" y="136" width="80" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="754" y="162" text-anchor="middle">OpenAI API</text>
+  <rect x="806" y="136" width="70" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="841" y="162" text-anchor="middle">KT-CLI</text>
+  <rect x="888" y="136" width="80" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="928" y="162" text-anchor="middle">LLaMA-Factory</text>
+  <rect x="980" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1005" y="162" text-anchor="middle">671B</text>
+  <rect x="1042" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1077" y="162" text-anchor="middle">1x GPU</text>
+  <rect x="1124" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1154" y="162" text-anchor="middle">21-11G</text>
+  <rect x="1196" y="136" width="60" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1226" y="162" text-anchor="middle">SOSP</text>
+  <rect x="1268" y="136" width="40" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1288" y="162" text-anchor="middle">25</text>
+  <rect x="1320" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1350" y="162" text-anchor="middle">low-con</text>
+  <rect x="1392" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1422" y="162" text-anchor="middle">local</text>
+  <rect x="1464" y="136" width="60" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="1494" y="162" text-anchor="middle">LoRA</text>
+  <rect x="1536" y="136" width="40" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="1556" y="162" text-anchor="middle">SFT</text>
+  <rect x="1588" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1623" y="162" text-anchor="middle">6-12x SFT</text>
+  <rect x="1670" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1700" y="162" text-anchor="middle">pip kt</text>
+  <rect x="1742" y="136" width="106" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1795" y="162" text-anchor="middle">kvcache-ai</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Integration -->
+ <rect x="60" y="216" width="1800" height="120" rx="12" fill="#0f2744" stroke="#6366f1" stroke-width="2"/>
+ <text x="88" y="244" fill="#818cf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Integration Layer (HuggingFace injection + SGLang server + YAML-driven module swap)</text>
+ <rect x="88" y="258" width="340" height="64" rx="10" fill="#1e1b4b" stroke="#6366f1" stroke-width="2"/>
+ <text x="258" y="282" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">YAML Injection Framework</text>
+ <text x="258" y="300" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Replace HF PyTorch modules via class/name match</text>
+ <text x="258" y="314" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Drop-in - no end-user API changes - pybind11 C++ ops</text>
+ <rect x="448" y="258" width="340" height="64" rx="10" fill="#1e1b4b" stroke="#6366f1" stroke-width="2"/>
+ <text x="618" y="282" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">HuggingFace Transformers Base</text>
+ <text x="618" y="300" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Standard model code + optimized operator injection</text>
+ <text x="618" y="314" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">11K LOC C++ + 2K LOC Python integration</text>
+ <rect x="808" y="258" width="340" height="64" rx="10" fill="#0c2d2d" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="978" y="282" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">SGLang-KT Production Path</text>
+ <text x="978" y="300" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">kt-kernel backend - OpenAI-compatible API server</text>
+ <text x="978" y="314" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Registry-driven or manual launch - KT server args</text>
+ <rect x="1168" y="258" width="340" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1338" y="282" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">kt-kernel Package (PyPI)</text>
+ <text x="1338" y="300" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">pip install kt-kernel / kt-kernel-cuda</text>
+ <text x="1338" y="314" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Auto CPU variant detect - prebuilt wheels no compile</text>
+ <rect x="1528" y="258" width="300" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="1678" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Dual Capability Tree</text>
+ <text x="1678" y="300" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Inference path + LoRA SFT fine-tuning path</text>
+ <text x="1678" y="314" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">archive/ holds legacy integrated framework</text>
+ <line x1="960" y1="336" x2="960" y2="354" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Expert Placement -->
+ <rect x="60" y="356" width="1800" height="88" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2"/>
+ <text x="88" y="384" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - Heterogeneous Expert Placement (computation offloading - not weight PCIe transfer)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0f2fe">
+  <rect x="88" y="396" width="90" height="32" rx="6" fill="#422006" stroke="#fbbf24"/><text x="133" y="418" text-anchor="middle">GPU shared</text>
+  <rect x="190" y="396" width="80" height="32" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="230" y="418" text-anchor="middle">CPU routed</text>
+  <rect x="282" y="396" width="90" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="327" y="418" text-anchor="middle">kt-num-gpu</text>
+  <rect x="384" y="396" width="80" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="424" y="418" text-anchor="middle">hot/cold</text>
+  <rect x="476" y="396" width="80" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="516" y="418" text-anchor="middle">uniform</text>
+  <rect x="568" y="396" width="80" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="608" y="418" text-anchor="middle">frequency</text>
+  <rect x="660" y="396" width="80" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="700" y="418" text-anchor="middle">attention</text>
+  <rect x="752" y="396" width="50" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="777" y="418" text-anchor="middle">MLP</text>
+  <rect x="814" y="396" width="50" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="839" y="418" text-anchor="middle">norm</text>
+  <rect x="876" y="396" width="60" height="32" rx="6" fill="#422006" stroke="#fbbf24"/><text x="906" y="418" text-anchor="middle">gate/up</text>
+  <rect x="948" y="396" width="50" height="32" rx="6" fill="#422006" stroke="#fbbf24"/><text x="973" y="418" text-anchor="middle">down</text>
+  <rect x="1010" y="396" width="80" height="32" rx="6" fill="#431407" stroke="#fb923c"/><text x="1050" y="418" text-anchor="middle">DRAM pool</text>
+  <rect x="1102" y="396" width="60" height="32" rx="6" fill="#431407" stroke="#fb923c"/><text x="1132" y="418" text-anchor="middle">VRAM</text>
+  <rect x="1174" y="396" width="70" height="32" rx="6" fill="#431407" stroke="#fb923c"/><text x="1209" y="418" text-anchor="middle">PCIe 32G</text>
+  <rect x="1256" y="396" width="80" height="32" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1296" y="418" text-anchor="middle">440GB/s</text>
+  <rect x="1348" y="396" width="80" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1388" y="418" text-anchor="middle">dynamic upd</text>
+  <rect x="1440" y="396" width="80" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1480" y="418" text-anchor="middle">runtime prof</text>
+  <rect x="1532" y="396" width="90" height="32" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="1577" y="418" text-anchor="middle">Fiddler-style</text>
+  <rect x="1634" y="396" width="80" height="32" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="1674" y="418" text-anchor="middle">ARI split</text>
+  <rect x="1726" y="396" width="122" height="32" rx="6" fill="#431407" stroke="#fb923c"/><text x="1787" y="418" text-anchor="middle">weights stay in CPU RAM</text>
+ </g>
+ <line x1="960" y1="444" x2="960" y2="462" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 CPU kt-kernel -->
+ <rect x="60" y="464" width="1800" height="200" rx="12" fill="#0f2744" stroke="#14b8a6" stroke-width="2.5"/>
+ <text x="88" y="492" fill="#14b8a6" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - kt-kernel CPU Stack (AMX/AVX MoE kernels - fused ops - NUMA-aware execution)</text>
+
+ <rect x="88" y="508" width="420" height="136" rx="12" fill="#0c2d2d" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="298" y="536" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Multi-Backend CPU Kernels</text>
+ <text x="298" y="560" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">AMXINT4/AMXINT8 - Intel AMX tile registers</text>
+ <text x="298" y="578" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">AVX512 native: FP8/BF16/RAWINT4 (AMXINT4)</text>
+ <text x="298" y="596" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">LLAMAFILE: AVX2/AVX512 universal GGUF backend</text>
+ <text x="298" y="614" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">AMD BLIS: INT8 prefill and decode on AMD CPUs</text>
+ <text x="298" y="632" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Auto-detect 6 CPU variants at runtime from wheel</text>
+
+ <rect x="528" y="508" width="420" height="136" rx="12" fill="#134e4a" stroke="#5eead4" stroke-width="2"/>
+ <text x="738" y="536" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">AMX Tiling + Cache Optimization</text>
+ <text x="738" y="560" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Tiling-aware memory layout for 16x64-byte tiles</text>
+ <text x="738" y="578" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">L3/L2/L1 cache hierarchy aware GEMM pipeline</text>
+ <text x="738" y="596" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Dynamic ARI: AVX-512 replaces AMX at low batch</text>
+ <text x="738" y="614" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Up to 5.4 TFLOPS vs 7% PyTorch oneDNN AMX peak</text>
+ <text x="738" y="632" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">1.69-4.30x microbench vs PyTorch AMX/AVX</text>
+
+ <rect x="968" y="508" width="420" height="136" rx="12" fill="#0c2d2d" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="1178" y="536" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Fused MoE + Dynamic Scheduling</text>
+ <text x="1178" y="560" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Fuse Gate/Up/Down projections across experts</text>
+ <text x="1178" y="578" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Lock-free task queue - co-schedule same expert</text>
+ <text x="1178" y="596" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Dynamic task split for prefill load imbalance</text>
+ <text x="1178" y="614" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Up to 1.83x prefill from dynamic scheduling</text>
+ <text x="1178" y="632" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">kt-threadpool-count = NUMA node count</text>
+
+ <rect x="1408" y="508" width="420" height="136" rx="12" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1618" y="536" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">NUMA-Aware Tensor Parallelism</text>
+ <text x="1618" y="560" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Partition expert weights column/row across sockets</text>
+ <text x="1618" y="578" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Local compute + lightweight reduce-scatter</text>
+ <text x="1618" y="596" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Avoid remote memory - balance dual-socket work</text>
+ <text x="1618" y="614" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Up to 1.63x decode vs NUMA-oblivious baseline</text>
+ <text x="1618" y="632" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">vs Expert Parallelism: no idle sockets</text>
+
+ <line x1="960" y1="644" x2="960" y2="662" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L5 GPU + Async -->
+ <rect x="60" y="664" width="1800" height="120" rx="12" fill="#0f2744" stroke="#6366f1" stroke-width="2"/>
+ <text x="88" y="692" fill="#818cf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - GPU Stack + Async CPU-GPU Scheduler (CUDA Graph - overlap - Expert Deferral)</text>
+ <rect x="88" y="706" width="340" height="64" rx="10" fill="#1e1b4b" stroke="#6366f1" stroke-width="2"/>
+ <text x="258" y="730" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">GPU Optimized Modules</text>
+ <text x="258" y="748" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">FlashInferMLA for attention on GPU</text>
+ <text x="258" y="762" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">MarlinLinear INT4 for dense layers on CUDA</text>
+ <rect x="448" y="706" width="340" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="618" y="730" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Single CUDA Graph Decode</text>
+ <text x="618" y="748" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Entire decode path in one graph via CUDA spin</text>
+ <text x="618" y="762" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">cudaLaunchHostFunc hides submit/sync - 1.23x</text>
+ <rect x="808" y="706" width="340" height="64" rx="10" fill="#0c2d2d" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="978" y="730" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Async CPU-GPU Task Scheduler</text>
+ <text x="978" y="748" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">GPU gating then queue CPU routed-expert tasks</text>
+ <text x="978" y="762" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Parallel shared-expert GPU + routed-expert CPU</text>
+ <rect x="1168" y="706" width="340" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="1338" y="730" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Expert Deferral (decode only)</text>
+ <text x="1338" y="748" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Defer low-score routed experts to layer k+2</text>
+ <text x="1338" y="762" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">CPU 75-100% util - up to 1.45x - 0.5% acc drop</text>
+ <rect x="1528" y="706" width="300" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1678" y="730" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Layerwise GPU Prefill</text>
+ <text x="1678" y="748" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Long ctx: shift bottleneck CPU to GPU path</text>
+ <text x="1678" y="762" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Threshold 2048 tok - PCIe weight stream per layer</text>
+ <line x1="960" y1="784" x2="960" y2="802" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L6 Quant + SFT -->
+ <rect x="60" y="804" width="1800" height="120" rx="12" fill="#0f2744" stroke="#a78bfa" stroke-width="2"/>
+ <text x="88" y="832" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Quantization + Fine-Tuning Path (precision matrix - hybrid LoRA SFT)</text>
+ <rect x="88" y="846" width="340" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="258" y="870" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Precision Backends</text>
+ <text x="258" y="888" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">BF16/FP8 GPU - AMXINT4/INT8 CPU - MXFP4</text>
+ <text x="258" y="902" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">GPTQ GPU - RAWINT4/LLAMAFILE GGUF CPU</text>
+ <rect x="448" y="846" width="340" height="64" rx="10" fill="#1e1b4b" stroke="#6366f1" stroke-width="2"/>
+ <text x="618" y="870" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Weight Conversion Pipeline</text>
+ <text x="618" y="888" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">kt-cli / AMX weight convert for CPU experts</text>
+ <text x="618" y="902" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">kt-weight-path + kt-cpuinfer thread config</text>
+ <rect x="808" y="846" width="340" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="978" y="870" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Hybrid LoRA SFT</text>
+ <text x="978" y="888" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Fine-tune DeepSeek-V3/R1 on limited GPU VRAM</text>
+ <text x="978" y="902" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">6-12x vs ZeRO-Offload - half CPU memory</text>
+ <rect x="1168" y="846" width="340" height="64" rx="10" fill="#0c2d2d" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="1338" y="870" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">KT Server Tuning Knobs</text>
+ <text x="1338" y="888" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">kt-max-deferred-experts-per-token</text>
+ <text x="1338" y="902" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">kt-expert-placement-strategy - kt-method</text>
+ <rect x="1528" y="846" width="300" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1678" y="870" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">LLaMA-Factory Bridge</text>
+ <text x="1678" y="888" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Seamless integration for popular fine-tune stack</text>
+ <text x="1678" y="902" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Multi-backend INT8/INT4 hybrid training</text>
+ <line x1="960" y1="924" x2="960" y2="942" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L7 Hardware -->
+ <rect x="60" y="944" width="1800" height="56" rx="12" fill="#0f2744" stroke="#22d3ee" stroke-width="2"/>
+ <text x="88" y="972" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L7 - Target Hardware (dual-socket CPU + single consumer/server GPU - local deployment)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0f2fe">
+  <rect x="88" y="980" width="60" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="118" y="997" text-anchor="middle">Xeon</text>
+  <rect x="158" y="980" width="40" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="178" y="997" text-anchor="middle">AMX</text>
+  <rect x="208" y="980" width="50" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="233" y="997" text-anchor="middle">AVX512</text>
+  <rect x="268" y="980" width="50" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="293" y="997" text-anchor="middle">DDR5</text>
+  <rect x="328" y="980" width="50" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="353" y="997" text-anchor="middle">NUMA</text>
+  <rect x="388" y="980" width="50" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="413" y="997" text-anchor="middle">A100</text>
+  <rect x="448" y="980" width="50" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="473" y="997" text-anchor="middle">RTX4080</text>
+  <rect x="508" y="980" width="50" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="533" y="997" text-anchor="middle">sm80+</text>
+  <rect x="568" y="980" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="593" y="997" text-anchor="middle">PCIe4</text>
+  <rect x="628" y="980" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="653" y="997" text-anchor="middle">440GB/s</text>
+  <rect x="688" y="980" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="713" y="997" text-anchor="middle">220GB/s</text>
+  <rect x="748" y="980" width="40" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="768" y="997" text-anchor="middle">AMD</text>
+  <rect x="798" y="980" width="40" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="818" y="997" text-anchor="middle">BLIS</text>
+  <rect x="848" y="980" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="873" y="997" text-anchor="middle">4.6-19x</text>
+  <rect x="908" y="980" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="933" y="997" text-anchor="middle">1.2-4x</text>
+  <rect x="968" y="980" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="993" y="997" text-anchor="middle">5.87 t/s</text>
+  <rect x="1028" y="980" width="60" height="24" rx="5" fill="#1e1b4b" stroke="#818cf8"/><text x="1058" y="997" text-anchor="middle">1TB RAM</text>
+  <rect x="1098" y="980" width="50" height="24" rx="5" fill="#1e1b4b" stroke="#818cf8"/><text x="1123" y="997" text-anchor="middle">16GB VR</text>
+  <rect x="1158" y="980" width="60" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="1188" y="997" text-anchor="middle">ARM SME</text>
+  <rect x="1228" y="980" width="50" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1253" y="997" text-anchor="middle">hwloc</text>
+  <rect x="1288" y="980" width="60" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1318" y="997" text-anchor="middle">dual-sk</text>
+  <rect x="1358" y="980" width="70" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1393" y="997" text-anchor="middle">security</text>
+  <rect x="1438" y="980" width="60" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1468" y="997" text-anchor="middle">privacy</text>
+  <rect x="1508" y="980" width="80" height="24" rx="5" fill="#1e1b4b" stroke="#818cf8"/><text x="1548" y="997" text-anchor="middle">inspect wt</text>
+  <rect x="1598" y="980" width="60" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1628" y="997" text-anchor="middle">Linux</text>
+  <rect x="1668" y="980" width="50" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1693" y="997" text-anchor="middle">Py3.10</text>
+  <rect x="1728" y="980" width="120" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="1788" y="997" text-anchor="middle">manylinux wheel</text>
+ </g>
+
+ <!-- DETAIL Pipeline -->
+ <rect x="60" y="1016" width="880" height="340" rx="14" fill="#0c1524" stroke="#6366f1" stroke-width="2.5"/>
+ <text x="88" y="1048" fill="#818cf8" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">MoE Layer Execution Pipeline (Prefill vs Decode)</text>
+ <text x="88" y="1070" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="11">Attention on GPU - routed experts on CPU - shared experts on GPU - async overlap</text>
+
+ <rect x="88" y="1086" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="1110" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Prefill: high ARI - AMX kernels + fused MoE + dynamic task queue - layerwise GPU if long ctx</text>
+ <line x1="498" y1="1122" x2="498" y2="1134" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow)"/>
+ <rect x="88" y="1136" width="820" height="36" rx="6" fill="#422006" stroke="#fbbf24"/>
+ <text x="498" y="1160" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Decode Step 1: GPU gate/select experts - launch shared-expert CUDA kernels</text>
+ <line x1="498" y1="1172" x2="498" y2="1184" stroke="#fbbf24" stroke-width="1.5"/>
+ <rect x="88" y="1186" width="820" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="498" y="1210" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Decode Step 2: Queue CPU routed-expert tasks - cudaLaunchHostFunc submit/sync in one graph</text>
+ <line x1="498" y1="1222" x2="498" y2="1234" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+ <rect x="88" y="1236" width="820" height="36" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="498" y="1260" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Decode Step 3: Expert Deferral overlap - immediate to L+1 - deferred to L+2 - merge activations</text>
+
+ <text x="88" y="1298" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Fiddler baseline: 7000+ CUDA kernels/token - KT: single graph + hostfunc callbacks</text>
+ <text x="88" y="1314" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Shared experts ~18% GPU time in DS-V3 - deferral breaks rigid Attn-MoE dependency chain</text>
+ <text x="88" y="1344" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">YAML example: FlashInferMLA attention + MarlinLinear + FusedMoE AMX on CPU experts</text>
+
+ <!-- DETAIL Position -->
+ <rect x="960" y="1016" width="900" height="340" rx="14" fill="#0c1224" stroke="#6366f1" stroke-width="2.5"/>
+ <text x="988" y="1048" fill="#818cf8" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Design Position: Local CPU/GPU Hybrid MoE vs Cloud EP</text>
+ <text x="988" y="1070" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="11">Computation offloading to CPU DRAM - not PCIe weight streaming - low concurrency sweet spot</text>
+
+ <text x="988" y="1094" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Spectrum Comparison</text>
+ <rect x="988" y="1104" width="200" height="68" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="1088" y="1128" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Fiddler / Llama.cpp</text>
+ <text x="1088" y="1146" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Expert offload - generic SIMD/oneDNN</text>
+ <text x="1088" y="1162" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">High sync overhead - no deferral</text>
+ <rect x="1200" y="1104" width="200" height="68" rx="6" fill="#0c2d2d" stroke="#14b8a6"/>
+ <text x="1300" y="1128" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Weight Offload</text>
+ <text x="1300" y="1146" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">PCIe transfer experts to GPU</text>
+ <text x="1300" y="1162" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Bottleneck at 32 GB/s PCIe 4.0</text>
+ <rect x="1412" y="1104" width="200" height="68" rx="6" fill="#241a3d" stroke="#6366f1"/>
+ <text x="1512" y="1128" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Cloud EP (DeepSeek)</text>
+ <text x="1512" y="1146" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">Massive concurrency - all experts hot</text>
+ <text x="1512" y="1162" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">Multi-node GPU clusters</text>
+ <rect x="1624" y="1104" width="224" height="68" rx="6" fill="#1e1b4b" stroke="#818cf8"/>
+ <text x="1736" y="1128" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">KTransformers</text>
+ <text x="1736" y="1146" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">AMX CPU compute + async GPU overlap</text>
+ <text x="1736" y="1162" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">1 GPU + TB DRAM - trillion-param local</text>
+
+ <text x="988" y="1190" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Key Architectural Decisions</text>
+ <rect x="988" y="1200" width="130" height="48" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="1053" y="1222" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Compute offload</text>
+ <text x="1053" y="1238" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Experts run on CPU RAM</text>
+ <rect x="1130" y="1200" width="130" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1195" y="1222" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">AMX kernels</text>
+ <text x="1195" y="1238" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Cache-aware tiling layout</text>
+ <rect x="1272" y="1200" width="130" height="48" rx="6" fill="#422006" stroke="#fbbf24"/>
+ <text x="1337" y="1222" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">1 CUDA Graph</text>
+ <text x="1337" y="1238" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">Whole decode in one capture</text>
+ <rect x="1414" y="1200" width="130" height="48" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="1479" y="1222" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Expert Deferral</text>
+ <text x="1479" y="1238" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Break Attn-MoE deps</text>
+ <rect x="1556" y="1200" width="130" height="48" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1621" y="1222" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">YAML inject</text>
+ <text x="1621" y="1238" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">Config not bespoke code</text>
+ <rect x="1698" y="1200" width="150" height="48" rx="6" fill="#1e1b4b" stroke="#818cf8"/>
+ <text x="1773" y="1222" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Same kvcache-ai</text>
+ <text x="1773" y="1238" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">Sibling of Mooncake project</text>
+
+ <text x="988" y="1268" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">SOSP 2025 End-to-End Speedups vs Fiddler/Llama.cpp</text>
+ <rect x="988" y="1278" width="860" height="48" rx="6" fill="#1a1208" stroke="#6366f1"/>
+ <text x="1418" y="1302" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="12">Prefill: 4.62-19.74x - Decode: 1.25-4.09x - Deferral: +1.45x - CUDA Graph: 1.23x</text>
+ <text x="1418" y="1318" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">DeepSeek-V2 VRAM 21G to 11G - 671B MoE on 1 server + 1 consumer GPU</text>
+
+ <!-- footer bar -->
+ <rect x="60" y="1370" width="1800" height="72" rx="12" fill="#1a1208" stroke="#6366f1" stroke-width="2"/>
+ <text x="88" y="1398" fill="#818cf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">Design Position (local MoE serving - maximize CPU DRAM bandwidth + minimize CPU-GPU sync)</text>
+ <text x="960" y="1424" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="13">YAML-injected HF modules - kt-kernel AMX - async scheduler - Expert Deferral - SGLang production path</text>
+
+ <!-- footers -->
+ <rect x="60" y="1458" width="1800" height="36" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1480" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10">Deploy: pip install kt-kernel - convert weights - SGLang --kt-method AMXINT4 --kt-num-gpu-experts N</text>
+
+ <text x="60" y="1510" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: github.com/kvcache-ai/ktransformers - SOSP 2025 - ktransformers.net/docs - kt-kernel README</text>
+</svg>

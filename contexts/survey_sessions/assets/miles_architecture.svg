@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-indigo" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#818cf8"/>
+  </marker>
+  <marker id="arrow-purple" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#a78bfa"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">Miles Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">Enterprise RL post-training (slime fork) - Two-plane rollout/train + production stability layer</text>
+
+ <!-- L1 Entry -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#818cf8" stroke-width="2"/>
+ <text x="88" y="124" fill="#818cf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Entry Points &amp; Argument Routing</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="110" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="143" y="162" text-anchor="middle">train.py</text>
+  <rect x="210" y="136" width="170" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="295" y="162" text-anchor="middle">miles_server_args</text>
+  <rect x="392" y="136" width="130" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="457" y="162" text-anchor="middle">--sglang-*</text>
+  <rect x="534" y="136" width="120" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="594" y="162" text-anchor="middle">--router-*</text>
+  <rect x="666" y="136" width="110" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="721" y="162" text-anchor="middle">--fsdp-*</text>
+  <rect x="788" y="136" width="130" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="853" y="162" text-anchor="middle">DeepSeek V3.2</text>
+  <rect x="930" y="136" width="90" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="975" y="162" text-anchor="middle">Qwen3</text>
+  <rect x="1032" y="136" width="90" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="1077" y="162" text-anchor="middle">Llama 4</text>
+  <rect x="1134" y="136" width="90" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="1179" y="162" text-anchor="middle">GLM-4.x</text>
+  <rect x="1236" y="136" width="100" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="1286" y="162" text-anchor="middle">MiniMax</text>
+  <rect x="1348" y="136" width="90" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="1393" y="162" text-anchor="middle">VLM</text>
+  <rect x="1450" y="136" width="150" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="1525" y="162" text-anchor="middle">20+ --*-path hooks</text>
+  <rect x="1612" y="136" width="130" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="1677" y="162" text-anchor="middle">radixark/miles</text>
+  <rect x="1754" y="136" width="82" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="1795" y="162" text-anchor="middle">slime</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Scheduler -->
+ <rect x="60" y="216" width="1800" height="96" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2"/>
+ <text x="88" y="244" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Ray Scheduler &amp; Resource Orchestrator</text>
+ <rect x="88" y="256" width="180" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="178" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">Ray cluster</text>
+ <rect x="280" y="256" width="160" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="360" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">--colocate mode</text>
+ <rect x="452" y="256" width="180" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="542" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">disaggregated GPUs</text>
+ <rect x="644" y="256" width="170" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="729" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">actor/critic nodes</text>
+ <rect x="826" y="256" width="160" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="906" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">rollout-num-gpus</text>
+ <rect x="998" y="256" width="150" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1073" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">PD disagg prefill</text>
+ <rect x="1160" y="256" width="180" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1250" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">update_weights_interval</text>
+ <rect x="1352" y="256" width="160" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1432" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">keep-old-actor queue</text>
+ <rect x="1524" y="256" width="160" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1604" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">elastic scheduling</text>
+ <rect x="1696" y="256" width="140" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1766" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">ROCm / AMD</text>
+ <line x1="960" y1="312" x2="960" y2="330" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Two Plane Core -->
+ <rect x="60" y="332" width="1800" height="200" rx="12" fill="#0f2744" stroke="#818cf8" stroke-width="2.5"/>
+ <text x="88" y="360" fill="#818cf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - Two-Plane Core Architecture (inherited from slime)</text>
+
+ <!-- Training plane -->
+ <rect x="88" y="378" width="520" height="136" rx="12" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="348" y="408" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Training Plane</text>
+ <text x="348" y="432" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">--train-backend: megatron (default) or fsdp</text>
+ <text x="348" y="450" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">GRPO / PPO / DAPO actor-critic updates</text>
+ <text x="348" y="468" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">TP / PP / EP / CP - varlen thd packing</text>
+ <text x="348" y="486" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Reads trajectories - pushes weight updates</text>
+ <text x="348" y="504" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Megatron-to-HF weight convert for SGLang</text>
+
+ <!-- Data Buffer -->
+ <rect x="630" y="378" width="360" height="136" rx="12" fill="#1e1b4b" stroke="#818cf8" stroke-width="2"/>
+ <text x="810" y="408" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Rollout Buffer</text>
+ <text x="810" y="432" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Prompt init - sample storage - filtering</text>
+ <text x="810" y="450" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Routing decisions (R3) attached to samples</text>
+ <text x="810" y="468" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Partial rollout recycle (long-tail)</text>
+ <text x="810" y="486" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Adaptive per-source data weighting</text>
+ <text x="810" y="504" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Bridge between rollout and train planes</text>
+
+ <!-- Rollout plane -->
+ <rect x="1012" y="378" width="820" height="136" rx="12" fill="#0c2d2d" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="1422" y="408" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Rollout Plane</text>
+ <text x="1422" y="432" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">SGLang high-throughput inference servers</text>
+ <text x="1422" y="450" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Miles Router / SGLang Model Gateway (--router-*)</text>
+ <text x="1422" y="468" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Custom rollout-function-path (multi-turn / tools)</text>
+ <text x="1422" y="486" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Speculative decoding + online SFT draft model</text>
+ <text x="1422" y="504" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Reward / verifier / custom-rm-path scoring</text>
+
+ <!-- arrows -->
+ <line x1="608" y1="446" x2="626" y2="446" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrow-purple)"/>
+ <text x="617" y="438" text-anchor="middle" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="9">read</text>
+ <line x1="990" y1="446" x2="1008" y2="446" stroke="#2dd4bf" stroke-width="2" marker-end="url(#arrow)"/>
+ <text x="999" y="438" text-anchor="middle" fill="#2dd4bf" font-family="JetBrains Mono, monospace" font-size="9">write</text>
+ <line x1="348" y1="514" x2="1422" y2="514" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrow-indigo)"/>
+ <text x="960" y="528" text-anchor="middle" fill="#818cf8" font-family="JetBrains Mono, monospace" font-size="10">Zero-copy weight sync: CUDA IPC mapping + bucketed flatten (50% faster vs HTTP/RPC)</text>
+
+ <line x1="960" y1="532" x2="960" y2="550" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Enterprise Stability -->
+ <rect x="60" y="552" width="1800" height="88" rx="12" fill="#0f2744" stroke="#818cf8" stroke-width="2"/>
+ <text x="88" y="580" fill="#818cf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Enterprise Stability Layer (Miles additions over slime)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0e7ff">
+  <rect x="88" y="592" width="150" height="36" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="163" y="616" text-anchor="middle">R3 Routing Replay</text>
+  <rect x="250" y="592" width="130" height="36" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="315" y="616" text-anchor="middle">Unified FP8</text>
+  <rect x="392" y="592" width="110" height="36" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="447" y="616" text-anchor="middle">INT4 QAT</text>
+  <rect x="514" y="592" width="120" height="36" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="574" y="616" text-anchor="middle">TIS / MIS</text>
+  <rect x="646" y="592" width="170" height="36" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="731" y="616" text-anchor="middle">Bit-wise logprob match</text>
+  <rect x="828" y="592" width="150" height="36" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="903" y="616" text-anchor="middle">deterministic-mode</text>
+  <rect x="990" y="592" width="140" height="36" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="1060" y="616" text-anchor="middle">true-on-policy</text>
+  <rect x="1142" y="592" width="160" height="36" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="1222" y="616" text-anchor="middle">FlashAttn-3 / DeepGEMM</text>
+  <rect x="1314" y="592" width="130" height="36" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="1379" y="616" text-anchor="middle">LoRA RL</text>
+  <rect x="1456" y="592" width="90" height="36" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="1501" y="616" text-anchor="middle">TITO</text>
+  <rect x="1558" y="592" width="140" height="36" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="1628" y="616" text-anchor="middle">fault tolerance</text>
+  <rect x="1710" y="592" width="138" height="36" rx="6" fill="#1e1b4b" stroke="#818cf8"/><text x="1779" y="616" text-anchor="middle">NCCL hang guard</text>
+ </g>
+
+ <!-- L5 Performance -->
+ <rect x="60" y="652" width="1800" height="72" rx="12" fill="#0f2744" stroke="#fbbf24" stroke-width="2"/>
+ <text x="88" y="680" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Performance &amp; RL Workflows</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#fef3c7">
+  <rect x="88" y="692" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="128" y="709" text-anchor="middle">GRPO</text>
+  <rect x="178" y="692" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="213" y="709" text-anchor="middle">PPO</text>
+  <rect x="258" y="692" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="298" y="709" text-anchor="middle">DAPO</text>
+  <rect x="348" y="692" width="130" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="413" y="709" text-anchor="middle">Speculative RL</text>
+  <rect x="488" y="692" width="130" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="553" y="709" text-anchor="middle">Partial rollout</text>
+  <rect x="628" y="692" width="130" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="693" y="709" text-anchor="middle">Over-sampling</text>
+  <rect x="768" y="692" width="120" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="828" y="709" text-anchor="middle">Multi-turn</text>
+  <rect x="898" y="692" width="110" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="953" y="709" text-anchor="middle">VLM RL</text>
+  <rect x="1018" y="692" width="120" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1078" y="709" text-anchor="middle">Coding agent</text>
+  <rect x="1148" y="692" width="100" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1198" y="709" text-anchor="middle">MrlX MA</text>
+  <rect x="1258" y="692" width="120" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1318" y="709" text-anchor="middle">Reasoning</text>
+  <rect x="1388" y="692" width="130" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1453" y="709" text-anchor="middle">Online SFT draft</text>
+  <rect x="1528" y="692" width="160" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1608" y="709" text-anchor="middle">25%+ rollout speedup</text>
+  <rect x="1698" y="692" width="150" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1773" y="709" text-anchor="middle">1TB single-node QAT</text>
+ </g>
+
+ <!-- DETAIL R3 + FP8 -->
+ <rect x="60" y="740" width="880" height="340" rx="14" fill="#0c1524" stroke="#818cf8" stroke-width="2.5"/>
+ <text x="88" y="772" fill="#818cf8" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">MoE Stability: R3 + Unified FP8 + QAT</text>
+ <text x="88" y="794" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="11">Systems-first: eliminate train-inference mismatch that collapses trillion-param MoE RL</text>
+
+ <text x="88" y="818" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Rollout Routing Replay (R3) - with SGLang</text>
+ <rect x="88" y="828" width="200" height="48" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="188" y="848" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">SGLang inference</text>
+ <text x="188" y="864" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">record expert routing</text>
+ <line x1="288" y1="852" x2="308" y2="852" stroke="#818cf8" stroke-width="1.5" marker-end="url(#arrow-indigo)"/>
+ <rect x="312" y="828" width="200" height="48" rx="6" fill="#1e1b4b" stroke="#818cf8"/>
+ <text x="412" y="848" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Store routing in buffer</text>
+ <text x="412" y="864" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">per-token expert indices</text>
+ <line x1="512" y1="852" x2="532" y2="852" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
+ <rect x="536" y="828" width="200" height="48" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="636" y="848" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Megatron train replay</text>
+ <text x="636" y="864" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">bit-wise expert alignment</text>
+ <rect x="748" y="828" width="160" height="48" rx="6" fill="#422006" stroke="#fcd34d"/>
+ <text x="828" y="848" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Qwen3 / DeepSeek</text>
+ <text x="828" y="864" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">MoE RL stable</text>
+
+ <text x="88" y="898" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Unified FP8 E2E Pipeline</text>
+ <rect x="88" y="908" width="820" height="36" rx="6" fill="#1e1b4b" stroke="#818cf8"/>
+ <text x="498" y="932" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Same FP8 quant path in SGLang rollout and Megatron backprop - bit-identical policies</text>
+ <line x1="498" y1="944" x2="498" y2="956" stroke="#818cf8" stroke-width="1.5" marker-end="url(#arrow-indigo)"/>
+ <rect x="88" y="960" width="820" height="36" rx="6" fill="#422006" stroke="#fcd34d"/>
+ <text x="498" y="984" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">INT4 W4A16 QAT: 1TB models on single H200 - 2x rollout efficiency (no cross-node infer)</text>
+ <line x1="498" y1="996" x2="498" y2="1008" stroke="#fcd34d" stroke-width="1.5" marker-end="url(#arrow-indigo)"/>
+ <rect x="88" y="1012" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="1036" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Fallback: TIS/MIS importance sampling when mismatch unavoidable - prevent divergence</text>
+
+ <text x="88" y="1072" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Dense alignment: SGLang logprobs match Megatron/FSDP via kernel-level deterministic forward</text>
+ <text x="88" y="1088" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Roadmap: zero mismatch MoE - aligning SGLang with Megatron expert dispatch natively</text>
+
+ <!-- DETAIL RL Loop + Customization -->
+ <rect x="960" y="740" width="900" height="340" rx="14" fill="#0c1f1a" stroke="#2dd4bf" stroke-width="2.5"/>
+ <text x="988" y="772" fill="#2dd4bf" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">RL Loop + Customization Plug-Points</text>
+ <text x="988" y="794" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="11">Small core, many edges - swap behavior via CLI without forking Miles</text>
+
+ <rect x="988" y="810" width="820" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="1398" y="834" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1: Rollout plane generates via SGLang + Miles Router (custom rollout-function-path)</text>
+ <line x1="1398" y1="846" x2="1398" y2="858" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arrow)"/>
+ <rect x="988" y="860" width="820" height="36" rx="6" fill="#422006" stroke="#fcd34d"/>
+ <text x="1398" y="884" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2: Reward scoring (custom-rm-path) - filter - store in rollout buffer with R3 metadata</text>
+ <line x1="1398" y1="896" x2="1398" y2="908" stroke="#fcd34d" stroke-width="1.5" marker-end="url(#arrow-indigo)"/>
+ <rect x="988" y="910" width="820" height="36" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1398" y="934" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3: Training plane GRPO/PPO update (megatron or fsdp) - compute advantages - ppo_update</text>
+ <line x1="1398" y1="946" x2="1398" y2="958" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
+ <rect x="988" y="960" width="820" height="36" rx="6" fill="#1e1b4b" stroke="#818cf8"/>
+ <text x="1398" y="984" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4: Zero-copy weight refit to SGLang (CUDA IPC + bucketed gather) - loop</text>
+
+ <text x="988" y="1016" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Key --*-path Customization Hooks</text>
+ <rect x="988" y="1026" width="190" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1083" y="1050" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">rollout-function-path</text>
+ <rect x="1190" y="1026" width="160" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1270" y="1050" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">custom-rm-path</text>
+ <rect x="1362" y="1026" width="150" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1437" y="1050" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">custom-loss-path</text>
+ <rect x="1524" y="1026" width="140" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1594" y="1050" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">custom-filter-path</text>
+ <rect x="1676" y="1026" width="132" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1742" y="1050" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">model-provider-path</text>
+
+ <text x="988" y="1084" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Built on slime core: Megatron pretrain - Miles post-train - SGLang deploy (shared ckpt path)</text>
+ <text x="988" y="1100" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Observability: Chrome trace profiling + Grafana dashboards + adaptive data weighting</text>
+
+ <!-- L6 Production -->
+ <rect x="60" y="1100" width="1800" height="72" rx="12" fill="#1a1208" stroke="#818cf8" stroke-width="2"/>
+ <text x="88" y="1128" fill="#818cf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Production &amp; Platform Support</text>
+ <text x="960" y="1154" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="13">Docker radixark/miles - NVLink/IB/RDMA optimized - NVIDIA + AMD ROCm MI300/350 - InfiXAI / Ant / SGLang RL Team</text>
+
+ <!-- footers -->
+ <rect x="60" y="1192" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1212" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Init path: Ray cluster - deploy rollout engines + train workers - init buffer - load HF/Megatron ckpt - Miles Router</text>
+ <text x="960" y="1230" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Step path: SGLang generate (R3 record) - reward - buffer - GRPO train - zero-copy sync - metrics - ckpt - repeat</text>
+
+ <text x="60" y="1276" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: radixark/miles README - miles_server_args.md - LMSYS Miles/FP8/INT4 blogs - R3 paper arXiv:2510.11370 - slime fork</text>
+</svg>

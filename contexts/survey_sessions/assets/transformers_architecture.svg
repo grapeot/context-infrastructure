@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1560" viewBox="0 0 1920 1560">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-orange" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#fb923c"/>
+  </marker>
+  <marker id="arrow-yellow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#fbbf24"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1560" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920 M0 1520 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">Transformers Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">PyTorch-first Model Hub - Config + Model + Preprocessor - huggingface.co/docs/transformers</text>
+
+ <!-- L1 Applications -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#fb923c" stroke-width="2"/>
+ <text x="88" y="124" fill="#fb923c" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Applications + Model Families (NLP / vision / audio / multimodal - train and serve)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="113" y="162" text-anchor="middle">Llama</text>
+  <rect x="150" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="175" y="162" text-anchor="middle">Qwen</text>
+  <rect x="212" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="242" y="162" text-anchor="middle">DeepSeek</text>
+  <rect x="284" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="309" y="162" text-anchor="middle">Mistral</text>
+  <rect x="346" y="136" width="40" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="366" y="162" text-anchor="middle">BERT</text>
+  <rect x="398" y="136" width="50" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="423" y="162" text-anchor="middle">LLaVA</text>
+  <rect x="460" y="136" width="60" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="490" y="162" text-anchor="middle">Qwen-VL</text>
+  <rect x="532" y="136" width="50" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="557" y="162" text-anchor="middle">Whisper</text>
+  <rect x="594" y="136" width="40" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="614" y="162" text-anchor="middle">CLIP</text>
+  <rect x="646" y="136" width="40" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="666" y="162" text-anchor="middle">NER</text>
+  <rect x="698" y="136" width="40" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="718" y="162" text-anchor="middle">QA</text>
+  <rect x="750" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="775" y="162" text-anchor="middle">classify</text>
+  <rect x="812" y="136" width="40" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="832" y="162" text-anchor="middle">ASR</text>
+  <rect x="864" y="136" width="40" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="884" y="162" text-anchor="middle">TTS</text>
+  <rect x="916" y="136" width="50" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="941" y="162" text-anchor="middle">LoRA</text>
+  <rect x="978" y="136" width="40" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="998" y="162" text-anchor="middle">DPO</text>
+  <rect x="1030" y="136" width="50" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="1055" y="162" text-anchor="middle">RLHF</text>
+  <rect x="1092" y="136" width="40" height="40" rx="6" fill="#1a2e05" stroke="#84cc16"/><text x="1112" y="162" text-anchor="middle">vLLM</text>
+  <rect x="1144" y="136" width="50" height="40" rx="6" fill="#1a2e05" stroke="#84cc16"/><text x="1169" y="162" text-anchor="middle">SGLang</text>
+  <rect x="1206" y="136" width="40" height="40" rx="6" fill="#1a2e05" stroke="#84cc16"/><text x="1226" y="162" text-anchor="middle">TGI</text>
+  <rect x="1258" y="136" width="60" height="40" rx="6" fill="#1a2e05" stroke="#84cc16"/><text x="1288" y="162" text-anchor="middle">TRT-LLM</text>
+  <rect x="1330" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1355" y="162" text-anchor="middle">MoE</text>
+  <rect x="1392" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1417" y="162" text-anchor="middle">MLA</text>
+  <rect x="1454" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1479" y="162" text-anchor="middle">embed</text>
+  <rect x="1516" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1541" y="162" text-anchor="middle">rerank</text>
+  <rect x="1578" y="136" width="50" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1603" y="162" text-anchor="middle">SmolVLM</text>
+  <rect x="1640" y="136" width="50" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1665" y="162" text-anchor="middle">verl</text>
+  <rect x="1702" y="136" width="146" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1775" y="162" text-anchor="middle">huggingface/transformers</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Hub + Auto -->
+ <rect x="60" y="216" width="1800" height="120" rx="12" fill="#0f2744" stroke="#fb923c" stroke-width="2"/>
+ <text x="88" y="244" fill="#fb923c" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Hub Integration + AutoClasses (unified load/save - architecture auto-detect)</text>
+ <rect x="88" y="258" width="340" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="258" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Pretrained Lifecycle</text>
+ <text x="258" y="300" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">from_pretrained - save_pretrained - push_to_hub</text>
+ <text x="258" y="314" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Hub cache - safetensors - trust_remote_code</text>
+ <rect x="448" y="258" width="340" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="618" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">AutoConfig / AutoModel</text>
+ <text x="618" y="300" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">model_type in config.json selects architecture class</text>
+ <text x="618" y="314" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Task heads: ForCausalLM / ForSeqClass / ForTokenClass</text>
+ <rect x="808" y="258" width="340" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="978" y="282" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">AutoTokenizer / AutoProcessor</text>
+ <text x="978" y="300" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">tokenizers or sentencepiece backend auto-select</text>
+ <text x="978" y="314" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">AutoImageProcessor - AutoFeatureExtractor - AutoVideo</text>
+ <rect x="1168" y="258" width="340" height="64" rx="10" fill="#0c2d2d" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="1338" y="282" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Load Options</text>
+ <text x="1338" y="300" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">device_map=auto via Accelerate - torch_dtype</text>
+ <text x="1338" y="314" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">attn_implementation - low_cpu_mem_usage</text>
+ <rect x="1528" y="258" width="300" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1678" y="282" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Three Core Classes</text>
+ <text x="1678" y="300" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Config + Model + Preprocessor per architecture</text>
+ <text x="1678" y="314" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Same API across 500+ Hub model families</text>
+ <line x1="960" y1="336" x2="960" y2="354" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Model Layer -->
+ <rect x="60" y="356" width="1800" height="200" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2.5"/>
+ <text x="88" y="384" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - Model Layer (PreTrainedModel - PretrainedConfig - modular modeling files)</text>
+
+ <rect x="88" y="400" width="340" height="136" rx="12" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="258" y="428" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">PreTrainedModel Base</text>
+ <text x="258" y="450" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">torch.nn.Module + ModuleUtilsMixin + PushToHubMixin</text>
+ <text x="258" y="468" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">PeftAdapterMixin for LoRA/IA3 adapters at model level</text>
+ <text x="258" y="486" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">resize_token_embeddings - prune_heads - tie_weights</text>
+ <text x="258" y="504" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">gradient_checkpointing_enable - get/set embeddings</text>
+ <text x="258" y="522" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Faithful to paper - One Model One File philosophy</text>
+
+ <rect x="448" y="400" width="280" height="136" rx="12" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="588" y="428" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Modular Transformers</text>
+ <text x="588" y="450" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Contributors edit modular_*.py reuse shards</text>
+ <text x="588" y="468" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Auto-expand to modeling_*.py users read/debug</text>
+ <text x="588" y="486" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">DRY infra - self-contained model files</text>
+ <text x="588" y="504" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">src/transformers/models/{arch}/ per family</text>
+ <text x="588" y="522" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Explicit names over clever indirection</text>
+
+ <rect x="748" y="400" width="280" height="136" rx="12" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="888" y="428" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Attention Backends</text>
+ <text x="888" y="450" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">attn_implementation: sdpa / flash_attention_2</text>
+ <text x="888" y="468" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">flex_attention - eager fallback</text>
+ <text x="888" y="486" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">_supports_flash_attn_2 / _supports_sdpa flags</text>
+ <text x="888" y="504" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">GQA/MQA/MHA - RoPE - RMSNorm/LayerNorm</text>
+ <text x="888" y="522" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Sliding window / yarn rope scaling</text>
+
+ <rect x="1048" y="400" width="260" height="136" rx="12" fill="#0c2d2d" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="1178" y="428" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">KV Cache System</text>
+ <text x="1178" y="450" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Cache / StaticCache / DynamicCache classes</text>
+ <text x="1178" y="468" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">use_cache - past_key_values in forward()</text>
+ <text x="1178" y="486" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">QuantoQuantizedCache for quant KV</text>
+ <text x="1178" y="504" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Prefill/decode split for serving runtimes</text>
+ <text x="1178" y="522" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Consumed by vLLM/SGLang after export</text>
+
+ <rect x="1328" y="400" width="260" height="136" rx="12" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="1458" y="428" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Architecture Families</text>
+ <text x="1458" y="450" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Decoder-only LLM (Llama/Qwen/GPT)</text>
+ <text x="1458" y="468" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Encoder (BERT) - Encoder-Decoder (T5/BART)</text>
+ <text x="1458" y="486" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Vision (ViT/SigLIP) - Speech (Whisper/Wav2Vec)</text>
+ <text x="1458" y="504" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Multimodal fusion (LLaVA/Qwen2-VL)</text>
+ <text x="1458" y="522" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Task heads wrap shared backbone</text>
+
+ <rect x="1608" y="400" width="220" height="136" rx="12" fill="#1a2e05" stroke="#84cc16" stroke-width="2"/>
+ <text x="1718" y="428" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">PretrainedConfig</text>
+ <text x="1718" y="450" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">config.json hyperparams - model_type key</text>
+ <text x="1718" y="468" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">num_layers - hidden_size - num_heads - vocab</text>
+ <text x="1718" y="486" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">rope_scaling - sliding_window - MoE config</text>
+ <text x="1718" y="504" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">Auto-instantiated when loading weights</text>
+ <text x="1718" y="522" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">register_for_auto_class for custom models</text>
+
+ <line x1="960" y1="556" x2="960" y2="574" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Preprocessing -->
+ <rect x="60" y="576" width="1800" height="120" rx="12" fill="#0f2744" stroke="#a78bfa" stroke-width="2"/>
+ <text x="88" y="604" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Preprocessing Layer (raw input to model tensor format)</text>
+ <rect x="88" y="618" width="340" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="258" y="642" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Tokenizer</text>
+ <text x="258" y="660" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">encode/decode - special tokens - chat template</text>
+ <text x="258" y="674" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">PreTrainedTokenizerFast (Rust tokenizers lib)</text>
+ <rect x="448" y="618" width="340" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="618" y="642" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Vision + Audio Processors</text>
+ <text x="618" y="660" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">ImageProcessor - VideoProcessor resize/normalize</text>
+ <text x="618" y="674" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">FeatureExtractor for spectrogram/audio features</text>
+ <rect x="808" y="618" width="340" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="978" y="642" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Processor (Multimodal)</text>
+ <text x="978" y="660" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Combines tokenizer + image/audio in one API</text>
+ <text x="978" y="674" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">apply_chat_template for instruction models</text>
+ <rect x="1168" y="618" width="340" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1338" y="642" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Batching + Padding</text>
+ <text x="1338" y="660" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">DataCollator - pad to max length in batch</text>
+ <text x="1338" y="674" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">attention_mask - token_type_ids - labels mask</text>
+ <rect x="1528" y="618" width="300" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="1678" y="642" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">tokenizer.json Artifacts</text>
+ <text x="1678" y="660" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Vocab + merges stored in Hub checkpoint</text>
+ <text x="1678" y="674" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Same from_pretrained lifecycle as models</text>
+ <line x1="960" y1="696" x2="960" y2="714" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L5 Pipeline API -->
+ <rect x="60" y="716" width="1800" height="120" rx="12" fill="#0f2744" stroke="#84cc16" stroke-width="2"/>
+ <text x="88" y="744" fill="#84cc16" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Pipeline Inference API (task-specific end-to-end - no training loop)</text>
+ <rect x="88" y="758" width="340" height="64" rx="10" fill="#1a2e05" stroke="#84cc16" stroke-width="2"/>
+ <text x="258" y="782" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">pipeline(task, model)</text>
+ <text x="258" y="800" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">Auto-load model + tokenizer/processor for task</text>
+ <text x="258" y="814" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">text-generation - ner - qa - asr - image-class</text>
+ <rect x="448" y="758" width="340" height="64" rx="10" fill="#1a2e05" stroke="#84cc16" stroke-width="2"/>
+ <text x="618" y="782" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Device + Precision</text>
+ <text x="618" y="800" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">device=-1 CPU - device_map=auto multi-GPU</text>
+ <text x="618" y="814" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">torch.float16/bfloat16 - batch_size - streaming</text>
+ <rect x="808" y="758" width="340" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="978" y="782" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Composable Components</text>
+ <text x="978" y="800" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Override model/tokenizer explicitly in pipeline()</text>
+ <text x="978" y="814" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Mix Hub model with custom tokenizer if needed</text>
+ <rect x="1168" y="758" width="340" height="64" rx="10" fill="#0c2d2d" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="1338" y="782" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">vs Direct Model API</text>
+ <text x="1338" y="800" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Pipeline = convenience wrapper for quick inference</text>
+ <text x="1338" y="814" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Production serving uses model.generate() directly</text>
+ <rect x="1528" y="758" width="300" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1678" y="782" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">30+ Task Pipelines</text>
+ <text x="1678" y="800" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">summarization - translation - depth-estimation</text>
+ <text x="1678" y="814" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">zero-shot-class - object-detection - etc.</text>
+ <line x1="960" y1="836" x2="960" y2="854" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L6 Generation -->
+ <rect x="60" y="856" width="1800" height="120" rx="12" fill="#0f2744" stroke="#22d3ee" stroke-width="2"/>
+ <text x="88" y="884" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Text Generation Stack (GenerationMixin - generate() - decoding algorithms)</text>
+ <rect x="88" y="898" width="340" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="258" y="922" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">GenerationMixin + generate()</text>
+ <text x="258" y="940" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Opt-in mixin on generative model classes</text>
+ <text x="258" y="954" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">AutoModel adds mixin for Hub backward compat</text>
+ <rect x="448" y="898" width="340" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="618" y="922" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">GenerationConfig</text>
+ <text x="618" y="940" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">max_new_tokens - temperature - top_k/top_p</text>
+ <text x="618" y="954" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">do_sample - num_beams - repetition_penalty</text>
+ <rect x="808" y="898" width="340" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="978" y="922" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">LogitsProcessor + Stopping</text>
+ <text x="978" y="940" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">LogitsProcessorList chain (min_p, suppress)</text>
+ <text x="978" y="954" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">StoppingCriteria - eos/pad/max_length triggers</text>
+ <rect x="1168" y="898" width="340" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="1338" y="922" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Decoding Modes</text>
+ <text x="1338" y="940" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Greedy - sample - beam search - contrastive</text>
+ <text x="1338" y="954" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Speculative decode hooks - assisted generation</text>
+ <rect x="1528" y="898" width="300" height="64" rx="10" fill="#0c2d2d" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="1678" y="922" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Streaming Output</text>
+ <text x="1678" y="940" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">TextIteratorStreamer token-by-token callback</text>
+ <text x="1678" y="954" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Used by UIs and chat interfaces</text>
+ <line x1="960" y1="976" x2="960" y2="994" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L7 Training + Quant -->
+ <rect x="60" y="996" width="1800" height="56" rx="12" fill="#0f2744" stroke="#fbbf24" stroke-width="2"/>
+ <text x="88" y="1024" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L7 - Training + Quantization (Trainer API - HfQuantizer - distributed via Accelerate)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0f2fe">
+  <rect x="88" y="1032" width="50" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="113" y="1049" text-anchor="middle">Trainer</text>
+  <rect x="148" y="1032" width="80" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="188" y="1049" text-anchor="middle">TrainingArgs</text>
+  <rect x="238" y="1032" width="70" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="273" y="1049" text-anchor="middle">Seq2SeqTr</text>
+  <rect x="318" y="1032" width="40" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="338" y="1049" text-anchor="middle">PEFT</text>
+  <rect x="368" y="1032" width="40" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="388" y="1049" text-anchor="middle">LoRA</text>
+  <rect x="418" y="1032" width="60" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="448" y="1049" text-anchor="middle">DeepSpeed</text>
+  <rect x="488" y="1032" width="40" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="508" y="1049" text-anchor="middle">FSDP</text>
+  <rect x="538" y="1032" width="60" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="568" y="1049" text-anchor="middle">HfQuant</text>
+  <rect x="608" y="1032" width="40" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="628" y="1049" text-anchor="middle">BnB</text>
+  <rect x="658" y="1032" width="40" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="678" y="1049" text-anchor="middle">GPTQ</text>
+  <rect x="708" y="1032" width="40" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="728" y="1049" text-anchor="middle">AWQ</text>
+  <rect x="758" y="1032" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="783" y="1049" text-anchor="middle">torchao</text>
+  <rect x="818" y="1032" width="50" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="843" y="1049" text-anchor="middle">Datasets</text>
+  <rect x="878" y="1032" width="50" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="903" y="1049" text-anchor="middle">Evaluate</text>
+  <rect x="938" y="1032" width="60" height="24" rx="5" fill="#1a2e05" stroke="#84cc16"/><text x="968" y="1049" text-anchor="middle">Accelerate</text>
+  <rect x="1008" y="1032" width="50" height="24" rx="5" fill="#1a2e05" stroke="#84cc16"/><text x="1033" y="1049" text-anchor="middle">Optimum</text>
+  <rect x="1068" y="1032" width="40" height="24" rx="5" fill="#1a2e05" stroke="#84cc16"/><text x="1088" y="1049" text-anchor="middle">ONNX</text>
+  <rect x="1118" y="1032" width="50" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="1143" y="1049" text-anchor="middle">Diffusers</text>
+  <rect x="1178" y="1032" width="40" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="1198" y="1049" text-anchor="middle">T5/CLIP</text>
+  <rect x="1228" y="1032" width="50" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="1253" y="1049" text-anchor="middle">TRL/DPO</text>
+  <rect x="1288" y="1032" width="50" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1313" y="1049" text-anchor="middle">compile</text>
+  <rect x="1348" y="1032" width="40" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1368" y="1049" text-anchor="middle">fp8</text>
+  <rect x="1398" y="1032" width="40" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1418" y="1049" text-anchor="middle">int4</text>
+  <rect x="1448" y="1032" width="50" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="1473" y="1049" text-anchor="middle">MPS</text>
+  <rect x="1508" y="1032" width="40" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="1528" y="1049" text-anchor="middle">XPU</text>
+  <rect x="1558" y="1032" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1583" y="1049" text-anchor="middle">NPU</text>
+  <rect x="1618" y="1032" width="50" height="24" rx="5" fill="#1a2e05" stroke="#84cc16"/><text x="1643" y="1049" text-anchor="middle">safeten</text>
+  <rect x="1678" y="1032" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1703" y="1049" text-anchor="middle">Apache2</text>
+  <rect x="1738" y="1032" width="110" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="1793" y="1049" text-anchor="middle">500+ architectures</text>
+ </g>
+
+ <!-- DETAIL Load Flow -->
+ <rect x="60" y="1068" width="880" height="340" rx="14" fill="#0c1524" stroke="#fb923c" stroke-width="2.5"/>
+ <text x="88" y="1100" fill="#fb923c" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Model Load + Inference Flow (from Hub to output)</text>
+ <text x="88" y="1122" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="11">Three-class pattern: Config + Preprocessor + Model - unified from_pretrained()</text>
+
+ <rect x="88" y="1138" width="820" height="36" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="498" y="1162" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 0: AutoConfig.from_pretrained(hub_id) - read config.json model_type</text>
+ <line x1="498" y1="1174" x2="498" y2="1186" stroke="#fb923c" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+ <rect x="88" y="1188" width="820" height="36" rx="6" fill="#422006" stroke="#fbbf24"/>
+ <text x="498" y="1212" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1: AutoTokenizer/Processor.from_pretrained - load vocab + chat template</text>
+ <line x1="498" y1="1224" x2="498" y2="1236" stroke="#fbbf24" stroke-width="1.5"/>
+ <rect x="88" y="1238" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="1262" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2: AutoModelForCausalLM.from_pretrained - weights + optional quant_config</text>
+ <line x1="498" y1="1274" x2="498" y2="1286" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow)"/>
+ <rect x="88" y="1288" width="820" height="36" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="498" y="1312" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3: inputs = tokenizer(prompt) - model.generate(**inputs, max_new_tokens=N)</text>
+ <line x1="498" y1="1324" x2="498" y2="1336" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow-yellow)"/>
+ <rect x="88" y="1338" width="820" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="498" y="1362" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4: Decode output_ids - tokenizer.decode - stream via TextIteratorStreamer</text>
+
+ <text x="88" y="1394" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Quick path: pipeline("text-generation", model=hub_id) bundles steps 1-4 automatically</text>
+ <text x="88" y="1410" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Production: vLLM/SGLang reimplement loop - consume same Hub weights + tokenizer</text>
+
+ <!-- DETAIL Philosophy -->
+ <rect x="960" y="1068" width="900" height="340" rx="14" fill="#0c1224" stroke="#fb923c" stroke-width="2.5"/>
+ <text x="988" y="1100" fill="#fb923c" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Design Philosophy + Ecosystem Position</text>
+ <text x="988" y="1122" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="11">PyTorch-first - faithful to papers - easy to use and hack - backwards compatible Hub</text>
+
+ <text x="988" y="1146" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Core Tenets</text>
+ <rect x="988" y="1156" width="130" height="48" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="1053" y="1178" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Source of Truth</text>
+ <text x="1053" y="1194" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Match official paper results</text>
+ <rect x="1130" y="1156" width="130" height="48" rx="6" fill="#422006" stroke="#fbbf24"/>
+ <text x="1195" y="1178" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">One Model One File</text>
+ <text x="1195" y="1194" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">Readable top-to-bottom logic</text>
+ <rect x="1272" y="1156" width="130" height="48" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1337" y="1178" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Minimal User API</text>
+ <text x="1337" y="1194" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">Few codepaths - stable kwargs</text>
+ <rect x="1414" y="1156" width="130" height="48" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1479" y="1178" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Standardize not Abstract</text>
+ <text x="1479" y="1194" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">Model-specific in model file</text>
+ <rect x="1556" y="1156" width="130" height="48" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="1621" y="1178" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Backwards Compat</text>
+ <text x="1621" y="1194" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Old Hub artifacts keep working</text>
+ <rect x="1698" y="1156" width="150" height="48" rx="6" fill="#1a2e05" stroke="#84cc16"/>
+ <text x="1773" y="1178" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Code is the Product</text>
+ <text x="1773" y="1194" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">Optimize for reading and diffing</text>
+
+ <text x="988" y="1222" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Two Primary APIs</text>
+ <rect x="988" y="1232" width="200" height="68" rx="6" fill="#1a2e05" stroke="#84cc16"/>
+ <text x="1088" y="1256" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">pipeline()</text>
+ <text x="1088" y="1274" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">Fast task inference - minimal code</text>
+ <text x="1088" y="1290" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">30+ NLP/vision/audio tasks</text>
+ <rect x="1200" y="1232" width="200" height="68" rx="6" fill="#422006" stroke="#fbbf24"/>
+ <text x="1300" y="1256" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Trainer</text>
+ <text x="1300" y="1274" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">Feature-complete fine-tune loop</text>
+ <text x="1300" y="1290" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">TrainingArguments + callbacks</text>
+ <rect x="1412" y="1232" width="200" height="68" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="1512" y="1256" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">model.generate()</text>
+ <text x="1512" y="1274" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Production LLM decoding path</text>
+ <text x="1512" y="1290" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">GenerationConfig + KV cache</text>
+ <rect x="1624" y="1232" width="224" height="68" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1736" y="1256" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Foundation Layer</text>
+ <text x="1736" y="1274" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">Diffusers/TGI/vLLM build on top</text>
+ <text x="1736" y="1290" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">Hub weights + tokenizer standard</text>
+
+ <text x="988" y="1318" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Repo Layout (src/transformers/)</text>
+ <rect x="988" y="1328" width="860" height="48" rx="6" fill="#1a1208" stroke="#fb923c"/>
+ <text x="1418" y="1352" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="12">models/ - generation/ - pipelines/ - trainers/ - tokenization/ - quantizers/ - integrations/</text>
+ <text x="1418" y="1368" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">TensorFlow/Flax legacy - PyTorch is primary path for new development</text>
+
+ <!-- footer bar -->
+ <rect x="60" y="1422" width="1800" height="72" rx="12" fill="#1a1208" stroke="#fb923c" stroke-width="2"/>
+ <text x="88" y="1450" fill="#fb923c" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">Design Position (de facto standard for pretrained model loading - research to production bridge)</text>
+ <text x="960" y="1476" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="13">Config + Model + Preprocessor - AutoClasses - pipeline for quick inference - Trainer for fine-tune</text>
+
+ <!-- footers -->
+ <rect x="60" y="1510" width="1800" height="36" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1532" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10">Quickstart: model = AutoModelForCausalLM.from_pretrained(id) - tokenizer = AutoTokenizer.from_pretrained(id)</text>
+
+ <text x="60" y="1560" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: huggingface.co/docs/transformers - Philosophy - Auto Classes - Pipeline - Generation - Quantization docs</text>
+</svg>

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-green" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#76b900"/>
+  </marker>
+  <marker id="arrow-lime" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#a3e635"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">CUTLASS Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">CUDA Templates for Linear Algebra - CuTe - 5-Layer GEMM Hierarchy - docs.nvidia.com/cutlass</text>
+
+ <!-- L1 Ecosystem -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#76b900" stroke-width="2"/>
+ <text x="88" y="124" fill="#76b900" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Downstream Consumers (frameworks + libraries built on CUTLASS)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="80" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="128" y="162" text-anchor="middle">cuBLASLt</text>
+  <rect x="180" y="136" width="90" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="225" y="162" text-anchor="middle">TensorRT-LLM</text>
+  <rect x="282" y="136" width="70" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="317" y="162" text-anchor="middle">FlashInfer</text>
+  <rect x="364" y="136" width="50" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="389" y="162" text-anchor="middle">vLLM</text>
+  <rect x="426" y="136" width="60" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="456" y="162" text-anchor="middle">FlashAttn</text>
+  <rect x="498" y="136" width="60" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="528" y="162" text-anchor="middle">PyTorch</text>
+  <rect x="570" y="136" width="50" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="595" y="162" text-anchor="middle">Triton</text>
+  <rect x="632" y="136" width="60" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="662" y="162" text-anchor="middle">SGLang</text>
+  <rect x="704" y="136" width="50" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="729" y="162" text-anchor="middle">XLA</text>
+  <rect x="766" y="136" width="60" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="796" y="162" text-anchor="middle">MLC-LLM</text>
+  <rect x="838" y="136" width="70" height="40" rx="6" fill="#052e16" stroke="#22c55e"/><text x="873" y="162" text-anchor="middle">custom GEMM</text>
+  <rect x="920" y="136" width="70" height="40" rx="6" fill="#052e16" stroke="#22c55e"/><text x="955" y="162" text-anchor="middle">FMHA/conv</text>
+  <rect x="1002" y="136" width="80" height="40" rx="6" fill="#052e16" stroke="#22c55e"/><text x="1042" y="162" text-anchor="middle">grouped GEMM</text>
+  <rect x="1094" y="136" width="70" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1129" y="162" text-anchor="middle">profiler</text>
+  <rect x="1176" y="136" width="80" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1216" y="162" text-anchor="middle">library API</text>
+  <rect x="1268" y="136" width="80" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1308" y="162" text-anchor="middle">CuTe DSL</text>
+  <rect x="1360" y="136" width="80" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1400" y="162" text-anchor="middle">C++ templates</text>
+  <rect x="1452" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#ea580c"/><text x="1487" y="162" text-anchor="middle">NVIDIA</text>
+  <rect x="1534" y="136" width="60" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="1564" y="162" text-anchor="middle">since 2017</text>
+  <rect x="1606" y="136" width="70" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="1641" y="162" text-anchor="middle">MIT OSS</text>
+  <rect x="1688" y="136" width="80" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="1728" y="162" text-anchor="middle">CUTLASS 4.6</text>
+  <rect x="1780" y="136" width="68" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="1814" y="162" text-anchor="middle">CuTe 3.x</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Frontends -->
+ <rect x="60" y="216" width="1800" height="96" rx="12" fill="#0f2744" stroke="#a3e635" stroke-width="2"/>
+ <text x="88" y="244" fill="#a3e635" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Programming Frontends (C++ template metaprogramming + CuTe Python DSL)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ecfccb">
+  <rect x="88" y="256" width="120" height="32" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="148" y="278" text-anchor="middle">CollectiveBuilder</text>
+  <rect x="220" y="256" width="100" height="32" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="270" y="278" text-anchor="middle">GemmUniversal</text>
+  <rect x="332" y="256" width="110" height="32" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="387" y="278" text-anchor="middle">GemmUniversalAdapter</text>
+  <rect x="454" y="256" width="90" height="32" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="499" y="278" text-anchor="middle">device::Gemm</text>
+  <rect x="556" y="256" width="80" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="596" y="278" text-anchor="middle">CuTe DSL</text>
+  <rect x="648" y="256" width="90" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="693" y="278" text-anchor="middle">cute.tensor</text>
+  <rect x="750" y="256" width="80" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="790" y="278" text-anchor="middle">cute.gemm</text>
+  <rect x="842" y="256" width="80" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="882" y="278" text-anchor="middle">cute.copy</text>
+  <rect x="934" y="256" width="90" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="979" y="278" text-anchor="middle">fast compile</text>
+  <rect x="1036" y="256" width="80" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1076" y="278" text-anchor="middle">CUTLASS 2.x</text>
+  <rect x="1128" y="256" width="100" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1178" y="278" text-anchor="middle">threadblock API</text>
+  <rect x="1240" y="256" width="80" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1280" y="278" text-anchor="middle">warp API</text>
+  <rect x="1332" y="256" width="90" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1377" y="278" text-anchor="middle">mma.sync API</text>
+  <rect x="1434" y="256" width="80" height="32" rx="6" fill="#431407" stroke="#fb923c"/><text x="1474" y="278" text-anchor="middle">constexpr</text>
+  <rect x="1526" y="256" width="80" height="32" rx="6" fill="#431407" stroke="#fb923c"/><text x="1566" y="278" text-anchor="middle">tag dispatch</text>
+  <rect x="1618" y="256" width="70" height="32" rx="6" fill="#431407" stroke="#fb923c"/><text x="1653" y="278" text-anchor="middle">C++17</text>
+  <rect x="1700" y="256" width="148" height="32" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="1774" y="278" text-anchor="middle">correct-by-construction layouts</text>
+ </g>
+ <line x1="960" y1="312" x2="960" y2="330" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Device -->
+ <rect x="60" y="332" width="1800" height="88" rx="12" fill="#0f2744" stroke="#76b900" stroke-width="2"/>
+ <text x="88" y="360" fill="#76b900" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - Device Layer (host-side GEMM handle + launch orchestration)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ecfccb">
+  <rect x="88" y="372" width="140" height="32" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="158" y="394" text-anchor="middle">GemmUniversalAdapter</text>
+  <rect x="240" y="372" width="80" height="32" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="280" y="394" text-anchor="middle">initialize</text>
+  <rect x="332" y="372" width="60" height="32" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="362" y="394" text-anchor="middle">run()</text>
+  <rect x="404" y="372" width="80" height="32" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="444" y="394" text-anchor="middle">Arguments</text>
+  <rect x="496" y="372" width="90" height="32" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="541" y="394" text-anchor="middle">ProblemShape</text>
+  <rect x="598" y="372" width="80" height="32" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="638" y="394" text-anchor="middle">[M,N,K,L]</text>
+  <rect x="690" y="372" width="80" height="32" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="730" y="394" text-anchor="middle">workspace</text>
+  <rect x="782" y="372" width="70" height="32" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="817" y="394" text-anchor="middle">cudaLaunch</text>
+  <rect x="864" y="372" width="80" height="32" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="904" y="394" text-anchor="middle">grid/cluster</text>
+  <rect x="956" y="372" width="80" height="32" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="996" y="394" text-anchor="middle">smem carveout</text>
+  <rect x="1048" y="372" width="90" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1093" y="394" text-anchor="middle">library/runtime</text>
+  <rect x="1150" y="372" width="80" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1190" y="394" text-anchor="middle">can_implement</text>
+  <rect x="1242" y="372" width="80" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1282" y="394" text-anchor="middle">get_workspace</text>
+  <rect x="1334" y="372" width="90" height="32" rx="6" fill="#431407" stroke="#fb923c"/><text x="1379" y="394" text-anchor="middle">static/dynamic</text>
+  <rect x="1436" y="372" width="80" height="32" rx="6" fill="#431407" stroke="#fb923c"/><text x="1476" y="394" text-anchor="middle">cute::Shape</text>
+  <rect x="1528" y="372" width="100" height="32" rx="6" fill="#431407" stroke="#fb923c"/><text x="1578" y="394" text-anchor="middle">CUTLASS 3.0+</text>
+  <rect x="1640" y="372" width="90" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1685" y="394" text-anchor="middle">CuTe DSL launch</text>
+  <rect x="1742" y="372" width="106" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1795" y="394" text-anchor="middle">auto smem size</text>
+ </g>
+ <line x1="960" y1="420" x2="960" y2="438" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Kernel -->
+ <rect x="60" y="440" width="1800" height="120" rx="12" fill="#0f2744" stroke="#76b900" stroke-width="2.5"/>
+ <text x="88" y="468" fill="#76b900" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Kernel Layer (device grid over threadblock clusters + tile scheduling)</text>
+
+ <rect x="88" y="482" width="420" height="64" rx="10" fill="#1a2e05" stroke="#76b900" stroke-width="2"/>
+ <text x="298" y="506" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">kernel::GemmUniversal</text>
+ <text x="298" y="524" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">Stateless universal kernel - mainloop + epilogue composition</text>
+ <text x="298" y="538" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">Works for CUTLASS 2.x and 3.x via Shape detection</text>
+
+ <rect x="528" y="482" width="420" height="64" rx="10" fill="#1a2e05" stroke="#76b900" stroke-width="2"/>
+ <text x="738" y="506" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Cluster Tile Parallelism</text>
+ <text x="738" y="524" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">ClusterTileM/N loops - hardware raster or persistent scheduler</text>
+ <text x="738" y="538" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">Threadblock clusters - TMA multicast across CTAs</text>
+
+ <rect x="968" y="482" width="420" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="1178" y="506" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Kernel Schedules (tag dispatch)</text>
+ <text x="1178" y="524" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">KernelTmaWarpSpecialized - Pingpong - Cooperative</text>
+ <text x="1178" y="538" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">KernelCpAsyncWarpSpecialized - persistent tile loop</text>
+
+ <rect x="1408" y="482" width="420" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1618" y="506" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Specialized Kernel Headers</text>
+ <text x="1618" y="524" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">sm90_gemm_tma_warpspecialized*.hpp</text>
+ <text x="1618" y="538" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">sm100 blockscaled persistent GEMM kernels</text>
+
+ <line x1="960" y1="560" x2="960" y2="578" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L5 Collective -->
+ <rect x="60" y="580" width="1800" height="200" rx="12" fill="#0f2744" stroke="#a3e635" stroke-width="2.5"/>
+ <text x="88" y="608" fill="#a3e635" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Collective Layer (temporal micro-kernels: mainloop k-tile + epilogue fusion)</text>
+
+ <rect x="88" y="624" width="420" height="136" rx="12" fill="#1a2e05" stroke="#76b900" stroke-width="2"/>
+ <text x="298" y="652" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">CollectiveMma (mainloop)</text>
+ <text x="298" y="676" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">Largest cooperating thread set for tiled MMA/copy atoms</text>
+ <text x="298" y="694" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">k_tile loop - async GMEM-&gt;SMEM - pipelined stages</text>
+ <text x="298" y="712" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">DispatchPolicy tags per arch/algorithm</text>
+ <text x="298" y="730" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">MainloopSm90TmaGmmaWarpSpecialized etc.</text>
+ <text x="298" y="748" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">Warp-specialized producer/consumer roles</text>
+
+ <rect x="528" y="624" width="420" height="136" rx="12" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="738" y="652" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">CollectiveEpilogue</text>
+ <text x="738" y="676" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">DefaultEpilogue - LinearCombination C = alpha*AB + beta*C</text>
+ <text x="738" y="694" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">EVT Epilogue Visitor Tree - bias/act/aux fusion</text>
+ <text x="738" y="712" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Activation fusion (SiLU/gated) - grouped GEMM EVT</text>
+ <text x="738" y="730" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Type convert accum -&gt; output dtype</text>
+ <text x="738" y="748" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">SMEM/RMEM/TMEM store paths per arch</text>
+
+ <rect x="968" y="624" width="420" height="136" rx="12" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1178" y="652" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">CollectiveBuilder (auto config)</text>
+ <text x="1178" y="676" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">ArchTag + OpClass + Element/Layout/Align</text>
+ <text x="1178" y="694" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">TileShape_MNK + ClusterShape_MNK</text>
+ <text x="1178" y="712" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">StageCountAuto - KernelScheduleAuto</text>
+ <text x="1178" y="730" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Off-the-shelf GEMM without expert tuning</text>
+ <text x="1178" y="748" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Expert CollectiveMma for full control</text>
+
+ <rect x="1408" y="624" width="420" height="136" rx="12" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1618" y="652" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Beyond Dense GEMM</text>
+ <text x="1618" y="676" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Grouped/batched/ptr-array GEMM</text>
+ <text x="1618" y="694" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Conv2d implicit GEMM - FMHA attention</text>
+ <text x="1618" y="712" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Block-scaled NVFP4/MXFP4/6/8 GEMM</text>
+ <text x="1618" y="730" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Sparse GEMM - split-K - stream-K</text>
+ <text x="1618" y="748" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Mainloop fusion hooks at collective layer</text>
+
+ <line x1="960" y1="780" x2="960" y2="798" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L6 Tiled + Atom -->
+ <rect x="60" y="800" width="1800" height="120" rx="12" fill="#0f2744" stroke="#76b900" stroke-width="2"/>
+ <text x="88" y="828" fill="#76b900" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Tiled MMA/Copy + Atom Layer (CuTe spatial micro-kernels)</text>
+ <rect x="88" y="842" width="420" height="64" rx="10" fill="#1a2e05" stroke="#76b900" stroke-width="2"/>
+ <text x="298" y="866" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">cute::TiledMma + cute::gemm()</text>
+ <text x="298" y="884" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">Tile MMA atoms across threads/data with permutations</text>
+ <text x="298" y="898" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">Fully static inner loops - fully unrolled micro-kernels</text>
+ <rect x="528" y="842" width="420" height="64" rx="10" fill="#1a2e05" stroke="#76b900" stroke-width="2"/>
+ <text x="738" y="866" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">cute::TiledCopy + cute::copy()</text>
+ <text x="738" y="884" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">GmemTiledCopy - SmemCopyAtom - register fragments</text>
+ <text x="738" y="898" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">LDGSTS cp.async - TMA - tcgen05.cp paths</text>
+ <rect x="968" y="842" width="420" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="1178" y="866" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">cute::Mma_Atom / Copy_Atom</text>
+ <text x="1178" y="884" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Arch-specific instruction metadata wrappers</text>
+ <text x="1178" y="898" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">mma.sync - wgmma - tcgen05.mma - mma.sp</text>
+ <rect x="1408" y="842" width="420" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1618" y="866" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">CuTe Layout Algebra</text>
+ <text x="1618" y="884" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Layout + Tensor - tiling/partition/composition</text>
+ <text x="1618" y="898" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Same vocabulary for thread tensors and data tensors</text>
+ <line x1="960" y1="906" x2="960" y2="924" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L6 Hardware -->
+ <rect x="60" y="926" width="1800" height="72" rx="12" fill="#0f2744" stroke="#22d3ee" stroke-width="2"/>
+ <text x="88" y="954" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L7 - NVIDIA GPU Hardware (Volta SM70 through Blackwell SM103)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0f2fe">
+  <rect x="88" y="966" width="50" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="113" y="983" text-anchor="middle">Volta</text>
+  <rect x="148" y="966" width="50" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="173" y="983" text-anchor="middle">Turing</text>
+  <rect x="208" y="966" width="50" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="233" y="983" text-anchor="middle">Ampere</text>
+  <rect x="268" y="966" width="40" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="288" y="983" text-anchor="middle">Ada</text>
+  <rect x="318" y="966" width="50" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="343" y="983" text-anchor="middle">Hopper</text>
+  <rect x="378" y="966" width="60" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="408" y="983" text-anchor="middle">Blackwell</text>
+  <rect x="448" y="966" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="473" y="983" text-anchor="middle">Tensor</text>
+  <rect x="508" y="966" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="533" y="983" text-anchor="middle">Cores</text>
+  <rect x="568" y="966" width="40" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="588" y="983" text-anchor="middle">TMA</text>
+  <rect x="618" y="966" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="643" y="983" text-anchor="middle">GMMA</text>
+  <rect x="678" y="966" width="60" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="708" y="983" text-anchor="middle">tcgen05</text>
+  <rect x="748" y="966" width="40" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="768" y="983" text-anchor="middle">TMEM</text>
+  <rect x="798" y="966" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="823" y="983" text-anchor="middle">FP64</text>
+  <rect x="858" y="966" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="883" y="983" text-anchor="middle">TF32</text>
+  <rect x="918" y="966" width="40" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="938" y="983" text-anchor="middle">FP16</text>
+  <rect x="968" y="966" width="40" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="988" y="983" text-anchor="middle">BF16</text>
+  <rect x="1018" y="966" width="40" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1038" y="983" text-anchor="middle">FP8</text>
+  <rect x="1068" y="966" width="40" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1088" y="983" text-anchor="middle">FP4</text>
+  <rect x="1118" y="966" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1143" y="983" text-anchor="middle">NVFP4</text>
+  <rect x="1178" y="966" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1203" y="983" text-anchor="middle">MXFP4</text>
+  <rect x="1238" y="966" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1263" y="983" text-anchor="middle">INT8</text>
+  <rect x="1298" y="966" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1323" y="983" text-anchor="middle">INT4</text>
+  <rect x="1358" y="966" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1383" y="983" text-anchor="middle">cp.async</text>
+  <rect x="1418" y="966" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1443" y="983" text-anchor="middle">cluster</text>
+  <rect x="1478" y="966" width="60" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1508" y="983" text-anchor="middle">mbarrier</text>
+  <rect x="1548" y="966" width="50" height="24" rx="5" fill="#1a2e05" stroke="#76b900"/><text x="1573" y="983" text-anchor="middle">peak %</text>
+  <rect x="1608" y="966" width="80" height="24" rx="5" fill="#1a2e05" stroke="#76b900"/><text x="1648" y="983" text-anchor="middle">theoretical</text>
+  <rect x="1698" y="966" width="50" height="24" rx="5" fill="#1a2e05" stroke="#76b900"/><text x="1723" y="983" text-anchor="middle">PTX</text>
+  <rect x="1758" y="966" width="90" height="24" rx="5" fill="#1a2e05" stroke="#76b900"/><text x="1803" y="983" text-anchor="middle">cute/arch/*</text>
+ </g>
+
+ <!-- DETAIL Assembly -->
+ <rect x="60" y="1014" width="880" height="340" rx="14" fill="#0c1524" stroke="#76b900" stroke-width="2.5"/>
+ <text x="88" y="1046" fill="#76b900" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">GEMM Kernel Assembly (CUTLASS 3.x recipe)</text>
+ <text x="88" y="1068" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="11">Bottom-up composition: atoms - tiled ops - collective - kernel - device adapter</text>
+
+ <rect x="88" y="1084" width="820" height="36" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="498" y="1108" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1: CollectiveBuilder -&gt; CollectiveMainloop (DispatchPolicy + TiledMma + TiledCopy)</text>
+ <line x1="498" y1="1120" x2="498" y2="1132" stroke="#fb923c" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+ <rect x="88" y="1134" width="820" height="36" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="498" y="1158" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2: DefaultEpilogue / EVT -&gt; CollectiveEpilogue (fusion + type convert)</text>
+ <line x1="498" y1="1170" x2="498" y2="1182" stroke="#fb923c" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+ <rect x="88" y="1184" width="820" height="36" rx="6" fill="#1a2e05" stroke="#76b900"/>
+ <text x="498" y="1208" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3: GemmUniversal&lt;ProblemShape[M,N,K,L], Mainloop, Epilogue&gt;</text>
+ <line x1="498" y1="1220" x2="498" y2="1232" stroke="#76b900" stroke-width="1.5" marker-end="url(#arrow-lime)"/>
+ <rect x="88" y="1234" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="1258" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4: GemmUniversalAdapter&lt;GemmKernel&gt; - initialize/run on host</text>
+ <line x1="498" y1="1270" x2="498" y2="1282" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+ <rect x="88" y="1284" width="820" height="36" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="498" y="1308" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Alt: CuTe DSL Python kernel - same abstractions - faster iteration - DL framework native</text>
+
+ <text x="88" y="1342" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Triply nested loop maps: cluster tiles - k_tile mainloop - tiled_mma inner unrolled loops</text>
+
+ <!-- DETAIL Hopper Blackwell -->
+ <rect x="960" y="1014" width="900" height="340" rx="14" fill="#0c1224" stroke="#76b900" stroke-width="2.5"/>
+ <text x="988" y="1046" fill="#76b900" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Architecture-Specialized Pipelines + 2.x Legacy</text>
+ <text x="988" y="1068" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="11">Warp-specialized algorithms decouple TMA load warps from MMA/epilogue warps</text>
+
+ <text x="988" y="1092" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Hopper SM90 (TMA + GMMA)</text>
+ <rect x="988" y="1102" width="200" height="68" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="1088" y="1126" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">TMA producer warps</text>
+ <text x="1088" y="1144" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Async GMEM-&gt;SMEM - cluster multicast</text>
+ <text x="1088" y="1160" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">n-buffer pipeline stages</text>
+ <rect x="1200" y="1102" width="200" height="68" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="1300" y="1126" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">GMMA consumer warps</text>
+ <text x="1300" y="1144" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Warpgroup MMA - pingpong/cooperative</text>
+ <text x="1300" y="1160" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Persistent tile scheduler optional</text>
+ <rect x="1412" y="1102" width="200" height="68" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="1512" y="1126" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Epilogue warps</text>
+ <text x="1512" y="1144" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">EVT fusion - bias/activation</text>
+ <text x="1512" y="1160" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Register/SMEM store to GMEM</text>
+ <rect x="1624" y="1102" width="224" height="68" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1736" y="1126" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">CUTLASS 2.x hierarchy</text>
+ <text x="1736" y="1144" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">Threadblock - Warp - Instruction</text>
+ <text x="1736" y="1160" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">Still supported via GemmUniversal</text>
+
+ <text x="988" y="1190" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Blackwell SM100/SM103 (tcgen05 + TMEM)</text>
+ <rect x="988" y="1200" width="130" height="48" rx="6" fill="#1a2e05" stroke="#76b900"/>
+ <text x="1053" y="1222" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">TMA A/B/SF</text>
+ <text x="1053" y="1238" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">block-scaled loads</text>
+ <rect x="1130" y="1200" width="130" height="48" rx="6" fill="#1a2e05" stroke="#76b900"/>
+ <text x="1195" y="1222" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">tcgen05.mma</text>
+ <text x="1195" y="1238" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">1SM/2SM WGMMA</text>
+ <rect x="1272" y="1200" width="130" height="48" rx="6" fill="#1a2e05" stroke="#76b900"/>
+ <text x="1337" y="1222" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">TMEM accum</text>
+ <text x="1337" y="1238" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">tcgen05.cp/ld</text>
+ <rect x="1414" y="1200" width="130" height="48" rx="6" fill="#1a2e05" stroke="#76b900"/>
+ <text x="1479" y="1222" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Persistent</text>
+ <text x="1479" y="1238" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">StaticTileScheduler</text>
+ <rect x="1556" y="1200" width="130" height="48" rx="6" fill="#1a2e05" stroke="#76b900"/>
+ <text x="1621" y="1222" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">mxf8f6f4</text>
+ <text x="1621" y="1238" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">nvf4 blockscale</text>
+ <rect x="1698" y="1200" width="150" height="48" rx="6" fill="#1a2e05" stroke="#76b900"/>
+ <text x="1773" y="1222" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">CuTe DSL examples</text>
+ <text x="1773" y="1238" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">sm103 persistent GEMM</text>
+
+ <text x="988" y="1268" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Design principles (CUTLASS 3.0+)</text>
+ <rect x="988" y="1278" width="860" height="48" rx="6" fill="#1a1208" stroke="#76b900"/>
+ <text x="1418" y="1302" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="12">Hardware-detached interface - orthogonal composable layers - tag dispatch extension points</text>
+ <text x="1418" y="1318" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">CuTe layouts: correct-by-construction - reuse across arch generations - peak tensor core utilization</text>
+
+ <!-- L7 Position -->
+ <rect x="60" y="1370" width="1800" height="72" rx="12" fill="#1a1208" stroke="#76b900" stroke-width="2"/>
+ <text x="88" y="1398" fill="#76b900" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">Design Position (modular CUDA GEMM construction kit + CuTe tensor algebra)</text>
+ <text x="960" y="1424" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="13">Not a monolithic BLAS - composable templates/DSL for custom high-perf linear algebra kernels</text>
+
+ <!-- footers -->
+ <rect x="60" y="1458" width="1800" height="36" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1480" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10">Init: pick frontend - configure CollectiveBuilder or write CuTe DSL - compile - GemmUniversalAdapter::run</text>
+
+ <text x="60" y="1510" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: docs.nvidia.com/cutlass - github.com/NVIDIA/cutlass - NVIDIA CUTLASS 3.x/4.x technical blogs - arXiv GEMM hierarchy</text>
+</svg>

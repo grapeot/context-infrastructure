@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-orange" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#f97316"/>
+  </marker>
+  <marker id="arrow-red" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#ef4444"/>
+  </marker>
+  <marker id="arrow-cyan" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#22d3ee"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">hipDNN Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">Graph-based AMD DNN library (Beta) - github.com/ROCm/rocm-libraries/projects/hipdnn - plugin engines + cuDNN-aligned API</text>
+
+ <!-- L1 Workloads -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#f97316" stroke-width="2"/>
+ <text x="88" y="124" fill="#f97316" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Integration + Workloads (Beta 0.1.0 - ROCm 7.12+ - next-gen graph DNN for AMD GPUs)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="113" y="162" text-anchor="middle">PyTorch</text>
+  <rect x="150" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="175" y="162" text-anchor="middle">migrate</text>
+  <rect x="212" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="237" y="162" text-anchor="middle">cuDNN</text>
+  <rect x="274" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="299" y="162" text-anchor="middle">CMake</text>
+  <rect x="336" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="361" y="162" text-anchor="middle">Beta</text>
+  <rect x="398" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="423" y="162" text-anchor="middle">Conv</text>
+  <rect x="460" y="136" width="40" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="480" y="162" text-anchor="middle">BN</text>
+  <rect x="512" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="537" y="162" text-anchor="middle">MatMul</text>
+  <rect x="574" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="599" y="162" text-anchor="middle">Fusion</text>
+  <rect x="636" y="136" width="50" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="661" y="162" text-anchor="middle">Vision</text>
+  <rect x="698" y="136" width="40" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="718" y="162" text-anchor="middle">LLM</text>
+  <rect x="750" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="775" y="162" text-anchor="middle">BF16</text>
+  <rect x="812" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="837" y="162" text-anchor="middle">FP16</text>
+  <rect x="874" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="899" y="162" text-anchor="middle">FP32</text>
+  <rect x="936" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="961" y="162" text-anchor="middle">MI300</text>
+  <rect x="998" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1023" y="162" text-anchor="middle">MI250</text>
+  <rect x="1060" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1085" y="162" text-anchor="middle">RDNA</text>
+  <rect x="1122" y="136" width="50" height="40" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="1147" y="162" text-anchor="middle">MIOpen</text>
+  <rect x="1184" y="136" width="50" height="40" rx="6" fill="#1a2e05" stroke="#76b900"/><text x="1209" y="162" text-anchor="middle">cuDNN</text>
+  <rect x="1246" y="136" width="50" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1271" y="162" text-anchor="middle">hipBLASLt</text>
+  <rect x="1308" y="136" width="50" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1333" y="162" text-anchor="middle">CK</text>
+  <rect x="1370" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1395" y="162" text-anchor="middle">ROCm</text>
+  <rect x="1432" y="136" width="40" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1452" y="162" text-anchor="middle">HIP</text>
+  <rect x="1484" y="136" width="50" height="40" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="1509" y="162" text-anchor="middle">AMD</text>
+  <rect x="1546" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1571" y="162" text-anchor="middle">FlatBuf</text>
+  <rect x="1608" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1633" y="162" text-anchor="middle">plugin</text>
+  <rect x="1670" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1695" y="162" text-anchor="middle">Apache2</text>
+  <rect x="1732" y="136" width="40" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1752" y="162" text-anchor="middle">v0</text>
+  <rect x="1784" y="136" width="24" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1796" y="162" text-anchor="middle">.1</text>
+  <rect x="1820" y="136" width="40" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="1840" y="162" text-anchor="middle">IREE</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Programming Model -->
+ <rect x="60" y="216" width="1800" height="120" rx="12" fill="#0f2744" stroke="#f97316" stroke-width="2"/>
+ <text x="88" y="244" fill="#f97316" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Graph-Based Plugin Model (operation graph IR - engine plugins - industry-standard cuDNN-like conventions)</text>
+ <rect x="88" y="258" width="340" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="258" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Operation Graph IR</text>
+ <text x="258" y="300" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Nodes + tensors + attributes as FlatBuffers</text>
+ <text x="258" y="314" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Multi-op fusion opportunities at graph level</text>
+ <rect x="448" y="258" width="340" height="64" rx="10" fill="#431407" stroke="#f97316" stroke-width="2"/>
+ <text x="618" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Plugin Architecture</text>
+ <text x="618" y="300" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Engine plugins loaded at runtime by Backend</text>
+ <text x="618" y="314" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Future: heuristic + benchmarking plugins</text>
+ <rect x="808" y="258" width="340" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="978" y="282" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Frontend C++ API</text>
+ <text x="978" y="300" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Header-only Graph class - functional op style</text>
+ <text x="978" y="314" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">graph.batchnorm conv pointwise matmul</text>
+ <rect x="1168" y="258" width="340" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1338" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Backend C API</text>
+ <text x="1338" y="300" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Stable ABI descriptors for interop</text>
+ <text x="1338" y="314" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Plugin loader + graph execution orchestrator</text>
+ <rect x="1528" y="258" width="300" height="64" rx="10" fill="#134e4a" stroke="#5eead4" stroke-width="2"/>
+ <text x="1678" y="282" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Engine Selection</text>
+ <text x="1678" y="300" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Query plugins for applicable engine IDs</text>
+ <text x="1678" y="314" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Knobs + behavioral notes filter engines</text>
+ <line x1="960" y1="336" x2="960" y2="354" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Components -->
+ <rect x="60" y="356" width="1800" height="200" rx="12" fill="#0f2744" stroke="#22d3ee" stroke-width="2.5"/>
+ <text x="88" y="384" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - Core Components (header-only Frontend/SDK - shared Backend library - FlatBuffers serialization)</text>
+
+ <rect x="88" y="400" width="420" height="136" rx="12" fill="#431407" stroke="#f97316" stroke-width="2"/>
+ <text x="298" y="428" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Frontend (header-only C++)</text>
+ <text x="298" y="450" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Graph class - INode subclasses per op type</text>
+ <text x="298" y="468" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Tensor_attributes + op Attributes builders</text>
+ <text x="298" y="486" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">build_operation_graph create_execution_plans</text>
+ <text x="298" y="504" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">build_plans execute variant_pack workspace</text>
+ <text x="298" y="522" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">serialize/deserialize graph + plan (HDGP blob)</text>
+
+ <rect x="528" y="400" width="420" height="136" rx="12" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="738" y="428" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Backend (shared C library)</text>
+ <text x="738" y="450" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Plugin discovery: hipdnn_plugins/engines/</text>
+ <text x="738" y="468" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">hipdnnSetEnginePluginPaths_ext custom paths</text>
+ <text x="738" y="486" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Deserialize FlatBuffer graph to descriptors</text>
+ <text x="738" y="504" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">EngineHeur query - ExecutionPlan build</text>
+ <text x="738" y="522" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">hipdnnBackendExecute dispatch to plugin</text>
+
+ <rect x="968" y="400" width="420" height="136" rx="12" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="1178" y="428" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">SDK Libraries (header-only)</text>
+ <text x="1178" y="450" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Data SDK: types tensor utils engine registry</text>
+ <text x="1178" y="468" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Flatbuffers SDK: schemas graph wrappers JSON</text>
+ <text x="1178" y="486" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Plugin SDK: engine_plugin_api.h interfaces</text>
+ <text x="1178" y="504" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Logging spdlog - verification - fp16/bf16 utils</text>
+ <text x="1178" y="522" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">MigratableMemory utilities::Tensor helpers</text>
+
+ <rect x="1408" y="400" width="420" height="136" rx="12" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1618" y="428" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Backend Descriptors</text>
+ <text x="1618" y="450" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">OPERATIONGRAPH - ENGINEHEUR - ENGINECFG</text>
+ <text x="1618" y="468" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">ENGINE - EXECUTION_PLAN - VARIANT_PACK</text>
+ <text x="1618" y="486" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">SetAttribute Finalize GetAttribute pattern</text>
+ <text x="1618" y="504" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Engine knobs configurable per engine ID</text>
+ <text x="1618" y="522" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">cuDNN Backend descriptor alignment for migration</text>
+
+ <line x1="960" y1="556" x2="960" y2="574" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Execution Pipeline -->
+ <rect x="60" y="576" width="1800" height="120" rx="12" fill="#0f2744" stroke="#f97316" stroke-width="2"/>
+ <text x="88" y="604" fill="#f97316" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Execution Pipeline (build graph - match engine - plan - variant pack - plugin execute)</text>
+ <rect x="88" y="618" width="340" height="64" rx="10" fill="#431407" stroke="#f97316" stroke-width="2"/>
+ <text x="258" y="642" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">1. Build Graph</text>
+ <text x="258" y="660" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Graph + tensors + chained operations</text>
+ <text x="258" y="674" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">build_operation_graph serialize to backend</text>
+ <rect x="448" y="618" width="340" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="618" y="642" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">2. Engine Match</text>
+ <text x="618" y="660" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Backend queries plugins for applicable IDs</text>
+ <text x="618" y="674" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Optional knob settings per engine config</text>
+ <rect x="808" y="618" width="340" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="978" y="642" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">3. Build Plans</text>
+ <text x="978" y="660" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">create_execution_plans build_plans</text>
+ <text x="978" y="674" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">ExecutionPlan = engine config + graph</text>
+ <rect x="1168" y="618" width="340" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="1338" y="642" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">4. Variant Pack</text>
+ <text x="1338" y="660" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Map tensor UID to device memory ptrs</text>
+ <text x="1338" y="674" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Alloc workspace - sync host/device data</text>
+ <rect x="1528" y="618" width="300" height="64" rx="10" fill="#134e4a" stroke="#5eead4" stroke-width="2"/>
+ <text x="1678" y="642" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">5. Plugin Execute</text>
+ <text x="1678" y="660" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">EnginePluginExecuteOpGraph on HIP stream</text>
+ <text x="1678" y="674" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Fused kernel from selected provider engine</text>
+ <line x1="960" y1="696" x2="960" y2="714" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L5 Engine Plugins -->
+ <rect x="60" y="716" width="1800" height="120" rx="12" fill="#0f2744" stroke="#22d3ee" stroke-width="2"/>
+ <text x="88" y="744" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Engine Provider Plugins (dnn-providers/ - static vs dynamic kernel engines)</text>
+ <rect x="88" y="758" width="280" height="64" rx="10" fill="#450a0a" stroke="#ef4444" stroke-width="2"/>
+ <text x="228" y="782" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">MIOpen Provider</text>
+ <text x="228" y="800" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">Conv Fwd/Dgrad/Wgrad BN fused graphs</text>
+ <text x="228" y="814" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">Static precompiled - wraps legacy MIOpen</text>
+ <rect x="388" y="758" width="280" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="528" y="782" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">hipBLASLt Provider</text>
+ <text x="528" y="800" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Optimized GEMM MatMul operations</text>
+ <text x="528" y="814" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Single-library dependency per provider</text>
+ <rect x="688" y="758" width="280" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="828" y="782" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">CK Provider (WIP)</text>
+ <text x="828" y="800" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Composable Kernel templated HIP tiles</text>
+ <text x="828" y="814" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Broad op coverage planned</text>
+ <rect x="988" y="758" width="280" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="1128" y="782" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">IREE / Fusilli (future)</text>
+ <text x="1128" y="800" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Dynamic JIT-compiled fusion kernels</text>
+ <text x="1128" y="814" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Broad graph pattern support</text>
+ <rect x="1288" y="758" width="280" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1428" y="782" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">CPU Reference Impl</text>
+ <text x="1428" y="800" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Ground-truth validation only</text>
+ <text x="1428" y="814" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Conv BN Pointwise - not for production</text>
+ <rect x="1588" y="758" width="240" height="64" rx="10" fill="#134e4a" stroke="#5eead4" stroke-width="2"/>
+ <text x="1708" y="782" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Plugin API</text>
+ <text x="1708" y="800" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">GetApplicableEngineIds CreateContext</text>
+ <text x="1708" y="814" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">ExecuteOpGraph - unique int64 engine IDs</text>
+ <line x1="960" y1="836" x2="960" y2="854" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L6 Package -->
+ <rect x="60" y="856" width="1800" height="56" rx="12" fill="#0f2744" stroke="#f97316" stroke-width="2"/>
+ <text x="88" y="884" fill="#f97316" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Repository Layout (rocm-libraries/projects/hipdnn - dnn-providers/ - tools/samples/tests)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0f2fe">
+  <rect x="88" y="892" width="50" height="24" rx="5" fill="#431407" stroke="#f97316"/><text x="113" y="909" text-anchor="middle">frontend/</text>
+  <rect x="148" y="892" width="50" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="173" y="909" text-anchor="middle">backend/</text>
+  <rect x="208" y="892" width="40" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="228" y="909" text-anchor="middle">sdk/</text>
+  <rect x="258" y="892" width="50" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="283" y="909" text-anchor="middle">flatbuf</text>
+  <rect x="318" y="892" width="50" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="343" y="909" text-anchor="middle">plugin-sdk</text>
+  <rect x="378" y="892" width="60" height="24" rx="5" fill="#450a0a" stroke="#ef4444"/><text x="408" y="909" text-anchor="middle">dnn-providers</text>
+  <rect x="448" y="892" width="50" height="24" rx="5" fill="#450a0a" stroke="#ef4444"/><text x="473" y="909" text-anchor="middle">miopen-p</text>
+  <rect x="508" y="892" width="60" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="538" y="909" text-anchor="middle">hipblaslt-p</text>
+  <rect x="578" y="892" width="40" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="598" y="909" text-anchor="middle">CK-p</text>
+  <rect x="628" y="892" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="653" y="909" text-anchor="middle">samples</text>
+  <rect x="688" y="892" width="40" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="708" y="909" text-anchor="middle">tools</text>
+  <rect x="738" y="892" width="40" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="758" y="909" text-anchor="middle">tests</text>
+  <rect x="788" y="892" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="813" y="909" text-anchor="middle">HDGP</text>
+  <rect x="848" y="892" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="873" y="909" text-anchor="middle">FlatBuf</text>
+  <rect x="908" y="892" width="50" height="24" rx="5" fill="#450a0a" stroke="#ef4444"/><text x="933" y="909" text-anchor="middle">MIOpen</text>
+  <rect x="968" y="892" width="50" height="24" rx="5" fill="#1a2e05" stroke="#76b900"/><text x="993" y="909" text-anchor="middle">cuDNN</text>
+  <rect x="1028" y="892" width="50" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="1053" y="909" text-anchor="middle">hipBLASLt</text>
+  <rect x="1088" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1113" y="909" text-anchor="middle">ROCm</text>
+  <rect x="1148" y="892" width="40" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1168" y="909" text-anchor="middle">HIP</text>
+  <rect x="1198" y="892" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1223" y="909" text-anchor="middle">spdlog</text>
+  <rect x="1258" y="892" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1283" y="909" text-anchor="middle">Doxygen</text>
+  <rect x="1318" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1343" y="909" text-anchor="middle">ROCm712</text>
+  <rect x="1378" y="892" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1403" y="909" text-anchor="middle">Beta</text>
+  <rect x="1438" y="892" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1463" y="909" text-anchor="middle">Apache2</text>
+  <rect x="1498" y="892" width="50" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="1523" y="909" text-anchor="middle">IREE</text>
+  <rect x="1558" y="892" width="50" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="1583" y="909" text-anchor="middle">zenDNN</text>
+  <rect x="1618" y="892" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1643" y="909" text-anchor="middle">knobs</text>
+  <rect x="1678" y="892" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1703" y="909" text-anchor="middle">v0.1.0</text>
+  <rect x="1738" y="892" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1763" y="909" text-anchor="middle">C++17</text>
+  <rect x="1798" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1823" y="909" text-anchor="middle">AMD</text>
+ </g>
+
+ <!-- DETAIL BatchNorm workflow -->
+ <rect x="60" y="928" width="880" height="340" rx="14" fill="#0c1524" stroke="#f97316" stroke-width="2.5"/>
+ <text x="88" y="960" fill="#f97316" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Frontend BatchNorm Graph Execution Path (official sample workflow)</text>
+ <text x="88" y="982" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="11">Graph IR serialized via FlatBuffers to Backend - plugin engine executes fused kernel</text>
+
+ <rect x="88" y="998" width="820" height="36" rx="6" fill="#431407" stroke="#f97316"/>
+ <text x="498" y="1022" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1: Graph g - set_compute_data_type - tensor(x,scale,bias) - batchnorm attrs</text>
+ <line x1="498" y1="1034" x2="498" y2="1046" stroke="#f97316" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+ <rect x="88" y="1048" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="1072" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2: build_operation_graph(handle) - Backend deserializes nodes to OperationGraph</text>
+ <line x1="498" y1="1084" x2="498" y2="1096" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+ <rect x="88" y="1098" width="820" height="36" rx="6" fill="#422006" stroke="#fbbf24"/>
+ <text x="498" y="1122" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3: create_execution_plans - optional engine knobs - build_plans</text>
+ <line x1="498" y1="1134" x2="498" y2="1146" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrow-red)"/>
+ <rect x="88" y="1148" width="820" height="36" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="498" y="1172" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4: variantPack UID to deviceData() - alloc workspace - MigratableMemory sync</text>
+ <line x1="498" y1="1184" x2="498" y2="1196" stroke="#fb923c" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+ <rect x="88" y="1198" width="820" height="36" rx="6" fill="#450a0a" stroke="#ef4444"/>
+ <text x="498" y="1222" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 5: graph.execute - MIOpen/hipBLASLt plugin EnginePluginExecuteOpGraph</text>
+ <line x1="498" y1="1234" x2="498" y2="1246" stroke="#ef4444" stroke-width="1.5"/>
+ <rect x="88" y="1248" width="820" height="28" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="498" y="1268" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Serialize: HDGP container bundles graph_blob + optional plan_blob for fast reload</text>
+
+ <text x="88" y="1294" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Backend path: CreateDescriptor ENGINEHEUR - GetAttribute RESULTS - EXECUTION_PLAN - Execute</text>
+ <text x="88" y="1310" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Migration guide: docs migrate cuDNN project to hipDNN - matching Backend descriptor model</text>
+
+ <!-- DETAIL Position -->
+ <rect x="960" y="928" width="900" height="340" rx="14" fill="#0c1224" stroke="#f97316" stroke-width="2.5"/>
+ <text x="988" y="960" fill="#f97316" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Five Design Pillars + Ecosystem Position</text>
+ <text x="988" y="982" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="11">Next-gen AMD graph DNN - plugin-extensible - cuDNN-aligned - MIOpen legacy via provider plugin</text>
+
+ <text x="988" y="1006" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Five Pillars</text>
+ <rect x="988" y="1016" width="130" height="48" rx="6" fill="#431407" stroke="#f97316"/>
+ <text x="1053" y="1038" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Graph IR</text>
+ <text x="1053" y="1054" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">FlatBuffers ops graph</text>
+ <rect x="1130" y="1016" width="130" height="48" rx="6" fill="#431407" stroke="#f97316"/>
+ <text x="1195" y="1038" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Plugins</text>
+ <text x="1195" y="1054" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Runtime engine load</text>
+ <rect x="1272" y="1016" width="130" height="48" rx="6" fill="#422006" stroke="#fbbf24"/>
+ <text x="1337" y="1038" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Fusion</text>
+ <text x="1337" y="1054" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">Multi-op single kernel</text>
+ <rect x="1414" y="1016" width="130" height="48" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1479" y="1038" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">cuDNN-like</text>
+ <text x="1479" y="1054" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">Backend descriptors</text>
+ <rect x="1556" y="1016" width="130" height="48" rx="6" fill="#450a0a" stroke="#ef4444"/>
+ <text x="1621" y="1038" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">MIOpen bridge</text>
+ <text x="1621" y="1054" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="9">Provider plugin reuse</text>
+ <rect x="1698" y="1016" width="150" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1773" y="1038" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Extensible</text>
+ <text x="1773" y="1054" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">External providers OK</text>
+
+ <text x="988" y="1082" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">vs Related Stacks</text>
+ <rect x="988" y="1092" width="200" height="68" rx="6" fill="#431407" stroke="#f97316"/>
+ <text x="1088" y="1116" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">hipDNN</text>
+ <text x="1088" y="1134" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Next-gen graph + plugins</text>
+ <text x="1088" y="1150" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Beta - limited op coverage</text>
+ <rect x="1200" y="1092" width="200" height="68" rx="6" fill="#450a0a" stroke="#ef4444"/>
+ <text x="1300" y="1116" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">MIOpen</text>
+ <text x="1300" y="1134" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="9">Mature imperative + Fusion</text>
+ <text x="1300" y="1150" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="9">Backend via hipDNN plugin</text>
+ <rect x="1412" y="1092" width="200" height="68" rx="6" fill="#1a2e05" stroke="#76b900"/>
+ <text x="1512" y="1116" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">cuDNN</text>
+ <text x="1512" y="1134" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">NVIDIA Graph API reference</text>
+ <text x="1512" y="1150" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">Migration target API shape</text>
+ <rect x="1624" y="1092" width="224" height="68" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1736" y="1116" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">cudnn-frontend</text>
+ <text x="1736" y="1134" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">NVIDIA open wrapper layer</text>
+ <text x="1736" y="1150" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">Analogous role to hipDNN FE</text>
+
+ <text x="988" y="1178" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Quick Start</text>
+ <rect x="988" y="1188" width="860" height="48" rx="6" fill="#1a1208" stroke="#f97316"/>
+ <text x="1418" y="1212" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="12">find_package(hipdnn_frontend) - Graph - build_operation_graph - build_plans - execute</text>
+ <text x="1418" y="1228" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Docs: rocm.docs.amd.com/projects/hipdnn - github.com/ROCm/rocm-libraries/projects/hipdnn</text>
+
+ <!-- footer bar -->
+ <rect x="60" y="1288" width="1800" height="72" rx="12" fill="#1a1208" stroke="#f97316" stroke-width="2"/>
+ <text x="88" y="1316" fill="#f97316" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">Design Position (AMD next-gen graph DNN - plugin engines replace monolithic MIOpen - cuDNN migration path)</text>
+ <text x="960" y="1342" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="13">FlatBuffers graph IR + runtime plugin loading + provider ecosystem = extensible ROCm DNN stack for fusion</text>
+
+ <!-- footers -->
+ <rect x="60" y="1376" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1396" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Init: load Backend - discover engine plugins - create handle - optional plugin path override</text>
+ <text x="960" y="1414" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Loop: build graph - engine match - execution plan - variant pack - plugin ExecuteOpGraph on HIP stream</text>
+
+ <text x="60" y="1460" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: rocm.docs.amd.com/projects/hipdnn - github.com/ROCm/rocm-libraries/projects/hipdnn - ROCm/hipDNN Design.md</text>
+</svg>

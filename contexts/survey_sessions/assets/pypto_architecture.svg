@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-red" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#dc2626"/>
+  </marker>
+  <marker id="arrow-amber" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#f59e0b"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">PyPTO Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">PTO Tile Programming - Multi-Level IR - PTO Virtual ISA - MPMD Runtime - Ascend NPU - pypto.gitcode.com</text>
+
+ <!-- L1 Applications -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#dc2626" stroke-width="2"/>
+ <text x="88" y="124" fill="#dc2626" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Applications + Framework Integration (Tensor-level fused ops and full LLM networks)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="70" height="40" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="123" y="162" text-anchor="middle">GEMM</text>
+  <rect x="170" y="136" width="80" height="40" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="210" y="162" text-anchor="middle">softmax</text>
+  <rect x="262" y="136" width="80" height="40" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="302" y="162" text-anchor="middle">rms_norm</text>
+  <rect x="354" y="136" width="50" height="40" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="379" y="162" text-anchor="middle">RoPE</text>
+  <rect x="416" y="136" width="80" height="40" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="456" y="162" text-anchor="middle">gemm_fuse</text>
+  <rect x="508" y="136" width="50" height="40" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="533" y="162" text-anchor="middle">MoE</text>
+  <rect x="570" y="136" width="70" height="40" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="605" y="162" text-anchor="middle">Qwen3</text>
+  <rect x="652" y="136" width="80" height="40" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="692" y="162" text-anchor="middle">DeepSeek</text>
+  <rect x="744" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#f59e0b"/><text x="774" y="162" text-anchor="middle">@pl.jit</text>
+  <rect x="816" y="136" width="80" height="40" rx="6" fill="#431407" stroke="#f59e0b"/><text x="856" y="162" text-anchor="middle">@pl.program</text>
+  <rect x="908" y="136" width="80" height="40" rx="6" fill="#431407" stroke="#f59e0b"/><text x="948" y="162" text-anchor="middle">torch_npu</text>
+  <rect x="1000" y="136" width="80" height="40" rx="6" fill="#431407" stroke="#f59e0b"/><text x="1040" y="162" text-anchor="middle">custom_op</text>
+  <rect x="1092" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#f59e0b"/><text x="1127" y="162" text-anchor="middle">pypto-lib</text>
+  <rect x="1174" y="136" width="70" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1209" y="162" text-anchor="middle">910B/C</text>
+  <rect x="1256" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1281" y="162" text-anchor="middle">950</text>
+  <rect x="1318" y="136" width="70" height="40" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="1353" y="162" text-anchor="middle">cluster</text>
+  <rect x="1400" y="136" width="60" height="40" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="1430" y="162" text-anchor="middle">v0.2.0</text>
+  <rect x="1472" y="136" width="80" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1512" y="162" text-anchor="middle">golden test</text>
+  <rect x="1564" y="136" width="80" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1604" y="162" text-anchor="middle">kernel-insight</text>
+  <rect x="1656" y="136" width="90" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1701" y="162" text-anchor="middle">PyPTO Toolkit</text>
+  <rect x="1758" y="136" width="90" height="40" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="1803" y="162" text-anchor="middle">prefill/dec</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 DSL Frontend -->
+ <rect x="60" y="216" width="1800" height="120" rx="12" fill="#0f2744" stroke="#ef4444" stroke-width="2"/>
+ <text x="88" y="244" fill="#ef4444" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Python DSL Frontend (pl.* - layered Tensor/Tile/Block abstractions)</text>
+ <rect x="88" y="258" width="340" height="64" rx="10" fill="#450a0a" stroke="#dc2626" stroke-width="2"/>
+ <text x="258" y="282" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Kernel Forms</text>
+ <text x="258" y="300" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">@pl.jit - @pl.jit.inline - @pl.program</text>
+ <text x="258" y="314" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">@pl.function - pl.at scopes for tile binding</text>
+ <rect x="448" y="258" width="340" height="64" rx="10" fill="#450a0a" stroke="#dc2626" stroke-width="2"/>
+ <text x="618" y="282" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Loop Constructs</text>
+ <text x="618" y="300" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">pl.range - pl.parallel - pl.pipeline - pl.spmd</text>
+ <text x="618" y="314" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">Data parallelism + pipeline overlap control</text>
+ <rect x="808" y="258" width="340" height="64" rx="10" fill="#431407" stroke="#f59e0b" stroke-width="2"/>
+ <text x="978" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Tensor-Level API (algo dev)</text>
+ <text x="978" y="300" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Declarative tensor ops - dynamic shape</text>
+ <text x="978" y="314" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Symbolic dims - semantic labels for profiling</text>
+ <rect x="1168" y="258" width="340" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1338" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Hardware Op Classes</text>
+ <text x="1338" y="300" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Vector ops - Cube (matmul) - MTE (data mv)</text>
+ <text x="1338" y="314" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">TileShape config - L1 reuse - custom PTO ops</text>
+ <rect x="1528" y="258" width="300" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1678" y="282" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Expert Levels</text>
+ <text x="1678" y="300" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Algo: Tensor - Perf: Tile/Block</text>
+ <text x="1678" y="314" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">System: Block + PTO virtual ISA</text>
+ <line x1="960" y1="336" x2="960" y2="354" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Multi-Level IR -->
+ <rect x="60" y="356" width="1800" height="200" rx="12" fill="#0f2744" stroke="#dc2626" stroke-width="2.5"/>
+ <text x="88" y="384" fill="#dc2626" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - Multi-Level IR Graph System (Tensor - Tile - Block - Execute Graph)</text>
+
+ <rect x="88" y="400" width="420" height="136" rx="12" fill="#450a0a" stroke="#ef4444" stroke-width="2"/>
+ <text x="298" y="428" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Tensor Graph</text>
+ <text x="298" y="450" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">User algorithm: Tensor nodes + operations</text>
+ <text x="298" y="468" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">High-level fused compute description</text>
+ <text x="298" y="486" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">Pass: graph opt, shape inference, fusion</text>
+ <text x="298" y="504" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">Algorithm developer primary view</text>
+ <text x="298" y="522" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">Dynamic/symbolic shape support</text>
+
+ <rect x="528" y="400" width="420" height="136" rx="12" fill="#431407" stroke="#f59e0b" stroke-width="2"/>
+ <text x="738" y="428" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Tile Graph</text>
+ <text x="738" y="450" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Tile + TileOp nodes from TileShape expand</text>
+ <text x="738" y="468" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Auto memory placement across GM/L1/L0/UB</text>
+ <text x="738" y="486" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Insert MTE copy nodes between mem levels</text>
+ <text x="738" y="504" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Pass: tile opt, SRAM-aware scheduling</text>
+ <text x="738" y="522" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">TADD, MATMUL and other PTO tile ops</text>
+
+ <rect x="968" y="400" width="420" height="136" rx="12" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1178" y="428" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Block Graph</text>
+ <text x="1178" y="450" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Partition Tile Graph into AI-Core subgraphs</text>
+ <text x="1178" y="468" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">On-chip memory alloc - sync insertion</text>
+ <text x="1178" y="486" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Instruction scheduling - double buffering</text>
+ <text x="1178" y="504" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Pass: HW-specific opt for Da Vinci cores</text>
+ <text x="1178" y="522" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">One block runnable on single AI Core</text>
+
+ <rect x="1408" y="400" width="420" height="136" rx="12" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1618" y="428" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Execute Graph</text>
+ <text x="1618" y="450" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Final IR: block call nodes + dependencies</text>
+ <text x="1618" y="468" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">fx-labeled call nodes invoke Block subgraphs</text>
+ <text x="1618" y="486" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Device scheduler input - MPMD task graph</text>
+ <text x="1618" y="504" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Visualized in PyPTO Toolkit swimlanes</text>
+ <text x="1618" y="522" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Integrates all prior pass optimizations</text>
+
+ <line x1="960" y1="556" x2="960" y2="574" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Compiler CodeGen -->
+ <rect x="60" y="576" width="1800" height="120" rx="12" fill="#0f2744" stroke="#f59e0b" stroke-width="2"/>
+ <text x="88" y="604" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Compiler Pipeline + CodeGen (Pass chains - PTO virtual ISA - target binary)</text>
+ <rect x="88" y="618" width="340" height="64" rx="10" fill="#431407" stroke="#f59e0b" stroke-width="2"/>
+ <text x="258" y="642" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Graph Lowering Passes</text>
+ <text x="258" y="660" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Tensor to Tile to Block to Execute</text>
+ <text x="258" y="674" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Each stage: series of IR rewrite passes</text>
+ <rect x="448" y="618" width="340" height="64" rx="10" fill="#450a0a" stroke="#dc2626" stroke-width="2"/>
+ <text x="618" y="642" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">PTO CodeGen</text>
+ <text x="618" y="660" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">Emit PTO virtual instruction bytecode</text>
+ <text x="618" y="674" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">.pto files - pto-isa tile library headers</text>
+ <rect x="808" y="618" width="340" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="978" y="642" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">PTOAS (MLIR/LLVM)</text>
+ <text x="978" y="660" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Parse .pto - Da Vinci-specific passes</text>
+ <text x="978" y="674" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Lower PTO bytecode to C++ / device code</text>
+ <rect x="1168" y="618" width="340" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1338" y="642" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">CANN Toolchain</text>
+ <text x="1338" y="660" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Ascend compiler - kernel binary build</text>
+ <text x="1338" y="674" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">ASCEND_HOME_PATH - setenv.bash</text>
+ <rect x="1528" y="618" width="300" height="64" rx="10" fill="#450a0a" stroke="#ef4444" stroke-width="2"/>
+ <text x="1678" y="642" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Debug + Toolchain</text>
+ <text x="1678" y="660" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">IR dump at each graph stage</text>
+ <text x="1678" y="674" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">PyPTO Toolkit graph viewer + perf data</text>
+ <line x1="960" y1="696" x2="960" y2="714" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L5 Runtime -->
+ <rect x="60" y="716" width="1800" height="120" rx="12" fill="#0f2744" stroke="#dc2626" stroke-width="2"/>
+ <text x="88" y="744" fill="#dc2626" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - MPMD Runtime (simpler - AICPU + AICore task orchestration)</text>
+ <rect x="88" y="758" width="340" height="64" rx="10" fill="#450a0a" stroke="#dc2626" stroke-width="2"/>
+ <text x="258" y="782" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">HostMachine (Host)</text>
+ <text x="258" y="800" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">Resource init - compile trigger - launch</text>
+ <text x="258" y="814" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">PyTorch/torch_npu operator registration</text>
+ <rect x="448" y="758" width="340" height="64" rx="10" fill="#431407" stroke="#f59e0b" stroke-width="2"/>
+ <text x="618" y="782" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">DeviceMachine + Stitch</text>
+ <text x="618" y="800" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Build DeviceTask from Execute Graph</text>
+ <text x="618" y="814" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Schedule CallTask to processor cores</text>
+ <rect x="808" y="758" width="340" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="978" y="782" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">CoreMachine (AI Core)</text>
+ <text x="978" y="800" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Execute CallTask - run Block Graph binary</text>
+ <text x="978" y="814" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Cube/Vector pipeline - MTE data movement</text>
+ <rect x="1168" y="758" width="340" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1338" y="782" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">AICPU Coordinator</text>
+ <text x="1338" y="800" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">DeviceProgram orchestrates full flow</text>
+ <text x="1338" y="814" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Task dependency graph across cores</text>
+ <rect x="1528" y="758" width="300" height="64" rx="10" fill="#450a0a" stroke="#ef4444" stroke-width="2"/>
+ <text x="1678" y="782" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">MPMD Scheduling</text>
+ <text x="1678" y="800" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">Multiple programs on multiple cores</text>
+ <text x="1678" y="814" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">Diff from PTO-DSL SPMD kernel model</text>
+ <line x1="960" y1="836" x2="960" y2="854" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L6 Ecosystem -->
+ <rect x="60" y="856" width="1800" height="88" rx="12" fill="#0f2744" stroke="#f59e0b" stroke-width="2"/>
+ <text x="88" y="884" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Ecosystem Repos (pypto - simpler - ptoas - pto-isa - pypto-lib)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0f2fe">
+  <rect x="88" y="896" width="80" height="32" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="128" y="918" text-anchor="middle">pypto</text>
+  <rect x="180" y="896" width="80" height="32" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="220" y="918" text-anchor="middle">simpler</text>
+  <rect x="272" y="896" width="60" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="302" y="918" text-anchor="middle">ptoas</text>
+  <rect x="344" y="896" width="70" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="379" y="918" text-anchor="middle">pto-isa</text>
+  <rect x="426" y="896" width="80" height="32" rx="6" fill="#431407" stroke="#f59e0b"/><text x="466" y="918" text-anchor="middle">pypto-lib</text>
+  <rect x="518" y="896" width="60" height="32" rx="6" fill="#431407" stroke="#f59e0b"/><text x="548" y="918" text-anchor="middle">CANN</text>
+  <rect x="590" y="896" width="80" height="32" rx="6" fill="#431407" stroke="#f59e0b"/><text x="630" y="918" text-anchor="middle">torch_npu</text>
+  <rect x="682" y="896" width="80" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="722" y="918" text-anchor="middle">hw-native</text>
+  <rect x="774" y="896" width="70" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="809" y="918" text-anchor="middle">.pto bc</text>
+  <rect x="856" y="896" width="80" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="896" y="918" text-anchor="middle">Da Vinci</text>
+  <rect x="948" y="896" width="80" height="32" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="988" y="918" text-anchor="middle">pip install</text>
+  <rect x="1040" y="896" width="80" height="32" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="1080" y="918" text-anchor="middle">PyPI 0.2</text>
+  <rect x="1132" y="896" width="90" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1177" y="918" text-anchor="middle">gitcode docs</text>
+  <rect x="1234" y="896" width="80" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1274" y="918" text-anchor="middle">swimlane</text>
+  <rect x="1326" y="896" width="80" height="32" rx="6" fill="#431407" stroke="#f59e0b"/><text x="1366" y="918" text-anchor="middle">EXEC_KERNEL</text>
+  <rect x="1418" y="896" width="80" height="32" rx="6" fill="#431407" stroke="#f59e0b"/><text x="1458" y="918" text-anchor="middle">bdist_wheel</text>
+  <rect x="1510" y="896" width="80" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1550" y="918" text-anchor="middle">MLIR opt</text>
+  <rect x="1602" y="896" width="80" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1642" y="918" text-anchor="middle">LLVM</text>
+  <rect x="1694" y="896" width="154" height="32" rx="6" fill="#450a0a" stroke="#ef4444"/><text x="1771" y="918" text-anchor="middle">community driven</text>
+ </g>
+ <line x1="960" y1="944" x2="960" y2="962" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L7 Hardware -->
+ <rect x="60" y="964" width="1800" height="56" rx="12" fill="#0f2744" stroke="#22d3ee" stroke-width="2"/>
+ <text x="88" y="992" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L7 - Ascend NPU Hardware (Da Vinci - AI Core + AICPU - multi-level memory)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0f2fe">
+  <rect x="88" y="1000" width="60" height="24" rx="5" fill="#450a0a" stroke="#ef4444"/><text x="118" y="1017" text-anchor="middle">910B</text>
+  <rect x="158" y="1000" width="40" height="24" rx="5" fill="#450a0a" stroke="#ef4444"/><text x="178" y="1017" text-anchor="middle">910C</text>
+  <rect x="208" y="1000" width="40" height="24" rx="5" fill="#450a0a" stroke="#ef4444"/><text x="228" y="1017" text-anchor="middle">950</text>
+  <rect x="258" y="1000" width="60" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="288" y="1017" text-anchor="middle">AI Core</text>
+  <rect x="328" y="1000" width="50" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="353" y="1017" text-anchor="middle">AICPU</text>
+  <rect x="388" y="1000" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="413" y="1017" text-anchor="middle">Cube</text>
+  <rect x="448" y="1000" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="473" y="1017" text-anchor="middle">Vector</text>
+  <rect x="508" y="1000" width="40" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="528" y="1017" text-anchor="middle">MTE</text>
+  <rect x="558" y="1000" width="30" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="573" y="1017" text-anchor="middle">GM</text>
+  <rect x="598" y="1000" width="30" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="613" y="1017" text-anchor="middle">L1</text>
+  <rect x="638" y="1000" width="30" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="653" y="1017" text-anchor="middle">L0</text>
+  <rect x="678" y="1000" width="30" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="693" y="1017" text-anchor="middle">UB</text>
+  <rect x="718" y="1000" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="743" y="1017" text-anchor="middle">MMAD</text>
+  <rect x="778" y="1000" width="60" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="808" y="1017" text-anchor="middle">FIXPIPE</text>
+  <rect x="848" y="1000" width="50" height="24" rx="5" fill="#431407" stroke="#f59e0b"/><text x="873" y="1017" text-anchor="middle">FP16</text>
+  <rect x="908" y="1000" width="40" height="24" rx="5" fill="#431407" stroke="#f59e0b"/><text x="928" y="1017" text-anchor="middle">BF16</text>
+  <rect x="958" y="1000" width="40" height="24" rx="5" fill="#431407" stroke="#f59e0b"/><text x="978" y="1017" text-anchor="middle">INT8</text>
+  <rect x="1008" y="1000" width="60" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="1038" y="1017" text-anchor="middle">24 cores</text>
+  <rect x="1078" y="1000" width="70" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="1113" y="1017" text-anchor="middle">dbl buffer</text>
+  <rect x="1158" y="1000" width="60" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="1188" y="1017" text-anchor="middle">MTE sync</text>
+  <rect x="1228" y="1000" width="70" height="24" rx="5" fill="#450a0a" stroke="#ef4444"/><text x="1263" y="1017" text-anchor="middle">cluster</text>
+  <rect x="1308" y="1000" width="80" height="24" rx="5" fill="#450a0a" stroke="#ef4444"/><text x="1348" y="1017" text-anchor="middle">ND/DN fmt</text>
+  <rect x="1398" y="1000" width="60" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="1428" y="1017" text-anchor="middle">GlobalTensor</text>
+  <rect x="1468" y="1000" width="50" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="1493" y="1017" text-anchor="middle">TileShape</text>
+  <rect x="1528" y="1000" width="80" height="24" rx="5" fill="#431407" stroke="#f59e0b"/><text x="1568" y="1017" text-anchor="middle">PTO virtual</text>
+  <rect x="1618" y="1000" width="60" height="24" rx="5" fill="#431407" stroke="#f59e0b"/><text x="1648" y="1017" text-anchor="middle">MPMD</text>
+  <rect x="1688" y="1000" width="80" height="24" rx="5" fill="#450a0a" stroke="#ef4444"/><text x="1728" y="1017" text-anchor="middle">Ascend NPU</text>
+  <rect x="1778" y="1000" width="70" height="24" rx="5" fill="#450a0a" stroke="#ef4444"/><text x="1813" y="1017" text-anchor="middle">Da Vinci</text>
+ </g>
+
+ <!-- DETAIL Pipeline -->
+ <rect x="60" y="1036" width="880" height="340" rx="14" fill="#0c1524" stroke="#dc2626" stroke-width="2.5"/>
+ <text x="88" y="1068" fill="#dc2626" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Four-Stage IR Compile Pipeline</text>
+ <text x="88" y="1090" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="11">Abstract compute description to hardware Execute Graph + PTO binary</text>
+
+ <rect x="88" y="1106" width="820" height="36" rx="6" fill="#450a0a" stroke="#ef4444"/>
+ <text x="498" y="1130" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stage 1 Tensor Graph: user pl.* API - tensor ops - fusion - shape/symbolic passes</text>
+ <line x1="498" y1="1142" x2="498" y2="1154" stroke="#ef4444" stroke-width="1.5" marker-end="url(#arrow-red)"/>
+ <rect x="88" y="1156" width="820" height="36" rx="6" fill="#431407" stroke="#f59e0b"/>
+ <text x="498" y="1180" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stage 2 Tile Graph: TileShape expand - TileOp - auto mem placement - MTE COPY_IN/OUT</text>
+ <line x1="498" y1="1192" x2="498" y2="1204" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrow-amber)"/>
+ <rect x="88" y="1206" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="1230" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stage 3 Block Graph: partition per AI Core - on-chip alloc - sync - instr scheduling</text>
+ <line x1="498" y1="1242" x2="498" y2="1254" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow)"/>
+ <rect x="88" y="1256" width="820" height="36" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="498" y="1280" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stage 4 Execute Graph: block deps - CodeGen PTO ISA - ptoas - CANN - MPMD load</text>
+ <line x1="498" y1="1292" x2="498" y2="1304" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow)"/>
+ <rect x="88" y="1306" width="820" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="498" y="1330" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Runtime: HostMachine - DeviceMachine/Stitch - CoreMachine CallTask - AICPU coord</text>
+
+ <text x="88" y="1364" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">GEMM example: GM tiles - L1 double buffer - L0 MMAD - FIXPIPE - 4x6 core split on 24 cores</text>
+
+ <!-- DETAIL Position -->
+ <rect x="960" y="1036" width="900" height="340" rx="14" fill="#0c1224" stroke="#dc2626" stroke-width="2.5"/>
+ <text x="988" y="1068" fill="#dc2626" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Design Position: Full MPMD Stack vs PTO-DSL / cuTile</text>
+ <text x="988" y="1090" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="11">End-to-end Tensor graph to Ascend execution - not just SPMD kernel authoring</text>
+
+ <text x="988" y="1114" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Spectrum Comparison</text>
+ <rect x="988" y="1124" width="200" height="68" rx="6" fill="#422006" stroke="#ee4c2c"/>
+ <text x="1088" y="1148" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">PyTorch + CANN</text>
+ <text x="1088" y="1166" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Hand-written ACLNN/C++ kernels</text>
+ <text x="1088" y="1182" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Full control - heavy boilerplate</text>
+ <rect x="1200" y="1124" width="200" height="68" rx="6" fill="#450a0a" stroke="#dc2626"/>
+ <text x="1300" y="1148" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">PyPTO</text>
+ <text x="1300" y="1166" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="9">Tensor API - 4-level IR - MPMD runtime</text>
+ <text x="1300" y="1182" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="9">Fused ops + full model networks</text>
+ <rect x="1412" y="1124" width="200" height="68" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1512" y="1148" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">PTO-DSL</text>
+ <text x="1512" y="1166" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">SPMD kernel-level interface</text>
+ <text x="1512" y="1182" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">Similar spirit to NVIDIA cuTile</text>
+ <rect x="1624" y="1124" width="224" height="68" rx="6" fill="#1e1b4b" stroke="#6366f1"/>
+ <text x="1736" y="1148" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">TileLang / Triton</text>
+ <text x="1736" y="1166" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">General GPU DSL - not Ascend-native</text>
+ <text x="1736" y="1182" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">Different IR + runtime model</text>
+
+ <text x="988" y="1210" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Key Design Principles</text>
+ <rect x="988" y="1220" width="130" height="48" rx="6" fill="#450a0a" stroke="#ef4444"/>
+ <text x="1053" y="1242" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Tile-first</text>
+ <text x="1053" y="1258" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="9">HW-aware data blocks</text>
+ <rect x="1130" y="1220" width="130" height="48" rx="6" fill="#450a0a" stroke="#ef4444"/>
+ <text x="1195" y="1242" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Layered IR</text>
+ <text x="1195" y="1258" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="9">4 graph abstractions</text>
+ <rect x="1272" y="1220" width="130" height="48" rx="6" fill="#431407" stroke="#f59e0b"/>
+ <text x="1337" y="1242" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Auto SRAM</text>
+ <text x="1337" y="1258" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">MTE insert + placement</text>
+ <rect x="1414" y="1220" width="130" height="48" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1479" y="1242" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">MPMD</text>
+ <text x="1479" y="1258" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">Multi-program scheduling</text>
+ <rect x="1556" y="1220" width="130" height="48" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1621" y="1242" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">PTO ISA</text>
+ <text x="1621" y="1258" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">Virtual tile instructions</text>
+ <rect x="1698" y="1220" width="150" height="48" rx="6" fill="#450a0a" stroke="#ef4444"/>
+ <text x="1773" y="1242" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Full toolchain</text>
+ <text x="1773" y="1258" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="9">Compile + debug + perf viz</text>
+
+ <text x="988" y="1288" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">PyTorch Integration Patterns</text>
+ <rect x="988" y="1298" width="860" height="48" rx="6" fill="#1a1208" stroke="#dc2626"/>
+ <text x="1418" y="1322" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="12">torch_npu TORCH_LIBRARY_IMPL - torch.library @custom_op - C++ PTO kernel + EXEC_KERNEL_CMD</text>
+ <text x="1418" y="1338" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="10">pypto-lib: golden harness validates device output against torch reference</text>
+
+ <!-- footer bar -->
+ <rect x="60" y="1390" width="1800" height="72" rx="12" fill="#1a1208" stroke="#dc2626" stroke-width="2"/>
+ <text x="88" y="1418" fill="#dc2626" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">Design Position (Ascend-native PTO framework - Tensor productivity with Tile/Block perf control)</text>
+ <text x="960" y="1444" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="13">Multi-level IR lowering - PTO virtual ISA codegen - simpler MPMD runtime - PyPTO Toolkit observability</text>
+
+ <!-- footers -->
+ <rect x="60" y="1478" width="1800" height="36" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1500" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10">Init: pip install pypto - @pl.jit kernel - compile Tensor Graph - autoload Execute Graph on Ascend device</text>
+
+ <text x="60" y="1510" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: github.com/hw-native-sys/pypto - pypto-lib - pto-isa - PTOAS - pypto.gitcode.com - pypi.org/project/pypto</text>
+</svg>

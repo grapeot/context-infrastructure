@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-green" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#34a853"/>
+  </marker>
+  <marker id="arrow-purple" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#a78bfa"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">tpu-inference Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">vLLM TPU Hardware Plugin - Unified JAX to XLA Lowering - PyTorch + Flax on Google TPU</text>
+
+ <!-- L1 Entry -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#34a853" stroke-width="2"/>
+ <text x="88" y="124" fill="#34a853" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Entry Points (vLLM Standard Interface)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="120" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="148" y="162" text-anchor="middle">vllm serve</text>
+  <rect x="220" y="136" width="110" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="275" y="162" text-anchor="middle">OpenAI API</text>
+  <rect x="342" y="136" width="90" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="387" y="162" text-anchor="middle">VLLM_USE_V1</text>
+  <rect x="444" y="136" width="100" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="494" y="162" text-anchor="middle">pip install</text>
+  <rect x="556" y="136" width="110" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="611" y="162" text-anchor="middle">tpu-inference</text>
+  <rect x="678" y="136" width="80" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="718" y="162" text-anchor="middle">Llama3</text>
+  <rect x="770" y="136" width="60" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="800" y="162" text-anchor="middle">Qwen3</text>
+  <rect x="842" y="136" width="70" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="877" y="162" text-anchor="middle">Gemma4</text>
+  <rect x="924" y="136" width="80" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="964" y="162" text-anchor="middle">DeepSeek</text>
+  <rect x="1016" y="136" width="60" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="1046" y="162" text-anchor="middle">VLM</text>
+  <rect x="1088" y="136" width="80" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="1128" y="162" text-anchor="middle">embedding</text>
+  <rect x="1180" y="136" width="90" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="1225" y="162" text-anchor="middle">bfloat16</text>
+  <rect x="1282" y="136" width="70" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="1317" y="162" text-anchor="middle">LoRA</text>
+  <rect x="1364" y="136" width="100" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="1414" y="162" text-anchor="middle">JIT cache dir</text>
+  <rect x="1476" y="136" width="80" height="40" rx="6" fill="#2e1065" stroke="#8b5cf6"/><text x="1516" y="162" text-anchor="middle">vLLM V1</text>
+  <rect x="1568" y="136" width="80" height="40" rx="6" fill="#2e1065" stroke="#8b5cf6"/><text x="1608" y="162" text-anchor="middle">EngineCore</text>
+  <rect x="1660" y="136" width="90" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="1705" y="162" text-anchor="middle">v5e/v6e</text>
+  <rect x="1762" y="136" width="86" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="1805" y="162" text-anchor="middle">v7x Iron</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 vLLM + Plugin -->
+ <rect x="60" y="216" width="1800" height="120" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2"/>
+ <text x="88" y="244" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - vLLM V1 Engine + tpu-inference Hardware Plugin</text>
+ <rect x="88" y="258" width="240" height="60" rx="8" fill="#2e1065" stroke="#8b5cf6"/>
+ <text x="208" y="282" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">vLLM V1 EngineCore</text>
+ <text x="208" y="302" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Scheduler + KV cache manager + API server</text>
+ <rect x="344" y="258" width="260" height="60" rx="8" fill="#052e16" stroke="#34a853"/>
+ <text x="474" y="282" text-anchor="middle" fill="#dcfce7" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">TpuJaxPlatform</text>
+ <text x="474" y="302" text-anchor="middle" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="10">tpu_inference/platforms/tpu_jax.py plugin</text>
+ <rect x="620" y="258" width="260" height="60" rx="8" fill="#052e16" stroke="#34a853"/>
+ <text x="750" y="282" text-anchor="middle" fill="#dcfce7" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Unified JAX to XLA Path</text>
+ <text x="750" y="302" text-anchor="middle" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="10">All models lowered via JAX - ~20% throughput gain</text>
+ <rect x="896" y="258" width="240" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1016" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Async Scheduler</text>
+ <text x="1016" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Continuous batching + chunked prefill</text>
+ <rect x="1152" y="258" width="240" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1272" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Prefix Caching</text>
+ <text x="1272" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Paged KV blocks + prefix reuse</text>
+ <rect x="1408" y="258" width="220" height="60" rx="8" fill="#052e16" stroke="#34a853"/>
+ <text x="1518" y="282" text-anchor="middle" fill="#dcfce7" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">SPMD Execution</text>
+ <text x="1518" y="302" text-anchor="middle" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="10">Single program - XLA auto-shards across TPU</text>
+ <rect x="1644" y="258" width="194" height="60" rx="8" fill="#422006" stroke="#fcd34d"/>
+ <text x="1741" y="282" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Replaces torch_xla / PTXLA</text>
+ <text x="1741" y="302" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Former tpu_commons package renamed</text>
+ <line x1="960" y1="336" x2="960" y2="354" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Core -->
+ <rect x="60" y="356" width="1800" height="200" rx="12" fill="#0f2744" stroke="#34a853" stroke-width="2.5"/>
+ <text x="88" y="384" fill="#34a853" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - TPUWorker + Model Execution Paths</text>
+
+ <!-- TPUWorker -->
+ <rect x="88" y="400" width="420" height="136" rx="12" fill="#052e16" stroke="#34a853" stroke-width="2"/>
+ <text x="298" y="428" text-anchor="middle" fill="#dcfce7" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">JaxTPUWorker (TPUWorker)</text>
+ <text x="298" y="450" text-anchor="middle" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="10">tpu_inference/worker/tpu_worker_jax.py</text>
+ <text x="298" y="468" text-anchor="middle" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="10">init_device - execute_model - compile_or_warm_up</text>
+ <text x="298" y="486" text-anchor="middle" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="10">Pure function model: weights + KV + inputs in</text>
+ <text x="298" y="504" text-anchor="middle" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="10">Graph capture: warm all shape buckets at init</text>
+ <text x="298" y="522" text-anchor="middle" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="10">UniProcExecutor (single-host) or Ray (multi-host)</text>
+
+ <!-- Model Paths -->
+ <rect x="524" y="400" width="420" height="136" rx="12" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="734" y="428" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Three Model Implementation Paths</text>
+ <text x="734" y="450" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">1. Flax NNX native (MODEL_IMPL_TYPE=flax_nnx) - TPU tuned</text>
+ <text x="734" y="468" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">2. Torchax wrapper (vllm nn.Module - JAX arrays via torch_view)</text>
+ <text x="734" y="486" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">3. vLLM upstream PyTorch fallback (MODEL_IMPL_TYPE=vllm)</text>
+ <text x="734" y="504" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Auto-route: tpu-inference model if exists, else Torchax</text>
+ <text x="734" y="522" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">VllmModelWrapper handles KV cache for torch path</text>
+
+ <!-- KV + Attention -->
+ <rect x="960" y="400" width="340" height="136" rx="12" fill="#0c2d2d" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="1130" y="428" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">KV Cache + Attention (JAX-Native)</text>
+ <text x="1130" y="450" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Paged KV blocks - shared by Flax and Torchax paths</text>
+ <text x="1130" y="468" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">RaggedPagedAttention V3 (Pallas kernel)</text>
+ <text x="1130" y="486" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Fused KV scatter + attention - hides DMA latency</text>
+ <text x="1130" y="504" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">KV cache offload support</text>
+ <text x="1130" y="522" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Shared JAX sampler for all model paths</text>
+
+ <!-- Parallelism -->
+ <rect x="1316" y="400" width="516" height="136" rx="12" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1574" y="428" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">SPMD Parallelism + Disaggregation</text>
+ <text x="1574" y="450" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">TP / PP / DP / EP via JAX shard_map + device mesh</text>
+ <text x="1574" y="468" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">DCN-based Prefill/Decode disaggregation</text>
+ <text x="1574" y="486" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">EAGLE3 + Ngram speculative decoding</text>
+ <text x="1574" y="504" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Out-of-tree model support + multimodal (Flax)</text>
+ <text x="1574" y="522" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Multi-host via TPU_MULTIHOST_BACKEND=ray</text>
+
+ <text x="960" y="548" text-anchor="middle" fill="#34a853" font-family="JetBrains Mono, monospace" font-size="10">Hardware plugin: same vLLM UX - TPU-native kernels underneath - PyTorch devs need zero code changes via Torchax</text>
+ <line x1="960" y1="556" x2="960" y2="574" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Backends -->
+ <rect x="60" y="576" width="1800" height="88" rx="12" fill="#0f2744" stroke="#a78bfa" stroke-width="2"/>
+ <text x="88" y="604" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Pallas TPU Kernels &amp; XLA Compilation</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ede9fe">
+  <text x="88" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Attention:</text>
+  <rect x="160" y="612" width="50" height="36" rx="6" fill="#052e16" stroke="#34a853"/><text x="185" y="636" text-anchor="middle">RPA</text>
+  <rect x="222" y="612" width="40" height="36" rx="6" fill="#052e16" stroke="#34a853"/><text x="242" y="636" text-anchor="middle">v3</text>
+  <rect x="274" y="612" width="50" height="36" rx="6" fill="#052e16" stroke="#34a853"/><text x="299" y="636" text-anchor="middle">MLA</text>
+  <rect x="336" y="612" width="70" height="36" rx="6" fill="#052e16" stroke="#34a853"/><text x="371" y="636" text-anchor="middle">Pallas</text>
+  <text x="420" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Dense:</text>
+  <rect x="475" y="612" width="90" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="520" y="636" text-anchor="middle">AllGatherMM</text>
+  <rect x="577" y="612" width="80" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="617" y="636" text-anchor="middle">QuantMM</text>
+  <text x="670" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">MoE:</text>
+  <rect x="710" y="612" width="80" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="750" y="636" text-anchor="middle">FusedMoE</text>
+  <rect x="802" y="612" width="50" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="827" y="636" text-anchor="middle">GMM</text>
+  <text x="865" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Runtime:</text>
+  <rect x="935" y="612" width="50" height="36" rx="6" fill="#052e16" stroke="#34a853"/><text x="960" y="636" text-anchor="middle">JAX</text>
+  <rect x="997" y="612" width="50" height="36" rx="6" fill="#052e16" stroke="#34a853"/><text x="1022" y="636" text-anchor="middle">XLA</text>
+  <rect x="1059" y="612" width="70" height="36" rx="6" fill="#052e16" stroke="#34a853"/><text x="1094" y="636" text-anchor="middle">OpenXLA</text>
+  <rect x="1141" y="612" width="70" height="36" rx="6" fill="#431407" stroke="#f97316"/><text x="1176" y="636" text-anchor="middle">Torchax</text>
+  <rect x="1223" y="612" width="50" height="36" rx="6" fill="#052e16" stroke="#34a853"/><text x="1248" y="636" text-anchor="middle">Flax</text>
+  <rect x="1285" y="612" width="50" height="36" rx="6" fill="#052e16" stroke="#34a853"/><text x="1310" y="636" text-anchor="middle">NNX</text>
+  <text x="1350" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Quant:</text>
+  <rect x="1405" y="612" width="50" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1430" y="636" text-anchor="middle">W8A8</text>
+  <rect x="1467" y="612" width="50" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1492" y="636" text-anchor="middle">W4A4</text>
+  <rect x="1529" y="612" width="60" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1559" y="636" text-anchor="middle">W16A16</text>
+  <rect x="1601" y="612" width="50" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1626" y="636" text-anchor="middle">JIT</text>
+  <rect x="1663" y="612" width="70" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1698" y="636" text-anchor="middle">Mosaic</text>
+  <rect x="1745" y="612" width="103" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1796" y="636" text-anchor="middle">shape bucket</text>
+ </g>
+
+ <!-- L5 Features -->
+ <rect x="60" y="676" width="1800" height="72" rx="12" fill="#0f2744" stroke="#fbbf24" stroke-width="2"/>
+ <text x="88" y="704" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Production Features &amp; Ecosystem Integration</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#fef3c7">
+  <rect x="88" y="716" width="110" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="143" y="733" text-anchor="middle">Cont. batching</text>
+  <rect x="208" y="716" width="100" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="258" y="733" text-anchor="middle">Chunked prefill</text>
+  <rect x="318" y="716" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="363" y="733" text-anchor="middle">Prefix cache</text>
+  <rect x="418" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="458" y="733" text-anchor="middle">P/D disagg</text>
+  <rect x="508" y="716" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="533" y="733" text-anchor="middle">EAGLE3</text>
+  <rect x="568" y="716" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="593" y="733" text-anchor="middle">Ngram</text>
+  <rect x="628" y="716" width="40" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="648" y="733" text-anchor="middle">TP</text>
+  <rect x="678" y="716" width="40" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="698" y="733" text-anchor="middle">PP</text>
+  <rect x="728" y="716" width="40" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="748" y="733" text-anchor="middle">DP</text>
+  <rect x="778" y="716" width="40" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="798" y="733" text-anchor="middle">EP</text>
+  <rect x="828" y="716" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="853" y="733" text-anchor="middle">SPMD</text>
+  <rect x="888" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="918" y="733" text-anchor="middle">LoRA</text>
+  <rect x="958" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="988" y="733" text-anchor="middle">VLM</text>
+  <rect x="1028" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1068" y="733" text-anchor="middle">KV offload</text>
+  <rect x="1118" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1148" y="733" text-anchor="middle">OOT</text>
+  <rect x="1188" y="716" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1223" y="733" text-anchor="middle">SGLang</text>
+  <rect x="1268" y="716" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1293" y="733" text-anchor="middle">vLLM</text>
+  <rect x="1328" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1358" y="733" text-anchor="middle">DFlash</text>
+  <rect x="1398" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1438" y="733" text-anchor="middle">Gemma4 Do0</text>
+  <rect x="1488" y="716" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1523" y="733" text-anchor="middle">multi-host</text>
+  <rect x="1568" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1608" y="733" text-anchor="middle">embedding</text>
+  <rect x="1658" y="716" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1703" y="733" text-anchor="middle">structured WIP</text>
+  <rect x="1758" y="716" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1803" y="733" text-anchor="middle">quant WIP</text>
+ </g>
+
+ <!-- DETAIL Model Routing -->
+ <rect x="60" y="764" width="880" height="340" rx="14" fill="#0c1524" stroke="#34a853" stroke-width="2.5"/>
+ <text x="88" y="796" fill="#34a853" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Model Routing &amp; Execution Flow</text>
+ <text x="88" y="818" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="11">All paths converge on JAX arrays + shared RPA V3 kernel + JAX sampler</text>
+
+ <rect x="88" y="834" width="820" height="36" rx="6" fill="#052e16" stroke="#34a853"/>
+ <text x="498" y="858" text-anchor="middle" fill="#dcfce7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1: vLLM scheduler output - prepare_inputs() as jax.Array (shared buffer)</text>
+ <line x1="498" y1="870" x2="498" y2="882" stroke="#34a853" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+ <rect x="88" y="884" width="820" height="36" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="498" y="908" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2: Route model - Flax NNX native OR Torchax functional_call OR vLLM upstream</text>
+ <line x1="498" y1="920" x2="498" y2="932" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
+ <rect x="88" y="934" width="820" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="498" y="958" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3: Attention via RPA V3 - jax_view(torch) - kernel - torch_view(jax) if needed</text>
+ <line x1="498" y1="970" x2="498" y2="982" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+ <rect x="88" y="984" width="820" height="36" rx="6" fill="#052e16" stroke="#34a853"/>
+ <text x="498" y="1008" text-anchor="middle" fill="#dcfce7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4: XLA JIT execute on TPU mesh - SPMD auto-partition across cores</text>
+ <line x1="498" y1="1020" x2="498" y2="1032" stroke="#34a853" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+ <rect x="88" y="1034" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="1058" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 5: JAX sampler - return tokens to vLLM EngineCore - stream to client</text>
+
+ <text x="88" y="1092" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Torchax: torch.Tensor is a view over jax.Array - every torch op lowers to JAX/XLA</text>
+ <text x="88" y="1108" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">No code changes for PyTorch model defs - same vLLM llama.py works on TPU</text>
+
+ <!-- DETAIL RPA V3 -->
+ <rect x="960" y="764" width="900" height="340" rx="14" fill="#0c1a12" stroke="#34a853" stroke-width="2.5"/>
+ <text x="988" y="796" fill="#34a853" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Ragged Paged Attention V3 + SPMD TPU Design</text>
+ <text x="988" y="818" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="11">Primary TPU backend in vLLM and SGLang - arXiv:2604.15464 - up to 86% MBU decode</text>
+
+ <text x="988" y="842" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">RPA V3 Three Sub-Kernels (Distribution-Aware)</text>
+ <rect x="988" y="852" width="200" height="68" rx="6" fill="#052e16" stroke="#34a853"/>
+ <text x="1088" y="876" text-anchor="middle" fill="#dcfce7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Prefill-Only</text>
+ <text x="1088" y="894" text-anchor="middle" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="9">Long prompt batches</text>
+ <text x="1088" y="910" text-anchor="middle" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="9">73% MFU on Llama3 8B</text>
+ <rect x="1200" y="852" width="200" height="68" rx="6" fill="#052e16" stroke="#34a853"/>
+ <text x="1300" y="876" text-anchor="middle" fill="#dcfce7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Decode-Only</text>
+ <text x="1300" y="894" text-anchor="middle" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="9">Single-token generation</text>
+ <text x="1300" y="910" text-anchor="middle" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="9">86% MBU on TPU7x</text>
+ <rect x="1412" y="852" width="200" height="68" rx="6" fill="#052e16" stroke="#34a853"/>
+ <text x="1512" y="876" text-anchor="middle" fill="#dcfce7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Mixed Batch</text>
+ <text x="1512" y="894" text-anchor="middle" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="9">Prefill + decode together</text>
+ <text x="1512" y="910" text-anchor="middle" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="9">Runtime sub-kernel dispatch</text>
+ <rect x="1624" y="852" width="224" height="68" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="1736" y="876" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Fused KV Scatter</text>
+ <text x="1736" y="894" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Pallas pipeline hides DMA</text>
+ <text x="1736" y="910" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Fine-grained ragged tiling</text>
+
+ <text x="988" y="942" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">SPMD vs Legacy Multi-Worker (PTXLA era)</text>
+ <rect x="988" y="952" width="420" height="48" rx="6" fill="#422006" stroke="#fcd34d"/>
+ <text x="1198" y="972" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Old: GPU-like multi-worker per chip - torch_xla / PTXLA path</text>
+ <text x="1198" y="988" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">Deprecated - removed from vLLM upstream</text>
+ <rect x="1420" y="952" width="428" height="48" rx="6" fill="#052e16" stroke="#34a853"/>
+ <text x="1634" y="972" text-anchor="middle" fill="#dcfce7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">New: SPMD - write for one device, XLA partitions across TPU mesh</text>
+ <text x="1634" y="988" text-anchor="middle" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="9">Compiler handles compute + communication optimization</text>
+
+ <text x="988" y="1024" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Ecosystem</text>
+ <rect x="988" y="1034" width="80" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1028" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">vLLM TPU</text>
+ <rect x="1080" y="1034" width="70" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1115" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">SGLang</text>
+ <rect x="1162" y="1034" width="70" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1197" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">Spotify</text>
+ <rect x="1244" y="1034" width="60" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1274" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">Google</text>
+ <rect x="1316" y="1034" width="60" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1346" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">GCE</text>
+ <rect x="1388" y="1034" width="50" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1413" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">v5e</text>
+ <rect x="1450" y="1034" width="50" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1475" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">v6e</text>
+ <rect x="1512" y="1034" width="50" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1537" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">v7x</text>
+ <rect x="1574" y="1034" width="80" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1614" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">Ironwood</text>
+ <rect x="1666" y="1034" width="80" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1706" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">Trillium</text>
+ <rect x="1758" y="1034" width="90" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1803" y="1058" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">tpu-recipes</text>
+
+ <text x="988" y="1108" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">RPA also powers SGLang-JAX and DFlash diffusion-style speculative decoding on TPU</text>
+
+ <!-- L6 Production -->
+ <rect x="60" y="1124" width="1800" height="72" rx="12" fill="#1a1208" stroke="#34a853" stroke-width="2"/>
+ <text x="88" y="1152" fill="#34a853" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Production &amp; Hardware</text>
+ <text x="960" y="1178" text-anchor="middle" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="13">vllm-project/tpu-inference - TPU v5e/v6e/v7x - GCE - bfloat16 - Apache 2.0 - docs.vllm.ai/projects/tpu</text>
+
+ <!-- footers -->
+ <rect x="60" y="1216" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1236" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Init path: pip tpu-inference - vllm serve - TpuJaxPlatform - warm JIT buckets - init paged KV pool</text>
+ <text x="960" y="1254" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Step path: schedule batch - route model path - RPA V3 forward - JAX sample - stream - repeat</text>
+
+ <text x="60" y="1300" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: vllm-project/tpu-inference - vllm.ai blog 2025-10-16 - arXiv:2604.15464 RPA - docs.vllm.ai/projects/tpu</text>
+</svg>

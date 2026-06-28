@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-indigo" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#6366f1"/>
+  </marker>
+  <marker id="arrow-orange" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#f97316"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">Triton-distributed Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">Tile-Centric Distributed Compiler Extension - ByteDance Seed - github.com/ByteDance-Seed/Triton-distributed - arXiv 2504.19442</text>
+
+ <!-- L1 Workloads -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#6366f1" stroke-width="2"/>
+ <text x="88" y="124" fill="#6366f1" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Distributed Workloads + Targets (fine-grained compute-comm overlap - 1.09x to 44.97x vs NCCL/RCCL)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="70" height="40" rx="6" fill="#312e81" stroke="#818cf8"/><text x="123" y="162" text-anchor="middle">AG+GEMM</text>
+  <rect x="170" y="136" width="70" height="40" rx="6" fill="#312e81" stroke="#818cf8"/><text x="205" y="162" text-anchor="middle">GEMM+RS</text>
+  <rect x="252" y="136" width="70" height="40" rx="6" fill="#312e81" stroke="#818cf8"/><text x="287" y="162" text-anchor="middle">GEMM+AR</text>
+  <rect x="334" y="136" width="50" height="40" rx="6" fill="#312e81" stroke="#818cf8"/><text x="359" y="162" text-anchor="middle">MoE</text>
+  <rect x="396" y="136" width="60" height="40" rx="6" fill="#312e81" stroke="#818cf8"/><text x="426" y="162" text-anchor="middle">AllToAll</text>
+  <rect x="468" y="136" width="70" height="40" rx="6" fill="#312e81" stroke="#818cf8"/><text x="503" y="162" text-anchor="middle">FlashDec</text>
+  <rect x="550" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="575" y="162" text-anchor="middle">MoE TP</text>
+  <rect x="612" y="136" width="40" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="632" y="162" text-anchor="middle">EP</text>
+  <rect x="664" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="694" y="162" text-anchor="middle">MegaEP</text>
+  <rect x="736" y="136" width="60" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="766" y="162" text-anchor="middle">Seed-OSS</text>
+  <rect x="808" y="136" width="50" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="833" y="162" text-anchor="middle">Qwen3</text>
+  <rect x="870" y="136" width="70" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="905" y="162" text-anchor="middle">MegaKernel</text>
+  <rect x="952" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="977" y="162" text-anchor="middle">H800</text>
+  <rect x="1014" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1039" y="162" text-anchor="middle">H20</text>
+  <rect x="1076" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1101" y="162" text-anchor="middle">L20</text>
+  <rect x="1138" y="136" width="60" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1168" y="162" text-anchor="middle">MI308X</text>
+  <rect x="1210" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1235" y="162" text-anchor="middle">intra</text>
+  <rect x="1272" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1297" y="162" text-anchor="middle">inter</text>
+  <rect x="1334" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1359" y="162" text-anchor="middle">node</text>
+  <rect x="1396" y="136" width="50" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1421" y="162" text-anchor="middle">NCCL</text>
+  <rect x="1458" y="136" width="50" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1483" y="162" text-anchor="middle">RCCL</text>
+  <rect x="1520" y="136" width="50" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1545" y="162" text-anchor="middle">FLUX</text>
+  <rect x="1582" y="136" width="60" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1612" y="162" text-anchor="middle">DeepEP</text>
+  <rect x="1654" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1679" y="162" text-anchor="middle">CUTLASS</text>
+  <rect x="1716" y="136" width="60" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1746" y="162" text-anchor="middle">ByteDance</text>
+  <rect x="1788" y="136" width="60" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1818" y="162" text-anchor="middle">MIT</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Tile-Centric Model -->
+ <rect x="60" y="216" width="1800" height="120" rx="12" fill="#0f2744" stroke="#6366f1" stroke-width="2"/>
+ <text x="88" y="244" fill="#6366f1" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Tile-Centric Programming Model (MLSys 2025 TileLink philosophy - tile as unit of work)</text>
+ <rect x="88" y="258" width="340" height="64" rx="10" fill="#312e81" stroke="#818cf8" stroke-width="2"/>
+ <text x="258" y="282" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Tile = Unit of Work</text>
+ <text x="258" y="300" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Each tile independently computed / transferred / synced</text>
+ <text x="258" y="314" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Decouple comm tile size from compute tile size</text>
+ <rect x="448" y="258" width="340" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="618" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Producer-Consumer Overlap</text>
+ <text x="618" y="300" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Producer: P2P transfer + signal per tile ready</text>
+ <text x="618" y="314" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Consumer: wait tile signal then GEMM immediately</text>
+ <rect x="808" y="258" width="340" height="64" rx="10" fill="#312e81" stroke="#818cf8" stroke-width="2"/>
+ <text x="978" y="282" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Signal vs Global Barrier</text>
+ <text x="978" y="300" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Break collectives into one-sided P2P + signals</text>
+ <text x="978" y="314" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">No NCCL pre/post sync - tile-level coordination</text>
+ <rect x="1168" y="258" width="340" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="1338" y="282" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Tile Swizzling</text>
+ <text x="1338" y="300" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Reorder comm + compute tiles for max overlap</text>
+ <text x="1338" y="314" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Intra/inter-node + inter-NUMA swizzle support</text>
+ <rect x="1528" y="258" width="300" height="64" rx="10" fill="#134e4a" stroke="#5eead4" stroke-width="2"/>
+ <text x="1678" y="282" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Symmetric Memory</text>
+ <text x="1678" y="300" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Same-size per-rank global buffers - symm_at(ptr,rank)</text>
+ <text x="1678" y="314" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">NVSHMEM / ROCSHMEM direct cross-rank access</text>
+ <line x1="960" y1="336" x2="960" y2="354" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Primitives -->
+ <rect x="60" y="356" width="1800" height="200" rx="12" fill="#0f2744" stroke="#f97316" stroke-width="2.5"/>
+ <text x="88" y="384" fill="#f97316" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - triton_dist.language Primitives (OpenSHMEM + signal control - Python-level comm programming)</text>
+
+ <rect x="88" y="400" width="420" height="136" rx="12" fill="#312e81" stroke="#818cf8" stroke-width="2"/>
+ <text x="298" y="428" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Context + Addressing</text>
+ <text x="298" y="450" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">rank() - num_ranks() - query distributed context</text>
+ <text x="298" y="468" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">symm_at(ptr, rank) map local ptr to remote rank</text>
+ <text x="298" y="486" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">@triton_dist.jit decorator for dist kernels</text>
+ <text x="298" y="504" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Program comm + compute separately in Python</text>
+ <text x="298" y="522" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Minimal changes to original Triton compute code</text>
+
+ <rect x="528" y="400" width="420" height="136" rx="12" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="738" y="428" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Signal Control (non-OpenSHMEM)</text>
+ <text x="738" y="450" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">wait(barrierPtrs) - block until signal ready</text>
+ <text x="738" y="468" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">consume_token(value, token) - data dep for MMA</text>
+ <text x="738" y="486" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">notify(ptr, rank) - remote signal (like signal_op)</text>
+ <text x="738" y="504" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">comm_scope intra_node / inter_node selection</text>
+ <text x="738" y="522" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Enables compiler pipelining between comm + compute</text>
+
+ <rect x="968" y="400" width="420" height="136" rx="12" fill="#134e4a" stroke="#5eead4" stroke-width="2"/>
+ <text x="1178" y="428" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">libshmem_device (OpenSHMEM)</text>
+ <text x="1178" y="450" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">putmem_nbi_block / getmem_block one-sided P2P</text>
+ <text x="1178" y="468" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">putmem_signal_nbi_block data + signal atomic</text>
+ <text x="1178" y="486" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">signal_op - signal_wait_until - fence - quiet</text>
+ <text x="1178" y="504" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Auto-dispatch NVSHMEM (NVIDIA) / ROCSHMEM (AMD)</text>
+ <text x="1178" y="522" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">NVSHMEM4py integration - Triton 3.4 pip install</text>
+
+ <rect x="1408" y="400" width="420" height="136" rx="12" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="1618" y="428" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Low-Latency Extensions</text>
+ <text x="1618" y="450" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">multimem_st for NVLink intra-node broadcast</text>
+ <text x="1618" y="468" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">LL protocol: 8B atomic data+flag for inter-node</text>
+ <text x="1618" y="486" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Acquire/release load/store semantics</text>
+ <text x="1618" y="504" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">137us AllToAll vs DeepEP 182us on 32xH800</text>
+ <text x="1618" y="522" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">High-level tile primitives planned post-MLSys</text>
+
+ <line x1="960" y1="556" x2="960" y2="574" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Compiler Stack -->
+ <rect x="60" y="576" width="1800" height="120" rx="12" fill="#0f2744" stroke="#6366f1" stroke-width="2"/>
+ <text x="88" y="604" fill="#6366f1" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Dual-Path Compiler Stack (comm + compute merge at LLVM IR - single fused kernel)</text>
+ <rect x="88" y="618" width="340" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="258" y="642" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Communication Path</text>
+ <text x="258" y="660" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">OpenSHMEM primitives in Triton-distributed DSL</text>
+ <text x="258" y="674" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Lower to LLVM IR + NVSHMEM/ROCSHMEM bitcode lib</text>
+ <rect x="448" y="618" width="340" height="64" rx="10" fill="#0c2d2d" stroke="#14b8a6" stroke-width="2"/>
+ <text x="618" y="642" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Computation Path</text>
+ <text x="618" y="660" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Original Triton: TTIR - TTGIR - LLVM IR pipeline</text>
+ <text x="618" y="674" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Reuse tl.* GEMM/MoE/Flash - add wait/consume_token</text>
+ <rect x="808" y="618" width="340" height="64" rx="10" fill="#312e81" stroke="#818cf8" stroke-width="2"/>
+ <text x="978" y="642" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">LLVM Merge + Codegen</text>
+ <text x="978" y="660" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Comm LLVM + compute LLVM linked into one module</text>
+ <text x="978" y="674" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Emit PTX (NVIDIA) or AMDGCN (AMD) - CUBIN/HSACO</text>
+ <rect x="1168" y="618" width="340" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="1338" y="642" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Host Orchestration</text>
+ <text x="1338" y="660" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Launch comm threadblocks + compute threadblocks</text>
+ <text x="1338" y="674" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Intra-node + inter-node P2P tasks run in parallel</text>
+ <rect x="1528" y="618" width="300" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1678" y="642" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">MegaTritonKernel</text>
+ <text x="1678" y="660" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Fuse multiple dist kernels into mega kernel</text>
+ <text x="1678" y="674" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Qwen3 TP demo - intra-kernel profiler tooling</text>
+ <line x1="960" y1="696" x2="960" y2="714" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L5 One-sided Collectives -->
+ <rect x="60" y="716" width="1800" height="120" rx="12" fill="#0f2744" stroke="#f97316" stroke-width="2"/>
+ <text x="88" y="744" fill="#f97316" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - One-Sided Collective Patterns (push/pull modes - bandwidth vs latency tuning)</text>
+ <rect x="88" y="758" width="340" height="64" rx="10" fill="#312e81" stroke="#818cf8" stroke-width="2"/>
+ <text x="258" y="782" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">AllGather (push/pull)</text>
+ <text x="258" y="800" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">P2P tile push to symmetric buffers per rank</text>
+ <text x="258" y="814" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Signal consumer when each tile arrives</text>
+ <rect x="448" y="758" width="340" height="64" rx="10" fill="#312e81" stroke="#818cf8" stroke-width="2"/>
+ <text x="618" y="782" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">ReduceScatter</text>
+ <text x="618" y="800" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Push local shard + parallel local reduction</text>
+ <text x="618" y="814" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Two parallel parts sync via signals</text>
+ <rect x="808" y="758" width="340" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="978" y="782" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">AllToAll (MoE EP)</text>
+ <text x="978" y="800" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Expert dispatch/combine - token routing</text>
+ <text x="978" y="814" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Inference low-latency + training high-bandwidth</text>
+ <rect x="1168" y="758" width="340" height="64" rx="10" fill="#134e4a" stroke="#5eead4" stroke-width="2"/>
+ <text x="1338" y="782" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">AllReduce</text>
+ <text x="1338" y="800" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Fast AllReduce kernel via Triton-distributed</text>
+ <text x="1338" y="814" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">GEMM+AllReduce fused overlapping variant</text>
+ <rect x="1528" y="758" width="300" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="1678" y="782" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Flash-Decode Dist</text>
+ <text x="1678" y="800" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Distributed attention decode 1-32 GPU scaling</text>
+ <text x="1678" y="814" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Batch=1 decoding workload optimized</text>
+ <line x1="960" y1="836" x2="960" y2="854" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L6 Backends -->
+ <rect x="60" y="856" width="1800" height="56" rx="12" fill="#0f2744" stroke="#6366f1" stroke-width="2"/>
+ <text x="88" y="884" fill="#6366f1" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Hardware Backends + Package Layout (python/triton_dist/ - kernels/ - test/ - docs/)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0f2fe">
+  <rect x="88" y="892" width="50" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="113" y="909" text-anchor="middle">SM90a</text>
+  <rect x="148" y="892" width="40" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="168" y="909" text-anchor="middle">SM80</text>
+  <rect x="198" y="892" width="40" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="218" y="909" text-anchor="middle">SM89</text>
+  <rect x="248" y="892" width="50" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="273" y="909" text-anchor="middle">CDNA3</text>
+  <rect x="308" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="333" y="909" text-anchor="middle">NVLink</text>
+  <rect x="368" y="892" width="30" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="383" y="909" text-anchor="middle">IB</text>
+  <rect x="408" y="892" width="40" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="428" y="909" text-anchor="middle">PCIe</text>
+  <rect x="458" y="892" width="60" height="24" rx="5" fill="#312e81" stroke="#818cf8"/><text x="488" y="909" text-anchor="middle">NVSHMEM</text>
+  <rect x="528" y="892" width="60" height="24" rx="5" fill="#312e81" stroke="#818cf8"/><text x="558" y="909" text-anchor="middle">ROCSHMEM</text>
+  <rect x="598" y="892" width="70" height="24" rx="5" fill="#312e81" stroke="#818cf8"/><text x="633" y="909" text-anchor="middle">NVSHMEM4py</text>
+  <rect x="678" y="892" width="60" height="24" rx="5" fill="#0c2d2d" stroke="#14b8a6"/><text x="708" y="909" text-anchor="middle">triton 3.4</text>
+  <rect x="748" y="892" width="60" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="778" y="909" text-anchor="middle">triton_dist</text>
+  <rect x="818" y="892" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="843" y="909" text-anchor="middle">kernels</text>
+  <rect x="878" y="892" width="70" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="913" y="909" text-anchor="middle">mega_kernel</text>
+  <rect x="958" y="892" width="50" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="983" y="909" text-anchor="middle">profiler</text>
+  <rect x="1018" y="892" width="50" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="1043" y="909" text-anchor="middle">test/</text>
+  <rect x="1078" y="892" width="50" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="1103" y="909" text-anchor="middle">TileLink</text>
+  <rect x="1138" y="892" width="50" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="1163" y="909" text-anchor="middle">COMET</text>
+  <rect x="1198" y="892" width="50" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="1223" y="909" text-anchor="middle">Pallas</text>
+  <rect x="1258" y="892" width="50" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="1283" y="909" text-anchor="middle">CoCoNet</text>
+  <rect x="1318" y="892" width="40" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1338" y="909" text-anchor="middle">pip</text>
+  <rect x="1368" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1393" y="909" text-anchor="middle">docker</text>
+  <rect x="1428" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1453" y="909" text-anchor="middle">MLSys</text>
+  <rect x="1488" y="892" width="70" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="1523" y="909" text-anchor="middle">OpenSHMEM</text>
+  <rect x="1568" y="892" width="50" height="24" rx="5" fill="#312e81" stroke="#818cf8"/><text x="1593" y="909" text-anchor="middle">64 GPU</text>
+  <rect x="1628" y="892" width="60" height="24" rx="5" fill="#312e81" stroke="#818cf8"/><text x="1658" y="909" text-anchor="middle">e2e demo</text>
+  <rect x="1698" y="892" width="70" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1733" y="909" text-anchor="middle">flash_decode</text>
+  <rect x="1778" y="892" width="70" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1813" y="909" text-anchor="middle">ag_moe.py</text>
+ </g>
+
+ <!-- DETAIL AG+GEMM Path -->
+ <rect x="60" y="928" width="880" height="340" rx="14" fill="#0c1524" stroke="#6366f1" stroke-width="2.5"/>
+ <text x="88" y="960" fill="#6366f1" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">AllGather+GEMM Overlap Path (inter-node example)</text>
+ <text x="88" y="982" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="11">Three parallel tasks per rank: intra-node P2P + inter-node P2P + GEMM compute</text>
+
+ <rect x="88" y="998" width="820" height="36" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="498" y="1022" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1: Host launches fused kernel - comm TBs + compute TBs on same device</text>
+ <line x1="498" y1="1034" x2="498" y2="1046" stroke="#fb923c" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+ <rect x="88" y="1048" width="820" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="498" y="1072" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2: Producer TBs putmem_nbi_block tiles to symmetric remote buffers + set signal</text>
+ <line x1="498" y1="1084" x2="498" y2="1096" stroke="#5eead4" stroke-width="1.5" marker-end="url(#arrow-indigo)"/>
+ <rect x="88" y="1098" width="820" height="36" rx="6" fill="#312e81" stroke="#818cf8"/>
+ <text x="498" y="1122" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3: Consumer GEMM tile: token=wait(signal) - consume_token before load - MMA</text>
+ <line x1="498" y1="1134" x2="498" y2="1146" stroke="#818cf8" stroke-width="1.5"/>
+ <rect x="88" y="1148" width="820" height="36" rx="6" fill="#422006" stroke="#fbbf24"/>
+ <text x="498" y="1172" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4: Tile swizzle aligns compute order with comm arrival - no global barrier wait</text>
+ <line x1="498" y1="1184" x2="498" y2="1196" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrow-indigo)"/>
+ <rect x="88" y="1198" width="820" height="36" rx="6" fill="#0c2d2d" stroke="#14b8a6"/>
+ <text x="498" y="1222" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 5: Compiler lowers OpenSHMEM to NVSHMEM bitcode - merge w/ Triton LLVM - PTX</text>
+ <line x1="498" y1="1234" x2="498" y2="1246" stroke="#14b8a6" stroke-width="1.5"/>
+ <rect x="88" y="1248" width="820" height="28" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="498" y="1268" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Result: comm latency hidden behind GEMM - beats NCCL operator-level overlap</text>
+
+ <text x="88" y="1294" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">2 nodes x 2 ranks: rank0/rank1 compute tile order differs to match comm arrival pattern</text>
+ <text x="88" y="1310" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Only 2 extra primitives added to standard Triton GEMM: wait + consume_token per tile</text>
+
+ <!-- DETAIL Position -->
+ <rect x="960" y="928" width="900" height="340" rx="14" fill="#0c1224" stroke="#6366f1" stroke-width="2.5"/>
+ <text x="988" y="960" fill="#6366f1" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Five Design Pillars + Ecosystem Position</text>
+ <text x="988" y="982" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="11">First compiler with native fine-grained distributed overlap - Python not CUDA/C++</text>
+
+ <text x="988" y="1006" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Five Pillars</text>
+ <rect x="988" y="1016" width="130" height="48" rx="6" fill="#312e81" stroke="#818cf8"/>
+ <text x="1053" y="1038" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Tile-centric</text>
+ <text x="1053" y="1054" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">Tile-level sync</text>
+ <rect x="1130" y="1016" width="130" height="48" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="1195" y="1038" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">One-sided P2P</text>
+ <text x="1195" y="1054" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Break NCCL collectives</text>
+ <rect x="1272" y="1016" width="130" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1337" y="1038" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">OpenSHMEM</text>
+ <text x="1337" y="1054" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">NVSHMEM/ROCSHMEM</text>
+ <rect x="1414" y="1016" width="130" height="48" rx="6" fill="#422006" stroke="#fbbf24"/>
+ <text x="1479" y="1038" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Tile swizzle</text>
+ <text x="1479" y="1054" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">Intra/inter/NUMA</text>
+ <rect x="1556" y="1016" width="130" height="48" rx="6" fill="#0c2d2d" stroke="#14b8a6"/>
+ <text x="1621" y="1038" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Triton reuse</text>
+ <text x="1621" y="1054" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Minimal compute change</text>
+ <rect x="1698" y="1016" width="150" height="48" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1773" y="1038" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Multi-vendor</text>
+ <text x="1773" y="1054" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">NVIDIA + AMD GPUs</text>
+
+ <text x="988" y="1082" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">vs Related Stacks</text>
+ <rect x="988" y="1092" width="200" height="68" rx="6" fill="#312e81" stroke="#818cf8"/>
+ <text x="1088" y="1116" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Triton-distributed</text>
+ <text x="1088" y="1134" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">Compiler-native tile overlap</text>
+ <text x="1088" y="1150" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">Python comm + compute DSL</text>
+ <rect x="1200" y="1092" width="200" height="68" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1300" y="1116" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">NCCL / RCCL</text>
+ <text x="1300" y="1134" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">Global barrier collectives</text>
+ <text x="1300" y="1150" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">Operator-level overlap only</text>
+ <rect x="1412" y="1092" width="200" height="68" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="1512" y="1116" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">FLUX / DeepEP</text>
+ <text x="1512" y="1134" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Hand-tuned C++/CUDA libs</text>
+ <text x="1512" y="1150" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Matched or exceeded by ours</text>
+ <rect x="1624" y="1092" width="224" height="68" rx="6" fill="#0c2d2d" stroke="#14b8a6"/>
+ <text x="1736" y="1116" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">OpenAI Triton</text>
+ <text x="1736" y="1134" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Single-device compiler base</text>
+ <text x="1736" y="1150" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Triton-dist extends w/ comm IR</text>
+
+ <text x="988" y="1178" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Quick Start</text>
+ <rect x="988" y="1188" width="860" height="48" rx="6" fill="#1a1208" stroke="#6366f1"/>
+ <text x="1418" y="1212" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="12">pip install triton_dist - @triton_dist.jit + triton_dist.language primitives</text>
+ <text x="1418" y="1228" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Examples: python/triton_dist/kernels - test/nvidia/test_ag_moe.py test_allreduce.py</text>
+
+ <!-- footer bar -->
+ <rect x="60" y="1288" width="1800" height="72" rx="12" fill="#1a1208" stroke="#6366f1" stroke-width="2"/>
+ <text x="88" y="1316" fill="#6366f1" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">Design Position (distributed compiler extension - tile-level overlap replaces NCCL barrier model)</text>
+ <text x="960" y="1342" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="13">OpenSHMEM in Triton DSL + signal pipelining + tile swizzle = Python-level perf of hand-tuned C++ libs</text>
+
+ <!-- footers -->
+ <rect x="60" y="1376" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1396" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Init: symm memory alloc - @triton_dist.jit kernel - host launch comm+compute threadblocks per rank</text>
+ <text x="960" y="1414" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Loop: P2P tile push - signal - wait/consume_token - GEMM tile - swizzle order - LLVM merge - execute</text>
+
+ <text x="60" y="1460" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: github.com/ByteDance-Seed/Triton-distributed - arXiv 2504.19442 - docs/primitives.md - MLSys TileLink</text>
+</svg>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-violet" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#8b5cf6"/>
+  </marker>
+  <marker id="arrow-amber" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#f59e0b"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">Mirage Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">Multi-Level uGraph Superoptimizer - MPK Megakernel - OSDI 2025/2026 - github.com/mirage-project/mirage</text>
+
+ <!-- L1 Applications -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#8b5cf6" stroke-width="2"/>
+ <text x="88" y="124" fill="#8b5cf6" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Applications + Integration (tensor superopt + LLM megakernel inference)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="80" height="40" rx="6" fill="#2e1065" stroke="#a78bfa"/><text x="128" y="162" text-anchor="middle">FlashAttn</text>
+  <rect x="180" y="136" width="90" height="40" rx="6" fill="#2e1065" stroke="#a78bfa"/><text x="225" y="162" text-anchor="middle">FlashDecode</text>
+  <rect x="282" y="136" width="60" height="40" rx="6" fill="#2e1065" stroke="#a78bfa"/><text x="312" y="162" text-anchor="middle">GEMM</text>
+  <rect x="354" y="136" width="60" height="40" rx="6" fill="#2e1065" stroke="#a78bfa"/><text x="384" y="162" text-anchor="middle">Conv</text>
+  <rect x="426" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#f59e0b"/><text x="461" y="162" text-anchor="middle">Qwen3</text>
+  <rect x="508" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#f59e0b"/><text x="533" y="162" text-anchor="middle">MPK</text>
+  <rect x="570" y="136" width="80" height="40" rx="6" fill="#431407" stroke="#f59e0b"/><text x="610" y="162" text-anchor="middle">megakernel</text>
+  <rect x="662" y="136" width="70" height="40" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="697" y="162" text-anchor="middle">PyTorch</text>
+  <rect x="744" y="136" width="80" height="40" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="784" y="162" text-anchor="middle">JIT deploy</text>
+  <rect x="836" y="136" width="80" height="40" rx="6" fill="#431407" stroke="#f59e0b"/><text x="876" y="162" text-anchor="middle">spec decode</text>
+  <rect x="928" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#f59e0b"/><text x="963" y="162" text-anchor="middle">paged KV</text>
+  <rect x="1010" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#f59e0b"/><text x="1045" y="162" text-anchor="middle">NVSHMEM</text>
+  <rect x="1092" y="136" width="80" height="40" rx="6" fill="#431407" stroke="#f59e0b"/><text x="1132" y="162" text-anchor="middle">multi-GPU</text>
+  <rect x="1184" y="136" width="80" height="40" rx="6" fill="#431407" stroke="#f59e0b"/><text x="1224" y="162" text-anchor="middle">serving</text>
+  <rect x="1276" y="136" width="70" height="40" rx="6" fill="#2e1065" stroke="#a78bfa"/><text x="1311" y="162" text-anchor="middle">1.1-2.9x</text>
+  <rect x="1358" y="136" width="80" height="40" rx="6" fill="#431407" stroke="#f59e0b"/><text x="1398" y="162" text-anchor="middle">MPK 6.7x</text>
+  <rect x="1450" y="136" width="70" height="40" rx="6" fill="#2e1065" stroke="#a78bfa"/><text x="1485" y="162" text-anchor="middle">OSDI25</text>
+  <rect x="1532" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#f59e0b"/><text x="1567" y="162" text-anchor="middle">OSDI26</text>
+  <rect x="1614" y="136" width="70" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1649" y="162" text-anchor="middle">CMU/MS</text>
+  <rect x="1696" y="136" width="80" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1736" y="162" text-anchor="middle">Zhihao Jia</text>
+  <rect x="1788" y="136" width="70" height="40" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="1823" y="162" text-anchor="middle">Tianqi C</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Graph API -->
+ <rect x="60" y="216" width="1800" height="120" rx="12" fill="#0f2744" stroke="#a78bfa" stroke-width="2"/>
+ <text x="88" y="244" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Graph API + Python Frontend (KNGraph - TBGraph - MPK layer primitives)</text>
+ <rect x="88" y="258" width="340" height="64" rx="10" fill="#2e1065" stroke="#8b5cf6" stroke-width="2"/>
+ <text x="258" y="282" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">KNGraph (Kernel-Level API)</text>
+ <text x="258" y="300" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Kernel graph - nodes=GPU kernels - device mem tensors</text>
+ <text x="258" y="314" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Library ops (cuDNN/cuBLAS) or graph-defined custom kernels</text>
+ <rect x="448" y="258" width="340" height="64" rx="10" fill="#2e1065" stroke="#8b5cf6" stroke-width="2"/>
+ <text x="618" y="282" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">TBGraph (Threadblock-Level API)</text>
+ <text x="618" y="300" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Block operators - shared memory tensors - grid/for dims</text>
+ <text x="618" y="314" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Defines semantic of graph-defined kernel nodes</text>
+ <rect x="808" y="258" width="340" height="64" rx="10" fill="#431407" stroke="#f59e0b" stroke-width="2"/>
+ <text x="978" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">MPK PersistentKernel API</text>
+ <text x="978" y="300" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Chain fused layers: embed - rmsnorm_linear - attn</text>
+ <text x="978" y="314" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">grid_dim/block_dim - reference PyTorch per task</text>
+ <rect x="1168" y="258" width="340" height="64" rx="10" fill="#241a3d" stroke="#c4b5fd" stroke-width="2"/>
+ <text x="1338" y="282" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Type System + Operators</text>
+ <text x="1338" y="300" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">DTensor shapes/dtypes - matmul - elem - reduce</text>
+ <text x="1338" y="314" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Input tensor program from PyTorch reference impl</text>
+ <rect x="1528" y="258" width="300" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1678" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Superoptimization Entry</text>
+ <text x="1678" y="300" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Input: tensor program spec</text>
+ <text x="1678" y="314" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Output: verified optimal uGraph + CUDA</text>
+ <line x1="960" y1="336" x2="960" y2="354" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 uGraph IR -->
+ <rect x="60" y="356" width="1800" height="200" rx="12" fill="#0f2744" stroke="#8b5cf6" stroke-width="2.5"/>
+ <text x="88" y="384" fill="#8b5cf6" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - uGraph Multi-Level IR (uniform kernel / block / thread hierarchy + MPK tGraph)</text>
+
+ <rect x="88" y="400" width="340" height="136" rx="12" fill="#2e1065" stroke="#a78bfa" stroke-width="2"/>
+ <text x="258" y="428" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Kernel Graph</text>
+ <text x="258" y="450" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">SPMD kernels on entire GPU - device memory edges</text>
+ <text x="258" y="468" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Pre-defined (cuDNN/cuBLAS) or graph-defined nodes</text>
+ <text x="258" y="486" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Inter-kernel fusion via nested block graphs</text>
+ <text x="258" y="504" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Algebraic + schedule transforms at kernel level</text>
+ <text x="258" y="522" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Custom kernel generation beyond lib ops</text>
+
+ <rect x="448" y="400" width="340" height="136" rx="12" fill="#2e1065" stroke="#8b5cf6" stroke-width="2"/>
+ <text x="618" y="428" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Block Graph</text>
+ <text x="618" y="450" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Thread block scope - shared memory intermediate tensors</text>
+ <text x="618" y="468" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Grid dims + for-loop dims - block operators</text>
+ <text x="618" y="486" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Split oversized tensors across multiple block graphs</text>
+ <text x="618" y="504" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Maximize shared mem reuse - reduce global access</text>
+ <text x="618" y="522" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">cuTLASS-backed block operator implementations</text>
+
+ <rect x="808" y="400" width="340" height="136" rx="12" fill="#241a3d" stroke="#c4b5fd" stroke-width="2"/>
+ <text x="978" y="428" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Thread Graph</text>
+ <text x="978" y="450" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Single-thread scope - register file computation</text>
+ <text x="978" y="468" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Input iterators (shared to reg) - output savers</text>
+ <text x="978" y="486" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Rule-based fusion patterns - predefined thread ops</text>
+ <text x="978" y="504" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Lowest uGraph level - CUDA thread primitives</text>
+ <text x="978" y="522" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Avoid shared mem round-trips via reg fusion</text>
+
+ <rect x="1168" y="400" width="660" height="136" rx="12" fill="#431407" stroke="#f59e0b" stroke-width="2"/>
+ <text x="1498" y="428" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">tGraph (MPK SM-Level Task Graph)</text>
+ <text x="1498" y="450" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Nodes = tasks on individual SMs - fine-grained deps between tasks</text>
+ <text x="1498" y="468" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Cross-operator software pipelining - event fusion - graph linearization</text>
+ <text x="1498" y="486" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Task types: EMBEDDING - RMS_NORM_LINEAR - ATTENTION - ALLREDUCE</text>
+ <text x="1498" y="504" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Events: LAUNCH_TASKS - LAUNCH_MASSIVE - END_OF_TASK_GRAPH</text>
+ <text x="1498" y="522" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Per-task CUDA via Mirage block-level superoptimization</text>
+
+ <line x1="960" y1="556" x2="960" y2="574" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Superoptimizer -->
+ <rect x="60" y="576" width="1800" height="120" rx="12" fill="#0f2744" stroke="#8b5cf6" stroke-width="2"/>
+ <text x="88" y="604" fill="#8b5cf6" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - uGraph Superoptimizer (search - prune - verify equivalence)</text>
+ <rect x="88" y="618" width="340" height="64" rx="10" fill="#2e1065" stroke="#8b5cf6" stroke-width="2"/>
+ <text x="258" y="642" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Incremental Graph Search</text>
+ <text x="258" y="660" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Extend valid uGraph prefix with new operators</text>
+ <text x="258" y="674" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Exhaustive kernel+block - rule-based thread level</text>
+ <rect x="448" y="618" width="340" height="64" rx="10" fill="#2e1065" stroke="#a78bfa" stroke-width="2"/>
+ <text x="618" y="642" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Abstraction Pruning</text>
+ <text x="618" y="660" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Abstract expression pruning - canonical forms</text>
+ <text x="618" y="674" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Certain optimality guarantee - huge space reduction</text>
+ <rect x="808" y="618" width="340" height="64" rx="10" fill="#241a3d" stroke="#c4b5fd" stroke-width="2"/>
+ <text x="978" y="642" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Equivalence Verification</text>
+ <text x="978" y="660" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Probabilistic verify vs input program (Z3 SMT)</text>
+ <text x="978" y="674" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Strong theoretical guarantees - ILP solver support</text>
+ <rect x="1168" y="618" width="340" height="64" rx="10" fill="#431407" stroke="#f59e0b" stroke-width="2"/>
+ <text x="1338" y="642" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Discovered Kernels</text>
+ <text x="1338" y="660" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Auto-finds FlashAttention + FlashDecoding uGraphs</text>
+ <text x="1338" y="674" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Novel opts outside existing autotuner search spaces</text>
+ <rect x="1528" y="618" width="300" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1678" y="642" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Thread Fusion Patterns</text>
+ <text x="1678" y="660" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Predefined (Gi, Oi) block-to-thread replacements</text>
+ <text x="1678" y="674" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Reg-file fusion: Mul+Sqrt+Div etc.</text>
+ <line x1="960" y1="696" x2="960" y2="714" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L5 Transpiler -->
+ <rect x="60" y="716" width="1800" height="120" rx="12" fill="#0f2744" stroke="#a78bfa" stroke-width="2"/>
+ <text x="88" y="744" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Transpiler + CodeGen (uGraph to CUDA/Triton/NKI - layout opt - NVCC JIT)</text>
+ <rect x="88" y="758" width="340" height="64" rx="10" fill="#2e1065" stroke="#8b5cf6" stroke-width="2"/>
+ <text x="258" y="782" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">CUDA Transpiler</text>
+ <text x="258" y="800" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Emit CUDA source for all custom uGraph kernels</text>
+ <text x="258" y="814" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Memory layout optimization - bank conflict avoid</text>
+ <rect x="448" y="758" width="340" height="64" rx="10" fill="#241a3d" stroke="#c4b5fd" stroke-width="2"/>
+ <text x="618" y="782" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Alt Backends</text>
+ <text x="618" y="800" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Triton transpiler - NKI transpiler paths</text>
+ <text x="618" y="814" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Multi-target code generation support</text>
+ <rect x="808" y="758" width="340" height="64" rx="10" fill="#431407" stroke="#ea580c" stroke-width="2"/>
+ <text x="978" y="782" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Library Integration</text>
+ <text x="978" y="800" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Kernel ops: cuDNN + cuBLAS</text>
+ <text x="978" y="814" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Block/thread ops: cuTLASS + CUDA intrinsics</text>
+ <rect x="1168" y="758" width="340" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1338" y="782" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">JIT Compile + Deploy</text>
+ <text x="1338" y="800" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">NVCC compile binary per verified uGraph</text>
+ <text x="1338" y="814" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Drop into PyTorch with minimal code changes</text>
+ <rect x="1528" y="758" width="300" height="64" rx="10" fill="#431407" stroke="#f59e0b" stroke-width="2"/>
+ <text x="1678" y="782" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">MPK Codegen</text>
+ <text x="1678" y="800" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Task graph JSON + per-task CUDA + Python wrapper</text>
+ <text x="1678" y="814" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Architecture-specific flags (sm80/sm90/sm100)</text>
+ <line x1="960" y1="836" x2="960" y2="854" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L6 MPK Runtime -->
+ <rect x="60" y="856" width="1800" height="88" rx="12" fill="#0f2744" stroke="#f59e0b" stroke-width="2"/>
+ <text x="88" y="884" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - MPK Persistent Kernel Runtime (single megakernel - worker/scheduler - zero launch overhead)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0f2fe">
+  <rect x="88" y="896" width="100" height="32" rx="6" fill="#431407" stroke="#f59e0b"/><text x="138" y="918" text-anchor="middle">Worker CTA</text>
+  <rect x="200" y="896" width="100" height="32" rx="6" fill="#431407" stroke="#f59e0b"/><text x="250" y="918" text-anchor="middle">Scheduler CTA</text>
+  <rect x="312" y="896" width="80" height="32" rx="6" fill="#431407" stroke="#f59e0b"/><text x="352" y="918" text-anchor="middle">init_kernel</text>
+  <rect x="404" y="896" width="90" height="32" rx="6" fill="#431407" stroke="#f59e0b"/><text x="449" y="918" text-anchor="middle">prepare_kernel</text>
+  <rect x="506" y="896" width="90" height="32" rx="6" fill="#431407" stroke="#f59e0b"/><text x="551" y="918" text-anchor="middle">_execute_task</text>
+  <rect x="608" y="896" width="80" height="32" rx="6" fill="#431407" stroke="#f59e0b"/><text x="648" y="918" text-anchor="middle">task_register</text>
+  <rect x="700" y="896" width="80" height="32" rx="6" fill="#431407" stroke="#f59e0b"/><text x="740" y="918" text-anchor="middle">event queue</text>
+  <rect x="792" y="896" width="90" height="32" rx="6" fill="#431407" stroke="#f59e0b"/><text x="837" y="918" text-anchor="middle">runtime_header</text>
+  <rect x="894" y="896" width="80" height="32" rx="6" fill="#431407" stroke="#f59e0b"/><text x="934" y="918" text-anchor="middle">no CPU sync</text>
+  <rect x="986" y="896" width="80" height="32" rx="6" fill="#431407" stroke="#f59e0b"/><text x="1026" y="918" text-anchor="middle">256 threads</text>
+  <rect x="1078" y="896" width="80" height="32" rx="6" fill="#431407" stroke="#f59e0b"/><text x="1118" y="918" text-anchor="middle">paged attn</text>
+  <rect x="1170" y="896" width="80" height="32" rx="6" fill="#431407" stroke="#f59e0b"/><text x="1210" y="918" text-anchor="middle">MLA sm100</text>
+  <rect x="1262" y="896" width="60" height="32" rx="6" fill="#431407" stroke="#f59e0b"/><text x="1292" y="918" text-anchor="middle">TMA</text>
+  <rect x="1334" y="896" width="80" height="32" rx="6" fill="#431407" stroke="#f59e0b"/><text x="1374" y="918" text-anchor="middle">remote_sched</text>
+  <rect x="1426" y="896" width="80" height="32" rx="6" fill="#431407" stroke="#f59e0b"/><text x="1466" y="918" text-anchor="middle">allreduce</text>
+  <rect x="1518" y="896" width="80" height="32" rx="6" fill="#431407" stroke="#f59e0b"/><text x="1558" y="918" text-anchor="middle">promptlookup</text>
+  <rect x="1610" y="896" width="80" height="32" rx="6" fill="#431407" stroke="#f59e0b"/><text x="1650" y="918" text-anchor="middle">lookahead</text>
+  <rect x="1702" y="896" width="146" height="32" rx="6" fill="#431407" stroke="#f59e0b"/><text x="1775" y="918" text-anchor="middle">persistent_kernel.cuh</text>
+ </g>
+ <line x1="960" y1="944" x2="960" y2="962" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L7 Hardware -->
+ <rect x="60" y="964" width="1800" height="56" rx="12" fill="#0f2744" stroke="#22d3ee" stroke-width="2"/>
+ <text x="88" y="992" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L7 - NVIDIA GPU Hierarchy (device / shared / register - Ampere / Hopper / Blackwell)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0f2fe">
+  <rect x="88" y="1000" width="50" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="113" y="1017" text-anchor="middle">A100</text>
+  <rect x="148" y="1000" width="50" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="173" y="1017" text-anchor="middle">H100</text>
+  <rect x="208" y="1000" width="50" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="233" y="1017" text-anchor="middle">B200</text>
+  <rect x="268" y="1000" width="40" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="288" y="1017" text-anchor="middle">SM</text>
+  <rect x="318" y="1000" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="343" y="1017" text-anchor="middle">global</text>
+  <rect x="378" y="1000" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="403" y="1017" text-anchor="middle">shared</text>
+  <rect x="438" y="1000" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="463" y="1017" text-anchor="middle">register</text>
+  <rect x="498" y="1000" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="523" y="1017" text-anchor="middle">WGMMA</text>
+  <rect x="558" y="1000" width="40" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="578" y="1017" text-anchor="middle">TMA</text>
+  <rect x="608" y="1000" width="60" height="24" rx="5" fill="#2e1065" stroke="#a78bfa"/><text x="638" y="1017" text-anchor="middle">cuBLAS</text>
+  <rect x="678" y="1000" width="60" height="24" rx="5" fill="#2e1065" stroke="#a78bfa"/><text x="708" y="1017" text-anchor="middle">cuDNN</text>
+  <rect x="748" y="1000" width="60" height="24" rx="5" fill="#2e1065" stroke="#a78bfa"/><text x="778" y="1017" text-anchor="middle">cuTLASS</text>
+  <rect x="818" y="1000" width="50" height="24" rx="5" fill="#431407" stroke="#f59e0b"/><text x="843" y="1017" text-anchor="middle">sm80</text>
+  <rect x="878" y="1000" width="50" height="24" rx="5" fill="#431407" stroke="#f59e0b"/><text x="903" y="1017" text-anchor="middle">sm90</text>
+  <rect x="938" y="1000" width="60" height="24" rx="5" fill="#431407" stroke="#f59e0b"/><text x="968" y="1017" text-anchor="middle">sm100</text>
+  <rect x="1008" y="1000" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1033" y="1017" text-anchor="middle">FP16</text>
+  <rect x="1068" y="1000" width="40" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1088" y="1017" text-anchor="middle">FP8</text>
+  <rect x="1118" y="1000" width="60" height="24" rx="5" fill="#241a3d" stroke="#c4b5fd"/><text x="1148" y="1017" text-anchor="middle">CTA 128</text>
+  <rect x="1188" y="1000" width="60" height="24" rx="5" fill="#241a3d" stroke="#c4b5fd"/><text x="1218" y="1017" text-anchor="middle">CTA 256</text>
+  <rect x="1258" y="1000" width="70" height="24" rx="5" fill="#431407" stroke="#f59e0b"/><text x="1293" y="1017" text-anchor="middle">NVSHMEM</text>
+  <rect x="1338" y="1000" width="80" height="24" rx="5" fill="#431407" stroke="#f59e0b"/><text x="1378" y="1017" text-anchor="middle">multi-GPU</text>
+  <rect x="1428" y="1000" width="80" height="24" rx="5" fill="#2e1065" stroke="#a78bfa"/><text x="1468" y="1017" text-anchor="middle">kernel lvl</text>
+  <rect x="1518" y="1000" width="80" height="24" rx="5" fill="#2e1065" stroke="#a78bfa"/><text x="1558" y="1017" text-anchor="middle">block lvl</text>
+  <rect x="1608" y="1000" width="80" height="24" rx="5" fill="#2e1065" stroke="#a78bfa"/><text x="1648" y="1017" text-anchor="middle">thread lvl</text>
+  <rect x="1698" y="1000" width="70" height="24" rx="5" fill="#431407" stroke="#f59e0b"/><text x="1733" y="1017" text-anchor="middle">MPK SM</text>
+  <rect x="1778" y="1000" width="70" height="24" rx="5" fill="#431407" stroke="#f59e0b"/><text x="1813" y="1017" text-anchor="middle">tGraph</text>
+ </g>
+
+ <!-- DETAIL Pipeline -->
+ <rect x="60" y="1036" width="880" height="340" rx="14" fill="#0c1524" stroke="#8b5cf6" stroke-width="2.5"/>
+ <text x="88" y="1068" fill="#8b5cf6" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Mirage Superoptimizer Pipeline (OSDI 2025)</text>
+ <text x="88" y="1090" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">Input tensor program - search uGraphs - verify - transpile - JIT CUDA deploy</text>
+
+ <rect x="88" y="1106" width="820" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/>
+ <text x="498" y="1130" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stage 1 Input: PyTorch reference tensor program - KNGraph/TBGraph API or MPK layer ref</text>
+ <line x1="498" y1="1142" x2="498" y2="1154" stroke="#c4b5fd" stroke-width="1.5" marker-end="url(#arrow-violet)"/>
+ <rect x="88" y="1156" width="820" height="36" rx="6" fill="#2e1065" stroke="#8b5cf6"/>
+ <text x="498" y="1180" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stage 2 Search: incremental uGraph gen - kernel/block exhaustive - thread fusion patterns</text>
+ <line x1="498" y1="1192" x2="498" y2="1204" stroke="#8b5cf6" stroke-width="1.5" marker-end="url(#arrow-violet)"/>
+ <rect x="88" y="1206" width="820" height="36" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="498" y="1230" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stage 3 Prune+Verify: abstraction pruning - canonical forms - Z3 probabilistic equivalence check</text>
+ <line x1="498" y1="1242" x2="498" y2="1254" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow-violet)"/>
+ <rect x="88" y="1256" width="820" height="36" rx="6" fill="#431407" stroke="#ea580c"/>
+ <text x="498" y="1280" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stage 4 Transpile: uGraph to CUDA (or Triton/NKI) - layout opt - cuDNN/cuBLAS/cuTLASS hooks</text>
+ <line x1="498" y1="1292" x2="498" y2="1304" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arrow-amber)"/>
+ <rect x="88" y="1306" width="820" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="498" y="1330" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stage 5 Deploy: NVCC JIT binary - integrate into PyTorch - run optimized custom kernels</text>
+
+ <text x="88" y="1364" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Example: discovers FlashAttention uGraph automatically - up to 2.2x over hand-tuned FlashDecoding</text>
+
+ <!-- DETAIL MPK -->
+ <rect x="960" y="1036" width="900" height="340" rx="14" fill="#0c1224" stroke="#f59e0b" stroke-width="2.5"/>
+ <text x="988" y="1068" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">MPK Megakernel Pipeline (OSDI 2026) + Design Position</text>
+ <text x="988" y="1090" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="11">Entire LLM inference as one persistent GPU kernel - SM-level tGraph scheduling</text>
+
+ <text x="988" y="1114" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">MPK Compile Flow</text>
+ <rect x="988" y="1124" width="860" height="36" rx="6" fill="#431407" stroke="#f59e0b"/>
+ <text x="1418" y="1148" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Python layers - tGraph (SM tasks+deps) - per-task Mirage block superopt - megakernel NVCC</text>
+ <rect x="988" y="1170" width="860" height="36" rx="6" fill="#431407" stroke="#ea580c"/>
+ <text x="1418" y="1194" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Runtime: Worker CTAs exec tasks - Scheduler CTAs dispatch events - no kernel relaunch</text>
+
+ <text x="988" y="1224" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Spectrum Comparison</text>
+ <rect x="988" y="1234" width="200" height="68" rx="6" fill="#0c2d2d" stroke="#14b8a6"/>
+ <text x="1088" y="1258" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Triton autotune</text>
+ <text x="1088" y="1276" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Single-kernel block-level search</text>
+ <text x="1088" y="1292" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Manual kernel authoring</text>
+ <rect x="1200" y="1234" width="200" height="68" rx="6" fill="#2e1065" stroke="#8b5cf6"/>
+ <text x="1300" y="1258" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Mirage uGraph</text>
+ <text x="1300" y="1276" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">Multi-level superoptimization</text>
+ <text x="1300" y="1292" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">Kernel+block+thread joint search</text>
+ <rect x="1412" y="1234" width="200" height="68" rx="6" fill="#431407" stroke="#f59e0b"/>
+ <text x="1512" y="1258" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Mirage MPK</text>
+ <text x="1512" y="1276" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Full LLM as megakernel</text>
+ <text x="1512" y="1292" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">SM tGraph + persistent runtime</text>
+ <rect x="1624" y="1234" width="224" height="68" rx="6" fill="#422006" stroke="#ee4c2c"/>
+ <text x="1736" y="1258" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Manual FlashAttn</text>
+ <text x="1736" y="1276" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Hand-designed fused kernels</text>
+ <text x="1736" y="1292" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Mirage can rediscover + beat</text>
+
+ <text x="988" y="1320" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Key Innovations</text>
+ <rect x="988" y="1330" width="130" height="48" rx="6" fill="#2e1065" stroke="#8b5cf6"/>
+ <text x="1053" y="1352" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">uGraph IR</text>
+ <text x="1053" y="1368" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">3-level uniform repr</text>
+ <rect x="1130" y="1330" width="130" height="48" rx="6" fill="#2e1065" stroke="#a78bfa"/>
+ <text x="1195" y="1352" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Custom kernels</text>
+ <text x="1195" y="1368" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">Beyond lib+schedule</text>
+ <rect x="1272" y="1330" width="130" height="48" rx="6" fill="#241a3d" stroke="#c4b5fd"/>
+ <text x="1337" y="1352" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Verified search</text>
+ <text x="1337" y="1368" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">Z3 equivalence proof</text>
+ <rect x="1414" y="1330" width="130" height="48" rx="6" fill="#431407" stroke="#f59e0b"/>
+ <text x="1479" y="1352" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Megakernel</text>
+ <text x="1479" y="1368" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Elim launch overhead</text>
+ <rect x="1556" y="1330" width="130" height="48" rx="6" fill="#431407" stroke="#f59e0b"/>
+ <text x="1621" y="1352" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">tGraph SM</text>
+ <text x="1621" y="1368" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Fine-grained deps</text>
+ <rect x="1698" y="1330" width="150" height="48" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1773" y="1352" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">End-to-end fuse</text>
+ <text x="1773" y="1368" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">Compute + comm in 1 kernel</text>
+
+ <!-- footer bar -->
+ <rect x="60" y="1390" width="1800" height="72" rx="12" fill="#1a1208" stroke="#8b5cf6" stroke-width="2"/>
+ <text x="88" y="1418" fill="#8b5cf6" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">Design Position (first multi-level tensor superoptimizer + LLM megakernel runtime)</text>
+ <text x="960" y="1444" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="13">Joint kernel/block/thread search - auto-discover fused kernels - MPK fuses entire inference on GPU</text>
+
+ <!-- footers -->
+ <rect x="60" y="1478" width="1800" height="36" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1500" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10">Init: define tensor program - Mirage searches uGraphs - verified CUDA JIT - MPK chains layers into megakernel</text>
+
+ <text x="60" y="1510" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: github.com/mirage-project/mirage - arXiv:2405.05751 OSDI25 - arXiv:2512.22219 OSDI26 - mirage-project.readthedocs.io</text>
+</svg>

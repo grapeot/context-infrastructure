@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-orange" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#f97316"/>
+  </marker>
+  <marker id="arrow-amber" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#fbbf24"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">ThunderKittens Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">CUDA-embedded Tile DSL - 16x16 Primitives - LCF/LCSF Templates - H100/B200 - ICLR 2025</text>
+
+ <!-- L1 Applications -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#f97316" stroke-width="2"/>
+ <text x="88" y="124" fill="#f97316" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Applications + Integration (production kernels - PyTorch demos - per-kernel build)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#f97316"/><text x="118" y="162" text-anchor="middle">GEMM</text>
+  <rect x="160" y="136" width="80" height="40" rx="6" fill="#431407" stroke="#f97316"/><text x="200" y="162" text-anchor="middle">Attention</text>
+  <rect x="252" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#f97316"/><text x="277" y="162" text-anchor="middle">FA3</text>
+  <rect x="314" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#f97316"/><text x="349" y="162" text-anchor="middle">ThunderMLA</text>
+  <rect x="396" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#f97316"/><text x="426" y="162" text-anchor="middle">LayerNorm</text>
+  <rect x="468" y="136" width="80" height="40" rx="6" fill="#431407" stroke="#f97316"/><text x="508" y="162" text-anchor="middle">megakernel</text>
+  <rect x="560" y="136" width="50" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="585" y="162" text-anchor="middle">Llama</text>
+  <rect x="622" y="136" width="50" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="647" y="162" text-anchor="middle">Qwen</text>
+  <rect x="684" y="136" width="60" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="714" y="162" text-anchor="middle">LoLCATS</text>
+  <rect x="756" y="136" width="50" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="781" y="162" text-anchor="middle">Based</text>
+  <rect x="818" y="136" width="70" height="40" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="853" y="162" text-anchor="middle">PyTorch</text>
+  <rect x="900" y="136" width="70" height="40" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="935" y="162" text-anchor="middle">PyBind11</text>
+  <rect x="982" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#f97316"/><text x="1012" y="162" text-anchor="middle">Cursor</text>
+  <rect x="1054" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#f97316"/><text x="1089" y="162" text-anchor="middle">Together</text>
+  <rect x="1136" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#f97316"/><text x="1171" y="162" text-anchor="middle">855 TFLOP</text>
+  <rect x="1218" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#f97316"/><text x="1248" y="162" text-anchor="middle">TK 2.0</text>
+  <rect x="1290" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1315" y="162" text-anchor="middle">H100</text>
+  <rect x="1352" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1377" y="162" text-anchor="middle">B200</text>
+  <rect x="1414" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#f97316"/><text x="1444" y="162" text-anchor="middle">ICLR25</text>
+  <rect x="1486" y="136" width="70" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1521" y="162" text-anchor="middle">HipKittens</text>
+  <rect x="1568" y="136" width="90" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1613" y="162" text-anchor="middle">ThunderMittens</text>
+  <rect x="1670" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#f97316"/><text x="1705" y="162" text-anchor="middle">multi-GPU</text>
+  <rect x="1752" y="136" width="96" height="40" rx="6" fill="#431407" stroke="#f97316"/><text x="1800" y="162" text-anchor="middle">Hazy Research</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 DSL Frontend -->
+ <rect x="60" y="216" width="1800" height="120" rx="12" fill="#0f2744" stroke="#f97316" stroke-width="2"/>
+ <text x="88" y="244" fill="#f97316" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - CUDA-Embedded DSL (kittens.cuh header-only - C++20 - PyTorch/NumPy-inspired)</text>
+ <rect x="88" y="258" width="340" height="64" rx="10" fill="#431407" stroke="#f97316" stroke-width="2"/>
+ <text x="258" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Three Principles</text>
+ <text x="258" y="300" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Simplicity - Extensibility (native CUDA) - Speed</text>
+ <text x="258" y="314" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Hardware-up design - 16x16 min tile granularity</text>
+ <rect x="448" y="258" width="340" height="64" rx="10" fill="#431407" stroke="#f97316" stroke-width="2"/>
+ <text x="618" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Worker Abstraction</text>
+ <text x="618" y="300" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Warp (default scope) - Warpgroup (4 warps)</text>
+ <text x="618" y="314" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Collaborative tile ownership and compute</text>
+ <rect x="808" y="258" width="340" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="978" y="282" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Static Type Safety</text>
+ <text x="978" y="300" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">C++20 concepts - layout checks at compile time</text>
+ <text x="978" y="314" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">mma requires col layout B - silent fail prevention</text>
+ <rect x="1168" y="258" width="340" height="64" rx="10" fill="#241a3d" stroke="#c4b5fd" stroke-width="2"/>
+ <text x="1338" y="282" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">PyTorch-like Tile Ops</text>
+ <text x="1338" y="300" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">mul - exp - cumsum - mma - layernorm on tiles</text>
+ <text x="1338" y="314" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">dest-first operand convention (RISC-like)</text>
+ <rect x="1528" y="258" width="300" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1678" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Build Config</text>
+ <text x="1678" y="300" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">GPU_TARGET=H100|B200 - COMP_LEVEL</text>
+ <text x="1678" y="314" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">CUDA 12.8+ - per-kernel Makefile</text>
+ <line x1="960" y1="336" x2="960" y2="354" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Tile Types -->
+ <rect x="60" y="356" width="1800" height="200" rx="12" fill="#0f2744" stroke="#f97316" stroke-width="2.5"/>
+ <text x="88" y="384" fill="#f97316" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - Tile Data Types (managed layouts across GPU memory hierarchy)</text>
+
+ <rect x="88" y="400" width="420" height="136" rx="12" fill="#431407" stroke="#f97316" stroke-width="2"/>
+ <text x="298" y="428" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Register Tiles + Vectors</text>
+ <text x="298" y="450" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">rt_bf/fl/hf - 16x16 base - row/col layout</text>
+ <text x="298" y="468" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">col_vec / row_vec / naive_vec per tile</text>
+ <text x="298" y="486" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Warp-scoped - split across 32 threads</text>
+ <text x="298" y="504" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">src/register_tile/rt.cuh</text>
+ <text x="298" y="522" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Tensor core compatible 16-wide granularity</text>
+
+ <rect x="528" y="400" width="420" height="136" rx="12" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="738" y="428" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Shared Tiles + Vectors</text>
+ <text x="738" y="450" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">st_bf/hf/fl - block-scoped shared memory</text>
+ <text x="738" y="468" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Auto swizzle layouts (32B/64B/128B boundaries)</text>
+ <text x="738" y="486" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Bank conflict avoidance built-in</text>
+ <text x="738" y="504" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Pipeline staging buffers for TMA loads</text>
+ <text x="738" y="522" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Distributed Shared Memory (DSMEM) support</text>
+
+ <rect x="968" y="400" width="420" height="136" rx="12" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1178" y="428" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Global Layouts (gl)</text>
+ <text x="1178" y="450" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">gl&lt;type, batch, head, rows, cols, tile&gt;</text>
+ <text x="1178" y="468" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">HBM tensor views with tile indexing</text>
+ <text x="1178" y="486" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">TMA descriptor init helpers</text>
+ <text x="1178" y="504" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Grid-level L2 reuse patterns (SUPER_M)</text>
+ <text x="1178" y="522" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Dynamic dims via -1 template params</text>
+
+ <rect x="1408" y="400" width="420" height="136" rx="12" fill="#431407" stroke="#ea580c" stroke-width="2"/>
+ <text x="1618" y="428" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Blackwell Extensions (TK 2.0)</text>
+ <text x="1618" y="450" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Tensor memory (256KB extra reg mem)</text>
+ <text x="1618" y="468" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">CTA pairs - cluster coordination</text>
+ <text x="1618" y="486" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">MXFP8 / NVFP4 blockscaled formats</text>
+ <text x="1618" y="504" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">tcgen05.mma - 128-wide systolic tiles</text>
+ <text x="1618" y="522" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Dual-chiplet NUMA L2/HBM awareness</text>
+
+ <line x1="960" y1="556" x2="960" y2="574" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Templates -->
+ <rect x="60" y="576" width="1800" height="120" rx="12" fill="#0f2744" stroke="#fbbf24" stroke-width="2"/>
+ <text x="88" y="604" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Parallelism Templates (prototype.cuh - LCF/LCSF producer-consumer)</text>
+ <rect x="88" y="618" width="340" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="258" y="642" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">LCF Template</text>
+ <text x="258" y="660" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Load - Compute - Finish (consumer stores)</text>
+ <text x="258" y="674" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Used for GEMM and attention kernels</text>
+ <rect x="448" y="618" width="340" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="618" y="642" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">LCSF Template</text>
+ <text x="618" y="660" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Load - Compute - Store - Finish</text>
+ <text x="618" y="674" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Producer handles memory stores in loop</text>
+ <rect x="808" y="618" width="340" height="64" rx="10" fill="#431407" stroke="#f97316" stroke-width="2"/>
+ <text x="978" y="642" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Producer / Consumer Structs</text>
+ <text x="978" y="660" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">setup - load - compute - finish hooks</text>
+ <text x="978" y="674" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Register tuning: decrease/increase_registers</text>
+ <rect x="1168" y="618" width="340" height="64" rx="10" fill="#241a3d" stroke="#c4b5fd" stroke-width="2"/>
+ <text x="1338" y="642" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Pipeline + Barriers</text>
+ <text x="1338" y="660" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">INPUT_PIPE_STAGES - arrive/wait barriers</text>
+ <text x="1338" y="674" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">common_setup - persistent grid scheduling</text>
+ <rect x="1528" y="618" width="300" height="64" rx="10" fill="#431407" stroke="#f97316" stroke-width="2"/>
+ <text x="1678" y="642" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Megakernel + Schedulers</text>
+ <text x="1678" y="660" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">On-device task schedulers - CLC scheduling</text>
+ <text x="1678" y="674" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Single kernel full LLM layer execution</text>
+ <line x1="960" y1="696" x2="960" y2="714" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L5 Hardware Ops -->
+ <rect x="60" y="716" width="1800" height="120" rx="12" fill="#0f2744" stroke="#f97316" stroke-width="2"/>
+ <text x="88" y="744" fill="#f97316" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Hardware Primitives + Operations (tensor cores - TMA - multi-GPU)</text>
+ <rect x="88" y="758" width="340" height="64" rx="10" fill="#431407" stroke="#f97316" stroke-width="2"/>
+ <text x="258" y="782" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Tensor Cores</text>
+ <text x="258" y="800" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">H100: warpgroup::mma_AB async WGMMA</text>
+ <text x="258" y="814" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">B200: tcgen05.mma 5th-gen tensor cores</text>
+ <rect x="448" y="758" width="340" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="618" y="782" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">TMA + Async Memory</text>
+ <text x="618" y="800" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">tma::load_async - tma::store_async</text>
+ <text x="618" y="814" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">cp.async - proxy fence acquire/release</text>
+ <rect x="808" y="758" width="340" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="978" y="782" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Warp / Warpgroup Ops</text>
+ <text x="978" y="800" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">kittens::mul/store/transpose_sep</text>
+ <text x="978" y="814" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">group&lt;4&gt; collaborative reductions</text>
+ <rect x="1168" y="758" width="340" height="64" rx="10" fill="#431407" stroke="#ea580c" stroke-width="2"/>
+ <text x="1338" y="782" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Multi-GPU Networking</text>
+ <text x="1338" y="800" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">NVLink + NVSwitch data transfer</text>
+ <text x="1338" y="814" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">arXiv:2511.13940 multi-GPU paper</text>
+ <rect x="1528" y="758" width="300" height="64" rx="10" fill="#241a3d" stroke="#c4b5fd" stroke-width="2"/>
+ <text x="1678" y="782" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Precision Support</text>
+ <text x="1678" y="800" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">BF16 - FP8 - MXFP8 - NVFP4 - FP16</text>
+ <text x="1678" y="814" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Match or beat cuBLAS on B200 GEMM</text>
+ <line x1="960" y1="836" x2="960" y2="854" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L6 Kernel Library -->
+ <rect x="60" y="856" width="1800" height="88" rx="12" fill="#0f2744" stroke="#fbbf24" stroke-width="2"/>
+ <text x="88" y="884" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Kernel Library + Build (kernels/ - demos/ - tests/ - self-contained Makefiles)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0f2fe">
+  <rect x="88" y="896" width="80" height="32" rx="6" fill="#431407" stroke="#f97316"/><text x="128" y="918" text-anchor="middle">gemm/</text>
+  <rect x="180" y="896" width="80" height="32" rx="6" fill="#431407" stroke="#f97316"/><text x="220" y="918" text-anchor="middle">attn/</text>
+  <rect x="272" y="896" width="90" height="32" rx="6" fill="#431407" stroke="#f97316"/><text x="317" y="918" text-anchor="middle">megakernel</text>
+  <rect x="374" y="896" width="90" height="32" rx="6" fill="#422006" stroke="#fbbf24"/><text x="419" y="918" text-anchor="middle">educational</text>
+  <rect x="476" y="896" width="70" height="32" rx="6" fill="#422006" stroke="#fbbf24"/><text x="511" y="918" text-anchor="middle">demos/</text>
+  <rect x="558" y="896" width="60" height="32" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="588" y="918" text-anchor="middle">tests/</text>
+  <rect x="630" y="896" width="80" height="32" rx="6" fill="#431407" stroke="#f97316"/><text x="670" y="918" text-anchor="middle">bf16_h100</text>
+  <rect x="722" y="896" width="60" height="32" rx="6" fill="#431407" stroke="#f97316"/><text x="752" y="918" text-anchor="middle">fp8</text>
+  <rect x="794" y="896" width="70" height="32" rx="6" fill="#431407" stroke="#f97316"/><text x="829" y="918" text-anchor="middle">GQA attn</text>
+  <rect x="876" y="896" width="80" height="32" rx="6" fill="#431407" stroke="#f97316"/><text x="916" y="918" text-anchor="middle">causal</text>
+  <rect x="968" y="896" width="80" height="32" rx="6" fill="#431407" stroke="#f97316"/><text x="1008" y="918" text-anchor="middle">backward</text>
+  <rect x="1060" y="896" width="70" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1095" y="918" text-anchor="middle">Makefile</text>
+  <rect x="1142" y="896" width="60" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1172" y="918" text-anchor="middle">nvcc</text>
+  <rect x="1214" y="896" width="80" height="32" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="1254" y="918" text-anchor="middle">prototype</text>
+  <rect x="1306" y="896" width="80" height="32" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="1346" y="918" text-anchor="middle">kittens.cuh</text>
+  <rect x="1398" y="896" width="80" height="32" rx="6" fill="#431407" stroke="#f97316"/><text x="1438" y="918" text-anchor="middle">unit_tests</text>
+  <rect x="1490" y="896" width="80" height="32" rx="6" fill="#431407" stroke="#f97316"/><text x="1530" y="918" text-anchor="middle">benchmark</text>
+  <rect x="1582" y="896" width="70" height="32" rx="6" fill="#422006" stroke="#fbbf24"/><text x="1617" y="918" text-anchor="middle">llama_demo</text>
+  <rect x="1664" y="896" width="80" height="32" rx="6" fill="#422006" stroke="#fbbf24"/><text x="1704" y="918" text-anchor="middle">qwen_demo</text>
+  <rect x="1756" y="896" width="92" height="32" rx="6" fill="#431407" stroke="#f97316"/><text x="1802" y="918" text-anchor="middle">make run</text>
+ </g>
+ <line x1="960" y1="944" x2="960" y2="962" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L7 Hardware -->
+ <rect x="60" y="964" width="1800" height="56" rx="12" fill="#0f2744" stroke="#22d3ee" stroke-width="2"/>
+ <text x="88" y="992" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L7 - NVIDIA GPU Hierarchy (Thread - Warp - Warpgroup - Block - Grid)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0f2fe">
+  <rect x="88" y="1000" width="50" height="24" rx="5" fill="#431407" stroke="#f97316"/><text x="113" y="1017" text-anchor="middle">H100</text>
+  <rect x="148" y="1000" width="50" height="24" rx="5" fill="#431407" stroke="#f97316"/><text x="173" y="1017" text-anchor="middle">B200</text>
+  <rect x="208" y="1000" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="233" y="1017" text-anchor="middle">warp</text>
+  <rect x="268" y="1000" width="70" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="303" y="1017" text-anchor="middle">warpgroup</text>
+  <rect x="348" y="1000" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="373" y="1017" text-anchor="middle">block</text>
+  <rect x="408" y="1000" width="40" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="428" y="1017" text-anchor="middle">grid</text>
+  <rect x="458" y="1000" width="40" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="478" y="1017" text-anchor="middle">SM</text>
+  <rect x="508" y="1000" width="40" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="528" y="1017" text-anchor="middle">TMA</text>
+  <rect x="558" y="1000" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="583" y="1017" text-anchor="middle">WGMMA</text>
+  <rect x="618" y="1000" width="60" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="648" y="1017" text-anchor="middle">tcgen05</text>
+  <rect x="688" y="1000" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="713" y="1017" text-anchor="middle">HBM</text>
+  <rect x="748" y="1000" width="30" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="763" y="1017" text-anchor="middle">L2</text>
+  <rect x="788" y="1000" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="813" y="1017" text-anchor="middle">shared</text>
+  <rect x="848" y="1000" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="873" y="1017" text-anchor="middle">regfile</text>
+  <rect x="908" y="1000" width="60" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="938" y="1017" text-anchor="middle">DSMEM</text>
+  <rect x="978" y="1000" width="70" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="1013" y="1017" text-anchor="middle">tensor mem</text>
+  <rect x="1058" y="1000" width="60" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="1088" y="1017" text-anchor="middle">CTA pair</text>
+  <rect x="1128" y="1000" width="50" height="24" rx="5" fill="#431407" stroke="#f97316"/><text x="1153" y="1017" text-anchor="middle">NVLink</text>
+  <rect x="1188" y="1000" width="60" height="24" rx="5" fill="#431407" stroke="#f97316"/><text x="1218" y="1017" text-anchor="middle">Hopper</text>
+  <rect x="1258" y="1000" width="70" height="24" rx="5" fill="#431407" stroke="#f97316"/><text x="1293" y="1017" text-anchor="middle">Blackwell</text>
+  <rect x="1338" y="1000" width="60" height="24" rx="5" fill="#241a3d" stroke="#c4b5fd"/><text x="1368" y="1017" text-anchor="middle">132 SM</text>
+  <rect x="1408" y="1000" width="70" height="24" rx="5" fill="#241a3d" stroke="#c4b5fd"/><text x="1443" y="1017" text-anchor="middle">chiplet</text>
+  <rect x="1488" y="1000" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1513" y="1017" text-anchor="middle">BF16</text>
+  <rect x="1548" y="1000" width="40" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1568" y="1017" text-anchor="middle">FP8</text>
+  <rect x="1598" y="1000" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1623" y="1017" text-anchor="middle">MXFP8</text>
+  <rect x="1658" y="1000" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1683" y="1017" text-anchor="middle">NVFP4</text>
+  <rect x="1718" y="1000" width="60" height="24" rx="5" fill="#431407" stroke="#f97316"/><text x="1748" y="1017" text-anchor="middle">86% peak</text>
+  <rect x="1788" y="1000" width="70" height="24" rx="5" fill="#431407" stroke="#f97316"/><text x="1823" y="1017" text-anchor="middle">Ampere-</text>
+ </g>
+
+ <!-- DETAIL Pipeline -->
+ <rect x="60" y="1036" width="880" height="340" rx="14" fill="#0c1524" stroke="#f97316" stroke-width="2.5"/>
+ <text x="88" y="1068" fill="#f97316" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">LCF GEMM Kernel Flow (under 100 LOC - 855 TFLOPs H100)</text>
+ <text x="88" y="1090" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="11">matmul_template via kittens::prototype::lcf::kernel</text>
+
+ <rect x="88" y="1106" width="820" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/>
+ <text x="498" y="1130" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Setup: common_setup - SUPER_M L2 tiling - persistent grid task_id mapping</text>
+ <line x1="498" y1="1142" x2="498" y2="1154" stroke="#c4b5fd" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+ <rect x="88" y="1156" width="820" height="36" rx="6" fill="#431407" stroke="#f97316"/>
+ <text x="498" y="1180" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Producer: tma::load_async A/B tiles - INPUT_PIPE_STAGES pipeline - arrive barrier</text>
+ <line x1="498" y1="1192" x2="498" y2="1204" stroke="#f97316" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+ <rect x="88" y="1206" width="820" height="36" rx="6" fill="#422006" stroke="#fbbf24"/>
+ <text x="498" y="1230" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Consumer: warpgroup::mma_AB accum - mma_async_wait - register increase 232</text>
+ <line x1="498" y1="1242" x2="498" y2="1254" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrow-amber)"/>
+ <rect x="88" y="1256" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="1280" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Finish: warpgroup::store to shared - tma::store_async C - finish_finished barrier</text>
+ <line x1="498" y1="1292" x2="498" y2="1304" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow)"/>
+ <rect x="88" y="1306" width="820" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="498" y="1330" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">PyTorch: cd kernels/gemm - make - PyBind11 wrapper - import and call from Python</text>
+
+ <text x="88" y="1364" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Attention: LCF attn_fwd_template matches FA3 - no ping-pong scheduler needed</text>
+
+ <!-- DETAIL Position -->
+ <rect x="960" y="1036" width="900" height="340" rx="14" fill="#0c1224" stroke="#f97316" stroke-width="2.5"/>
+ <text x="988" y="1068" fill="#f97316" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Design Position: Tile-First CUDA DSL vs Triton/CUTLASS</text>
+ <text x="988" y="1090" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="11">Header-only embed in CUDA - not a separate compiler - hardware-native 16x16 tiles</text>
+
+ <text x="988" y="1114" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Spectrum Comparison</text>
+ <rect x="988" y="1124" width="200" height="68" rx="6" fill="#431407" stroke="#ea580c"/>
+ <text x="1088" y="1148" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Raw CUDA</text>
+ <text x="1088" y="1166" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Full control - max boilerplate</text>
+ <text x="1088" y="1182" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Manual TMA/WGMMA/barriers</text>
+ <rect x="1200" y="1124" width="200" height="68" rx="6" fill="#431407" stroke="#f97316"/>
+ <text x="1300" y="1148" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">ThunderKittens</text>
+ <text x="1300" y="1166" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Tile DSL in CUDA - LCF/LCSF templates</text>
+ <text x="1300" y="1182" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Managed layouts - FA3-level attn</text>
+ <rect x="1412" y="1124" width="200" height="68" rx="6" fill="#0c2d2d" stroke="#14b8a6"/>
+ <text x="1512" y="1148" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Triton</text>
+ <text x="1512" y="1166" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Block-level DSL + autotune</text>
+ <text x="1512" y="1182" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Separate compiler stack</text>
+ <rect x="1624" y="1124" width="224" height="68" rx="6" fill="#1a2e05" stroke="#76b900"/>
+ <text x="1736" y="1148" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">CUTLASS/cuBLAS</text>
+ <text x="1736" y="1166" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">600MB+ tuned library</text>
+ <text x="1736" y="1182" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">TK competes with single kernel</text>
+
+ <text x="988" y="1224" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Key Design Principles</text>
+ <rect x="988" y="1234" width="130" height="48" rx="6" fill="#431407" stroke="#f97316"/>
+ <text x="1053" y="1256" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">16x16 tiles</text>
+ <text x="1053" y="1272" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Tensor core native</text>
+ <rect x="1130" y="1234" width="130" height="48" rx="6" fill="#422006" stroke="#fbbf24"/>
+ <text x="1195" y="1256" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">LCF/LCSF</text>
+ <text x="1195" y="1272" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">Producer-consumer</text>
+ <rect x="1272" y="1234" width="130" height="48" rx="6" fill="#431407" stroke="#f97316"/>
+ <text x="1337" y="1256" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">No bank conflict</text>
+ <text x="1337" y="1272" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Auto swizzle layouts</text>
+ <rect x="1414" y="1234" width="130" height="48" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1479" y="1256" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Header-only</text>
+ <text x="1479" y="1272" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">#include kittens.cuh</text>
+ <rect x="1556" y="1234" width="130" height="48" rx="6" fill="#431407" stroke="#ea580c"/>
+ <text x="1621" y="1256" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Megakernel</text>
+ <text x="1621" y="1272" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">On-device scheduler</text>
+ <rect x="1698" y="1234" width="150" height="48" rx="6" fill="#431407" stroke="#f97316"/>
+ <text x="1773" y="1256" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Extensible</text>
+ <text x="1773" y="1272" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Drop to raw CUDA anytime</text>
+
+ <text x="988" y="1300" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">NVIDIA Scope Hierarchy (TK maps to each level)</text>
+ <rect x="988" y="1310" width="860" height="48" rx="6" fill="#1a1208" stroke="#f97316"/>
+ <text x="1418" y="1334" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="12">Thread - Warp - Warpgroup(4) - Block(N warps) - Grid(M blocks)</text>
+ <text x="1418" y="1350" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Register at warp - Shared at block - Global/HBM at grid - TMA bridges levels</text>
+
+ <!-- footer bar -->
+ <rect x="60" y="1390" width="1800" height="72" rx="12" fill="#1a1208" stroke="#f97316" stroke-width="2"/>
+ <text x="88" y="1418" fill="#f97316" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">Design Position (hardware-up tile DSL - simplicity + speed without leaving CUDA)</text>
+ <text x="960" y="1444" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="13">16x16 tile primitives - LCF producer/consumer templates - TMA/WGMMA/tcgen05 - megakernel schedulers</text>
+
+ <!-- footers -->
+ <rect x="60" y="1478" width="1800" height="36" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1500" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10">Init: clone repo - #include kittens.cuh - define layout+template - lcf::kernel - cd kernels/* - make</text>
+
+ <text x="60" y="1510" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: github.com/HazyResearch/ThunderKittens - arXiv:2410.20399 ICLR25 - TK 2.0 blog Feb 2026</text>
+</svg>

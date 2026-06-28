@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-amber" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#fcd34d"/>
+  </marker>
+  <marker id="arrow-teal" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#2dd4bf"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 680 H1920 M0 720 H1920 M0 760 H1920 M0 800 H1920 M0 840 H1920 M0 880 H1920 M0 920 H1920 M0 960 H1920 M0 1000 H1920 M0 1040 H1920 M0 1080 H1920 M0 1120 H1920 M0 1160 H1920 M0 1200 H1920 M0 1240 H1920 M0 1280 H1920 M0 1320 H1920 M0 1360 H1920 M0 1400 H1920 M0 1440 H1920 M0 1480 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">TensorRT-LLM Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">Builder - PyExecutor Runtime - MoE Wide-EP - Prefill/Decode Disaggregation</text>
+
+ <!-- L1 Serving -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2"/>
+ <text x="88" y="124" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Serving &amp; Integration</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="200" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="188" y="162" text-anchor="middle">OpenAI API</text>
+  <rect x="300" y="136" width="180" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="390" y="162" text-anchor="middle">Triton Backend</text>
+  <rect x="496" y="136" width="160" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="576" y="162" text-anchor="middle">NVIDIA Dynamo</text>
+  <rect x="672" y="136" width="200" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="772" y="162" text-anchor="middle">Disagg Router/Planner</text>
+  <rect x="888" y="136" width="160" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="968" y="162" text-anchor="middle">MPI + NCCL</text>
+  <rect x="1064" y="136" width="180" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1154" y="162" text-anchor="middle">Multi-node K8s</text>
+  <rect x="1260" y="136" width="280" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1400" y="162" text-anchor="middle">REST/gRPC - SLA-aware autoscale</text>
+  <rect x="1556" y="136" width="280" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1696" y="162" text-anchor="middle">KV-aware routing (cache hit)</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 -->
+ <rect x="60" y="216" width="1800" height="84" rx="12" fill="#0f2744" stroke="#34d399" stroke-width="2"/>
+ <text x="88" y="244" fill="#34d399" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Python LLM API</text>
+ <rect x="88" y="256" width="300" height="32" rx="6" fill="#14352a" stroke="#34d399"/><text x="238" y="278" text-anchor="middle" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="12">LLM.generate() / async</text>
+ <rect x="404" y="256" width="360" height="32" rx="6" fill="#14352a" stroke="#34d399"/><text x="584" y="278" text-anchor="middle" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="12">PyExecutor per rank - background loop</text>
+ <rect x="780" y="256" width="240" height="32" rx="6" fill="#14352a" stroke="#34d399"/><text x="900" y="278" text-anchor="middle" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="12">C++ Runtime (legacy)</text>
+ <rect x="1036" y="256" width="800" height="32" rx="6" fill="#14352a" stroke="#34d399"/><text x="1436" y="278" text-anchor="middle" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="12">Tokenizer - chat template - LoRA - disagg ctx/gen worker binding</text>
+ <line x1="960" y1="300" x2="960" y2="318" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Runtime -->
+ <rect x="60" y="320" width="1800" height="176" rx="12" fill="#0f2744" stroke="#a78bfa" stroke-width="2"/>
+ <text x="88" y="348" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - Runtime Orchestration (PyExecutor)</text>
+ <rect x="88" y="362" width="340" height="64" rx="8" fill="#241a3d" stroke="#c4b5fd"/>
+ <text x="258" y="386" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Scheduler</text>
+ <text x="258" y="408" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">Inflight batch - ctx/gen phase tag</text>
+ <rect x="444" y="362" width="340" height="64" rx="8" fill="#241a3d" stroke="#c4b5fd"/>
+ <text x="614" y="386" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">KVCacheManager</text>
+ <text x="614" y="408" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">Paged blocks - disagg xfer queue</text>
+ <rect x="800" y="362" width="340" height="64" rx="8" fill="#241a3d" stroke="#c4b5fd"/>
+ <text x="970" y="386" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">ModelEngine</text>
+ <text x="970" y="408" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">MoE layers - EP dispatch/combine</text>
+ <rect x="1156" y="362" width="680" height="64" rx="8" fill="#241a3d" stroke="#c4b5fd"/>
+ <text x="1496" y="386" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Sampler</text>
+ <text x="1496" y="408" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">top-k/p - beam - MTP speculative tokens</text>
+ <rect x="88" y="438" width="420" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8" stroke-dasharray="5 3"/>
+ <text x="298" y="464" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="11">Overlap Scheduler - CUDA Graph - chunked prefill</text>
+ <rect x="524" y="438" width="420" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8" stroke-dasharray="5 3"/>
+ <text x="734" y="464" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="11">Speculative decoding - guided decoding</text>
+ <rect x="960" y="438" width="876" height="40" rx="6" fill="#1e1b4b" stroke="#818cf8" stroke-dasharray="5 3"/>
+ <text x="1398" y="464" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="11">Continuous batching - streaming - EPLB slot remap hooks (Wide-EP)</text>
+ <line x1="960" y1="496" x2="960" y2="514" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Build -->
+ <rect x="60" y="516" width="880" height="196" rx="12" fill="#0f2744" stroke="#fbbf24" stroke-width="2"/>
+ <text x="88" y="544" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Build Phase (offline)</text>
+ <rect x="88" y="556" width="360" height="48" rx="6" fill="#3b2f0a" stroke="#fcd34d"/>
+ <text x="268" y="576" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">PyTorch Model + MoE config</text>
+ <text x="268" y="594" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">DeepSeek / Llama4 MoE - router top-k</text>
+ <rect x="464" y="556" width="452" height="48" rx="6" fill="#3b2f0a" stroke="#fcd34d"/>
+ <text x="690" y="576" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Builder - INetworkDefinition</text>
+ <text x="690" y="594" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">build_serialized_network() - EP/TP map baked in</text>
+ <rect x="88" y="614" width="200" height="36" rx="6" fill="#3b2f0a" stroke="#fcd34d"/><text x="188" y="638" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11">trtllm-build CLI</text>
+ <rect x="300" y="614" width="220" height="36" rx="6" fill="#3b2f0a" stroke="#fcd34d"/><text x="410" y="638" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11">FP8 / INT4 / AWQ</text>
+ <rect x="532" y="614" width="180" height="36" rx="6" fill="#3b2f0a" stroke="#fcd34d"/><text x="622" y="638" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11">moe_config</text>
+ <rect x="724" y="614" width="192" height="36" rx="6" fill="#3b2f0a" stroke="#fcd34d"/><text x="820" y="638" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11">Wide-EP slots</text>
+ <rect x="88" y="660" width="828" height="36" rx="6" fill="#422006" stroke="#f59e0b"/>
+ <text x="502" y="684" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="11">TRT plugins: Attention - MoE GEMM - AllReduce - DeepEP / WIDEEP comm kernels</text>
+
+ <rect x="960" y="516" width="900" height="196" rx="12" fill="#0f2744" stroke="#fbbf24" stroke-width="2"/>
+ <text x="988" y="544" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Engine Artifacts</text>
+ <rect x="988" y="556" width="844" height="52" rx="8" fill="#3b2f0a" stroke="#fcd34d"/>
+ <text x="1410" y="580" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">TensorRT Engine (.engine) per rank / phase</text>
+ <text x="1410" y="598" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Separate ctx (prefill) and gen (decode) engines optional under disagg</text>
+ <rect x="988" y="618" width="200" height="36" rx="6" fill="#3b2f0a" stroke="#fcd34d"/><text x="1088" y="642" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11">Expert shard map</text>
+ <rect x="1204" y="618" width="200" height="36" rx="6" fill="#3b2f0a" stroke="#fcd34d"/><text x="1304" y="642" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11">EPLB routing table</text>
+ <rect x="1420" y="618" width="200" height="36" rx="6" fill="#3b2f0a" stroke="#fcd34d"/><text x="1520" y="642" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11">HF / NeMo ckpt</text>
+ <rect x="1636" y="618" width="196" height="36" rx="6" fill="#3b2f0a" stroke="#fcd34d"/><text x="1734" y="642" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11">parallel config</text>
+ <rect x="988" y="664" width="844" height="36" rx="6" fill="#422006"/>
+ <text x="1410" y="688" text-anchor="middle" fill="#fcd34d" font-family="JetBrains Mono, monospace" font-size="11">Build once - deploy to ctx pool / gen pool / unified pool</text>
+ <line x1="940" y1="614" x2="958" y2="614" stroke="#fcd34d" stroke-width="2" marker-end="url(#arrow-amber)"/>
+ <line x1="960" y1="712" x2="960" y2="730" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L5 Kernels -->
+ <rect x="60" y="732" width="1800" height="96" rx="12" fill="#0f2744" stroke="#fb7185" stroke-width="2"/>
+ <text x="88" y="760" fill="#fb7185" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Kernel &amp; Library Layer</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ffe4e6">
+  <rect x="88" y="772" width="150" height="44" rx="6" fill="#4c0519" stroke="#fda4af"/><text x="163" y="792" text-anchor="middle">TensorRT</text><text x="163" y="806" text-anchor="middle" fill="#fecdd3" font-size="9">fusion</text>
+  <rect x="250" y="772" width="150" height="44" rx="6" fill="#4c0519" stroke="#fda4af"/><text x="325" y="792" text-anchor="middle">cuBLASLt</text><text x="325" y="806" text-anchor="middle" fill="#fecdd3" font-size="9">MoE GEMM</text>
+  <rect x="412" y="772" width="150" height="44" rx="6" fill="#4c0519" stroke="#fda4af"/><text x="487" y="792" text-anchor="middle">CUTLASS</text><text x="487" y="806" text-anchor="middle" fill="#fecdd3" font-size="9">Tensor Core</text>
+  <rect x="574" y="772" width="170" height="44" rx="6" fill="#4c0519" stroke="#fda4af"/><text x="659" y="792" text-anchor="middle">FlashAttention</text><text x="659" y="806" text-anchor="middle" fill="#fecdd3" font-size="9">FA-2/3</text>
+  <rect x="756" y="772" width="170" height="44" rx="6" fill="#4c0519" stroke="#fda4af"/><text x="841" y="792" text-anchor="middle">Transformer Eng</text><text x="841" y="806" text-anchor="middle" fill="#fecdd3" font-size="9">FP8/FP4</text>
+  <rect x="938" y="772" width="170" height="44" rx="6" fill="#7c2d12" stroke="#fb923c"/><text x="1023" y="792" text-anchor="middle" font-weight="700">DeepEP</text><text x="1023" y="806" text-anchor="middle" fill="#fed7aa" font-size="9">prefill HT comm</text>
+  <rect x="1120" y="772" width="170" height="44" rx="6" fill="#7c2d12" stroke="#fb923c"/><text x="1205" y="792" text-anchor="middle" font-weight="700">WIDEEP</text><text x="1205" y="806" text-anchor="middle" fill="#fed7aa" font-size="9">decode + CUDA Graph</text>
+  <rect x="1302" y="772" width="140" height="44" rx="6" fill="#4c0519" stroke="#fda4af"/><text x="1372" y="792" text-anchor="middle">NCCL</text><text x="1372" y="806" text-anchor="middle" fill="#fecdd3" font-size="9">TP/PP</text>
+  <rect x="1454" y="772" width="140" height="44" rx="6" fill="#4c0519" stroke="#fda4af"/><text x="1524" y="792" text-anchor="middle">NVLink</text><text x="1524" y="806" text-anchor="middle" fill="#fecdd3" font-size="9">KV + EP</text>
+  <rect x="1606" y="772" width="140" height="44" rx="6" fill="#4c0519" stroke="#fda4af"/><text x="1676" y="792" text-anchor="middle">IB/RDMA</text><text x="1676" y="806" text-anchor="middle" fill="#fecdd3" font-size="9">multi-node</text>
+  <rect x="1758" y="772" width="90" height="44" rx="6" fill="#4c0519" stroke="#fda4af"/><text x="1803" y="798" text-anchor="middle">CUDA Graph</text>
+ </g>
+ <line x1="960" y1="828" x2="960" y2="846" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L6 overview -->
+ <rect x="60" y="848" width="1800" height="56" rx="12" fill="#0f2744" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="88" y="876" fill="#2dd4bf" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Parallelism Overview</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ccfbf1">
+  <rect x="280" y="862" width="110" height="28" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="335" y="881" text-anchor="middle">TP</text>
+  <rect x="400" y="862" width="110" height="28" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="455" y="881" text-anchor="middle">PP</text>
+  <rect x="520" y="862" width="110" height="28" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="575" y="881" text-anchor="middle">DP</text>
+  <rect x="640" y="862" width="110" height="28" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="695" y="881" text-anchor="middle">EP</text>
+  <rect x="760" y="862" width="130" height="28" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="825" y="881" text-anchor="middle">Hybrid ETP</text>
+  <rect x="900" y="862" width="130" height="28" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="965" y="881" text-anchor="middle">Wide-EP</text>
+  <rect x="1040" y="862" width="170" height="28" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1125" y="881" text-anchor="middle">PD Disagg</text>
+  <rect x="1220" y="862" width="130" height="28" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1285" y="881" text-anchor="middle">NVL72 domain</text>
+  <rect x="1360" y="862" width="480" height="28" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1600" y="881" text-anchor="middle">Ctx and Gen pools may use different TP/EP/PP configs</text>
+ </g>
+
+ <!-- DETAIL: MoE / Wide-EP -->
+ <rect x="60" y="920" width="880" height="340" rx="14" fill="#0c1f1a" stroke="#f97316" stroke-width="2.5"/>
+ <text x="88" y="952" fill="#fb923c" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">MoE / Wide-EP Detail</text>
+ <text x="88" y="974" fill="#fdba74" font-family="JetBrains Mono, monospace" font-size="11">Mixture-of-Experts inference path (DeepSeek, Llama 4, etc.)</text>
+
+ <!-- MoE flow -->
+ <rect x="88" y="990" width="120" height="52" rx="8" fill="#1c1917" stroke="#fcd34d"/>
+ <text x="148" y="1012" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Token</text>
+ <text x="148" y="1028" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">hidden state</text>
+ <line x1="208" y1="1016" x2="232" y2="1016" stroke="#fcd34d" stroke-width="1.5" marker-end="url(#arrow-amber)"/>
+ <rect x="236" y="990" width="140" height="52" rx="8" fill="#1c1917" stroke="#fcd34d"/>
+ <text x="306" y="1012" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Router</text>
+ <text x="306" y="1028" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">top-k experts</text>
+ <line x1="376" y1="1016" x2="400" y2="1016" stroke="#fcd34d" stroke-width="1.5" marker-end="url(#arrow-amber)"/>
+ <rect x="404" y="990" width="160" height="52" rx="8" fill="#1c1917" stroke="#fcd34d"/>
+ <text x="484" y="1012" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Dispatch</text>
+ <text x="484" y="1028" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">token to GPU</text>
+ <line x1="564" y1="1016" x2="588" y2="1016" stroke="#fcd34d" stroke-width="1.5" marker-end="url(#arrow-amber)"/>
+ <rect x="592" y="990" width="160" height="52" rx="8" fill="#7c2d12" stroke="#fb923c"/>
+ <text x="672" y="1012" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Expert FFN</text>
+ <text x="672" y="1028" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">local shard / slot</text>
+ <line x1="752" y1="1016" x2="776" y2="1016" stroke="#fcd34d" stroke-width="1.5" marker-end="url(#arrow-amber)"/>
+ <rect x="780" y="990" width="140" height="52" rx="8" fill="#1c1917" stroke="#fcd34d"/>
+ <text x="850" y="1012" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Combine</text>
+ <text x="850" y="1028" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">AllReduce / EP</text>
+
+ <!-- MoE patterns -->
+ <text x="88" y="1068" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Execution patterns</text>
+ <rect x="88" y="1078" width="250" height="58" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="213" y="1100" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">TP MoE</text>
+ <text x="213" y="1118" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Expert weights sharded - all GPUs see all tokens</text>
+ <rect x="350" y="1078" width="250" height="58" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="475" y="1100" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">EP MoE</text>
+ <text x="475" y="1118" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Full expert/GPU - only routed tokens arrive</text>
+ <rect x="612" y="1078" width="308" height="58" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="766" y="1100" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Hybrid ETP</text>
+ <text x="766" y="1118" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Subset of experts per GPU + TP shard within expert</text>
+
+ <!-- Wide-EP -->
+ <text x="88" y="1158" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Wide-EP + EPLB (Expert Parallelism Load Balancer)</text>
+ <rect x="88" y="1168" width="260" height="72" rx="6" fill="#422006" stroke="#f59e0b"/>
+ <text x="218" y="1190" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Expert Slots</text>
+ <text x="218" y="1208" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">Slots decoupled from Expert IDs</text>
+ <text x="218" y="1224" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">enables replication + remap</text>
+ <rect x="362" y="1168" width="260" height="72" rx="6" fill="#422006" stroke="#f59e0b"/>
+ <text x="492" y="1190" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Offline EPLB</text>
+ <text x="492" y="1208" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">Pre-computed placement from</text>
+ <text x="492" y="1224" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">historical traffic stats</text>
+ <rect x="636" y="1168" width="284" height="72" rx="6" fill="#422006" stroke="#f59e0b"/>
+ <text x="778" y="1190" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Online EPLB</text>
+ <text x="778" y="1208" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">Dynamic slot remap - layer-wise weight</text>
+ <text x="778" y="1224" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">redist - no stop-the-world</text>
+
+ <text x="88" y="1262" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Comm: DeepEP (prefill/high-B) vs WIDEEP (decode/low-lat, GPU-side dyn size, CUDA Graph) - NVLink/IB across NVL72</text>
+
+ <!-- DETAIL: PD Disagg -->
+ <rect x="960" y="920" width="900" height="340" rx="14" fill="#0c1524" stroke="#38bdf8" stroke-width="2.5"/>
+ <text x="988" y="952" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Prefill-Decode Disaggregation Detail</text>
+ <text x="988" y="974" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="11">Decouple context (prefill) and generation (decode) onto separate GPU pools</text>
+
+ <!-- PD pools -->
+ <rect x="988" y="990" width="380" height="130" rx="10" fill="#0f2744" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1178" y="1016" text-anchor="middle" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">CTX Pool (Prefill)</text>
+ <text x="1178" y="1036" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="10">Compute-bound - long prompt KV build</text>
+ <rect x="1008" y="1048" width="160" height="28" rx="5" fill="#132f4c" stroke="#38bdf8"/><text x="1088" y="1068" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10">High-throughput kernels</text>
+ <rect x="1180" y="1048" width="170" height="28" rx="5" fill="#132f4c" stroke="#38bdf8"/><text x="1265" y="1068" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10">DeepEP / large batch MoE</text>
+ <rect x="1008" y="1084" width="340" height="28" rx="5" fill="#132f4c" stroke="#38bdf8"/><text x="1178" y="1104" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10">Optimize TTFT - own TP/EP/PP config</text>
+
+ <rect x="1440" y="990" width="380" height="130" rx="10" fill="#0f2744" stroke="#34d399" stroke-width="2"/>
+ <text x="1630" y="1016" text-anchor="middle" fill="#34d399" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">GEN Pool (Decode)</text>
+ <text x="1630" y="1036" text-anchor="middle" fill="#a7f3d0" font-family="JetBrains Mono, monospace" font-size="10">Memory-bound - autoregressive token loop</text>
+ <rect x="1460" y="1048" width="160" height="28" rx="5" fill="#14352a" stroke="#34d399"/><text x="1540" y="1068" text-anchor="middle" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="10">Low-latency kernels</text>
+ <rect x="1632" y="1048" width="170" height="28" rx="5" fill="#14352a" stroke="#34d399"/><text x="1717" y="1068" text-anchor="middle" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="10">WIDEEP + CUDA Graph</text>
+ <rect x="1460" y="1084" width="340" height="28" rx="5" fill="#14352a" stroke="#34d399"/><text x="1630" y="1104" text-anchor="middle" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="10">Optimize TPOT/ITL - own TP/EP/PP config</text>
+
+ <!-- KV xfer arrow -->
+ <line x1="1368" y1="1055" x2="1440" y2="1055" stroke="#fcd34d" stroke-width="2.5" marker-end="url(#arrow-amber)"/>
+ <rect x="1360" y="1030" width="88" height="50" rx="4" fill="#422006" stroke="#f59e0b"/>
+ <text x="1404" y="1050" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9" font-weight="700">KV blocks</text>
+ <text x="1404" y="1064" text-anchor="middle" fill="#fcd34d" font-family="JetBrains Mono, monospace" font-size="8">NVLink/IB</text>
+ <text x="1404" y="1076" text-anchor="middle" fill="#fcd34d" font-family="JetBrains Mono, monospace" font-size="8">RDMA xfer</text>
+
+ <!-- Dynamo orchestration -->
+ <text x="988" y="1142" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Dynamo orchestration (disagg control plane)</text>
+ <rect x="988" y="1152" width="200" height="56" rx="6" fill="#1e1b4b" stroke="#818cf8"/>
+ <text x="1088" y="1174" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Router</text>
+ <text x="1088" y="1192" text-anchor="middle" fill="#a5b4fc" font-family="JetBrains Mono, monospace" font-size="9">KV-cache-aware route</text>
+ <rect x="1204" y="1152" width="200" height="56" rx="6" fill="#1e1b4b" stroke="#818cf8"/>
+ <text x="1304" y="1174" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Planner</text>
+ <text x="1304" y="1192" text-anchor="middle" fill="#a5b4fc" font-family="JetBrains Mono, monospace" font-size="9">SLA TTFT + ITL matching</text>
+ <rect x="1420" y="1152" width="200" height="56" rx="6" fill="#1e1b4b" stroke="#818cf8"/>
+ <text x="1520" y="1174" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Autoscale</text>
+ <text x="1520" y="1192" text-anchor="middle" fill="#a5b4fc" font-family="JetBrains Mono, monospace" font-size="9">ctx/gen pool sizing</text>
+ <rect x="1636" y="1152" width="200" height="56" rx="6" fill="#1e1b4b" stroke="#818cf8"/>
+ <text x="1736" y="1174" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Overlap (M)</text>
+ <text x="1736" y="1192" text-anchor="middle" fill="#a5b4fc" font-family="JetBrains Mono, monospace" font-size="9">KV xfer || compute</text>
+
+ <text x="988" y="1232" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Benefit: removes prefill/decode interference - independent perf tuning - long ISL + moderate OSL workloads gain most</text>
+ <text x="988" y="1248" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Cost: KV block transfer overhead - mitigated by overlapping xfer with other requests + parallel ctx/gen xfers</text>
+
+ <!-- L7 Hardware -->
+ <rect x="60" y="1280" width="1800" height="72" rx="12" fill="#1a1208" stroke="#f97316" stroke-width="2"/>
+ <text x="88" y="1308" fill="#fb923c" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L7 - NVIDIA GPU Hardware</text>
+ <text x="960" y="1334" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="13">A100 - H100/H200 - B200 - GH200/GB200 - NVL72 (130 TB/s NVLink) - Tensor Cores FP8/FP4</text>
+
+ <!-- footers -->
+ <rect x="60" y="1372" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1392" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Unified path: Client - LLM API - PyExecutor - Scheduler - ModelEngine - Sampler - tokens</text>
+ <text x="960" y="1410" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Disagg path: Client - Dynamo Router - CTX prefill (+KV) - KV xfer - GEN decode loop - tokens | MoE path: Router - dispatch - expert - combine (EPLB remaps slots)</text>
+
+ <text x="60" y="1456" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: TensorRT-LLM parallel-strategy, blog04 Wide-EP, blog05 Disaggregated Serving, NVIDIA Dynamo blog</text>
+</svg>

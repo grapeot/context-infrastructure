@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-orange" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#f97316"/>
+  </marker>
+  <marker id="arrow-purple" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#a78bfa"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">Mojo Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">Python-family Systems Language - KGEN/MLIR Core - MAX Integration - mojolang.org - Modular</text>
+
+ <!-- L1 Language -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#f97316" stroke-width="2"/>
+ <text x="88" y="124" fill="#f97316" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Mojo Language (Python-family syntax + systems programming)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="113" y="162" text-anchor="middle">def</text>
+  <rect x="150" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="175" y="162" text-anchor="middle">struct</text>
+  <rect x="212" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="237" y="162" text-anchor="middle">trait</text>
+  <rect x="274" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="304" y="162" text-anchor="middle">comptime</text>
+  <rect x="346" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="381" y="162" text-anchor="middle">alias</text>
+  <rect x="428" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="453" y="162" text-anchor="middle">if/for</text>
+  <rect x="490" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="515" y="162" text-anchor="middle">List</text>
+  <rect x="552" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="587" y="162" text-anchor="middle">Dict</text>
+  <rect x="634" y="136" width="80" height="40" rx="6" fill="#422006" stroke="#fcd34d"/><text x="674" y="162" text-anchor="middle">Python interop</text>
+  <rect x="726" y="136" width="90" height="40" rx="6" fill="#422006" stroke="#fcd34d"/><text x="771" y="162" text-anchor="middle">PythonObject</text>
+  <rect x="828" y="136" width="80" height="40" rx="6" fill="#422006" stroke="#fcd34d"/><text x="868" y="162" text-anchor="middle">Py modules</text>
+  <rect x="920" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="955" y="162" text-anchor="middle">dunder</text>
+  <rect x="1002" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1032" y="162" text-anchor="middle">SIMD</text>
+  <rect x="1074" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1104" y="162" text-anchor="middle">Tensor</text>
+  <rect x="1146" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1176" y="162" text-anchor="middle">Buffer</text>
+  <rect x="1218" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1243" y="162" text-anchor="middle">Pointer</text>
+  <rect x="1280" y="136" width="80" height="40" rx="6" fill="#052e16" stroke="#34a853"/><text x="1320" y="162" text-anchor="middle">stdlib OSS</text>
+  <rect x="1372" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1407" y="162" text-anchor="middle">overload</text>
+  <rect x="1454" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1484" y="162" text-anchor="middle">@value</text>
+  <rect x="1526" y="136" width="80" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1566" y="162" text-anchor="middle">zero-cost</text>
+  <rect x="1618" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1648" y="162" text-anchor="middle">enum</text>
+  <rect x="1690" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1715" y="162" text-anchor="middle">match</text>
+  <rect x="1752" y="136" width="96" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1800" y="162" text-anchor="middle">Chris Lattner</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Metaprogramming -->
+ <rect x="60" y="216" width="1800" height="120" rx="12" fill="#0f2744" stroke="#fb923c" stroke-width="2"/>
+ <text x="88" y="244" fill="#fb923c" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Parametric Meta-Programming (compile-time vs runtime)</text>
+
+ <rect x="88" y="258" width="420" height="64" rx="10" fill="#431407" stroke="#f97316" stroke-width="2"/>
+ <text x="298" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Parameters [T: Type, N: Int]</text>
+ <text x="298" y="300" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Compile-time inputs - generic structs/functions</text>
+ <text x="298" y="314" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Specialize before instantiation - C++ templates evolved</text>
+
+ <rect x="528" y="258" width="420" height="64" rx="10" fill="#431407" stroke="#f97316" stroke-width="2"/>
+ <text x="738" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Traits + Dependent Types</text>
+ <text x="738" y="300" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Contract for types - Copyable/Movable/Sized...</text>
+ <text x="738" y="314" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Associated types - comptime members</text>
+
+ <rect x="968" y="258" width="420" height="64" rx="10" fill="#431407" stroke="#f97316" stroke-width="2"/>
+ <text x="1178" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">mlir_op / mlir_type</text>
+ <text x="1178" y="300" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Direct MLIR dialect access from Mojo source</text>
+ <text x="1178" y="314" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Mojo as syntactic sugar for MLIR operations</text>
+
+ <rect x="1408" y="258" width="420" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1618" y="282" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Library-First Kernel Design</text>
+ <text x="1618" y="300" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Tunable knobs - hardware specialization hooks</text>
+ <text x="1618" y="314" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Scale across dtypes/ops/targets combinatorially</text>
+
+ <line x1="960" y1="336" x2="960" y2="354" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 KGEN -->
+ <rect x="60" y="356" width="1800" height="200" rx="12" fill="#0f2744" stroke="#f97316" stroke-width="2.5"/>
+ <text x="88" y="384" fill="#f97316" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - KGEN Compiler Framework (MLIR Core - not linalg/StableHLO dialects)</text>
+
+ <!-- left LIT -->
+ <rect x="88" y="402" width="420" height="136" rx="12" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="298" y="432" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">LIT Dialect (Language IR)</text>
+ <text x="298" y="456" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Mojo parses directly to LIT MLIR dialect</text>
+ <text x="298" y="474" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Fully models language before instantiation</text>
+ <text x="298" y="492" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Parametric ops/types via MLIR attributes</text>
+ <text x="298" y="510" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Pre-bound parametric IR - reflectable by MAX GC</text>
+ <text x="298" y="528" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">AOT compile + JIT specialization paths</text>
+
+ <!-- center pipeline -->
+ <rect x="528" y="402" width="864" height="136" rx="12" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="960" y="432" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">KGEN Progressive Lowering (MLIR Core layers)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="10" fill="#c4b5fd">
+  <rect x="548" y="444" width="80" height="28" rx="5" fill="#3b0764" stroke="#e879f9"/><text x="588" y="463" text-anchor="middle">parse/semantic</text>
+  <rect x="638" y="444" width="70" height="28" rx="5" fill="#3b0764" stroke="#e879f9"/><text x="673" y="463" text-anchor="middle">LIT IR</text>
+  <rect x="718" y="444" width="80" height="28" rx="5" fill="#3b0764" stroke="#e879f9"/><text x="758" y="463" text-anchor="middle">specialize</text>
+  <rect x="808" y="444" width="80" height="28" rx="5" fill="#3b0764" stroke="#e879f9"/><text x="848" y="463" text-anchor="middle">instantiate</text>
+  <rect x="898" y="444" width="70" height="28" rx="5" fill="#3b0764" stroke="#e879f9"/><text x="933" y="463" text-anchor="middle">lower</text>
+  <rect x="978" y="444" width="60" height="28" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="1008" y="463" text-anchor="middle">LLVM</text>
+  <rect x="1048" y="444" width="70" height="28" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="1083" y="463" text-anchor="middle">NVPTX</text>
+  <rect x="1128" y="444" width="50" height="28" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="1153" y="463" text-anchor="middle">x86</text>
+  <rect x="1188" y="444" width="50" height="28" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="1213" y="463" text-anchor="middle">ARM</text>
+  <rect x="1248" y="444" width="60" height="28" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1278" y="463" text-anchor="middle">GPU</text>
+  <rect x="1318" y="444" width="60" height="28" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1348" y="463" text-anchor="middle">TPU</text>
+  <rect x="548" y="482" width="80" height="28" rx="5" fill="#3b0764" stroke="#e879f9"/><text x="588" y="501" text-anchor="middle">compile cache</text>
+  <rect x="638" y="482" width="90" height="28" rx="5" fill="#3b0764" stroke="#e879f9"/><text x="683" y="501" text-anchor="middle">adaptive compile</text>
+  <rect x="738" y="482" width="80" height="28" rx="5" fill="#3b0764" stroke="#e879f9"/><text x="778" y="501" text-anchor="middle">error msgs</text>
+  <rect x="828" y="482" width="90" height="28" rx="5" fill="#3b0764" stroke="#e879f9"/><text x="873" y="501" text-anchor="middle">multi-target</text>
+  <rect x="928" y="482" width="80" height="28" rx="5" fill="#3b0764" stroke="#e879f9"/><text x="968" y="501" text-anchor="middle">mlir dialects</text>
+ </g>
+ <text x="960" y="528" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">First language built ground-up on MLIR design principles - Mojo is to MLIR as C is to ASM</text>
+
+ <!-- right runtime -->
+ <rect x="1412" y="402" width="420" height="136" rx="12" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1622" y="432" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Runtime + Packaging</text>
+ <text x="1622" y="456" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Concurrent MAX runtime - parallel execution</text>
+ <text x="1622" y="474" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Packaged kernels - Modular Executable Format</text>
+ <text x="1622" y="492" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Python extension modules via PythonModuleBuilder</text>
+ <text x="1622" y="510" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Compiler proprietary (OSS fall 2026) - stdlib Apache 2</text>
+ <text x="1622" y="528" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Mojo 1.0 beta - May 2026</text>
+
+ <line x1="648" y1="470" x2="676" y2="470" stroke="#f97316" stroke-width="2" marker-end="url(#arrow-orange)"/>
+ <line x1="1392" y1="470" x2="1410" y2="470" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow-orange)"/>
+ <line x1="960" y1="556" x2="960" y2="574" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 MAX Graph Compiler -->
+ <rect x="60" y="576" width="1800" height="120" rx="12" fill="#0f2744" stroke="#6366f1" stroke-width="2.5"/>
+ <text x="88" y="604" fill="#6366f1" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - MAX Graph Compiler (JITGraph - MLIR-based AI inference stack)</text>
+
+ <rect x="88" y="618" width="320" height="64" rx="10" fill="#1e1b4b" stroke="#6366f1" stroke-width="2"/>
+ <text x="248" y="642" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">RMO / MO Input</text>
+ <text x="248" y="660" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Relaxed Modular Operators - model.mlir DAG</text>
+ <text x="248" y="674" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Python Graph API - PyTorch/ONNX/Mojo models</text>
+
+ <rect x="428" y="618" width="320" height="64" rx="10" fill="#1e1b4b" stroke="#6366f1" stroke-width="2"/>
+ <text x="588" y="642" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">MOGG Fusion Layer</text>
+ <text x="588" y="660" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Lambda-based epilog/prolog/elementwise fusion</text>
+ <text x="588" y="674" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Structured kernels from LIT kernel introspection</text>
+
+ <rect x="768" y="618" width="320" height="64" rx="10" fill="#1e1b4b" stroke="#6366f1" stroke-width="2"/>
+ <text x="928" y="642" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">MGP Runtime Glue</text>
+ <text x="928" y="660" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Memory planning - kernel inlining - weight registry</text>
+ <text x="928" y="674" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">JIT compile packaged kernels - emit Mojo</text>
+
+ <rect x="1108" y="618" width="320" height="64" rx="10" fill="#422006" stroke="#fcd34d" stroke-width="2"/>
+ <text x="1268" y="642" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Custom Op Extensibility</text>
+ <text x="1268" y="660" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">@compiler.register - write once reuse all frameworks</text>
+ <text x="1268" y="674" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">No GC rebuild - introspect Mojo kernel signatures</text>
+
+ <rect x="1448" y="618" width="380" height="64" rx="10" fill="#134e4a" stroke="#5eead4" stroke-width="2"/>
+ <text x="1638" y="642" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Output: model.mef</text>
+ <text x="1638" y="660" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">DAG of executable kernels - cross-kernel fusion</text>
+ <text x="1638" y="674" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Multi-level cache: model / GC IR / Mojo IR</text>
+
+ <line x1="408" y1="650" x2="428" y2="650" stroke="#6366f1" stroke-width="2" marker-end="url(#arrow-purple)"/>
+ <line x1="748" y1="650" x2="768" y2="650" stroke="#6366f1" stroke-width="2" marker-end="url(#arrow-purple)"/>
+ <line x1="1088" y1="650" x2="1108" y2="650" stroke="#fcd34d" stroke-width="2" marker-end="url(#arrow-purple)"/>
+ <line x1="1428" y1="650" x2="1448" y2="650" stroke="#5eead4" stroke-width="2" marker-end="url(#arrow-purple)"/>
+ <line x1="960" y1="696" x2="960" y2="714" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L5 Platform -->
+ <rect x="60" y="716" width="1800" height="88" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2"/>
+ <text x="88" y="744" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Modular Platform / MAX Engine (inference + deployment)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0f2fe">
+  <rect x="88" y="756" width="70" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="123" y="780" text-anchor="middle">MAX Engine</text>
+  <rect x="170" y="756" width="80" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="210" y="780" text-anchor="middle">Graph API</text>
+  <rect x="262" y="756" width="70" height="36" rx="6" fill="#422006" stroke="#ee4c2c"/><text x="297" y="780" text-anchor="middle">PyTorch</text>
+  <rect x="344" y="756" width="50" height="36" rx="6" fill="#422006" stroke="#ee4c2c"/><text x="369" y="780" text-anchor="middle">ONNX</text>
+  <rect x="406" y="756" width="80" height="36" rx="6" fill="#422006" stroke="#ee4c2c"/><text x="446" y="780" text-anchor="middle">TorchScript</text>
+  <rect x="498" y="756" width="70" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="533" y="780" text-anchor="middle">Serving</text>
+  <rect x="580" y="756" width="80" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="620" y="780" text-anchor="middle">Pipelines</text>
+  <rect x="672" y="756" width="70" height="36" rx="6" fill="#431407" stroke="#f97316"/><text x="707" y="780" text-anchor="middle">Kernels</text>
+  <rect x="754" y="756" width="60" height="36" rx="6" fill="#431407" stroke="#f97316"/><text x="784" y="780" text-anchor="middle">Matmul</text>
+  <rect x="826" y="756" width="60" height="36" rx="6" fill="#431407" stroke="#f97316"/><text x="856" y="780" text-anchor="middle">Attention</text>
+  <rect x="898" y="756" width="70" height="36" rx="6" fill="#431407" stroke="#f97316"/><text x="933" y="780" text-anchor="middle">LayerNorm</text>
+  <rect x="980" y="756" width="80" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1020" y="780" text-anchor="middle">kernel fusion</text>
+  <rect x="1072" y="756" width="80" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1112" y="780" text-anchor="middle">graph opt</text>
+  <rect x="1164" y="756" width="70" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1199" y="780" text-anchor="middle">CPU SIMD</text>
+  <rect x="1246" y="756" width="50" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1271" y="780" text-anchor="middle">GPU</text>
+  <rect x="1308" y="756" width="50" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1333" y="780" text-anchor="middle">TPU</text>
+  <rect x="1370" y="756" width="50" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1395" y="780" text-anchor="middle">ASIC</text>
+  <rect x="1432" y="756" width="80" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1472" y="780" text-anchor="middle">heterogeneous</text>
+  <rect x="1524" y="756" width="80" height="36" rx="6" fill="#052e16" stroke="#34a853"/><text x="1564" y="780" text-anchor="middle">no CUDA dep</text>
+  <rect x="1616" y="756" width="70" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1651" y="780" text-anchor="middle">portable</text>
+  <rect x="1698" y="756" width="80" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1738" y="780" text-anchor="middle">low latency</text>
+  <rect x="1790" y="756" width="58" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1819" y="780" text-anchor="middle">throughput</text>
+ </g>
+
+ <!-- L6 Hardware abstraction -->
+ <rect x="60" y="816" width="1800" height="72" rx="12" fill="#0f2744" stroke="#ea580c" stroke-width="2"/>
+ <text x="88" y="844" fill="#ea580c" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Unified Hardware Abstraction (democratize AI compute)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ffedd5">
+  <rect x="88" y="856" width="80" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="128" y="873" text-anchor="middle">tensor cores</text>
+  <rect x="178" y="856" width="70" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="213" y="873" text-anchor="middle">systolic</text>
+  <rect x="258" y="856" width="50" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="283" y="873" text-anchor="middle">TMA</text>
+  <rect x="318" y="856" width="50" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="343" y="873" text-anchor="middle">FP8</text>
+  <rect x="378" y="856" width="50" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="403" y="873" text-anchor="middle">FP6</text>
+  <rect x="438" y="856" width="80" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="478" y="873" text-anchor="middle">mem hierarchy</text>
+  <rect x="528" y="856" width="70" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="563" y="873" text-anchor="middle">NVIDIA</text>
+  <rect x="608" y="856" width="50" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="633" y="873" text-anchor="middle">AMD</text>
+  <rect x="668" y="856" width="50" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="693" y="873" text-anchor="middle">Google</text>
+  <rect x="728" y="856" width="80" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="768" y="873" text-anchor="middle">custom ASIC</text>
+  <rect x="818" y="856" width="60" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="848" y="873" text-anchor="middle">edge/IoT</text>
+  <rect x="888" y="856" width="70" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="923" y="873" text-anchor="middle">datacenter</text>
+  <rect x="968" y="856" width="80" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="1008" y="873" text-anchor="middle">cross-arch BLAS</text>
+  <rect x="1058" y="856" width="70" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="1093" y="873" text-anchor="middle">unified stack</text>
+  <rect x="1138" y="856" width="80" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="1178" y="873" text-anchor="middle">chip bringup</text>
+  <rect x="1228" y="856" width="90" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="1273" y="873" text-anchor="middle">vendor-neutral</text>
+  <rect x="1328" y="856" width="80" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1368" y="873" text-anchor="middle">incremental</text>
+  <rect x="1418" y="856" width="80" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1458" y="873" text-anchor="middle">Python grow</text>
+  <rect x="1508" y="856" width="80" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1548" y="873" text-anchor="middle">N-language fix</text>
+  <rect x="1598" y="856" width="80" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1638" y="873" text-anchor="middle">AI kernels</text>
+  <rect x="1688" y="856" width="80" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1728" y="873" text-anchor="middle">systems lang</text>
+  <rect x="1778" y="856" width="70" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1813" y="873" text-anchor="middle">one lang</text>
+ </g>
+
+ <!-- DETAIL Compile -->
+ <rect x="60" y="904" width="880" height="340" rx="14" fill="#0c1524" stroke="#f97316" stroke-width="2.5"/>
+ <text x="88" y="936" fill="#f97316" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Mojo Compilation Pipeline</text>
+ <text x="88" y="958" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="11">Parametric IR before instantiation - same source multi-target</text>
+
+ <rect x="88" y="974" width="820" height="36" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="498" y="998" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1: Parse Mojo source - semantic analysis - traits/parameters resolved</text>
+ <line x1="498" y1="1010" x2="498" y2="1022" stroke="#f97316" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+ <rect x="88" y="1024" width="820" height="36" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="498" y="1048" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2: Emit parametric LIT MLIR - ops/types with compile-time attributes</text>
+ <line x1="498" y1="1060" x2="498" y2="1072" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
+ <rect x="88" y="1074" width="820" height="36" rx="6" fill="#431407" stroke="#f97316"/>
+ <text x="498" y="1098" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3: Specialize/instantiate for target + param values - mlir_op lowering</text>
+ <line x1="498" y1="1110" x2="498" y2="1122" stroke="#f97316" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+ <rect x="88" y="1124" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="1148" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4: MLIR Core progressive lower - LLVM IR - target machine code</text>
+ <line x1="498" y1="1160" x2="498" y2="1172" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+ <rect x="88" y="1174" width="820" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="498" y="1198" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 5: AOT binary or JIT at MAX runtime - concurrent execution on device</text>
+
+ <text x="88" y="1232" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Standalone kernel OR packaged for MAX Graph Compiler introspection/fusion</text>
+
+ <!-- DETAIL MAX integration -->
+ <rect x="960" y="904" width="900" height="340" rx="14" fill="#0c1224" stroke="#f97316" stroke-width="2.5"/>
+ <text x="988" y="936" fill="#f97316" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Three Architectural Pillars + MAX Integration</text>
+ <text x="988" y="958" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="11">Vision doc: parametric metaprogramming + MLIR Core + MAX framework</text>
+
+ <text x="988" y="982" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Kernel in MAX workflow</text>
+ <rect x="988" y="992" width="120" height="48" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="1048" y="1014" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Write Mojo</text>
+ <text x="1048" y="1030" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">custom op/kernel</text>
+ <rect x="1120" y="992" width="120" height="48" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1180" y="1014" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Package</text>
+ <text x="1180" y="1030" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">LIT introspect sig</text>
+ <rect x="1252" y="992" width="120" height="48" rx="6" fill="#1e1b4b" stroke="#6366f1"/>
+ <text x="1312" y="1014" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Graph fuse</text>
+ <text x="1312" y="1030" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">MOGG lambda fusion</text>
+ <rect x="1384" y="992" width="120" height="48" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1444" y="1014" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">JIT compile</text>
+ <text x="1444" y="1030" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">emit Mojo again</text>
+ <rect x="1516" y="992" width="332" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1682" y="1014" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Execute MEF on CPU/GPU/accelerator via MAX Engine</text>
+ <text x="1682" y="1030" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Cross-kernel fusion - memory planning - zero-cost inlining</text>
+
+ <line x1="1108" y1="1016" x2="1120" y2="1016" stroke="#f97316" stroke-width="2" marker-end="url(#arrow-orange)"/>
+ <line x1="1240" y1="1016" x2="1252" y2="1016" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrow-orange)"/>
+ <line x1="1372" y1="1016" x2="1384" y2="1016" stroke="#6366f1" stroke-width="2" marker-end="url(#arrow-orange)"/>
+ <line x1="1504" y1="1016" x2="1516" y2="1016" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow-orange)"/>
+
+ <text x="988" y="1062" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">vs alternatives (design rationale)</text>
+ <rect x="988" y="1072" width="200" height="68" rx="6" fill="#431407" stroke="#ea580c"/>
+ <text x="1088" y="1096" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Extend C++/Rust</text>
+ <text x="1088" y="1114" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">CPU-centric - no AI HW types</text>
+ <text x="1088" y="1130" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">legacy metaprogramming</text>
+ <rect x="1200" y="1072" width="200" height="68" rx="6" fill="#431407" stroke="#ea580c"/>
+ <text x="1300" y="1096" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Python eDSL</text>
+ <text x="1300" y="1114" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">UX/predictability limits</text>
+ <text x="1300" y="1130" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">cannot change grammar</text>
+ <rect x="1412" y="1072" width="200" height="68" rx="6" fill="#431407" stroke="#f97316"/>
+ <text x="1512" y="1096" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">New language</text>
+ <text x="1512" y="1114" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Full control - expensive</text>
+ <text x="1512" y="1130" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Mojo chosen path</text>
+ <rect x="1624" y="1072" width="224" height="68" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1736" y="1096" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Result: unified kernel lang</text>
+ <text x="1736" y="1114" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Match/exceed vendor BLAS on CPU</text>
+ <text x="1736" y="1130" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Production inference at Meta scale</text>
+
+ <text x="988" y="1162" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Open source roadmap</text>
+ <rect x="988" y="1172" width="860" height="48" rx="6" fill="#1a1208" stroke="#f97316"/>
+ <text x="1418" y="1196" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="12">Stdlib: Apache 2.0 (open) - Compiler: proprietary today, OSS fall 2026</text>
+ <text x="1418" y="1212" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">MAX core written entirely in Mojo - largest Mojo codebase</text>
+
+ <!-- L7 Position -->
+ <rect x="60" y="1264" width="1800" height="72" rx="12" fill="#1a1208" stroke="#f97316" stroke-width="2"/>
+ <text x="88" y="1292" fill="#f97316" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L7 - Design Position (AI-era systems language on MLIR)</text>
+ <text x="960" y="1318" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="13">Python productivity + systems performance + parametric kernels + graph-level fusion via MAX</text>
+
+ <!-- footers -->
+ <rect x="60" y="1352" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1372" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Init path: write Mojo kernel/struct - parametric compile to LIT - package for MAX or AOT binary</text>
+ <text x="960" y="1390" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Step path: Graph API model.mlir - MOGG fuse - MGP JIT - MEF execute on heterogeneous hardware</text>
+
+ <text x="60" y="1436" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: mojolang.org/docs/vision - Modular MAX JITGraph LLVM DevMtG 2025 - docs.modular.com - arxiv/wiki</text>
+</svg>

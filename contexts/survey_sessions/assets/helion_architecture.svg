@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-orange" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#ee4c2c"/>
+  </marker>
+  <marker id="arrow-teal" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#14b8a6"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">Helion Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">PyTorch-embedded Tile DSL - Device IR - AOT Autotuning - Triton/CuTe/TileIR - pytorch.org/blog/helion</text>
+
+ <!-- L1 Applications -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#ee4c2c" stroke-width="2"/>
+ <text x="88" y="124" fill="#ee4c2c" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Applications + Integration (PyTorch-native ML kernels with tile loops)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="60" height="40" rx="6" fill="#422006" stroke="#ee4c2c"/><text x="118" y="162" text-anchor="middle">GEMM</text>
+  <rect x="160" y="136" width="70" height="40" rx="6" fill="#422006" stroke="#ee4c2c"/><text x="195" y="162" text-anchor="middle">softmax</text>
+  <rect x="242" y="136" width="60" height="40" rx="6" fill="#422006" stroke="#ee4c2c"/><text x="272" y="162" text-anchor="middle">MoE</text>
+  <rect x="314" y="136" width="70" height="40" rx="6" fill="#422006" stroke="#ee4c2c"/><text x="349" y="162" text-anchor="middle">LayerNorm</text>
+  <rect x="396" y="136" width="80" height="40" rx="6" fill="#422006" stroke="#ee4c2c"/><text x="436" y="162" text-anchor="middle">FlashAttn</text>
+  <rect x="488" y="136" width="80" height="40" rx="6" fill="#422006" stroke="#ee4c2c"/><text x="528" y="162" text-anchor="middle">custom ops</text>
+  <rect x="580" y="136" width="90" height="40" rx="6" fill="#431407" stroke="#ea580c"/><text x="625" y="162" text-anchor="middle">@helion.kernel</text>
+  <rect x="682" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#ea580c"/><text x="717" y="162" text-anchor="middle">hl.tile</text>
+  <rect x="764" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#ea580c"/><text x="799" y="162" text-anchor="middle">hl.grid</text>
+  <rect x="846" y="136" width="80" height="40" rx="6" fill="#431407" stroke="#ea580c"/><text x="886" y="162" text-anchor="middle">torch.addmm</text>
+  <rect x="938" y="136" width="80" height="40" rx="6" fill="#431407" stroke="#ea580c"/><text x="978" y="162" text-anchor="middle">helion.Config</text>
+  <rect x="1030" y="136" width="80" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1070" y="162" text-anchor="middle">Triton emit</text>
+  <rect x="1122" y="136" width="80" height="40" rx="6" fill="#422006" stroke="#ee4c2c"/><text x="1162" y="162" text-anchor="middle">PyTorch 2.9+</text>
+  <rect x="1214" y="136" width="70" height="40" rx="6" fill="#422006" stroke="#ee4c2c"/><text x="1249" y="162" text-anchor="middle">Meta AI</text>
+  <rect x="1296" y="136" width="80" height="40" rx="6" fill="#422006" stroke="#ee4c2c"/><text x="1336" y="162" text-anchor="middle">200-&gt;15 loc</text>
+  <rect x="1388" y="136" width="70" height="40" rx="6" fill="#422006" stroke="#ee4c2c"/><text x="1423" y="162" text-anchor="middle">Beta 2025</text>
+  <rect x="1470" y="136" width="80" height="40" rx="6" fill="#422006" stroke="#ee4c2c"/><text x="1510" y="162" text-anchor="middle">PLDI 2026</text>
+  <rect x="1562" y="136" width="80" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1602" y="162" text-anchor="middle">Colab demo</text>
+  <rect x="1654" y="136" width="80" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1694" y="162" text-anchor="middle">AMD DevCloud</text>
+  <rect x="1746" y="136" width="102" height="40" rx="6" fill="#422006" stroke="#ee4c2c"/><text x="1797" y="162" text-anchor="middle">1 kernel = 1 GPU</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 DSL Frontend -->
+ <rect x="60" y="216" width="1800" height="120" rx="12" fill="#0f2744" stroke="#ee4c2c" stroke-width="2"/>
+ <text x="88" y="244" fill="#ee4c2c" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Python DSL Frontend (PyTorch with tiles - or higher-level Triton)</text>
+ <rect x="88" y="258" width="340" height="64" rx="10" fill="#422006" stroke="#ee4c2c" stroke-width="2"/>
+ <text x="258" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Tile Iteration (hl.tile)</text>
+ <text x="258" y="300" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Subdivide m x n iteration space into tiles</text>
+ <text x="258" y="314" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Outer loop maps to grid - inner loop to device loop</text>
+ <rect x="448" y="258" width="340" height="64" rx="10" fill="#422006" stroke="#ee4c2c" stroke-width="2"/>
+ <text x="618" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Host vs Device Split</text>
+ <text x="618" y="300" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Outside for-loops: CPU PyTorch (alloc, shapes)</text>
+ <text x="618" y="314" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Inside hl.tile loops: compiled to single GPU kernel</text>
+ <rect x="808" y="258" width="340" height="64" rx="10" fill="#431407" stroke="#ea580c" stroke-width="2"/>
+ <text x="978" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">PyTorch Ops in Kernel Body</text>
+ <text x="978" y="300" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">torch.addmm - sum - softmax - sigmoid - views</text>
+ <text x="978" y="314" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Familiar PyTorch syntax - no tl.load/tl.store</text>
+ <rect x="1168" y="258" width="340" height="64" rx="10" fill="#0c2d2d" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="1338" y="282" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">helion.language Primitives</text>
+ <text x="1338" y="300" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">hl.zeros - hl.load - hl.grid - register_block_size</text>
+ <text x="1338" y="314" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Implicit masks optimized away when safe</text>
+ <rect x="1528" y="258" width="300" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1678" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Kernel Decorator Options</text>
+ <text x="1678" y="300" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">config= - configs= - static_shapes=</text>
+ <text x="1678" y="314" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">autotune_effort= - print_output_code=</text>
+ <line x1="960" y1="336" x2="960" y2="354" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Parse + Type -->
+ <rect x="60" y="356" width="1800" height="88" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2"/>
+ <text x="88" y="384" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - Frontend Analysis (Python AST - type propagation - host/device partition)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0f2fe">
+  <rect x="88" y="396" width="100" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="138" y="418" text-anchor="middle">Python AST</text>
+  <rect x="200" y="396" width="100" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="250" y="418" text-anchor="middle">type propagate</text>
+  <rect x="312" y="396" width="90" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="357" y="418" text-anchor="middle">shape/dtype</text>
+  <rect x="414" y="396" width="80" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="454" y="418" text-anchor="middle">make_fx</text>
+  <rect x="506" y="396" width="80" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="546" y="418" text-anchor="middle">FX trace</text>
+  <rect x="598" y="396" width="90" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="643" y="418" text-anchor="middle">metadata ann</text>
+  <rect x="700" y="396" width="90" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="745" y="418" text-anchor="middle">host codegen</text>
+  <rect x="802" y="396" width="100" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="852" y="418" text-anchor="middle">device capture</text>
+  <rect x="914" y="396" width="90" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="959" y="418" text-anchor="middle">closure lift</text>
+  <rect x="1016" y="396" width="80" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1056" y="418" text-anchor="middle">kernel args</text>
+  <rect x="1108" y="396" width="80" height="32" rx="6" fill="#422006" stroke="#ee4c2c"/><text x="1148" y="418" text-anchor="middle">TorchInductor</text>
+  <rect x="1200" y="396" width="80" height="32" rx="6" fill="#422006" stroke="#ee4c2c"/><text x="1240" y="418" text-anchor="middle">Inductor IR</text>
+  <rect x="1292" y="396" width="90" height="32" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1337" y="418" text-anchor="middle">stride/index</text>
+  <rect x="1394" y="396" width="80" height="32" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1434" y="418" text-anchor="middle">mask infer</text>
+  <rect x="1486" y="396" width="90" height="32" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1531" y="418" text-anchor="middle">grid sizing</text>
+  <rect x="1588" y="396" width="100" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1638" y="418" text-anchor="middle">static_shapes</text>
+  <rect x="1700" y="396" width="148" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1774" y="418" text-anchor="middle">specialization key</text>
+ </g>
+ <line x1="960" y1="444" x2="960" y2="462" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Device IR -->
+ <rect x="60" y="464" width="1800" height="200" rx="12" fill="#0f2744" stroke="#ee4c2c" stroke-width="2.5"/>
+ <text x="88" y="492" fill="#ee4c2c" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Device IR + Compiler Passes (FX SSA graphs - Inductor-linked nodes - semantic transforms)</text>
+
+ <rect x="88" y="508" width="420" height="136" rx="12" fill="#422006" stroke="#ee4c2c" stroke-width="2"/>
+ <text x="298" y="536" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Device IR (FX Graphs SSA)</text>
+ <text x="298" y="560" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">One FX graph per basic block of program</text>
+ <text x="298" y="578" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Each node points to Inductor IR node for codegen</text>
+ <text x="298" y="596" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">torch ops lowered via TorchInductor to Triton</text>
+ <text x="298" y="614" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Config-independent until final codegen stage</text>
+ <text x="298" y="632" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Compile-once + tune-many architecture</text>
+
+ <rect x="528" y="508" width="420" height="136" rx="12" fill="#431407" stroke="#ea580c" stroke-width="2"/>
+ <text x="738" y="536" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">IR Transformation Passes</text>
+ <text x="738" y="560" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Reduction rolling: persistent to looped reduction</text>
+ <text x="738" y="578" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Loop reorder - PID shuffle for L2 reuse</text>
+ <text x="738" y="596" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Persistent kernel strategy selection</text>
+ <text x="738" y="614" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Warp specialize - loop unroll - multi-buffer</text>
+ <text x="738" y="632" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Implicit mask elimination when provably safe</text>
+
+ <rect x="968" y="508" width="420" height="136" rx="12" fill="#0c2d2d" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="1178" y="536" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Indexing + Memory Strategy</text>
+ <text x="1178" y="560" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">pointer - block_ptr - tensor_descriptor (TMA)</text>
+ <text x="1178" y="578" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Per-op indexing list for load/store granularity</text>
+ <text x="1178" y="596" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Auto stride/index - eviction policy per load</text>
+ <text x="1178" y="614" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">TMA requires Hopper+ and recent Triton</text>
+ <text x="1178" y="632" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">TileIR backend: tensor_descriptor preferred</text>
+
+ <rect x="1408" y="508" width="420" height="136" rx="12" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1618" y="536" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">PID + Grid Mapping</text>
+ <text x="1618" y="560" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">pid_type: flat - xyz - persistent_blocked</text>
+ <text x="1618" y="578" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">persistent_interleaved for SM occupancy</text>
+ <text x="1618" y="596" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">l2_groupings reorder PIDs for cache locality</text>
+ <text x="1618" y="614" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Auto grid size from tile sizes + loop orders</text>
+ <text x="1618" y="632" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">loop_orders permute tile iteration dimensions</text>
+
+ <line x1="960" y1="644" x2="960" y2="662" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L5 Autotuner -->
+ <rect x="60" y="664" width="1800" height="120" rx="12" fill="#0f2744" stroke="#ee4c2c" stroke-width="2"/>
+ <text x="88" y="692" fill="#ee4c2c" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - AOT Autotuning Engine (implicit search space - thousands of Triton variants per kernel)</text>
+ <rect x="88" y="706" width="340" height="64" rx="10" fill="#422006" stroke="#ee4c2c" stroke-width="2"/>
+ <text x="258" y="730" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Search Algorithms</text>
+ <text x="258" y="748" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Differential Evolution (pop=40, gen=20)</text>
+ <text x="258" y="762" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">LFBO pattern search + evolutionary fallback</text>
+ <rect x="448" y="706" width="340" height="64" rx="10" fill="#422006" stroke="#ee4c2c" stroke-width="2"/>
+ <text x="618" y="730" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Config Space (helion.Config)</text>
+ <text x="618" y="748" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">block_sizes - loop_orders - num_warps/stages</text>
+ <text x="618" y="762" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">indexing - pid_type - reduction_loops - l2_group</text>
+ <rect x="808" y="706" width="340" height="64" rx="10" fill="#431407" stroke="#ea580c" stroke-width="2"/>
+ <text x="978" y="730" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Benchmark + Lock Best</text>
+ <text x="978" y="748" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Typical: minutes - complex: ~10 min (1500+ configs)</text>
+ <text x="978" y="762" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">config= hardcode for prod - skip re-autotune</text>
+ <rect x="1168" y="706" width="340" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1338" y="730" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Pretuned + Cost Model</text>
+ <text x="1338" y="748" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">H100 sm90 pretuned heuristics as seeds</text>
+ <text x="1338" y="762" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Optional autotune_dataset telemetry for ML cost model</text>
+ <rect x="1528" y="706" width="300" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1678" y="730" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Dev Shortcuts</text>
+ <text x="1678" y="748" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">HELION_AUTOTUNE_EFFORT=none for fast iter</text>
+ <text x="1678" y="762" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">HELION_PRINT_OUTPUT_CODE=1 - print_repro</text>
+ <line x1="960" y1="784" x2="960" y2="802" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L6 Backends -->
+ <rect x="60" y="804" width="1800" height="120" rx="12" fill="#0f2744" stroke="#14b8a6" stroke-width="2"/>
+ <text x="88" y="832" fill="#14b8a6" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Codegen Backends + Runtime (config applied at final codegen - kernel cache per signature)</text>
+ <rect x="88" y="846" width="340" height="64" rx="10" fill="#0c2d2d" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="258" y="870" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Triton (default backend)</text>
+ <text x="258" y="888" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Device IR + Config - Triton Python source</text>
+ <text x="258" y="902" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Triton 3.5+ - TTIR - TTGIR - PTX - SASS</text>
+ <rect x="448" y="846" width="340" height="64" rx="10" fill="#1a2e05" stroke="#76b900" stroke-width="2"/>
+ <text x="618" y="870" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">TileIR Backend (Blackwell)</text>
+ <text x="618" y="888" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">HELION_BACKEND=tileir + ENABLE_TILE=1</text>
+ <text x="618" y="902" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="10">Triton-to-tile-IR bridge - sm10/sm12 - num_ctas</text>
+ <rect x="808" y="846" width="340" height="64" rx="10" fill="#431407" stroke="#ea580c" stroke-width="2"/>
+ <text x="978" y="870" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">CuTe Backend (experimental)</text>
+ <text x="978" y="888" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">HELION_BACKEND=cute - CUDA 13+ required</text>
+ <text x="978" y="902" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">CUTLASS CuTe DSL emit - bypass Triton path</text>
+ <rect x="1168" y="846" width="340" height="64" rx="10" fill="#422006" stroke="#ee4c2c" stroke-width="2"/>
+ <text x="1338" y="870" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">TorchInductor Bridge</text>
+ <text x="1338" y="888" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">PyTorch ops to low-level Triton templates</text>
+ <text x="1338" y="902" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Shared infra with torch.compile stack</text>
+ <rect x="1528" y="846" width="300" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1678" y="870" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Kernel Cache + Launch</text>
+ <text x="1678" y="888" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Cache keyed by tensor signature + config</text>
+ <text x="1678" y="902" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">bind(args).to_triton_code(config) debug API</text>
+ <line x1="960" y1="924" x2="960" y2="942" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L7 Hardware -->
+ <rect x="60" y="944" width="1800" height="56" rx="12" fill="#0f2744" stroke="#22d3ee" stroke-width="2"/>
+ <text x="88" y="972" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L7 - Target Hardware (NVIDIA primary - AMD/Intel via Triton - performance portable)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0f2fe">
+  <rect x="88" y="980" width="40" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="108" y="997" text-anchor="middle">T4</text>
+  <rect x="138" y="980" width="50" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="163" y="997" text-anchor="middle">A100</text>
+  <rect x="198" y="980" width="50" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="223" y="997" text-anchor="middle">H100</text>
+  <rect x="258" y="980" width="50" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="283" y="997" text-anchor="middle">B200</text>
+  <rect x="318" y="980" width="60" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="348" y="997" text-anchor="middle">RTX 50</text>
+  <rect x="388" y="980" width="50" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="413" y="997" text-anchor="middle">MI300</text>
+  <rect x="448" y="980" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="473" y="997" text-anchor="middle">sm75+</text>
+  <rect x="508" y="980" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="533" y="997" text-anchor="middle">sm90</text>
+  <rect x="568" y="980" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="593" y="997" text-anchor="middle">sm100</text>
+  <rect x="628" y="980" width="40" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="648" y="997" text-anchor="middle">TMA</text>
+  <rect x="678" y="980" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="703" y="997" text-anchor="middle">TileIR</text>
+  <rect x="738" y="980" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="763" y="997" text-anchor="middle">WGMMA</text>
+  <rect x="798" y="980" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="823" y="997" text-anchor="middle">block_ptr</text>
+  <rect x="858" y="980" width="60" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="888" y="997" text-anchor="middle">Triton</text>
+  <rect x="928" y="980" width="50" height="24" rx="5" fill="#422006" stroke="#ee4c2c"/><text x="953" y="997" text-anchor="middle">CuTe</text>
+  <rect x="988" y="980" width="50" height="24" rx="5" fill="#422006" stroke="#ee4c2c"/><text x="1013" y="997" text-anchor="middle">CUDA</text>
+  <rect x="1048" y="980" width="50" height="24" rx="5" fill="#422006" stroke="#ee4c2c"/><text x="1073" y="997" text-anchor="middle">ROCm</text>
+  <rect x="1108" y="980" width="50" height="24" rx="5" fill="#422006" stroke="#ee4c2c"/><text x="1133" y="997" text-anchor="middle">XPU</text>
+  <rect x="1168" y="980" width="60" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="1198" y="997" text-anchor="middle">persistent</text>
+  <rect x="1238" y="980" width="60" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="1268" y="997" text-anchor="middle">num_ctas</text>
+  <rect x="1308" y="980" width="70" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="1343" y="997" text-anchor="middle">occupancy</text>
+  <rect x="1388" y="980" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1413" y="997" text-anchor="middle">FP16</text>
+  <rect x="1448" y="980" width="40" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1468" y="997" text-anchor="middle">FP8</text>
+  <rect x="1498" y="980" width="40" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1518" y="997" text-anchor="middle">BF16</text>
+  <rect x="1548" y="980" width="80" height="24" rx="5" fill="#422006" stroke="#ee4c2c"/><text x="1588" y="997" text-anchor="middle">portable</text>
+  <rect x="1638" y="980" width="100" height="24" rx="5" fill="#422006" stroke="#ee4c2c"/><text x="1688" y="997" text-anchor="middle">pretuned H100</text>
+  <rect x="1748" y="980" width="100" height="24" rx="5" fill="#422006" stroke="#ee4c2c"/><text x="1798" y="997" text-anchor="middle">Linux only</text>
+ </g>
+
+ <!-- DETAIL Pipeline -->
+ <rect x="60" y="1016" width="880" height="340" rx="14" fill="#0c1524" stroke="#ee4c2c" stroke-width="2.5"/>
+ <text x="88" y="1048" fill="#ee4c2c" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Five-Stage Compile + Autotune Pipeline</text>
+ <text x="88" y="1070" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="11">Config deferred to final codegen - parse/IR runs once - autotune explores config space cheaply</text>
+
+ <rect x="88" y="1086" width="820" height="36" rx="6" fill="#422006" stroke="#ee4c2c"/>
+ <text x="498" y="1110" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stage 1 Parse: Python AST - type propagation - host/device partition - metadata annotation</text>
+ <line x1="498" y1="1122" x2="498" y2="1134" stroke="#ee4c2c" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+ <rect x="88" y="1136" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="1160" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stage 2 Device IR: FX SSA graphs per basic block - Inductor IR node links - make_fx trace</text>
+ <line x1="498" y1="1172" x2="498" y2="1184" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow)"/>
+ <rect x="88" y="1186" width="820" height="36" rx="6" fill="#431407" stroke="#ea580c"/>
+ <text x="498" y="1210" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stage 3 IR Passes: reduction rolling - loop reorder - mask elimination - semantic transforms</text>
+ <line x1="498" y1="1222" x2="498" y2="1234" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+ <rect x="88" y="1236" width="820" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="498" y="1260" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stage 4 Autotune: build config space - benchmark each - DifferentialEvolution/LFBO pick best</text>
+ <line x1="498" y1="1272" x2="498" y2="1284" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+ <rect x="88" y="1286" width="820" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="498" y="1310" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stage 5 Codegen+Launch: Device IR + helion.Config - Triton/CuTe/TileIR - compile - cache - run</text>
+
+ <text x="88" y="1344" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Example matmul: for tile_m,tile_n in hl.tile([m,n]) - acc=torch.addmm - out[tile_m,tile_n]=acc</text>
+
+ <!-- DETAIL Position -->
+ <rect x="960" y="1016" width="900" height="340" rx="14" fill="#0c1224" stroke="#ee4c2c" stroke-width="2.5"/>
+ <text x="988" y="1048" fill="#ee4c2c" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Design Position: PyTorch with Tiles above Triton</text>
+ <text x="988" y="1070" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="11">Write algorithm in PyTorch - compiler handles tiling, indexing, masking, and HW tuning</text>
+
+ <text x="988" y="1094" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Spectrum Comparison</text>
+ <rect x="988" y="1104" width="200" height="68" rx="6" fill="#422006" stroke="#ee4c2c"/>
+ <text x="1088" y="1128" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">PyTorch eager</text>
+ <text x="1088" y="1146" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Highest productivity - no custom kernels</text>
+ <text x="1088" y="1162" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Relies on cuBLAS/cuDNN for perf</text>
+ <rect x="1200" y="1104" width="200" height="68" rx="6" fill="#422006" stroke="#ee4c2c"/>
+ <text x="1300" y="1128" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Helion</text>
+ <text x="1300" y="1146" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">PyTorch syntax + hl.tile loops</text>
+ <text x="1300" y="1162" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">AOT autotune - implicit search space</text>
+ <rect x="1412" y="1104" width="200" height="68" rx="6" fill="#0c2d2d" stroke="#14b8a6"/>
+ <text x="1512" y="1128" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Triton</text>
+ <text x="1512" y="1146" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">tl.load/store/dot - manual block sizes</text>
+ <text x="1512" y="1162" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">@triton.autotune - smaller search</text>
+ <rect x="1624" y="1104" width="224" height="68" rx="6" fill="#1e1b4b" stroke="#6366f1"/>
+ <text x="1736" y="1128" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">TileLang / CUTLASS</text>
+ <text x="1736" y="1146" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">Explicit mem hierarchy + layout</text>
+ <text x="1736" y="1162" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">More control - more boilerplate</text>
+
+ <text x="988" y="1190" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Key Architectural Decisions</text>
+ <rect x="988" y="1200" width="130" height="48" rx="6" fill="#422006" stroke="#ee4c2c"/>
+ <text x="1053" y="1222" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">1 kernel = 1 GPU</text>
+ <text x="1053" y="1238" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Single Triton/CuTe emit</text>
+ <rect x="1130" y="1200" width="130" height="48" rx="6" fill="#422006" stroke="#ee4c2c"/>
+ <text x="1195" y="1222" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Config at end</text>
+ <text x="1195" y="1238" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Cheap autotune replay</text>
+ <rect x="1272" y="1200" width="130" height="48" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="1337" y="1222" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Inductor bridge</text>
+ <text x="1337" y="1238" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Reuse PyTorch lowering</text>
+ <rect x="1414" y="1200" width="130" height="48" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="1479" y="1222" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Implicit masks</text>
+ <text x="1479" y="1238" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Compiler removes when safe</text>
+ <rect x="1556" y="1200" width="130" height="48" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1621" y="1222" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Multi-backend</text>
+ <text x="1621" y="1238" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">Triton / TileIR / CuTe</text>
+ <rect x="1698" y="1200" width="150" height="48" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="1773" y="1222" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Perf portable</text>
+ <text x="1773" y="1238" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">1500+ configs per kernel</text>
+
+ <text x="988" y="1268" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Autotuned Dimensions (no manual @triton.autotune needed)</text>
+ <rect x="988" y="1278" width="860" height="48" rx="6" fill="#1a1208" stroke="#ee4c2c"/>
+ <text x="1418" y="1302" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="12">block_sizes - loop_orders - indexing - pid_type - num_warps/stages</text>
+ <text x="1418" y="1318" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">l2_groupings - warp_specialize - unroll - persistent - reduction_loops - eviction</text>
+
+ <!-- footer bar -->
+ <rect x="60" y="1370" width="1800" height="72" rx="12" fill="#1a1208" stroke="#ee4c2c" stroke-width="2"/>
+ <text x="88" y="1398" fill="#ee4c2c" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">Design Position (Meta/PyTorch kernel DSL - raise abstraction above Triton while matching hand-tuned perf)</text>
+ <text x="960" y="1424" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="13">PyTorch ops + hl.tile loops - TorchInductor lowering - massive implicit autotune - Triton/CuTe/TileIR backends</text>
+
+ <!-- footers -->
+ <rect x="60" y="1458" width="1800" height="36" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1480" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10">Init: @helion.kernel() - first call autotunes (~10 min) - lock config= for prod - HELION_AUTOTUNE_EFFORT=none for dev</text>
+
+ <text x="60" y="1510" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: github.com/pytorch/helion - pytorch.org/blog/helion - docs/tileir_backend.md - PLDI 2026 tutorial - BSD-3-Clause</text>
+</svg>

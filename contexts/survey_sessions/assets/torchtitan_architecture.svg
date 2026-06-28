@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-orange" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#fb923c"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title - PyTorch orange -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">TorchTitan Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">PyTorch-native LLM pretraining - DTensor / DeviceMesh - composable 4D+ parallelism</text>
+
+ <!-- L1 Entry -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#fb923c" stroke-width="2"/>
+ <text x="88" y="124" fill="#fb923c" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Entry Points &amp; Model Recipes</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="130" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="153" y="162" text-anchor="middle">train.py</text>
+  <rect x="230" y="136" width="130" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="295" y="162" text-anchor="middle">run_train.sh</text>
+  <rect x="372" y="136" width="170" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="457" y="162" text-anchor="middle">Config registry</text>
+  <rect x="554" y="136" width="120" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="614" y="162" text-anchor="middle">Llama 3/4</text>
+  <rect x="686" y="136" width="130" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="751" y="162" text-anchor="middle">DeepSeek-V3</text>
+  <rect x="828" y="136" width="100" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="878" y="162" text-anchor="middle">Qwen3</text>
+  <rect x="940" y="136" width="90" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="985" y="162" text-anchor="middle">Flux</text>
+  <rect x="1042" y="136" width="130" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1107" y="162" text-anchor="middle">experiments/</text>
+  <rect x="1184" y="136" width="120" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1244" y="162" text-anchor="middle">ForgeEngine</text>
+  <rect x="1316" y="136" width="130" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1381" y="162" text-anchor="middle">torchtune DCP</text>
+  <rect x="1458" y="136" width="110" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1513" y="162" text-anchor="middle">TorchFT</text>
+  <rect x="1580" y="136" width="256" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1708" y="162" text-anchor="middle">TOML / --module --config CLI</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Trainer -->
+ <rect x="60" y="216" width="1800" height="96" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2"/>
+ <text x="88" y="244" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Trainer Orchestrator (torchtitan/trainer.py)</text>
+ <rect x="88" y="256" width="240" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="208" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">ConfigManager / Trainer.Config</text>
+ <rect x="340" y="256" width="200" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="440" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">init_distributed()</text>
+ <rect x="552" y="256" width="200" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="652" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">train() / train_step()</text>
+ <rect x="764" y="256" width="220" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="874" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">Stateful (DCP protocol)</text>
+ <rect x="996" y="256" width="220" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1106" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">Configurable.build()</text>
+ <rect x="1228" y="256" width="200" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1328" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">grad accumulation</text>
+ <rect x="1440" y="256" width="396" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1638" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">PP: pp_schedule.step() vs standard forward/backward</text>
+ <line x1="960" y1="312" x2="960" y2="330" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Components -->
+ <rect x="60" y="332" width="1800" height="168" rx="12" fill="#0f2744" stroke="#a78bfa" stroke-width="2"/>
+ <text x="88" y="360" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - Composable Components</text>
+
+ <rect x="88" y="374" width="340" height="108" rx="10" fill="#241a3d" stroke="#c4b5fd"/>
+ <text x="258" y="398" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">ModelSpec Protocol</text>
+ <text x="258" y="418" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Select model via config (llama3 etc.)</text>
+ <text x="258" y="434" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Build on meta device (zero alloc)</text>
+ <text x="258" y="450" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">ModelSpec.parallelize() applies TP/CP/AC/FSDP</text>
+ <text x="258" y="466" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Minimal model code changes</text>
+
+ <rect x="444" y="374" width="340" height="108" rx="10" fill="#241a3d" stroke="#c4b5fd"/>
+ <text x="614" y="398" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">ParallelDims + DeviceMesh</text>
+ <text x="614" y="418" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">batch / tp / cp / pp / ep meshes</text>
+ <text x="614" y="434" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">dp_replicate x dp_shard = world size</text>
+ <text x="614" y="450" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">loss mesh = batch + cp ranks</text>
+ <text x="614" y="466" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">DTensor sharding plans per dim</text>
+
+ <rect x="800" y="374" width="340" height="108" rx="10" fill="#241a3d" stroke="#c4b5fd"/>
+ <text x="970" y="398" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Training Components</text>
+ <text x="970" y="418" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">OptimizersContainer - LR scheduler</text>
+ <text x="970" y="434" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">CheckpointManager (async DCP)</text>
+ <text x="970" y="450" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">BaseDataLoader - C4 / custom HF</text>
+ <text x="970" y="466" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Validator - SFT chat datasets</text>
+
+ <rect x="1156" y="374" width="340" height="108" rx="10" fill="#241a3d" stroke="#c4b5fd"/>
+ <text x="1326" y="398" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Observability</text>
+ <text x="1326" y="418" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">MetricsProcessor: TPS / TFLOPS / MFU</text>
+ <text x="1326" y="434" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">TensorBoard / WandB logging</text>
+ <text x="1326" y="450" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Structured logger per-rank traces</text>
+ <text x="1326" y="466" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">GC handler - manual collect (anti-straggler)</text>
+
+ <rect x="1512" y="374" width="324" height="108" rx="10" fill="#241a3d" stroke="#c4b5fd"/>
+ <text x="1674" y="398" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">PyTorch Native Foundation</text>
+ <text x="1674" y="418" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">DTensor + DeviceMesh abstractions</text>
+ <text x="1674" y="434" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">FSDP2 (fully_shard per-param)</text>
+ <text x="1674" y="450" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">torch.distributed.pipelining</text>
+ <text x="1674" y="466" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">torch.distributed.checkpoint (DCP)</text>
+
+ <line x1="960" y1="500" x2="960" y2="518" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 4D parallelism -->
+ <rect x="60" y="520" width="1800" height="88" rx="12" fill="#0f2744" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="88" y="548" fill="#2dd4bf" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Composable 4D+ Parallelism</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ccfbf1">
+  <rect x="88" y="560" width="150" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="163" y="584" text-anchor="middle">FSDP2 / HSDP</text>
+  <rect x="250" y="560" width="110" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="305" y="584" text-anchor="middle">DDP</text>
+  <rect x="372" y="560" width="130" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="437" y="584" text-anchor="middle">Tensor Parallel</text>
+  <rect x="514" y="560" width="150" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="589" y="584" text-anchor="middle">Async TP</text>
+  <rect x="676" y="560" width="130" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="741" y="584" text-anchor="middle">Pipeline PP</text>
+  <rect x="818" y="560" width="150" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="893" y="584" text-anchor="middle">Zero-Bubble PP</text>
+  <rect x="980" y="560" width="130" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1045" y="584" text-anchor="middle">Context CP</text>
+  <rect x="1122" y="560" width="110" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1177" y="584" text-anchor="middle">Expert EP</text>
+  <rect x="1244" y="560" width="110" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1299" y="584" text-anchor="middle">Expert ETP</text>
+  <rect x="1366" y="560" width="130" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1431" y="584" text-anchor="middle">DualPipe V</text>
+  <rect x="1508" y="560" width="340" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1678" y="584" text-anchor="middle">world = dp_replicate x dp_shard x tp x pp x cp</text>
+ </g>
+
+ <!-- L5 Optimizations -->
+ <rect x="60" y="620" width="1800" height="72" rx="12" fill="#0f2744" stroke="#fbbf24" stroke-width="2"/>
+ <text x="88" y="648" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Training Optimizations</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#fef3c7">
+  <rect x="88" y="660" width="130" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="153" y="677" text-anchor="middle">torch.compile</text>
+  <rect x="228" y="660" width="130" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="293" y="677" text-anchor="middle">Float8 / MXFP8</text>
+  <rect x="368" y="660" width="160" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="448" y="677" text-anchor="middle">Selective AC (per-op)</text>
+  <rect x="540" y="660" width="130" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="605" y="677" text-anchor="middle">SymmetricMemory</text>
+  <rect x="682" y="660" width="130" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="747" y="677" text-anchor="middle">Async DCP ckpt</text>
+  <rect x="824" y="660" width="130" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="889" y="677" text-anchor="middle">BF16 opt state</text>
+  <rect x="966" y="660" width="120" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1026" y="677" text-anchor="middle">DeepEP</text>
+  <rect x="1098" y="660" width="120" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1158" y="677" text-anchor="middle">HybridEP</text>
+  <rect x="1230" y="660" width="130" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1295" y="677" text-anchor="middle">Elastic scale</text>
+  <rect x="1372" y="660" width="120" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1432" y="677" text-anchor="middle">TorchFT</text>
+  <rect x="1504" y="660" width="120" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1564" y="677" text-anchor="middle">Flight Rec</text>
+  <rect x="1636" y="660" width="210" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1741" y="677" text-anchor="middle">CPU/GPU memory profiling</text>
+ </g>
+
+ <!-- DETAIL Parallelization pipeline -->
+ <rect x="60" y="708" width="880" height="340" rx="14" fill="#0c1524" stroke="#38bdf8" stroke-width="2.5"/>
+ <text x="88" y="740" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Parallelization Pipeline (model parallelize.py)</text>
+ <text x="88" y="762" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="11">Composable stages applied in order - each stage optional via ParallelDims</text>
+
+ <!-- pipeline stages vertical flow -->
+ <rect x="88" y="778" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="802" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stage 0: FSDP2 / HSDP / DDP - fully_shard() per-parameter DTensor - default 1D parallelism</text>
+ <line x1="498" y1="814" x2="498" y2="826" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow)"/>
+ <rect x="88" y="828" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="852" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stage 1: Tensor Parallel - parallelize_module() plan - Async TP via SymmetricMemory (intra-node)</text>
+ <line x1="498" y1="864" x2="498" y2="876" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow)"/>
+ <rect x="88" y="878" width="820" height="36" rx="6" fill="#7c2d12" stroke="#fb923c"/>
+ <text x="498" y="902" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stage 2: MoE EP/ETP (Llama4/DeepSeek/Qwen) - apply_moe_ep_tp() - all-to-all token dispatch</text>
+ <line x1="498" y1="914" x2="498" y2="926" stroke="#fb923c" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+ <rect x="88" y="928" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="952" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stage 3: Context Parallel - ring attention in TP plan - long context (8K-1M seq)</text>
+ <line x1="498" y1="964" x2="498" y2="976" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow)"/>
+ <rect x="88" y="978" width="820" height="36" rx="6" fill="#14352a" stroke="#34d399"/>
+ <text x="498" y="1002" text-anchor="middle" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stage 4: Pipeline PP - torch.distributed.pipelining - 1F1B / Zero-Bubble / DualPipeV schedules</text>
+ <line x1="498" y1="1014" x2="498" y2="1026" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrow)"/>
+ <rect x="88" y="1028" width="820" height="36" rx="6" fill="#422006" stroke="#fcd34d"/>
+ <text x="498" y="1052" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stage 5: torch.compile + activation checkpointing (selective per-op or full) + Float8 quant</text>
+
+ <text x="88" y="1088" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Meta device build: model on meta - parallelize - materialize shards on cuda - minimal peak host memory</text>
+ <text x="88" y="1104" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Llama 3.1 recipes: 8B (1D@128 GPU) - 70B (2D@256) - 405B (3D@512) - 4D for long context</text>
+
+ <!-- DETAIL DTensor + MoE + PP -->
+ <rect x="960" y="708" width="900" height="340" rx="14" fill="#0c1f1a" stroke="#f97316" stroke-width="2.5"/>
+ <text x="988" y="740" fill="#fb923c" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">DTensor / DeviceMesh + MoE + Zero-Bubble PP</text>
+ <text x="988" y="762" fill="#fdba74" font-family="JetBrains Mono, monospace" font-size="11">Unified tensor abstraction decouples model logic from parallel strategy</text>
+
+ <!-- DeviceMesh -->
+ <text x="988" y="786" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">DeviceMesh hierarchy (ParallelDims)</text>
+ <rect x="988" y="796" width="160" height="52" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1068" y="818" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">batch mesh</text>
+ <text x="1068" y="834" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">FSDP / DDP dim</text>
+ <rect x="1160" y="796" width="140" height="52" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1230" y="818" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">tp mesh</text>
+ <text x="1230" y="834" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Col/Row shard</text>
+ <rect x="1312" y="796" width="140" height="52" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1382" y="818" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">cp mesh</text>
+ <text x="1382" y="834" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">seq shard</text>
+ <rect x="1464" y="796" width="140" height="52" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1534" y="818" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">pp mesh</text>
+ <text x="1534" y="834" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">stage ranks</text>
+ <rect x="1616" y="796" width="140" height="52" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1686" y="818" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">ep mesh</text>
+ <text x="1686" y="834" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">MoE experts</text>
+ <rect x="1768" y="796" width="80" height="52" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1808" y="826" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">loss</text>
+
+ <!-- MoE -->
+ <text x="988" y="872" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">MoE Expert Parallel (expert_parallel.py)</text>
+ <rect x="988" y="882" width="200" height="48" rx="6" fill="#1c1917" stroke="#fcd34d"/>
+ <text x="1088" y="902" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Router top-k</text>
+ <text x="1088" y="918" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">token routing</text>
+ <line x1="1188" y1="906" x2="1208" y2="906" stroke="#fcd34d" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+ <rect x="1212" y="882" width="200" height="48" rx="6" fill="#7c2d12" stroke="#fb923c"/>
+ <text x="1312" y="902" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">all_to_all_single</text>
+ <text x="1312" y="918" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">EP token dispatch</text>
+ <line x1="1412" y1="906" x2="1432" y2="906" stroke="#fcd34d" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+ <rect x="1436" y="882" width="200" height="48" rx="6" fill="#7c2d12" stroke="#fb923c"/>
+ <text x="1536" y="902" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">ExpertTensorParallel</text>
+ <text x="1536" y="918" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">EP + TP on mesh</text>
+ <rect x="1652" y="882" width="196" height="48" rx="6" fill="#422006" stroke="#f59e0b"/>
+ <text x="1750" y="902" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">DeepEP / HybridEP</text>
+ <text x="1750" y="918" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">comm backend opt</text>
+
+ <!-- Zero bubble PP -->
+ <text x="988" y="952" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Zero-Bubble Pipeline (torch.distributed.pipelining)</text>
+ <rect x="988" y="962" width="280" height="68" rx="6" fill="#14352a" stroke="#34d399"/>
+ <text x="1128" y="984" text-anchor="middle" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Backward partition</text>
+ <text x="1128" y="1002" text-anchor="middle" fill="#a7f3d0" font-family="JetBrains Mono, monospace" font-size="9">stage_backward_input + stage_backward_weight</text>
+ <text x="1128" y="1018" text-anchor="middle" fill="#a7f3d0" font-family="JetBrains Mono, monospace" font-size="9">Auto graph partition from autograd</text>
+ <rect x="1284" y="962" width="280" height="68" rx="6" fill="#14352a" stroke="#34d399"/>
+ <text x="1424" y="984" text-anchor="middle" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">ScheduleZBVZeroBubble</text>
+ <text x="1424" y="1002" text-anchor="middle" fill="#a7f3d0" font-family="JetBrains Mono, monospace" font-size="9">Weight grad fills pipeline bubble</text>
+ <text x="1424" y="1018" text-anchor="middle" fill="#a7f3d0" font-family="JetBrains Mono, monospace" font-size="9">DualPipeV for MoE dual-pipe</text>
+ <rect x="1580" y="962" width="268" height="68" rx="6" fill="#14352a" stroke="#34d399"/>
+ <text x="1714" y="984" text-anchor="middle" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Composed with FSDP + TP</text>
+ <text x="1714" y="1002" text-anchor="middle" fill="#a7f3d0" font-family="JetBrains Mono, monospace" font-size="9">pp_schedule.step() in train_step</text>
+ <text x="1714" y="1018" text-anchor="middle" fill="#a7f3d0" font-family="JetBrains Mono, monospace" font-size="9">V-schedule: 2 stages per PP rank</text>
+
+ <text x="988" y="1052" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">FSDP2 vs FSDP1: per-param DTensor sharding (not FlatParameter) - 7% lower mem - better composability</text>
+ <text x="988" y="1068" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">DCP checkpoints interoperable with torchtune - async save - elastic fault recovery via TorchFT</text>
+
+ <!-- L6 Hardware -->
+ <rect x="60" y="1068" width="1800" height="72" rx="12" fill="#1a1208" stroke="#fb923c" stroke-width="2"/>
+ <text x="88" y="1096" fill="#fb923c" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Hardware &amp; Production</text>
+ <text x="960" y="1122" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="13">NVIDIA H100/B200 (SymmetricMemory/Float8) - multi-node Slurm/K8s/SkyPilot - elastic 8-512+ GPUs</text>
+
+ <!-- footers -->
+ <rect x="60" y="1160" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1180" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Init path: ConfigManager - Trainer - ParallelDims/DeviceMesh - ModelSpec meta build - parallelize - materialize - train loop</text>
+ <text x="960" y="1198" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Step path: dataloader batch - microbatch accum - forward/backward (or PP schedule) - clip_grad - optimizer - metrics - async ckpt</text>
+
+ <text x="60" y="1244" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: pytorch/torchtitan README - ICLR 2025 paper (arXiv:2410.06511) - Megatron-Core parallelism guide analog via DTensor docs</text>
+</svg>

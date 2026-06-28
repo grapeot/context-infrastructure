@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-teal" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#14b8a6"/>
+  </marker>
+  <marker id="arrow-cyan" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#22d3ee"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">NVSHMEM Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">OpenSHMEM PGAS for NVIDIA GPU Clusters - Magnum IO - github.com/NVIDIA/nvshmem - GPU-initiated RMA</text>
+
+ <!-- L1 Workloads -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#14b8a6" stroke-width="2"/>
+ <text x="88" y="124" fill="#14b8a6" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Workloads + Integrations (fine-grained GPU-initiated comm - complement to NCCL collectives)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="50" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="113" y="162" text-anchor="middle">DeepEP</text>
+  <rect x="150" y="136" width="70" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="185" y="162" text-anchor="middle">Triton-dist</text>
+  <rect x="232" y="136" width="40" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="252" y="162" text-anchor="middle">MoE</text>
+  <rect x="284" y="136" width="30" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="299" y="162" text-anchor="middle">EP</text>
+  <rect x="326" y="136" width="50" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="351" y="162" text-anchor="middle">sparse</text>
+  <rect x="388" y="136" width="50" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="413" y="162" text-anchor="middle">stencil</text>
+  <rect x="450" y="136" width="40" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="470" y="162" text-anchor="middle">HPC</text>
+  <rect x="502" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="527" y="162" text-anchor="middle">CuTe</text>
+  <rect x="564" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="594" y="162" text-anchor="middle">nvshmem4py</text>
+  <rect x="636" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="661" y="162" text-anchor="middle">PyTorch</text>
+  <rect x="698" y="136" width="40" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="718" y="162" text-anchor="middle">CuPy</text>
+  <rect x="750" y="136" width="50" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="775" y="162" text-anchor="middle">Numba</text>
+  <rect x="812" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="837" y="162" text-anchor="middle">H100</text>
+  <rect x="874" y="136" width="50" height="40" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="899" y="162" text-anchor="middle">B200</text>
+  <rect x="936" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="961" y="162" text-anchor="middle">NVLink</text>
+  <rect x="998" y="136" width="30" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1013" y="162" text-anchor="middle">IB</text>
+  <rect x="1040" y="136" width="40" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1060" y="162" text-anchor="middle">EFA</text>
+  <rect x="1092" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1117" y="162" text-anchor="middle">GDRDMA</text>
+  <rect x="1154" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1179" y="162" text-anchor="middle">IBGDA</text>
+  <rect x="1216" y="136" width="50" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1241" y="162" text-anchor="middle">NCCL</text>
+  <rect x="1278" y="136" width="50" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1303" y="162" text-anchor="middle">MPI</text>
+  <rect x="1340" y="136" width="60" height="40" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1370" y="162" text-anchor="middle">ROCSHMEM</text>
+  <rect x="1412" y="136" width="50" height="40" rx="6" fill="#422006" stroke="#fbbf24"/><text x="1437" y="162" text-anchor="middle">MNNVL</text>
+  <rect x="1474" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1499" y="162" text-anchor="middle">Magnum</text>
+  <rect x="1536" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1561" y="162" text-anchor="middle">NVIDIA</text>
+  <rect x="1598" y="136" width="50" height="40" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1623" y="162" text-anchor="middle">CUDA</text>
+  <rect x="1660" y="136" width="40" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1680" y="162" text-anchor="middle">PGAS</text>
+  <rect x="1712" y="136" width="60" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1742" y="162" text-anchor="middle">OpenSHMEM</text>
+  <rect x="1784" y="136" width="64" height="40" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1816" y="162" text-anchor="middle">v3.6</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Programming Model -->
+ <rect x="60" y="216" width="1800" height="120" rx="12" fill="#0f2744" stroke="#14b8a6" stroke-width="2"/>
+ <text x="88" y="244" fill="#14b8a6" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - OpenSHMEM PGAS Model (PE = GPU process - symmetric heap - one-sided put/get from CUDA kernels)</text>
+ <rect x="88" y="258" width="340" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="258" y="282" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">vs Host-Driven (MPI/NCCL)</text>
+ <text x="258" y="300" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">CPU orchestrates transfers - sync overhead</text>
+ <text x="258" y="314" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Bulk-synchronous collectives - operator-level</text>
+ <rect x="448" y="258" width="340" height="64" rx="10" fill="#0c2d2d" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="618" y="282" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">NVSHMEM World</text>
+ <text x="618" y="300" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">GPU-initiated async one-sided RMA</text>
+ <text x="618" y="314" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">CUDA kernel / stream / CPU all supported</text>
+ <rect x="808" y="258" width="340" height="64" rx="10" fill="#134e4a" stroke="#5eead4" stroke-width="2"/>
+ <text x="978" y="282" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Symmetric Memory</text>
+ <text x="978" y="300" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Same type/size/layout on every PE</text>
+ <text x="978" y="314" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Remote ptr = local offset + remote heap base</text>
+ <rect x="1168" y="258" width="340" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="1338" y="282" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">PE (Processing Element)</text>
+ <text x="1338" y="300" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">1 OS process per GPU (default)</text>
+ <text x="1338" y="314" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Multi-PE per GPU limited support since 2.4.1</text>
+ <rect x="1528" y="258" width="300" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1678" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Execution Scopes</text>
+ <text x="1678" y="300" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Thread / warp / block scoped device ops</text>
+ <text x="1678" y="314" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">nvshmemx_ warp and block variants</text>
+ <line x1="960" y1="336" x2="960" y2="354" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 API Layers -->
+ <rect x="60" y="356" width="1800" height="200" rx="12" fill="#0f2744" stroke="#22d3ee" stroke-width="2.5"/>
+ <text x="88" y="384" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - API Surface (Host + Device + Stream + Teams - OpenSHMEM spec on GPU)</text>
+
+ <rect x="88" y="400" width="420" height="136" rx="12" fill="#0c2d2d" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="298" y="428" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Device API (libshmem_device)</text>
+ <text x="298" y="450" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">put/get putmem/getmem p/g iput/iget nbi variants</text>
+ <text x="298" y="468" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">atomic_add/cas/swap/fetch_inc and bitwise ops</text>
+ <text x="298" y="486" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">signal_op signal_wait_until fence quiet</text>
+ <text x="298" y="504" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">wait/test on symmetric signal variables</text>
+ <text x="298" y="522" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Called directly from __global__ CUDA kernels</text>
+
+ <rect x="528" y="400" width="420" height="136" rx="12" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="738" y="428" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Host + Stream API</text>
+ <text x="738" y="450" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">nvshmem_init/finalize - nvshmem_malloc/free</text>
+ <text x="738" y="468" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">nvshmemx_ on-stream put/get/collectives</text>
+ <text x="738" y="486" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Buffer registration for local non-heap mem</text>
+ <text x="738" y="504" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Host collectives: barrier broadcast reduce</text>
+ <text x="738" y="522" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">nvshmemx_collective_launch for device coll</text>
+
+ <rect x="968" y="400" width="420" height="136" rx="12" fill="#134e4a" stroke="#5eead4" stroke-width="2"/>
+ <text x="1178" y="428" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Device Collectives + Teams</text>
+ <text x="1178" y="450" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">barrier_all broadcast reduce alltoall fcollect</text>
+ <text x="1178" y="468" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Team subgroups w/ rank translation</text>
+ <text x="1178" y="486" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Team creation host-side - query on device</text>
+ <text x="1178" y="504" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">CuTe DSL + Triton libshmem_device bindings</text>
+ <text x="1178" y="522" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">NCCL interoperability API for hybrid apps</text>
+
+ <rect x="1408" y="400" width="420" height="136" rx="12" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1618" y="428" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Bootstrap + Init</text>
+ <text x="1618" y="450" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">MPI PMI UID plugin bootstrap exchange</text>
+ <text x="1618" y="468" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Exchange heap bases RDMA keys IPC handles</text>
+ <text x="1618" y="486" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">nvshmem_init_attr uniqueId for no-MPI jobs</text>
+ <text x="1618" y="504" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">v3.0 host-device ABI backward compat</text>
+ <text x="1618" y="522" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">OOP symmetric heap framework (v3.0+)</text>
+
+ <line x1="960" y1="556" x2="960" y2="574" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Symmetric Heap -->
+ <rect x="60" y="576" width="1800" height="120" rx="12" fill="#0f2744" stroke="#14b8a6" stroke-width="2"/>
+ <text x="88" y="604" fill="#14b8a6" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Symmetric Heap + Memory Management (virtual-memory PGAS - DMA-BUF GDR registration)</text>
+ <rect x="88" y="618" width="340" height="64" rx="10" fill="#134e4a" stroke="#5eead4" stroke-width="2"/>
+ <text x="258" y="642" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Heap Allocation</text>
+ <text x="258" y="660" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">nvshmem_malloc/align/calloc/free collective</text>
+ <text x="258" y="674" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Static + dynamic device memory heap kinds</text>
+ <rect x="448" y="618" width="340" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="618" y="642" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Virtual Memory Setup</text>
+ <text x="618" y="660" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Per-PE symmetric VA space w/ remote mapping</text>
+ <text x="618" y="674" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Exchange remote addrs + MR sizes at bootstrap</text>
+ <rect x="808" y="618" width="340" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="978" y="642" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Remote Addressing</text>
+ <text x="978" y="660" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">nvshmem_ptr(local, pe) translate to remote</text>
+ <text x="978" y="674" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Direct placement into destination sym buffer</text>
+ <rect x="1168" y="618" width="340" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="1338" y="642" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Registration + IPC</text>
+ <text x="1338" y="660" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">DMA-BUF GPUDirect RDMA NIC registration</text>
+ <text x="1338" y="674" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">CUDA IPC handles for intra-node P2P path</text>
+ <rect x="1528" y="618" width="300" height="64" rx="10" fill="#0c2d2d" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="1678" y="642" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">nvshmem4py</text>
+ <text x="1678" y="660" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Python bindings - PyTorch CuPy Numba CuTe</text>
+ <text x="1678" y="674" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Direct libshmem_device access from Python</text>
+ <line x1="960" y1="696" x2="960" y2="714" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L5 Transport -->
+ <rect x="60" y="716" width="1800" height="120" rx="12" fill="#0f2744" stroke="#22d3ee" stroke-width="2"/>
+ <text x="88" y="744" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Plugin Transport Layer (P2P first - remote plugin - optional IBGDA GPU-initiated IB)</text>
+ <rect x="88" y="758" width="240" height="64" rx="10" fill="#134e4a" stroke="#5eead4" stroke-width="2"/>
+ <text x="208" y="782" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">P2P (built-in)</text>
+ <text x="208" y="800" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">NVLink PCIe CUDA IPC cuMem</text>
+ <text x="208" y="814" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Always init first intra-node</text>
+ <rect x="348" y="758" width="240" height="64" rx="10" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="468" y="782" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">IBRC / IBDEVX</text>
+ <text x="468" y="800" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">InfiniBand RC QPs / DEVX API</text>
+ <text x="468" y="814" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">nvshmem_transport_ibrc.so</text>
+ <rect x="608" y="758" width="240" height="64" rx="10" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+ <text x="728" y="782" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">IBGDA</text>
+ <text x="728" y="800" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">GPU Direct Async InfiniBand</text>
+ <text x="728" y="814" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">NVSHMEM_IB_ENABLE_IBGDA=1</text>
+ <rect x="868" y="758" width="240" height="64" rx="10" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="988" y="782" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">UCX</text>
+ <text x="988" y="800" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Multi-network unified transport</text>
+ <text x="988" y="814" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">nvshmem_transport_ucx.so</text>
+ <rect x="1128" y="758" width="240" height="64" rx="10" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="1248" y="782" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Libfabric</text>
+ <text x="1248" y="800" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">AWS EFA Slingshot OFI fabrics</text>
+ <text x="1248" y="814" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">nvshmem_transport_libfabric.so</text>
+ <rect x="1388" y="758" width="440" height="64" rx="10" fill="#0c2d2d" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="1608" y="782" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Transport Manager + Topo</text>
+ <text x="1608" y="800" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">nvshmem_transport plugin load - version check - transport bitmap per PE</text>
+ <text x="1608" y="814" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">PCIe distance GPU-NIC mapping - NVSHMEM_REMOTE_TRANSPORT env</text>
+ <line x1="960" y1="836" x2="960" y2="854" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L6 Runtime -->
+ <rect x="60" y="856" width="1800" height="56" rx="12" fill="#0f2744" stroke="#14b8a6" stroke-width="2"/>
+ <text x="88" y="884" fill="#14b8a6" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Runtime Internals + Package (src/host/ - src/device/ - modules/transport/ - perftest/ - nvshmem4py/)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0f2fe">
+  <rect x="88" y="892" width="50" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="113" y="909" text-anchor="middle">src/host</text>
+  <rect x="148" y="892" width="50" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="173" y="909" text-anchor="middle">transport</text>
+  <rect x="208" y="892" width="40" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="228" y="909" text-anchor="middle">topo</text>
+  <rect x="258" y="892" width="50" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="283" y="909" text-anchor="middle">proxy</text>
+  <rect x="318" y="892" width="50" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="343" y="909" text-anchor="middle">bootstrap</text>
+  <rect x="378" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="403" y="909" text-anchor="middle">src/device</text>
+  <rect x="438" y="892" width="60" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="468" y="909" text-anchor="middle">collective</text>
+  <rect x="508" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="533" y="909" text-anchor="middle">comm/rma</text>
+  <rect x="568" y="892" width="60" height="24" rx="5" fill="#132f4c" stroke="#22d3ee"/><text x="598" y="909" text-anchor="middle">modules/</text>
+  <rect x="638" y="892" width="50" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="663" y="909" text-anchor="middle">perftest</text>
+  <rect x="698" y="892" width="60" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="728" y="909" text-anchor="middle">nvshmem4py</text>
+  <rect x="768" y="892" width="50" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="793" y="909" text-anchor="middle">GDA-KI</text>
+  <rect x="828" y="892" width="50" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="853" y="909" text-anchor="middle">NVTX</text>
+  <rect x="888" y="892" width="50" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="913" y="909" text-anchor="middle">tuner</text>
+  <rect x="948" y="892" width="50" height="24" rx="5" fill="#312e81" stroke="#818cf8"/><text x="973" y="909" text-anchor="middle">triton-dist</text>
+  <rect x="1008" y="892" width="40" height="24" rx="5" fill="#312e81" stroke="#818cf8"/><text x="1028" y="909" text-anchor="middle">FLUX</text>
+  <rect x="1058" y="892" width="50" height="24" rx="5" fill="#450a0a" stroke="#ef4444"/><text x="1083" y="909" text-anchor="middle">ROCm Iris</text>
+  <rect x="1118" y="892" width="50" height="24" rx="5" fill="#1a2e05" stroke="#76b900"/><text x="1143" y="909" text-anchor="middle">NCCL GIN</text>
+  <rect x="1178" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1203" y="909" text-anchor="middle">MPI boot</text>
+  <rect x="1238" y="892" width="40" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1258" y="909" text-anchor="middle">UID</text>
+  <rect x="1288" y="892" width="50" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="1313" y="909" text-anchor="middle">v3.0</text>
+  <rect x="1348" y="892" width="50" height="24" rx="5" fill="#422006" stroke="#fbbf24"/><text x="1373" y="909" text-anchor="middle">multi-DC</text>
+  <rect x="1408" y="892" width="60" height="24" rx="5" fill="#0c2d2d" stroke="#2dd4bf"/><text x="1438" y="909" text-anchor="middle">host-proxy</text>
+  <rect x="1478" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1503" y="909" text-anchor="middle">pip</text>
+  <rect x="1538" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1563" y="909" text-anchor="middle">docs</text>
+  <rect x="1598" y="892" width="60" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1628" y="909" text-anchor="middle">DeepEP</text>
+  <rect x="1668" y="892" width="50" height="24" rx="5" fill="#431407" stroke="#fb923c"/><text x="1693" y="909" text-anchor="middle">seek-ai</text>
+  <rect x="1728" y="892" width="60" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1758" y="909" text-anchor="middle">Magnum IO</text>
+  <rect x="1798" y="892" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1823" y="909" text-anchor="middle">BSD</text>
+ </g>
+
+ <!-- DETAIL putmem signal path -->
+ <rect x="60" y="928" width="880" height="340" rx="14" fill="#0c1524" stroke="#14b8a6" stroke-width="2.5"/>
+ <text x="88" y="960" fill="#14b8a6" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Device One-Sided Put+Signal Path (MoE dispatch / DeepEP pattern)</text>
+ <text x="88" y="982" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="11">CUDA kernel initiates RMA - no CPU proxy on IBGDA path - signal for fine-grained sync</text>
+
+ <rect x="88" y="998" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="1022" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1: nvshmem_init (MPI/UID bootstrap) - exchange heap bases + transport endpoints</text>
+ <line x1="498" y1="1034" x2="498" y2="1046" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+ <rect x="88" y="1048" width="820" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="498" y="1072" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2: nvshmem_malloc symmetric buffers on each PE - register w/ DMA-BUF for NIC GDR</text>
+ <line x1="498" y1="1084" x2="498" y2="1096" stroke="#5eead4" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+ <rect x="88" y="1098" width="820" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="498" y="1122" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3: __global__ kernel: nvshmem_putmem_nbi_block(dest, src, bytes, pe)</text>
+ <line x1="498" y1="1134" x2="498" y2="1146" stroke="#2dd4bf" stroke-width="1.5"/>
+ <rect x="88" y="1148" width="820" height="36" rx="6" fill="#422006" stroke="#fbbf24"/>
+ <text x="498" y="1172" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4: putmem_signal_nbi_block data + signal atomic to remote symmetric buffer</text>
+ <line x1="498" y1="1184" x2="498" y2="1196" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+ <rect x="88" y="1198" width="820" height="36" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="498" y="1222" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 5: Remote PE: nvshmem_signal_wait_until - consume data - overlap w/ compute</text>
+ <line x1="498" y1="1234" x2="498" y2="1246" stroke="#fb923c" stroke-width="1.5"/>
+ <rect x="88" y="1248" width="820" height="28" rx="6" fill="#312e81" stroke="#818cf8"/>
+ <text x="498" y="1268" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">IBGDA: GPU posts WQE directly - no host proxy - P2P path uses CUDA IPC for intra-node</text>
+
+ <text x="88" y="1294" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Non-IBGDA: host proxy thread progresses NET async while GPU kernel waits on fence/quiet</text>
+ <text x="88" y="1310" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Triton-distributed lowers same primitives via libshmem_device in compiled kernels</text>
+
+ <!-- DETAIL Position -->
+ <rect x="960" y="928" width="900" height="340" rx="14" fill="#0c1224" stroke="#14b8a6" stroke-width="2.5"/>
+ <text x="988" y="960" fill="#14b8a6" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Five Design Pillars + Ecosystem Position</text>
+ <text x="988" y="982" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="11">Systems building block for GPU-initiated PGAS - complements not replaces NCCL</text>
+
+ <text x="988" y="1006" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Five Pillars</text>
+ <rect x="988" y="1016" width="130" height="48" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="1053" y="1038" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">PGAS</text>
+ <text x="1053" y="1054" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Symmetric global addr</text>
+ <rect x="1130" y="1016" width="130" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1195" y="1038" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">GPU-initiated</text>
+ <text x="1195" y="1054" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Kernel/stream RMA</text>
+ <rect x="1272" y="1016" width="130" height="48" rx="6" fill="#422006" stroke="#fbbf24"/>
+ <text x="1337" y="1038" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">One-sided</text>
+ <text x="1337" y="1054" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">put/get no recv</text>
+ <rect x="1414" y="1016" width="130" height="48" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1479" y="1038" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Plugin transport</text>
+ <text x="1479" y="1054" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">P2P IB UCX EFA</text>
+ <rect x="1556" y="1016" width="130" height="48" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="1621" y="1038" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">IBGDA</text>
+ <text x="1621" y="1054" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">True GPU networking</text>
+ <rect x="1698" y="1016" width="150" height="48" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1773" y="1038" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Device coll</text>
+ <text x="1773" y="1054" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">barrier reduce team</text>
+
+ <text x="988" y="1082" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">vs Related Stacks</text>
+ <rect x="988" y="1092" width="200" height="68" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="1088" y="1116" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">NVSHMEM</text>
+ <text x="1088" y="1134" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Fine-grained GPU RMA PGAS</text>
+ <text x="1088" y="1150" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Irregular/sparse/EP patterns</text>
+ <rect x="1200" y="1092" width="200" height="68" rx="6" fill="#1a2e05" stroke="#76b900"/>
+ <text x="1300" y="1116" text-anchor="middle" fill="#ecfccb" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">NCCL</text>
+ <text x="1300" y="1134" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">Host-driven bulk collectives</text>
+ <text x="1300" y="1150" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="9">GIN adds device-init overlap</text>
+ <rect x="1412" y="1092" width="200" height="68" rx="6" fill="#312e81" stroke="#818cf8"/>
+ <text x="1512" y="1116" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Triton-distributed</text>
+ <text x="1512" y="1134" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">Compiles to NVSHMEM ops</text>
+ <text x="1512" y="1150" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="9">Tile-level fused overlap</text>
+ <rect x="1624" y="1092" width="224" height="68" rx="6" fill="#450a0a" stroke="#ef4444"/>
+ <text x="1736" y="1116" text-anchor="middle" fill="#fecaca" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">ROCSHMEM</text>
+ <text x="1736" y="1134" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="9">AMD OpenSHMEM port</text>
+ <text x="1736" y="1150" text-anchor="middle" fill="#fca5a5" font-family="JetBrains Mono, monospace" font-size="9">Same PGAS programming model</text>
+
+ <text x="988" y="1178" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Quick Start</text>
+ <rect x="988" y="1188" width="860" height="48" rx="6" fill="#1a1208" stroke="#14b8a6"/>
+ <text x="1418" y="1212" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="12">nvshmem_init - nvshmem_malloc - kernel w/ nvshmem_putmem + signal_wait_until</text>
+ <text x="1418" y="1228" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="10">Docs: docs.nvidia.com/nvshmem - pip: nvidia-nvshmem-cu12 nvshmem4py-cu12</text>
+
+ <!-- footer bar -->
+ <rect x="60" y="1288" width="1800" height="72" rx="12" fill="#1a1208" stroke="#14b8a6" stroke-width="2"/>
+ <text x="88" y="1316" fill="#14b8a6" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">Design Position (Magnum IO PGAS layer - GPU-initiated one-sided comm for irregular and fused workloads)</text>
+ <text x="960" y="1342" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="13">Symmetric heap + device RMA + plugin transports + IBGDA = foundation for DeepEP and custom overlap kernels</text>
+
+ <!-- footers -->
+ <rect x="60" y="1376" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1396" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Init: bootstrap exchange - symmetric heap setup - transport plugin load - GPU-NIC topo map</text>
+ <text x="960" y="1414" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Loop: device put/get/atomic - signal sync - fence/quiet - device collectives - host proxy if needed</text>
+
+ <text x="60" y="1460" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: github.com/NVIDIA/nvshmem - docs.nvidia.com/nvshmem - arXiv 2606.05951 - NVSHMEM 3.0 blog</text>
+</svg>

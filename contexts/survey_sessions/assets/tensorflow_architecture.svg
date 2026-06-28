@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-orange" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#ff6f00"/>
+  </marker>
+  <marker id="arrow-purple" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#a78bfa"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">TensorFlow Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">Dataflow Graph ML Framework - tf.function + XLA + TFRT - Google / OpenXLA</text>
+
+ <!-- L1 Entry -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#ff6f00" stroke-width="2"/>
+ <text x="88" y="124" fill="#ff6f00" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Entry Points &amp; High-Level APIs</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#ff6f00"/><text x="118" y="162" text-anchor="middle">tf</text>
+  <rect x="160" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#ff6f00"/><text x="195" y="162" text-anchor="middle">tf.keras</text>
+  <rect x="242" y="136" width="90" height="40" rx="6" fill="#431407" stroke="#ff6f00"/><text x="287" y="162" text-anchor="middle">tf.function</text>
+  <rect x="344" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#ff6f00"/><text x="379" y="162" text-anchor="middle">tf.data</text>
+  <rect x="426" y="136" width="100" height="40" rx="6" fill="#431407" stroke="#ff6f00"/><text x="476" y="162" text-anchor="middle">tf.distribute</text>
+  <rect x="538" y="136" width="90" height="40" rx="6" fill="#431407" stroke="#ff6f00"/><text x="583" y="162" text-anchor="middle">SavedModel</text>
+  <rect x="640" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#ff6f00"/><text x="675" y="162" text-anchor="middle">TFLite</text>
+  <rect x="722" y="136" width="90" height="40" rx="6" fill="#431407" stroke="#ff6f00"/><text x="767" y="162" text-anchor="middle">TF Serving</text>
+  <rect x="824" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#ff6f00"/><text x="854" y="162" text-anchor="middle">TF.js</text>
+  <rect x="896" y="136" width="80" height="40" rx="6" fill="#431407" stroke="#ff6f00"/><text x="936" y="162" text-anchor="middle">Estimator</text>
+  <rect x="988" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#ff6f00"/><text x="1023" y="162" text-anchor="middle">TF-TRT</text>
+  <rect x="1070" y="136" width="80" height="40" rx="6" fill="#431407" stroke="#ff6f00"/><text x="1110" y="162" text-anchor="middle">TensorBoard</text>
+  <rect x="1162" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#ff6f00"/><text x="1197" y="162" text-anchor="middle">TFX</text>
+  <rect x="1244" y="136" width="80" height="40" rx="6" fill="#431407" stroke="#ff6f00"/><text x="1284" y="162" text-anchor="middle">JAX bridge</text>
+  <rect x="1336" y="136" width="70" height="40" rx="6" fill="#431407" stroke="#ff6f00"/><text x="1371" y="162" text-anchor="middle">Eager</text>
+  <rect x="1418" y="136" width="80" height="40" rx="6" fill="#431407" stroke="#ff6f00"/><text x="1458" y="162" text-anchor="middle">AutoGraph</text>
+  <rect x="1510" y="136" width="60" height="40" rx="6" fill="#431407" stroke="#ff6f00"/><text x="1540" y="162" text-anchor="middle">Hub</text>
+  <rect x="1582" y="136" width="80" height="40" rx="6" fill="#431407" stroke="#ff6f00"/><text x="1622" y="162" text-anchor="middle">TFRecords</text>
+  <rect x="1674" y="136" width="80" height="40" rx="6" fill="#431407" stroke="#ff6f00"/><text x="1714" y="162" text-anchor="middle">SignatureDef</text>
+  <rect x="1766" y="136" width="82" height="40" rx="6" fill="#431407" stroke="#ff6f00"/><text x="1807" y="162" text-anchor="middle">PluggableDev</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Graph + XLA -->
+ <rect x="60" y="216" width="1800" height="120" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2"/>
+ <text x="88" y="244" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Graph Construction &amp; XLA Compilation</text>
+ <rect x="88" y="258" width="220" height="60" rx="8" fill="#431407" stroke="#ff6f00"/>
+ <text x="198" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">tf.function / AutoGraph</text>
+ <text x="198" y="302" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Python to PolymorphicFunction - trace on call</text>
+ <rect x="324" y="258" width="200" height="60" rx="8" fill="#431407" stroke="#ff6f00"/>
+ <text x="424" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">tf.Graph + FuncGraph</text>
+ <text x="424" y="302" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Dataflow DAG of tf.Operation nodes</text>
+ <rect x="540" y="258" width="220" height="60" rx="8" fill="#431407" stroke="#ff6f00"/>
+ <text x="650" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">ConcreteFunction</text>
+ <text x="650" y="302" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Specialized graph per input signature/shape</text>
+ <rect x="776" y="258" width="180" height="60" rx="8" fill="#052e16" stroke="#34a853"/>
+ <text x="866" y="282" text-anchor="middle" fill="#dcfce7" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">XLA Compiler</text>
+ <text x="866" y="302" text-anchor="middle" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="10">jit_compile=True - op fusion - OpenXLA</text>
+ <rect x="972" y="258" width="180" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1062" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">MLIR / StableHLO</text>
+ <text x="1062" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Graph lowering IR - hardware-agnostic</text>
+ <rect x="1168" y="258" width="200" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1268" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Grappler Optimizer</text>
+ <text x="1268" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Constant fold - layout - remapper - auto-cluster</text>
+ <rect x="1384" y="258" width="200" height="60" rx="8" fill="#422006" stroke="#fcd34d"/>
+ <text x="1484" y="282" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Retracing Control</text>
+ <text x="1484" y="302" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">input_signature - reduce shape variants</text>
+ <rect x="1600" y="258" width="234" height="60" rx="8" fill="#431407" stroke="#ff6f00"/>
+ <text x="1717" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Eager + Graph Dual Mode (TF2 default eager)</text>
+ <text x="1717" y="302" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Imperative UX with graph performance via @tf.function</text>
+ <line x1="960" y1="336" x2="960" y2="354" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Core -->
+ <rect x="60" y="356" width="1800" height="200" rx="12" fill="#0f2744" stroke="#ff6f00" stroke-width="2.5"/>
+ <text x="88" y="384" fill="#ff6f00" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - Core Runtime (TFRT + Eager Executor)</text>
+
+ <!-- TFRT -->
+ <rect x="88" y="400" width="420" height="136" rx="12" fill="#431407" stroke="#ff6f00" stroke-width="2"/>
+ <text x="298" y="428" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">TFRT (TensorFlow Runtime)</text>
+ <text x="298" y="450" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Low-level async dataflow graph executor</text>
+ <text x="298" y="468" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">mlir_to_bef - MLIR lowered to BEF binary format</text>
+ <text x="298" y="486" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">BEFExecutor - lock-free kernel scheduling</text>
+ <text x="298" y="504" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">AsyncValue + AsyncKernelFrame per kernel</text>
+ <text x="298" y="522" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Host Runtime drives CPU/GPU/TPU device runtimes</text>
+
+ <!-- Eager -->
+ <rect x="524" y="400" width="420" height="136" rx="12" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="734" y="428" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Eager Execution + Op Registry</text>
+ <text x="734" y="450" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Op-by-op dispatch - TF2 default mode</text>
+ <text x="734" y="468" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">OpKernel registration per device type</text>
+ <text x="734" y="486" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Tensor + Variable + ResourceHandle</text>
+ <text x="734" y="504" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">GradientTape for reverse-mode autodiff</text>
+ <text x="734" y="522" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Device placement via tf.device context</text>
+
+ <!-- tf.data -->
+ <rect x="960" y="400" width="340" height="136" rx="12" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1130" y="428" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">tf.data Input Pipeline</text>
+ <text x="1130" y="450" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Dataset - map - batch - prefetch - cache</text>
+ <text x="1130" y="468" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Parallel interleave - autotune buffer sizes</text>
+ <text x="1130" y="486" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">TFRecord / interleave with distribute strategy</text>
+ <text x="1130" y="504" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">service API for distributed data loading</text>
+ <text x="1130" y="522" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Decouples I/O from compute on accelerator</text>
+
+ <!-- Device Runtimes -->
+ <rect x="1316" y="400" width="516" height="136" rx="12" fill="#422006" stroke="#fcd34d" stroke-width="2"/>
+ <text x="1574" y="428" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Device Runtimes + Memory</text>
+ <text x="1574" y="450" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">GPU Device Runtime - stream + memcpy + kernel launch</text>
+ <text x="1574" y="468" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">TPU Device Runtime - infeed/outfeed + XLA pod</text>
+ <text x="1574" y="486" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">BFCAllocator / PluggableDeviceAllocator per device</text>
+ <text x="1574" y="504" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">PluggableDevice - custom accelerator plugin API</text>
+ <text x="1574" y="522" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Fully async - kernels run when args available</text>
+
+ <text x="960" y="548" text-anchor="middle" fill="#ff6f00" font-family="JetBrains Mono, monospace" font-size="10">Graph-first design: dataflow DAG enables fusion, constant folding, and cross-platform deployment</text>
+ <line x1="960" y1="556" x2="960" y2="574" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Backends -->
+ <rect x="60" y="576" width="1800" height="88" rx="12" fill="#0f2744" stroke="#a78bfa" stroke-width="2"/>
+ <text x="88" y="604" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Compiler Backends &amp; Hardware Targets</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ede9fe">
+  <text x="88" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">GPU:</text>
+  <rect x="130" y="612" width="50" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="155" y="636" text-anchor="middle">CUDA</text>
+  <rect x="192" y="612" width="60" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="222" y="636" text-anchor="middle">cuDNN</text>
+  <rect x="264" y="612" width="60" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="294" y="636" text-anchor="middle">TF-TRT</text>
+  <text x="336" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">TPU:</text>
+  <rect x="375" y="612" width="50" height="36" rx="6" fill="#052e16" stroke="#34a853"/><text x="400" y="636" text-anchor="middle">XLA</text>
+  <rect x="437" y="612" width="50" height="36" rx="6" fill="#052e16" stroke="#34a853"/><text x="462" y="636" text-anchor="middle">TPU</text>
+  <rect x="499" y="612" width="60" height="36" rx="6" fill="#052e16" stroke="#34a853"/><text x="529" y="636" text-anchor="middle">Pod</text>
+  <text x="571" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">CPU:</text>
+  <rect x="615" y="612" width="60" height="36" rx="6" fill="#431407" stroke="#ff6f00"/><text x="645" y="636" text-anchor="middle">oneDNN</text>
+  <rect x="687" y="612" width="50" height="36" rx="6" fill="#431407" stroke="#ff6f00"/><text x="712" y="636" text-anchor="middle">Eigen</text>
+  <text x="752" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Edge:</text>
+  <rect x="795" y="612" width="60" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="825" y="636" text-anchor="middle">TFLite</text>
+  <rect x="867" y="612" width="50" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="892" y="636" text-anchor="middle">XNN</text>
+  <rect x="929" y="612" width="50" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="954" y="636" text-anchor="middle">NNAPI</text>
+  <rect x="991" y="612" width="50" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1016" y="636" text-anchor="middle">CoreML</text>
+  <text x="1055" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">IR:</text>
+  <rect x="1085" y="612" width="60" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1115" y="636" text-anchor="middle">StableHLO</text>
+  <rect x="1157" y="612" width="50" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1182" y="636" text-anchor="middle">MLIR</text>
+  <rect x="1219" y="612" width="50" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1244" y="636" text-anchor="middle">HLO</text>
+  <text x="1280" y="624" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Quant:</text>
+  <rect x="1335" y="612" width="50" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1360" y="636" text-anchor="middle">INT8</text>
+  <rect x="1397" y="612" width="50" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1422" y="636" text-anchor="middle">FP16</text>
+  <rect x="1459" y="612" width="60" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1489" y="636" text-anchor="middle">QAT/PTQ</text>
+  <rect x="1531" y="612" width="70" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1566" y="636" text-anchor="middle">mixed_bfloat16</text>
+  <rect x="1613" y="612" width="80" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1653" y="636" text-anchor="middle">OpenXLA</text>
+  <rect x="1705" y="612" width="70" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1740" y="636" text-anchor="middle">auto-cluster</text>
+  <rect x="1787" y="612" width="61" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1817" y="636" text-anchor="middle">BEF</text>
+ </g>
+
+ <!-- L5 Features -->
+ <rect x="60" y="676" width="1800" height="72" rx="12" fill="#0f2744" stroke="#fbbf24" stroke-width="2"/>
+ <text x="88" y="704" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Distributed Training &amp; Production Features</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#fef3c7">
+  <rect x="88" y="716" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="133" y="733" text-anchor="middle">Mirrored</text>
+  <rect x="188" y="716" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="213" y="733" text-anchor="middle">TPU</text>
+  <rect x="248" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="288" y="733" text-anchor="middle">MultiWorker</text>
+  <rect x="338" y="716" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="363" y="733" text-anchor="middle">PS</text>
+  <rect x="398" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="438" y="733" text-anchor="middle">ClusterCoord</text>
+  <rect x="488" y="716" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="523" y="733" text-anchor="middle">all-reduce</text>
+  <rect x="568" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="598" y="733" text-anchor="middle">tf.data</text>
+  <rect x="638" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="668" y="733" text-anchor="middle">Keras 3</text>
+  <rect x="708" y="716" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="743" y="733" text-anchor="middle">Callbacks</text>
+  <rect x="788" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="818" y="733" text-anchor="middle">Checkpoint</text>
+  <rect x="858" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="898" y="733" text-anchor="middle">SavedModel</text>
+  <rect x="948" y="716" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="983" y="733" text-anchor="middle">Signature</text>
+  <rect x="1028" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1058" y="733" text-anchor="middle">Serving</text>
+  <rect x="1098" y="716" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1123" y="733" text-anchor="middle">Batch</text>
+  <rect x="1158" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1188" y="733" text-anchor="middle">A/B test</text>
+  <rect x="1228" y="716" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1253" y="733" text-anchor="middle">TFX</text>
+  <rect x="1288" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1318" y="733" text-anchor="middle">Profiler</text>
+  <rect x="1358" y="716" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1383" y="733" text-anchor="middle">XProf</text>
+  <rect x="1418" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1448" y="733" text-anchor="middle">TF-TRT</text>
+  <rect x="1488" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1518" y="733" text-anchor="middle">Grappler</text>
+  <rect x="1558" y="716" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1593" y="733" text-anchor="middle">mixed prec</text>
+  <rect x="1638" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1668" y="733" text-anchor="middle">XLA SPMD</text>
+  <rect x="1708" y="716" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1743" y="733" text-anchor="middle">DTensor</text>
+  <rect x="1788" y="716" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1818" y="733" text-anchor="middle">PjRT</text>
+ </g>
+
+ <!-- DETAIL tf.function flow -->
+ <rect x="60" y="764" width="880" height="340" rx="14" fill="#0c1524" stroke="#ff6f00" stroke-width="2.5"/>
+ <text x="88" y="796" fill="#ff6f00" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">tf.function Graph Tracing Flow</text>
+ <text x="88" y="818" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="11">TF2: eager by default - @tf.function switches to optimized graph execution</text>
+
+ <rect x="88" y="834" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="858" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1: @tf.function decorated Python fn called with Tensor inputs</text>
+ <line x1="498" y1="870" x2="498" y2="882" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow)"/>
+ <rect x="88" y="884" width="820" height="36" rx="6" fill="#431407" stroke="#ff6f00"/>
+ <text x="498" y="908" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2: AutoGraph converts Python control flow (if/for) to graph ops</text>
+ <line x1="498" y1="920" x2="498" y2="932" stroke="#ff6f00" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+ <rect x="88" y="934" width="820" height="36" rx="6" fill="#431407" stroke="#ff6f00"/>
+ <text x="498" y="958" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3: Trace builds tf.Graph (FuncGraph) - record TF ops - skip pure Python</text>
+ <line x1="498" y1="970" x2="498" y2="982" stroke="#ff6f00" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+ <rect x="88" y="984" width="820" height="36" rx="6" fill="#431407" stroke="#ff6f00"/>
+ <text x="498" y="1008" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4: Wrap as ConcreteFunction - cache per input signature/shape/dtype</text>
+ <line x1="498" y1="1020" x2="498" y2="1032" stroke="#ff6f00" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+ <rect x="88" y="1034" width="820" height="36" rx="6" fill="#052e16" stroke="#34a853"/>
+ <text x="498" y="1058" text-anchor="middle" fill="#dcfce7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 5: Execute via TFRT/XLA - subsequent calls reuse compiled graph (no retrace)</text>
+
+ <text x="88" y="1092" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Retracing on new shapes is expensive - use input_signature to limit variants</text>
+ <text x="88" y="1108" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Keras model.compile(jit_compile=True) enables XLA for entire training step</text>
+
+ <!-- DETAIL XLA + Deployment -->
+ <rect x="960" y="764" width="900" height="340" rx="14" fill="#0c1218" stroke="#ff6f00" stroke-width="2.5"/>
+ <text x="988" y="796" fill="#ff6f00" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">XLA + TFRT Execution &amp; Deployment Path</text>
+ <text x="988" y="818" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="11">Train once as graph - deploy everywhere via SavedModel export pipeline</text>
+
+ <text x="988" y="842" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Compilation Pipeline</text>
+ <rect x="988" y="852" width="150" height="68" rx="6" fill="#431407" stroke="#ff6f00"/>
+ <text x="1063" y="876" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">tf.Graph</text>
+ <text x="1063" y="894" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Grappler optimize</text>
+ <text x="1063" y="910" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Constant folding</text>
+ <line x1="1138" y1="886" x2="1168" y2="886" stroke="#ff6f00" stroke-width="2" marker-end="url(#arrow-orange)"/>
+ <rect x="1172" y="852" width="150" height="68" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1247" y="876" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">MLIR/HLO</text>
+ <text x="1247" y="894" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">StableHLO lowering</text>
+ <text x="1247" y="910" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">Hardware agnostic</text>
+ <line x1="1322" y1="886" x2="1352" y2="886" stroke="#ff6f00" stroke-width="2" marker-end="url(#arrow-orange)"/>
+ <rect x="1356" y="852" width="150" height="68" rx="6" fill="#052e16" stroke="#34a853"/>
+ <text x="1431" y="876" text-anchor="middle" fill="#dcfce7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">XLA Fusion</text>
+ <text x="1431" y="894" text-anchor="middle" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="9">Op fusion - layout</text>
+ <text x="1431" y="910" text-anchor="middle" fill="#86efac" font-family="JetBrains Mono, monospace" font-size="9">Memory bandwidth opt</text>
+ <line x1="1506" y1="886" x2="1536" y2="886" stroke="#ff6f00" stroke-width="2" marker-end="url(#arrow-orange)"/>
+ <rect x="1540" y="852" width="150" height="68" rx="6" fill="#431407" stroke="#ff6f00"/>
+ <text x="1615" y="876" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">BEF + TFRT</text>
+ <text x="1615" y="894" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">BEFExecutor async</text>
+ <text x="1615" y="910" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">Device kernel launch</text>
+ <rect x="1700" y="852" width="148" height="68" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1774" y="876" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">HW Kernels</text>
+ <text x="1774" y="894" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">GPU/TPU/CPU</text>
+ <text x="1774" y="910" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">Machine code</text>
+
+ <text x="988" y="942" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Deployment Targets (SavedModel export)</text>
+ <rect x="988" y="952" width="120" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1048" y="972" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">TF Serving</text>
+ <text x="1048" y="988" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">gRPC/REST - batching</text>
+ <rect x="1120" y="952" width="100" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1170" y="972" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">TFLite</text>
+ <text x="1170" y="988" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Mobile/Edge/MCU</text>
+ <rect x="1232" y="952" width="80" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1272" y="972" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">TF.js</text>
+ <text x="1272" y="988" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Browser/Node</text>
+ <rect x="1324" y="952" width="80" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1364" y="972" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">TF-TRT</text>
+ <text x="1364" y="988" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">NVIDIA infer</text>
+ <rect x="1416" y="952" width="80" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1456" y="972" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Cloud TPU</text>
+ <text x="1456" y="988" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">XLA pod serving</text>
+ <rect x="1508" y="952" width="80" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1548" y="972" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Vertex AI</text>
+ <text x="1548" y="988" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">GCP managed</text>
+ <rect x="1600" y="952" width="60" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1630" y="972" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">JAX</text>
+ <text x="1630" y="988" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Shared XLA</text>
+ <rect x="1672" y="952" width="60" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1702" y="972" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">ONNX</text>
+ <text x="1702" y="988" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Interchange</text>
+ <rect x="1744" y="952" width="104" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1796" y="972" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">TFX Pipeline</text>
+ <text x="1796" y="988" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">MLOps prod</text>
+
+ <text x="988" y="1024" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">vs PyTorch</text>
+ <rect x="988" y="1034" width="100" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1038" y="1058" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">Graph-first</text>
+ <rect x="1100" y="1034" width="100" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1150" y="1058" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">Static deploy</text>
+ <rect x="1212" y="1034" width="80" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1252" y="1058" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">XLA native</text>
+ <rect x="1304" y="1034" width="80" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1344" y="1058" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">TPU orig</text>
+ <rect x="1396" y="1034" width="90" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1441" y="1058" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">TF Serving</text>
+ <rect x="1498" y="1034" width="70" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1533" y="1058" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">TFLite</text>
+ <rect x="1580" y="1034" width="80" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1620" y="1058" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">Production</text>
+ <rect x="1672" y="1034" width="80" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1712" y="1058" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">Keras API</text>
+ <rect x="1764" y="1034" width="84" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1806" y="1058" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10">OpenXLA</text>
+
+ <text x="988" y="1108" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">XLA fusion example: mul+add+reduce fused into single GPU kernel - fewer memory round-trips</text>
+
+ <!-- L6 Production -->
+ <rect x="60" y="1124" width="1800" height="72" rx="12" fill="#1a1208" stroke="#ff6f00" stroke-width="2"/>
+ <text x="88" y="1152" fill="#ff6f00" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Production &amp; Ecosystem</text>
+ <text x="960" y="1178" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="13">tensorflow/tensorflow - Google - CUDA/TPU/CPU/Edge - TF Serving + TFLite + TFX - OpenXLA consortium</text>
+
+ <!-- footers -->
+ <rect x="60" y="1216" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1236" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Eager path: op-by-op dispatch - GradientTape - device placement - immediate execution</text>
+ <text x="960" y="1254" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Graph path: tf.function trace - Grappler - XLA fuse - TFRT BEF execute - SavedModel deploy</text>
+
+ <text x="60" y="1300" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: tensorflow.org guides - TFRT design doc - OpenXLA tf2xla - tf.function API - TF Serving</text>
+</svg>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-ali" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#ff6a00"/>
+  </marker>
+  <marker id="arrow-purple" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#a78bfa"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">ROLL Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">Reinforcement Learning Optimization for Large-scale Learning - Alibaba / Taobao TMALL</text>
+
+ <!-- L1 Entry -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#ff6a00" stroke-width="2"/>
+ <text x="88" y="124" fill="#ff6a00" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Entry Points &amp; Pipelines</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="150" height="40" rx="6" fill="#431407" stroke="#ff6a00"/><text x="163" y="162" text-anchor="middle">rlvr_config.yaml</text>
+  <rect x="250" y="136" width="130" height="40" rx="6" fill="#431407" stroke="#ff6a00"/><text x="315" y="162" text-anchor="middle">agentic yaml</text>
+  <rect x="392" y="136" width="110" height="40" rx="6" fill="#431407" stroke="#ff6a00"/><text x="447" y="162" text-anchor="middle">RLVR LLM</text>
+  <rect x="514" y="136" width="120" height="40" rx="6" fill="#431407" stroke="#ff6a00"/><text x="574" y="162" text-anchor="middle">Agentic RL</text>
+  <rect x="646" y="136" width="90" height="40" rx="6" fill="#431407" stroke="#ff6a00"/><text x="691" y="162" text-anchor="middle">DPO</text>
+  <rect x="748" y="136" width="90" height="40" rx="6" fill="#431407" stroke="#ff6a00"/><text x="793" y="162" text-anchor="middle">Distill</text>
+  <rect x="850" y="136" width="80" height="40" rx="6" fill="#431407" stroke="#ff6a00"/><text x="890" y="162" text-anchor="middle">SFT</text>
+  <rect x="942" y="136" width="100" height="40" rx="6" fill="#431407" stroke="#ff6a00"/><text x="992" y="162" text-anchor="middle">Qwen3.5</text>
+  <rect x="1054" y="136" width="110" height="40" rx="6" fill="#431407" stroke="#ff6a00"/><text x="1109" y="162" text-anchor="middle">Qwen3-Next</text>
+  <rect x="1176" y="136" width="100" height="40" rx="6" fill="#431407" stroke="#ff6a00"/><text x="1226" y="162" text-anchor="middle">Qwen-VL</text>
+  <rect x="1288" y="136" width="120" height="40" rx="6" fill="#431407" stroke="#ff6a00"/><text x="1348" y="162" text-anchor="middle">600B+ MoE</text>
+  <rect x="1420" y="136" width="110" height="40" rx="6" fill="#431407" stroke="#ff6a00"/><text x="1475" y="162" text-anchor="middle">examples/</text>
+  <rect x="1542" y="136" width="100" height="40" rx="6" fill="#431407" stroke="#ff6a00"/><text x="1592" y="162" text-anchor="middle">ROCK</text>
+  <rect x="1654" y="136" width="90" height="40" rx="6" fill="#431407" stroke="#ff6a00"/><text x="1699" y="162" text-anchor="middle">GEM env</text>
+  <rect x="1756" y="136" width="80" height="40" rx="6" fill="#431407" stroke="#ff6a00"/><text x="1796" y="162" text-anchor="middle">ROME</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Single Controller -->
+ <rect x="60" y="216" width="1800" height="120" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2"/>
+ <text x="88" y="244" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Single-Controller Architecture (HybridFlow-inspired)</text>
+ <rect x="88" y="258" width="280" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="228" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Distributed Executor</text>
+ <text x="228" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Single controller orchestrates pipeline</text>
+ <rect x="384" y="258" width="260" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="514" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">User-defined RL Dataflow</text>
+ <text x="514" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">RLHF / RLVR / Agentic graph input</text>
+ <rect x="660" y="258" width="240" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="780" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Transfer Protocol</text>
+ <text x="780" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Reshard data across stages (HybridFlow)</text>
+ <rect x="916" y="258" width="240" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1036" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">ModelUpdateGroup</text>
+ <text x="1036" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">NCCL bucketed param sync train-gen</text>
+ <rect x="1172" y="258" width="220" height="60" rx="8" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1282" y="282" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Metrics Manager</text>
+ <text x="1282" y="302" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Per-domain / reward-type tracking</text>
+ <rect x="1408" y="258" width="430" height="60" rx="8" fill="#431407" stroke="#ff6a00"/>
+ <text x="1623" y="282" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Control flow decoupled from computation backends</text>
+ <text x="1623" y="302" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Inspired by veRL HybridFlow + OpenRLHF + RAGEN (arXiv:2506.06122)</text>
+ <line x1="960" y1="336" x2="960" y2="354" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Core Modules -->
+ <rect x="60" y="356" width="1800" height="200" rx="12" fill="#0f2744" stroke="#ff6a00" stroke-width="2.5"/>
+ <text x="88" y="384" fill="#ff6a00" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - Core System Modules</text>
+
+ <!-- Rollout Scheduler center -->
+ <rect x="660" y="400" width="420" height="136" rx="12" fill="#431407" stroke="#ff6a00" stroke-width="2"/>
+ <text x="870" y="428" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Rollout Scheduler</text>
+ <text x="870" y="450" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Sample-level lifecycle (not batch-level)</text>
+ <text x="870" y="468" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Dynamic add / abort requests</text>
+ <text x="870" y="486" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Async reward + env interaction routing</text>
+ <text x="870" y="504" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">RollPacker long-tail mitigation</text>
+ <text x="870" y="522" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="10">Dynamic sampling / domain_batch_size</text>
+
+ <!-- Parallel Workers left -->
+ <rect x="88" y="400" width="550" height="136" rx="12" fill="#241a3d" stroke="#a78bfa" stroke-width="2"/>
+ <text x="363" y="428" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Parallel Workers (Ray PlacementGroup)</text>
+ <text x="363" y="450" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Actor Worker (train + gen) - Ref Worker - Critic Worker</text>
+ <text x="363" y="468" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Reward Worker: rule / sandbox / LLM-as-Judge</text>
+ <text x="363" y="486" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Environment Worker: multi-turn agentic interaction</text>
+ <text x="363" y="504" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Cluster = group of workers sharing same RL role</text>
+ <text x="363" y="522" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Strategy abstraction per worker backend</text>
+
+ <!-- Resource Pool right -->
+ <rect x="1102" y="400" width="730" height="136" rx="12" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1467" y="428" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Resource Pool + AutoDeviceMapping</text>
+ <text x="1467" y="450" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Orchestrate CPU/GPU resources - bind workers to devices</text>
+ <text x="1467" y="468" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Colocated or disaggregated deployment per role</text>
+ <text x="1467" y="486" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Share device across stages (time-division multiplex)</text>
+ <text x="1467" y="504" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Offload/reload + GPU partial overlapping</text>
+ <text x="1467" y="522" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">1000+ GPU cluster - fault-tolerant checkpoint/resume</text>
+
+ <!-- arrows -->
+ <line x1="638" y1="468" x2="656" y2="468" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrow-purple)"/>
+ <line x1="1080" y1="468" x2="1098" y2="468" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow)"/>
+ <text x="960" y="548" text-anchor="middle" fill="#ff6a00" font-family="JetBrains Mono, monospace" font-size="10">Parallel Strategy selects backend + parallelism per worker per stage (gen / infer / train)</text>
+
+ <line x1="960" y1="556" x2="960" y2="574" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Backends -->
+ <rect x="60" y="576" width="1800" height="88" rx="12" fill="#0f2744" stroke="#a78bfa" stroke-width="2"/>
+ <text x="88" y="604" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Parallel Strategy &amp; Engine Backends</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ede9fe">
+  <text x="88" y="624" fill="#94a3b8" font-size="10" font-weight="700">Train:</text>
+  <rect x="140" y="612" width="90" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="185" y="636" text-anchor="middle">FSDP2</text>
+  <rect x="242" y="612" width="120" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="302" y="636" text-anchor="middle">Megatron 5D</text>
+  <rect x="374" y="612" width="110" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="429" y="636" text-anchor="middle">DeepSpeed</text>
+  <rect x="496" y="612" width="100" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="546" y="636" text-anchor="middle">mcore-adapter</text>
+  <rect x="608" y="612" width="70" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="643" y="636" text-anchor="middle">LoRA</text>
+  <text x="700" y="624" fill="#94a3b8" font-size="10" font-weight="700">Rollout:</text>
+  <rect x="770" y="612" width="80" height="36" rx="6" fill="#0c2d2d" stroke="#5eead4"/><text x="810" y="636" text-anchor="middle">vLLM</text>
+  <rect x="862" y="612" width="90" height="36" rx="6" fill="#0c2d2d" stroke="#5eead4"/><text x="907" y="636" text-anchor="middle">SGLang</text>
+  <rect x="964" y="612" width="90" height="36" rx="6" fill="#0c2d2d" stroke="#5eead4"/><text x="1009" y="636" text-anchor="middle">FP8 dyn</text>
+  <text x="1070" y="624" fill="#94a3b8" font-size="10" font-weight="700">Parallel:</text>
+  <rect x="1140" y="612" width="50" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1165" y="636" text-anchor="middle">DP</text>
+  <rect x="1202" y="612" width="50" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1227" y="636" text-anchor="middle">TP</text>
+  <rect x="1264" y="612" width="50" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1289" y="636" text-anchor="middle">PP</text>
+  <rect x="1326" y="612" width="50" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1351" y="636" text-anchor="middle">CP</text>
+  <rect x="1388" y="612" width="50" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1413" y="636" text-anchor="middle">EP</text>
+  <rect x="1450" y="612" width="90" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="1495" y="636" text-anchor="middle">ZeRO3</text>
+  <rect x="1552" y="612" width="110" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="1607" y="636" text-anchor="middle">grad ckpt</text>
+  <rect x="1674" y="612" width="174" height="36" rx="6" fill="#431407" stroke="#ff6a00"/><text x="1761" y="636" text-anchor="middle">offload/reload control</text>
+ </g>
+
+ <!-- L5 Paradigms -->
+ <rect x="60" y="676" width="1800" height="72" rx="12" fill="#0f2744" stroke="#fbbf24" stroke-width="2"/>
+ <text x="88" y="704" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - RL Paradigms &amp; Algorithms</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#fef3c7">
+  <rect x="88" y="716" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="123" y="733" text-anchor="middle">PPO</text>
+  <rect x="168" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="208" y="733" text-anchor="middle">GRPO</text>
+  <rect x="258" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="298" y="733" text-anchor="middle">GSPO</text>
+  <rect x="348" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="388" y="733" text-anchor="middle">TOPR</text>
+  <rect x="438" y="716" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="483" y="733" text-anchor="middle">RAFT++</text>
+  <rect x="538" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="578" y="733" text-anchor="middle">RLVR</text>
+  <rect x="628" y="716" width="100" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="678" y="733" text-anchor="middle">Agentic RL</text>
+  <rect x="738" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="778" y="733" text-anchor="middle">StarPO</text>
+  <rect x="828" y="716" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="868" y="733" text-anchor="middle">GiGPO</text>
+  <rect x="918" y="716" width="100" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="968" y="733" text-anchor="middle">Multi-task</text>
+  <rect x="1028" y="716" width="110" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1083" y="733" text-anchor="middle">Tool Use GEM</text>
+  <rect x="1148" y="716" width="100" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1198" y="733" text-anchor="middle">VLM RLVR</text>
+  <rect x="1258" y="716" width="120" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1318" y="733" text-anchor="middle">async rollout</text>
+  <rect x="1388" y="716" width="120" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1448" y="733" text-anchor="middle">async training</text>
+  <rect x="1518" y="716" width="110" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1573" y="733" text-anchor="middle">20+ RL opts</text>
+  <rect x="1638" y="716" width="100" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1688" y="733" text-anchor="middle">IPA/ROME</text>
+  <rect x="1748" y="716" width="100" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1798" y="733" text-anchor="middle">RollArt</text>
+ </g>
+
+ <!-- DETAIL Three Stage Loop -->
+ <rect x="60" y="764" width="880" height="340" rx="14" fill="#0c1524" stroke="#ff6a00" stroke-width="2.5"/>
+ <text x="88" y="796" fill="#ff6a00" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Three-Stage Training Iteration</text>
+ <text x="88" y="818" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="11">Generation - Inference - Training per RL iteration (Actor/Critic/Ref/Reward)</text>
+
+ <rect x="88" y="834" width="820" height="36" rx="6" fill="#0c2d2d" stroke="#2dd4bf"/>
+ <text x="498" y="858" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stage 1 GENERATION: Rollout Scheduler - Actor prefill/decode - Env Worker multi-turn</text>
+ <line x1="498" y1="870" x2="498" y2="882" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arrow)"/>
+ <rect x="88" y="884" width="820" height="36" rx="6" fill="#422006" stroke="#fcd34d"/>
+ <text x="498" y="908" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Async Reward Worker: rule verify / sandbox / LLM-as-Judge (no batch sync barrier)</text>
+ <line x1="498" y1="920" x2="498" y2="932" stroke="#fcd34d" stroke-width="1.5" marker-end="url(#arrow-ali)"/>
+ <rect x="88" y="934" width="820" height="36" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="498" y="958" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stage 2 INFERENCE: Critic + Ref + Reward forward (prefill only) - Transfer Protocol shard</text>
+ <line x1="498" y1="970" x2="498" y2="982" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
+ <rect x="88" y="984" width="820" height="36" rx="6" fill="#431407" stroke="#ff6a00"/>
+ <text x="498" y="1008" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Stage 3 TRAINING: Actor + Critic update - ModelUpdateGroup sync params to gen stage</text>
+
+ <text x="88" y="1044" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Actor Train Cluster broadcasts bucketed params to Actor Infer Cluster (flexible device mapping)</text>
+ <text x="88" y="1060" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">GRPO/DAPO: Critic optional - dataflow graph activates only needed worker roles</text>
+ <text x="88" y="1076" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">200B+ MoE validated: thousands of GPUs x 2 weeks without interruption</text>
+
+ <!-- DETAIL Rollout Scheduler -->
+ <rect x="960" y="764" width="900" height="340" rx="14" fill="#0c1f1a" stroke="#2dd4bf" stroke-width="2.5"/>
+ <text x="988" y="796" fill="#2dd4bf" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Rollout Scheduler + Sample-Level Control</text>
+ <text x="988" y="818" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="11">Fine-grained per-prompt lifecycle vs batch-level scheduling in other frameworks</text>
+
+ <text x="988" y="842" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">RollPacker / Long-Tail Mitigation</text>
+ <rect x="988" y="852" width="200" height="48" rx="6" fill="#0c2d2d" stroke="#5eead4"/>
+ <text x="1088" y="872" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Add Request</text>
+ <text x="1088" y="888" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">dispatch new prompts on idle</text>
+ <line x1="1188" y1="876" x2="1208" y2="876" stroke="#ff6a00" stroke-width="1.5" marker-end="url(#arrow-ali)"/>
+ <rect x="1212" y="852" width="200" height="48" rx="6" fill="#431407" stroke="#ff6a00"/>
+ <text x="1312" y="872" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Abort Request</text>
+ <text x="1312" y="888" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">stop stragglers after threshold</text>
+ <line x1="1412" y1="876" x2="1432" y2="876" stroke="#fcd34d" stroke-width="1.5" marker-end="url(#arrow-ali)"/>
+ <rect x="1436" y="852" width="200" height="48" rx="6" fill="#422006" stroke="#fcd34d"/>
+ <text x="1536" y="872" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Dynamic Sampling</text>
+ <text x="1536" y="888" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">filter acc=0/1 prompts (DAPO)</text>
+ <rect x="1648" y="852" width="200" height="48" rx="6" fill="#0c2d2d" stroke="#5eead4"/>
+ <text x="1748" y="872" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Async Reward</text>
+ <text x="1748" y="888" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">score completed samples immediately</text>
+
+ <text x="988" y="926" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Agentic RL Features</text>
+ <rect x="988" y="936" width="160" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1068" y="960" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">FrozenLake</text>
+ <rect x="1160" y="936" width="120" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1220" y="960" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">Sokoban</text>
+ <rect x="1292" y="936" width="120" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1352" y="960" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">WebShop</text>
+ <rect x="1424" y="936" width="120" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1484" y="960" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">Tool Use</text>
+ <rect x="1556" y="936" width="140" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1626" y="960" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">StepWise GiGPO</text>
+ <rect x="1708" y="936" width="140" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1778" y="960" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10">Trajectory StarPO</text>
+
+ <text x="988" y="996" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Ecosystem &amp; Related Projects</text>
+ <rect x="988" y="1006" width="80" height="36" rx="6" fill="#431407" stroke="#ff6a00"/><text x="1028" y="1030" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10">ROCK</text>
+ <rect x="1080" y="1006" width="80" height="36" rx="6" fill="#431407" stroke="#ff6a00"/><text x="1120" y="1030" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10">RLix</text>
+ <rect x="1172" y="1006" width="90" height="36" rx="6" fill="#431407" stroke="#ff6a00"/><text x="1217" y="1030" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10">RollArt</text>
+ <rect x="1274" y="1006" width="90" height="36" rx="6" fill="#431407" stroke="#ff6a00"/><text x="1319" y="1030" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10">EARL</text>
+ <rect x="1376" y="1006" width="100" height="36" rx="6" fill="#431407" stroke="#ff6a00"/><text x="1426" y="1030" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10">TaoSR1</text>
+ <rect x="1488" y="1006" width="110" height="36" rx="6" fill="#431407" stroke="#ff6a00"/><text x="1543" y="1030" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10">LiveThinking</text>
+ <rect x="1610" y="1006" width="110" height="36" rx="6" fill="#431407" stroke="#ff6a00"/><text x="1665" y="1030" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10">STAgent</text>
+ <rect x="1732" y="1006" width="116" height="36" rx="6" fill="#431407" stroke="#ff6a00"/><text x="1790" y="1030" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10">Freshness-PER</text>
+
+ <text x="988" y="1068" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Observability: SwanLab / WandB / TensorBoard - per-domain reward tracking</text>
+ <text x="988" y="1084" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Hardware: NVIDIA + AMD ROCm + Ascend NPU - cross-hardware friendly design</text>
+
+ <!-- L6 Production -->
+ <rect x="60" y="1124" width="1800" height="72" rx="12" fill="#1a1208" stroke="#ff6a00" stroke-width="2"/>
+ <text x="88" y="1152" fill="#ff6a00" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Production Validation (Taobao / TMALL / Alibaba AI Engine)</text>
+ <text x="960" y="1178" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="13">Doubao-scale RL - e-commerce search/recommendation agents - 200B+ MoE x 1000+ GPUs - fault tolerance</text>
+
+ <!-- footers -->
+ <rect x="60" y="1216" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1236" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Init path: Resource Pool provision - AutoDeviceMapping - create Rollout Scheduler + Parallel Workers - Parallel Strategy</text>
+ <text x="960" y="1254" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Step path: gen (scheduler) - async reward/env - infer (critic/ref) - train (actor/critic) - ModelUpdateGroup - repeat</text>
+
+ <text x="60" y="1300" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: alibaba/ROLL README - arXiv:2506.06122 - RollPacker arXiv:2509.21009 - ROLL Flash arXiv:2510.11345</text>
+</svg>

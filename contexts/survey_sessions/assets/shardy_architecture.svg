@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-purple" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#a78bfa"/>
+  </marker>
+  <marker id="arrow-cyan" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#22d3ee"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">Shardy Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">MLIR Tensor Partitioning - GSPMD + PartIR - openxla.org/shardy - github.com/openxla/shardy</text>
+
+ <!-- L1 Framework -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#a78bfa" stroke-width="2"/>
+ <text x="88" y="124" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Framework / User Input (attach shardings to StableHLO programs)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="50" height="40" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="113" y="162" text-anchor="middle">JAX</text>
+  <rect x="150" y="136" width="50" height="40" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="175" y="162" text-anchor="middle">pjit</text>
+  <rect x="212" y="136" width="80" height="40" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="252" y="162" text-anchor="middle">shard_map</text>
+  <rect x="304" y="136" width="90" height="40" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="349" y="162" text-anchor="middle">NamedSharding</text>
+  <rect x="406" y="136" width="90" height="40" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="451" y="162" text-anchor="middle">PartitionSpec</text>
+  <rect x="508" y="136" width="110" height="40" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="563" y="162" text-anchor="middle">with_sharding</text>
+  <rect x="630" y="136" width="100" height="40" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="680" y="162" text-anchor="middle">use_shardy</text>
+  <rect x="742" y="136" width="80" height="40" rx="6" fill="#422006" stroke="#ee4c2c"/><text x="782" y="162" text-anchor="middle">PyTorch/XLA</text>
+  <rect x="834" y="136" width="80" height="40" rx="6" fill="#422006" stroke="#fcd34d"/><text x="874" y="162" text-anchor="middle">StableHLO</text>
+  <rect x="926" y="136" width="70" height="40" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="961" y="162" text-anchor="middle">Mesh</text>
+  <rect x="1008" y="136" width="80" height="40" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="1048" y="162" text-anchor="middle">in_shardings</text>
+  <rect x="1100" y="136" width="90" height="40" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="1145" y="162" text-anchor="middle">out_shardings</text>
+  <rect x="1202" y="136" width="60" height="40" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="1232" y="162" text-anchor="middle">TP/PP</text>
+  <rect x="1274" y="136" width="50" height="40" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="1299" y="162" text-anchor="middle">FSDP</text>
+  <rect x="1336" y="136" width="50" height="40" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="1361" y="162" text-anchor="middle">ZeRO</text>
+  <rect x="1398" y="136" width="80" height="40" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="1438" y="162" text-anchor="middle">Megatron</text>
+  <rect x="1490" y="136" width="80" height="40" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="1530" y="162" text-anchor="middle">batch par</text>
+  <rect x="1582" y="136" width="80" height="40" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="1622" y="162" text-anchor="middle">tensor par</text>
+  <rect x="1674" y="136" width="80" height="40" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="1714" y="162" text-anchor="middle">pipeline</text>
+  <rect x="1766" y="136" width="82" height="40" rx="6" fill="#241a3d" stroke="#c4b5fd"/><text x="1807" y="162" text-anchor="middle">expert par</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Mesh -->
+ <rect x="60" y="216" width="1800" height="96" rx="12" fill="#0f2744" stroke="#c4b5fd" stroke-width="2"/>
+ <text x="88" y="244" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Logical Mesh (sdy.mesh - axis-based device topology)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ede9fe">
+  <rect x="88" y="256" width="70" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="123" y="278" text-anchor="middle">sdy.mesh</text>
+  <rect x="170" y="256" width="80" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="210" y="278" text-anchor="middle">@mesh name</text>
+  <rect x="262" y="256" width="100" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="312" y="278" text-anchor="middle">named axes</text>
+  <rect x="374" y="256" width="120" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="434" y="278" text-anchor="middle">batch=4 model=2</text>
+  <rect x="506" y="256" width="90" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="551" y="278" text-anchor="middle">physical mesh</text>
+  <rect x="608" y="256" width="90" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="653" y="278" text-anchor="middle">logical mesh</text>
+  <rect x="710" y="256" width="80" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="750" y="278" text-anchor="middle">sub-axes</text>
+  <rect x="802" y="256" width="80" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="842" y="278" text-anchor="middle">axis split</text>
+  <rect x="894" y="256" width="80" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="934" y="278" text-anchor="middle">local shape</text>
+  <rect x="986" y="256" width="80" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1026" y="278" text-anchor="middle">global shape</text>
+  <rect x="1078" y="256" width="80" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1118" y="278" text-anchor="middle">multi-host</text>
+  <rect x="1170" y="256" width="70" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1205" y="278" text-anchor="middle">ICI/DCN</text>
+  <rect x="1252" y="256" width="80" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1292" y="278" text-anchor="middle">device ord</text>
+  <rect x="1344" y="256" width="80" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1384" y="278" text-anchor="middle">comm cost</text>
+  <rect x="1436" y="256" width="80" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1476" y="278" text-anchor="middle">TPU pods</text>
+  <rect x="1528" y="256" width="70" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1563" y="278" text-anchor="middle">GPU NVL</text>
+  <rect x="1610" y="256" width="80" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1650" y="278" text-anchor="middle">replicate</text>
+  <rect x="1702" y="256" width="70" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1737" y="278" text-anchor="middle">partial</text>
+  <rect x="1784" y="256" width="64" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1816" y="278" text-anchor="middle">unsharded</text>
+ </g>
+ <line x1="960" y1="312" x2="960" y2="330" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Compiler APIs -->
+ <rect x="60" y="332" width="1800" height="120" rx="12" fill="#0f2744" stroke="#a78bfa" stroke-width="2.5"/>
+ <text x="88" y="360" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - sdy Dialect Compiler APIs (user control over sharding)</text>
+
+ <rect x="88" y="374" width="260" height="64" rx="10" fill="#241a3d" stroke="#c4b5fd" stroke-width="2"/>
+ <text x="218" y="398" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">sdy.sharding attr</text>
+ <text x="218" y="416" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Per-value axis sharding on ops/tensors</text>
+ <text x="218" y="430" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">open/closed dims - explicit replicate</text>
+
+ <rect x="368" y="374" width="260" height="64" rx="10" fill="#241a3d" stroke="#c4b5fd" stroke-width="2"/>
+ <text x="498" y="398" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">sdy.sharding_constraint</text>
+ <text x="498" y="416" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Pin intermediate tensor sharding</text>
+ <text x="498" y="430" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Lowered to sdy.reshard after propagate</text>
+
+ <rect x="648" y="374" width="260" height="64" rx="10" fill="#241a3d" stroke="#c4b5fd" stroke-width="2"/>
+ <text x="778" y="398" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">sdy.shard_as / shard_like</text>
+ <text x="778" y="416" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Group tensors by ID - same sharding</text>
+ <text x="778" y="430" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">ZeRO / weight tying patterns</text>
+
+ <rect x="928" y="374" width="260" height="64" rx="10" fill="#241a3d" stroke="#c4b5fd" stroke-width="2"/>
+ <text x="1058" y="398" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">sdy.manual_computation</text>
+ <text x="1058" y="416" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Manual SPMD sub-region on mesh subset</text>
+ <text x="1058" y="430" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Local types w.r.t manual shardings</text>
+
+ <rect x="1208" y="374" width="260" height="64" rx="10" fill="#241a3d" stroke="#c4b5fd" stroke-width="2"/>
+ <text x="1338" y="398" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">sdy.sharding_rule attr</text>
+ <text x="1338" y="416" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Op-specific factor mapping (einsum-like)</text>
+ <text x="1338" y="430" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">dot/reshape/while custom rules</text>
+
+ <rect x="1488" y="374" width="360" height="64" rx="10" fill="#241a3d" stroke="#c4b5fd" stroke-width="2"/>
+ <text x="1668" y="398" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">User Priorities on DimSharding</text>
+ <text x="1668" y="416" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">p0/p1 priority tags - batch par then Megatron then ZeRO</text>
+ <text x="1668" y="430" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Incremental partitioning like PartIR</text>
+
+ <line x1="960" y1="452" x2="960" y2="470" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Propagation Core -->
+ <rect x="60" y="472" width="1800" height="200" rx="12" fill="#0f2744" stroke="#a78bfa" stroke-width="2.5"/>
+ <text x="88" y="500" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Sharding Propagation Engine (bidirectional fixed-point on data-flow graph)</text>
+
+ <!-- left: algorithm -->
+ <rect x="88" y="518" width="560" height="136" rx="12" fill="#241a3d" stroke="#c4b5fd" stroke-width="2"/>
+ <text x="368" y="548" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Factor-Based Propagation</text>
+ <text x="368" y="572" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">1. DimSharding - project - FactorSharding (OpShardingRule)</text>
+ <text x="368" y="590" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">2. Propagate axes along factors (forward/backward/sideways)</text>
+ <text x="368" y="608" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">3. FactorSharding - project - updated DimSharding</text>
+ <text x="368" y="626" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Repeat until fixed point - no sharding changes without undo</text>
+ <text x="368" y="644" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Traverse use-def chains in both directions</text>
+
+ <!-- center: priority hierarchy -->
+ <rect x="680" y="518" width="560" height="136" rx="12" fill="#1e1b4b" stroke="#6366f1" stroke-width="2"/>
+ <text x="960" y="548" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Conflict Resolution Hierarchy</text>
+ <text x="960" y="572" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">1. User Priority Propagation (batch - Megatron - ZeRO)</text>
+ <text x="960" y="590" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">2. Op Priority Propagation (elementwise - broadcast - dot)</text>
+ <text x="960" y="608" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">3. Basic Propagation (default GSPMD-style rules)</text>
+ <text x="960" y="626" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">4. Aggressive Propagation (resolve in single priority)</text>
+ <text x="960" y="644" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10">Heuristics: prefer batch dims - minimize comm cost</text>
+
+ <!-- right: data flow ops -->
+ <rect x="1272" y="518" width="560" height="136" rx="12" fill="#132f4c" stroke="#22d3ee" stroke-width="2"/>
+ <text x="1552" y="548" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">Special Op Handling</text>
+ <text x="1552" y="572" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">ShardableDataFlowOpInterface: while/case/barrier</text>
+ <text x="1552" y="590" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Propagate sources-targets as identity sharding rule</text>
+ <text x="1552" y="608" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Constant splitting - per-use constant copies</text>
+ <text x="1552" y="626" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">Reshape-aware propagation - avoid extra comm</text>
+ <text x="1552" y="644" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="10">ValueToSourceMap - trace axis provenance</text>
+
+ <line x1="648" y1="586" x2="676" y2="586" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrow-purple)"/>
+ <line x1="1240" y1="586" x2="1268" y2="586" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow-cyan)"/>
+ <text x="960" y="668" text-anchor="middle" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="10">Combines GSPMD attribute propagation + PartIR incremental/user-priority control</text>
+
+ <line x1="960" y1="672" x2="960" y2="690" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L5 Dialect Interfaces -->
+ <rect x="60" y="692" width="1800" height="88" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2"/>
+ <text x="88" y="720" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Dialect-Agnostic Interfaces (long-term: any MLIR dialect)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#e0f2fe">
+  <rect x="88" y="732" width="120" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="148" y="756" text-anchor="middle">ShardingRuleOpIF</text>
+  <rect x="220" y="732" width="130" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="285" y="756" text-anchor="middle">ShardableDataFlowIF</text>
+  <rect x="362" y="732" width="80" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="402" y="756" text-anchor="middle">Elementwise</text>
+  <rect x="454" y="732" width="90" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="499" y="756" text-anchor="middle">ConstantLike</text>
+  <rect x="556" y="732" width="100" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="606" y="756" text-anchor="middle">ConstantFoldable</text>
+  <rect x="668" y="732" width="90" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="713" y="756" text-anchor="middle">OpShardingRule</text>
+  <rect x="770" y="732" width="80" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="810" y="756" text-anchor="middle">StableHLO</text>
+  <rect x="862" y="732" width="80" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="902" y="756" text-anchor="middle">custom ops</text>
+  <rect x="954" y="732" width="70" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="989" y="756" text-anchor="middle">sdy-opt</text>
+  <rect x="1036" y="732" width="110" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1091" y="756" text-anchor="middle">propagation-pipe</text>
+  <rect x="1158" y="732" width="100" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1208" y="756" text-anchor="middle">addPropagation</text>
+  <rect x="1270" y="732" width="80" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1310" y="756" text-anchor="middle">C++ bind</text>
+  <rect x="1362" y="732" width="80" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1402" y="756" text-anchor="middle">Python bind</text>
+  <rect x="1454" y="732" width="80" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1494" y="756" text-anchor="middle">Bazel/CMake</text>
+  <rect x="1546" y="732" width="90" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1591" y="756" text-anchor="middle">constant split</text>
+  <rect x="1648" y="732" width="100" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1698" y="756" text-anchor="middle">dialect agnostic</text>
+  <rect x="1760" y="732" width="88" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1804" y="756" text-anchor="middle">future IREE</text>
+ </g>
+
+ <!-- L6 SPMD Lowering -->
+ <rect x="60" y="792" width="1800" height="72" rx="12" fill="#0f2744" stroke="#ea580c" stroke-width="2"/>
+ <text x="88" y="820" fill="#ea580c" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - SPMD Partitioner Output (lower sharding decisions to distributed program)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ffedd5">
+  <rect x="88" y="832" width="90" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="133" y="849" text-anchor="middle">GSPMD part</text>
+  <rect x="188" y="832" width="90" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="233" y="849" text-anchor="middle">MLIR part</text>
+  <rect x="288" y="832" width="70" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="323" y="849" text-anchor="middle">sdy.reshard</text>
+  <rect x="368" y="832" width="80" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="408" y="849" text-anchor="middle">all_reduce</text>
+  <rect x="458" y="832" width="80" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="498" y="849" text-anchor="middle">all_gather</text>
+  <rect x="548" y="832" width="90" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="593" y="849" text-anchor="middle">reduce_scatter</text>
+  <rect x="648" y="832" width="70" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="683" y="849" text-anchor="middle">all_to_all</text>
+  <rect x="728" y="832" width="80" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="768" y="849" text-anchor="middle">collective_perm</text>
+  <rect x="818" y="832" width="80" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="858" y="849" text-anchor="middle">pad/slice</text>
+  <rect x="908" y="832" width="80" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="948" y="849" text-anchor="middle">local compute</text>
+  <rect x="998" y="832" width="70" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="1033" y="849" text-anchor="middle">XLA SPMD</text>
+  <rect x="1078" y="832" width="80" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="1118" y="849" text-anchor="middle">HLO export</text>
+  <rect x="1168" y="832" width="60" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="1198" y="849" text-anchor="middle">PJRT</text>
+  <rect x="1238" y="832" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1263" y="849" text-anchor="middle">TPU</text>
+  <rect x="1298" y="832" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1323" y="849" text-anchor="middle">GPU</text>
+  <rect x="1358" y="832" width="50" height="24" rx="5" fill="#134e4a" stroke="#5eead4"/><text x="1383" y="849" text-anchor="middle">CPU</text>
+  <rect x="1418" y="832" width="80" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="1458" y="849" text-anchor="middle">comm overlap</text>
+  <rect x="1508" y="832" width="80" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="1548" y="849" text-anchor="middle">full shard</text>
+  <rect x="1598" y="832" width="80" height="24" rx="5" fill="#431407" stroke="#ea580c"/><text x="1638" y="849" text-anchor="middle">partial agg</text>
+  <rect x="1688" y="832" width="80" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="1728" y="849" text-anchor="middle">Model Explorer</text>
+  <rect x="1778" y="832" width="70" height="24" rx="5" fill="#241a3d" stroke="#a78bfa"/><text x="1813" y="849" text-anchor="middle">axis trace</text>
+ </g>
+
+ <!-- DETAIL Propagation Pipeline -->
+ <rect x="60" y="880" width="880" height="340" rx="14" fill="#0c1524" stroke="#a78bfa" stroke-width="2.5"/>
+ <text x="88" y="912" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Propagation Pipeline (sdy-propagation-pipeline)</text>
+ <text x="88" y="934" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">StableHLO module with partial sdy.sharding + constraint ops</text>
+
+ <rect x="88" y="950" width="820" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/>
+ <text x="498" y="974" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1: Parse sdy.mesh + user shardings on func args/results/intermediates</text>
+ <line x1="498" y1="986" x2="498" y2="998" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
+ <rect x="88" y="1000" width="820" height="36" rx="6" fill="#1e1b4b" stroke="#6366f1"/>
+ <text x="498" y="1024" text-anchor="middle" fill="#e0e7ff" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2: User-priority rounds - propagate batch then Megatron then ZeRO axes</text>
+ <line x1="498" y1="1036" x2="498" y2="1048" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
+ <rect x="88" y="1050" width="820" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/>
+ <text x="498" y="1074" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3: Op-priority rounds - elementwise - broadcast - matmul via OpShardingRule</text>
+ <line x1="498" y1="1086" x2="498" y2="1098" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
+ <rect x="88" y="1100" width="820" height="36" rx="6" fill="#241a3d" stroke="#c4b5fd"/>
+ <text x="498" y="1124" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4: Fixed point - every op has sdy.sharding - constraint - sdy.reshard</text>
+ <line x1="498" y1="1136" x2="498" y2="1148" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
+ <rect x="88" y="1150" width="820" height="36" rx="6" fill="#431407" stroke="#ea580c"/>
+ <text x="498" y="1174" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 5: Export to XLA - GSPMD SPMD partitioner inserts collectives - codegen</text>
+
+ <text x="88" y="1208" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Entry: mlir::sdy::addPropagationPipeline or sdy-opt --sdy-propagation-pipeline</text>
+
+ <!-- DETAIL Lineage + JAX flow -->
+ <rect x="960" y="880" width="900" height="340" rx="14" fill="#0c1224" stroke="#a78bfa" stroke-width="2.5"/>
+ <text x="988" y="912" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Lineage + End-to-End Flow (JAX example)</text>
+ <text x="988" y="934" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">Shardy unifies GSPMD + PartIR + Mesh Dialect best practices</text>
+
+ <text x="988" y="958" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Predecessor Systems</text>
+ <rect x="988" y="968" width="130" height="68" rx="6" fill="#431407" stroke="#ea580c"/>
+ <text x="1053" y="992" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">xla::GSPMD</text>
+ <text x="1053" y="1010" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">attr propagation</text>
+ <text x="1053" y="1026" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">op priority - no mesh</text>
+ <rect x="1130" y="968" width="130" height="68" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="1195" y="992" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">PartIR</text>
+ <text x="1195" y="1010" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">user/round priority</text>
+ <text x="1195" y="1026" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">named axes + mesh</text>
+ <rect x="1272" y="968" width="130" height="68" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1337" y="992" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Shardy</text>
+ <text x="1337" y="1010" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">all of the above</text>
+ <text x="1337" y="1026" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">MLIR + debuggable</text>
+ <rect x="1414" y="968" width="434" height="68" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1631" y="992" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Shardy adds: axis-based repr, reshape handling, Model Explorer, open source</text>
+ <text x="1631" y="1010" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Predictable incremental partitioning - broader contributor base</text>
+ <text x="1631" y="1026" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">Future: native MLIR SPMD partitioner replaces GSPMD backend</text>
+
+ <text x="988" y="1056" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">JAX - Shardy - XLA - Hardware</text>
+ <rect x="988" y="1066" width="120" height="48" rx="6" fill="#241a3d" stroke="#c4b5fd"/>
+ <text x="1048" y="1088" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">JAX pjit</text>
+ <text x="1048" y="1104" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">NamedSharding</text>
+ <rect x="1120" y="1066" width="120" height="48" rx="6" fill="#422006" stroke="#fcd34d"/>
+ <text x="1180" y="1088" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">StableHLO</text>
+ <text x="1180" y="1104" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">+ sdy ops</text>
+ <rect x="1252" y="1066" width="120" height="48" rx="6" fill="#241a3d" stroke="#a78bfa"/>
+ <text x="1312" y="1088" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Shardy</text>
+ <text x="1312" y="1104" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">propagate</text>
+ <rect x="1384" y="1066" width="120" height="48" rx="6" fill="#431407" stroke="#ea580c"/>
+ <text x="1444" y="1088" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">XLA SPMD</text>
+ <text x="1444" y="1104" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">partition</text>
+ <rect x="1516" y="1066" width="120" height="48" rx="6" fill="#431407" stroke="#ea580c"/>
+ <text x="1576" y="1088" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">XLA codegen</text>
+ <text x="1576" y="1104" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">LLVM/Triton</text>
+ <rect x="1648" y="1066" width="200" height="48" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1748" y="1088" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">TPU / GPU / CPU</text>
+ <text x="1748" y="1104" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">distributed execution via PJRT</text>
+
+ <line x1="1108" y1="1090" x2="1118" y2="1090" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrow-purple)"/>
+ <line x1="1240" y1="1090" x2="1250" y2="1090" stroke="#fbbf24" stroke-width="2" marker-end="url(#arrow-purple)"/>
+ <line x1="1372" y1="1090" x2="1382" y2="1090" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrow-purple)"/>
+ <line x1="1504" y1="1090" x2="1514" y2="1090" stroke="#ea580c" stroke-width="2" marker-end="url(#arrow-purple)"/>
+ <line x1="1636" y1="1090" x2="1646" y2="1090" stroke="#ea580c" stroke-width="2" marker-end="url(#arrow-purple)"/>
+
+ <text x="988" y="1140" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Enable: jax.config.update("jax_use_shardy_partitioner", True)</text>
+ <rect x="988" y="1150" width="860" height="48" rx="6" fill="#1a1208" stroke="#a78bfa"/>
+ <text x="1418" y="1174" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="12">Dialect-agnostic goal: any MLIR dialect via ShardingRuleOpInterface + traits</text>
+ <text x="1418" y="1190" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Today: StableHLO-centric - lifting dependency via abstractions in progress</text>
+
+ <!-- L7 Position -->
+ <rect x="60" y="1240" width="1800" height="72" rx="12" fill="#1a1208" stroke="#a78bfa" stroke-width="2"/>
+ <text x="88" y="1268" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L7 - Design Goals (OpenXLA Distributed Stack)</text>
+ <text x="960" y="1294" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="13">Predictable partitioning - axis-based debuggability - MLIR-native - framework/compiler neutral - GSPMD successor</text>
+
+ <!-- footers -->
+ <rect x="60" y="1328" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1348" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Init path: framework attaches sdy.mesh + shardings/constraints on StableHLO module</text>
+ <text x="960" y="1366" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Step path: sdy-propagation-pipeline - full sharding attrs - XLA GSPMD partition - collectives - PJRT execute</text>
+
+ <text x="60" y="1412" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: openxla.org/shardy - github.com/openxla/shardy - LLVM DevMtG 2024 - GSPMD/PartIR papers - xla/service/spmd/shardy</text>
+</svg>

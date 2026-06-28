@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-green" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#76ff03"/>
+  </marker>
+  <marker id="arrow-amber" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#fcd34d"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title - NVIDIA green accent -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">Megatron-LM / Megatron-Core Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">NVIDIA large-scale transformer training - 3D+ parallelism - MoE - distributed optimizer</text>
+
+ <!-- L1 Ecosystem -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#76ff03" stroke-width="2"/>
+ <text x="88" y="124" fill="#76ff03" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Ecosystem &amp; Entry Points</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="170" height="40" rx="6" fill="#1a2e05" stroke="#76ff03"/><text x="173" y="162" text-anchor="middle">NVIDIA NeMo</text>
+  <rect x="272" y="136" width="180" height="40" rx="6" fill="#1a2e05" stroke="#76ff03"/><text x="362" y="162" text-anchor="middle">pretrain_gpt.py</text>
+  <rect x="468" y="136" width="160" height="40" rx="6" fill="#1a2e05" stroke="#76ff03"/><text x="548" y="162" text-anchor="middle">DeepSpeed</text>
+  <rect x="644" y="136" width="150" height="40" rx="6" fill="#1a2e05" stroke="#76ff03"/><text x="719" y="162" text-anchor="middle">Inference API</text>
+  <rect x="810" y="136" width="180" height="40" rx="6" fill="#1a2e05" stroke="#76ff03"/><text x="900" y="162" text-anchor="middle">Text gen CLI</text>
+  <rect x="1004" y="136" width="200" height="40" rx="6" fill="#1a2e05" stroke="#76ff03"/><text x="1104" y="162" text-anchor="middle">Checkpoint convert</text>
+  <rect x="1220" y="136" width="200" height="40" rx="6" fill="#1a2e05" stroke="#76ff03"/><text x="1320" y="162" text-anchor="middle">mcore train loop</text>
+  <rect x="1436" y="136" width="200" height="40" rx="6" fill="#1a2e05" stroke="#76ff03"/><text x="1536" y="162" text-anchor="middle">RL training hooks</text>
+  <rect x="1652" y="136" width="184" height="40" rx="6" fill="#1a2e05" stroke="#76ff03"/><text x="1744" y="162" text-anchor="middle">CLI args / recipes</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Megatron-LM Framework -->
+ <rect x="60" y="216" width="1800" height="96" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2"/>
+ <text x="88" y="244" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Megatron-LM Framework (orchestration)</text>
+ <rect x="88" y="256" width="280" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="228" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">arguments.py - TransformerConfig</text>
+ <rect x="384" y="256" width="280" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="524" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">initialize_megatron() - dist init</text>
+ <rect x="680" y="256" width="240" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="800" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">pretrain() lifecycle</text>
+ <rect x="936" y="256" width="280" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1076" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">model provider / builder</text>
+ <rect x="1232" y="256" width="280" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1372" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">data loader / blended dataset</text>
+ <rect x="1528" y="256" width="308" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1682" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">train_step - eval - checkpoint save</text>
+ <line x1="960" y1="312" x2="960" y2="330" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Megatron Core -->
+ <rect x="60" y="332" width="1800" height="176" rx="12" fill="#0f2744" stroke="#a78bfa" stroke-width="2"/>
+ <text x="88" y="360" fill="#a78bfa" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - Megatron-Core (modular GPU-optimized library)</text>
+
+ <rect x="88" y="374" width="420" height="116" rx="10" fill="#241a3d" stroke="#c4b5fd"/>
+ <text x="298" y="398" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Model Implementations</text>
+ <text x="298" y="418" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">GPTModel - BERT - T5 - Mamba/SSM</text>
+ <text x="298" y="434" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">MoE layers - Multimodal (LLaVA/MIMO)</text>
+ <text x="298" y="450" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">ModuleSpec - swap MLP/MoE/Attention</text>
+ <text x="298" y="466" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">TransformerBlock - TransformerLayer</text>
+ <text x="298" y="482" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Attention + MLP / MoE + embeddings</text>
+
+ <rect x="524" y="374" width="420" height="116" rx="10" fill="#241a3d" stroke="#c4b5fd"/>
+ <text x="734" y="398" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Parallelism Engine</text>
+ <text x="734" y="418" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">parallel_state.py - process groups</text>
+ <text x="734" y="434" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">tensor_parallel/ - Column/RowParallelLinear</text>
+ <text x="734" y="450" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">pipeline_parallel/ - schedules - p2p_comm</text>
+ <text x="734" y="466" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">mappings.py - all-reduce / reduce-scatter</text>
+ <text x="734" y="482" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Sequence Parallel - CP - EP groups</text>
+
+ <rect x="960" y="374" width="420" height="116" rx="10" fill="#241a3d" stroke="#c4b5fd"/>
+ <text x="1170" y="398" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Optimization &amp; State</text>
+ <text x="1170" y="418" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Distributed Optimizer (ZeRO-1 equiv)</text>
+ <text x="1170" y="434" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Param/grad contiguous buffers</text>
+ <text x="1170" y="450" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Megatron-FSDP - activation recompute</text>
+ <text x="1170" y="466" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Dist checkpointing - ShardedStateDict</text>
+ <text x="1170" y="482" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Grad finalize - clip - LR schedule</text>
+
+ <rect x="1396" y="374" width="440" height="116" rx="10" fill="#241a3d" stroke="#c4b5fd"/>
+ <text x="1616" y="398" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700">Inference Engine</text>
+ <text x="1616" y="418" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Text generation controller</text>
+ <text x="1616" y="434" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Dynamic context / KV cache mgmt</text>
+ <text x="1616" y="450" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">CUDA Graph inference path</text>
+ <text x="1616" y="466" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">Distributed inference coordination</text>
+ <text x="1616" y="482" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="10">MTP (multi-token prediction)</text>
+
+ <line x1="960" y1="508" x2="960" y2="526" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Parallelism overview -->
+ <rect x="60" y="528" width="1800" height="88" rx="12" fill="#0f2744" stroke="#2dd4bf" stroke-width="2"/>
+ <text x="88" y="556" fill="#2dd4bf" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Multi-Dimensional Parallelism (combinable)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ccfbf1">
+  <rect x="88" y="568" width="150" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="163" y="592" text-anchor="middle">DP (batch)</text>
+  <rect x="250" y="568" width="150" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="325" y="592" text-anchor="middle">TP (intra-layer)</text>
+  <rect x="412" y="568" width="150" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="487" y="592" text-anchor="middle">PP (depth)</text>
+  <rect x="574" y="568" width="130" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="639" y="592" text-anchor="middle">VPP</text>
+  <rect x="716" y="568" width="130" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="781" y="592" text-anchor="middle">SP</text>
+  <rect x="858" y="568" width="130" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="923" y="592" text-anchor="middle">CP</text>
+  <rect x="1000" y="568" width="130" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1065" y="592" text-anchor="middle">EP</text>
+  <rect x="1142" y="568" width="130" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1207" y="592" text-anchor="middle">ETP</text>
+  <rect x="1284" y="568" width="150" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1359" y="592" text-anchor="middle">Megatron-FSDP</text>
+  <rect x="1446" y="568" width="400" height="36" rx="6" fill="#134e4a" stroke="#5eead4"/><text x="1646" y="592" text-anchor="middle">World size = DP x TP x PP x CP (x EP for MoE)</text>
+ </g>
+
+ <!-- L5 Integration -->
+ <rect x="60" y="628" width="1800" height="72" rx="12" fill="#0f2744" stroke="#fb7185" stroke-width="2"/>
+ <text x="88" y="656" fill="#fb7185" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Kernel &amp; Library Integration</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ffe4e6">
+  <rect x="88" y="668" width="170" height="24" rx="5" fill="#4c0519" stroke="#fda4af"/><text x="173" y="685" text-anchor="middle">Transformer Engine</text>
+  <rect x="270" y="668" width="150" height="24" rx="5" fill="#4c0519" stroke="#fda4af"/><text x="345" y="685" text-anchor="middle">FlashAttention</text>
+  <rect x="432" y="668" width="100" height="24" rx="5" fill="#4c0519" stroke="#fda4af"/><text x="482" y="685" text-anchor="middle">Apex</text>
+  <rect x="544" y="668" width="120" height="24" rx="5" fill="#4c0519" stroke="#fda4af"/><text x="604" y="685" text-anchor="middle">Fused SwiGLU</text>
+  <rect x="676" y="668" width="120" height="24" rx="5" fill="#4c0519" stroke="#fda4af"/><text x="736" y="685" text-anchor="middle">FP8 / FP4</text>
+  <rect x="808" y="668" width="100" height="24" rx="5" fill="#4c0519" stroke="#fda4af"/><text x="858" y="685" text-anchor="middle">NCCL</text>
+  <rect x="920" y="668" width="120" height="24" rx="5" fill="#4c0519" stroke="#fda4af"/><text x="980" y="685" text-anchor="middle">CUDA Graph</text>
+  <rect x="1052" y="668" width="140" height="24" rx="5" fill="#4c0519" stroke="#fda4af"/><text x="1122" y="685" text-anchor="middle">Grouped GEMM</text>
+  <rect x="1204" y="668" width="160" height="24" rx="5" fill="#4c0519" stroke="#fda4af"/><text x="1284" y="685" text-anchor="middle">Comm/compute overlap</text>
+  <rect x="1376" y="668" width="140" height="24" rx="5" fill="#4c0519" stroke="#fda4af"/><text x="1446" y="685" text-anchor="middle">MoE token disp</text>
+  <rect x="1528" y="668" width="160" height="24" rx="5" fill="#4c0519" stroke="#fda4af"/><text x="1608" y="685" text-anchor="middle">Async dist ckpt</text>
+  <rect x="1700" y="668" width="148" height="24" rx="5" fill="#4c0519" stroke="#fda4af"/><text x="1774" y="685" text-anchor="middle">Straggler detect</text>
+ </g>
+
+ <!-- DETAIL TP + PP -->
+ <rect x="60" y="716" width="880" height="340" rx="14" fill="#0c1524" stroke="#38bdf8" stroke-width="2.5"/>
+ <text x="88" y="748" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Tensor + Pipeline Parallelism Detail</text>
+ <text x="88" y="770" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="11">Intra-layer sharding (TP) + inter-layer stages (PP/VPP)</text>
+
+ <!-- TP block diagram -->
+ <text x="88" y="794" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Tensor Parallel (megatron/core/tensor_parallel/)</text>
+ <rect x="88" y="804" width="130" height="44" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="153" y="824" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Input X</text>
+ <text x="153" y="840" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="9">replicated</text>
+ <line x1="218" y1="826" x2="238" y2="826" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow)"/>
+ <rect x="242" y="804" width="160" height="44" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="322" y="824" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">ColumnParallelLinear</text>
+ <text x="322" y="840" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="9">shard output dim</text>
+ <line x1="402" y1="826" x2="422" y2="826" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow)"/>
+ <rect x="426" y="804" width="160" height="44" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="506" y="824" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">RowParallelLinear</text>
+ <text x="506" y="840" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="9">shard input dim</text>
+ <line x1="586" y1="826" x2="606" y2="826" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow)"/>
+ <rect x="610" y="804" width="130" height="44" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="675" y="824" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">All-Reduce</text>
+ <text x="675" y="840" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="9">mappings.py</text>
+ <rect x="756" y="804" width="160" height="44" rx="6" fill="#1e1b4b" stroke="#818cf8" stroke-dasharray="4 3"/>
+ <text x="836" y="824" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">+ Sequence Parallel</text>
+ <text x="836" y="840" text-anchor="middle" fill="#a5b4fc" font-family="JetBrains Mono, monospace" font-size="9">shard LN/Dropout seq dim</text>
+
+ <!-- PP -->
+ <text x="88" y="872" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Pipeline Parallel + Virtual Pipeline (VPP)</text>
+ <rect x="88" y="882" width="120" height="56" rx="6" fill="#14352a" stroke="#34d399"/>
+ <text x="148" y="904" text-anchor="middle" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Stage 0</text>
+ <text x="148" y="920" text-anchor="middle" fill="#a7f3d0" font-family="JetBrains Mono, monospace" font-size="9">layers 0-N</text>
+ <line x1="208" y1="910" x2="228" y2="910" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+ <rect x="232" y="882" width="120" height="56" rx="6" fill="#14352a" stroke="#34d399"/>
+ <text x="292" y="904" text-anchor="middle" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Stage 1</text>
+ <text x="292" y="920" text-anchor="middle" fill="#a7f3d0" font-family="JetBrains Mono, monospace" font-size="9">p2p activations</text>
+ <line x1="352" y1="910" x2="372" y2="910" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+ <rect x="376" y="882" width="120" height="56" rx="6" fill="#14352a" stroke="#34d399"/>
+ <text x="436" y="904" text-anchor="middle" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Stage 2</text>
+ <text x="436" y="920" text-anchor="middle" fill="#a7f3d0" font-family="JetBrains Mono, monospace" font-size="9">...</text>
+ <line x1="496" y1="910" x2="516" y2="910" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+ <rect x="520" y="882" width="120" height="56" rx="6" fill="#14352a" stroke="#34d399"/>
+ <text x="580" y="904" text-anchor="middle" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Stage K</text>
+ <text x="580" y="920" text-anchor="middle" fill="#a7f3d0" font-family="JetBrains Mono, monospace" font-size="9">last layers</text>
+
+ <rect x="660" y="882" width="256" height="56" rx="6" fill="#1e1b4b" stroke="#818cf8"/>
+ <text x="788" y="904" text-anchor="middle" fill="#c7d2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">1F1B + interleaved VPP</text>
+ <text x="788" y="920" text-anchor="middle" fill="#a5b4fc" font-family="JetBrains Mono, monospace" font-size="9">microbatch pipeline - reduce bubble</text>
+ <text x="788" y="932" text-anchor="middle" fill="#a5b4fc" font-family="JetBrains Mono, monospace" font-size="9">overlap-p2p-comm with VPP</text>
+
+ <!-- Distributed Optimizer -->
+ <text x="88" y="962" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Distributed Optimizer (per DP rank shard)</text>
+ <rect x="88" y="972" width="820" height="28" rx="4" fill="#422006" stroke="#f59e0b"/>
+ <text x="498" y="992" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="10">Bwd finish - Reduce-Scatter grads - Optimizer.step (local shard) - All-Gather updated params - zero grad buffer</text>
+ <rect x="88" y="1006" width="820" height="28" rx="4" fill="#1e293b" stroke="#475569"/>
+ <text x="498" y="1026" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10">Overlaps RS with backward and AG with forward - contiguous param/grad buffers - fp32 main params</text>
+
+ <!-- DETAIL MoE + CP -->
+ <rect x="960" y="716" width="900" height="340" rx="14" fill="#0c1f1a" stroke="#f97316" stroke-width="2.5"/>
+ <text x="988" y="748" fill="#fb923c" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">MoE + Context Parallelism Detail</text>
+ <text x="988" y="770" fill="#fdba74" font-family="JetBrains Mono, monospace" font-size="11">Expert layers + long-context sequence sharding + Parallel Folding</text>
+
+ <!-- MoE flow -->
+ <rect x="988" y="786" width="110" height="48" rx="6" fill="#1c1917" stroke="#fcd34d"/>
+ <text x="1043" y="806" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Token</text>
+ <text x="1043" y="822" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">per rank</text>
+ <line x1="1098" y1="810" x2="1118" y2="810" stroke="#fcd34d" stroke-width="1.5" marker-end="url(#arrow-amber)"/>
+ <rect x="1122" y="786" width="130" height="48" rx="6" fill="#1c1917" stroke="#fcd34d"/>
+ <text x="1187" y="806" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">MoE Router</text>
+ <text x="1187" y="822" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">top-k + load bal</text>
+ <line x1="1252" y1="810" x2="1272" y2="810" stroke="#fcd34d" stroke-width="1.5" marker-end="url(#arrow-amber)"/>
+ <rect x="1276" y="786" width="150" height="48" rx="6" fill="#7c2d12" stroke="#fb923c"/>
+ <text x="1351" y="806" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Token Dispatcher</text>
+ <text x="1351" y="822" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">EP all-to-all</text>
+ <line x1="1426" y1="810" x2="1446" y2="810" stroke="#fcd34d" stroke-width="1.5" marker-end="url(#arrow-amber)"/>
+ <rect x="1450" y="786" width="130" height="48" rx="6" fill="#7c2d12" stroke="#fb923c"/>
+ <text x="1515" y="806" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Expert FFN</text>
+ <text x="1515" y="822" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">grouped GEMM</text>
+ <line x1="1580" y1="810" x2="1600" y2="810" stroke="#fcd34d" stroke-width="1.5" marker-end="url(#arrow-amber)"/>
+ <rect x="1604" y="786" width="120" height="48" rx="6" fill="#1c1917" stroke="#fcd34d"/>
+ <text x="1664" y="806" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Combine</text>
+ <text x="1664" y="822" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">+ shared exp</text>
+
+ <text x="988" y="858" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">MoE parallelism combo (EP + TP + PP + DP + SP required)</text>
+ <rect x="988" y="868" width="200" height="52" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1088" y="890" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Expert Parallel (EP)</text>
+ <text x="1088" y="908" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">experts sharded across GPUs</text>
+ <rect x="1204" y="868" width="200" height="52" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1304" y="890" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Expert TP (ETP)</text>
+ <text x="1304" y="908" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">intra-expert weight shard</text>
+ <rect x="1420" y="868" width="200" height="52" rx="6" fill="#422006" stroke="#f59e0b"/>
+ <text x="1520" y="890" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Parallel Folding</text>
+ <text x="1520" y="908" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">decouple attn vs MoE topology</text>
+ <rect x="1636" y="868" width="200" height="52" rx="6" fill="#134e4a" stroke="#5eead4"/>
+ <text x="1736" y="890" text-anchor="middle" fill="#ccfbf1" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Multi-node</text>
+ <text x="1736" y="908" text-anchor="middle" fill="#99f6e4" font-family="JetBrains Mono, monospace" font-size="9">PP cross-node - EPxTP in NVLink</text>
+
+ <!-- CP -->
+ <text x="988" y="944" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Context Parallelism (CP) - long sequence (8K+)</text>
+ <rect x="988" y="954" width="280" height="68" rx="6" fill="#0f2744" stroke="#22d3ee"/>
+ <text x="1128" y="976" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Sequence chunk per GPU</text>
+ <text x="1128" y="994" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">Split seq dim - O(n^2) attn memory down</text>
+ <text x="1128" y="1010" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">Ring / P2P attn boundary comm</text>
+ <rect x="1284" y="954" width="280" height="68" rx="6" fill="#0f2744" stroke="#22d3ee"/>
+ <text x="1424" y="976" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Hybrid CP</text>
+ <text x="1424" y="994" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">Variable-length packed samples</text>
+ <text x="1424" y="1010" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">Balance workload per CP rank</text>
+ <rect x="1580" y="954" width="256" height="68" rx="6" fill="#0f2744" stroke="#22d3ee"/>
+ <text x="1708" y="976" text-anchor="middle" fill="#bae6fd" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">MoE + CP</text>
+ <text x="1708" y="994" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">Long-context MoE training</text>
+ <text x="1708" y="1010" text-anchor="middle" fill="#7dd3fc" font-family="JetBrains Mono, monospace" font-size="9">overlap CP comm with compute</text>
+
+ <text x="988" y="1044" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Config flags: --tensor-model-parallel-size - --pipeline-model-parallel-size - --context-parallel-size</text>
+ <text x="988" y="1060" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">--expert-model-parallel-size - --sequence-parallel - --num-layers-per-virtual-pipeline-stage</text>
+
+ <!-- L6 Hardware -->
+ <rect x="60" y="1076" width="1800" height="72" rx="12" fill="#1a1208" stroke="#76ff03" stroke-width="2"/>
+ <text x="88" y="1104" fill="#76ff03" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Hardware &amp; Cluster Topology</text>
+ <text x="960" y="1130" text-anchor="middle" fill="#d9f99d" font-family="JetBrains Mono, monospace" font-size="13">Multi-GPU nodes (NVLink domain) - multi-node InfiniBand - DGX/H100/B200 - NVL72 for large EP</text>
+
+ <!-- Model hierarchy mini -->
+ <rect x="60" y="1168" width="1800" height="44" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1196" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Model tree: GPTModel - TransformerBlock - TransformerLayer - (Attention | MoE/MLP) - embeddings - output head</text>
+
+ <!-- footers -->
+ <rect x="60" y="1228" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1248" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Training path: args - initialize_megatron - parallel_state - build model - pretrain loop - forward_backward_func - dist ckpt</text>
+ <text x="960" y="1266" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Inference path: InferenceEngine - text gen controller - KV cache - CUDA Graph - distributed generate API</text>
+
+ <text x="60" y="1312" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: NVIDIA/Megatron-LM README - Megatron-Core parallelism guide - distributed optimizer docs - MoE feature guide</text>
+</svg>

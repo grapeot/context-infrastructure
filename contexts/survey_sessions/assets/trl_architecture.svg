@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1520" viewBox="0 0 1920 1520">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0%" stop-color="#0a1628"/>
+   <stop offset="100%" stop-color="#061018"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#7dd3fc"/>
+  </marker>
+  <marker id="arrow-yellow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#FFD21E"/>
+  </marker>
+  <marker id="arrow-orange" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+   <polygon points="0 0, 10 4, 0 8" fill="#fb923c"/>
+  </marker>
+ </defs>
+
+ <rect width="1920" height="1520" fill="url(#bg)"/>
+ <g opacity="0.06" stroke="#1e3a5f" stroke-width="1">
+  <path d="M0 40 H1920 M0 80 H1920 M0 120 H1920 M0 160 H1920 M0 200 H1920 M0 240 H1920 M0 280 H1920 M0 320 H1920 M0 360 H1920 M0 400 H1920 M0 440 H1920 M0 480 H1920 M0 520 H1920 M0 560 H1920 M0 600 H1920 M0 640 H1920 M0 720 H1920 M0 800 H1920 M0 880 H1920 M0 960 H1920 M0 1040 H1920 M0 1120 H1920 M0 1200 H1920 M0 1280 H1920 M0 1360 H1920 M0 1440 H1920"/>
+ </g>
+
+ <!-- title -->
+ <text x="960" y="48" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="32" font-weight="700">TRL Architecture</text>
+ <text x="960" y="76" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="14">Transformers Reinforcement Learning - huggingface/trl - Post-training on HF Transformers stack</text>
+
+ <!-- L1 Entry -->
+ <rect x="60" y="96" width="1800" height="100" rx="12" fill="#0f2744" stroke="#FFD21E" stroke-width="2"/>
+ <text x="88" y="124" fill="#FFD21E" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L1 - Entry Points &amp; User Interface</text>
+ <g font-family="JetBrains Mono, monospace" font-size="12" fill="#e2e8f0">
+  <rect x="88" y="136" width="70" height="40" rx="6" fill="#422006" stroke="#FFD21E"/><text x="123" y="162" text-anchor="middle">trl sft</text>
+  <rect x="170" y="136" width="70" height="40" rx="6" fill="#422006" stroke="#FFD21E"/><text x="205" y="162" text-anchor="middle">trl dpo</text>
+  <rect x="252" y="136" width="80" height="40" rx="6" fill="#422006" stroke="#FFD21E"/><text x="292" y="162" text-anchor="middle">trl grpo</text>
+  <rect x="344" y="136" width="80" height="40" rx="6" fill="#422006" stroke="#FFD21E"/><text x="384" y="162" text-anchor="middle">trl rloo</text>
+  <rect x="436" y="136" width="70" height="40" rx="6" fill="#422006" stroke="#FFD21E"/><text x="471" y="162" text-anchor="middle">trl kto</text>
+  <rect x="518" y="136" width="90" height="40" rx="6" fill="#422006" stroke="#FFD21E"/><text x="563" y="162" text-anchor="middle">trl reward</text>
+  <rect x="620" y="136" width="100" height="40" rx="6" fill="#422006" stroke="#FFD21E"/><text x="670" y="162" text-anchor="middle">YAML config</text>
+  <rect x="732" y="136" width="110" height="40" rx="6" fill="#422006" stroke="#FFD21E"/><text x="787" y="162" text-anchor="middle">Python API</text>
+  <rect x="854" y="136" width="100" height="40" rx="6" fill="#422006" stroke="#FFD21E"/><text x="904" y="162" text-anchor="middle">AutoModel</text>
+  <rect x="966" y="136" width="90" height="40" rx="6" fill="#422006" stroke="#FFD21E"/><text x="1011" y="162" text-anchor="middle">PeftModel</text>
+  <rect x="1068" y="136" width="80" height="40" rx="6" fill="#422006" stroke="#FFD21E"/><text x="1108" y="162" text-anchor="middle">datasets</text>
+  <rect x="1160" y="136" width="80" height="40" rx="6" fill="#422006" stroke="#FFD21E"/><text x="1200" y="162" text-anchor="middle">chat fmt</text>
+  <rect x="1252" y="136" width="70" height="40" rx="6" fill="#422006" stroke="#FFD21E"/><text x="1287" y="162" text-anchor="middle">VLM</text>
+  <rect x="1334" y="136" width="90" height="40" rx="6" fill="#422006" stroke="#FFD21E"/><text x="1379" y="162" text-anchor="middle">trl.rewards</text>
+  <rect x="1436" y="136" width="100" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1486" y="162" text-anchor="middle">Transformers</text>
+  <rect x="1548" y="136" width="80" height="40" rx="6" fill="#431407" stroke="#fb923c"/><text x="1588" y="162" text-anchor="middle">Hub ckpt</text>
+  <rect x="1640" y="136" width="90" height="40" rx="6" fill="#2e1065" stroke="#8b5cf6"/><text x="1685" y="162" text-anchor="middle">use_vllm</text>
+  <rect x="1742" y="136" width="80" height="40" rx="6" fill="#422006" stroke="#FFD21E"/><text x="1782" y="162" text-anchor="middle">OpenEnv</text>
+  <rect x="1834" y="136" width="26" height="40" rx="6" fill="#422006" stroke="#FFD21E"/><text x="1847" y="162" text-anchor="middle">Harbor</text>
+ </g>
+ <line x1="960" y1="196" x2="960" y2="214" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L2 Distributed -->
+ <rect x="60" y="216" width="1800" height="96" rx="12" fill="#0f2744" stroke="#38bdf8" stroke-width="2"/>
+ <text x="88" y="244" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L2 - Distributed Training (Accelerate + DeepSpeed + FSDP)</text>
+ <rect x="88" y="256" width="130" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="153" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">Accelerate DDP</text>
+ <rect x="230" y="256" width="120" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="290" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">multi-node</text>
+ <rect x="362" y="256" width="110" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="417" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">DeepSpeed</text>
+ <rect x="484" y="256" width="80" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="524" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">ZeRO-2/3</text>
+ <rect x="576" y="256" width="60" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="606" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">FSDP</text>
+ <rect x="648" y="256" width="100" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="698" y="278" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="12">LoRA/QLoRA</text>
+ <rect x="760" y="256" width="80" height="32" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="800" y="278" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="12">PEFT</text>
+ <rect x="852" y="256" width="110" height="32" rx="6" fill="#422006" stroke="#fcd34d"/><text x="907" y="278" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="12">Liger Kernel</text>
+ <rect x="974" y="256" width="130" height="32" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1039" y="278" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="12">grad checkpoint</text>
+ <rect x="1116" y="256" width="90" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1161" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">bf16/fp16</text>
+ <rect x="1218" y="256" width="100" height="32" rx="6" fill="#2e1065" stroke="#8b5cf6"/><text x="1268" y="278" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="12">vLLM colocate</text>
+ <rect x="1330" y="256" width="100" height="32" rx="6" fill="#2e1065" stroke="#8b5cf6"/><text x="1380" y="278" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="12">vLLM server</text>
+ <rect x="1442" y="256" width="120" height="32" rx="6" fill="#431407" stroke="#fb923c"/><text x="1502" y="278" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="12">cont. batching</text>
+ <rect x="1574" y="256" width="80" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1614" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">W&amp;B</text>
+ <rect x="1666" y="256" width="80" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1706" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">TrackIO</text>
+ <rect x="1758" y="256" width="90" height="32" rx="6" fill="#132f4c" stroke="#22d3ee"/><text x="1803" y="278" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="12">TensorBoard</text>
+ <line x1="960" y1="312" x2="960" y2="330" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L3 Core Trainer Layer -->
+ <rect x="60" y="332" width="1800" height="200" rx="12" fill="#0f2744" stroke="#FFD21E" stroke-width="2.5"/>
+ <text x="88" y="360" fill="#FFD21E" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L3 - Trainer Layer (extends Transformers Trainer)</text>
+
+ <!-- Config center -->
+ <rect x="700" y="378" width="520" height="136" rx="12" fill="#422006" stroke="#FFD21E" stroke-width="2"/>
+ <text x="960" y="408" text-anchor="middle" fill="#fef9c3" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">TrainingConfig + Trainer Loop</text>
+ <text x="960" y="432" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="11">Light wrapper over transformers.Trainer - shared callbacks</text>
+ <text x="960" y="452" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="11">SFTConfig / GRPOConfig / DPOConfig / PPOConfig / etc.</text>
+ <text x="960" y="472" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="11">Data collators - chat template - checkpoint save/load</text>
+ <text x="960" y="492" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="11">Method-specific loss + logging + eval hooks per trainer</text>
+
+ <!-- Offline left -->
+ <rect x="88" y="378" width="580" height="136" rx="12" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+ <text x="378" y="408" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Offline Trainers</text>
+ <text x="378" y="432" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="11">SFTTrainer - prompt/completion or conversational data</text>
+ <text x="378" y="452" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="11">DPOTrainer / ORPOTrainer / KTOTrainer / CPO / BCO</text>
+ <text x="378" y="472" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="11">Preference pairs - no online generation required</text>
+ <text x="378" y="492" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="11">GKDTrainer / MiniLLMTrainer - knowledge distillation</text>
+
+ <!-- Online right -->
+ <rect x="1252" y="378" width="580" height="136" rx="12" fill="#2e1065" stroke="#8b5cf6" stroke-width="2"/>
+ <text x="1542" y="408" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700">Online RL Trainers (vLLM supported)</text>
+ <text x="1542" y="432" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">GRPOTrainer - group-relative advantage (DeepSeek-R1)</text>
+ <text x="1542" y="452" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">RLOOTrainer / PPOTrainer / XPO / OnlineDPO / NashMD</text>
+ <text x="1542" y="472" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">Generate completions - reward_funcs - policy update loop</text>
+ <text x="1542" y="492" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">RewardTrainer / PRMTrainer - train reward models</text>
+
+ <line x1="668" y1="446" x2="696" y2="446" stroke="#fb923c" stroke-width="2" marker-end="url(#arrow-orange)"/>
+ <text x="682" y="438" text-anchor="middle" fill="#fb923c" font-family="JetBrains Mono, monospace" font-size="9">offline</text>
+ <line x1="1220" y1="446" x2="1248" y2="446" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrow-yellow)"/>
+ <text x="1234" y="438" text-anchor="middle" fill="#FFD21E" font-family="JetBrains Mono, monospace" font-size="9">online</text>
+ <text x="960" y="528" text-anchor="middle" fill="#FFD21E" font-family="JetBrains Mono, monospace" font-size="10">All trainers: model + dataset + args - trainer.train() - push to Hub</text>
+
+ <line x1="960" y1="532" x2="960" y2="550" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+ <!-- L4 Foundation -->
+ <rect x="60" y="552" width="1800" height="88" rx="12" fill="#0f2744" stroke="#fb923c" stroke-width="2"/>
+ <text x="88" y="580" fill="#fb923c" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L4 - Hugging Face Ecosystem Integration</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#ffedd5">
+  <rect x="88" y="592" width="100" height="36" rx="6" fill="#431407" stroke="#fb923c"/><text x="138" y="616" text-anchor="middle">Transformers</text>
+  <rect x="200" y="592" width="70" height="36" rx="6" fill="#431407" stroke="#fb923c"/><text x="235" y="616" text-anchor="middle">Trainer</text>
+  <rect x="282" y="592" width="70" height="36" rx="6" fill="#431407" stroke="#fb923c"/><text x="317" y="616" text-anchor="middle">Datasets</text>
+  <rect x="364" y="592" width="80" height="36" rx="6" fill="#431407" stroke="#fb923c"/><text x="404" y="616" text-anchor="middle">Accelerate</text>
+  <rect x="456" y="592" width="50" height="36" rx="6" fill="#431407" stroke="#fb923c"/><text x="481" y="616" text-anchor="middle">PEFT</text>
+  <rect x="518" y="592" width="80" height="36" rx="6" fill="#431407" stroke="#fb923c"/><text x="558" y="616" text-anchor="middle">DeepSpeed</text>
+  <rect x="610" y="592" width="80" height="36" rx="6" fill="#431407" stroke="#fb923c"/><text x="650" y="616" text-anchor="middle">tokenizer</text>
+  <rect x="702" y="592" width="60" height="36" rx="6" fill="#2e1065" stroke="#8b5cf6"/><text x="732" y="616" text-anchor="middle">vLLM</text>
+  <rect x="774" y="592" width="90" height="36" rx="6" fill="#422006" stroke="#FFD21E"/><text x="819" y="616" text-anchor="middle">reward_funcs</text>
+  <rect x="876" y="592" width="80" height="36" rx="6" fill="#422006" stroke="#FFD21E"/><text x="916" y="616" text-anchor="middle">callbacks</text>
+  <rect x="968" y="592" width="90" height="36" rx="6" fill="#422006" stroke="#FFD21E"/><text x="1013" y="616" text-anchor="middle">data collator</text>
+  <rect x="1070" y="592" width="80" height="36" rx="6" fill="#422006" stroke="#FFD21E"/><text x="1110" y="616" text-anchor="middle">chat tmpl</text>
+  <rect x="1162" y="592" width="70" height="36" rx="6" fill="#422006" stroke="#FFD21E"/><text x="1197" y="616" text-anchor="middle">OpenEnv</text>
+  <rect x="1244" y="592" width="70" height="36" rx="6" fill="#422006" stroke="#FFD21E"/><text x="1279" y="616" text-anchor="middle">Harbor</text>
+  <rect x="1326" y="592" width="100" height="36" rx="6" fill="#422006" stroke="#FFD21E"/><text x="1376" y="616" text-anchor="middle">env_factory</text>
+  <rect x="1438" y="592" width="60" height="36" rx="6" fill="#422006" stroke="#FFD21E"/><text x="1468" y="616" text-anchor="middle">tools</text>
+  <rect x="1510" y="592" width="50" height="36" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1535" y="616" text-anchor="middle">VLM</text>
+  <rect x="1572" y="592" width="60" height="36" rx="6" fill="#241a3d" stroke="#a78bfa"/><text x="1602" y="616" text-anchor="middle">DDPO</text>
+  <rect x="1644" y="592" width="80" height="36" rx="6" fill="#422006" stroke="#fcd34d"/><text x="1684" y="616" text-anchor="middle">Liger GRPO</text>
+  <rect x="1736" y="592" width="60" height="36" rx="6" fill="#431407" stroke="#fb923c"/><text x="1766" y="616" text-anchor="middle">Hub</text>
+  <rect x="1808" y="592" width="40" height="36" rx="6" fill="#431407" stroke="#fb923c"/><text x="1828" y="616" text-anchor="middle">safetensors</text>
+ </g>
+
+ <!-- L5 Algorithms -->
+ <rect x="60" y="652" width="1800" height="72" rx="12" fill="#0f2744" stroke="#fbbf24" stroke-width="2"/>
+ <text x="88" y="680" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L5 - Algorithm Taxonomy (v1 trainer catalog)</text>
+ <g font-family="JetBrains Mono, monospace" font-size="11" fill="#fef3c7">
+  <rect x="88" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="113" y="709" text-anchor="middle">SFT</text>
+  <rect x="148" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="173" y="709" text-anchor="middle">DPO</text>
+  <rect x="208" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="233" y="709" text-anchor="middle">ORPO</text>
+  <rect x="268" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="293" y="709" text-anchor="middle">KTO</text>
+  <rect x="328" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="353" y="709" text-anchor="middle">GRPO</text>
+  <rect x="388" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="413" y="709" text-anchor="middle">RLOO</text>
+  <rect x="448" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="473" y="709" text-anchor="middle">PPO</text>
+  <rect x="508" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="533" y="709" text-anchor="middle">XPO</text>
+  <rect x="568" y="692" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="608" y="709" text-anchor="middle">OnlineDPO</text>
+  <rect x="658" y="692" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="688" y="709" text-anchor="middle">NashMD</text>
+  <rect x="728" y="692" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="758" y="709" text-anchor="middle">Reward</text>
+  <rect x="798" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="823" y="709" text-anchor="middle">PRM</text>
+  <rect x="858" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="883" y="709" text-anchor="middle">BCO</text>
+  <rect x="918" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="943" y="709" text-anchor="middle">CPO</text>
+  <rect x="978" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1003" y="709" text-anchor="middle">GKD</text>
+  <rect x="1038" y="692" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1073" y="709" text-anchor="middle">MiniLLM</text>
+  <rect x="1118" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1143" y="709" text-anchor="middle">RLHF</text>
+  <rect x="1178" y="692" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1218" y="709" text-anchor="middle">Agentic RL</text>
+  <rect x="1268" y="692" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1303" y="709" text-anchor="middle">tool use</text>
+  <rect x="1348" y="692" width="60" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1378" y="709" text-anchor="middle">VLM PO</text>
+  <rect x="1418" y="692" width="50" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1443" y="709" text-anchor="middle">DDPO</text>
+  <rect x="1478" y="692" width="80" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1518" y="709" text-anchor="middle">Open-R1</text>
+  <rect x="1568" y="692" width="70" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1603" y="709" text-anchor="middle">custom</text>
+  <rect x="1648" y="692" width="90" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1693" y="709" text-anchor="middle">register loss</text>
+  <rect x="1748" y="692" width="100" height="24" rx="5" fill="#422006" stroke="#fcd34d"/><text x="1798" y="709" text-anchor="middle">experimental</text>
+ </g>
+
+ <!-- DETAIL Offline Pipeline -->
+ <rect x="60" y="740" width="880" height="340" rx="14" fill="#0c1524" stroke="#FFD21E" stroke-width="2.5"/>
+ <text x="88" y="772" fill="#FFD21E" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">Offline Pipeline (SFT / DPO / ORPO / KTO)</text>
+ <text x="88" y="794" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="11">Static dataset - no rollout generation - preference or supervised loss</text>
+
+ <rect x="88" y="810" width="820" height="36" rx="6" fill="#422006" stroke="#FFD21E"/>
+ <text x="498" y="834" text-anchor="middle" fill="#fef9c3" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1: Load model (AutoModelForCausalLM) + tokenizer + optional peft_config</text>
+ <line x1="498" y1="846" x2="498" y2="858" stroke="#FFD21E" stroke-width="1.5" marker-end="url(#arrow-yellow)"/>
+ <rect x="88" y="860" width="820" height="36" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="498" y="884" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2: Dataset - prompt/completion, chat, or chosen/rejected preference pairs</text>
+ <line x1="498" y1="896" x2="498" y2="908" stroke="#fb923c" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+ <rect x="88" y="910" width="820" height="36" rx="6" fill="#422006" stroke="#FFD21E"/>
+ <text x="498" y="934" text-anchor="middle" fill="#fef9c3" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3: Trainer init - SFTTrainer / DPOTrainer with method-specific Config</text>
+ <line x1="498" y1="946" x2="498" y2="958" stroke="#FFD21E" stroke-width="1.5" marker-end="url(#arrow-yellow)"/>
+ <rect x="88" y="960" width="820" height="36" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="498" y="984" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4: trainer.train() - CE loss (SFT) or DPO/ORPO/KTO preference objective</text>
+ <line x1="498" y1="996" x2="498" y2="1008" stroke="#fb923c" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+ <rect x="88" y="1010" width="820" height="36" rx="6" fill="#132f4c" stroke="#22d3ee"/>
+ <text x="498" y="1034" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 5: Checkpoint + Hub push - W&amp;B/TrackIO metrics - repeat epochs</text>
+
+ <text x="88" y="1068" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">RewardTrainer: train scalar reward model on preference rankings before RLHF</text>
+ <text x="88" y="1084" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">GKD/MiniLLM: teacher-student distillation for model compression</text>
+
+ <!-- DETAIL GRPO Online -->
+ <rect x="960" y="740" width="900" height="340" rx="14" fill="#0c1224" stroke="#8b5cf6" stroke-width="2.5"/>
+ <text x="988" y="772" fill="#8b5cf6" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700">GRPO Online Loop + Generation Backends</text>
+ <text x="988" y="794" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="11">Online RL - model generates its own training data each step</text>
+
+ <rect x="988" y="810" width="820" height="36" rx="6" fill="#2e1065" stroke="#8b5cf6"/>
+ <text x="1398" y="834" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 1: Generate N completions per prompt (generate / vLLM / cont. batching)</text>
+ <line x1="1398" y1="846" x2="1398" y2="858" stroke="#8b5cf6" stroke-width="1.5" marker-end="url(#arrow-yellow)"/>
+ <rect x="988" y="860" width="820" height="36" rx="6" fill="#422006" stroke="#fcd34d"/>
+ <text x="1398" y="884" text-anchor="middle" fill="#fef3c7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 2: reward_funcs score completions (built-in, RM, or custom callable)</text>
+ <line x1="1398" y1="896" x2="1398" y2="908" stroke="#fcd34d" stroke-width="1.5" marker-end="url(#arrow-yellow)"/>
+ <rect x="988" y="910" width="820" height="36" rx="6" fill="#422006" stroke="#FFD21E"/>
+ <text x="1398" y="934" text-anchor="middle" fill="#fef9c3" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 3: Group-relative advantage within prompt batch (no critic model)</text>
+ <line x1="1398" y1="946" x2="1398" y2="958" stroke="#FFD21E" stroke-width="1.5" marker-end="url(#arrow-yellow)"/>
+ <rect x="988" y="960" width="820" height="36" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="1398" y="984" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 4: KL penalty vs ref model + clipped policy loss - backward + optimizer step</text>
+ <line x1="1398" y1="996" x2="1398" y2="1008" stroke="#fb923c" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+ <rect x="988" y="1010" width="820" height="36" rx="6" fill="#2e1065" stroke="#8b5cf6"/>
+ <text x="1398" y="1034" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Step 5: Sync weights to vLLM colocate engine (if enabled) - next batch - loop</text>
+
+ <text x="988" y="1068" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">Agentic: environment_factory (OpenEnv / Harbor sandbox + verifier + tools)</text>
+ <rect x="988" y="1078" width="200" height="48" rx="6" fill="#422006" stroke="#FFD21E"/>
+ <text x="1088" y="1098" text-anchor="middle" fill="#fef9c3" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">vLLM colocate</text>
+ <text x="1088" y="1114" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">share GPU with trainer</text>
+ <rect x="1200" y="1078" width="200" height="48" rx="6" fill="#2e1065" stroke="#8b5cf6"/>
+ <text x="1300" y="1098" text-anchor="middle" fill="#ede9fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">vLLM server mode</text>
+ <text x="1300" y="1114" text-anchor="middle" fill="#c4b5fd" font-family="JetBrains Mono, monospace" font-size="9">separate inference process</text>
+ <rect x="1412" y="1078" width="220" height="48" rx="6" fill="#431407" stroke="#fb923c"/>
+ <text x="1522" y="1098" text-anchor="middle" fill="#ffedd5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Transformers cont. batch</text>
+ <text x="1522" y="1114" text-anchor="middle" fill="#fed7aa" font-family="JetBrains Mono, monospace" font-size="9">no vLLM - faster than generate()</text>
+ <rect x="1644" y="1078" width="164" height="48" rx="6" fill="#422006" stroke="#FFD21E"/>
+ <text x="1726" y="1098" text-anchor="middle" fill="#fef9c3" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">multi-turn tools</text>
+ <text x="1726" y="1114" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="9">GRPO + env per rollout</text>
+
+ <!-- L6 Production -->
+ <rect x="60" y="1100" width="1800" height="72" rx="12" fill="#1a1208" stroke="#FFD21E" stroke-width="2"/>
+ <text x="88" y="1128" fill="#FFD21E" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">L6 - Production &amp; Position in HF Stack</text>
+ <text x="960" y="1154" text-anchor="middle" fill="#fde68a" font-family="JetBrains Mono, monospace" font-size="13">CUDA GPU / multi-node - TRL v1 full-stack post-training - between Datasets and deployed models on Hub</text>
+
+ <!-- footers -->
+ <rect x="60" y="1192" width="1800" height="52" rx="8" fill="#111827" stroke="#475569"/>
+ <text x="960" y="1212" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="11">Init path: trl CLI or Trainer() - load model/dataset - Accelerate prepare - optional vLLM engine init</text>
+ <text x="960" y="1230" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Step path: batch - (generate+reward for online) - loss - backward - log - checkpoint - repeat</text>
+
+ <text x="60" y="1276" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">Sources: huggingface/trl - docs/trl - TRL v1 blog 2026-03 - GRPOTrainer docs - OpenEnv/Harbor integration</text>
+</svg>
