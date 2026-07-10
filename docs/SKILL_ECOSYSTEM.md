@@ -47,6 +47,7 @@ Start from my workspace AGENTS.md or CLAUDE.md. Follow any WORKSPACE.md or skill
 | Testing | [playwright-test-skill](https://github.com/grapeot/playwright-test-skill) | CDP step-by-step debugging CLI for AI agents writing Playwright E2E tests |
 | Semantic search | [semantic-search-skill](https://github.com/grapeot/semantic-search-skill) | 本地文本 embedding + cosine 相似度检索 CLI，支持任意 OpenAI-compatible endpoint，带 atomic cache |
 | LLM market data | [open_router_data_scraper](https://github.com/grapeot/open_router_data_scraper) | 定期抓取 OpenRouter 模型流量数据（token 用量、请求数、排名），存入本地 SQLite 突破 31 天 trailing window |
+| Innovation | [innovation-assistant-skill](https://github.com/grapeot/innovation-assistant-skill) | 将 SIT 与 Think Bigger 编码为带硬校验的可执行流水线，让 Agent 成为结构化创新引擎，产出带推导链的可落地候选方案 |
 
 ## 选择原则
 

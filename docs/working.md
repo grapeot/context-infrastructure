@@ -1,5 +1,9 @@
 # Working Log
 
+## 2026-07-10
+
+- Added `innovation-assistant-skill` to the public skill ecosystem as the Innovation capability for structured innovation pipelines (SIT + Think Bigger).
+
 ## 2026-06-06
 
 - Added `google-maps-routing-skill` to the public skill ecosystem as the Maps / travel capability for Google Maps Routes + Geocoding CLI workflows.
