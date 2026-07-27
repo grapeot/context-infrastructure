@@ -87,6 +87,15 @@ session is newer than the archive. Delete temporary exports after lookup.
 - Read action ids from frontmatter; never infer them from filenames or text.
 - Do not put credentials, server addresses, local host profiles, absolute
   archive paths, or user queries into action URLs.
+- For OpenCode sessions, the deep link is `[Open in OpenCode](opencode://session/<session_id>)`
+  with the ID taken verbatim from frontmatter. A legal ID (per the public
+  OpenCode iOS Client RFC §4.4, https://github.com/grapeot/opencode_ios_client/blob/main/docs/OpenCode_iOS_Client_RFC.md#L485)
+  requires scheme `opencode`, host `session`, a single path segment, and an ID
+  starting with `ses_` followed by ASCII letters, digits, underscores, or
+  hyphens only. The parser rejects userinfo, port, query, fragment, multi-segment
+  paths, control characters, Unicode, double percent encoding, and overlong
+  IDs. Antigravity / Claude Code / Codex / Second Mind IDs (UUIDs or non-`ses_`
+  prefixes) do not satisfy this contract and cannot produce a deep link.
 
 ## Acceptance Criteria
 
