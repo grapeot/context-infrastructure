@@ -4,6 +4,30 @@
 
 **触发词**: "bootstrap 一个 project"、"scaffold 一个 project"、"把这个目录整理成项目"、"补齐 PRD/RFC/working"、"给这个目录单独建 git repo"
 
+## 这个 Skill 解决什么问题
+
+当 AI agent 在 workspace 里反复创建临时脚本和 ad-hoc 目录时，这些散件积累成无法被其他 agent 接手的"技术债"。这个 Skill 让每次 scaffold 都遵循统一的结构、文档、测试和 Git 规范，确保后续 agent 不需要猜命令或翻 README 就能接手工作。
+
+核心价值：
+- 让每个项目有一个统一的结构约定，减少 agent 间的交接成本
+- 在动代码之前先立骨架、先写文档，避免边写边改结构
+- 通过 public/private intake gate 避免隐私泄漏到公开仓库
+- 在交付前强制跑测试和隐私扫描，保证可验证状态
+
+## 什么时候应该用这个 Skill
+
+- 用户说"新建一个项目"、"scaffold"、"bootstrap"
+- 一个目录里已经有 2+ 个脚本/模块，并且还会继续迭代
+- 需要独立 git 历史，不能混在 workspace 大仓库里
+- 用户要求补 PRD/RFC/working 文档
+- 需要把散件整理成可测试、可部署的标准项目
+
+## 什么时候不应该用
+
+- 一次性脚本，跑完就丢 → 直接放 `tmp/` 或 `adhoc_jobs/tmp_*/`
+- 用户明确要求快速原型，不需要文档和测试 → 先做，等稳定后再 scaffold
+- 目录已有成熟结构，只需要小改 → 不要大搬家
+
 ---
 
 ## 1. 适用场景
@@ -251,6 +275,59 @@ project_root/
 
 ---
 
+## 5.5. CI / CD 配置
+
+### CI（GitHub Actions）
+
+如果项目有 tests，scaffold 阶段应默认配一个最小 CI workflow。不需要等用户要求。
+
+最小 `.github/workflows/ci.yml`（Python + uv 项目示例）：
+
+```yaml
+name: CI
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+      - name: Set up Python
+        run: uv python install 3.12
+      - name: Create venv and install dependencies
+        run: |
+          uv venv
+          uv pip install -e '.[dev]'
+      - name: Run tests
+        run: uv run python -m pytest tests/ -v
+```
+
+注意事项：
+- **不要用 `uv pip install --system`**，GitHub Actions runner 的 Python 是 externally-managed，会报错。用 `uv venv` + `uv pip install` 代替。
+- 分支名要兼容 `master` 和 `main`，不要假设只有一个。
+- 如果项目有 lint 配置，CI 里加上 lint step。
+
+### CD（持续部署）
+
+CD 不属于 scaffold 默认配置。常见方式：
+- **Vercel**：连接 GitHub repo 后自动部署，不需要 CI 配置
+- **Koyeb / Railway**：类似，连接 repo 自动部署
+- **自托管**：需要单独的 deploy workflow
+
+如果用户要求配 CD，参考 `rules/skills/deployment_github_actions_koyeb.md`。
+
+### Branch Protection
+
+Private repo 的 branch protection 需要 GitHub Pro 或更高 plan。如果用户要求配但 plan 不够，告诉用户并跳过，不要卡住流程。
+
+---
+
 ## 6. AGENTS.md 最少要写什么
 
 项目局部 `AGENTS.md` 至少要覆盖：
@@ -312,3 +389,24 @@ project_root/
 如果一个目录未来还会被继续改，而且希望不同 AI/人能低成本接手，那它就不该继续保持“散装脚本目录”状态，而应该尽快升级成上面这套项目骨架。
 
 如果这个 repo 将来要发公开 GitHub，Phase 0 必须问过用户，Phase 4 的隐私扫描不能跳过。
+
+---
+
+## 11. 常见坑
+
+### Vercel Python 部署
+
+- `vercel.json` 的 `builds` + `routes` 格式已废弃，用 `rewrites` 现代格式。旧格式会被当 Next.js 项目处理，返回 Vercel 默认页面而不是你的 app。
+- Vercel Python runtime 不认 `src/` layout。如果包放在 `src/` 下，入口文件（如 `api/index.py`）需要手动 `sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))`。
+- Vercel 需要一个 `requirements.txt`（或 `pyproject.toml` 会被自动识别）来安装 Python 依赖。
+- Vercel team SSO / Deployment Protection 会保护随机 deployment URL，但 alias 域名（如 `project.vercel.app`）通常不受影响。
+
+### GitHub Actions CI
+
+- `uv pip install --system` 在 GitHub Actions runner 上会失败（externally-managed Python）。用 `uv venv` + `uv pip install` 代替。
+- CI 里的分支名要同时覆盖 `master` 和 `main`，不要假设只有一个。
+
+### Branch Protection
+
+- Private repo 的 branch protection 需要 GitHub Pro。Free plan 只能对 public repo 设 branch protection。
+- `gh api repos/.../rulesets` 和 `gh api repos/.../branches/.../protection` 都会返回 403 如果 plan 不够。
