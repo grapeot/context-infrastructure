@@ -149,6 +149,52 @@ codex exec --skip-git-repo-check --sandbox read-only --color never \
 
 **推荐**: 简单任务用 `low` + `read-only`，需写文件用 `workspace-write`，复杂重构用 `high`。生产自动化统一走 `--output-schema` + `-o` 拿结构化结果，比解析 stdout 稳。
 
+### 使用第三方 model provider（Ollama Cloud 等）
+
+Codex 默认走 ChatGPT 登录调 GPT-5.x，但也支持任意 OpenAI-compatible 的第三方 provider。这在以下场景有用：想用更便宜或更快的 model（如 Ollama Cloud 的 GLM-5.2、DeepSeek-V4-Flash）、想让数据离开 OpenAI 生态、或想用本地模型。
+
+**原理**：在 `~/.codex/config.toml`（或 profile 文件）里定义 `[model_providers.<id>]` 段，指定 `base_url`、鉴权方式和 wire API。然后用 `model_provider = "<id>"` + `model = "<model_id>"` 路由过去。provider id 不能用保留名 `openai` / `ollama` / `lmstudio`。
+
+**Profile 方式（推荐，不影响主配置）**：
+
+```toml
+# ~/.codex/ollama-cloud.config.toml
+model = "glm-5.2"
+model_provider = "ollama_cloud"
+
+[model_providers.ollama_cloud]
+name = "Ollama Cloud"
+base_url = "https://ollama.com/v1"
+env_key = "OLLAMA_API_KEY"
+```
+
+调用时加 `--profile ollama-cloud`，codex 会把这份配置 overlay 到主 config 之上：
+
+```bash
+OLLAMA_API_KEY=<your_key> codex exec --full-auto --profile ollama-cloud \
+  -s danger-full-access -c model_reasoning_effort=low "你的 prompt"
+```
+
+**关键点**：
+
+- `env_key` 指向环境变量名，codex 运行时从该变量读 API key。不要把 key 写进 config 文件。
+- `base_url` 必须是 OpenAI-compatible endpoint（`/v1` 结尾）。Ollama Cloud 是 `https://ollama.com/v1`。
+- `wire_api` 默认 `chat`（Chat Completions）。如果 provider 支持 Responses API，可加 `wire_api = "responses"`。
+- 自定义 provider 不能用 `--oss` / `--local-provider`（那两个只给本地 ollama/lmstudio 用）。
+- 第三方 model 的 tool calling 能力参差。实测 Ollama Cloud GLM-5.2 能正常用 codex 的 read/bash/write 工具完成文件处理任务，但 reasoning 较长时 token 控制不如 GPT-5.x 精准，简单任务建议 `model_reasoning_effort=low`。
+- codex 启动时会刷新 model 列表，部分 provider 返回格式不完全匹配（如 Ollama Cloud 返回 `{"data":[...]}` 而非 `{"models":[...]}`），会打 ERROR 日志但不影响实际推理，可忽略。
+
+**鉴权方式**：
+- `env_key = "XXX"`：从环境变量读 API key（最常用）。
+- `requires_openai_auth = true`：复用 ChatGPT/API key 登录（适合 OpenAI 代理）。
+- 不设任何 auth：无鉴权（适合本地模型）。
+- `[model_providers.<id>.auth]` + `command`：从外部命令获取 bearer token（适合需要动态 token 的场景）。
+
+**实测验证清单**（接入新 provider 后建议跑一遍）：
+1. 最小连通性：`请只回复 OK` 确认 provider 路由通。
+2. 工具调用：`写一个 Python hello world 并运行` 确认 read/bash/write 工具链正常。
+3. 文件处理：让 agent 读写一个真实文件，确认 sandbox 内 IO 正常（特别注意 workspace 外路径会被 sandbox 拦截）。
+
 ---
 
 ## OpenCode 快速参考
