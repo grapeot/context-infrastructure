@@ -253,6 +253,20 @@ r = requests.get("https://target-domain.com/internal_api/...", headers=headers)
 
 **应对**：发 thread reply 前，先通过 API 查询确认 parent message 的真实 ID。不要用 POST 返回的 `creation_uuid` 推断 ID。在 UI 里验证前，确保你打开的 thread 面板对应的是你发 reply 的那条消息。
 
+### 10. 猜测 SPA URL 模式导致 404，污染浏览器 session
+
+**症状**：为了用 Playwright 捕获单个 post 的 ajax 调用，直接拼接 URL `https://community.circle.so/s/<space-slug>/p/<post-slug>` 导航过去，页面返回 "We were unable to process your request"（404 错误页），并且后续从这个 session 页面导航到 `/s/<space-slug>` 也持续 404。
+
+**原因**：Circle 的 SPA 路由不使用 `/s/<space>/p/<post>` 模式。猜测的 URL 结构与实际路由不匹配，导航到一个不存在的路由后，SPA 的前端路由状态可能进入异常分支，导致后续从同一 page 导航到合法路由也持续失败。CDP `page.on("request"/"response")` 捕获到的只有 404 的 HTML 文档请求，没有任何 `internal_api` 调用——因为 SPA 在路由匹配阶段就失败了，根本没走到数据加载阶段。
+
+**应对**：不要猜测 SPA 的深链 URL 模式。正确做法：
+1. 先导航到已知合法的入口页（如社区首页 `/` 或 feed 页），等 `networkidle`
+2. 用 `page.locator("a[href*='keyword']")` 找到目标链接的 `<a>` 标签，用 `.click()` 走 SPA 内部路由跳转
+3. 如果 list endpoint（如 `list-posts`）已经返回了完整 record（含 body），直接用 plain HTTP 复现那个 endpoint，不需要 Playwright 捕获
+4. 如果不确定 URL 结构，先在浏览器里手动导航到目标页面，从地址栏复制真实 URL，再喂给 Playwright
+
+这个教训也说明：在 `list-posts` 已经能返回完整数据的情况下，不应该用 Playwright 去捕获"看一个 post"的 ajax——直接调用已有的 list endpoint 或给 CLI 加 `get-post` 命令即可。Playwright Ajax Capture 是"没有 API 文档时的逆向工具"，不是"已有 API 时的首选方案"。
+
 ## 验收标准
 
 - [ ] CDP Chrome 启动且用户已登录目标站（`pw-test url` 返回已登录态 URL，不是 login 页）
