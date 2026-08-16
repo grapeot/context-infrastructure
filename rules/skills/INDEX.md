@@ -27,7 +27,7 @@
 - ⚙️ Delayed Execution — starter fallback；durable/AI 延时任务安装 Process Launcher + OpenCode Skill
 
 ### Tier 3: 独立 public skill repos（按需安装）
-- 🔧 AI Session Export、ChatGPT/Codex OAuth、图片生成、Tavily、Google Docs、Google Maps、Outlook、Resend、OpenCode、Process Launcher、PPTX、Typefully、Circle Post、Stripe、Firewalla、Smart Home 等能力见 [`docs/SKILL_ECOSYSTEM.md`](../../docs/SKILL_ECOSYSTEM.md)
+- 🔧 AI Session Export、ChatGPT/Codex OAuth、AI Agent CLI、图片生成、Tavily、Google Docs、Google Maps、Outlook、Resend、OpenCode、Process Launcher、PPTX、Typefully、Circle Post、Stripe、Firewalla、Smart Home 等能力见 [`docs/SKILL_ECOSYSTEM.md`](../../docs/SKILL_ECOSYSTEM.md)
 
 ### 说明
 ✅ = 最多 15 分钟即可使用
@@ -42,9 +42,7 @@
 
 调用外部系统或工具的操作手册。
 
-- [AI CLI Agent 实用指南](./ai_agent_cli_guide.md) — CLI Agent 设计原则、工具对比（Claude Code / Codex / OpenCode / Antigravity）、文件响应模式、AI 调用 AI
-- [Antigravity CLI 文件式调用](./antigravity_cli.md) — 用 `agy --print` 调用 Gemini agent；覆盖首次安装、keyring/App 登录、sandbox、timeout、文件式结果与运行日志验收；含 external-writing task packet、跨模型候选、blind-reader、三种 verdict、一次 fresh 返工和 `completion_edits.md` 契约
-- [Claude Code 使用指南](./claude_code.md) — Claude Code 的默认 runtime 设置（adaptive thinking 规避）、非交互命令行调用、嵌套调用硬规则及 Timeout 管理
+- [AI CLI Agent 实用指南](https://github.com/grapeot/ai-agent-cli-skill) → 已迁移到独立 public repo。只把 root skill `skills/skill_ai_agent_cli.md` 接到 workspace index；Claude Code / Codex / OpenCode / Antigravity / Grok 是 repo 内 on-demand 文件
 - [OpenReview API](./openreview.md) — 查询 AI 学术会议论文 metadata 和作者 profile（institution history、position、tilde ID）。触发词："OpenReview"、"查作者 profile"、"ICLR papers"、"NeurIPS papers"、"tilde ID"
 - [GitHub Actions → Koyeb 部署指南](./deployment_github_actions_koyeb.md) — 通过 GitHub Actions 实现测试通过后自动部署到 Koyeb；适用于任何 Docker 化应用
 - [使用 Apple 官方命令行工具发布 App Store Connect](./deployment_app_store_connect_cli.md) ✅ — 用稳定版 Xcode 完成 iOS archive、distribution export、IPA metadata 核验与授权后的上传
