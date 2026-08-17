@@ -32,6 +32,7 @@ Start from my workspace AGENTS.md or CLAUDE.md. Follow any WORKSPACE.md or skill
 | Agent operations | [opencode_skill](https://github.com/grapeot/opencode_skill) | OpenCode `submit` / `submit --dry-run` / batch submission、recurring cron workflow、SQLite 数据维护和 archive |
 | Agent operations | [ai-agent-cli-skill](https://github.com/grapeot/ai-agent-cli-skill) | 用文件响应方式非交互调用 Claude Code、Codex、OpenCode、Antigravity、Grok Build；只暴露一个 root skill，CLI 细节按需加载 |
 | Agent authentication | [chat-gpt-oauth-skill](https://github.com/grapeot/chat-gpt-oauth-skill) | 用户需自行订阅 ChatGPT Plus/Pro 并在本地手动授权；提供 browser PKCE、明文 token lifecycle、refresh 与最小 Codex Responses 示例。仅推荐 owner experiment，兼容 endpoint 不稳定，不用于生产 |
+| Agent authentication | [grok-oauth-skill](https://github.com/grapeot/grok-oauth-skill) | 用户需自行订阅 SuperGrok / X Premium+ 并在本地手动授权；提供 browser PKCE、device code、明文 token lifecycle、refresh 与最小 xAI Chat Completions 示例。仅推荐 owner experiment，兼容 endpoint 不稳定，不用于生产 |
 | Agent operations | [ai_session_export](https://github.com/grapeot/ai_session_export) | 将 OpenCode、Claude Code、Codex、Antigravity 和 Second Mind 会话增量导出为统一 Markdown 归档，供浏览和检索 |
 | Usage analytics | [ai-session-profanity-rate](https://github.com/grapeot/ai-session-profanity-rate) | 对本地 AI session 的人类 user message 做 sub-agent 粗口词元计数，提供版本化 cache、脱敏 JSON、每日 incidence 和模型构成图；真实会话与结果留在本地 |
 | Agent operations | [process-launcher](https://github.com/grapeot/process-launcher) | 本地 HTTP process launcher，适合 TCC / GUI 权限桥接、durable one-shot delayed jobs、进程日志 and 取消 |
