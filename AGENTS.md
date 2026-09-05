@@ -38,13 +38,9 @@ Don't ask permission. Just do it.
 ### 常用 Skill 速查（以 INDEX.md 为准）
 
 **深度调研任务** → `rules/skills/workflow_deep_research_survey.md`
-- 初步扫描 → 分割维度 → 多 Agent 并行 → 交叉验证 → 写报告
-- 输出：`contexts/survey_sessions/`
-
 **调用后台 Agent / 并行 Subagent** → `rules/skills/workflow_parallel_subagents.md`
-- 何时拆分任务、什么时候不要拆、如何并行派出多个 subagent
-- 准备调用多个 `functions.task` 前，先把这个 skill 读一遍再执行
-- 当前并行方式是 `multi_tool_use.parallel`；不要使用旧 `run_in_background` / `background_output` 写法
+
+命中后读对应 skill 文件再执行；INDEX.md 是唯一路由源，这里不展开步骤。
 
 ## Axioms（公理）
 
