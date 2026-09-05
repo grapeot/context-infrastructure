@@ -42,58 +42,58 @@
 
 调用外部系统或工具的操作手册。
 
-- [AI CLI Agent 实用指南](https://github.com/grapeot/ai-agent-cli-skill) → 已迁移到独立 public repo；Claude Code / Codex / OpenCode / Antigravity / Grok 能力从该 repo 按需安装
-- [OpenReview API](./openreview.md) — 查询 AI 学术会议论文 metadata 和作者 profile（institution history、position、tilde ID）。触发词："OpenReview"、"查作者 profile"、"ICLR papers"、"NeurIPS papers"、"tilde ID"
-- [GitHub Actions → Koyeb 部署指南](./deployment_github_actions_koyeb.md) — 通过 GitHub Actions 实现测试通过后自动部署到 Koyeb；适用于任何 Docker 化应用
+- [AI CLI Agent 实用指南](https://github.com/grapeot/ai-agent-cli-skill) → 已迁移到独立 public repo；按需安装 Claude Code / Codex / OpenCode / Antigravity / Grok 等 CLI 支持
+- [OpenReview API](./openreview.md) — 检索 AI 学术会议论文 metadata 与作者 profile（含 institution history、position、tilde ID）。触发词："OpenReview"、"查作者 profile"、"ICLR papers"、"NeurIPS papers"、"tilde ID"
+- [GitHub Actions → Koyeb 部署指南](./deployment_github_actions_koyeb.md) — 测试通过后通过 GitHub Actions 自动部署至 Koyeb；适用于各类 Docker 化应用
 - [使用 Apple 官方命令行工具发布 App Store Connect](./deployment_app_store_connect_cli.md) ✅ — 用稳定版 Xcode 完成 iOS archive、distribution export、IPA metadata 核验与授权后的上传
-- [分享报告到 Web](./share_report.md) ⚙️ — 将 MD 报告转 HTML 发布到你自己的服务器，返回 URL
+- [分享报告到 Web](./share_report.md) ⚙️ — 将 Markdown 报告转为 HTML 发布至自建服务器并返回访问 URL
 - [Apple Compressor Skill](./compressor.md) ⚙️ — 本机 Apple Compressor CLI 转码；custom preset 路径、源文件写入完成检测、batch 提交与监控
 
 ### Workflow（工作流）
 
 特定任务的完整工作流程。
 
-- [并行 Subagent 工作流](./workflow_parallel_subagents.md) ✅ — 并行派发多个 `functions.task` subagent 的调度方法；首次使用前必读，任务必须打包在单条消息内同时发起
-- [Workflow Watchdog](./workflow_watchdog.md) — 派出后台 workflow/agent 任务后设 ~30 分钟定时巡检，识别正常执行与死循环挂起。触发词："watchdog"、"workflow 卡住"、"后台任务巡检"
-- [深度调研工作流](./workflow_deep_research_survey.md) ✅ — 多 Agent 并行 + 交叉验证（Phase 1-3 信息采集）
-- [公开 Consensus Net Income 审计工作流](./workflow_public_consensus_net_income_audit.md) — 用 MarketScreener 等公开金融站点核验一组股票的 FY/CY consensus net income。触发词："consensus net income"、"MarketScreener 审计"、"FY2026E 净利润共识"
+- [并行 Subagent 工作流](./workflow_parallel_subagents.md) ✅ — 并行调度多个 `functions.task` subagent 的执行机制；首次使用前必读，任务必须打包在单条消息内同时发起
+- [Workflow Watchdog](./workflow_watchdog.md) — 后台派出 workflow 或 agent 任务后设置 ~30 分钟定时巡检，识别正常运行与死循环挂起。触发词："watchdog"、"workflow 卡住"、"后台任务巡检"
+- [深度调研工作流](./workflow_deep_research_survey.md) ✅ — 基于多 Agent 并行检索与交叉验证的深度信息采集流程（Phase 1-3）
+- [公开 Consensus Net Income 审计工作流](./workflow_public_consensus_net_income_audit.md) — 通过 MarketScreener 等公开金融站点核验一组股票的 FY/CY consensus net income。触发词："consensus net income"、"MarketScreener 审计"、"FY2026E 净利润共识"
 - [科研论文调研与写作工作流](./workflow_research_paper_survey_writing.md) — 把科研论文重构为面向技术从业者的深度解读文章。触发词："分析这篇论文"、"写论文解读"、"paper analysis"
-- [外部写作工作流](./workflow_external_writing.md) → 已迁移到 [grapeot/writing-skill](https://github.com/grapeot/writing-skill/blob/master/skills/workflow_external_writing.md) — external-facing 分析文章操作主干；双生成单审查、分离冷读验收、终端冷读一票放行
-- [External Prose Lint CLI](./external_prose_lint.md) → 已迁移到 [grapeot/writing-skill](https://github.com/grapeot/writing-skill/blob/master/skills/external_prose_lint.md) — 确定性中文 prose 扫描；`python -m writing_skill.external_prose_lint_cli <md>`
-- [内部写作工作流](./workflow_internal_writing.md) → 已迁移到 [grapeot/writing-skill](https://github.com/grapeot/writing-skill/blob/master/skills/workflow_internal_writing.md) — 内部文档写作；结论前置、概念出场顺序、可验证性
-- [认知画像提取工作流](./workflow_cognitive_profile_extraction.md) — 从群聊/Slack/Discord/邮件/播客转录等非结构化对话数据提取可预测的认知公理；要求 Opus 模型亲自完成写作
-- 语义搜索技能 → 见 ecosystem [semantic-search-skill](https://github.com/grapeot/semantic-search-skill)：本地文本 embedding + cosine 相似度检索，支持任意 OpenAI-compatible endpoint
-- [知识飞轮设计模式](./workflow_knowledge_flywheel.md) — 笨数据+笨方法+笨模型=精知识
+- [外部写作工作流](./workflow_external_writing.md) → 已迁移到 [grapeot/writing-skill](https://github.com/grapeot/writing-skill/blob/master/skills/workflow_external_writing.md) — 对外深度技术分析文章写作流程；包含双生成单审查、分离冷读验收与终端冷读一票放行
+- [External Prose Lint CLI](./external_prose_lint.md) → 已迁移到 [grapeot/writing-skill](https://github.com/grapeot/writing-skill/blob/master/skills/external_prose_lint.md) — 基于规则的确定性中文 prose 扫描工具；命令：`python -m writing_skill.external_prose_lint_cli <md>`
+- [内部写作工作流](./workflow_internal_writing.md) → 已迁移到 [grapeot/writing-skill](https://github.com/grapeot/writing-skill/blob/master/skills/workflow_internal_writing.md) — 内部文档写作；结论前置、概念依序出场、可验证性
+- [认知画像提取工作流](./workflow_cognitive_profile_extraction.md) — 从群聊、Slack、Discord、邮件及播客转录等非结构化对话中提炼可预测的认知公理；要求 Opus 模型亲自完成写作
+- 语义搜索技能 → 见 ecosystem [semantic-search-skill](https://github.com/grapeot/semantic-search-skill)：基于本地文本 embedding 与 cosine 相似度检索，支持任意 OpenAI-compatible endpoint
+- [知识飞轮设计模式](./workflow_knowledge_flywheel.md) — 笨数据 + 笨方法 + 笨模型 = 精知识
 - [视频下载与语音识别工作流（Qwen ASR 优先）](./workflow_bilibili_whisper_transcription.md) — Bilibili/YouTube 音视频下载与语音识别处理流程
-- [延时执行技能](./delayed_execution.md) ⚙️ — 低风险 `sleep + nohup` fallback；durable/AI 延时任务见 ecosystem 的 Process Launcher + OpenCode Skill
+- [延时执行技能](./delayed_execution.md) ⚙️ — `sleep + nohup` 低风险 fallback；durable 或 AI 延时任务见 ecosystem 的 Process Launcher + OpenCode Skill
 - [项目脚手架与重整](./project_scaffold.md) ✅ — 把散落文件升级为规范工程目录并初始化独立 Git 仓库
 - [AI Session Search & Archive](./ai_session_search_archive.md) — 在 OpenCode、Claude Code、Codex、Antigravity 与 Second Mind 的统一 Markdown 归档中按来源检索历史会话
-- [iOS UI 自动化测试工作流](./ios_ui_automation.md) — 基于 Xcode 模拟器、XCTest 与 simctl 的 iOS 界面及功能自动化验证指南
+- [iOS UI 自动化测试工作流](./ios_ui_automation.md) — 基于 Xcode 模拟器、XCTest 与 simctl 的 iOS 界面及功能自动化验证
 
 ### BestPractice（最佳实践）
 
 通用的最佳实践和经验教训。
 
-- [外部中文 prose 诊断词汇表](./bestpractice_external_prose.md) → 已迁移到 [grapeot/writing-skill](https://github.com/grapeot/writing-skill/blob/master/skills/bestpractice_external_prose.md) — Manager 参考词汇表；不是 gate 清单，不进 Writer 上下文
-- [外部文章启发性分析视角（Thesis Catalog）](./reference_writing_thesis_catalog.md) → 已迁移到 [grapeot/writing-skill](https://github.com/grapeot/writing-skill/blob/master/skills/reference_writing_thesis_catalog.md) — L1-L8 启发性分析视角及相关 axiom 映射
-- [内部文档排版与自适应视觉组件规范](./bestpractice_internal_visuals.md) ✅ — 内部 Memo/RFC/周报的自适应 HTML 卡片、主题变量、暗色模式兼容与视觉组件规范
-- [AI 编程核心方法论](./bestpractice_ai_programming_mindset.md) ✅ — 70%问题、成功标准、可验证性
-- [Skill 写作指南（Meta-Skill）](./bestpractice_skill_writing.md) ✅ — 创建或重写 skill 时使用，强调结果确定性、验收标准和边界条件
+- [外部中文 prose 诊断词汇表](./bestpractice_external_prose.md) → 已迁移到 [grapeot/writing-skill](https://github.com/grapeot/writing-skill/blob/master/skills/bestpractice_external_prose.md) — 审阅者（Manager）中文文风参考词汇表；仅作提示而非硬性 gate 门禁，不载入 Writer 上下文
+- [外部文章启发性分析视角（Thesis Catalog）](./reference_writing_thesis_catalog.md) → 已迁移到 [grapeot/writing-skill](https://github.com/grapeot/writing-skill/blob/master/skills/reference_writing_thesis_catalog.md) — 梳理 L1-L8 级启发性分析视角框架及其与相关 axiom 的映射
+- [内部文档排版与自适应视觉组件规范](./bestpractice_internal_visuals.md) ✅ — 内部 Memo、RFC 与工作周报排版；提供自适应 HTML 卡片组件、主题变量与深浅色模式适配
+- [AI 编程核心方法论](./bestpractice_ai_programming_mindset.md) ✅ — 70% 问题、成功标准、可验证性
+- [Skill 写作指南（Meta-Skill）](./bestpractice_skill_writing.md) ✅ — 创建或重写 skill 的指导原则；核心在于保障结果确定性、建立验收标准与明确边界条件
 - [API Key 管理与调用](./bestpractice_api_key_management_1password_cli.md) ✅ — 通过 1Password CLI 统一管理与调用接口密钥；含字段命名约定与凭证检索路径推断规则
 - [学术论文下载与格式转换](./bestpractice_academic_paper_conversion.md) ✅ — 基于 arXiv ID 检索、HTML/PDF 抓取并转化为 Markdown 的质量控制最佳实践
 - [面试评估框架](./bestpractice_interview_evaluation.md) ✅ — Trait > Skill、AI 作弊识别、技术深度探测
 - [Markdown 转 HTML 最佳实践](./bestpractice_markdown_html_conversion.md) ✅
 - [PDF 转 Markdown](./bestpractice_pdf_to_markdown.md) ✅ — 默认用 Docling，避免 PDF 场景下 MarkItDown / PyMuPDF4LLM / Marker 的质量或许可问题
 - [时间敏感信息验证](./bestpractice_temporal_info_verification.md) ✅ — 验证可能超出 knowledge cutoff 的信息
-- [分阶段工作法](./bestpractice_staged_approach.md) ✅ — 隔离-处理-验证闭环，破坏性操作前 Dry Run
+- [分阶段工作法](./bestpractice_staged_approach.md) ✅ — 「隔离-处理-验证」闭环，破坏性操作前 Dry Run
 - [GUI 自动化方法论](./bestpractice_gui_automation.md) ✅ — 把没有 API 的界面转化为可编程接口
-- [AI 辅助调试诊断](./bestpractice_ai_debugging_diagnosis.md) ✅ — "代码改不好"的根因诊断决策树
-- [Mac Universal Clipboard 重置](./mac_universal_clipboard.md) ✅ — Mac 与 iPhone/iPad 剪贴板不同步时，重置 `useractivityd` / `sharingd` / `pboard`
+- [AI 辅助调试诊断](./bestpractice_ai_debugging_diagnosis.md) ✅ — 「代码改不好」的根因诊断决策树
+- [Mac Universal Clipboard 重置](./mac_universal_clipboard.md) ✅ — 当 Mac 与 iPhone/iPad 剪贴板不同步时，重置系统 `useractivityd` / `sharingd` / `pboard` 守护进程
 - [AI 产品设计原则](./bestpractice_ai_product_design.md) ✅ — 线性聊天 vs 知识工作、感知规则解耦
 - [产品/技术决策逆向工程](./bestpractice_product_decision_analysis.md) ✅ — 从设计空间、约束和 trade-off 分析产品或技术决策
-- [iOS Test Acceleration](./ios_test_acceleration.md) — iOS unit/UI test iteration tips：sequential `xcodebuild`、`build-for-testing` + `test-without-building`、fixed simulator UUID、focused `-only-testing`、fixture launch arguments 和 `.xcresult` inspection
-- [Playwright E2E 测试方法论](https://github.com/grapeot/playwright-test-skill) 🔗 — CDP step-by-step debugging CLI + E2E methodology。独立 public repo，CLI: `pw-test`。触发词："Playwright E2E"、"CDP debugging"、"SSO login test"、"browser step debugging"
-- [Playwright Ajax Capture](./playwright_ajax_capture.md) — 在已登录的 CDP 浏览器 session 中监听并拦截 fetch/XHR，逆向解析 web app 的 internal API 协议。触发词："抓 ajax"、"逆向 internal API"、"browser session 调 API"、"不用 admin key"
+- [iOS Test Acceleration](./ios_test_acceleration.md) — iOS 单元测试与 UI 测试提速实践：涵盖串行 `xcodebuild`、`build-for-testing` + `test-without-building`、固定模拟器 UUID、定向 `-only-testing`、fixture launch arguments 及 `.xcresult` 解析
+- [Playwright E2E 测试方法论](https://github.com/grapeot/playwright-test-skill) 🔗 — 基于 CDP 的单步调试与端到端测试方法论。独立 public repo，CLI 为 `pw-test`。触发词："Playwright E2E"、"CDP debugging"、"SSO login test"、"browser step debugging"
+- [Playwright Ajax Capture](./playwright_ajax_capture.md) — 在已登录的 CDP 浏览器 session 中监听并拦截 fetch/XHR，逆向解析 Web 应用的 internal API 协议。触发词："抓 ajax"、"逆向 internal API"、"browser session 调 API"、"不用 admin key"
 
 ---
 
