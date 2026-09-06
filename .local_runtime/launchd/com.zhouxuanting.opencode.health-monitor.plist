@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.zhouxuanting.opencode.health-monitor</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/zhouxuanting/opencode-context-infrastructure/.local_runtime/scripts/run-scheduled-job</string>
+    <string>health_monitor</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/zhouxuanting/opencode-context-infrastructure</string>
+
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>8</integer>
+    <key>Minute</key>
+    <integer>1</integer>
+  </dict>
+
+  <key>StandardOutPath</key>
+  <string>/Users/zhouxuanting/opencode-context-infrastructure/.local_runtime/logs/jobs/health_monitor.log</string>
+
+  <key>StandardErrorPath</key>
+  <string>/Users/zhouxuanting/opencode-context-infrastructure/.local_runtime/logs/jobs/health_monitor.err.log</string>
+</dict>
+</plist>

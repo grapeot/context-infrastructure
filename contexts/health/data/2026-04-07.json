@@ -1,0 +1,29 @@
+{
+  "date": "2026-04-07",
+  "sleep": {
+    "total_minutes": 420,
+    "deep_minutes": 85,
+    "rem_minutes": 110,
+    "light_minutes": 195,
+    "awake_minutes": 30,
+    "bedtime": "23:15",
+    "wakeup": "06:15"
+  },
+  "heart": {
+    "resting_hr": 52,
+    "hrv_avg": 45,
+    "hrv_during_sleep": 52,
+    "hr_min": 48,
+    "hr_max": 155
+  },
+  "activity": {
+    "steps": 8234,
+    "active_energy_kcal": 520,
+    "exercise_minutes": 35,
+    "stand_hours": 10
+  },
+  "blood_oxygen": {
+    "avg": 97,
+    "min": 94
+  }
+}
