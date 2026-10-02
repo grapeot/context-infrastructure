@@ -45,6 +45,7 @@
 - [AI CLI Agent 实用指南](https://github.com/grapeot/ai-agent-cli-skill) → 已迁移到独立 public repo；按需安装 Claude Code / Codex / OpenCode / Antigravity / Grok 等 CLI 支持
 - [OpenReview API](./openreview.md) — 检索 AI 学术会议论文 metadata 与作者 profile（含 institution history、position、tilde ID）。触发词："OpenReview"、"查作者 profile"、"ICLR papers"、"NeurIPS papers"、"tilde ID"
 - [GitHub Actions → Koyeb 部署指南](./deployment_github_actions_koyeb.md) — 测试通过后通过 GitHub Actions 自动部署至 Koyeb；适用于各类 Docker 化应用
+- [Koyeb 运维操作技能](https://github.com/grapeot/koyeb-skill) 🔧 — 通过官方 CLI 运维 Koyeb 应用与部署，凭证经 `.env` 读取，项目专用配置留在本地 overlay；入口 `skills/koyeb/SKILL.md`。触发词："koyeb"、"light sleep"、"Koyeb 日志"、"Koyeb 扩缩容"
 - [分享报告到 Web](./share_report.md) ⚙️ — 将 Markdown 报告转为 HTML 发布至自建服务器并返回访问 URL
 - [Apple Compressor Skill](./compressor.md) ⚙️ — 本机 Apple Compressor CLI 转码；custom preset 路径、源文件写入完成检测、batch 提交与监控
 
