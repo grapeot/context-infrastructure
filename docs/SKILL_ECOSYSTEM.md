@@ -60,6 +60,7 @@ Start from my workspace AGENTS.md or CLAUDE.md. Follow any WORKSPACE.md or skill
 | Health | [health-quantification](https://github.com/grapeot/health-quantification) | Apple Health / 手动记录 → SQLite → CLI → AI 分析 |
 | Health / education | [ct-education-skill](https://github.com/grapeot/ct-education-skill) | 支持外部胸部 CT DICOM，提供与原始切片联动的本地交互式 3D 可视化及 Blender 教学影片。仅用于教学，不用于诊断；检查数据及所有衍生产物均私下保存在仓库外。 |
 | Home network | [firewalla-local-skill](https://github.com/grapeot/firewalla-local-skill) | Firewalla 本地导出分析、设备/流量报告和 redacted artifact 工作流；家庭网络细节留在本地 overlay |
+| Home network | [unifi-skill](https://github.com/grapeot/unifi-skill) | 自建 UniFi Network Controller 的只读 CLI：`status` 看每台 AP 的 RF 与信道占用，`clients` 查终端清单并支持信号强度和频段筛选，`aps` 列设备清单（含 `snmp_location`），`wlan` 列 SSID，`export` 生成带时间戳的配置快照；统一 `{command,input,data}` 信封，退出码 0/2/10/12/13，纯标准库 Python，浏览器 cookie 鉴权。硬约束是只读：设计上不做任何 RF、SSID 或配置写入，改配置仍然回到 Controller GUI，因此 coding agent 可以安全观察家庭网络 RF 状态（信道拥塞、弱信号终端、IoT band steering），但不具备改动它的能力 |
 | Coffee | [roest-analysis](https://github.com/grapeot/roest-analysis) | Roest roast log 抓取与分析 |
 | Intake | [intake-skill](https://github.com/grapeot/intake-skill) | Voice memos / intake workflow 的 public-ready skill |
 | Testing | [playwright-test-skill](https://github.com/grapeot/playwright-test-skill) | CDP step-by-step debugging CLI for AI agents writing Playwright E2E tests |
