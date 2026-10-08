@@ -53,6 +53,7 @@
 
 特定任务的完整工作流程。
 
+- [Astra Coordinator / PI 工作流](./workflow_astra_coordinator.md) — 仅当实际主模型为 GPT-6 Astra 且用户明确请求 coordinator 或 PI 时激活；按可胜任最低总成本委派，主线程最终验收。触发词："astra coordinator"、"coordinator"、"PI"
 - [并行 Subagent 工作流](./workflow_parallel_subagents.md) ✅ — 并行调度多个 `functions.task` subagent 的执行机制；首次使用前必读，任务必须打包在单条消息内同时发起
 - [Workflow Watchdog](./workflow_watchdog.md) — 后台派出 workflow 或 agent 任务后设置 ~30 分钟定时巡检，识别正常运行与死循环挂起。触发词："watchdog"、"workflow 卡住"、"后台任务巡检"
 - [深度调研工作流](./workflow_deep_research_survey.md) ✅ — 基于多 Agent 并行检索与交叉验证的深度信息采集流程（Phase 1-3）

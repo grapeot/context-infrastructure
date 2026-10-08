@@ -44,7 +44,7 @@ context-infrastructure/
 │   ├── COMMUNICATION.md         # 沟通风格指南（可直接用）
 │   ├── WORKSPACE.md             # 目录路由索引
 │   ├── axioms/                  # 43 条决策公理（展示层）
-│   └── skills/                  # 25+ 个可复用 skill（展示层）
+│   └── skills/                  # 39 份 skill Markdown（含迁移指针，不计 INDEX）
 │
 ├── contexts/
 │   ├── memory/
