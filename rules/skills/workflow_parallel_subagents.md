@@ -5,7 +5,7 @@
 - **类型**: Workflow
 - **适用场景**: 用 `multi_tool_use.parallel` 并行执行多个 `functions.task` subagent
 - **创建日期**: 2026-02-20
-- **最后更新**: 2026-06-08
+- **最后更新**: 2026-10-08
 
 ---
 
@@ -186,6 +186,10 @@ Subagent 的主要价值不是模拟人类团队，也不是把一个普通任�
 2. 对重叠区域做交叉验证：多 agent 共同发现 → 可信度高；单一来源 → 标注待验证；矛盾信息 → 标注并分析原因。
 3. 把整合结果写入 session 目录，例如 `phase3_synthesis.md`、`fact_check.md`、`brainstorm_synthesis.md`。
 4. 如果 subagent 只在返回消息里总结，没有落盘，主线程应立即把关键结论落盘，避免证据链丢失。
+
+### 3.1 运行中任务的持续与追加（running continuation）
+
+对运行中的 `functions.task` 复用相同 `task_id` 追加 prompt 时，工具返回的 `context sent` 或 `Background task updated` 只是传输层接收回执，不等于子任务已收到或看到新范围。在那次核查中未见追加范围，不能据此声称子代理已收到；这只是当时没有观察到可观察的投递记录，异步 context 未必落在 timeline，也不构成平台层面的普遍行为。因此不能把工具 accepted 当成送达，真正改变范围需要 timeline 中出现可观察记录，或拿到关联的显式 ack，已取得 ack 的不必再回查 timeline。后台子任务完成仍走内置自动父链，不轮询进度、不做忙等；投递校验只在追加有意义范围或要求 ack 时做一次有界检查，不扩展成监控每次 tool call 的循环。走显式追加兜底时，先核对仍是同一个 current owner、task、attempt、directory，保留子任务当前的 model 与 agent，不猜默认值；结果未知先读取排查，不盲目重试，同一 request id 去重（这是调用侧约定，不代表 legacy API 已实现幂等），已送达的不重复投递。任务完成标记不等于交付物存在，验收除 timeline 外还要关联 ack 与实际产物，task context 工具的 receipt 本身不足以完成验收。具体验收标准见 [Astra Coordinator / PI 工作流](./workflow_astra_coordinator.md)。
 
 ---
 

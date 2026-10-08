@@ -49,7 +49,7 @@
 
 发送前从已有 dispatch 或 current-owner 映射读取当前 attempt。一次成功的查询、相同标题或 idle，都不足以排除旧 abort 已被替代会话接替。复用已有 task-owner 记录，不为单次协作另建全局注册服务。这不禁止该次协作自己的小型 run manifest。
 
-不要断言 task id 永远等于或不等于 session id。用作地址前按当前运行时验证映射。Process Launcher 的 job id 不是 session 地址。传输回执，例如 `submitted` 或 HTTP 204，只证明传输层收下 handoff。确认收到、执行完成和验收分开记录。
+不要断言 task id 永远等于或不等于 session id。用作地址前按当前运行时验证映射。Process Launcher 的 job id 不是 session 地址。传输回执，例如 `submitted` 或 HTTP 204，只证明传输层收下 handoff。确认收到、执行完成和验收分开记录。同样的纪律适用于运行中的子任务：`context sent` 一类的追加回执也只是传输层接收，范围变更需要 timeline 中的可观察记录或关联的显式确认；细节见 [并行 Subagent 工作流](./workflow_parallel_subagents.md)。
 
 地址查询、投递和回执分层走已安装的 agent-to-agent session skill：https://github.com/grapeot/opencode_skill/blob/master/skills/skill_opencode_agent_to_agent.md 。本文件不复制其接口。
 
