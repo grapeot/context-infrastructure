@@ -1,0 +1,20 @@
+{
+  "task_id": "synthetic_status_recovery",
+  "title": "从相互矛盾的记录中恢复任务状态（合成示例）",
+  "status": "ready",
+  "start_point": "只有 input.txt 中两条带日期的记录，没有后续项目知识。",
+  "independence_group": "synthetic_status_recovery",
+  "sources": [
+    {"kind": "synthetic", "locator": "examples/input.txt", "note": "专为演示构造，不来自个人历史。"}
+  ],
+  "importance": {"value": "unknown", "basis": "演示案例，未由用户赋予重要性。"},
+  "criteria": [
+    {"id": "current_status", "origin": "original", "description": "依据较新的记录判断项目暂停。"},
+    {"id": "evidence", "origin": "original", "description": "引用记录日期，区分软件修改与设备验证。"}
+  ],
+  "limitations": ["只验证给定记录的理解；没有测试自主检索或真实任务收益。"],
+  "prompt_file": "input.txt",
+  "rubric_file": "rubric.txt",
+  "attachments": [],
+  "evidence_files": []
+}

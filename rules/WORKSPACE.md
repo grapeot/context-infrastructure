@@ -14,6 +14,7 @@
 - 思考 / 复盘 / 方法论：`contexts/thought_review/`
 - 每日日志：`contexts/daily_records/`
 - AI 会话归档：`contexts/ai_sessions/<source>/`（使用 ai_session_export 生成；搜索流程见 `rules/skills/ai_session_search_archive.md`）
+- 个人模型评测：`.personal_benchmark/`（本地私有数据；方法见 `rules/skills/workflow_personal_benchmark.md`，工具在 `tools/personal_benchmark/`）
 
 ### 系统与规则
 - 可复用技术方案 / Skill：`rules/skills/`

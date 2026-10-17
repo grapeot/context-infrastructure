@@ -52,6 +52,8 @@
 
 ### Workflow（工作流）
 
+- [Personal Benchmark](./workflow_personal_benchmark.md) — 从真实 context 发现值得比较的工作，冻结测例、记录模型更新实验和匿名评价；本地标准库工具，真实数据留在忽略目录
+
 特定任务的完整工作流程。
 
 - [Astra Coordinator / PI 工作流](./workflow_astra_coordinator.md) — 仅当实际主模型为 GPT-6 Astra 且用户明确请求 coordinator 或 PI 时激活；按可胜任最低总成本委派，主线程最终验收。触发词："astra coordinator"、"coordinator"、"PI"

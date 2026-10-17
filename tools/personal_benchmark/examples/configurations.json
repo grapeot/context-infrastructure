@@ -1,0 +1,4 @@
+[
+  {"requested_model": "example-baseline", "conditions": "Synthetic fixture; no real model call; same visible text; no tools."},
+  {"requested_model": "example-candidate", "conditions": "Synthetic fixture; no real model call; same visible text; no tools."}
+]

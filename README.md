@@ -22,6 +22,8 @@ cd context-infrastructure
 
 详细步骤见 [`setup_guide.md`](setup_guide.md)。
 
+想判断新模型对自己的工作有什么意义，可使用可选的 [Personal Benchmark 工作流](rules/skills/workflow_personal_benchmark.md)：从真实 context 形成测例，冻结输入与验收，记录重复比较、匿名评价和下一条值得验证的证据。[本地参考工具](tools/personal_benchmark/README.md)仅用 Python 标准库，附不调用模型的合成示例。
+
 如果你想把它扩展成更完整的工作系统，可以看 [`docs/SKILL_ECOSYSTEM.md`](docs/SKILL_ECOSYSTEM.md)。那里列了一组可单独安装的 public skill repo，例如 Web 搜索、Google Docs、Google Maps、邮件/newsletter、OpenCode、PPTX、社交媒体、支付分析、家庭网络分析和本地 process launcher。`context-infrastructure` 保持轻量；完整能力通过独立 repo 按需安装。
 
 ---
