@@ -65,6 +65,7 @@ Start from my workspace AGENTS.md or CLAUDE.md. Follow any WORKSPACE.md or skill
 | Home network | [unifi-skill](https://github.com/grapeot/unifi-skill) | 自建 UniFi Network Controller 的只读 CLI：`status` 看每台 AP 的 RF 与信道占用，`clients` 查终端清单并支持信号强度和频段筛选，`aps` 列设备清单（含 `snmp_location`），`wlan` 列 SSID，`export` 生成带时间戳的配置快照；统一 `{command,input,data}` 信封，退出码 0/2/10/12/13，纯标准库 Python，浏览器 cookie 鉴权。硬约束是只读：设计上不做任何 RF、SSID 或配置写入，改配置仍然回到 Controller GUI，因此 coding agent 可以安全观察家庭网络 RF 状态（信道拥塞、弱信号终端、IoT band steering），但不具备改动它的能力 |
 | Coffee | [roest-analysis](https://github.com/grapeot/roest-analysis) | Roest roast log 抓取与分析 |
 | Intake | [intake-skill](https://github.com/grapeot/intake-skill) | Voice memos / intake workflow 的 public-ready skill |
+| Voice Memos | [voice-memos-skill](https://github.com/grapeot/voice-memos-skill) | macOS Apple Voice Memos 只读CLI (`doctor`, `list`, `get`, `export`)，基于数据库 `ZEVICTIONDATE` 区分有效和残留已删录音，无转码导出原生 `m4a`/`qta` 音频并校验大小和SHA-256。 |
 | Testing | [playwright-test-skill](https://github.com/grapeot/playwright-test-skill) | CDP step-by-step debugging CLI for AI agents writing Playwright E2E tests |
 | Semantic search | [semantic-search-skill](https://github.com/grapeot/semantic-search-skill) | 本地文本 embedding + cosine 相似度检索 CLI，支持任意 OpenAI-compatible endpoint，带 atomic cache |
 | LLM market data | [open_router_data_scraper](https://github.com/grapeot/open_router_data_scraper) | 定期抓取 OpenRouter 模型流量数据（token 用量、请求数、排名），存入本地 SQLite 突破 31 天 trailing window |
