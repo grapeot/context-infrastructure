@@ -8,9 +8,9 @@
 
 ## Multi-Agent 能力提示
 
-当前 harness 支持通过 `multi_tool_use.parallel` 并行派发多个 `functions.task` subagent。不要默认使用，但遇到大型、可并行、调研重、代码库探索重、需要独立交叉验证的任务时，应先读 [并行 Subagent 工作流](./workflow_parallel_subagents.md)。
+独立 code / privacy / design review、广泛调研、代码库探索及交叉验证任务，先读 [并行 Subagent 工作流](./workflow_parallel_subagents.md)。实现默认主线程亲自做，仅用户明确要求时才委派。
 
-快速判断：subagent 适合并行读、独立探索、反方审稿、事实核查和上下文窗口隔离；不适合单点小任务、强顺序依赖任务，以及多个 agent 同时写同一份状态或同一批文件。
+常规 review 通常交单个独立 subagent 或 Antigravity CLI，不受多路并行门槛限制；轻微低风险局部变更可按比例例外。广泛调研探索可多 agent 并行，避免共享写入。
 
 ---
 
@@ -55,8 +55,8 @@
 特定任务的完整工作流程。
 
 - [Astra Coordinator / PI 工作流](./workflow_astra_coordinator.md) — 仅当实际主模型为 GPT-6 Astra 且用户明确请求 coordinator 或 PI 时激活；按可胜任最低总成本委派，主线程最终验收。触发词："astra coordinator"、"coordinator"、"PI"
-- [并行 Subagent 工作流](./workflow_parallel_subagents.md) ✅ — 并行调度多个 `functions.task` subagent 的执行机制；首次使用前必读，任务必须打包在单条消息内同时发起
-- [Workflow Watchdog](./workflow_watchdog.md) — 后台派出 workflow 或 agent 任务后设置 ~30 分钟定时巡检，识别正常运行与死循环挂起。触发词："watchdog"、"workflow 卡住"、"后台任务巡检"
+- [并行 Subagent 工作流](./workflow_parallel_subagents.md) ✅ — 独立 review、并行调研探索与实现委派边界；同批就绪任务同消息启动，支持时默认 `background: true`
+- [Workflow Watchdog](./workflow_watchdog.md) — 阶段预算、超时留证与有界恢复；原生后台任务遵守自动完成与 no-poll 约束，不用定时巡检绕过。触发词："watchdog"、"workflow 卡住"、"等待预算"
 - [深度调研工作流](./workflow_deep_research_survey.md) ✅ — 基于多 Agent 并行检索与交叉验证的深度信息采集流程（Phase 1-3）
 - [公开 Consensus Net Income 审计工作流](./workflow_public_consensus_net_income_audit.md) — 通过 MarketScreener 等公开金融站点核验一组股票的 FY/CY consensus net income。触发词："consensus net income"、"MarketScreener 审计"、"FY2026E 净利润共识"
 - [科研论文调研与写作工作流](./workflow_research_paper_survey_writing.md) — 把科研论文重构为面向技术从业者的深度解读文章。触发词："分析这篇论文"、"写论文解读"、"paper analysis"

@@ -3,9 +3,9 @@
 ## 元数据
 
 - **类型**: Workflow
-- **适用场景**: 用 `multi_tool_use.parallel` 并行执行多个 `functions.task` subagent
+- **适用场景**: 独立 review、并行调研探索与用户明确要求的实现委派
 - **创建日期**: 2026-02-20
-- **最后更新**: 2026-10-08
+- **最后更新**: 2026-10-18
 
 ---
 
@@ -21,9 +21,13 @@ Subagent 的主要价值不是模拟人类团队，也不是把一个普通任�
 
 调研依据：Anthropic Engineering《How we built our multi-agent research system》（https://www.anthropic.com/engineering/multi-agent-research-system）、LangChain《How and when to build multi-agent systems》（https://www.langchain.com/blog/how-and-when-to-build-multi-agent-systems）、Cemri et al.《Why Do Multi-Agent LLM Systems Fail?》（https://arxiv.org/abs/2503.13657）。
 
-## 何时使用并行模式
+## 委派边界与何时使用并行模式
 
-满足以下条件中的至少 2 条，并且没有命中下方反模式时，优先考虑 subagent：
+先决定是否委派，再决定是否并行：实现默认主线程亲自做，仅用户明确要求委派实现时才分派。多文件、模块独立、省上下文或模型便宜均不构成授权。已选写作 workflow 仍可指定 writer，不与代码实现混同。
+
+Code / privacy / design review 通常交独立 subagent 或 Antigravity CLI 获取 fresh context，主线程最终验收；轻微低风险局部变更可按比例自检。单次 review 不受下方多路并行门槛限制。广泛调研探索可按独立维度拆分多个 subagent。
+
+启动多个 subagent 并行时，满足以下条件中的至少 2 条，且没有命中下方反模式：
 
 1. **信息面宽**：需要查多个文件、多个网页、多个数据源、多个时间段，主线程一次性读完会污染上下文。
 2. **可拆分为独立读任务**：能分成至少 2 个相对独立的探索方向，每个方向预期需要 ≥5 个 tool call。
@@ -31,13 +35,13 @@ Subagent 的主要价值不是模拟人类团队，也不是把一个普通任�
 4. **存在高价值不确定性**：任务结果会影响后续决策、公开输出、代码改动或成本较高的行动，多花 token 值得。
 5. **主线程需要保留设计/整合能力**：主 agent 应把注意力用在拆分问题、设定标准、整合证据和最终判断，而不是埋在低层搜索或重复读取里。
 
-不满足时，直接串行执行，不要为了并行而并行。
+不满足多路并行条件时，主线程直接执行或按需发起单次独立 review，不为并行凑数。
 
 ## 反模式
 
-以下情况默认不要用 subagent，除非用户明确要求或任务价值足以覆盖额外成本：
+以下情况默认不拆分为多 subagent；任务价值不能替代实现委派所需的用户明确请求：
 
-1. **单点小任务**：只需读 1-2 个文件、跑一个命令、改一个局部 bug。
+1. **单点小任务**：只需读 1-2 个文件或做轻微局部改动，无需机械拆分；单次独立 review 按风险判断，不能仅因文件少跳过隐私或关键设计审阅。
 2. **强顺序依赖**：下一步必须依赖上一步输出，拆出去只会制造等待和交接成本。
 3. **共享状态写入**：多个 agent 同时改同一批文件、同一张表、同一份文案，冲突和隐含决策难以合并。
 4. **上下文必须完整共享**：每个 agent 都必须知道全量背景才能做对，拆分后只会丢条件。
@@ -49,11 +53,11 @@ Subagent 的主要价值不是模拟人类团队，也不是把一个普通任�
 |---|---|---|
 | 外部调研、论文/产品/市场 survey | 高 | 3-5 个 agent，按证据功能切分，30-50% overlap |
 | 大型代码库理解、文件定位、架构梳理 | 高 | `explore` 并行按模块或问题切分，主线程整合 |
-| 代码 review、方案审稿、事实核查 | 高 | 2-3 个 agent 独立审查，同一关键区域保留 overlap |
+| 代码 / 隐私 / 设计 review、方案审稿、事实核查 | 高 | 通常 1 个独立 reviewer；复杂高风险任务可多视角审阅，主线程验收 |
 | Brainstorm、反方观点、thesis 压力测试 | 中高 | 不同 agent 指定不同判断视角，输出必须回答同一组问题 |
-| 多文件实现 | 中 | 只在模块边界清楚时并行；主线程保留最终合并和测试责任 |
+| 工程与代码实现（含多文件） | 默认不委派 | 仅用户明确要求委派实现时分派；主线程保留合并与测试验收责任 |
 | 单 bug 修复、局部编辑、格式调整 | 低 | 主线程直接做 |
-| 多 agent 同时写同一文件或同一状态 | 低 | 避免；改成先并行读/评审，再由主线程或单一 agent 写 |
+| 多 agent 同时写同一文件或同一状态 | 低 | 避免；先独立读/审阅，再由主线程、获授权实现者或写作 workflow 的单一 writer 写 |
 
 ---
 
@@ -61,20 +65,22 @@ Subagent 的主要价值不是模拟人类团队，也不是把一个普通任�
 
 ### 1. 评估与分割
 
-识别 2-5 个关键维度后，根据任务类型确定 overlap：
+单次独立 review 不必拆分；确需并行时，识别 2-5 个维度，再确定 overlap：
 
 | 任务类型 | Overlap 范围 | 原因 |
 |---------|-------------|------|
-| 调研/创造性任务 | 30% - 50% | 交叉验证、查漏补缺 |
-| 代码/执行任务 | 0% - 20% | 效率优先，减少重复 |
+| 调研 / 多视角审阅 / 创造性任务 | 30% - 50% | 交叉验证、查漏补缺 |
+| 代码库探索 / 用户明确要求委派的实现 | 0% - 20% | 减少重复，保留接口边界重叠 |
 
 不要把 overlap 理解成重复劳动。好的 overlap 是让相邻 agent 在最容易出错的边界区域共同覆盖，例如官方 claim 和独立证据的交界、模块接口、数据口径、反对意见。
 
 ### 2. 并行启动
 
-**⚠️ 当前 OpenCode 环境的正确并行方式是 `multi_tool_use.parallel` 包裹多个 `functions.task` 调用。** 不要使用旧文档里的 `mcp_task(run_in_background=True)`；当前工具没有 `run_in_background` 参数，也没有 `mcp_background_output` / `background_output` 取结果工具。
+**以运行时 schema 为准。** 核对 `functions.task`、目标 agent 与参数是否可用；缺少工具或指定能力时说明边界，不编造调用或静默切模型。单次 review 直接调用；同批多个就绪任务用 `multi_tool_use.parallel` 同消息启动。
 
-必须在**同一条 assistant 消息**里一次性发出所有 subagent 调用。单独连续调用多个 `task`，即使文字上说“并行”，实际也是串行。
+**支持时默认 `background: true`。** 后台完成走自动通知，不轮询、不 sleep 查进度；等待期间可做其他工作或结束本轮。仅不支持异步或确需阻塞取结果时同步执行。异步跨消息仍可能并发；同批就绪任务仍同消息启动。
+
+下例仅用于 schema 支持 `background` 的环境，否则省略该字段。启动回执不是完成结果。新任务不传空 `task_id` / `command`，`task_id` 仅用于续写已有任务。
 
 ```json
 {
@@ -85,8 +91,7 @@ Subagent 的主要价值不是模拟人类团队，也不是把一个普通任�
         "description": "官方叙事",
         "subagent_type": "general",
         "prompt": "读取/搜索官方来源，提取 claim、URL、原文摘录，写入 tmp/<session>/tier1_official.md",
-        "task_id": "",
-        "command": ""
+        "background": true
       }
     },
     {
@@ -95,8 +100,7 @@ Subagent 的主要价值不是模拟人类团队，也不是把一个普通任�
         "description": "独立体验",
         "subagent_type": "general",
         "prompt": "搜索独立用户体验、社区讨论、GitHub issues，写入 tmp/<session>/tier3_independent.md",
-        "task_id": "",
-        "command": ""
+        "background": true
       }
     },
     {
@@ -105,8 +109,7 @@ Subagent 的主要价值不是模拟人类团队，也不是把一个普通任�
         "description": "竞品对比",
         "subagent_type": "general",
         "prompt": "做竞品矩阵和 thesis verdict，写入 tmp/<session>/competitive_context.md",
-        "task_id": "",
-        "command": ""
+        "background": true
       }
     }
   ]
@@ -119,21 +122,16 @@ Subagent 的主要价值不是模拟人类团队，也不是把一个普通任�
 
 - `general` / `explore` 是 OpenCode 源码内置 agent。
 - 其他命名 agent 来自 `~/.config/opencode/opencode.json`、项目 `opencode.json`，或 `.opencode/agent(s)/*.md`。
-- `provider/model` 只是底层模型入口。要能被 `task` 调用，必须包成 agent，例如 `writer_deepseek -> deepseek/deepseek-v4-pro`。
+- `provider/model` 只是底层模型入口，不能代替已注册 agent 名。
 
-当前常用 `subagent_type`：
+能力路由仅在已经决定委派后生效，不授予实现委派权限。用户当前明确指定的模型、agent 或 CLI 优先于默认能力路由，仍须满足运行时能力与数据边界；指定载体不可用时报告阻塞，不自行替换。名称以当前注册配置为准：
 
 | subagent_type | 适用场景 |
 |---|---|
 | `general` | 通用任务；未配置模型时继承主会话模型。适合普通并行执行，但不要假设它是便宜模型 |
 | `explore` | 代码库内部快速搜索、文件定位、架构理解 |
-| `reasoning_gpt` | 高可靠推理、工程判断、方案设计、复杂代码审查 |
-| `writer_deepseek` | 中文写作、改稿、风格润色、最终 prose polishing；避免高隐私材料 |
-| `cheap_glm` | 低成本初筛、分类、提纲、轻量调研和非关键总结 |
-| `private_ds4` | 本地 ds4-server，适合隐私敏感、本机执行优先、低成本草稿 |
-| `ollama_kimi` | Ollama Cloud Kimi K2.6，zero-data-retention，较便宜，适合隐私姿态要求高但无需最强模型的任务 |
-| `ollama_deepseek_pro` | Ollama Cloud DeepSeek V4 Pro，zero-data-retention，较贵，适合隐私姿态要求高且需要更强 DeepSeek Pro 的任务 |
-| `ds4` | 旧别名；新任务优先用 `private_ds4` |
+| 已注册专项 agent | 按审阅、推理、编码、初筛或数据边界匹配；不在本文件固定模型映射 |
+| Antigravity CLI（非 `functions.task`） | 独立 review 或已选写作 workflow；先读已安装的 `ai-agent-cli` 根 skill 和 Antigravity focused skill，按当前可用模型调用，不与 Gemini subagent 混同 |
 
 每个 subagent 的 prompt 应包含：
 - 具体负责的维度/范围
@@ -141,6 +139,9 @@ Subagent 的主要价值不是模拟人类团队，也不是把一个普通任�
 - 输出格式要求
 - 输出落盘路径（例如 `tmp/<session_slug>/tier3_independent.md`）
 - 验证标准：哪些证据算有效，哪些情况必须标注不确定
+- 总 deadline、日志、失败停止条件与唯一写入范围；独立 reviewer 原则上只写审阅产物，由主线程或获授权实现者修复
+
+独立 review 使用未参与该产物实现或起草的新 agent/task 上下文或新 CLI conversation；不续用原作者的 task/conversation 作为独立 reviewer。原作者自检不计作独立 review；不要求不同模型或供应商。
 
 ### 2.2 文件优先的 Agent 交接
 
@@ -154,7 +155,7 @@ Subagent 的主要价值不是模拟人类团队，也不是把一个普通任�
 4. **Parent 从 artifact 合并。** 主 Agent 读取 child artifacts、验证证据并统一写回 canonical output。Agent 间信息传递以可检查文件为准，不把前一个 agent 的自然语言总结直接当 source of truth。
 5. **为失败恢复保留边界。** 长任务按阶段更新 scratchpad、checkpoint 或部分输出。Subagent 中断后，后续 agent 应能从文件继续，而不是只能重跑整段 conversation。
 
-这种 file-first 交接有三个目的：减少 prompt 预处理和 context 复制；让 Agent 能在现有材料上反复读写；让中断、换模型和 parent 接管时仍有可审计的恢复点。只有结果极短、无 workspace 或纯一次性判断时，才允许直接在返回消息中完整交付。
+这种 file-first 交接有三个目的：减少 prompt 预处理和 context 复制；让 Agent 能在现有材料上反复读写；让中断、换模型和 parent 接管时仍有可审计的恢复点。结果极短、无 workspace、纯一次性判断，或 agent/运行时没有写权限时，可以直接在返回消息中交付。无写权限的只读探索应返回可核对的文件路径、行号与证据/结论，由 parent 核验并保存必要结果，不为 file-first 提升权限或绕过只读限制。
 
 主线程责任：
 
@@ -178,11 +179,11 @@ Subagent 的主要价值不是模拟人类团队，也不是把一个普通任�
 
 ### 3. 等待与整合
 
-`multi_tool_use.parallel` 会在同一轮 tool response 中返回所有子任务结果；无需也不能调用 `background_output`。每个 `functions.task` 返回的 `task_id` 只用于后续需要恢复同一个 subagent 会话时使用，不是并行等待句柄。
+`background: true` 返回的仅是启动回执，等运行时自动完成通知后再读结果与落盘文件，不轮询、不调用不存在的 `background_output`，也不用定时巡检绕过。同步 wrapper 才直接返回完成结果；`task_id` 用于续写，不是等待句柄。派发前明确阶段预算、总 deadline、日志与失败停止条件，保留部分产物供恢复。
 
 整合步骤：
 
-1. 读取每个 subagent 写入的 artifact 文件；subagent 返回消息只作为 artifact manifest 和状态通知。
+1. 有 artifact 时读取文件，返回消息作为 manifest 和状态通知；无写权限的 child 按上述只读交接例外返回证据与内容，由 parent 核验并落盘。
 2. 对重叠区域做交叉验证：多 agent 共同发现 → 可信度高；单一来源 → 标注待验证；矛盾信息 → 标注并分析原因。
 3. 把整合结果写入 session 目录，例如 `phase3_synthesis.md`、`fact_check.md`、`brainstorm_synthesis.md`。
 4. 如果 subagent 只在返回消息里总结，没有落盘，主线程应立即把关键结论落盘，避免证据链丢失。
@@ -195,18 +196,15 @@ Subagent 的主要价值不是模拟人类团队，也不是把一个普通任�
 
 ## 路由决策
 
-先按数据敏感性分流，再按任务能力分流：
+仅在决定委派后，按数据边界和当前注册能力分流；用户当前明确指定的模型、agent 或 CLI 优先于默认能力路由，仍须满足运行时能力与隐私约束，指定载体不可用时报告阻塞，不自行替换。不反过来强迫主线程委派编码：
 
-1. 高隐私、不能出本机：优先 `private_ds4`。如果任务超出本地 Flash 能力，暂停并让用户决定是否用 Ollama Cloud zero-data-retention 路线。
-2. 需要 zero-data-retention 但可以走云：轻量任务用 `ollama_kimi`，高质量推理或写作用 `ollama_deepseek_pro`。
-3. 中文写作质量优先且内容不敏感：用 `writer_deepseek`。
-4. 复杂工程判断、计划、架构、代码审查：用 `reasoning_gpt`。
-5. 便宜、可粗糙、可重跑的初筛任务：用 `cheap_glm`。
-6. 代码库探索、定位文件、回答内部结构问题：用 `explore`。
+1. 探索用 `explore`，通用调研用 `general`；专项审阅、推理、初筛及用户明确请求委派的实现使用当前注册的对应能力。
+2. 隐私数据遵守本地/云端边界，不能因能力不足擅自外发；已选写作 workflow 决定 writer。
+3. Antigravity CLI 可提供独立 fresh context 做 code / privacy / design review，不等同于 Gemini subagent。按已安装的 `ai-agent-cli` 根 skill、Antigravity focused skill 与当前可用列表选模型，不固定模型名。
 
-不要在 prompt 里用旧的 `category="deep"`、`category="writing"`、`librarian`、`ultrabrain`、`glm51` 这类路由名。除非它们已经在当前 `opencode.json` 里被注册成同名 agent，否则 `task` 工具不能调用它们。
+不要沿用旧 `category` 参数或历史 agent 别名；只调用当前运行时已注册的 agent。
 
-不要为了“稳定”默认给 agent 配 `temperature: 0`。很多 provider/model 有自己的采样策略；ds4 还会对协议结构做 deterministic handling，但长文本 payload 强行确定性可能导致重复。默认不设置 temperature，让 provider/server 使用自己的默认值；只有明确知道某个模型需要固定采样时再配置。
+不要为了“稳定”默认给 agent 配 `temperature: 0`。默认使用 provider/server 的采样策略，除非目标模型明确要求固定采样。
 
 ---
 
@@ -222,23 +220,25 @@ Subagent 的主要价值不是模拟人类团队，也不是把一个普通任�
 └─ Overlap：社区和企业案例都有覆盖，可交叉验证
 ```
 
-### 代码任务（0-20% overlap）
+### 用户明确要求委派的代码任务（0-20% overlap）
 
 ```
-实现「用户认证系统」
+前提：用户明确要求委派「用户认证系统」实现；默认主线程亲自做
 ├─ Task 1：认证核心逻辑 + Token 管理
 ├─ Task 2：数据库模型 + 迁移脚本
 ├─ Task 3：API 端点 + 测试用例
 └─ Overlap：接口定义处有少量重叠，确保对接正确
 ```
 
-### 审查任务（30% overlap）
+### 审查任务（单个 reviewer 或多视角 overlap）
+
+通常派 1 个独立 reviewer 或 Antigravity CLI，主线程验收，不受多路并行门槛限制。复杂高风险 PR 可如下拆分：
 
 ```
 审查「一个 PR 是否可靠」
-├─ Agent 1（explore/reasoning_gpt）：代码行为和边界条件
+├─ Agent 1（explore / 审阅向 agent）：代码行为和边界条件
 ├─ Agent 2（explore）：测试覆盖、缺失 fixture、回归风险
-├─ Agent 3（reasoning_gpt）：架构一致性和隐含依赖
+├─ Agent 3（审阅向 agent）：架构一致性和隐含依赖
 └─ Overlap：所有 agent 都看核心 diff，但外围文件按职责分开
 ```
 
@@ -255,18 +255,7 @@ Subagent 的主要价值不是模拟人类团队，也不是把一个普通任�
 
 当前工具 schema 只暴露 `task(subagent_type=...)`，不暴露 `category` 或 `load_skills`。不要把旧环境的 category 路由照搬到当前 OpenCode 工具调用里。
 
-当前可用 subagent 类型以系统工具说明为准。常见值：
-
-| subagent_type | 用途 |
-|---|---|
-| `general` | 通用研究、复杂问题拆解、外部资料调研、事实核查；通常继承主会话模型 |
-| `explore` | 快速探索代码库、搜索文件和符号、回答内部代码结构问题 |
-| `reasoning_gpt` | GPT 路线高可靠推理和工程判断 |
-| `writer_deepseek` | DeepSeek Pro 路线中文写作与改稿 |
-| `cheap_glm` | GLM 路线低成本初筛和轻量整理 |
-| `private_ds4` | 本地 ds4 路线，隐私敏感优先 |
-| `ollama_kimi` | Ollama Cloud Kimi K2.6，zero-data-retention、低成本 |
-| `ollama_deepseek_pro` | Ollama Cloud DeepSeek V4 Pro，zero-data-retention、高质量但更贵 |
+可用 subagent 类型以运行时 schema 为准，不维护固定或历史模型清单；外部 CLI 按其已安装 skill 查询当前模型。
 
 如果未来工具 schema 更新，以运行时 tool schema 为准，不要沿用过期的 `category` / `run_in_background` 写法。
 
@@ -285,9 +274,10 @@ Subagent 的主要价值不是模拟人类团队，也不是把一个普通任�
 
 | 错误 | 正确做法 | 说明 |
 |------|---------|------|
-| 逐个调用多个 `task`，但口头说“并行” | 用 `multi_tool_use.parallel` 在同一条消息中包多个 `functions.task` | 单独连续调用就是串行 |
-| 使用 `mcp_task(run_in_background=True)` | 使用 `multi_tool_use.parallel` + `functions.task` | 当前工具没有 `run_in_background` |
-| 等待 `background_output` 或系统 reminder | 直接读取 `multi_tool_use.parallel` 返回结果和 subagent 落盘文件 | 当前环境没有 background output 取结果流程 |
+| 同批就绪任务逐个同步等待 | 同消息 wrapper 启动 | 异步跨消息仍可能并发 |
+| 使用 `mcp_task(run_in_background=True)` | 支持时默认 `background: true` | 参数以运行时 schema 为准 |
+| 轮询或把启动回执当完成 | 等自动完成通知，再读产物 | 同步 wrapper 才直接返回完成结果 |
+| 用并行门槛否决单次 review | 通常交单个独立 reviewer | 轻微低风险局部变更可按比例例外 |
 | 编造 `subagent_type` | 只使用运行时 tool schema 中列出的 subagent 类型 | `subagent_type` 必须是已注册 agent 名 |
 | 传旧参数 `category` / `load_skills` | 按当前 `functions.task` schema 传 `description`、`prompt`、`subagent_type` | 旧参数不会被当前 task 工具接受 |
 | 用户用中文，但 subagent prompt 用英文默认模板 | prompt 里显式声明语言继承规则 | 否则 subagent 往往回落到英文输出 |

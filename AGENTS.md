@@ -16,11 +16,12 @@ Before doing anything else:
 
 ## Multi-Agent Nudge
 
-This harness can delegate work to multiple sub-agents. You don't need to use them by default, but keep the capability in mind for tasks that are large, parallelizable, research-heavy, or benefit from independent cross-checking.
+调用 sub-agent 或独立审阅载体前，先读 `rules/skills/workflow_parallel_subagents.md`。
 
-Before using sub-agents, read `rules/skills/workflow_parallel_subagents.md`. The current OpenCode pattern is `multi_tool_use.parallel` wrapping multiple `functions.task` calls in the same assistant message.
+- **工程与代码实现**：默认主线程亲自完成，仅用户明确要求委派实现时才分派。
+- **Code / privacy / design review**：通常交独立 sub-agent 或 Antigravity CLI 获取 fresh context，主线程最终验收；轻微低风险局部变更可按比例例外。单次 review 不受多路并行门槛限制。
 
-Don't ask permission. Just do it.
+- **广泛调研与代码库探索**：满足并行门槛时可多 sub-agent 并行；同批就绪任务用 `multi_tool_use.parallel` 同消息启动，运行时支持时默认 `background: true`，等自动完成通知，不轮询。
 
 ## File Routing
 
@@ -50,23 +51,15 @@ Don't ask permission. Just do it.
 
 配置入口：OpenCode 原生 `opencode.json` 的 `agent` 字段，或 `.opencode/agent(s)/*.md` agent 文件。`subagent_type` 必须是已注册 agent 名，不是模型名，也不是旧 `category`。
 
-常用路由速查：
-- **代码库探索** → `subagent_type="explore"`
-- **通用并行任务** → `subagent_type="general"`
-- **高可靠推理 / 工程判断** → `subagent_type="reasoning_gpt"`
-- **中文写作 / 改稿** → `subagent_type="writer_deepseek"`
-- **低成本初筛 / 轻量整理** → `subagent_type="cheap_glm"`
-- **本地隐私敏感任务** → `subagent_type="private_ds4"`
-- **Ollama Cloud zero-data-retention 低成本任务** → `subagent_type="ollama_kimi"`
-- **Ollama Cloud zero-data-retention 高质量任务** → `subagent_type="ollama_deepseek_pro"`
+只有按 workflow 已决定委派后，才从运行时 schema 选择能力：代码库探索用 `explore`，通用调研用 `general`，专项审阅、编码、初筛与隐私能力使用当前已注册 agent。不维护固定模型或历史别名清单；路由不授予实现委派权限。
 
-创意性工作（brainstorm、文章结构、观点碰撞）默认并行派一个不同路线的 subagent 做反向视角或补充视角。不要使用旧的 `category="artistry"` / `category="deep"` / `category="ultrabrain"` 写法，除非当前 OpenCode 配置已经显式注册了这些同名 agent。
+Antigravity CLI 是独立外部载体，不等同于 Gemini subagent。用于独立审阅或已选写作 workflow 时，先读已安装的 `ai-agent-cli` 根 skill 与 Antigravity focused skill，按当前可用模型调用。
 
 ## Opus 工作模式
 
 如果你的模型 ID 包含 `opus`，以下规则生效：
 
-**你的 context window 很宝贵。** Opus 的核心能力是设计、质量把关和写作。调研、写脚本、关键词检索这些事交给 sub-agent。你的两个主要任务：（1）**设计**：拆分问题、设计计划、分配 sub-agent 任务；（2）**写作与质量把关**：最终文本自己写，sub-agent 结果自己验证。写代码、调研、数据处理全部 delegate，写作和质量验证绝不外包。设计任务拆分时默认考虑并行性，具体执行方式以 `rules/skills/workflow_parallel_subagents.md` 为准。
+**实现与最终验收默认留在主线程。** Opus 同样默认亲自实现，仅用户明确要求时才委派实现；广泛调研探索可按需委派，code / privacy / design review 通常交独立载体。已选写作 workflow 可指定 writer，主线程仍须读回核验并承担最终交付责任。调度边界见 `rules/skills/workflow_parallel_subagents.md`。
 
 ## Memory System（记忆系统）
 
