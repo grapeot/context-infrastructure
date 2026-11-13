@@ -60,7 +60,7 @@ context-infrastructure/
 │       │   └── KNOWLEDGE_BASE.md # 观察和反思的 SOP
 │       └── src/v0/
 │           ├── observer.py      # 每日观察脚本（需配置 cron）
-│           └── reflector.py     # 每周反思脚本（需配置 cron）
+│           └── reflector.py     # 每周反思脚本：cron 只写规则候选，人批准后 --apply 合入
 │
 ├── tools/
 │   └── share_report/            # 报告发布（Tier 2）

@@ -57,10 +57,10 @@
 
 ### 4.2 反思与晋升 (L2 Reflector)
 - **核心目标**: 实现从“短期观测”到“长期规则”的进化。
-- **操作文件**:
-  1. **规则层 (L3)**: 直接根据最新观测到的有效规律、语言风格变化、以及长效约束，修改或更新 `rules/` 下的核心规则文件 (`SOUL.md`, `USER.md`, `COMMUNICATION.md`, `WORKSPACE.md`)。
-  2. **记忆层 (L1/L2)**: 重写 `contexts/memory/OBSERVATIONS.md`。执行垃圾回收，删除已被固化进 rules 的内容以及过期的 🟢 记录。
-- **职责**: 确保 `rules/` 始终代表系统的最新“进化状态”。
+- **两段式，规则改动必须经过人批准**：
+  1. **提议（默认，可放进 cron 夜间跑）**：根据最新观测到的有效规律、语言风格变化、长效约束，以及 `rules/` 里互相矛盾的规则，写出规则候选，追加到 `contexts/memory/RULE_CANDIDATES.md` 的「待批阅」小节。每条候选写明目标文件、改动原文、理由（含适用和不适用的边界）和来源（观测条目日期或原始对话文件路径）。这一阶段**不修改 `rules/`，也不修改 `OBSERVATIONS.md`**；脚本会在运行前后比对 `rules/`，有改动就报错退出。
+  2. **合入（人批阅后手动运行 `reflector.py --apply`）**：人在候选文件里把接受的条目勾成 `- [x] 批准`。合入阶段只把勾选的候选写进 `rules/` 下对应文件（`SOUL.md`、`USER.md`、`COMMUNICATION.md`、`WORKSPACE.md`、`skills/`），把它们移到「已处理」小节，再重写 `contexts/memory/OBSERVATIONS.md`：删除已合入规则的内容和过期的 🟢 记录。
+- **职责**: 让 `rules/` 的每一次进化都有出处、经过人确认，出了问题能按来源找回当时的原始记录并撤销。
 
 ## 5. 执行角色隔离 (Role Isolation)
 - **Observer (L1)** 和 **Reflector (L2)** 是独立的任务阶段。
@@ -70,4 +70,4 @@
 ## 6. 回报机制 (Reporting)
 - 在完成文件写入后，你只需在 Chat 中给出一个简短的 Summary（Walkthrough）。
 - **Observer 汇报点**: 处理了哪些项目，基于 Metadata 过滤掉了多少噪音。
-- **Reflector 汇报点**: 哪些观测点变成了正式规则。
+- **Reflector 汇报点**: 提议阶段汇报新增了几条候选及其目标文件；合入阶段汇报合入了哪几条、改了哪些文件。
