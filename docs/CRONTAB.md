@@ -43,9 +43,9 @@ Daily     → Crontab Monitor: 健康审计，发现异常则发告警邮件
 
 ### AI Heartbeat Reflector（每周）
 
-合并、提升、清理 OBSERVATIONS.md 中积累的观察，蒸馏为更高层次的认知。
+从 OBSERVATIONS.md 中积累的观察里提炼规则候选，写进 `contexts/memory/RULE_CANDIDATES.md` 等人批阅；cron 里只跑提议阶段，不会改 `rules/`。人在候选文件里勾选 `- [x] 批准` 后，手动运行 `reflector.py --apply` 合入并清理 OBSERVATIONS.md。
 
-- **脚本**：`periodic_jobs/ai_heartbeat/src/v0/reflector.py`
+- **脚本**：`periodic_jobs/ai_heartbeat/src/v0/reflector.py`（提议）；`reflector.py --apply`（人批阅后合入）
 - **依赖**：OpenCode Server API（`OPENCODE_API_URL`）
 - **建议时间**：每周日 9:00 AM
 
